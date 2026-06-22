@@ -76,7 +76,7 @@
                 </div>
                 <div style="font-family:'Spectral',serif;font-style:italic;font-size:10.5px;color:#8a6f4e;padding:2px 4px;line-height:1.4;">{{ L.backupHint }}</div>
                 <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#9a8a72;padding:6px 4px 0;border-top:1px dashed #c9b48a;margin-top:2px;">{{ L.feedbackHead }}</div>
-                <a href="{{ feedbackHref }}" style="display:block;text-align:left;text-decoration:none;font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:8px 10px;border:1px solid #c9b48a;background:#faf5e8;color:#3a2a1a;" style-hover="background:#ede0c5;">{{ L.feedback }}</a>
+                <a href="{{ feedbackHref }}" target="_blank" rel="noopener" style="display:block;text-align:left;text-decoration:none;font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:8px 10px;border:1px solid #c9b48a;background:#faf5e8;color:#3a2a1a;" style-hover="background:#ede0c5;">{{ L.feedback }}</a>
               </div>
             </sc-if>
           </div>
@@ -1406,7 +1406,7 @@ class Component extends DCLogic {
         load: p('⤒ Laden','⤒ Restore'), loadTitle: p('Backup-Datei laden','Load a backup file'),
         backupHint: p('Eigene Bilder regelmäßig mit „⤓ Sichern" als Datei sichern','Back up your images regularly via "⤓ Backup"'),
         langBtn: p('EN','DE'), langTitle: p('Switch to English','Auf Deutsch umschalten'),
-        feedbackHead: p('Mithelfen','Help out'), feedback: p('✉ Feedback geben','✉ Give feedback'),
+        feedbackHead: p('Mithelfen','Help out'), feedback: p('📝 Feedback geben','📝 Give feedback'),
         // NPS
         npsWeight: p('Fleischgewicht (Gramm)','Meat weight (grams)'),
         npsCure: p('NPS (40 g/kg)','Cure salt (40 g/kg)'), npsSugar: p('Zucker (5 g/kg)','Sugar (5 g/kg)'), npsPepper: p('Pfeffer (2 g/kg)','Pepper (2 g/kg)'),
@@ -1592,11 +1592,7 @@ class Component extends DCLogic {
     const D = this._dict(); const L = D.L;
     const allRecipes = this._effective();
 
-    const fbSubject = lang === 'en' ? 'Feedback on Smokebench' : 'Feedback zu Smokebench';
-    const fbBody = lang === 'en'
-      ? 'Hi Markus,\n\nhere\'s my feedback on Smokebench:\n\n- What I like:\n- What\'s missing / not working:\n- Are the times & temperatures right:\n\nCheers'
-      : 'Hallo Markus,\n\nhier mein Feedback zu Smokebench:\n\n- Was mir gefällt:\n- Was fehlt / hakt:\n- Stimmen Zeiten & Temperaturen:\n\nGruß';
-    const feedbackHref = 'mailto:feedback@smokebench.de?subject=' + encodeURIComponent(fbSubject) + '&body=' + encodeURIComponent(fbBody);
+    const feedbackHref = 'https://forms.gle/J2ksxrL1pyJTu1NB8';
 
     const M_KEYS = ['alle','kalt','warm','heiss','bbq','basis','dorr','grill','marinaden','favs'];
     const M_LABELS = D.M_LABELS;
