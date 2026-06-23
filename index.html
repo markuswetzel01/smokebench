@@ -85,6 +85,25 @@
     </div>
   </header>
 
+  <!-- TESTPHASE / FEEDBACK-BANNER -->
+  <sc-if value="{{ showBeta }}" hint-placeholder-val="{{ true }}">
+    <div style="background:#9a3b1c;background-image:repeating-linear-gradient(45deg,rgba(0,0,0,0.06) 0 1px,transparent 1px 9px);border-bottom:2px solid #6e2912;position:relative;z-index:40;">
+      <div style="max-width:1200px;margin:0 auto;padding:16px 48px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:260px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;">
+          <span style="font-family:'Spectral',serif;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#f3ead7;background:rgba(0,0,0,0.22);border:1px solid rgba(243,234,215,0.35);border-radius:3px;padding:4px 9px;white-space:nowrap;">{{ L.betaTag }}</span>
+          <div>
+            <div style="font-family:'DM Serif Display',serif;font-size:21px;color:#f9f1df;line-height:1.15;">{{ L.betaHead }}</div>
+            <div style="font-family:'Spectral',serif;font-size:14px;color:#f0d9c4;line-height:1.45;margin-top:3px;max-width:640px;">{{ L.betaText }}</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+          <a href="{{ feedbackHref }}" target="_blank" rel="noopener" style="font-family:'Spectral',serif;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer;border-radius:4px;padding:11px 22px;background:#f3ead7;color:#9a3b1c;border:1.5px solid #f3ead7;white-space:nowrap;box-shadow:0 2px 0 rgba(0,0,0,0.18);" style-hover="background:#fff;">{{ L.betaCta }}</a>
+          <button onClick="{{ onDismissBeta }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:4px;padding:10px 14px;background:transparent;color:#f0d9c4;border:1.5px solid rgba(243,234,215,0.4);white-space:nowrap;" style-hover="background:rgba(0,0,0,0.12);">{{ L.betaDismiss }}</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
   <!-- NPS RECHNER PANEL -->
   <sc-if value="{{ showNPS }}" hint-placeholder-val="{{ false }}">
     <div style="background:#ede0c5;border-bottom:2px solid #c9b48a;padding:20px 48px;">
@@ -784,6 +803,15 @@
     </div>
   </sc-if>
 
+  <!-- FOOTER / RECHTLICHES -->
+  <footer style="max-width:1200px;margin:48px auto 0;padding:18px 24px 0;border-top:1px solid #d8c49a;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;justify-content:center;font-family:'Spectral',serif;font-size:13px;color:#8a6f4e;">
+    <span style="font-style:italic;">© {{ year }} Smokebench</span>
+    <span style="color:#c9b48a;">·</span>
+    <a href="impressum.html" style="color:#9a3b1c;text-decoration:none;border-bottom:1px solid #d8c49a;padding-bottom:1px;">{{ L.imprint }}</a>
+    <span style="color:#c9b48a;">·</span>
+    <a href="datenschutz.html" style="color:#9a3b1c;text-decoration:none;border-bottom:1px solid #d8c49a;padding-bottom:1px;">{{ L.privacy }}</a>
+  </footer>
+
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
@@ -804,6 +832,7 @@ class Component extends DCLogic {
     editorOpen: false, editorStep: 'category', editorMode: 'new', editorDraft: null, editorJustSaved: '',
     lightboxImage: null,
     lang: 'de',
+    betaDismissed: false,
   };
   _iv = null;
 
@@ -818,7 +847,9 @@ class Component extends DCLogic {
       if (saved === 'de' || saved === 'en') lang = saved;
       else { const nav = (navigator.language || navigator.userLanguage || 'de').toLowerCase(); lang = nav.startsWith('de') ? 'de' : 'en'; }
     } catch (e) {}
-    this.setState({ lang });
+    let betaDismissed = false;
+    try { betaDismissed = localStorage.getItem('wsm_beta_dismissed') === '1'; } catch (e) {}
+    this.setState({ lang, betaDismissed });
     try {
       let data = window.WSM_DATA;
       if (!data) {
@@ -1363,6 +1394,11 @@ class Component extends DCLogic {
     this.setState({ lang });
   }
 
+  _dismissBeta() {
+    try { localStorage.setItem('wsm_beta_dismissed', '1'); } catch (e) {}
+    this.setState({ betaDismissed: true });
+  }
+
   // Zentrales zweisprachiges Wörterbuch – gibt alle berechneten Labels + UI-Texte für die aktive Sprache zurück.
   _dict() {
     const en = this.state.lang === 'en';
@@ -1407,6 +1443,12 @@ class Component extends DCLogic {
         backupHint: p('Eigene Bilder regelmäßig mit „⤓ Sichern" als Datei sichern','Back up your images regularly via "⤓ Backup"'),
         langBtn: p('EN','DE'), langTitle: p('Switch to English','Auf Deutsch umschalten'),
         feedbackHead: p('Mithelfen','Help out'), feedback: p('📝 Feedback geben','📝 Give feedback'),
+        imprint: p('Impressum','Imprint'), privacy: p('Datenschutz','Privacy'),
+        betaTag: p('Testphase','Beta'),
+        betaHead: p('Smokebench ist in der Testphase','Smokebench is in beta'),
+        betaText: p('Schmeckt etwas nicht, fehlt ein Rezept oder stimmt eine Zeit nicht? Sag\u2019s mir \u2013 dein Feedback formt die App. Dauert 2 Minuten.','Something off, a recipe missing or a time wrong? Tell me \u2013 your feedback shapes the app. Takes 2 minutes.'),
+        betaCta: p('📝 Feedback geben','📝 Give feedback'),
+        betaDismiss: p('Später','Later'),
         // NPS
         npsWeight: p('Fleischgewicht (Gramm)','Meat weight (grams)'),
         npsCure: p('NPS (40 g/kg)','Cure salt (40 g/kg)'), npsSugar: p('Zucker (5 g/kg)','Sugar (5 g/kg)'), npsPepper: p('Pfeffer (2 g/kg)','Pepper (2 g/kg)'),
@@ -1593,6 +1635,7 @@ class Component extends DCLogic {
     const allRecipes = this._effective();
 
     const feedbackHref = 'https://forms.gle/J2ksxrL1pyJTu1NB8';
+    const year = new Date().getFullYear();
 
     const M_KEYS = ['alle','kalt','warm','heiss','bbq','basis','dorr','grill','marinaden','favs'];
     const M_LABELS = D.M_LABELS;
@@ -1712,7 +1755,8 @@ class Component extends DCLogic {
       showTools: this.state.showTools, onToggleTools: () => this.setState({ showTools: !this.state.showTools }),
       toolsButtonStyle: tb(this.state.showTools || showNPS || showDorr || this.state.showConv),
       ...this._convVals(tb),
-      L, lang, onToggleLang: () => this._toggleLang(), feedbackHref,
+      L, lang, onToggleLang: () => this._toggleLang(), feedbackHref, year,
+      showBeta: !this.state.betaDismissed, onDismissBeta: () => this._dismissBeta(),
       listButtonLabel: L.listBase + (shoppingList.length ? ' (' + shoppingList.length + ')' : ''),
       // NPS
       npsWeight, onNpsWeightChange: (e) => this.setState({ npsWeight: e.target.value }),
