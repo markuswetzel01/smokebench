@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impressum · Smokebench</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f3ead7; --ink:#3a2a1a; --muted:#8a6f4e; --line:#c9b48a;
+    --accent:#9a3b1c; --accent2:#d6603a; --dark:#241a10;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Spectral',serif; line-height:1.6;
+    background-image:repeating-linear-gradient(0deg,rgba(140,90,40,0.04) 0 1px,transparent 1px 32px);
+  }
+  .lang{
+    position:fixed; top:16px; right:16px; z-index:10; display:flex; gap:6px;
+  }
+  .lang button{
+    font-family:'Spectral',serif; font-size:12px; font-weight:600; letter-spacing:0.08em;
+    cursor:pointer; border-radius:3px; padding:6px 12px; border:1.5px solid var(--line);
+    background:#faf5e8; color:var(--ink);
+  }
+  .lang button.active{ background:var(--accent); border-color:var(--accent); color:#f3ead7; }
+  header.mast{
+    background:var(--dark);
+    background-image:repeating-linear-gradient(0deg,rgba(255,255,255,0.025) 0 1px,transparent 1px 28px);
+    padding:34px 24px 28px;
+  }
+  .mast-in{ max-width:780px; margin:0 auto; }
+  .tag{ font-family:'Spectral',serif; font-style:italic; font-size:12px; letter-spacing:0.22em; color:#9a7a50; }
+  h1.logo{ margin:6px 0 0; font-family:'DM Serif Display',serif; font-size:40px; line-height:1; color:#f3ead7; letter-spacing:-0.01em; }
+  h1.logo span{ color:var(--accent2); }
+  main{ max-width:780px; margin:0 auto; padding:40px 24px 80px; }
+  h2.page{ font-family:'DM Serif Display',serif; font-weight:400; font-size:32px; margin:0 0 6px; color:var(--ink); }
+  .rule{ height:2px; width:54px; background:var(--accent); margin:14px 0 30px; }
+  h3{ font-family:'DM Serif Display',serif; font-weight:400; font-size:20px; margin:30px 0 8px; color:var(--ink); }
+  p{ margin:0 0 12px; }
+  .ph{ background:#efe0bf; border-bottom:1px dashed var(--accent); padding:0 3px; font-style:italic; color:#6b4a26; }
+  a{ color:var(--accent); }
+  .note{ font-style:italic; font-size:14px; color:var(--muted); }
+  .back{ display:inline-block; margin-top:34px; font-size:14px; text-decoration:none; color:var(--accent); border-bottom:1px solid var(--line); padding-bottom:2px; }
+  footer{ max-width:780px; margin:0 auto; padding:0 24px 50px; font-size:13px; color:var(--muted); }
+  footer a{ color:var(--muted); margin:0 10px; }
+  .de .en-only{ display:none; }
+  .en .de-only{ display:none; }
+</style>
+</head>
+<body class="de">
+
+  <div class="lang">
+    <button data-set="de" class="active" onclick="setLang('de')">DE</button>
+    <button data-set="en" onclick="setLang('en')">EN</button>
+  </div>
+
+  <header class="mast">
+    <div class="mast-in">
+      <div class="tag de-only">Rezepte &amp; Technik fürs Räuchern</div>
+      <div class="tag en-only">Recipes &amp; technique for smoking</div>
+      <h1 class="logo">Smoke<span>bench</span></h1>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ DEUTSCH ============ -->
+    <div class="de-only">
+      <h2 class="page">Impressum</h2>
+      <div class="rule"></div>
+
+      <h3>Angaben gemäß § 5 DDG</h3>
+      <p>
+        <span class="ph">[Vor- und Nachname]</span><br>
+        <span class="ph">[Straße und Hausnummer]</span><br>
+        <span class="ph">[PLZ und Ort]</span><br>
+        Deutschland
+      </p>
+
+      <h3>Kontakt</h3>
+      <p>
+        E-Mail: <span class="ph">[<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bcd8d9d5d2d991ddd8ced9cfcfd9fccfd1d3d7d9ded9d2dfd492d8d9">[email&#160;protected]</a>]</span><br>
+        <span class="note">Telefonangabe optional: </span><span class="ph">[Telefonnummer]</span>
+      </p>
+
+      <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+      <p>
+        <span class="ph">[Vor- und Nachname]</span><br>
+        <span class="ph">[Anschrift wie oben]</span>
+      </p>
+
+      <h3>Haftung für Inhalte</h3>
+      <p>
+        Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
+        Vollständigkeit und Aktualität der Inhalte – insbesondere der Rezepte sowie der
+        angegebenen Zeiten, Temperaturen und Mengen (z. B. Pökelsalz) – wird jedoch keine
+        Gewähr übernommen. Die Anwendung erfolgt auf eigene Verantwortung. Bei der Zubereitung
+        von Lebensmitteln, insbesondere beim Kalträuchern und Pökeln, sind die einschlägigen
+        Hygiene- und Sicherheitshinweise eigenverantwortlich zu beachten.
+      </p>
+
+      <h3>Haftung für Links</h3>
+      <p>
+        Unser Angebot enthält ggf. Links zu externen Websites Dritter, auf deren Inhalte wir
+        keinen Einfluss haben. Für diese fremden Inhalte ist stets der jeweilige Anbieter
+        verantwortlich.
+      </p>
+
+      <h3>Urheberrecht</h3>
+      <p>
+        Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
+        dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet.
+      </p>
+
+      <p class="note" style="margin-top:24px;">
+        Hinweis: Dies ist ein Gerüst. Bitte ersetze alle <span class="ph">[Platzhalter]</span>
+        durch deine echten Daten und lasse den Text vor Veröffentlichung prüfen.
+      </p>
+
+      <a class="back" href="index.html">← Zurück zu Smokebench</a>
+    </div>
+
+    <!-- ============ ENGLISH ============ -->
+    <div class="en-only">
+      <h2 class="page">Legal Notice (Imprint)</h2>
+      <div class="rule"></div>
+
+      <h3>Information pursuant to § 5 DDG</h3>
+      <p>
+        <span class="ph">[First and last name]</span><br>
+        <span class="ph">[Street and number]</span><br>
+        <span class="ph">[Postal code and city]</span><br>
+        Germany
+      </p>
+
+      <h3>Contact</h3>
+      <p>
+        Email: <span class="ph">[<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c9b0a6bcbbe4a8adadbbacbaba89baa4a6a2acabaca7aaa1e7adac">[email&#160;protected]</a>]</span><br>
+        <span class="note">Phone (optional): </span><span class="ph">[phone number]</span>
+      </p>
+
+      <h3>Responsible for content per § 18 (2) MStV</h3>
+      <p>
+        <span class="ph">[First and last name]</span><br>
+        <span class="ph">[Address as above]</span>
+      </p>
+
+      <h3>Liability for content</h3>
+      <p>
+        The content of these pages was created with the greatest care. However, no guarantee is
+        given for the accuracy, completeness or timeliness of the content — in particular the
+        recipes and the stated times, temperatures and quantities (e.g. curing salt). Use is at
+        your own risk. When preparing food, especially cold smoking and curing, the relevant
+        hygiene and safety guidelines must be observed on your own responsibility.
+      </p>
+
+      <h3>Liability for links</h3>
+      <p>
+        Our site may contain links to external third-party websites over whose content we have no
+        influence. The respective provider is always responsible for such external content.
+      </p>
+
+      <h3>Copyright</h3>
+      <p>
+        Content and works created by the site operator on these pages are subject to German
+        copyright law. Third-party contributions are marked as such.
+      </p>
+
+      <p class="note" style="margin-top:24px;">
+        Note: this is a scaffold. Replace all <span class="ph">[placeholders]</span> with your
+        real details and have the text reviewed before publishing.
+      </p>
+
+      <a class="back" href="index.html">← Back to Smokebench</a>
+    </div>
+  </main>
+
+  <footer>
+    <span class="de-only"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="index.html">Start</a></span>
+    <span class="en-only"><a href="impressum.html">Imprint</a> · <a href="datenschutz.html">Privacy</a> · <a href="index.html">Home</a></span>
+  </footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function setLang(l){
+    document.body.className = l;
+    document.documentElement.lang = l;
+    document.querySelectorAll('.lang button').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-set')===l);
+    });
+    try{ localStorage.setItem('sb_legal_lang', l); }catch(e){}
+  }
+  (function(){
+    var l = 'de';
+    try{ l = localStorage.getItem('sb_legal_lang') || 'de'; }catch(e){}
+    setLang(l);
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutz · Smokebench</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f3ead7; --ink:#3a2a1a; --muted:#8a6f4e; --line:#c9b48a;
+    --accent:#9a3b1c; --accent2:#d6603a; --dark:#241a10;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Spectral',serif; line-height:1.6;
+    background-image:repeating-linear-gradient(0deg,rgba(140,90,40,0.04) 0 1px,transparent 1px 32px);
+  }
+  .lang{ position:fixed; top:16px; right:16px; z-index:10; display:flex; gap:6px; }
+  .lang button{
+    font-family:'Spectral',serif; font-size:12px; font-weight:600; letter-spacing:0.08em;
+    cursor:pointer; border-radius:3px; padding:6px 12px; border:1.5px solid var(--line);
+    background:#faf5e8; color:var(--ink);
+  }
+  .lang button.active{ background:var(--accent); border-color:var(--accent); color:#f3ead7; }
+  header.mast{
+    background:var(--dark);
+    background-image:repeating-linear-gradient(0deg,rgba(255,255,255,0.025) 0 1px,transparent 1px 28px);
+    padding:34px 24px 28px;
+  }
+  .mast-in{ max-width:780px; margin:0 auto; }
+  .tag{ font-family:'Spectral',serif; font-style:italic; font-size:12px; letter-spacing:0.22em; color:#9a7a50; }
+  h1.logo{ margin:6px 0 0; font-family:'DM Serif Display',serif; font-size:40px; line-height:1; color:#f3ead7; letter-spacing:-0.01em; }
+  h1.logo span{ color:var(--accent2); }
+  main{ max-width:780px; margin:0 auto; padding:40px 24px 80px; }
+  h2.page{ font-family:'DM Serif Display',serif; font-weight:400; font-size:32px; margin:0 0 6px; color:var(--ink); }
+  .rule{ height:2px; width:54px; background:var(--accent); margin:14px 0 30px; }
+  h3{ font-family:'DM Serif Display',serif; font-weight:400; font-size:20px; margin:30px 0 8px; color:var(--ink); }
+  p{ margin:0 0 12px; }
+  ul{ margin:0 0 12px; padding-left:22px; }
+  li{ margin:0 0 6px; }
+  .ph{ background:#efe0bf; border-bottom:1px dashed var(--accent); padding:0 3px; font-style:italic; color:#6b4a26; }
+  a{ color:var(--accent); }
+  .note{ font-style:italic; font-size:14px; color:var(--muted); }
+  .back{ display:inline-block; margin-top:34px; font-size:14px; text-decoration:none; color:var(--accent); border-bottom:1px solid var(--line); padding-bottom:2px; }
+  footer{ max-width:780px; margin:0 auto; padding:0 24px 50px; font-size:13px; color:var(--muted); }
+  footer a{ color:var(--muted); margin:0 10px; }
+  .de .en-only{ display:none; }
+  .en .de-only{ display:none; }
+</style>
+</head>
+<body class="de">
+
+  <div class="lang">
+    <button data-set="de" class="active" onclick="setLang('de')">DE</button>
+    <button data-set="en" onclick="setLang('en')">EN</button>
+  </div>
+
+  <header class="mast">
+    <div class="mast-in">
+      <div class="tag de-only">Rezepte &amp; Technik fürs Räuchern</div>
+      <div class="tag en-only">Recipes &amp; technique for smoking</div>
+      <h1 class="logo">Smoke<span>bench</span></h1>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ DEUTSCH ============ -->
+    <div class="de-only">
+      <h2 class="page">Datenschutzerklärung</h2>
+      <div class="rule"></div>
+
+      <h3>1. Verantwortlicher</h3>
+      <p>
+        Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
+        <span class="ph">[Vor- und Nachname]</span>, <span class="ph">[Anschrift]</span><br>
+        E-Mail: <span class="ph">[<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5430313d3a3179353026312727311427393b3f3136313a373c7a3031">[email&#160;protected]</a>]</span>
+      </p>
+
+      <h3>2. Hosting über GitHub Pages</h3>
+      <p>
+        Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub Inc., 88 Colin P.
+        Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Seite verarbeitet GitHub
+        technisch notwendige Daten, insbesondere deine IP-Adresse, Datum und Uhrzeit des Zugriffs,
+        die aufgerufene Seite sowie Angaben zu Browser und Betriebssystem. Dies dient der sicheren
+        und stabilen Bereitstellung der Website (Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO –
+        berechtigtes Interesse). Eine Datenübermittlung in die USA kann dabei stattfinden.
+        Weitere Informationen:
+        <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.
+      </p>
+
+      <h3>3. Domain &amp; DNS (IONOS)</h3>
+      <p>
+        Die Domain wird über die IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, verwaltet. Im
+        Rahmen der Domain-Weiterleitung (z. B. von smokebench.com) können dort technisch
+        notwendige Verbindungsdaten verarbeitet werden.
+      </p>
+
+      <h3>4. Lokale Speicherung im Browser</h3>
+      <p>
+        Smokebench speichert deine in der App vorgenommenen Eingaben – etwa eigene Rezepte,
+        Notizen, Favoriten und hochgeladene Bilder – ausschließlich lokal in deinem Browser
+        („localStorage"). Diese Daten verbleiben auf deinem Gerät, werden nicht an uns oder Dritte
+        übertragen und können von dir jederzeit über die Browser-Einstellungen gelöscht werden.
+        Es werden keine Tracking-Cookies und keine Analyse-Werkzeuge eingesetzt.
+      </p>
+
+      <h3>5. Feedback-Formular (Google Forms)</h3>
+      <p>
+        Für Feedback verlinken wir auf ein Formular von Google Forms (Google Ireland Limited,
+        Gordon House, Barrow Street, Dublin 4, Irland). Wenn du das Formular ausfüllst und
+        absendest, werden die von dir eingegebenen Angaben sowie ggf. technische Daten durch
+        Google verarbeitet. Die Nutzung ist freiwillig (Rechtsgrundlage: Art. 6 Abs. 1 lit. a
+        DSGVO – Einwilligung). Es gilt die
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Google</a>.
+        Gib im Formular bitte nur Daten an, die du freiwillig teilen möchtest.
+      </p>
+
+      <h3>6. E-Mail-Kontakt</h3>
+      <p>
+        Wenn du uns per E-Mail kontaktierst, werden deine Angaben zur Bearbeitung der Anfrage
+        gespeichert (Rechtsgrundlage: Art. 6 Abs. 1 lit. b bzw. f DSGVO).
+      </p>
+
+      <h3>7. Deine Rechte</h3>
+      <p>Dir stehen nach der DSGVO folgende Rechte zu:</p>
+      <ul>
+        <li>Auskunft über die zu dir gespeicherten Daten (Art. 15)</li>
+        <li>Berichtigung (Art. 16) und Löschung (Art. 17)</li>
+        <li>Einschränkung der Verarbeitung (Art. 18)</li>
+        <li>Datenübertragbarkeit (Art. 20)</li>
+        <li>Widerspruch gegen die Verarbeitung (Art. 21)</li>
+        <li>Beschwerde bei einer Aufsichtsbehörde (Art. 77)</li>
+      </ul>
+      <p>Zur Ausübung genügt eine formlose Nachricht an die oben genannte E-Mail-Adresse.</p>
+
+      <p class="note" style="margin-top:24px;">
+        Hinweis: Dies ist ein Gerüst mit gängigen Standardangaben. Bitte ersetze alle
+        <span class="ph">[Platzhalter]</span>, ergänze später hinzukommende Dienste (z. B. ein
+        Bezahl-/Login-System) und lasse den Text vor Veröffentlichung mit einem Generator
+        (eRecht24, activeMind o. ä.) oder anwaltlich prüfen.
+      </p>
+      <p class="note">Stand: <span class="ph">[Monat Jahr]</span></p>
+
+      <a class="back" href="index.html">← Zurück zu Smokebench</a>
+    </div>
+
+    <!-- ============ ENGLISH ============ -->
+    <div class="en-only">
+      <h2 class="page">Privacy Policy</h2>
+      <div class="rule"></div>
+
+      <h3>1. Controller</h3>
+      <p>
+        The controller responsible for data processing on this website is:<br>
+        <span class="ph">[First and last name]</span>, <span class="ph">[Address]</span><br>
+        Email: <span class="ph">[<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d1a8bea4a3fcb0b5b5a3b4a2a291a2bcbebab4b3b4bfb2b9ffb5b4">[email&#160;protected]</a>]</span>
+      </p>
+
+      <h3>2. Hosting via GitHub Pages</h3>
+      <p>
+        This website is hosted on GitHub Pages, a service of GitHub Inc., 88 Colin P. Kelly Jr.
+        Street, San Francisco, CA 94107, USA. When you access the site, GitHub processes
+        technically necessary data, in particular your IP address, date and time of access, the
+        page requested and details about your browser and operating system. This serves the secure
+        and stable provision of the website (legal basis: Art. 6(1)(f) GDPR — legitimate interest).
+        Data may be transferred to the USA. More information:
+        <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.
+      </p>
+
+      <h3>3. Domain &amp; DNS (IONOS)</h3>
+      <p>
+        The domain is managed via IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Germany. In the
+        course of domain forwarding (e.g. from smokebench.com), technically necessary connection
+        data may be processed there.
+      </p>
+
+      <h3>4. Local storage in your browser</h3>
+      <p>
+        Smokebench stores the entries you make in the app — such as your own recipes, notes,
+        favourites and uploaded images — exclusively locally in your browser ("localStorage").
+        This data stays on your device, is not transmitted to us or any third party, and can be
+        deleted by you at any time via your browser settings. No tracking cookies and no analytics
+        tools are used.
+      </p>
+
+      <h3>5. Feedback form (Google Forms)</h3>
+      <p>
+        For feedback we link to a Google Forms form (Google Ireland Limited, Gordon House, Barrow
+        Street, Dublin 4, Ireland). If you fill in and submit the form, the data you enter and any
+        technical data is processed by Google. Use is voluntary (legal basis: Art. 6(1)(a) GDPR —
+        consent). Google's
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>
+        applies. Please only provide data in the form that you wish to share voluntarily.
+      </p>
+
+      <h3>6. Email contact</h3>
+      <p>
+        If you contact us by email, your details will be stored in order to process the enquiry
+        (legal basis: Art. 6(1)(b) or (f) GDPR).
+      </p>
+
+      <h3>7. Your rights</h3>
+      <p>Under the GDPR you have the following rights:</p>
+      <ul>
+        <li>Access to the data stored about you (Art. 15)</li>
+        <li>Rectification (Art. 16) and erasure (Art. 17)</li>
+        <li>Restriction of processing (Art. 18)</li>
+        <li>Data portability (Art. 20)</li>
+        <li>Objection to processing (Art. 21)</li>
+        <li>Complaint to a supervisory authority (Art. 77)</li>
+      </ul>
+      <p>To exercise these rights, an informal message to the email address above is sufficient.</p>
+
+      <p class="note" style="margin-top:24px;">
+        Note: this is a scaffold with common standard wording. Please replace all
+        <span class="ph">[placeholders]</span>, add any services introduced later (e.g. a
+        payment/login system) and have the text reviewed via a generator or a lawyer before
+        publishing.
+      </p>
+      <p class="note">Last updated: <span class="ph">[Month Year]</span></p>
+
+      <a class="back" href="index.html">← Back to Smokebench</a>
+    </div>
+  </main>
+
+  <footer>
+    <span class="de-only"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="index.html">Start</a></span>
+    <span class="en-only"><a href="impressum.html">Imprint</a> · <a href="datenschutz.html">Privacy</a> · <a href="index.html">Home</a></span>
+  </footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function setLang(l){
+    document.body.className = l;
+    document.documentElement.lang = l;
+    document.querySelectorAll('.lang button').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-set')===l);
+    });
+    try{ localStorage.setItem('sb_legal_lang', l); }catch(e){}
+  }
+  (function(){
+    var l = 'de';
+    try{ l = localStorage.getItem('sb_legal_lang') || 'de'; }catch(e){}
+    setLang(l);
+  })();
+</script>
+</body>
+</html>
