@@ -80,6 +80,9 @@
               </div>
             </sc-if>
           </div>
+          <button onClick="{{ onOpenChamber }}" title="{{ L.chamberHint }}" style="text-align:left;font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 14px;border:1.5px solid #6b8a4a;background:#eef2e3;color:#3d5226;white-space:nowrap;font-weight:600;display:flex;align-items:center;gap:7px;" style-hover="background:#e3ebd2;">
+            <span aria-hidden="true" style="font-size:14px;line-height:1;">🏛️</span>{{ L.chamber }}
+          </button>
         </div>
       </div>
     </div>
@@ -1531,6 +1534,7 @@ class Component extends DCLogic {
         feedbackHead: p('Mithelfen','Help out'), feedback: p('📝 Feedback geben','📝 Give feedback'),
         imprint: p('Impressum','Imprint'), privacy: p('Datenschutz','Privacy'),
         chamber: p('Reifekammer','Aging chamber'),
+        chamberHint: p('Bauanleitung: Reifekammer für Schinken, Salami & Biltong','Build guide: aging chamber for ham, salami & biltong'),
         chamberClose: p('Schließen','Close'),
         chamberNewTab: p('Neuer Tab','New tab'),
         discEyebrow: p('Bitte lesen','Please read'),
