@@ -1,0 +1,2263 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reifekammer im Sommer · Smokebench</title>
+<link href="fonts.css" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f3ead7; --ink:#3a2a1a; --muted:#8a6f4e; --line:#c9b48a;
+    --accent:#9a3b1c; --accent2:#d6603a; --dark:#241a10;
+    --card:#faf5e8; --panel:#ede0c5; --blue:#5b6b78; --green:#5a6b4a; --gold:#9a6b2f;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Spectral',serif; line-height:1.6;
+    background-image:repeating-linear-gradient(0deg,rgba(140,90,40,0.04) 0 1px,transparent 1px 32px);
+  }
+  .lang{ position:fixed; top:16px; right:16px; z-index:10; display:flex; gap:6px; }
+  .lang button{
+    font-family:'Spectral',serif; font-size:12px; font-weight:600; letter-spacing:0.08em;
+    cursor:pointer; border-radius:3px; padding:6px 12px; border:1.5px solid var(--line);
+    background:#faf5e8; color:var(--ink);
+  }
+  .lang button.active{ background:var(--accent); border-color:var(--accent); color:#f3ead7; }
+
+  header.mast{
+    background:var(--dark);
+    background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.025) 0 1px,transparent 1px 10px);
+    padding:42px 24px 46px; position:relative;
+  }
+  .mast-in{ max-width:860px; margin:0 auto; }
+  .tag{ font-family:'Spectral',serif; font-style:italic; font-size:12px; letter-spacing:0.22em; color:#9a7a50; }
+  .crumb{ display:inline-block; margin-bottom:14px; font-size:13px; text-decoration:none; color:#9a7a50; letter-spacing:0.04em; }
+  .crumb:hover{ color:#c9a87a; }
+  h1.logo{ margin:8px 0 14px; font-family:'DM Serif Display',serif; font-size:48px; line-height:1.0; color:#f3ead7; letter-spacing:-0.01em; }
+  h1.logo span{ color:var(--accent2); }
+  .lede{ max-width:600px; font-size:17px; line-height:1.55; color:#c9a87a; margin:0; }
+  .lede em{ color:#e0b487; font-style:italic; }
+
+  main{ max-width:860px; margin:0 auto; padding:0 24px 70px; }
+
+  /* Zielklima stat cards */
+  .stats{ display:flex; gap:16px; flex-wrap:wrap; margin-top:-26px; position:relative; z-index:2; }
+  .stat{ flex:1; min-width:220px; background:var(--bg); border-radius:6px; padding:18px 22px; box-shadow:0 10px 26px -14px rgba(0,0,0,0.4); }
+  .stat.t{ border:1.5px solid var(--accent); }
+  .stat.h{ border:1.5px solid var(--blue); }
+  .stat .k{ font-size:10px; letter-spacing:0.16em; text-transform:uppercase; }
+  .stat.t .k{ color:var(--accent); }
+  .stat.h .k{ color:var(--blue); }
+  .stat .v{ font-family:'DM Serif Display',serif; font-size:44px; line-height:1; color:var(--ink); margin-top:6px; }
+  .stat .v small{ font-size:20px; color:var(--gold); }
+  .stat .s{ font-style:italic; font-size:13px; color:#8a6f4e; margin-top:6px; }
+
+  .eyebrow{ font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#9a8a72; margin:46px 0 8px; }
+  h2{ font-family:'DM Serif Display',serif; font-weight:400; font-size:30px; line-height:1.1; margin:0 0 14px; color:var(--ink); }
+  p.body{ max-width:760px; font-size:16px; line-height:1.65; color:#4a3a28; margin:0 0 14px; }
+  p.body strong{ color:var(--ink); }
+
+  /* Checklist */
+  .checks{ display:flex; flex-direction:column; gap:14px; margin-top:6px; }
+  .check{ display:flex; gap:18px; background:var(--card); border:1.5px solid var(--line); border-radius:6px; padding:18px 20px; }
+  .num{ flex:none; width:40px; height:40px; border-radius:50%; color:#f3ead7; font-family:'DM Serif Display',serif; font-size:21px; display:flex; align-items:center; justify-content:center; }
+  .check h4{ font-family:'DM Serif Display',serif; font-weight:400; font-size:20px; margin:0 0 4px; }
+  .check p{ margin:0; font-size:15px; line-height:1.6; color:#4a3a28; }
+
+  /* Interactive tool */
+  .tool{ background:var(--panel); border:1.5px solid var(--line); border-radius:8px; padding:24px 26px; margin-top:20px; }
+  .tool-tag{ font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:4px; }
+  .tool h3{ font-family:'DM Serif Display',serif; font-weight:400; font-size:24px; margin:0 0 4px; color:var(--ink); }
+  .tool .intro{ font-size:14px; font-style:italic; color:#6b5a42; margin:0 0 18px; }
+  .field-row{ display:flex; gap:16px; flex-wrap:wrap; align-items:flex-end; }
+  .field label{ display:block; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9a8a72; margin-bottom:6px; }
+  .field input{ width:120px; padding:8px 12px; border:1.5px solid var(--line); border-radius:3px; background:var(--bg); font-family:'DM Serif Display',serif; font-size:22px; color:var(--ink); text-align:right; outline:none; }
+  .field input:focus{ border-color:var(--accent); }
+  .field .unit{ font-size:13px; color:var(--gold); margin-left:6px; }
+
+  /* Klima-Ampel result */
+  .ampel{ margin-top:20px; border-radius:6px; padding:16px 20px; display:flex; gap:16px; align-items:flex-start; border:1.5px solid; transition:background .2s, border-color .2s; }
+  .ampel .dot{ flex:none; width:18px; height:18px; border-radius:50%; margin-top:4px; }
+  .ampel .status{ font-family:'DM Serif Display',serif; font-size:20px; line-height:1.2; }
+  .ampel .advice{ font-size:14.5px; line-height:1.55; margin-top:4px; color:#4a3a28; }
+
+  /* Verlust result boxes */
+  .resrow{ display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
+  .resbox{ padding:12px 18px; background:var(--bg); border:1.5px solid var(--line); border-radius:4px; min-width:140px; }
+  .resbox.accent{ border-color:var(--accent); }
+  .resbox.blue{ border-color:var(--blue); }
+  .resbox .rk{ font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9a8a72; }
+  .resbox.accent .rk{ color:var(--accent); }
+  .resbox.blue .rk{ color:var(--blue); }
+  .resbox .rv{ font-family:'DM Serif Display',serif; font-size:30px; color:var(--ink); margin-top:3px; line-height:1; }
+  .resbox .rv small{ font-size:14px; color:var(--gold); }
+  .progress{ height:10px; border-radius:5px; background:#dcc9a0; overflow:hidden; margin-top:18px; border:1px solid var(--line); }
+  .progress > div{ height:100%; background:var(--accent); width:0%; transition:width .25s; }
+  .verlust-note{ font-size:14px; font-style:italic; color:#6b5a42; margin-top:12px; }
+
+  /* Produkt-Presets */
+  .presets{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; align-items:center; }
+  .presets .plabel{ font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9a8a72; margin-right:2px; }
+  .preset{ font-family:'Spectral',serif; font-size:13px; cursor:pointer; border:1.5px solid #c0a878; background:transparent; color:#4a3a28; border-radius:20px; padding:5px 13px; transition:background .15s, color .15s, border-color .15s; }
+  .preset:hover{ border-color:var(--accent); color:var(--accent); }
+  .preset.active{ background:var(--accent); border-color:var(--accent); color:#f3ead7; }
+  .preset b{ color:var(--accent); font-weight:600; }
+  .preset.active b{ color:#f3ead7; }
+
+  /* Sicherheits-Block */
+  .safety{ background:#2a1a0e; border-radius:8px; padding:22px 26px; margin-top:18px; }
+  .safety .st{ font-family:'DM Serif Display',serif; font-size:24px; color:#f3ead7; margin:0 0 3px; }
+  .safety .st span{ color:#d6603a; }
+  .safety .ssub{ font-style:italic; font-size:13px; color:#9a7a50; margin:0 0 16px; }
+  .safety ul{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:10px 24px; }
+  .safety li{ display:flex; gap:11px; align-items:flex-start; font-size:14.5px; line-height:1.45; color:#e9dcc0; }
+  .safety li .sbox{ flex:none; width:20px; height:20px; border:1.6px solid #9a7a50; border-radius:4px; margin-top:1px; }
+  .safety li b{ color:#f3ead7; }
+
+  /* Troubleshooting */
+  .trouble{ display:flex; flex-direction:column; gap:0; margin-top:18px; border:1.5px solid var(--line); border-radius:8px; overflow:hidden; }
+  .thead, .trow{ display:grid; grid-template-columns:1.1fr 1.1fr 1.5fr; gap:16px; padding:13px 18px; }
+  .thead{ background:#241a10; }
+  .thead span{ font-size:10.5px; letter-spacing:0.13em; text-transform:uppercase; color:#c9a87a; }
+  .trow{ background:#faf5e8; border-top:1px solid var(--line); align-items:start; }
+  .trow:nth-child(odd){ background:#f3ead7; }
+  .trow .tp{ font-family:'DM Serif Display',serif; font-size:16px; color:#9a3b1c; line-height:1.2; }
+  .trow .tc{ font-size:14px; color:#6b5a42; line-height:1.45; }
+  .trow .ts{ font-size:14px; color:#3a2a1a; line-height:1.45; }
+  .trow .ts b{ color:#4a5a3a; }
+  @media (max-width:620px){
+    .thead{ display:none; }
+    .trow{ grid-template-columns:1fr; gap:6px; }
+    .trow .tp{ font-size:18px; }
+    .trow .tc::before{ content:"Ursache: "; font-style:italic; color:#9a8a72; }
+    .trow .ts::before{ content:"Lösung: "; font-weight:600; color:#4a5a3a; }
+  }
+
+  /* Lüfter-Takt-Referenz */
+  .fanref{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-top:18px; }
+  .fanref .fr{ background:#faf5e8; border:1.5px solid var(--line); border-radius:8px; padding:15px 18px; }
+  .fanref .fr h4{ font-family:'DM Serif Display',serif; font-weight:400; font-size:18px; margin:0 0 8px; color:#3a2a1a; }
+  .fanref .fl{ display:flex; justify-content:space-between; font-size:13.5px; padding:4px 0; border-top:1px solid rgba(0,0,0,0.06); }
+  .fanref .fl:first-of-type{ border-top:none; }
+  .fanref .fl .k{ color:#8a6f4e; }
+  .fanref .fl .v{ font-family:'DM Serif Display',serif; color:#9a3b1c; }
+  .fanref .fl .v.blue{ color:#41525e; }
+
+  /* Setup teileliste */
+  .setup{ margin-top:20px; background:var(--panel); border:1.5px dashed var(--line); border-radius:6px; padding:24px 26px; }
+  .setup h3{ font-family:'DM Serif Display',serif; font-weight:400; font-size:24px; margin:0 0 16px; color:var(--ink); }
+  .parts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:10px 24px; }
+  .part{ display:flex; gap:11px; align-items:baseline; font-size:15px; line-height:1.5; }
+  .part .b{ color:var(--accent); flex:none; }
+  .closing{ margin-top:18px; padding-top:16px; border-top:1px dashed var(--line); font-style:italic; font-size:14px; line-height:1.55; color:#6b5a42; }
+
+  /* Explosionszeichnung + Teileliste */
+  .diagram{ background:#faf5e8; border:1.5px solid var(--line); border-radius:8px; padding:14px; margin-top:8px; }
+  .diagram svg{ width:100%; height:auto; display:block; }
+  .plist{ display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:13px 28px; margin-top:26px; }
+  .pitem{ display:flex; gap:13px; align-items:flex-start; }
+  .pno{ flex:none; width:28px; height:28px; border-radius:50%; background:var(--accent); color:#f3ead7; font-family:'DM Serif Display',serif; font-size:15px; display:flex; align-items:center; justify-content:center; margin-top:1px; }
+  .pno.opt{ background:transparent; color:var(--gold); border:1.5px dashed #c9a86a; }
+  .pitem .pt{ font-size:15px; line-height:1.5; color:#4a3a28; }
+  .pitem .pt strong{ color:var(--ink); }
+  .pitem .pt .mod{ font-style:italic; color:#8a6f4e; }
+  .opt-head{ grid-column:1/-1; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#9a8a72; border-top:1px dashed var(--line); padding-top:16px; margin-top:4px; }
+
+  /* Innen / Außen split */
+  .split{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:18px; }
+  .splitcol{ border-radius:8px; padding:18px 22px; }
+  .splitcol.in{ background:#eef1e6; border:1.5px solid #aebb97; }
+  .splitcol.out{ background:#f6ece6; border:1.5px solid #d6a98f; }
+  .splitcol h4{ font-family:'DM Serif Display',serif; font-weight:400; font-size:21px; margin:0 0 4px; }
+  .splitcol.in h4{ color:#4a5a3a; }
+  .splitcol.out h4{ color:#9a3b1c; }
+  .splitcol .sub{ font-size:12px; font-style:italic; color:#7a6f54; margin:0 0 12px; }
+  .splitcol ul{ margin:0; padding:0; list-style:none; }
+  .splitcol li{ font-size:14.5px; line-height:1.45; color:#3a2a1a; padding:5px 0 5px 20px; position:relative; border-top:1px solid rgba(0,0,0,0.06); }
+  .splitcol li:first-of-type{ border-top:none; }
+  .splitcol li::before{ content:""; position:absolute; left:2px; top:13px; width:8px; height:8px; border-radius:50%; }
+  .splitcol.in li::before{ background:#5a6b4a; }
+  .splitcol.out li::before{ background:#9a3b1c; }
+  .splitcol li .num{ font-family:'DM Serif Display',serif; color:#9a8a72; margin-right:4px; }
+  @media (max-width:560px){ .split{ grid-template-columns:1fr; } }
+
+  /* Kabeldurchführung */
+  .warn{ display:flex; gap:15px; align-items:flex-start; background:#f6e3da; border:1.5px solid #d6603a; border-left-width:5px; border-radius:6px; padding:16px 20px; margin-top:20px; }
+  .warn .ic{ flex:none; width:30px; height:30px; border-radius:50%; background:#9a3b1c; color:#f3ead7; font-family:'DM Serif Display',serif; font-size:20px; display:flex; align-items:center; justify-content:center; }
+  .warn .wt{ font-size:15px; line-height:1.55; color:#3a2a1a; }
+  .warn .wt strong{ color:#9a3b1c; }
+  .methods{ display:grid; grid-template-columns:repeat(auto-fit,minmax(248px,1fr)); gap:14px; margin-top:18px; }
+  .method{ background:#faf5e8; border:1.5px solid var(--line); border-radius:8px; padding:14px 16px 16px; }
+  .method svg{ width:100%; height:auto; display:block; border-radius:5px; }
+  .method .tag{ font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9a6b2f; margin-top:12px; }
+  .method .mh{ font-family:'DM Serif Display',serif; font-size:19px; margin:2px 0 5px; color:#3a2a1a; }
+  .method .mt{ font-size:13.5px; line-height:1.5; color:#4a3a28; }
+  .method.best{ border-color:#aebb97; box-shadow:0 0 0 2px #eef1e6 inset; }
+  .method.best .tag{ color:#4a5a3a; }
+
+  /* Schrank-Kaufberatung */
+  .tcards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; margin-top:18px; }
+  .tcard{ background:#faf5e8; border:1.5px solid var(--line); border-radius:8px; padding:16px 18px; }
+  .tcard h4{ font-family:'DM Serif Display',serif; font-weight:400; font-size:20px; margin:0 0 2px; color:#3a2a1a; }
+  .tcard .for{ font-size:12px; font-style:italic; color:#9a6b2f; margin:0 0 11px; }
+  .tcard ul{ list-style:none; margin:0; padding:0; }
+  .tcard li{ font-size:13.5px; line-height:1.5; padding:3px 0 3px 18px; position:relative; color:#4a3a28; }
+  .tcard li.p::before{ content:"+"; position:absolute; left:1px; color:#5a6b4a; font-weight:700; }
+  .tcard li.c::before{ content:"–"; position:absolute; left:2px; color:#b0653f; font-weight:700; }
+  .reco{ display:flex; gap:15px; align-items:flex-start; background:#eef1e6; border:1.5px solid #aebb97; border-left-width:5px; border-radius:6px; padding:16px 20px; margin-top:18px; }
+  .reco .ic{ flex:none; width:30px; height:30px; border-radius:50%; background:#5a6b4a; color:#f3ead7; font-family:'DM Serif Display',serif; font-size:18px; display:flex; align-items:center; justify-content:center; }
+  .reco .rl{ font-size:15px; line-height:1.55; color:#3a2a1a; }
+  .reco .rl strong{ color:#4a5a3a; }
+
+  /* Beispiel-Modell */
+  .example{ display:flex; gap:20px; align-items:flex-start; background:#241a10; border-radius:8px; padding:20px 24px; margin-top:14px; flex-wrap:wrap; }
+  .example .ex-l{ flex:1; min-width:240px; }
+  .example .ex-tag{ font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:#9a7a50; }
+  .example .ex-name{ font-family:'DM Serif Display',serif; font-size:24px; color:#f3ead7; margin:3px 0 2px; }
+  .example .ex-name span{ color:#d6603a; }
+  .example .ex-sub{ font-family:'Spectral',serif; font-style:italic; font-size:13px; color:#c9a87a; margin-bottom:12px; }
+  .example .ex-specs{ display:flex; flex-wrap:wrap; gap:7px; }
+  .example .chip{ font-size:12px; color:#e9dcc0; background:rgba(255,255,255,0.06); border:1px solid #5a4a36; border-radius:20px; padding:4px 12px; }
+  .example .chip.good{ color:#bcd0a8; border-color:#5a6b4a; }
+  .example .ex-r{ flex:none; width:200px; }
+  .example .ex-note{ font-size:12.5px; line-height:1.5; color:#c9a87a; }
+  .example .ex-note strong{ color:#e0b487; }
+  @media (max-width:560px){ .example .ex-r{ width:100%; } }
+
+  /* Meine Konfiguration */
+  .config{ background:#ede0c5; border:1.5px solid var(--line); border-radius:8px; padding:22px 24px; margin-top:18px; }
+  .config-tag{ font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:3px; }
+  .config h3{ font-family:'DM Serif Display',serif; font-weight:400; font-size:24px; margin:0 0 14px; color:#3a2a1a; }
+  .cgroup-h{ font-size:11px; letter-spacing:0.13em; text-transform:uppercase; margin:14px 0 8px; }
+  .cgroup-h.have{ color:#4a5a3a; }
+  .cgroup-h.need{ color:#9a3b1c; }
+  .citem{ display:flex; gap:12px; align-items:flex-start; padding:7px 0; border-top:1px solid rgba(0,0,0,0.07); }
+  .citem:first-of-type{ border-top:none; }
+  .cbox{ flex:none; width:22px; height:22px; border-radius:5px; display:flex; align-items:center; justify-content:center; font-size:14px; margin-top:1px; }
+  .cbox.on{ background:#5a6b4a; color:#f3ead7; }
+  .cbox.off{ background:transparent; border:1.5px solid #c0a878; }
+  .citem .cl{ font-size:15px; line-height:1.45; color:#3a2a1a; }
+  .citem .cl b{ font-weight:600; }
+  .citem .cl .meta{ font-size:12.5px; font-style:italic; color:#8a6f4e; }
+  .citem .price{ margin-left:auto; flex:none; font-family:'DM Serif Display',serif; font-size:16px; color:#9a3b1c; padding-left:12px; }
+  .config-sum{ display:flex; justify-content:space-between; align-items:baseline; margin-top:16px; padding-top:14px; border-top:1.5px solid var(--line); }
+  .config-sum .sl{ font-size:13px; color:#6b5a42; font-style:italic; }
+  .config-sum .sv{ font-family:'DM Serif Display',serif; font-size:22px; color:#3a2a1a; }
+  .config-sum .sv small{ font-size:13px; color:#8a6f4e; font-family:'Spectral',serif; font-style:italic; }
+
+  /* Steuerzentrale */
+  .build{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:18px; }
+  .bstep{ background:#faf5e8; border:1.5px solid var(--line); border-radius:8px; padding:16px 18px; }
+  .bstep .bn{ display:inline-flex; width:26px; height:26px; border-radius:50%; background:#6b5a42; color:#f3ead7; font-family:'DM Serif Display',serif; font-size:15px; align-items:center; justify-content:center; margin-bottom:8px; }
+  .bstep h4{ font-family:'DM Serif Display',serif; font-weight:400; font-size:18px; margin:0 0 5px; color:#3a2a1a; }
+  .bstep p{ margin:0; font-size:14px; line-height:1.55; color:#4a3a28; }
+  .bstep p strong{ color:#3a2a1a; }
+  .bmat{ background:#ede0c5; border:1.5px dashed var(--line); border-radius:8px; padding:18px 22px; margin-top:14px; }
+  .bmat .tool-tag{ margin-bottom:8px; }
+  .bmat ul{ margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:7px 22px; }
+  .bmat li{ font-size:14.5px; line-height:1.45; color:#3a2a1a; padding-left:18px; position:relative; }
+  .bmat li::before{ content:"▪"; position:absolute; left:0; color:#9a6b2f; }
+
+  /* Phasen-Tabelle */
+  .phases{ display:flex; flex-direction:column; gap:0; margin-top:18px; border:1.5px solid var(--line); border-radius:8px; overflow:hidden; }
+  .phead, .prow{ display:grid; grid-template-columns:1.5fr 1fr 1fr 1.2fr auto; gap:14px; align-items:center; padding:13px 18px; }
+  .phead{ background:#241a10; }
+  .phead span{ font-size:10.5px; letter-spacing:0.13em; text-transform:uppercase; color:#c9a87a; }
+  .prow{ background:#faf5e8; border-top:1px solid var(--line); }
+  .prow:nth-child(odd){ background:#f3ead7; }
+  .prow .pname{ font-family:'DM Serif Display',serif; font-size:18px; color:#3a2a1a; }
+  .prow .pname small{ display:block; font-family:'Spectral',serif; font-size:12px; font-style:italic; color:#8a6f4e; margin-top:1px; }
+  .prow .pv{ font-family:'DM Serif Display',serif; font-size:21px; color:#9a3b1c; }
+  .prow .pv.h{ color:#41525e; }
+  .prow .pv small{ font-size:12px; color:#9a6b2f; font-family:'Spectral',serif; }
+  .prow .pdur{ font-size:14px; color:#4a3a28; }
+  .pbtn{ font-family:'Spectral',serif; font-size:12px; font-weight:600; cursor:pointer; border:1.5px solid var(--accent); background:transparent; color:var(--accent); border-radius:4px; padding:7px 12px; white-space:nowrap; transition:background .15s, color .15s; }
+  .pbtn:hover{ background:var(--accent); color:#f3ead7; }
+  .pnote{ font-size:13.5px; font-style:italic; color:#6b5a42; margin-top:12px; }
+  @media (max-width:620px){
+    .phead{ display:none; }
+    .prow{ grid-template-columns:1fr 1fr; gap:8px 14px; }
+    .prow .pdur{ grid-column:1/-1; }
+    .pbtn{ grid-column:1/-1; }
+  }
+
+  .back{ display:inline-block; margin-top:40px; font-size:14px; text-decoration:none; color:var(--accent); border-bottom:1px solid var(--line); padding-bottom:2px; }
+  footer{ max-width:860px; margin:0 auto; padding:0 24px 50px; font-size:13px; color:var(--muted); }
+  footer a{ color:var(--muted); margin:0 10px; text-decoration:none; }
+  footer a:hover{ color:var(--accent); }
+
+  .de .en-only{ display:none; }
+  .en .de-only{ display:none; }
+
+  @media (max-width:560px){
+    h1.logo{ font-size:38px; }
+    .check{ flex-direction:column; gap:10px; }
+  }
+</style>
+</head>
+<body class="de">
+
+  <div class="lang">
+    <button data-set="de" class="active" onclick="setLang('de')">DE</button>
+    <button data-set="en" onclick="setLang('en')">EN</button>
+  </div>
+
+  <header class="mast">
+    <div class="mast-in">
+      <a class="crumb" href="index.html">← <span class="de-only">Smokebench</span><span class="en-only">Smokebench</span></a>
+      <div class="tag de-only">Werkstatt-Wissen · Reifen &amp; Abhängen</div>
+      <div class="tag en-only">Workshop know-how · Aging &amp; hanging</div>
+      <h1 class="logo">Reifekammer im <span class="de-only">Sommer</span><span class="en-only">Summer</span></h1>
+      <p class="lede de-only">Wenn die Wohnung 24&nbsp;°C hat, lässt sich bei <em>13–15&nbsp;°C</em> nichts mehr sauber abhängen. Ein Flaschenkühlschrank macht aus dem Wunschfenster eine konstante Größe — ganzjährig.</p>
+      <p class="lede en-only">When your kitchen sits at 24&nbsp;°C, nothing hangs cleanly at <em>13–15&nbsp;°C</em> any more. A bottle fridge turns that target window into a constant — all year round.</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ZIELKLIMA -->
+    <div class="stats">
+      <div class="stat t">
+        <div class="k de-only">Zieltemperatur</div><div class="k en-only">Target temperature</div>
+        <div class="v">13–15<small> °C</small></div>
+        <div class="s de-only">konstant, ohne Tag-Nacht-Schwankung</div>
+        <div class="s en-only">constant, no day–night swing</div>
+      </div>
+      <div class="stat h">
+        <div class="k de-only">Luftfeuchte</div><div class="k en-only">Humidity</div>
+        <div class="v">70–80<small> %</small></div>
+        <div class="s de-only">rel. Feuchte — der eigentliche Knackpunkt</div>
+        <div class="s en-only">rel. humidity — the real sticking point</div>
+      </div>
+    </div>
+
+    <!-- KLIMA-AMPEL (interaktiv) -->
+    <div class="eyebrow de-only">Interaktiv · Klima-Check</div>
+    <div class="eyebrow en-only">Interactive · Climate check</div>
+    <div class="tool">
+      <div class="tool-tag de-only">Klima-Ampel</div><div class="tool-tag en-only">Climate light</div>
+      <h3 class="de-only">Liegt deine Kammer im Zielfenster?</h3>
+      <h3 class="en-only">Is your chamber in the target window?</h3>
+      <p class="intro de-only">Trag die gemessenen Werte aus deiner Kammer ein — du siehst sofort, ob du passt, und was nachzujustieren ist.</p>
+      <p class="intro en-only">Enter the values measured in your chamber — you'll instantly see whether you're on target and what to adjust.</p>
+      <div class="field-row">
+        <div class="field">
+          <label class="de-only">Gemessene Temperatur</label><label class="en-only">Measured temperature</label>
+          <span><input type="number" id="aTemp" value="14" min="-2" max="30" step="0.5" oninput="updateAmpel()"><span class="unit">°C</span></span>
+        </div>
+        <div class="field">
+          <label class="de-only">Gemessene Feuchte</label><label class="en-only">Measured humidity</label>
+          <span><input type="number" id="aHum" value="75" min="20" max="100" step="1" oninput="updateAmpel()"><span class="unit">% rF</span></span>
+        </div>
+      </div>
+      <div class="ampel" id="ampelBox">
+        <div class="dot" id="ampelDot"></div>
+        <div>
+          <div class="status" id="ampelStatus"></div>
+          <div class="advice" id="ampelAdvice"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIE LÖSUNG -->
+    <div class="eyebrow de-only">Die Lösung</div><div class="eyebrow en-only">The solution</div>
+    <h2 class="de-only">Ein Flaschenkühlschrank als Reifekammer</h2>
+    <h2 class="en-only">A bottle fridge as an aging chamber</h2>
+    <p class="body de-only">Getränke- und Flaschenkühlschränke lassen sich meist von <strong>2 bis 15&nbsp;°C</strong> einstellen — genau dein Abhäng-Fenster. Die Glastür erlaubt Sichtkontrolle, ohne die Tür zu öffnen und das Klima zu stören. Wichtiger als der exakte Absolutwert ist die <em>Konstanz</em>, und die liefert das Gerät zuverlässig. Mit drei kleinen Ergänzungen wird daraus eine vollwertige Reifekammer.</p>
+    <p class="body en-only">Beverage and bottle fridges usually adjust from <strong>2 to 15&nbsp;°C</strong> — exactly your hanging window. The glass door lets you check at a glance without opening the door and disturbing the climate. What matters more than the exact value is <em>consistency</em>, and the unit delivers that reliably. Three small additions turn it into a full aging chamber.</p>
+
+    <!-- CHECKLISTE -->
+    <div class="eyebrow de-only">Darauf solltest du achten</div>
+    <div class="eyebrow en-only">What to watch for</div>
+    <div class="checks">
+      <div class="check">
+        <div class="num" style="background:#9a3b1c;">1</div>
+        <div>
+          <h4 style="color:#9a3b1c;" class="de-only">Temperatur exakt halten</h4>
+          <h4 style="color:#9a3b1c;" class="en-only">Hold the temperature precisely</h4>
+          <p class="de-only">Eingebaute Thermostate takten oft mit ±2–3&nbsp;°C. Ein externer Temperatur-Steckdosenregler übersteuert das Gerät und hält dein Fenster präzise. Zur Kontrolle ein eigenes Thermometer mit reinhängen.</p>
+          <p class="en-only">Built-in thermostats often cycle with ±2–3&nbsp;°C. An external plug-in temperature controller overrides the unit and holds your window precisely. Hang your own thermometer inside to verify.</p>
+        </div>
+      </div>
+      <div class="check">
+        <div class="num" style="background:#5b6b78;">2</div>
+        <div>
+          <h4 style="color:#41525e;" class="de-only">Luftfeuchte ist der Knackpunkt</h4>
+          <h4 style="color:#41525e;" class="en-only">Humidity is the sticking point</h4>
+          <p class="de-only">Kühlschränke trocknen die Luft aus — oft unter 50&nbsp;%. Ziel sind <strong>70–80&nbsp;%</strong>. Eine Wasserschale hilft; für echte Konstanz ein Ultraschall-Vernebler an einem Hygrostat. Ohne Feuchte-Kontrolle bildet sich ein Trockenrand (Case Hardening).</p>
+          <p class="en-only">Fridges dry the air out — often below 50&nbsp;%. The target is <strong>70–80&nbsp;%</strong>. A water dish helps; for real consistency, an ultrasonic mister on a humidistat. Without humidity control you get a dry rim (case hardening).</p>
+        </div>
+      </div>
+      <div class="check">
+        <div class="num" style="background:#5a6b4a;">3</div>
+        <div>
+          <h4 style="color:#4a5a3a;" class="de-only">Luft sanft umwälzen</h4>
+          <h4 style="color:#4a5a3a;" class="en-only">Move the air gently</h4>
+          <p class="de-only">Ein kleiner, leiser Lüfter im Intervallbetrieb sorgt für gleichmäßige Temperatur und beugt Schimmelnestern vor. Nicht dauerhaft auf voller Leistung laufen lassen — Intervalle reichen.</p>
+          <p class="en-only">A small, quiet fan running in intervals keeps the temperature even and prevents mould pockets. Don't run it constantly at full power — intervals are enough.</p>
+        </div>
+      </div>
+      <div class="check">
+        <div class="num" style="background:#9a6b2f;">4</div>
+        <div>
+          <h4 style="color:#8a5a2a;" class="de-only">Kondenswasser im Blick behalten</h4>
+          <h4 style="color:#8a5a2a;" class="en-only">Keep an eye on condensation</h4>
+          <p class="de-only">Bei höheren Soll-Temperaturen sammelt sich Kondenswasser am Boden. Regelmäßig kontrollieren und auswischen — sonst entsteht Schimmel an der falschen Stelle.</p>
+          <p class="en-only">At higher set temperatures, condensation collects at the bottom. Check and wipe it regularly — otherwise mould forms in the wrong place.</p>
+        </div>
+      </div>
+      <div class="check">
+        <div class="num" style="background:#6b5a42;">5</div>
+        <div>
+          <h4 style="color:#5a4a36;" class="de-only">Erst ausdünsten lassen</h4>
+          <h4 style="color:#5a4a36;" class="en-only">Let it air out first</h4>
+          <p class="de-only">Ein neues Gerät zuerst ein paar Tage leer laufen lassen, damit Eigengeruch und Kunststoff ausgasen — bevor Fleisch oder Wurst hineinkommt.</p>
+          <p class="en-only">Run a new unit empty for a few days so its own smell and plastic can off-gas — before any meat or sausage goes in.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- REIFEVERLUST-RECHNER (interaktiv) -->
+    <div class="eyebrow de-only">Interaktiv · Reifeverlust</div>
+    <div class="eyebrow en-only">Interactive · Aging loss</div>
+    <div class="tool">
+      <div class="tool-tag de-only">Gewichtsverlust-Rechner</div><div class="tool-tag en-only">Weight-loss calculator</div>
+      <h3 class="de-only">Wann ist es durch?</h3>
+      <h3 class="en-only">When is it done?</h3>
+      <p class="intro de-only">Luftgetrocknete Wurst &amp; Schinken sind „reif", wenn ein bestimmter Anteil des Gewichts verdunstet ist — oft 30–40&nbsp;%. Trag Start- und aktuelles Gewicht ein.</p>
+      <p class="intro en-only">Air-dried sausage &amp; ham are "ready" once a set share of the weight has evaporated — often 30–40&nbsp;%. Enter the start and current weight.</p>
+      <div class="field-row">
+        <div class="field">
+          <label class="de-only">Startgewicht</label><label class="en-only">Start weight</label>
+          <span><input type="number" id="vStart" value="800" min="10" step="10" oninput="updateVerlust()"><span class="unit">g</span></span>
+        </div>
+        <div class="field">
+          <label class="de-only">Aktuelles Gewicht</label><label class="en-only">Current weight</label>
+          <span><input type="number" id="vNow" value="640" min="10" step="10" oninput="updateVerlust()"><span class="unit">g</span></span>
+        </div>
+        <div class="field">
+          <label class="de-only">Ziel-Verlust</label><label class="en-only">Target loss</label>
+          <span><input type="number" id="vTarget" value="35" min="10" max="60" step="1" oninput="updateVerlust(); clearPreset()"><span class="unit">%</span></span>
+        </div>
+      </div>
+      <div class="presets de-only">
+        <span class="plabel">Richtwert je Produkt:</span>
+        <button class="preset" data-loss="30" onclick="setLoss(30,this)">Salami <b>30 %</b></button>
+        <button class="preset" data-loss="35" onclick="setLoss(35,this)">Schinken <b>35 %</b></button>
+        <button class="preset" data-loss="30" onclick="setLoss(30,this)">Coppa <b>30 %</b></button>
+        <button class="preset" data-loss="25" onclick="setLoss(25,this)">Landjäger <b>25 %</b></button>
+        <button class="preset" data-loss="50" onclick="setLoss(50,this)">Biltong <b>50 %</b></button>
+      </div>
+      <div class="presets en-only">
+        <span class="plabel">Guide value per product:</span>
+        <button class="preset" data-loss="30" onclick="setLoss(30,this)">Salami <b>30 %</b></button>
+        <button class="preset" data-loss="35" onclick="setLoss(35,this)">Ham <b>35 %</b></button>
+        <button class="preset" data-loss="30" onclick="setLoss(30,this)">Coppa <b>30 %</b></button>
+        <button class="preset" data-loss="25" onclick="setLoss(25,this)">Landjäger <b>25 %</b></button>
+        <button class="preset" data-loss="50" onclick="setLoss(50,this)">Biltong <b>50 %</b></button>
+      </div>
+      <div class="resrow">
+        <div class="resbox accent">
+          <div class="rk de-only">Aktueller Verlust</div><div class="rk en-only">Current loss</div>
+          <div class="rv"><span id="vLossPct">—</span><small> %</small></div>
+        </div>
+        <div class="resbox blue">
+          <div class="rk de-only">Zielgewicht</div><div class="rk en-only">Target weight</div>
+          <div class="rv"><span id="vTargetG">—</span><small> g</small></div>
+        </div>
+        <div class="resbox">
+          <div class="rk de-only">Noch zu verlieren</div><div class="rk en-only">Still to lose</div>
+          <div class="rv"><span id="vRemain">—</span><small> g</small></div>
+        </div>
+      </div>
+      <div class="progress"><div id="vBar"></div></div>
+      <div class="verlust-note" id="vNote"></div>
+    </div>
+
+    <!-- EXPLOSIONSZEICHNUNG & TEILELISTE -->
+    <div class="eyebrow de-only">Explosionszeichnung &amp; Teileliste</div>
+    <div class="eyebrow en-only">Exploded view &amp; parts list</div>
+    <h2 class="de-only">Die Kammer im Detail</h2>
+    <h2 class="en-only">The chamber in detail</h2>
+    <p class="body de-only">Alle Komponenten und ihre Einbaulage. Die Nummern in der Zeichnung entsprechen der Teileliste darunter. Markennamen sind Beispiele aus der Räucher- und Reife-Szene — bewährt, aber kein Muss.</p>
+    <p class="body en-only">Every component and where it goes. The numbers in the drawing match the parts list below. Brand names are examples common in the curing community — proven, but not mandatory.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 1040 780" role="img" aria-label="Explosionszeichnung der Reifekammer">
+        <defs>
+          <pattern id="rkgrid" width="26" height="26" patternUnits="userSpaceOnUse">
+            <path d="M26 0H0V26" fill="none" stroke="#ecdfc4" stroke-width="1"/>
+          </pattern>
+          <marker id="rkarrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#9a8a72"/>
+          </marker>
+        </defs>
+        <rect x="0" y="0" width="1040" height="780" fill="#faf5e8"/>
+        <rect x="0" y="0" width="1040" height="780" fill="url(#rkgrid)"/>
+
+        <!-- title block -->
+        <text x="28" y="42" font-family="'DM Serif Display',serif" font-size="24" fill="#3a2a1a">Reifekammer</text>
+        <text x="28" y="64" font-family="'Spectral',serif" font-size="13" font-style="italic" fill="#8a6f4e">Explosionszeichnung · 13–15 °C / 70–80 % rF</text>
+
+        <!-- ===== assembly leaders (dashed) ===== -->
+        <g stroke="#9a8a72" stroke-width="1.3" stroke-dasharray="5 5" fill="none" marker-end="url(#rkarrow)">
+          <line x1="320" y1="360" x2="368" y2="360"/>            <!-- door -> body -->
+          <line x1="470" y1="86"  x2="470" y2="172"/>            <!-- shelf -> body top -->
+          <line x1="646" y1="170" x2="556" y2="208"/>            <!-- rod -> body -->
+          <line x1="650" y1="372" x2="556" y2="372"/>            <!-- fan -> body wall -->
+          <line x1="470" y1="652" x2="470" y2="576"/>            <!-- mister -> body bottom -->
+          <line x1="648" y1="508" x2="556" y2="496"/>            <!-- hygrometer -> body -->
+        </g>
+        <!-- control cables (lighter) -->
+        <g stroke="#c0a878" stroke-width="1.4" stroke-dasharray="2 4" fill="none">
+          <path d="M872 214 C 760 240, 640 250, 520 262"/>      <!-- ITC sensor -->
+          <path d="M872 360 C 770 400, 650 420, 520 432"/>      <!-- IHC sensor -->
+          <path d="M905 248 L 905 286"/>                        <!-- ITC -> strip -->
+          <path d="M905 398 L 905 454"/>                        <!-- IHC -> strip -->
+        </g>
+
+        <!-- ===== 2 · Gitterrost (top) ===== -->
+        <g>
+          <rect x="386" y="60" width="168" height="26" rx="6" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <line x1="404" y1="60" x2="404" y2="86" stroke="#3a2a1a" stroke-width="1"/>
+          <line x1="424" y1="60" x2="424" y2="86" stroke="#3a2a1a" stroke-width="1"/>
+          <line x1="444" y1="60" x2="444" y2="86" stroke="#3a2a1a" stroke-width="1"/>
+          <line x1="464" y1="60" x2="464" y2="86" stroke="#3a2a1a" stroke-width="1"/>
+          <line x1="484" y1="60" x2="484" y2="86" stroke="#3a2a1a" stroke-width="1"/>
+          <line x1="504" y1="60" x2="504" y2="86" stroke="#3a2a1a" stroke-width="1"/>
+          <line x1="524" y1="60" x2="524" y2="86" stroke="#3a2a1a" stroke-width="1"/>
+          <line x1="386" y1="73" x2="554" y2="73" stroke="#3a2a1a" stroke-width="1"/>
+        </g>
+
+        <!-- ===== 1 · Glastür (exploded left) ===== -->
+        <g>
+          <rect x="150" y="150" width="170" height="430" rx="12" fill="#dfe7e6" fill-opacity="0.45" stroke="#3a2a1a" stroke-width="2.5"/>
+          <rect x="168" y="172" width="134" height="386" rx="6" fill="#cfe0df" fill-opacity="0.5" stroke="#5b6b78" stroke-width="1.2"/>
+          <line x1="186" y1="200" x2="280" y2="300" stroke="#ffffff" stroke-opacity="0.7" stroke-width="3"/>
+          <line x1="186" y1="250" x2="250" y2="320" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2"/>
+          <rect x="300" y="320" width="9" height="120" rx="4.5" fill="#3a2a1a"/>
+        </g>
+
+        <!-- ===== Kühlschrank-Gehäuse (body) ===== -->
+        <g>
+          <rect x="368" y="150" width="190" height="430" rx="12" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2.5"/>
+          <rect x="386" y="172" width="154" height="352" rx="6" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.5"/>
+          <line x1="368" y1="528" x2="558" y2="528" stroke="#3a2a1a" stroke-width="2"/>
+          <text x="463" y="556" text-anchor="middle" font-family="'Spectral',serif" font-size="12" fill="#8a6f4e">Aggregat</text>
+          <circle cx="408" cy="554" r="9" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.5"/>
+          <rect x="388" y="580" width="20" height="16" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.5"/>
+          <rect x="518" y="580" width="20" height="16" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.5"/>
+          <!-- ghosted install positions -->
+          <line x1="386" y1="226" x2="540" y2="226" stroke="#c9b48a" stroke-width="1" stroke-dasharray="3 4"/>
+          <line x1="386" y1="320" x2="540" y2="320" stroke="#c9b48a" stroke-width="1" stroke-dasharray="3 4"/>
+        </g>
+
+        <!-- ===== 3 · Hängestange + S-Haken + Wurst (upper right) ===== -->
+        <g>
+          <rect x="648" y="158" width="172" height="12" rx="6" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="2"/>
+          <!-- hooks -->
+          <path d="M686 170 q-9 8 0 16 q9 8 0 16" fill="none" stroke="#3a2a1a" stroke-width="2.4"/>
+          <path d="M734 170 q-9 8 0 16 q9 8 0 16" fill="none" stroke="#3a2a1a" stroke-width="2.4"/>
+          <path d="M782 170 q-9 8 0 16 q9 8 0 16" fill="none" stroke="#3a2a1a" stroke-width="2.4"/>
+          <!-- sausages -->
+          <ellipse cx="686" cy="244" rx="15" ry="38" fill="#b8694a" stroke="#3a2a1a" stroke-width="1.6"/>
+          <ellipse cx="782" cy="236" rx="14" ry="32" fill="#a85c40" stroke="#3a2a1a" stroke-width="1.6"/>
+          <line x1="686" y1="206" x2="686" y2="208" stroke="#3a2a1a" stroke-width="2"/>
+          <path d="M681 214 q5 6 10 0 M681 230 q5 6 10 0 M681 250 q5 6 10 0" fill="none" stroke="#3a2a1a" stroke-opacity="0.4" stroke-width="1"/>
+        </g>
+
+        <!-- ===== 4 · Umluft-Lüfter (right mid) ===== -->
+        <g>
+          <rect x="648" y="320" width="104" height="104" rx="10" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <circle cx="700" cy="372" r="44" fill="none" stroke="#3a2a1a" stroke-width="1.6"/>
+          <circle cx="700" cy="372" r="11" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.6"/>
+          <g stroke="#3a2a1a" stroke-width="1.4" fill="none">
+            <path d="M700 372 Q 726 350 740 372"/>
+            <path d="M700 372 Q 718 398 700 416"/>
+            <path d="M700 372 Q 674 394 660 372"/>
+            <path d="M700 372 Q 682 346 700 328"/>
+            <path d="M700 372 Q 728 380 722 404"/>
+            <path d="M700 372 Q 672 364 678 340"/>
+          </g>
+          <circle cx="658" cy="330" r="2.6" fill="#3a2a1a"/><circle cx="742" cy="330" r="2.6" fill="#3a2a1a"/>
+          <circle cx="658" cy="414" r="2.6" fill="#3a2a1a"/><circle cx="742" cy="414" r="2.6" fill="#3a2a1a"/>
+        </g>
+
+        <!-- ===== 6 · Thermo-/Hygrometer ===== -->
+        <g>
+          <rect x="648" y="472" width="100" height="74" rx="9" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <rect x="662" y="486" width="72" height="38" rx="4" fill="#cfe0df" fill-opacity="0.55" stroke="#5b6b78" stroke-width="1.2"/>
+          <text x="698" y="502" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="12" fill="#3a2a1a">14°C</text>
+          <text x="698" y="518" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="11" fill="#41525e">75 %</text>
+          <circle cx="666" cy="536" r="2.4" fill="#9a3b1c"/>
+        </g>
+
+        <!-- ===== 5 · Ultraschall-Vernebler + Wasserbehälter (bottom) ===== -->
+        <g>
+          <rect x="386" y="656" width="168" height="52" rx="9" fill="#dfe7e6" fill-opacity="0.5" stroke="#3a2a1a" stroke-width="2"/>
+          <path d="M392 674 q12 -7 24 0 t24 0 t24 0 t24 0 t24 0" fill="none" stroke="#5b6b78" stroke-width="1.4"/>
+          <circle cx="470" cy="690" r="9" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.5"/>
+          <circle cx="470" cy="690" r="3.5" fill="#3a2a1a"/>
+          <g fill="#9aa8aa"><circle cx="470" cy="666" r="2"/><circle cx="462" cy="658" r="1.6"/><circle cx="478" cy="660" r="1.6"/><circle cx="470" cy="650" r="1.4"/></g>
+        </g>
+
+        <!-- ===== 7 · Inkbird ITC-308 ===== -->
+        <g>
+          <rect x="872" y="170" width="150" height="92" rx="9" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <rect x="886" y="184" width="122" height="34" rx="4" fill="#2a1a0e"/>
+          <text x="947" y="207" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="15" fill="#d6603a">14.2°</text>
+          <circle cx="898" cy="238" r="6" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.2"/>
+          <circle cx="918" cy="238" r="6" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.2"/>
+          <rect x="970" y="230" width="36" height="16" rx="3" fill="#9a3b1c"/>
+          <text x="947" y="282" text-anchor="middle" font-family="'Spectral',serif" font-size="12" font-style="italic" fill="#8a6f4e">ITC-308</text>
+        </g>
+
+        <!-- ===== 8 · Inkbird IHC-200 ===== -->
+        <g>
+          <rect x="872" y="316" width="150" height="92" rx="9" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <rect x="886" y="330" width="122" height="34" rx="4" fill="#2a1a0e"/>
+          <text x="947" y="353" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="15" fill="#7fb0c4">75 %</text>
+          <circle cx="898" cy="384" r="6" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.2"/>
+          <circle cx="918" cy="384" r="6" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.2"/>
+          <rect x="970" y="376" width="36" height="16" rx="3" fill="#5b6b78"/>
+          <text x="947" y="428" text-anchor="middle" font-family="'Spectral',serif" font-size="12" font-style="italic" fill="#8a6f4e">IHC-200</text>
+        </g>
+
+        <!-- ===== 9 · Mehrfachsteckdose ===== -->
+        <g>
+          <rect x="872" y="456" width="150" height="56" rx="9" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <circle cx="902" cy="484" r="11" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.4"/>
+          <circle cx="947" cy="484" r="11" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.4"/>
+          <circle cx="992" cy="484" r="11" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.4"/>
+          <circle cx="899" cy="484" r="1.6" fill="#3a2a1a"/><circle cx="905" cy="484" r="1.6" fill="#3a2a1a"/>
+          <circle cx="944" cy="484" r="1.6" fill="#3a2a1a"/><circle cx="950" cy="484" r="1.6" fill="#3a2a1a"/>
+          <circle cx="989" cy="484" r="1.6" fill="#3a2a1a"/><circle cx="995" cy="484" r="1.6" fill="#3a2a1a"/>
+        </g>
+
+        <!-- ===== callouts ===== -->
+        <g font-family="'DM Serif Display',serif" font-size="16">
+          <g><circle cx="150" cy="150" r="16" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="150" y="156" text-anchor="middle" fill="#f3ead7">1</text></g>
+          <g><circle cx="560" cy="62" r="16" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="560" y="68" text-anchor="middle" fill="#f3ead7">2</text></g>
+          <g><circle cx="828" cy="150" r="16" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="828" y="156" text-anchor="middle" fill="#f3ead7">3</text></g>
+          <g><circle cx="762" cy="322" r="16" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="762" y="328" text-anchor="middle" fill="#f3ead7">4</text></g>
+          <g><circle cx="560" cy="700" r="16" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="560" y="706" text-anchor="middle" fill="#f3ead7">5</text></g>
+          <g><circle cx="640" cy="474" r="16" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="640" y="480" text-anchor="middle" fill="#f3ead7">6</text></g>
+          <g><circle cx="1006" cy="172" r="16" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="1006" y="178" text-anchor="middle" fill="#f3ead7">7</text></g>
+          <g><circle cx="1006" cy="318" r="16" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="1006" y="324" text-anchor="middle" fill="#f3ead7">8</text></g>
+          <g><circle cx="858" cy="456" r="16" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="858" y="462" text-anchor="middle" fill="#f3ead7">9</text></g>
+        </g>
+      </svg>
+    </div>
+
+    <!-- TEILELISTE -->
+    <div class="plist de-only">
+      <div class="pitem"><div class="pno">1</div><div class="pt"><strong>Getränke-/Flaschenkühlschrank</strong> mit Glastür, 2–15&nbsp;°C einstellbar — das Gehäuse. <span class="mod">z.&nbsp;B. Klarstein, Finebuy, Severin</span></div></div>
+      <div class="pitem"><div class="pno">2</div><div class="pt"><strong>Edelstahl-Gitterrost</strong> / Einlegegitter als zusätzliche Ebene</div></div>
+      <div class="pitem"><div class="pno">3</div><div class="pt"><strong>Hängestange + Edelstahl-S-Haken</strong> zum Aufhängen von Wurst &amp; Schinken</div></div>
+      <div class="pitem"><div class="pno">4</div><div class="pt"><strong>3× Lüfter</strong> (Zu-/Um-/Abluft, 12&nbsp;V, leise) über Trafo + PWM-Drehzahlregler. <span class="mod">z.&nbsp;B. Arctic P8, Noctua NF-A8</span></div></div>
+      <div class="pitem"><div class="pno">5</div><div class="pt"><strong>Ultraschall-Vernebler + Wasserbehälter</strong> für die Luftfeuchte. <span class="mod">z.&nbsp;B. Lucky Reptile Super Fog, Exo Terra Fogger oder 24&nbsp;V Membran-Nebler</span></div></div>
+      <div class="pitem"><div class="pno">6</div><div class="pt"><strong>Bluetooth-Thermo-/Hygrometer</strong> zur Kontrolle, mit App-Verlauf. <span class="mod">Inkbird ITH-21-B</span> <em style="color:#8a6f4e;">— mit Klett ans vordere Drittel der Lüfter-Seitenwand, mittlere Höhe, Display zur Glastür; nicht direkt vor Lüfter, Nebler oder Heizmatte</em></div></div>
+      <div class="pitem"><div class="pno">7</div><div class="pt"><strong>Temperaturregler</strong> — <span class="mod">Inkbird ITC-308</span>: Steckdosen-Thermostat, schaltet das Kühlaggregat</div></div>
+      <div class="pitem"><div class="pno">8</div><div class="pt"><strong>Feuchteregler</strong> — <span class="mod">Inkbird IHC-200</span>: Hygrostat, steuert den Vernebler</div></div>
+      <div class="pitem"><div class="pno">9</div><div class="pt"><strong>Mehrfachsteckdose</strong> / Verteiler für Regler, Lüfter und Nebler</div></div>
+      <div class="opt-head">Optional · je nach Reifegut</div>
+      <div class="pitem"><div class="pno opt">+</div><div class="pt"><strong>Edelschimmel-Starterkultur</strong> für Salami. <span class="mod">Penicillium nalgiovense, z.&nbsp;B. Mold-600</span></div></div>
+      <div class="pitem"><div class="pno opt">+</div><div class="pt"><strong>Starterkultur &amp; Pökelsalz (NPS)</strong> für sichere Fermentation. <span class="mod">z.&nbsp;B. Bactoferm F-LC</span></div></div>
+      <div class="pitem"><div class="pno opt">+</div><div class="pt"><strong>Tropfschale / Bodenmatte</strong> gegen Kondenswasser am Boden</div></div>
+    </div>
+
+    <div class="plist en-only">
+      <div class="pitem"><div class="pno">1</div><div class="pt"><strong>Beverage / bottle fridge</strong> with glass door, adjustable 2–15&nbsp;°C — the cabinet. <span class="mod">e.g. Klarstein, Finebuy, Severin</span></div></div>
+      <div class="pitem"><div class="pno">2</div><div class="pt"><strong>Stainless wire shelf</strong> as an extra level</div></div>
+      <div class="pitem"><div class="pno">3</div><div class="pt"><strong>Hanging rod + stainless S-hooks</strong> for sausage &amp; ham</div></div>
+      <div class="pitem"><div class="pno">4</div><div class="pt"><strong>Circulation fan</strong> (5–12&nbsp;V, quiet) on a timer. <span class="mod">e.g. Noctua NF-A8, Arctic P8</span></div></div>
+      <div class="pitem"><div class="pno">5</div><div class="pt"><strong>Ultrasonic mister + water reservoir</strong> for humidity. <span class="mod">e.g. 24&nbsp;V membrane mister</span></div></div>
+      <div class="pitem"><div class="pno">6</div><div class="pt"><strong>Bluetooth thermo-/hygrometer</strong> to verify, with app history. <span class="mod">Inkbird ITH-21-B</span> <em style="color:#8a6f4e;">— velcro it to the front third of the fan-side wall, mid height, display facing the glass door; not right in front of the fan, mister or heat mat</em></div></div>
+      <div class="pitem"><div class="pno">7</div><div class="pt"><strong>Temperature controller</strong> — <span class="mod">Inkbird ITC-308</span>: plug-in thermostat, switches the compressor</div></div>
+      <div class="pitem"><div class="pno">8</div><div class="pt"><strong>Humidity controller</strong> — <span class="mod">Inkbird IHC-200</span>: humidistat, drives the mister</div></div>
+      <div class="pitem"><div class="pno">9</div><div class="pt"><strong>Power strip</strong> for controllers, fan and mister</div></div>
+      <div class="opt-head">Optional · depending on what you age</div>
+      <div class="pitem"><div class="pno opt">+</div><div class="pt"><strong>Noble mould starter</strong> for salami. <span class="mod">Penicillium nalgiovense, e.g. Mold-600</span></div></div>
+      <div class="pitem"><div class="pno opt">+</div><div class="pt"><strong>Starter culture &amp; curing salt</strong> for safe fermentation. <span class="mod">e.g. Bactoferm F-LC</span></div></div>
+      <div class="pitem"><div class="pno opt">+</div><div class="pt"><strong>Drip tray / floor mat</strong> against condensation at the bottom</div></div>
+    </div>
+
+    <!-- INNEN / AUSSEN -->
+    <div class="eyebrow de-only">Innen oder außen?</div>
+    <div class="eyebrow en-only">Inside or outside?</div>
+    <h2 class="de-only">Was sitzt im Schrank, was daneben</h2>
+    <h2 class="en-only">What goes in the cabinet, what sits beside it</h2>
+    <p class="body de-only">Die <strong>Elektronik mit Display</strong> bleibt außen — nur die <strong>Fühler</strong> der Regler wandern hinein. Alles, was Klima macht oder hängt, sitzt drinnen. Die Kabel laufen durch die Türdichtung (sie drückt weich genug, ohne undicht zu werden).</p>
+    <p class="body en-only">The <strong>electronics with displays</strong> stay outside — only the controllers' <strong>probes</strong> go in. Everything that makes climate or hangs sits inside. The cables run through the door gasket (it seals soft enough around them).</p>
+
+    <div class="split">
+      <div class="splitcol in">
+        <h4 class="de-only">Im Schrank</h4><h4 class="en-only">Inside the cabinet</h4>
+        <p class="sub de-only">Klima &amp; Reifegut</p><p class="sub en-only">Climate &amp; product</p>
+        <ul class="de-only">
+          <li><span class="num">2</span> Edelstahl-Gitterrost</li>
+          <li><span class="num">3</span> Hängestange + S-Haken (mit Wurst/Schinken)</li>
+          <li><span class="num">4</span> Umluft-Lüfter</li>
+          <li><span class="num">5</span> Ultraschall-Vernebler + Wasserbehälter</li>
+          <li><span class="num">6</span> Thermo-/Hygrometer (Lüfter-Seitenwand, vorderes Drittel, Display zur Glastür)</li>
+          <li><span class="num">7·8</span> Temperatur- &amp; Feuchte-Fühler der Regler</li>
+        </ul>
+        <ul class="en-only">
+          <li><span class="num">2</span> Stainless wire shelf</li>
+          <li><span class="num">3</span> Hanging rod + S-hooks (with sausage/ham)</li>
+          <li><span class="num">4</span> Circulation fan</li>
+          <li><span class="num">5</span> Ultrasonic mister + water reservoir</li>
+          <li><span class="num">6</span> Thermo-/hygrometer (fan-side wall, front third, display facing the glass)</li>
+          <li><span class="num">7·8</span> Temperature &amp; humidity probes of the controllers</li>
+        </ul>
+      </div>
+      <div class="splitcol out">
+        <h4 class="de-only">Neben dem Schrank</h4><h4 class="en-only">Beside the cabinet</h4>
+        <p class="sub de-only">Steuerung &amp; Strom</p><p class="sub en-only">Control &amp; power</p>
+        <ul class="de-only">
+          <li><span class="num">7</span> Temperaturregler — Inkbird ITC-308</li>
+          <li><span class="num">8</span> Feuchteregler — Inkbird IHC-200</li>
+          <li><span class="num">9</span> Mehrfachsteckdose / Verteiler</li>
+          <li>Netzkabel des Kühlschranks → in den <em>Kühl</em>-Ausgang des ITC-308</li>
+          <li>Vernebler &amp; Lüfter → in den <em>Feucht</em>-Ausgang bzw. die Zeitschaltuhr</li>
+        </ul>
+        <ul class="en-only">
+          <li><span class="num">7</span> Temperature controller — Inkbird ITC-308</li>
+          <li><span class="num">8</span> Humidity controller — Inkbird IHC-200</li>
+          <li><span class="num">9</span> Power strip / distributor</li>
+          <li>Fridge mains cable → into the ITC-308's <em>cooling</em> outlet</li>
+          <li>Mister &amp; fan → into the <em>humidify</em> outlet / the timer</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="diagram" style="margin-top:18px;">
+      <svg viewBox="0 0 1040 560" role="img" aria-label="Querschnitt-Montagezeichnung: innen und außen">
+        <defs>
+          <pattern id="rkgrid2" width="26" height="26" patternUnits="userSpaceOnUse">
+            <path d="M26 0H0V26" fill="none" stroke="#ecdfc4" stroke-width="1"/>
+          </pattern>
+          <marker id="rkarrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#c0a878"/>
+          </marker>
+        </defs>
+        <rect x="0" y="0" width="1040" height="560" fill="#faf5e8"/>
+        <rect x="0" y="0" width="1040" height="560" fill="url(#rkgrid2)"/>
+
+        <!-- zones -->
+        <rect x="24" y="62" width="606" height="474" rx="10" fill="#eef1e6" stroke="#aebb97" stroke-width="1.5"/>
+        <rect x="650" y="62" width="366" height="474" rx="10" fill="#f6ece6" stroke="#d6a98f" stroke-width="1.5"/>
+        <text x="44" y="92" font-family="'Spectral',serif" font-size="12" font-weight="600" letter-spacing="2" fill="#5a6b4a">IM SCHRANK · INNEN</text>
+        <text x="672" y="92" font-family="'Spectral',serif" font-size="12" font-weight="600" letter-spacing="2" fill="#9a3b1c">NEBEN DEM SCHRANK · AUSSEN</text>
+
+        <!-- ===== fridge cut-away ===== -->
+        <g>
+          <rect x="74" y="118" width="396" height="394" rx="14" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2.5"/>
+          <rect x="86" y="130" width="372" height="370" rx="8" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.4"/>
+          <!-- glass reflections + handle -->
+          <line x1="110" y1="150" x2="220" y2="260" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/>
+          <line x1="110" y1="200" x2="180" y2="270" stroke="#ffffff" stroke-opacity="0.4" stroke-width="2"/>
+          <rect x="448" y="290" width="8" height="96" rx="4" fill="#3a2a1a"/>
+          <line x1="74" y1="476" x2="470" y2="476" stroke="#3a2a1a" stroke-width="1.6"/>
+          <text x="120" y="498" font-family="'Spectral',serif" font-size="11" fill="#8a6f4e">Aggregat</text>
+
+          <!-- 2 Gitterrost -->
+          <rect x="104" y="176" width="320" height="14" rx="4" fill="#f3ead7" stroke="#3a2a1a" stroke-width="1.8"/>
+          <g stroke="#3a2a1a" stroke-width="0.9">
+            <line x1="128" y1="176" x2="128" y2="190"/><line x1="160" y1="176" x2="160" y2="190"/><line x1="192" y1="176" x2="192" y2="190"/><line x1="224" y1="176" x2="224" y2="190"/><line x1="256" y1="176" x2="256" y2="190"/><line x1="288" y1="176" x2="288" y2="190"/><line x1="320" y1="176" x2="320" y2="190"/><line x1="352" y1="176" x2="352" y2="190"/><line x1="384" y1="176" x2="384" y2="190"/>
+          </g>
+
+          <!-- 3 Hängestange + Wurst -->
+          <rect x="150" y="214" width="230" height="9" rx="4.5" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.6"/>
+          <path d="M214 223 q-7 6 0 12 q7 6 0 12" fill="none" stroke="#3a2a1a" stroke-width="2"/>
+          <path d="M330 223 q-7 6 0 12 q7 6 0 12" fill="none" stroke="#3a2a1a" stroke-width="2"/>
+          <ellipse cx="214" cy="296" rx="14" ry="36" fill="#b8694a" stroke="#3a2a1a" stroke-width="1.5"/>
+          <ellipse cx="330" cy="288" rx="13" ry="30" fill="#a85c40" stroke="#3a2a1a" stroke-width="1.5"/>
+
+          <!-- 6 Hygrometer (left wall) -->
+          <rect x="104" y="330" width="78" height="58" rx="8" fill="#f3ead7" stroke="#3a2a1a" stroke-width="1.8"/>
+          <rect x="114" y="342" width="58" height="30" rx="3" fill="#cfe0df" fill-opacity="0.55" stroke="#5b6b78" stroke-width="1"/>
+          <text x="143" y="355" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="11" fill="#3a2a1a">14°C</text>
+          <text x="143" y="368" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="10" fill="#41525e">75 %</text>
+
+          <!-- 4 Lüfter (right wall) -->
+          <rect x="372" y="330" width="74" height="74" rx="8" fill="#f3ead7" stroke="#3a2a1a" stroke-width="1.8"/>
+          <circle cx="409" cy="367" r="30" fill="none" stroke="#3a2a1a" stroke-width="1.4"/>
+          <circle cx="409" cy="367" r="8" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.4"/>
+          <g stroke="#3a2a1a" stroke-width="1.2" fill="none">
+            <path d="M409 367 Q 428 351 438 367"/><path d="M409 367 Q 423 387 409 399"/><path d="M409 367 Q 390 383 380 367"/><path d="M409 367 Q 395 347 409 335"/>
+          </g>
+
+          <!-- 5 Vernebler + Wasserbehälter (bottom) -->
+          <rect x="130" y="430" width="220" height="38" rx="8" fill="#dfe7e6" fill-opacity="0.55" stroke="#3a2a1a" stroke-width="1.8"/>
+          <path d="M138 446 q14 -6 28 0 t28 0 t28 0 t28 0 t28 0 t28 0" fill="none" stroke="#5b6b78" stroke-width="1.3"/>
+          <circle cx="240" cy="455" r="8" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.4"/>
+          <circle cx="240" cy="455" r="3" fill="#3a2a1a"/>
+          <g fill="#9aa8aa"><circle cx="240" cy="432" r="1.8"/><circle cx="233" cy="425" r="1.4"/><circle cx="247" cy="426" r="1.4"/></g>
+
+          <!-- Fühler (probes) -->
+          <g>
+            <rect x="276" y="246" width="30" height="18" rx="4" fill="#f3ead7" stroke="#9a3b1c" stroke-width="1.4"/>
+            <text x="291" y="259" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-weight="600" fill="#9a3b1c">T</text>
+            <rect x="276" y="350" width="30" height="18" rx="4" fill="#f3ead7" stroke="#5b6b78" stroke-width="1.4"/>
+            <text x="291" y="363" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-weight="600" fill="#41525e">rF</text>
+          </g>
+        </g>
+
+        <!-- cables: probes -> exit -> controllers -->
+        <g stroke="#c0a878" stroke-width="1.6" fill="none">
+          <path d="M306 255 C 420 256, 470 300, 520 300" stroke-dasharray="2 4"/>
+          <path d="M306 359 C 420 360, 470 360, 520 360" stroke-dasharray="2 4"/>
+        </g>
+        <!-- exit notch -->
+        <g>
+          <rect x="462" y="316" width="16" height="88" rx="3" fill="#f6ece6" stroke="#d6a98f" stroke-width="1"/>
+          <text x="492" y="430" font-family="'Spectral',serif" font-size="10.5" font-style="italic" fill="#8a6f4e">Kabel durch</text>
+          <text x="492" y="444" font-family="'Spectral',serif" font-size="10.5" font-style="italic" fill="#8a6f4e">die Türdichtung</text>
+        </g>
+
+        <!-- ===== controllers (outside) ===== -->
+        <!-- 7 ITC-308 -->
+        <g>
+          <rect x="686" y="120" width="300" height="92" rx="9" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <rect x="702" y="134" width="150" height="36" rx="4" fill="#2a1a0e"/>
+          <text x="777" y="158" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="16" fill="#d6603a">14.2°</text>
+          <circle cx="716" cy="190" r="6" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.2"/><circle cx="738" cy="190" r="6" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.2"/>
+          <rect x="876" y="134" width="96" height="22" rx="3" fill="#9a3b1c"/>
+          <text x="924" y="150" text-anchor="middle" font-family="'Spectral',serif" font-size="11" fill="#f3ead7">KÜHL</text>
+          <rect x="876" y="166" width="96" height="20" rx="3" fill="none" stroke="#c9b48a" stroke-width="1.2"/>
+          <text x="777" y="204" text-anchor="middle" font-family="'Spectral',serif" font-size="11.5" font-style="italic" fill="#8a6f4e">Inkbird ITC-308 · Temperatur</text>
+        </g>
+        <!-- 8 IHC-200 -->
+        <g>
+          <rect x="686" y="248" width="300" height="92" rx="9" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <rect x="702" y="262" width="150" height="36" rx="4" fill="#2a1a0e"/>
+          <text x="777" y="286" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="16" fill="#7fb0c4">75 %</text>
+          <circle cx="716" cy="318" r="6" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.2"/><circle cx="738" cy="318" r="6" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.2"/>
+          <rect x="876" y="262" width="96" height="22" rx="3" fill="#5b6b78"/>
+          <text x="924" y="278" text-anchor="middle" font-family="'Spectral',serif" font-size="11" fill="#f3ead7">FEUCHT</text>
+          <text x="777" y="332" text-anchor="middle" font-family="'Spectral',serif" font-size="11.5" font-style="italic" fill="#8a6f4e">Inkbird IHC-200 · Feuchte</text>
+        </g>
+        <!-- 9 Steckdose -->
+        <g>
+          <rect x="686" y="376" width="300" height="64" rx="9" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <circle cx="728" cy="408" r="12" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.4"/><circle cx="778" cy="408" r="12" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.4"/><circle cx="828" cy="408" r="12" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.4"/><circle cx="878" cy="408" r="12" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.4"/>
+          <text x="950" y="412" text-anchor="middle" font-family="'Spectral',serif" font-size="12" fill="#8a6f4e">230 V</text>
+        </g>
+        <!-- power chain hints -->
+        <g stroke="#3a2a1a" stroke-width="1.3" fill="none" stroke-opacity="0.5">
+          <path d="M836 212 L 836 240" marker-end="url(#rkarrow2)"/>
+          <path d="M836 340 L 836 372" marker-end="url(#rkarrow2)"/>
+        </g>
+
+        <!-- ===== callouts ===== -->
+        <g font-family="'DM Serif Display',serif" font-size="15">
+          <g><circle cx="104" cy="176" r="15" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="104" y="182" text-anchor="middle" fill="#f3ead7">2</text></g>
+          <g><circle cx="392" cy="214" r="15" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="392" y="220" text-anchor="middle" fill="#f3ead7">3</text></g>
+          <g><circle cx="446" cy="330" r="15" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="446" y="336" text-anchor="middle" fill="#f3ead7">4</text></g>
+          <g><circle cx="130" cy="430" r="15" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="130" y="436" text-anchor="middle" fill="#f3ead7">5</text></g>
+          <g><circle cx="104" cy="330" r="15" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="104" y="336" text-anchor="middle" fill="#f3ead7">6</text></g>
+          <g><circle cx="686" cy="120" r="15" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="686" y="126" text-anchor="middle" fill="#f3ead7">7</text></g>
+          <g><circle cx="686" cy="248" r="15" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="686" y="254" text-anchor="middle" fill="#f3ead7">8</text></g>
+          <g><circle cx="686" cy="376" r="15" fill="#9a3b1c" stroke="#f3ead7" stroke-width="2.5"/><text x="686" y="382" text-anchor="middle" fill="#f3ead7">9</text></g>
+        </g>
+      </svg>
+    </div>
+
+    <!-- KABELDURCHFÜHRUNG -->
+    <div class="eyebrow de-only">Kabel sauber durchführen</div>
+    <div class="eyebrow en-only">Routing cables cleanly</div>
+    <h2 class="de-only">Bohren? Lieber nicht.</h2>
+    <h2 class="en-only">Drilling? Better not.</h2>
+
+    <div class="warn">
+      <div class="ic">!</div>
+      <div class="wt de-only">In den <strong>Seiten- und Rückwänden</strong> liegen bei vielen Kühlschränken die <strong>Kältemittel-Leitungen</strong> (oft flächig als „Skin Condenser"). Wer sie anbohrt, macht den Schrank irreparabel kaputt. <strong>Faustregel:</strong> Schrank 30&nbsp;Min laufen lassen — Wände, die warm werden, führen Kältemittel und sind tabu. Am besten gar nicht bohren.</div>
+      <div class="wt en-only">In many fridges the <strong>side and back walls</strong> carry the <strong>refrigerant lines</strong> (often a flat "skin condenser"). Drill into one and the fridge is dead for good. <strong>Rule of thumb:</strong> run it 30&nbsp;min — any wall that gets warm carries refrigerant and is off-limits. Best not to drill at all.</div>
+    </div>
+
+    <div class="methods">
+
+      <!-- A · Türdichtung -->
+      <div class="method best">
+        <svg viewBox="0 0 300 190" role="img" aria-label="Kabel unter der Türdichtung">
+          <rect x="0" y="0" width="300" height="190" fill="#f3ead7"/>
+          <!-- Schrank-Korpus -->
+          <rect x="18" y="28" width="64" height="134" fill="#efe6cf" stroke="#3a2a1a" stroke-width="2"/>
+          <text x="50" y="100" text-anchor="middle" font-family="'Spectral',serif" font-size="11" fill="#8a6f4e" transform="rotate(-90 50 100)">Schrank</text>
+          <!-- Frontflansch -->
+          <rect x="82" y="28" width="16" height="134" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.6"/>
+          <!-- Magnet-Dichtung -->
+          <rect x="98" y="58" width="30" height="74" rx="7" fill="#d8c6a0" stroke="#3a2a1a" stroke-width="1.6"/>
+          <line x1="98" y1="78" x2="128" y2="78" stroke="#3a2a1a" stroke-width="0.9" stroke-opacity="0.5"/>
+          <line x1="98" y1="112" x2="128" y2="112" stroke="#3a2a1a" stroke-width="0.9" stroke-opacity="0.5"/>
+          <!-- Glastür -->
+          <rect x="150" y="20" width="68" height="150" rx="6" fill="#cfe0df" fill-opacity="0.5" stroke="#3a2a1a" stroke-width="2"/>
+          <line x1="160" y1="40" x2="200" y2="80" stroke="#ffffff" stroke-opacity="0.6" stroke-width="3"/>
+          <!-- Flachkabel -->
+          <rect x="40" y="91" width="180" height="8" rx="4" fill="#2a1a0e"/>
+          <text x="232" y="89" font-family="'Spectral',serif" font-size="10.5" fill="#3a2a1a">Flach-</text>
+          <text x="232" y="101" font-family="'Spectral',serif" font-size="10.5" fill="#3a2a1a">kabel</text>
+          <!-- labels -->
+          <text x="113" y="150" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#8a6f4e">Dichtung</text>
+          <text x="184" y="150" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#5b6b78">Glastür</text>
+        </svg>
+        <div class="tag de-only">Empfohlen · kein Bohren</div><div class="tag en-only">Best · no drilling</div>
+        <div class="mh de-only">Unter die Türdichtung</div><div class="mh en-only">Under the door gasket</div>
+        <div class="mt de-only">Dünnes oder flaches Kabel unter die magnetische Gummidichtung legen — sie drückt nach und dichtet von selbst ab. Mehrere Adern? Flachkabel nehmen, dann schließt die Tür sauber.</div>
+        <div class="mt en-only">Lay a thin or flat cable under the magnetic gasket — it presses back and reseals itself. Several wires? Use flat cable so the door still closes tight.</div>
+      </div>
+
+      <!-- B · Ablaufloch -->
+      <div class="method">
+        <svg viewBox="0 0 300 190" role="img" aria-label="Kabel durch das Tauwasser-Ablaufloch">
+          <rect x="0" y="0" width="300" height="190" fill="#f3ead7"/>
+          <!-- Innenraum-Rückwand -->
+          <rect x="40" y="22" width="180" height="96" fill="#efe6cf" stroke="#3a2a1a" stroke-width="2"/>
+          <text x="130" y="56" text-anchor="middle" font-family="'Spectral',serif" font-size="11" fill="#8a6f4e">Innenraum</text>
+          <!-- Boden mit Mulde -->
+          <path d="M40 118 L220 118 L220 138 L150 138 L132 152 L120 138 L40 138 Z" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="2"/>
+          <!-- Ablaufloch -->
+          <ellipse cx="126" cy="138" rx="11" ry="5" fill="#cfe0df" fill-opacity="0.6" stroke="#3a2a1a" stroke-width="1.4"/>
+          <!-- Kanal nach außen -->
+          <path d="M120 142 L120 172 M132 142 L132 172" stroke="#3a2a1a" stroke-width="1.6" fill="none"/>
+          <!-- Kabel + Schlauch durch -->
+          <path d="M126 40 C 126 90, 126 120, 126 178" stroke="#2a1a0e" stroke-width="4" fill="none"/>
+          <path d="M138 40 C 138 92, 134 122, 138 178" stroke="#5b6b78" stroke-width="3" fill="none" stroke-dasharray="1 3"/>
+          <!-- Tropfen -->
+          <path d="M126 165 q4 6 0 9 q-4 -3 0 -9" fill="#7fb0c4"/>
+          <text x="150" y="100" font-family="'Spectral',serif" font-size="10.5" fill="#3a2a1a">Kabel</text>
+          <text x="150" y="114" font-family="'Spectral',serif" font-size="10.5" fill="#41525e">+ Schlauch</text>
+          <text x="126" y="186" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#8a6f4e">nach außen</text>
+        </svg>
+        <div class="tag de-only">Kein Bohren</div><div class="tag en-only">No drilling</div>
+        <div class="mh de-only">Durch das Ablaufloch</div><div class="mh en-only">Through the drain hole</div>
+        <div class="mt de-only">Fast jeder Kühlschrank hat hinten unten einen Tauwasser-Ablauf. Durch das vorhandene Loch passen Fühlerkabel und der Nebler-Schlauch — kein neues Loch nötig.</div>
+        <div class="mt en-only">Almost every fridge has a condensate drain at the lower back. Probe cables and the mister tube fit through the existing hole — no new opening needed.</div>
+      </div>
+
+      <!-- C · Tülle + Silikon -->
+      <div class="method">
+        <svg viewBox="0 0 300 190" role="img" aria-label="Bohrung mit Gummitülle und Silikon abdichten">
+          <rect x="0" y="0" width="300" height="190" fill="#f3ead7"/>
+          <!-- Wand-Querschnitt mit Dämmung -->
+          <rect x="70" y="34" width="160" height="122" fill="#efe6cf" stroke="#3a2a1a" stroke-width="2"/>
+          <g stroke="#cdbb93" stroke-width="1">
+            <line x1="78" y1="156" x2="222" y2="34"/><line x1="98" y1="156" x2="222" y2="54"/><line x1="118" y1="156" x2="222" y2="74"/><line x1="138" y1="156" x2="222" y2="94"/><line x1="158" y1="156" x2="222" y2="114"/><line x1="178" y1="156" x2="222" y2="134"/><line x1="70" y1="140" x2="202" y2="34"/><line x1="70" y1="120" x2="182" y2="34"/><line x1="70" y1="100" x2="162" y2="34"/>
+          </g>
+          <text x="150" y="172" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#8a6f4e">Wand / Dämmung im Schnitt</text>
+          <!-- Bohrung / Kanal -->
+          <rect x="70" y="88" width="160" height="18" fill="#f3ead7"/>
+          <!-- Kabel -->
+          <rect x="30" y="93" width="240" height="8" rx="4" fill="#2a1a0e"/>
+          <!-- Gummitülle (zwei Flansche) -->
+          <rect x="120" y="80" width="14" height="34" rx="3" fill="#4a3a28" stroke="#2a1a0e" stroke-width="1.2"/>
+          <rect x="166" y="80" width="14" height="34" rx="3" fill="#4a3a28" stroke="#2a1a0e" stroke-width="1.2"/>
+          <rect x="120" y="92" width="60" height="10" fill="#4a3a28"/>
+          <!-- Silikon-Wülste -->
+          <path d="M64 84 q10 13 0 26 q-9 -13 0 -26" fill="#c9b48a" stroke="#9a8a72" stroke-width="0.8"/>
+          <path d="M236 84 q-10 13 0 26 q9 -13 0 -26" fill="#c9b48a" stroke="#9a8a72" stroke-width="0.8"/>
+          <!-- labels -->
+          <text x="150" y="58" text-anchor="middle" font-family="'Spectral',serif" font-size="10.5" fill="#3a2a1a">Gummi-Tülle</text>
+          <line x1="150" y1="62" x2="150" y2="80" stroke="#3a2a1a" stroke-width="0.9"/>
+          <text x="40" y="128" text-anchor="middle" font-family="'Spectral',serif" font-size="10" fill="#9a6b2f">Silikon</text>
+          <text x="260" y="128" text-anchor="middle" font-family="'Spectral',serif" font-size="10" fill="#9a6b2f">Silikon</text>
+        </svg>
+        <div class="tag de-only">Nur wenn unvermeidbar</div><div class="tag en-only">Only if unavoidable</div>
+        <div class="mh de-only">Tülle + Silikon</div><div class="mh en-only">Grommet + silicone</div>
+        <div class="mt de-only">Falls doch gebohrt wird (nur an nachweislich leitungsfreier Stelle, am ehesten oben): Gummi-Tülle einsetzen, ringsum mit <strong>lebensmittelechtem, neutralvernetzendem</strong> Silikon abdichten — kein Essig-Silikon. Aushärten und auslüften lassen.</div>
+        <div class="mt en-only">If you must drill (only where you've confirmed there are no lines — the top is safest): fit a rubber grommet, seal all around with <strong>food-safe, neutral-cure</strong> silicone — no acetic type. Let it cure and air out.</div>
+      </div>
+
+    </div>
+
+    <!-- VERKABELUNG -->
+    <div class="eyebrow de-only">Verkabelung · was steckt wohin</div>
+    <div class="eyebrow en-only">Wiring · what plugs where</div>
+    <h2 class="de-only">Der Strom-Plan</h2>
+    <h2 class="en-only">The power plan</h2>
+    <p class="body de-only">Das Prinzip: Die <strong>Regler sitzen zwischen Steckdose und Gerät</strong>. Kühlschrank am <em>Kühl</em>-Ausgang des ITC-308, Befeuchter am <em>Feucht</em>-Ausgang des IHC-200. Die drei Lüfter laufen über einen <strong>12-V-Trafo</strong> und je einen <strong>PWM-Drehzahlregler</strong> — so ist jeder einzeln stufenlos einstellbar. Die Fühler messen im Schrank und melden zurück.</p>
+    <p class="body en-only">The principle: the <strong>controllers sit between socket and device</strong>. Fridge on the ITC-308's <em>cooling</em> outlet, humidifier on the IHC-200's <em>humidify</em> outlet. The three fans run off a <strong>12 V transformer</strong> and one <strong>PWM speed controller</strong> each — so every fan is individually variable. The probes measure inside and report back.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 1040 520" role="img" aria-label="Verkabelungsskizze der Reifekammer">
+        <defs>
+          <pattern id="rkgrid3" width="26" height="26" patternUnits="userSpaceOnUse">
+            <path d="M26 0H0V26" fill="none" stroke="#ecdfc4" stroke-width="1"/>
+          </pattern>
+          <marker id="rkpow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#3a2a1a"/>
+          </marker>
+        </defs>
+        <rect x="0" y="0" width="1040" height="520" fill="#faf5e8"/>
+        <rect x="0" y="0" width="1040" height="520" fill="url(#rkgrid3)"/>
+
+        <!-- legend -->
+        <line x1="724" y1="34" x2="754" y2="34" stroke="#3a2a1a" stroke-width="3"/>
+        <text x="760" y="38" font-family="'Spectral',serif" font-size="12" fill="#3a2a1a">230 V Strom</text>
+        <line x1="872" y1="34" x2="902" y2="34" stroke="#c0a878" stroke-width="2" stroke-dasharray="2 4"/>
+        <text x="908" y="38" font-family="'Spectral',serif" font-size="12" fill="#8a6f4e">Fühler</text>
+
+        <!-- ===== power wires (draw first, behind boxes) ===== -->
+        <g stroke="#3a2a1a" stroke-width="3" fill="none">
+          <path d="M118 122 L118 168" marker-end="url(#rkpow)"/>                 <!-- Netz -> Verteiler -->
+          <path d="M210 196 C 280 196, 280 104, 338 104" marker-end="url(#rkpow)"/> <!-- Verteiler -> ITC -->
+          <path d="M210 210 C 290 210, 300 232, 338 232" marker-end="url(#rkpow)"/> <!-- Verteiler -> IHC -->
+          <path d="M210 224 C 300 224, 300 362, 338 362" marker-end="url(#rkpow)"/> <!-- Verteiler -> Trafo -->
+          <path d="M542 104 L 716 104" marker-end="url(#rkpow)"/>                 <!-- ITC Kühl -> Kühlschrank -->
+          <path d="M542 232 L 716 232" marker-end="url(#rkpow)"/>                 <!-- IHC Feucht -> Vernebler -->
+          <path d="M542 362 L 576 339"/><path d="M542 362 L 576 375"/><path d="M542 362 L 576 411"/> <!-- Trafo -> 3 Regler -->
+          <path d="M646 339 L 716 341" marker-end="url(#rkpow)"/>                 <!-- Regler -> Zuluft -->
+          <path d="M646 375 L 716 391" marker-end="url(#rkpow)"/>                 <!-- Regler -> Umluft -->
+          <path d="M646 411 L 716 441" marker-end="url(#rkpow)"/>                 <!-- Regler -> Abluft -->
+        </g>
+        <!-- sensor wires -->
+        <g stroke="#c0a878" stroke-width="1.8" fill="none" stroke-dasharray="2 4">
+          <path d="M700 150 C 600 150, 560 130, 542 126"/>   <!-- Temp-Fühler -> ITC -->
+          <path d="M700 178 C 600 200, 560 250, 542 252"/>   <!-- rF-Fühler -> IHC -->
+        </g>
+
+        <!-- output labels -->
+        <g font-family="'Spectral',serif" font-size="11" font-style="italic">
+          <text x="628" y="96" text-anchor="middle" fill="#9a3b1c">Kühl-Ausgang</text>
+          <text x="628" y="224" text-anchor="middle" fill="#41525e">Feucht-Ausgang</text>
+          <text x="611" y="318" text-anchor="middle" fill="#5a6b4a">12 V → 3× Regler</text>
+        </g>
+
+        <!-- ===== boxes ===== -->
+        <!-- Netz -->
+        <g>
+          <rect x="58" y="62" width="120" height="60" rx="8" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <circle cx="92" cy="92" r="14" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.4"/>
+          <circle cx="88" cy="92" r="2" fill="#3a2a1a"/><circle cx="96" cy="92" r="2" fill="#3a2a1a"/>
+          <text x="138" y="88" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="13" fill="#3a2a1a">230 V</text>
+          <text x="138" y="104" text-anchor="middle" font-family="'Spectral',serif" font-size="10" fill="#8a6f4e">Netz</text>
+        </g>
+        <!-- FI-Schutzstecker (in der Leitung Netz -> Verteiler) -->
+        <g>
+          <rect x="100" y="132" width="36" height="26" rx="5" fill="#9a3b1c" stroke="#3a2a1a" stroke-width="1.6"/>
+          <text x="118" y="150" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="13" fill="#f3ead7">FI</text>
+          <text x="148" y="142" font-family="'Spectral',serif" font-size="10.5" fill="#9a3b1c">30 mA</text>
+          <text x="148" y="155" font-family="'Spectral',serif" font-size="9.5" font-style="italic" fill="#8a6f4e">Schutzstecker</text>
+        </g>
+        <!-- Verteiler -->
+        <g>
+          <rect x="40" y="168" width="160" height="62" rx="8" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <circle cx="70" cy="199" r="10" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.3"/><circle cx="100" cy="199" r="10" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.3"/><circle cx="130" cy="199" r="10" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.3"/><circle cx="160" cy="199" r="10" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.3"/>
+          <text x="120" y="250" text-anchor="middle" font-family="'Spectral',serif" font-size="12" fill="#3a2a1a">Mehrfachsteckdose</text>
+        </g>
+        <!-- ITC-308 -->
+        <g>
+          <rect x="338" y="66" width="204" height="76" rx="9" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <rect x="352" y="78" width="92" height="30" rx="3" fill="#2a1a0e"/>
+          <text x="398" y="99" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="14" fill="#d6603a">14.2°</text>
+          <rect x="456" y="78" width="74" height="20" rx="3" fill="#9a3b1c"/><text x="493" y="92" text-anchor="middle" font-family="'Spectral',serif" font-size="10" fill="#f3ead7">KÜHL</text>
+          <text x="398" y="130" text-anchor="middle" font-family="'Spectral',serif" font-size="11.5" font-style="italic" fill="#8a6f4e">ITC-308 · Temperatur</text>
+        </g>
+        <!-- IHC-200 -->
+        <g>
+          <rect x="338" y="194" width="204" height="76" rx="9" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <rect x="352" y="206" width="92" height="30" rx="3" fill="#2a1a0e"/>
+          <text x="398" y="227" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="14" fill="#7fb0c4">75 %</text>
+          <rect x="456" y="206" width="74" height="20" rx="3" fill="#5b6b78"/><text x="493" y="220" text-anchor="middle" font-family="'Spectral',serif" font-size="9.5" fill="#f3ead7">FEUCHT</text>
+          <text x="398" y="258" text-anchor="middle" font-family="'Spectral',serif" font-size="11.5" font-style="italic" fill="#8a6f4e">IHC-200 · Feuchte</text>
+        </g>
+        <!-- 12V Trafo -->
+        <g>
+          <rect x="338" y="324" width="204" height="76" rx="9" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <rect x="356" y="342" width="40" height="40" rx="4" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.4"/>
+          <text x="376" y="367" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="13" fill="#3a2a1a">~⎓</text>
+          <text x="468" y="356" text-anchor="middle" font-family="'Spectral',serif" font-size="13" fill="#3a2a1a">12 V Trafo</text>
+          <text x="468" y="373" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#8a6f4e">100 W</text>
+        </g>
+        <!-- 3 PWM-Regler -->
+        <g>
+          <rect x="576" y="326" width="70" height="26" rx="5" fill="#f3ead7" stroke="#5a6b4a" stroke-width="1.5"/>
+          <circle cx="592" cy="339" r="7" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1"/><line x1="592" y1="339" x2="592" y2="333" stroke="#3a2a1a" stroke-width="1.2"/>
+          <text x="622" y="343" text-anchor="middle" font-family="'Spectral',serif" font-size="9.5" fill="#5a6b4a">Regler</text>
+          <rect x="576" y="362" width="70" height="26" rx="5" fill="#f3ead7" stroke="#5a6b4a" stroke-width="1.5"/>
+          <circle cx="592" cy="375" r="7" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1"/><line x1="592" y1="375" x2="592" y2="369" stroke="#3a2a1a" stroke-width="1.2"/>
+          <text x="622" y="379" text-anchor="middle" font-family="'Spectral',serif" font-size="9.5" fill="#5a6b4a">Regler</text>
+          <rect x="576" y="398" width="70" height="26" rx="5" fill="#f3ead7" stroke="#5a6b4a" stroke-width="1.5"/>
+          <circle cx="592" cy="411" r="7" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1"/><line x1="592" y1="411" x2="592" y2="405" stroke="#3a2a1a" stroke-width="1.2"/>
+          <text x="622" y="415" text-anchor="middle" font-family="'Spectral',serif" font-size="9.5" fill="#5a6b4a">Regler</text>
+        </g>
+
+        <!-- ===== chamber + loads ===== -->
+        <rect x="680" y="44" width="334" height="430" rx="12" fill="#eef1e6" stroke="#aebb97" stroke-width="1.5"/>
+        <text x="700" y="72" font-family="'Spectral',serif" font-size="12" font-weight="600" letter-spacing="2" fill="#5a6b4a">REIFEKAMMER</text>
+        <!-- probes -->
+        <g>
+          <rect x="694" y="138" width="30" height="18" rx="4" fill="#f3ead7" stroke="#9a3b1c" stroke-width="1.3"/><text x="709" y="151" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-weight="600" fill="#9a3b1c">T</text>
+          <rect x="694" y="170" width="30" height="18" rx="4" fill="#f3ead7" stroke="#5b6b78" stroke-width="1.3"/><text x="709" y="183" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-weight="600" fill="#41525e">rF</text>
+        </g>
+        <!-- Kühlschrank load -->
+        <g>
+          <rect x="716" y="84" width="276" height="74" rx="9" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <text x="854" y="116" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="16" fill="#3a2a1a">Kühlschrank</text>
+          <text x="854" y="137" text-anchor="middle" font-family="'Spectral',serif" font-size="11" font-style="italic" fill="#8a6f4e">Kompressor</text>
+        </g>
+        <!-- Vernebler load -->
+        <g>
+          <rect x="716" y="212" width="276" height="74" rx="9" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <text x="854" y="244" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="16" fill="#3a2a1a">Vernebler</text>
+          <text x="854" y="265" text-anchor="middle" font-family="'Spectral',serif" font-size="11" font-style="italic" fill="#8a6f4e">Ultraschall + Wasser</text>
+        </g>
+        <!-- 3 Lüfter loads -->
+        <g>
+          <rect x="716" y="320" width="276" height="42" rx="8" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <text x="854" y="346" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="15" fill="#3a2a1a">Zuluft-Lüfter</text>
+          <rect x="716" y="370" width="276" height="42" rx="8" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <text x="854" y="396" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="15" fill="#3a2a1a">Umluft-Lüfter</text>
+          <rect x="716" y="420" width="276" height="42" rx="8" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2"/>
+          <text x="854" y="446" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="15" fill="#3a2a1a">Abluft-Lüfter</text>
+        </g>
+      </svg>
+    </div>
+    <p class="body de-only" style="font-size:14.5px;color:#6b5a42;font-style:italic;">Sicherheit: 230&nbsp;V immer über FI-geschützte Steckdosen, Vernebler &amp; Kabel vor Spritzwasser schützen, im Zweifel eine Elektrofachkraft drüberschauen lassen.</p>
+    <p class="body en-only" style="font-size:14.5px;color:#6b5a42;font-style:italic;">Safety: always run 230&nbsp;V via RCD-protected sockets, keep mister &amp; cables away from splashing water, and if unsure have an electrician check it.</p>
+
+    <!-- DAS KERNSTÜCK: SCHRANK FINDEN -->
+    <div class="eyebrow de-only">Das Kernstück</div>
+    <div class="eyebrow en-only">The centerpiece</div>
+    <h2 class="de-only">Den richtigen Schrank finden</h2>
+    <h2 class="en-only">Finding the right cabinet</h2>
+    <p class="body de-only">Mit Steckdosenregler (ITC-308) ist der eingebaute Thermostat des Schranks egal — entscheidend sind <strong>Kühlart, Hänghöhe und Abtau-System</strong>. Darauf kommt es an:</p>
+    <p class="body en-only">With a plug-in controller (ITC-308) the cabinet's built-in thermostat doesn't matter — what counts is <strong>cooling type, hanging height and the defrost system</strong>. Here's what matters:</p>
+
+    <div class="split">
+      <div class="splitcol in">
+        <h4 class="de-only">Muss mitbringen</h4><h4 class="en-only">Must have</h4>
+        <p class="sub de-only">darauf nicht verzichten</p><p class="sub en-only">don't compromise</p>
+        <ul class="de-only">
+          <li><strong>Kompressor-Kühlung</strong> — zieht auch bei 24&nbsp;°C Raum zuverlässig runter</li>
+          <li><strong>Statische Kühlung</strong> (kein No-Frost) — hält die Luftfeuchte oben</li>
+          <li><strong>Genug Hänghöhe</strong> — Regale müssen sich rausnehmen lassen</li>
+          <li><strong>Per Steckdose steuerbar</strong> — läuft an, wenn Strom kommt</li>
+        </ul>
+        <ul class="en-only">
+          <li><strong>Compressor cooling</strong> — pulls down reliably even in a 24&nbsp;°C room</li>
+          <li><strong>Static cooling</strong> (no No-Frost) — keeps humidity up</li>
+          <li><strong>Enough hanging height</strong> — shelves must come out</li>
+          <li><strong>Switchable by socket</strong> — starts when power arrives</li>
+        </ul>
+      </div>
+      <div class="splitcol out">
+        <h4 class="de-only">Finger weg von</h4><h4 class="en-only">Steer clear of</h4>
+        <p class="sub de-only">macht im Sommer Ärger</p><p class="sub en-only">trouble in summer</p>
+        <ul class="de-only">
+          <li><strong>Thermoelektrisch / Peltier</strong> — zu schwach im warmen Raum</li>
+          <li><strong>No-Frost / Auto-Abtau</strong> — trocknet die Luft, heizt zyklisch</li>
+          <li><strong>Verbauter Innenraum</strong> — feste Regale, zu wenig Höhe</li>
+          <li><strong>Display-Elektronik im Korpus</strong> — mag dauernde Feuchte nicht</li>
+        </ul>
+        <ul class="en-only">
+          <li><strong>Thermoelectric / Peltier</strong> — too weak in a warm room</li>
+          <li><strong>No-Frost / auto-defrost</strong> — dries the air, cycles a heater</li>
+          <li><strong>Cluttered interior</strong> — fixed shelves, too little height</li>
+          <li><strong>On-board display electronics</strong> — dislikes constant humidity</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tcards">
+      <div class="tcard">
+        <h4 class="de-only">Getränkekühlschrank</h4><h4 class="en-only">Beverage fridge</h4>
+        <p class="for de-only">mit Glastür · der Allrounder</p><p class="for en-only">glass door · the all-rounder</p>
+        <ul class="de-only">
+          <li class="p">Kompressor, kühlt kräftig</li>
+          <li class="p">Glastür = Sichtkontrolle</li>
+          <li class="p">offener Innenraum, Roste raus</li>
+          <li class="c">oft als No-Frost — auf statisch achten</li>
+        </ul>
+        <ul class="en-only">
+          <li class="p">compressor, cools strongly</li>
+          <li class="p">glass door = visual check</li>
+          <li class="p">open interior, shelves out</li>
+          <li class="c">often No-Frost — pick static</li>
+        </ul>
+      </div>
+      <div class="tcard">
+        <h4 class="de-only">Weinkühlschrank</h4><h4 class="en-only">Wine fridge</h4>
+        <p class="for de-only">wer wenig basteln will</p><p class="for en-only">least tinkering</p>
+        <ul class="de-only">
+          <li class="p">hält oft 5–18&nbsp;°C ohne Zusatzregler</li>
+          <li class="p">Glastür, leise, schön</li>
+          <li class="c">viele sind Peltier — Kompressor wählen!</li>
+          <li class="c">Flaschenregale = wenig Höhe</li>
+        </ul>
+        <ul class="en-only">
+          <li class="p">often holds 5–18&nbsp;°C unaided</li>
+          <li class="p">glass door, quiet, handsome</li>
+          <li class="c">many are Peltier — choose compressor!</li>
+          <li class="c">bottle racks = little height</li>
+        </ul>
+      </div>
+      <div class="tcard">
+        <h4 class="de-only">Mini-Kühlschrank</h4><h4 class="en-only">Mini fridge</h4>
+        <p class="for de-only">günstig &amp; viel Platz</p><p class="for en-only">cheap &amp; roomy</p>
+        <ul class="de-only">
+          <li class="p">günstig, großer freier Innenraum</li>
+          <li class="p">meist statisch → top für Feuchte</li>
+          <li class="c">keine Glastür (Tür auf = Klima weg)</li>
+          <li class="c">braucht den ITC-308 (kein Problem)</li>
+        </ul>
+        <ul class="en-only">
+          <li class="p">cheap, large open interior</li>
+          <li class="p">usually static → great for humidity</li>
+          <li class="c">no glass door (open = climate gone)</li>
+          <li class="c">needs the ITC-308 (no problem)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reco">
+      <div class="ic">✓</div>
+      <div class="rl de-only"><strong>Sweet Spot:</strong> ein <strong>kompressorbasierter Getränke- oder Weinkühlschrank mit Glastür und statischer Kühlung</strong>, Regale entfernbar, ~50–120&nbsp;L. Vor dem Kauf die freie <em>Hänghöhe</em> messen (für Salami/Schinken gern 50–80&nbsp;cm) und in der Beschreibung „Kompressor" statt „thermoelektrisch" suchen. Die Temperatur regelst du ohnehin komplett über ITC-308 + IHC-200.</div>
+      <div class="rl en-only"><strong>Sweet spot:</strong> a <strong>compressor-based beverage or wine fridge with a glass door and static cooling</strong>, removable shelves, ~50–120&nbsp;L. Before buying, measure the free <em>hanging height</em> (50–80&nbsp;cm is nice for salami/ham) and look for "compressor" rather than "thermoelectric" in the description. You'll control temperature entirely via the ITC-308 + IHC-200 anyway.</div>
+    </div>
+
+    <div class="example">
+      <div class="ex-l">
+        <div class="ex-tag de-only">Beispiel-Modell · trifft das Profil</div>
+        <div class="ex-tag en-only">Example model · fits the profile</div>
+        <div class="ex-name">Kalamera <span>KRC-86GE</span></div>
+        <div class="ex-sub de-only">Getränkekühlschrank · 86 L · Glastür · ~279 €</div>
+        <div class="ex-sub en-only">Beverage fridge · 86 L · glass door · ~€279</div>
+        <div class="ex-specs de-only">
+          <span class="chip good">Kompressor</span>
+          <span class="chip good">statisch · manuell abtauen</span>
+          <span class="chip good">3–18 °C</span>
+          <span class="chip">Klimaklasse SN/N (ab 10 °C)</span>
+          <span class="chip">41 dB · 97 kWh/Jahr</span>
+          <span class="chip">86 × 44 × 46,5 cm</span>
+        </div>
+        <div class="ex-specs en-only">
+          <span class="chip good">compressor</span>
+          <span class="chip good">static · manual defrost</span>
+          <span class="chip good">3–18 °C</span>
+          <span class="chip">climate class SN/N (from 10 °C)</span>
+          <span class="chip">41 dB · 97 kWh/yr</span>
+          <span class="chip">86 × 44 × 46.5 cm</span>
+        </div>
+      </div>
+      <div class="ex-r">
+        <div class="ex-note de-only"><strong>Warum er passt:</strong> Kompressor + <strong>manuelles Abtauen</strong> = statische Kühlung, die die Feuchte hält. 3–18 °C decken Durchbrennen, Reifen und Lagern ab. Einziger Check: die freie Hänghöhe (~55–60 cm) muss zu deinem längsten Stück passen.</div>
+        <div class="ex-note en-only"><strong>Why it fits:</strong> compressor + <strong>manual defrost</strong> = static cooling that holds humidity. 3–18 °C covers curing, aging and storage. Only check: the free hanging height (~55–60 cm) must suit your longest piece.</div>
+      </div>
+    </div>
+
+    <!-- MEINE KONFIGURATION -->
+    <div class="config">
+      <div class="config-tag de-only">Meine Konfiguration · Einkaufs-Checkliste</div>
+      <div class="config-tag en-only">My build · shopping checklist</div>
+      <h3 class="de-only">Was schon da ist — und was noch fehlt</h3>
+      <h3 class="en-only">What's sorted — and what's still missing</h3>
+
+      <div class="cgroup-h have de-only">✓ Gekauft</div>
+      <div class="cgroup-h have en-only">✓ Bought</div>
+      <div class="citem">
+        <div class="cbox on">✓</div>
+        <div class="cl"><b>Kalamera KRC-86GE</b> — Getränkekühlschrank, 86 L, Kompressor, statisch, 3–18 °C <span class="meta de-only">· das Kernstück</span><span class="meta en-only">· the centerpiece</span></div>
+        <div class="price">190 €</div>
+      </div>
+      <div class="citem">
+        <div class="cbox on">✓</div>
+        <div class="cl"><b>Inkbird ITC-308-WIFI + IHC-200-WIFI</b> <span class="meta de-only">· Temperatur- &amp; Feuchteregler im Set, mit App</span><span class="meta en-only">· temp &amp; humidity controllers, with app</span></div>
+        <div class="price">80 €</div>
+      </div>
+      <div class="citem">
+        <div class="cbox on">✓</div>
+        <div class="cl"><b>Terrarium-Fogger 4 L (Drehknopf)</b> <span class="meta de-only">· 4 L Tank, ausziehbarer Schlauch, Knopfsteuerung (Auto-Restart), Trockenlaufschutz, ultra-leise — Nebel oben rein, am IHC-200</span><span class="meta en-only">· 4 L tank, extendable tube, knob control (auto-restart), dry-run protection, ultra-quiet — fog in at top, on the IHC-200</span></div>
+        <div class="price">40 €</div>
+      </div>
+      <div class="citem">
+        <div class="cbox on">✓</div>
+        <div class="cl"><b>HG Power Heizmatte 55 W</b> (53×25 cm, IP67) <span class="meta de-only">· flach an eine Wand (nicht den Boden), sanfte Flächenwärme ohne Strahlung aufs Reifegut, am Heiz-Ausgang des ITC-308 — Regelung übernimmt der ITC. Pflicht für Biltong (~25–30 °C) &amp; Salami-Fermentation. <em>Alt:</em> Keramik-Dunkelstrahler 50 W + E27-Fassung</span><span class="meta en-only">· flat against a wall (not the floor), gentle area heat with no radiation onto the product, on the ITC-308 heat outlet — the ITC does the regulating. Required for biltong (~25–30 °C) &amp; salami fermentation. <em>Alt:</em> ceramic dark emitter 50 W + E27 socket</span></div>
+        <div class="price">22 €</div>
+      </div>
+      <div class="citem">
+        <div class="cbox on">✓</div>
+        <div class="cl"><b>Inkbird ITH-21-B</b> <span class="meta de-only">· Bluetooth-Thermo-/Hygrometer — Anzeige in der Kammer + App mit Verlauf &amp; Daten-Export aufs Handy</span><span class="meta en-only">· Bluetooth thermo-/hygrometer — in-chamber display + app with history &amp; data export to your phone</span></div>
+        <div class="price">15 €</div>
+      </div>
+
+      <div class="cgroup-h need de-only" style="margin-top:18px;">○ Fehlt noch</div>
+      <div class="cgroup-h need en-only" style="margin-top:18px;">○ Still missing</div>
+      <div class="citem">
+        <div class="cbox off"></div>
+        <div class="cl"><b>3× Lüfter ARCTIC P8 PWM</b> (Zu- / Ab- / Umluft, 80 mm, 12 V, identisch) <span class="meta de-only">· alle gleich, Drehzahl über Regler steuerbar</span><span class="meta en-only">· all identical, speed set via controllers</span></div>
+        <div class="price">~25 €</div>
+      </div>
+      <div class="citem">
+        <div class="cbox off"></div>
+        <div class="cl"><b>12-V-Trafo (100 W)</b> <span class="meta de-only">· z. B. KSIBNW 12V/8,3A — versorgt alle drei Lüfter parallel (Riesen-Reserve)</span><span class="meta en-only">· e.g. KSIBNW 12V/8.3A — powers all three fans in parallel (huge headroom)</span></div>
+        <div class="price">~14 €</div>
+      </div>
+      <div class="citem">
+        <div class="cbox off"></div>
+        <div class="cl"><b>3× PWM-Drehzahlregler</b> <span class="meta de-only">· z. B. VOKTTA 12V — einer pro Lüfter, parallel am Trafo → jeder einzeln stufenlos regelbar</span><span class="meta en-only">· e.g. VOKTTA 12V — one per fan, parallel on the trafo → each individually variable</span></div>
+        <div class="price">~28 €</div>
+      </div>
+      <div class="citem">
+        <div class="cbox off"></div>
+        <div class="cl"><b>FI-Schutzstecker 30 mA</b> <span class="meta de-only">· vorgeschaltet vor die Steckerleiste, IP44 — Pflicht wegen Wasser/Nebler</span><span class="meta en-only">· upstream of the strip, IP44 — a must with water/mister</span></div>
+        <div class="price">~25 €</div>
+      </div>
+      <div class="citem">
+        <div class="cbox off"></div>
+        <div class="cl"><b>4-fach-Steckerleiste</b> <span class="meta de-only">· mit Einzelschaltern — ITC-308, IHC-200, Trafo, Befeuchter</span><span class="meta en-only">· with individual switches — ITC-308, IHC-200, trafo, humidifier</span></div>
+        <div class="price">~15 €</div>
+      </div>
+      <div class="citem">
+        <div class="cbox off"></div>
+        <div class="cl"><b>Kabeldurchführungen / Gummitüllen</b> <span class="meta de-only">· für Nebelschlauch (oben), Heizungs- &amp; Fühlerkabel</span><span class="meta en-only">· for the fog hose (top), heater &amp; probe cables</span></div>
+        <div class="price">~10 €</div>
+      </div>
+      <div class="citem">
+        <div class="cbox off"></div>
+        <div class="cl"><b>Edelstahl-Gitter + Haken</b> <span class="meta de-only">· erst nach Maß kaufen, wenn der Schrank da ist</span><span class="meta en-only">· buy to size once the cabinet has arrived</span></div>
+        <div class="price">~20 €</div>
+      </div>
+
+      <div class="config-sum">
+        <span class="sl de-only">Gekauft ~353 € · noch fehlend ~137 €</span>
+        <span class="sl en-only">Bought ~€353 · still missing ~€137</span>
+        <span class="sv de-only">~490 €<small> komplett</small></span>
+        <span class="sv en-only">~€490<small> complete</small></span>
+      </div>
+      <div class="closing de-only" style="margin-top:10px;">Drehzahl ersetzt das Takten: <b>Umluft</b> dauerhaft niedrig, <b>Abluft</b> beim Reifen fast 0 / bei Biltong hoch — alles am Regler. <b>Timer (2× NOVKIT T319, ~26 €)</b> nur optional, falls du die Abluft vollautomatisch takten willst. · Das <b>INT-14S Fleischthermometer</b> ist fürs Räuchern am WSM, kein Kammer-Teil.</div>
+      <div class="closing en-only" style="margin-top:10px;">Speed control replaces cycling: <b>circulation</b> always low, <b>exhaust</b> near 0 for aging / high for biltong — all on the controllers. <b>Timers (2× NOVKIT T319, ~€26)</b> only optional, if you want the exhaust cycled automatically. · The <b>INT-14S meat thermometer</b> is for smoking on the WSM, not a chamber part.</div>
+    </div>
+
+    <!-- STEUERZENTRALE -->
+    <div class="eyebrow de-only">Steuerzentrale</div>
+    <div class="eyebrow en-only">Control box</div>
+    <h2 class="de-only">Die Hardware in einer Box</h2>
+    <h2 class="en-only">All the hardware in one box</h2>
+    <p class="body de-only">Die Module (ITC-308, IHC-200, der 12-V-Trafo mit den drei Reglern) und die Steckerleiste verschwinden in einem wandmontierten Gehäuse. Vorne nur die Displays und die Regler-Knöpfe hinter einer Blende, die Kabel gebündelt zum Schrank — aufgeräumt und mit einem Griff vom Netz trennbar.</p>
+    <p class="body en-only">The modules (ITC-308, IHC-200, the 12 V transformer with its three controllers) and the power strip disappear into a wall-mounted enclosure. Up front only the displays and the controller knobs behind a panel, cables bundled to the cabinet — tidy, and disconnected from the mains in one move.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 1040 560" role="img" aria-label="Steuerzentrale: Frontansicht und Schnitt">
+        <defs>
+          <pattern id="rkgrid4" width="26" height="26" patternUnits="userSpaceOnUse">
+            <path d="M26 0H0V26" fill="none" stroke="#ecdfc4" stroke-width="1"/>
+          </pattern>
+          <marker id="rkarrow4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#9a8a72"/>
+          </marker>
+        </defs>
+        <rect x="0" y="0" width="1040" height="560" fill="#faf5e8"/>
+        <rect x="0" y="0" width="1040" height="560" fill="url(#rkgrid4)"/>
+
+        <!-- ===== FRONTANSICHT (left) ===== -->
+        <text x="40" y="44" font-family="'Spectral',serif" font-size="12" font-weight="600" letter-spacing="2" fill="#8a6f4e">FRONTANSICHT</text>
+        <!-- box body -->
+        <rect x="40" y="62" width="430" height="400" rx="14" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="2.5"/>
+        <rect x="40" y="62" width="430" height="400" rx="14" fill="none" stroke="#c0a878" stroke-width="1" stroke-dasharray="3 5" transform="translate(6 6)"/>
+        <!-- front panel -->
+        <rect x="62" y="86" width="386" height="300" rx="8" fill="#f3ead7" stroke="#3a2a1a" stroke-width="1.6"/>
+        <text x="255" y="110" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="17" fill="#9a3b1c">Reifekammer · Steuerung</text>
+
+        <!-- three display windows -->
+        <!-- ITC -->
+        <g>
+          <rect x="84" y="130" width="110" height="150" rx="6" fill="#241a10" stroke="#3a2a1a" stroke-width="1.5"/>
+          <rect x="96" y="144" width="86" height="40" rx="3" fill="#2a1a0e" stroke="#9a3b1c" stroke-width="1"/>
+          <text x="139" y="171" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="17" fill="#d6603a">14.2°</text>
+          <circle cx="110" cy="206" r="6" fill="#3a2a1a" stroke="#c0a878" stroke-width="1"/>
+          <circle cx="139" cy="206" r="6" fill="#3a2a1a" stroke="#c0a878" stroke-width="1"/>
+          <circle cx="168" cy="206" r="6" fill="#3a2a1a" stroke="#c0a878" stroke-width="1"/>
+          <rect x="100" y="232" width="78" height="14" rx="3" fill="#9a3b1c"/>
+          <text x="139" y="266" text-anchor="middle" font-family="'Spectral',serif" font-size="11" fill="#c9a87a">ITC-308</text>
+          <text x="139" y="300" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#8a6f4e">Temperatur</text>
+        </g>
+        <!-- IHC -->
+        <g>
+          <rect x="200" y="130" width="110" height="150" rx="6" fill="#241a10" stroke="#3a2a1a" stroke-width="1.5"/>
+          <rect x="212" y="144" width="86" height="40" rx="3" fill="#2a1a0e" stroke="#5b6b78" stroke-width="1"/>
+          <text x="255" y="171" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="17" fill="#7fb0c4">75 %</text>
+          <circle cx="226" cy="206" r="6" fill="#3a2a1a" stroke="#c0a878" stroke-width="1"/>
+          <circle cx="255" cy="206" r="6" fill="#3a2a1a" stroke="#c0a878" stroke-width="1"/>
+          <circle cx="284" cy="206" r="6" fill="#3a2a1a" stroke="#c0a878" stroke-width="1"/>
+          <rect x="216" y="232" width="78" height="14" rx="3" fill="#5b6b78"/>
+          <text x="255" y="266" text-anchor="middle" font-family="'Spectral',serif" font-size="11" fill="#c9a87a">IHC-200</text>
+          <text x="255" y="300" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#8a6f4e">Feuchte</text>
+        </g>
+        <!-- 3 Regler -->
+        <g>
+          <rect x="316" y="130" width="110" height="150" rx="6" fill="#241a10" stroke="#3a2a1a" stroke-width="1.5"/>
+          <circle cx="345" cy="160" r="13" fill="#efe6cf" stroke="#c0a878" stroke-width="1.4"/><line x1="345" y1="160" x2="345" y2="150" stroke="#3a2a1a" stroke-width="1.6"/>
+          <circle cx="397" cy="160" r="13" fill="#efe6cf" stroke="#c0a878" stroke-width="1.4"/><line x1="397" y1="160" x2="403" y2="151" stroke="#3a2a1a" stroke-width="1.6"/>
+          <circle cx="371" cy="196" r="13" fill="#efe6cf" stroke="#c0a878" stroke-width="1.4"/><line x1="371" y1="196" x2="365" y2="187" stroke="#3a2a1a" stroke-width="1.6"/>
+          <text x="345" y="226" text-anchor="middle" font-family="'Spectral',serif" font-size="8.5" fill="#c9a87a">Zu</text>
+          <text x="397" y="226" text-anchor="middle" font-family="'Spectral',serif" font-size="8.5" fill="#c9a87a">Ab</text>
+          <text x="371" y="244" text-anchor="middle" font-family="'Spectral',serif" font-size="8.5" fill="#c9a87a">Um</text>
+          <text x="371" y="266" text-anchor="middle" font-family="'Spectral',serif" font-size="11" fill="#c9a87a">3× Regler</text>
+          <text x="371" y="300" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#8a6f4e">Lüfter-Drehzahl</text>
+        </g>
+
+        <!-- main switch + status LED -->
+        <circle cx="110" cy="338" r="13" fill="#9a3b1c" stroke="#3a2a1a" stroke-width="1.5"/>
+        <rect x="106" y="332" width="8" height="12" rx="2" fill="#f3ead7"/>
+        <text x="150" y="343" font-family="'Spectral',serif" font-size="11" fill="#8a6f4e">Hauptschalter</text>
+        <circle cx="400" cy="338" r="7" fill="#5a6b4a" stroke="#3a2a1a" stroke-width="1"/>
+        <text x="388" y="343" text-anchor="end" font-family="'Spectral',serif" font-size="10" fill="#8a6f4e">Betrieb</text>
+
+        <!-- vents -->
+        <g stroke="#9a8a72" stroke-width="2" stroke-linecap="round">
+          <line x1="96" y1="410" x2="160" y2="410"/><line x1="96" y1="424" x2="160" y2="424"/><line x1="96" y1="438" x2="160" y2="438"/>
+          <line x1="350" y1="410" x2="414" y2="410"/><line x1="350" y1="424" x2="414" y2="424"/><line x1="350" y1="438" x2="414" y2="438"/>
+        </g>
+        <text x="255" y="430" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#9a8a72">Lüftungsschlitze</text>
+
+        <!-- ===== SCHNITT / SEITE (right) ===== -->
+        <text x="560" y="44" font-family="'Spectral',serif" font-size="12" font-weight="600" letter-spacing="2" fill="#8a6f4e">SCHNITT · SO SITZT ES INNEN</text>
+        <!-- box cut -->
+        <rect x="560" y="62" width="300" height="400" rx="12" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2.5"/>
+        <!-- front panel (left edge) -->
+        <rect x="560" y="62" width="20" height="400" rx="3" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.5"/>
+        <text x="556" y="60" text-anchor="end" font-family="'Spectral',serif" font-size="10" fill="#8a6f4e">Front</text>
+
+        <!-- power strip vertical -->
+        <rect x="700" y="92" width="60" height="340" rx="8" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.8"/>
+        <text x="730" y="448" text-anchor="middle" font-family="'Spectral',serif" font-size="10" fill="#8a6f4e">Steckerleiste</text>
+
+        <!-- three modules plugged in, displays to front -->
+        <g>
+          <rect x="588" y="104" width="112" height="86" rx="6" fill="#faf5e8" stroke="#3a2a1a" stroke-width="1.6"/>
+          <rect x="580" y="120" width="20" height="40" rx="2" fill="#241a10"/>
+          <text x="648" y="152" text-anchor="middle" font-family="'Spectral',serif" font-size="11" fill="#9a3b1c">ITC-308</text>
+          <line x1="700" y1="130" x2="720" y2="130" stroke="#3a2a1a" stroke-width="3"/>
+        </g>
+        <g>
+          <rect x="588" y="200" width="112" height="86" rx="6" fill="#faf5e8" stroke="#3a2a1a" stroke-width="1.6"/>
+          <rect x="580" y="216" width="20" height="40" rx="2" fill="#241a10"/>
+          <text x="648" y="248" text-anchor="middle" font-family="'Spectral',serif" font-size="11" fill="#41525e">IHC-200</text>
+          <line x1="700" y1="226" x2="720" y2="226" stroke="#3a2a1a" stroke-width="3"/>
+        </g>
+        <g>
+          <rect x="588" y="296" width="112" height="86" rx="6" fill="#faf5e8" stroke="#3a2a1a" stroke-width="1.6"/>
+          <rect x="580" y="312" width="20" height="40" rx="2" fill="#e6d8b8"/>
+          <text x="648" y="338" text-anchor="middle" font-family="'Spectral',serif" font-size="11" fill="#4a5a3a">Trafo 12 V</text>
+          <text x="648" y="354" text-anchor="middle" font-family="'Spectral',serif" font-size="9" font-style="italic" fill="#8a6f4e">+ 3 Regler</text>
+          <line x1="700" y1="322" x2="720" y2="322" stroke="#3a2a1a" stroke-width="3"/>
+        </g>
+
+        <!-- 3 Regler-Knöpfe am Trafo -->
+        <g>
+          <rect x="772" y="296" width="46" height="86" rx="4" fill="#faf5e8" stroke="#3a2a1a" stroke-width="1.4"/>
+          <circle cx="795" cy="312" r="6" fill="#efe6cf" stroke="#5a6b4a" stroke-width="1"/>
+          <circle cx="795" cy="332" r="6" fill="#efe6cf" stroke="#5a6b4a" stroke-width="1"/>
+          <circle cx="795" cy="352" r="6" fill="#efe6cf" stroke="#5a6b4a" stroke-width="1"/>
+          <text x="795" y="376" text-anchor="middle" font-family="'Spectral',serif" font-size="8" fill="#8a6f4e">Regler</text>
+          <line x1="760" y1="332" x2="772" y2="332" stroke="#3a2a1a" stroke-width="2.5"/>
+        </g>
+
+        <!-- cable glands bottom -> to fridge -->
+        <g>
+          <rect x="600" y="456" width="180" height="14" rx="4" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.4"/>
+          <circle cx="624" cy="463" r="5" fill="#4a3a28"/><circle cx="660" cy="463" r="5" fill="#4a3a28"/><circle cx="696" cy="463" r="5" fill="#4a3a28"/><circle cx="732" cy="463" r="5" fill="#4a3a28"/><circle cx="756" cy="463" r="5" fill="#4a3a28"/>
+        </g>
+        <g stroke="#9a8a72" stroke-width="1.4" stroke-dasharray="3 4" fill="none">
+          <path d="M624 470 L 624 500"/><path d="M660 470 L 660 500"/><path d="M696 470 L 696 500"/><path d="M732 470 L 732 500"/><path d="M756 470 L 756 500"/>
+        </g>
+        <text x="690" y="516" text-anchor="middle" font-family="'Spectral',serif" font-size="11" font-style="italic" fill="#8a6f4e">Kabeldurchführungen → zum Schrank</text>
+
+        <!-- mains in (top) -->
+        <path d="M790 92 L 790 60" stroke="#3a2a1a" stroke-width="3" fill="none" marker-end="url(#rkarrow4)"/>
+        <text x="800" y="74" font-family="'Spectral',serif" font-size="10" fill="#8a6f4e">230 V Netz</text>
+
+        <!-- callouts -->
+        <g font-family="'DM Serif Display',serif" font-size="14">
+          <g><circle cx="900" cy="147" r="14" fill="#6b5a42" stroke="#f3ead7" stroke-width="2.5"/><text x="900" y="152" text-anchor="middle" fill="#f3ead7">A</text></g>
+          <g><circle cx="900" cy="243" r="14" fill="#6b5a42" stroke="#f3ead7" stroke-width="2.5"/><text x="900" y="248" text-anchor="middle" fill="#f3ead7">B</text></g>
+          <g><circle cx="900" cy="339" r="14" fill="#6b5a42" stroke="#f3ead7" stroke-width="2.5"/><text x="900" y="344" text-anchor="middle" fill="#f3ead7">C</text></g>
+        </g>
+        <g font-family="'Spectral',serif" font-size="10.5" fill="#8a6f4e">
+          <text x="918" y="151">Module stehen,</text><text x="918" y="165">Display zur Front</text>
+          <text x="918" y="247">an der Leiste</text><text x="918" y="261">eingesteckt</text>
+          <text x="918" y="343">Kabel nach unten</text><text x="918" y="357">aus dem Gehäuse</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- BAUPLAN -->
+    <div class="build">
+      <div class="bstep">
+        <div class="bn">1</div>
+        <h4 class="de-only">Gehäuse wählen</h4><h4 class="en-only">Pick the enclosure</h4>
+        <p class="de-only">Holzkasten (passt zum Smokebench-Look) oder eine <strong>Installations-/Verteilerbox</strong> aus Kunststoff, ca. <strong>30 × 25 × 12 cm</strong>. Sitzt außen, also keine Feuchte-Sorgen — aber <strong>nicht luftdicht</strong> bauen.</p>
+        <p class="en-only">A wooden box (matches the Smokebench look) or a plastic <strong>junction/distribution enclosure</strong>, about <strong>30 × 25 × 12 cm</strong>. It sits outside, so no humidity worry — but <strong>don't build it airtight</strong>.</p>
+      </div>
+      <div class="bstep">
+        <div class="bn">2</div>
+        <h4 class="de-only">Front-Ausschnitte</h4><h4 class="en-only">Front cut-outs</h4>
+        <p class="de-only">Drei rechteckige Fenster für die Displays/Tasten der Module ausschneiden — nur die Bedienseite schaut heraus. Module dahinter mit Heißkleber/Halterung fixieren, Display bündig zur Front.</p>
+        <p class="en-only">Cut three rectangular windows for the modules' displays/buttons — only the control face shows. Fix the modules behind with hot glue / brackets, displays flush to the front.</p>
+      </div>
+      <div class="bstep">
+        <div class="bn">3</div>
+        <h4 class="de-only">Steckerleiste innen</h4><h4 class="en-only">Power strip inside</h4>
+        <p class="de-only">Die Steckerleiste senkrecht hinten festschrauben. Die Module einstecken (ITC-308, IHC-200, 12-V-Trafo). Die drei <strong>PWM-Regler</strong> sitzen zwischen Trafo und Lüftern, ihre Knöpfe zeigen nach vorne durch die Blende.</p>
+        <p class="en-only">Screw the power strip vertically at the back. Plug in the modules (ITC-308, IHC-200, 12 V transformer). The three <strong>PWM controllers</strong> sit between transformer and fans, their knobs facing forward through the panel.</p>
+      </div>
+      <div class="bstep">
+        <div class="bn">4</div>
+        <h4 class="de-only">Kabel nach unten</h4><h4 class="en-only">Cables out the bottom</h4>
+        <p class="de-only">Unten <strong>Kabeldurchführungen / Tüllen</strong> setzen: Netzkabel rein, Leitungen zum Schrank raus (Strom für Kühlschrank, Vernebler, Lüfter + die zwei Fühler). Alles gebündelt Richtung Schrank.</p>
+        <p class="en-only">Add <strong>cable glands / grommets</strong> at the bottom: mains in, lines to the cabinet out (power for fridge, mister, fan + the two probes). All bundled toward the cabinet.</p>
+      </div>
+      <div class="bstep">
+        <div class="bn">5</div>
+        <h4 class="de-only">Hauptschalter &amp; Lüftung</h4><h4 class="en-only">Main switch &amp; venting</h4>
+        <p class="de-only">Optional einen <strong>beleuchteten Hauptschalter</strong> vorn — trennt alles mit einem Griff. Ein paar <strong>Lüftungsschlitze</strong> bohren, damit minimale Wärme der Netzteile abzieht.</p>
+        <p class="en-only">Optionally a <strong>lit main switch</strong> up front — cuts everything in one move. Drill a few <strong>vent slots</strong> so the adapters' slight heat escapes.</p>
+      </div>
+      <div class="bstep">
+        <div class="bn">6</div>
+        <h4 class="de-only">An die Wand</h4><h4 class="en-only">Mount it</h4>
+        <p class="de-only">Box <strong>neben den Schrank</strong> an die Wand hängen, kurze Wege zu den Durchführungen. Beschriftung der drei Felder (Temperatur · Feuchte · Lüfter) nicht vergessen.</p>
+        <p class="en-only">Hang the box on the wall <strong>next to the cabinet</strong>, short runs to the glands. Don't forget to label the three fields (temperature · humidity · fan).</p>
+      </div>
+    </div>
+
+    <div class="bmat">
+      <div class="tool-tag de-only">Zusätzliches Material für die Box</div>
+      <div class="tool-tag en-only">Extra material for the box</div>
+      <ul class="de-only">
+        <li>Holzkasten oder Kunststoff-Verteilerbox (~30 × 25 × 12 cm)</li>
+        <li>Kabeldurchführungen / Gummitüllen (4–6 Stück)</li>
+        <li>Beleuchteter Hauptschalter (optional)</li>
+        <li>Heißkleber / kleine Winkel zum Fixieren der Module</li>
+        <li>Beschriftung (Gravur, Schild oder Label)</li>
+        <li>Schrauben &amp; Wandhalter</li>
+      </ul>
+      <ul class="en-only">
+        <li>Wooden box or plastic junction enclosure (~30 × 25 × 12 cm)</li>
+        <li>Cable glands / rubber grommets (4–6 pcs)</li>
+        <li>Lit main switch (optional)</li>
+        <li>Hot glue / small brackets to fix the modules</li>
+        <li>Labelling (engraving, plate or label)</li>
+        <li>Screws &amp; wall mount</li>
+      </ul>
+    </div>
+    <p class="body de-only" style="font-size:14px;color:#6b5a42;font-style:italic;margin-top:12px;">Sicherheit: 230&nbsp;V sauber isolieren, Zugentlastung an jeder Durchführung, FI-Schutz vorschalten. Bei Unsicherheit eine Elektrofachkraft den 230-V-Teil prüfen lassen.</p>
+    <p class="body en-only" style="font-size:14px;color:#6b5a42;font-style:italic;margin-top:12px;">Safety: insulate 230&nbsp;V cleanly, add strain relief at every gland, put an RCD upstream. If unsure, have an electrician check the 230&nbsp;V part.</p>
+
+    <!-- OPTIONAL: HEIZUNG -->
+    <div class="eyebrow de-only">Optional · Ganzjahres-Betrieb</div>
+    <div class="eyebrow en-only">Optional · year-round operation</div>
+    <h2 class="de-only">Sanfte Heizung — kühlen UND heizen</h2>
+    <h2 class="en-only">Gentle heating — cool AND heat</h2>
+    <p class="body de-only">Der ITC-308 hat neben dem Kühl- auch einen <strong>Heiz-Ausgang</strong>. Eine kleine Heizung daran macht aus der Kühl- eine echte <strong>Klimakammer</strong>, die in beide Richtungen regelt — der größte Gewinn für den Sommer-im-Keller-wird-Winter-Fall.</p>
+    <p class="body en-only">Besides the cooling outlet, the ITC-308 has a <strong>heating outlet</strong>. A small heater on it turns the cooling box into a real <strong>climate chamber</strong> that regulates both ways — the biggest win for the cellar that's cool in summer but cold in winter.</p>
+
+    <div class="split">
+      <div class="splitcol in">
+        <h4 class="de-only">Vorteile</h4><h4 class="en-only">Advantages</h4>
+        <p class="sub de-only">was die Heizung bringt</p><p class="sub en-only">what it adds</p>
+        <ul class="de-only">
+          <li><strong>Ganzjahres-Stabilität:</strong> hält 13–15 °C auch, wenn der Raum im Winter auf 6–8 °C fällt</li>
+          <li><strong>Fermentationsphase:</strong> Salami will anfangs 20–26 °C für 1–2 Tage — Heizung trifft das</li>
+          <li><strong>Umrötung &amp; Anwärmen</strong> nach kaltem Pökeln, gleichmäßiger</li>
+          <li><strong>Keine Kälte-Stillstände</strong> beim Trocknen</li>
+        </ul>
+        <ul class="en-only">
+          <li><strong>Year-round stability:</strong> holds 13–15 °C even if the room drops to 6–8 °C in winter</li>
+          <li><strong>Fermentation phase:</strong> salami wants 20–26 °C for 1–2 days at the start — the heater hits that</li>
+          <li><strong>Reddening &amp; warming</strong> after cold curing, more even</li>
+          <li><strong>No cold stalls</strong> while drying</li>
+        </ul>
+      </div>
+      <div class="splitcol out">
+        <h4 class="de-only">Aber NICHT 80–90 °C</h4><h4 class="en-only">But NOT 80–90 °C</h4>
+        <p class="sub de-only">der Schrank verträgt das nicht</p><p class="sub en-only">the cabinet can't take it</p>
+        <ul class="de-only">
+          <li><strong>Kunststoff-Innenraum</strong> verzieht sich, schmilzt, gast aus</li>
+          <li><strong>PU-Schaum-Dämmung</strong> schrumpft — Geruch, im Extremfall Brandgefahr</li>
+          <li><strong>Türdichtung</strong> wird hart und undicht</li>
+          <li><strong>Heißräuchern/Brühen</strong> macht ohnehin dein Weber Smokey Mountain — saubere Trennung</li>
+        </ul>
+        <ul class="en-only">
+          <li><strong>Plastic interior</strong> warps, melts, off-gasses</li>
+          <li><strong>PU foam insulation</strong> shrinks — odour, in the worst case fire risk</li>
+          <li><strong>Door gasket</strong> goes hard and leaky</li>
+          <li><strong>Hot smoking/cooking</strong> is your Weber Smokey Mountain's job anyway — keep them separate</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reco">
+      <div class="ic">✓</div>
+      <div class="rl de-only"><strong>Empfehlung:</strong> die <strong>HG Power Heizmatte (55 W, 53×25 cm, IP67)</strong> aus dem Terraristik-/Pflanzenbedarf, flach an eine <strong>Wand (nicht den Boden!)</strong> gelegt. Warme Luft steigt auf, der Umluft-Lüfter verteilt sie gleichmäßig — am Boden bekämst du Schichtung und würdest ein Tropf-/Fettblech mit aufheizen. Vorteil der Matte: niedrige Oberflächentemperatur (~30–40&nbsp;°C bei Raumtemperatur) und <strong>sanfte Flächenwärme ohne Strahlung direkt aufs Reifegut</strong> — kein einseitiges Antrocknen, flacher Aufbau, kein Platzverlust. IP67 = feuchtefest fürs Reifeklima. <strong>Wichtig:</strong> du brauchst eine <em>„dumme"</em> Matte ohne eigenen Thermostat — die <strong>Regelung übernimmt komplett der ITC-308</strong> (schaltet an/aus nach Sollwert). Die Matte steckt einfach in den <strong>Heiz-Ausgang</strong>. Brauchst du vor allem für <strong>Biltong (~25–30&nbsp;°C, warm getrocknet)</strong> und die warme <strong>Salami-Fermentation</strong> — zum reinen Kalt-Reifen heizt du kaum. <br><strong>Alternative:</strong> ein <strong>Keramik-Wärmestrahler (~50 W)</strong> auf Keramik-E27-Fassung, unten in eine Ecke (versetzt, mit Schutzkorb) — mehr Reserve, aber punktuelle Strahlungshitze. In beiden Fällen: nie über ~30&nbsp;°C.</div>
+      <div class="rl en-only"><strong>Recommendation:</strong> the <strong>HG Power heat mat (55 W, 53×25 cm, IP67)</strong> from reptile/plant supplies, laid flat against a <strong>wall (not the floor!)</strong>. Warm air rises and the circulation fan spreads it evenly — on the floor you'd get stratification and would heat up a drip/fat tray. The mat's win: low surface temperature (~30–40&nbsp;°C at room temp) and <strong>gentle area heat with no radiation straight onto the product</strong> — no one-sided drying, a flat build, no space lost. IP67 = moisture-proof for the curing climate. <strong>Important:</strong> you want a <em>"dumb"</em> mat with no built-in thermostat — the <strong>ITC-308 does all the regulating</strong> (switches on/off to setpoint). The mat simply plugs into the <strong>heating outlet</strong>. You mainly need it for <strong>biltong (~25–30&nbsp;°C, warm-dried)</strong> and the warm <strong>salami fermentation</strong> — for plain cold curing you barely heat. <br><strong>Alternative:</strong> a <strong>ceramic heat emitter (~50 W)</strong> on a ceramic E27 socket, low in a corner (offset, with a guard) — more headroom, but point radiant heat. Either way: never above ~30&nbsp;°C.</div>
+    </div>
+
+    <!-- FRISCHLUFT / ABLUFT -->
+    <div class="eyebrow de-only">Frischluft &amp; Abluft</div>
+    <div class="eyebrow en-only">Fresh air &amp; exhaust</div>
+    <h2 class="de-only">Luft tauschen — aber dosiert</h2>
+    <h2 class="en-only">Exchange air — but in measured doses</h2>
+    <p class="body de-only">Beim Reifen geben Wurst &amp; Schinken Feuchte und Gase ab. Ein <strong>gelegentlicher</strong> Luftaustausch beugt muffiger Luft und Fehlschimmel vor — aber zu viel Frischluft kostet Feuchte und Temperatur-Stabilität. Also: <strong>kurz und periodisch</strong>, nicht dauernd. Der Umluft-Lüfter wälzt nur <em>innen</em> um, er tauscht keine Luft nach außen — Frischluft ist eine eigene, kleine Sache.</p>
+    <p class="body en-only">As they age, sausage &amp; ham give off moisture and gases. An <strong>occasional</strong> air exchange prevents stale air and unwanted mould — but too much fresh air costs humidity and temperature stability. So: <strong>short and periodic</strong>, not constant. The circulation fan only stirs the air <em>inside</em>; it doesn't exchange air with the outside — fresh air is a separate, small matter.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 1040 420" role="img" aria-label="Frischluft und Abluft im Schrank">
+        <defs>
+          <pattern id="rkgrid5" width="26" height="26" patternUnits="userSpaceOnUse">
+            <path d="M26 0H0V26" fill="none" stroke="#ecdfc4" stroke-width="1"/>
+          </pattern>
+          <marker id="rkair" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#5b6b78"/>
+          </marker>
+        </defs>
+        <rect x="0" y="0" width="1040" height="420" fill="#faf5e8"/>
+        <rect x="0" y="0" width="1040" height="420" fill="url(#rkgrid5)"/>
+
+        <!-- Schrank-Querschnitt -->
+        <rect x="360" y="40" width="320" height="350" rx="14" fill="#f3ead7" stroke="#3a2a1a" stroke-width="2.5"/>
+        <rect x="376" y="56" width="288" height="318" rx="8" fill="#efe6cf" stroke="#3a2a1a" stroke-width="1.4"/>
+        <text x="520" y="370" text-anchor="middle" font-family="'Spectral',serif" font-size="11" font-style="italic" fill="#8a6f4e">Reifekammer im Schnitt</text>
+
+        <!-- hängende Ware -->
+        <rect x="430" y="92" width="180" height="8" rx="4" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1.4"/>
+        <ellipse cx="470" cy="150" rx="12" ry="32" fill="#b8694a" stroke="#3a2a1a" stroke-width="1.4"/>
+        <ellipse cx="560" cy="142" rx="11" ry="26" fill="#a85c40" stroke="#3a2a1a" stroke-width="1.4"/>
+
+        <!-- Zuluft unten -->
+        <rect x="360" y="320" width="22" height="40" rx="3" fill="#cfe0df" fill-opacity="0.6" stroke="#5b6b78" stroke-width="1.6"/>
+        <path d="M250 340 L 356 340" stroke="#5b6b78" stroke-width="2.5" fill="none" marker-end="url(#rkair)"/>
+        <path d="M384 332 q40 -6 70 -30" stroke="#5b6b78" stroke-width="1.6" fill="none" stroke-dasharray="3 4" marker-end="url(#rkair)"/>
+        <text x="250" y="328" text-anchor="middle" font-family="'Spectral',serif" font-size="12" fill="#41525e">Frischluft</text>
+        <text x="250" y="360" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#8a6f4e">Zuluft unten</text>
+
+        <!-- Abluft oben mit Lüfter -->
+        <rect x="658" y="70" width="22" height="40" rx="3" fill="#f6ece6" stroke="#d6a98f" stroke-width="1.6"/>
+        <!-- Lüfter-Symbol -->
+        <circle cx="669" cy="90" r="13" fill="#f3ead7" stroke="#3a2a1a" stroke-width="1.4"/>
+        <circle cx="669" cy="90" r="3.5" fill="#e6d8b8" stroke="#3a2a1a" stroke-width="1"/>
+        <g stroke="#3a2a1a" stroke-width="1.1" fill="none">
+          <path d="M669 90 Q 679 82 683 90"/><path d="M669 90 Q 676 100 669 104"/><path d="M669 90 Q 659 98 655 90"/><path d="M669 90 Q 662 80 669 76"/>
+        </g>
+        <path d="M684 90 L 790 90" stroke="#9a3b1c" stroke-width="2.5" fill="none" marker-end="url(#rkair)"/>
+        <path d="M586 110 q40 -20 70 -26" stroke="#9a3b1c" stroke-width="1.6" fill="none" stroke-dasharray="3 4" marker-end="url(#rkair)"/>
+        <text x="790" y="78" text-anchor="middle" font-family="'Spectral',serif" font-size="12" fill="#9a3b1c">Abluft-Lüfter</text>
+        <text x="790" y="108" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#8a6f4e">zieht raus (Biltong)</text>
+
+        <!-- Nebel-Einlass oben links (getrennt von der Abluft rechts) -->
+        <rect x="360" y="70" width="22" height="40" rx="3" fill="#dfe7e6" fill-opacity="0.65" stroke="#5b6b78" stroke-width="1.6"/>
+        <!-- dicker Fogger-Schlauch von außen -->
+        <path d="M250 90 L 358 90" stroke="#5b6b78" stroke-width="5" fill="none"/>
+        <path d="M250 90 L 358 90" stroke="#cfe0df" stroke-width="2" fill="none"/>
+        <text x="250" y="78" text-anchor="middle" font-family="'Spectral',serif" font-size="12" fill="#41525e">Nebel-Einlass</text>
+        <text x="250" y="110" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#8a6f4e">Fogger außen, Schlauch rein</text>
+        <!-- Nebel fällt nach unten (schwerer als Luft) -->
+        <g stroke="#7fa8b8" stroke-width="1.6" fill="none" stroke-dasharray="3 4">
+          <path d="M384 112 C 408 150, 430 200, 452 250" marker-end="url(#rkair)"/>
+          <path d="M390 112 C 420 160, 450 215, 478 268" marker-end="url(#rkair)" opacity="0.6"/>
+        </g>
+        <text x="470" y="300" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#5b6b78">Nebel sinkt nach unten</text>
+
+        <!-- Prinzip: unten rein, oben raus -->
+        <text x="540" y="210" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="14" fill="#6b5a42">Nebel oben rein · Abluft getrennt</text>
+
+        <!-- Heizlampe unten rechts (Wärme steigt) -->
+        <g>
+          <path d="M594 360 a22 12 0 0 1 44 0" fill="#f3ead7" stroke="#3a2a1a" stroke-width="1.4"/>
+          <ellipse cx="616" cy="360" rx="15" ry="8" fill="#c97a3a" stroke="#3a2a1a" stroke-width="1.4"/>
+          <line x1="616" y1="338" x2="616" y2="360" stroke="#3a2a1a" stroke-width="1"/>
+          <line x1="600" y1="346" x2="632" y2="346" stroke="#3a2a1a" stroke-width="1"/>
+        </g>
+        <g stroke="#b0653f" stroke-width="1.6" fill="none">
+          <path d="M606 348 q-6 -11 0 -22 q6 -11 0 -22"/>
+          <path d="M626 348 q6 -11 0 -22 q-6 -11 0 -22"/>
+        </g>
+        <path d="M690 350 L 646 354" stroke="#b0653f" stroke-width="1.3" fill="none" stroke-dasharray="3 4"/>
+        <text x="744" y="348" text-anchor="middle" font-family="'Spectral',serif" font-size="12" fill="#b0653f">Heizlampe</text>
+        <text x="744" y="364" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#8a6f4e">unten · Wärme steigt</text>
+
+        <!-- Hinweis No-Drill -->
+        <text x="130" y="190" text-anchor="middle" font-family="'Spectral',serif" font-size="11" font-weight="600" fill="#9a3b1c">Nicht in</text>
+        <text x="130" y="206" text-anchor="middle" font-family="'Spectral',serif" font-size="11" font-weight="600" fill="#9a3b1c">Seiten-/Rückwand</text>
+        <text x="130" y="222" text-anchor="middle" font-family="'Spectral',serif" font-size="11" font-weight="600" fill="#9a3b1c">bohren!</text>
+        <text x="130" y="244" text-anchor="middle" font-family="'Spectral',serif" font-size="10" font-style="italic" fill="#8a6f4e">Kältemittel-Leitungen</text>
+      </svg>
+    </div>
+
+    <div class="methods">
+      <div class="method best">
+        <div class="tag de-only">Einfachste Lösung</div><div class="tag en-only">Simplest</div>
+        <div class="mh de-only">Tägliche Sichtkontrolle</div><div class="mh en-only">Daily visual check</div>
+        <div class="mt de-only">Einmal am Tag die Tür für ein paar Sekunden öffnen = Luft komplett getauscht. Bei einer kleinen 86-L-Kammer reicht das oft schon völlig — kein Umbau nötig.</div>
+        <div class="mt en-only">Open the door for a few seconds once a day = air fully exchanged. For a small 86 L chamber that's often entirely enough — no modification needed.</div>
+      </div>
+      <div class="method">
+        <div class="tag de-only">Passiv</div><div class="tag en-only">Passive</div>
+        <div class="mh de-only">Zwei Lüftungsöffnungen</div><div class="mh en-only">Two vents</div>
+        <div class="mt de-only">Kleine Öffnung unten (Zuluft) und oben (Abluft) mit verstellbarer Klappe. Warme/feuchte Luft steigt von selbst nach oben raus, frische zieht unten nach. Öffnungen nur in Tür oder Decke — nie in die Wände.</div>
+        <div class="mt en-only">A small opening at the bottom (intake) and top (exhaust) with an adjustable flap. Warm/humid air rises out on its own, fresh air follows below. Only in the door or top — never in the walls.</div>
+      </div>
+      <div class="method">
+        <div class="tag de-only">Aktiv</div><div class="tag en-only">Active</div>
+        <div class="mh de-only">Abluft-Lüfter oben</div><div class="mh en-only">Top exhaust fan</div>
+        <div class="mt de-only">Ein zweiter Lüfter <strong>oben als Abluft</strong> zieht verbrauchte/feuchte Luft heraus — unten strömt durch die offene Zuluft automatisch frische Luft nach (Kamineffekt). Er braucht eine <strong>eigene Steuerung</strong> (5 V → eigenes USB-Netzteil → <strong>zweiter T319-Timer</strong>), weil er anders taktet als der Umluft-Lüfter: für Biltong <strong>Dauerlauf</strong>, beim Reifen nur kurz (z. B. 2–3 Min, 1–2×/Tag). Nie in Seiten-/Rückwand bohren.</div>
+        <div class="mt en-only">A second fan <strong>at the top as exhaust</strong> pulls stale/humid air out — fresh air follows in automatically through the open bottom intake (chimney effect). It needs its <strong>own control</strong> (5 V → own USB adapter → <strong>second T319 timer</strong>), because it cycles differently from the circulation fan: <strong>continuous</strong> for biltong, short bursts for aging (e.g. 2–3 min, 1–2×/day). Never drill the side/back walls.</div>
+      </div>
+      <div class="method best">
+        <div class="tag de-only">Vollautomatisch</div><div class="tag en-only">Fully automatic</div>
+        <div class="mh de-only">Abluft per Feuchte</div><div class="mh en-only">Vent by humidity</div>
+        <div class="mt de-only">Statt Timer ein <strong>zweiter IHC-200 im Entfeuchten-Modus</strong> am Abluft-Lüfter: steigt die Feuchte über den Sollwert, zieht der Lüfter automatisch Luft raus — kein manuelles Umschalten zwischen Reifen und Biltong. Die eleganteste Lösung, ein Regler mehr.</div>
+        <div class="mt en-only">Instead of a timer, a <strong>second IHC-200 in dehumidify mode</strong> on the exhaust fan: when humidity climbs above the setpoint, the fan vents automatically — no manual switching between aging and biltong. The most elegant option, one extra controller.</div>
+      </div>
+    </div>
+
+    <p class="pnote de-only">Faustregel: Erst mit Methode 1 starten. Riecht die Kammer muffig oder bildet sich Fehlschimmel, auf passive Öffnungen aufrüsten. Aktive Abluft brauchst du nur bei viel Reifegut auf einmal.</p>
+    <p class="pnote en-only">Rule of thumb: start with method 1. If the chamber smells stale or unwanted mould appears, upgrade to passive vents. Active exhaust is only needed with a lot of product at once.</p>
+
+    <!-- NEBLER EINBAUEN -->
+    <div class="eyebrow de-only">Nebler einbauen · zwei Wege</div>
+    <div class="eyebrow en-only">Mounting the mister · two ways</div>
+    <h2 class="de-only">Wo sitzt der Vernebler?</h2>
+    <h2 class="en-only">Where does the mister go?</h2>
+    <p class="body de-only">Ultraschall-Nebel ist <strong>schwerer als Luft</strong> und sinkt von selbst nach unten. Deshalb darf er ruhig <strong>von oben</strong> einströmen — er fällt durch die Kammer und umhüllt das Reifegut. Nur getrennt von der Abluftöffnung platzieren, damit er nicht sofort wieder rausgezogen wird.</p>
+    <p class="body en-only">Ultrasonic fog is <strong>heavier than air</strong> and sinks on its own. So it can perfectly well enter <strong>from the top</strong> — it falls through the chamber and envelops the product. Just place it away from the exhaust so it isn't pulled straight back out.</p>
+    <div class="split">
+      <div class="splitcol in">
+        <h4 class="de-only">A · Nebler im Schrank</h4><h4 class="en-only">A · Mister inside</h4>
+        <p class="sub de-only">empfohlen — nur ein dünnes Kabel raus</p><p class="sub en-only">recommended — only a thin cable out</p>
+        <ul class="de-only">
+          <li><strong>24-V-Membran-Nebler</strong> sitzt unten in einem kleinen Wasserbehälter im Schrank</li>
+          <li>Nach außen geht nur das <strong>dünne Stromkabel</strong> (~3–4 mm) — passt durch die Türdichtung</li>
+          <li><strong>Kein dicker Schlauch, kein großes Loch</strong></li>
+          <li>Wasserstand im Blick behalten / Nachfüllbehälter</li>
+        </ul>
+        <ul class="en-only">
+          <li><strong>24 V membrane mister</strong> sits in a small water tray at the bottom inside</li>
+          <li>Only the <strong>thin power cable</strong> (~3–4 mm) goes out — fits under the gasket</li>
+          <li><strong>No thick hose, no large hole</strong></li>
+          <li>Keep an eye on the water level / refill tank</li>
+        </ul>
+      </div>
+      <div class="splitcol out">
+        <h4 class="de-only">B · Fogger außen, Nebel oben rein</h4><h4 class="en-only">B · Fogger outside, fog in at top</h4>
+        <p class="sub de-only">komfortabel — Wasser bleibt draußen</p><p class="sub en-only">convenient — water stays outside</p>
+        <ul class="de-only">
+          <li><strong>Gerät + Wasser stehen außen</strong> (z. B. Lucky Reptile Super Fog) — Auffüllen ohne Tür öffnen</li>
+          <li>Nur der <strong>Nebelschlauch</strong> geht oben rein — Nebel fällt nach unten</li>
+          <li>Achtung: Schlauch ist <strong>dick (~20–25 mm)</strong> → braucht ein eigenes Loch oben</li>
+          <li><strong>Getrennt von der Abluftöffnung</strong> setzen (andere Ecke)</li>
+        </ul>
+        <ul class="en-only">
+          <li><strong>Unit + water stay outside</strong> (e.g. Lucky Reptile Super Fog) — refill without opening the door</li>
+          <li>Only the <strong>fog hose</strong> enters at the top — fog falls downward</li>
+          <li>Note: the hose is <strong>thick (~20–25 mm)</strong> → needs its own hole at the top</li>
+          <li>Place it <strong>away from the exhaust opening</strong> (opposite corner)</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pnote de-only">Da du oben ohnehin eine Abluftöffnung für Biltong baust, ist Weg&nbsp;B gut machbar — setz Nebel-Einlass und Abluft einfach in <strong>gegenüberliegende Ecken</strong>. Wer es minimal halten will, fährt mit Weg&nbsp;A (Nebler innen, dünnes Kabel).</p>
+    <p class="pnote en-only">Since you're building a top exhaust opening for biltong anyway, route&nbsp;B works well — just put the fog inlet and the exhaust in <strong>opposite corners</strong>. For the most minimal build, go with route&nbsp;A (mister inside, thin cable).</p>
+
+    <div class="reco">
+      <div class="ic">✓</div>
+      <div class="rl de-only"><strong>Komfort-Empfehlung (Weg B):</strong> ein <strong>Terrarium-Fogger mit 4-L-Tank</strong>, ausziehbarem Schlauch und Trockenlaufschutz. Wichtig: Die <strong>Knopfsteuerung (Drehknopf)</strong> sorgt dafür, dass er nach Stromzufuhr automatisch wieder anläuft — so kann ihn der <strong>IHC-200</strong> über den Strom schalten. <em>Einmal kurz testen:</em> Steckdose aus/ein → nebelt er ohne Knopfdruck weiter? Dann passt's. Schlauch in eine obere Ecke führen, getrennt von der Abluft. (Ein evtl. Nachtlicht ignorieren — Reife mag Dunkelheit.)</div>
+      <div class="rl en-only"><strong>Comfort pick (route B):</strong> a <strong>terrarium fogger with a 4 L tank</strong>, extendable tube and dry-run protection. Key: the <strong>knob control (rotary dial)</strong> means it auto-restarts when power returns — so the <strong>IHC-200</strong> can switch it by power. <em>Quick test:</em> socket off/on → does it keep misting without pressing a button? Then you're set. Route the tube into a top corner, away from the exhaust. (Ignore any night light — ripening likes the dark.)</div>
+    </div>
+
+    <!-- EIN SCHRANK, MEHRERE PHASEN -->
+    <div class="eyebrow de-only">Ein Schrank, mehrere Phasen</div>
+    <div class="eyebrow en-only">One cabinet, several phases</div>
+    <h2 class="de-only">Vom Pökeln bis zum Lagern</h2>
+    <h2 class="en-only">From curing to storage</h2>
+    <p class="body de-only">Du änderst nur die zwei Sollwerte an ITC-308 und IHC-200 — derselbe Schrank deckt den ganzen Weg ab. Tippe auf <em>In Ampel laden</em>, um eine Phase oben in den Klima-Check zu übernehmen.</p>
+    <p class="body en-only">You only change the two setpoints on the ITC-308 and IHC-200 — the same cabinet covers the whole path. Tap <em>Load into light</em> to send a phase up to the climate check.</p>
+
+    <div class="phases de-only">
+      <div class="phead">
+        <span>Phase</span><span>Temperatur</span><span>Feuchte</span><span>Dauer (Richtwert)</span><span></span>
+      </div>
+      <div class="prow">
+        <div class="pname">Durchbrennen<small>Pökel-Ausgleich, Umrötung</small></div>
+        <div class="pv">5–7<small> °C</small></div>
+        <div class="pv h">~70<small> %</small></div>
+        <div class="pdur">1 Tag je cm Dicke</div>
+        <button class="pbtn" onclick="loadPhase(6,70)">In Ampel laden →</button>
+      </div>
+      <div class="prow">
+        <div class="pname">Kalträuchern<small>zwischen den Räuchergängen</small></div>
+        <div class="pv">12–18<small> °C</small></div>
+        <div class="pv h">~75<small> %</small></div>
+        <div class="pdur">mehrere Gänge à 8–12 h</div>
+        <button class="pbtn" onclick="loadPhase(15,75)">In Ampel laden →</button>
+      </div>
+      <div class="prow">
+        <div class="pname">Reifen &amp; Abhängen<small>Trocknen bis zum Ziel-Verlust</small></div>
+        <div class="pv">13–15<small> °C</small></div>
+        <div class="pv h">70–80<small> %</small></div>
+        <div class="pdur">Wochen bis Monate</div>
+        <button class="pbtn" onclick="loadPhase(14,75)">In Ampel laden →</button>
+      </div>
+      <div class="prow">
+        <div class="pname">Lagern<small>fertige Ware aufbewahren</small></div>
+        <div class="pv">8–12<small> °C</small></div>
+        <div class="pv h">~65<small> %</small></div>
+        <div class="pdur">nach Bedarf</div>
+        <button class="pbtn" onclick="loadPhase(10,65)">In Ampel laden →</button>
+      </div>
+      <div class="prow">
+        <div class="pname">Biltong<small>warm-luftig, südafrik. Trockenfleisch</small></div>
+        <div class="pv">26–30<small> °C</small></div>
+        <div class="pv h">~50<small> %</small></div>
+        <div class="pdur">3–5 Tage, viel Luft</div>
+        <button class="pbtn" onclick="loadPhase(28,50)">In Ampel laden →</button>
+      </div>
+    </div>
+
+    <div class="phases en-only">
+      <div class="phead">
+        <span>Phase</span><span>Temperature</span><span>Humidity</span><span>Duration (guide)</span><span></span>
+      </div>
+      <div class="prow">
+        <div class="pname">Curing rest<small>salt equalising, reddening</small></div>
+        <div class="pv">5–7<small> °C</small></div>
+        <div class="pv h">~70<small> %</small></div>
+        <div class="pdur">1 day per cm thickness</div>
+        <button class="pbtn" onclick="loadPhase(6,70)">Load into light →</button>
+      </div>
+      <div class="prow">
+        <div class="pname">Cold smoking<small>between smoke runs</small></div>
+        <div class="pv">12–18<small> °C</small></div>
+        <div class="pv h">~75<small> %</small></div>
+        <div class="pdur">several 8–12 h runs</div>
+        <button class="pbtn" onclick="loadPhase(15,75)">Load into light →</button>
+      </div>
+      <div class="prow">
+        <div class="pname">Aging &amp; hanging<small>drying to target loss</small></div>
+        <div class="pv">13–15<small> °C</small></div>
+        <div class="pv h">70–80<small> %</small></div>
+        <div class="pdur">weeks to months</div>
+        <button class="pbtn" onclick="loadPhase(14,75)">Load into light →</button>
+      </div>
+      <div class="prow">
+        <div class="pname">Storage<small>keeping finished product</small></div>
+        <div class="pv">8–12<small> °C</small></div>
+        <div class="pv h">~65<small> %</small></div>
+        <div class="pdur">as needed</div>
+        <button class="pbtn" onclick="loadPhase(10,65)">Load into light →</button>
+      </div>
+      <div class="prow">
+        <div class="pname">Biltong<small>warm &amp; airy, South-African dried beef</small></div>
+        <div class="pv">26–30<small> °C</small></div>
+        <div class="pv h">~50<small> %</small></div>
+        <div class="pdur">3–5 days, lots of air</div>
+        <button class="pbtn" onclick="loadPhase(28,50)">Load into light →</button>
+      </div>
+    </div>
+
+    <div class="pnote de-only">Richtwerte — je nach Rezept und Reifegut variieren sie. Die zwei Extreme: <strong>Kalträuchern</strong> unter ~20&nbsp;°C (damit nichts „kocht") und <strong>Biltong</strong> warm-trocken bei ~28&nbsp;°C mit viel Luft.</div>
+    <div class="pnote en-only">Guide values — they vary by recipe and product. The two extremes: <strong>cold smoking</strong> below ~20&nbsp;°C (so nothing "cooks") and <strong>biltong</strong> warm-dry at ~28&nbsp;°C with lots of air.</div>
+
+    <!-- BILTONG-MODUS -->
+    <div class="eyebrow de-only">Sonderfall · warm &amp; trocken</div>
+    <div class="eyebrow en-only">Special case · warm &amp; dry</div>
+    <h2 class="de-only">Biltong — der Schrank andersherum</h2>
+    <h2 class="en-only">Biltong — the cabinet in reverse</h2>
+    <p class="body de-only">Südafrikanisches Trockenfleisch braucht das <strong>Gegenteil</strong> von Salami: <strong>Wärme, viel Luft, niedrige Feuchte</strong> — keine Kälte, kein Reifeschimmel. Genau dafür hast du schon alle Bauteile, du drehst nur das Klima um.</p>
+    <p class="body en-only">South-African dried beef wants the <strong>opposite</strong> of salami: <strong>warmth, lots of air, low humidity</strong> — no cold, no curing mould. You already have every part for it; you just flip the climate.</p>
+    <div class="split">
+      <div class="splitcol in">
+        <h4 class="de-only">So stellst du um</h4><h4 class="en-only">How to switch</h4>
+        <p class="sub de-only">warm-trocken-Modus</p><p class="sub en-only">warm-dry mode</p>
+        <ul class="de-only">
+          <li><strong>Heizung an</strong> (ITC-308 auf ~28 °C) — Kühlung praktisch ungenutzt</li>
+          <li><strong>Vernebler aus</strong> oder sehr niedrig — Ziel ~40–60 % rF</li>
+          <li><strong>Abluft-Lüfter oben an</strong> — zieht warme, feuchte Luft raus; unten strömt automatisch frische nach. Stetiger Durchzug trocknet die Oberfläche.</li>
+          <li>Streifen mariniert (Essig, Salz, Koriander) aufhängen, 3–5 Tage</li>
+        </ul>
+        <ul class="en-only">
+          <li><strong>Heater on</strong> (ITC-308 to ~28 °C) — cooling barely used</li>
+          <li><strong>Mister off</strong> or very low — target ~40–60 % RH</li>
+          <li><strong>Top exhaust fan on</strong> — pulls warm, humid air out; fresh air follows in from below automatically. Steady draught dries the surface.</li>
+          <li>Hang marinated strips (vinegar, salt, coriander), 3–5 days</li>
+        </ul>
+      </div>
+      <div class="splitcol out">
+        <h4 class="de-only">Im Blick behalten</h4><h4 class="en-only">Keep in mind</h4>
+        <p class="sub de-only">damit's gelingt</p><p class="sub en-only">to get it right</p>
+        <ul class="de-only">
+          <li><strong>Nicht zu warm</strong> (&gt;35 °C) — sonst gart das Fleisch außen, statt zu trocknen</li>
+          <li><strong>Genug Luft</strong> ist wichtiger als Hitze — Streifen dürfen sich nicht berühren</li>
+          <li><strong>Zu feucht = Schimmelgefahr</strong> — Biltong will trocken, nicht reif</li>
+          <li>Fertig, wenn außen fest, innen je nach Geschmack noch leicht rot</li>
+        </ul>
+        <ul class="en-only">
+          <li><strong>Not too hot</strong> (&gt;35 °C) — otherwise the meat cooks outside instead of drying</li>
+          <li><strong>Enough air</strong> matters more than heat — strips must not touch</li>
+          <li><strong>Too humid = mould risk</strong> — biltong wants dry, not aged</li>
+          <li>Done when firm outside, inside still slightly red to taste</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- EDELSCHIMMEL -->
+    <div class="eyebrow de-only">Königsdisziplin · Edelschimmel</div>
+    <div class="eyebrow en-only">Top tier · noble mould</div>
+    <h2 class="de-only">Edelschimmel kultivieren</h2>
+    <h2 class="en-only">Cultivating noble mould</h2>
+    <p class="body de-only">Der weiße Flaum auf guter Salami ist <strong>Edelschimmel</strong> (<em>Penicillium nalgiovense</em>) — er schützt vor Fehlschimmel, reguliert die Trocknung und gibt Aroma. Mit verschließbarer Zu-/Abluft, sanfter Wärme und Feuchte wird dein Schrank zur vollwertigen <strong>Schimmel-Reifekammer</strong>. Wichtig: Edelschimmel entsteht nicht zuverlässig „von selbst" — du <strong>impfst</strong> ihn aktiv.</p>
+    <p class="body en-only">The white bloom on good salami is <strong>noble mould</strong> (<em>Penicillium nalgiovense</em>) — it guards against unwanted mould, regulates drying and adds aroma. With closable vents, gentle warmth and humidity your cabinet becomes a full <strong>mould-ripening chamber</strong>. Key: noble mould doesn't reliably appear "on its own" — you <strong>inoculate</strong> it actively.</p>
+
+    <div class="build">
+      <div class="bstep">
+        <div class="bn">1</div>
+        <h4 class="de-only">Impfen</h4><h4 class="en-only">Inoculate</h4>
+        <p class="de-only"><strong>Penicillium-nalgiovense-Starter</strong> (z. B. Mold-600) in abgekochtem, lauwarmem Wasser anrühren. Die Wurst darin <strong>tauchen oder besprühen</strong>. Ohne Starter riskierst du grün-schwarzen Fehlschimmel.</p>
+        <p class="en-only">Stir a <strong>Penicillium nalgiovense starter</strong> (e.g. Mold-600) into boiled, lukewarm water. <strong>Dip or spray</strong> the sausage with it. Without a starter you risk green-black off-mould.</p>
+      </div>
+      <div class="bstep">
+        <div class="bn">2</div>
+        <h4 class="de-only">Anwachsen</h4><h4 class="en-only">Grow-in</h4>
+        <p class="de-only">Erste <strong>2–3 Tage warm &amp; feucht &amp; geschlossen</strong>: ~18–24 °C, 85–95 % rF, Zu-/Abluft zu. Hier hilft die <strong>Wärmequelle</strong>. Weißer Flaum wächst an.</p>
+        <p class="en-only">First <strong>2–3 days warm, humid &amp; closed</strong>: ~18–24 °C, 85–95 % RH, vents shut. The <strong>heat source</strong> helps here. White bloom takes hold.</p>
+      </div>
+      <div class="bstep">
+        <div class="bn">3</div>
+        <h4 class="de-only">Reifen</h4><h4 class="en-only">Ripen</h4>
+        <p class="de-only">Danach zurück auf <strong>13–15 °C, 75 % rF</strong> und Zu-/Abluft dosiert öffnen. Der Schimmel reift mit, bis dein Ziel-Gewichtsverlust erreicht ist.</p>
+        <p class="en-only">Then back to <strong>13–15 °C, 75 % RH</strong> with vents opened in measured doses. The mould ripens along until your target weight loss is reached.</p>
+      </div>
+    </div>
+
+    <div class="warn" style="margin-top:14px;">
+      <div class="ic">!</div>
+      <div class="wt de-only"><strong>Sortenrein fahren &amp; Licht aus:</strong> Edelschimmel kann auf anderes Reifegut (z. B. Käse) überspringen — für Schimmel-Projekte den Schrank nur damit belegen. Und: Reife mag <strong>Dunkelheit</strong> — nutze einen <strong>Keramik-Wärmestrahler ohne Licht</strong>, keine helle Lampe. Bildet sich <strong>grüner, schwarzer oder haariger</strong> Schimmel: das ist Fehlschimmel — wegwerfen.</div>
+      <div class="wt en-only"><strong>Run single-purpose &amp; lights off:</strong> noble mould can jump to other products (e.g. cheese) — for mould projects, load the cabinet with that alone. And ripening likes <strong>darkness</strong> — use a <strong>ceramic heat emitter without light</strong>, not a bright lamp. If <strong>green, black or hairy</strong> mould appears, that's off-mould — discard it.</div>
+    </div>
+
+    <!-- LÜFTER-TAKT-REFERENZ -->
+    <div class="eyebrow de-only">Referenz · Lüfter-Drehzahl</div>
+    <div class="eyebrow en-only">Reference · fan speed</div>
+    <h2 class="de-only">Welche Drehzahl für welche Phase</h2>
+    <h2 class="en-only">Which speed for which phase</h2>
+    <p class="body de-only">Richtwerte für die drei Drehzahlregler. <strong>Umluft</strong> (innen) gleicht die Temperatur aus, <strong>Zu-/Abluft</strong> (unten/oben) tauschen Luft. Beim Biltong drehst du alle drei hoch.</p>
+    <p class="body en-only">Guide settings for the three speed controllers. <strong>Circulation</strong> (inside) evens out temperature, <strong>intake/exhaust</strong> (bottom/top) exchange air. For biltong you turn all three up.</p>
+    <div class="fanref de-only">
+      <div class="fr">
+        <h4>Reifen</h4>
+        <div class="fl"><span class="k">Umluft</span><span class="v">niedrig</span></div>
+        <div class="fl"><span class="k">Zu-/Abluft</span><span class="v blue">sehr niedrig</span></div>
+      </div>
+      <div class="fr">
+        <h4>Edelschimmel</h4>
+        <div class="fl"><span class="k">Umluft</span><span class="v">sehr niedrig</span></div>
+        <div class="fl"><span class="k">Zu-/Abluft</span><span class="v blue">fast aus</span></div>
+      </div>
+      <div class="fr">
+        <h4>Biltong</h4>
+        <div class="fl"><span class="k">Umluft</span><span class="v">mittel–hoch</span></div>
+        <div class="fl"><span class="k">Zu-/Abluft</span><span class="v blue">hoch</span></div>
+      </div>
+      <div class="fr">
+        <h4>Durchbrennen</h4>
+        <div class="fl"><span class="k">Umluft</span><span class="v">niedrig</span></div>
+        <div class="fl"><span class="k">Zu-/Abluft</span><span class="v blue">aus</span></div>
+      </div>
+    </div>
+    <div class="fanref en-only">
+      <div class="fr">
+        <h4>Aging</h4>
+        <div class="fl"><span class="k">Circulation</span><span class="v">low</span></div>
+        <div class="fl"><span class="k">Intake/exhaust</span><span class="v blue">very low</span></div>
+      </div>
+      <div class="fr">
+        <h4>Noble mould</h4>
+        <div class="fl"><span class="k">Circulation</span><span class="v">very low</span></div>
+        <div class="fl"><span class="k">Intake/exhaust</span><span class="v blue">nearly off</span></div>
+      </div>
+      <div class="fr">
+        <h4>Biltong</h4>
+        <div class="fl"><span class="k">Circulation</span><span class="v">med–high</span></div>
+        <div class="fl"><span class="k">Intake/exhaust</span><span class="v blue">high</span></div>
+      </div>
+      <div class="fr">
+        <h4>Curing rest</h4>
+        <div class="fl"><span class="k">Circulation</span><span class="v">low</span></div>
+        <div class="fl"><span class="k">Intake/exhaust</span><span class="v blue">off</span></div>
+      </div>
+    </div>
+
+    <!-- TROUBLESHOOTING -->
+    <div class="eyebrow de-only">Fehlerfinder</div>
+    <div class="eyebrow en-only">Troubleshooting</div>
+    <h2 class="de-only">Wenn etwas nicht stimmt</h2>
+    <h2 class="en-only">When something's off</h2>
+    <div class="trouble de-only">
+      <div class="thead"><span>Problem</span><span>Ursache</span><span>Lösung</span></div>
+      <div class="trow">
+        <div class="tp">Kondenswasser am Boden</div>
+        <div class="tc">Soll-Temperatur zu hoch oder zu feucht</div>
+        <div class="ts"><b>Temperatur senken</b>, Abluft-Lüfter häufiger laufen lassen, Wasser auswischen</div>
+      </div>
+      <div class="trow">
+        <div class="tp">Grüner / schwarzer Schimmel</div>
+        <div class="tc">Fehlschimmel (nicht das weiße Edelschimmel)</div>
+        <div class="ts">Befallenes wegwerfen, <b>Hygiene + Luftaustausch</b>, ggf. mit Edelschimmel impfen</div>
+      </div>
+      <div class="trow">
+        <div class="tp">Trockenrand (Case Hardening)</div>
+        <div class="tc">Zu trocken oder zu warm — außen härtet, innen feucht</div>
+        <div class="ts"><b>Feuchte erhöhen</b>, langsamer trocknen, Temperatur leicht runter</div>
+      </div>
+      <div class="trow">
+        <div class="tp">Temperatur schwankt stark</div>
+        <div class="tc">Hysterese am ITC-308 zu eng</div>
+        <div class="ts"><b>Hysterese auf 0,5–1 °C</b> stellen, Fühler frei hängen lassen</div>
+      </div>
+      <div class="trow">
+        <div class="tp">Vernebler läuft nicht</div>
+        <div class="tc">IHC-200 falsch eingestellt oder Disc verbraucht</div>
+        <div class="ts">Feuchte-Sollwert &amp; Modus prüfen, Fühler kalibrieren, <b>Disc tauschen</b></div>
+      </div>
+      <div class="trow">
+        <div class="tp">Feuchte zu niedrig trotz Nebler</div>
+        <div class="tc">Zu viel Luftaustausch / Wasser leer</div>
+        <div class="ts">Abluft seltener takten, <b>Wasserbehälter nachfüllen</b>, Tür-Lüftung schließen</div>
+      </div>
+    </div>
+    <div class="trouble en-only">
+      <div class="thead"><span>Problem</span><span>Cause</span><span>Fix</span></div>
+      <div class="trow">
+        <div class="tp">Condensation at the bottom</div>
+        <div class="tc">Set temperature too high or too humid</div>
+        <div class="ts"><b>Lower the temperature</b>, run the exhaust fan more often, wipe out water</div>
+      </div>
+      <div class="trow">
+        <div class="tp">Green / black mould</div>
+        <div class="tc">Off-mould (not the white noble mould)</div>
+        <div class="ts">Discard affected pieces, <b>hygiene + air exchange</b>, inoculate with noble mould</div>
+      </div>
+      <div class="trow">
+        <div class="tp">Dry rim (case hardening)</div>
+        <div class="tc">Too dry or too warm — outside hardens, inside stays wet</div>
+        <div class="ts"><b>Raise humidity</b>, dry more slowly, lower temperature slightly</div>
+      </div>
+      <div class="trow">
+        <div class="tp">Temperature swings a lot</div>
+        <div class="tc">ITC-308 hysteresis set too tight</div>
+        <div class="ts"><b>Set hysteresis to 0.5–1 °C</b>, let the probe hang freely</div>
+      </div>
+      <div class="trow">
+        <div class="tp">Mister not running</div>
+        <div class="tc">IHC-200 misconfigured or disc worn out</div>
+        <div class="ts">Check humidity setpoint &amp; mode, calibrate probe, <b>swap the disc</b></div>
+      </div>
+      <div class="trow">
+        <div class="tp">Humidity too low despite mister</div>
+        <div class="tc">Too much air exchange / water empty</div>
+        <div class="ts">Cycle exhaust less often, <b>refill reservoir</b>, close door vents</div>
+      </div>
+    </div>
+
+    <!-- SICHERHEIT -->
+    <div class="safety">
+      <div class="st de-only">Sicherheit — <span>nicht verhandelbar</span></div>
+      <div class="st en-only">Safety — <span>non-negotiable</span></div>
+      <div class="ssub de-only">Wasser und 230 V in einem Schrank: diese Punkte sind Pflicht.</div>
+      <div class="ssub en-only">Water and 230 V in one cabinet: these points are mandatory.</div>
+      <ul class="de-only">
+        <li><span class="sbox"></span><span><b>FI-Schutzstecker (30 mA)</b> vorgeschaltet — schützt vor Stromschlag</span></li>
+        <li><span class="sbox"></span><span><b>Zugentlastung</b> an jeder Kabeldurchführung / Tülle</span></li>
+        <li><span class="sbox"></span><span><b>230-V-Teil</b> im Zweifel von einer Elektrofachkraft prüfen lassen</span></li>
+        <li><span class="sbox"></span><span><b>Vernebler &amp; Kabel</b> spritzwassergeschützt verlegen</span></li>
+        <li><span class="sbox"></span><span><b>Keramik-Heizung</b> mit Abstand zu Kunststoff &amp; Reifegut</span></li>
+        <li><span class="sbox"></span><span><b>Pökeln nur mit NPS</b> nach Dosierung — Botulismus-Schutz</span></li>
+      </ul>
+      <ul class="en-only">
+        <li><span class="sbox"></span><span><b>RCD plug (30 mA)</b> upstream — protects against shock</span></li>
+        <li><span class="sbox"></span><span><b>Strain relief</b> at every cable gland / grommet</span></li>
+        <li><span class="sbox"></span><span>Have the <b>230 V part</b> checked by an electrician if unsure</span></li>
+        <li><span class="sbox"></span><span>Keep <b>mister &amp; cables</b> away from splashing water</span></li>
+        <li><span class="sbox"></span><span><b>Ceramic heater</b> clear of plastic &amp; product</span></li>
+        <li><span class="sbox"></span><span><b>Cure only with curing salt</b> at correct dosage — botulism protection</span></li>
+      </ul>
+    </div>
+
+    <!-- AUSBAUSTUFE 2 -->
+    <div class="reco" style="background:#241a10;border-color:#5a4a36;">
+      <div class="ic" style="background:#5b6b78;">→</div>
+      <div class="rl de-only" style="color:#e9dcc0;"><strong style="color:#f3ead7;">Ausblick · Ausbaustufe 2:</strong> Die Kammer ist <strong style="color:#e0b487;">ESP-ready</strong>. Ein <strong style="color:#f3ead7;">ESP32</strong> kann später die beiden Inkbird-Regler ersetzen und Temperatur, Feuchte &amp; alle drei Lüfter aus einer Logik steuern — mit <strong>Phasen-Profilen</strong> (Fermentation → Reifen → Edelschimmel), <strong>Datenkurven</strong> und <strong>App-Anbindung</strong>. Trafo, Lüfter, Heizung und Befeuchter bleiben erhalten. Erst die Kammer mit Inkbird kennenlernen, dann smart machen — Klemmen statt fest verlöten erleichtern den späteren Umstieg.</div>
+      <div class="rl en-only" style="color:#e9dcc0;"><strong style="color:#f3ead7;">Outlook · stage 2:</strong> The chamber is <strong style="color:#e0b487;">ESP-ready</strong>. An <strong style="color:#f3ead7;">ESP32</strong> can later replace the two Inkbird controllers and run temperature, humidity &amp; all three fans from one logic — with <strong>phase profiles</strong> (fermentation → aging → noble mould), <strong>data curves</strong> and <strong>app integration</strong>. Transformer, fans, heater and humidifier stay. Get to know the chamber with Inkbird first, then make it smart — terminals instead of soldered joints ease the later switch.</div>
+    </div>
+
+    <div class="closing de-only">Damit hast du eine kleine Reifekammer für ~13–15&nbsp;°C bei ~75&nbsp;% rel. Feuchte — völlig unabhängig von der Außentemperatur.</div>
+    <div class="closing en-only">That gives you a small aging chamber at ~13–15&nbsp;°C and ~75&nbsp;% rel. humidity — entirely independent of the outside temperature.</div>
+
+    <a class="back" href="index.html"><span class="de-only">← Zurück zu Smokebench</span><span class="en-only">← Back to Smokebench</span></a>
+
+  </main>
+
+  <footer>
+    <span class="de-only"><a href="index.html">Start</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+    <span class="en-only"><a href="index.html">Home</a> · <a href="impressum.html">Imprint</a> · <a href="datenschutz.html">Privacy</a></span>
+  </footer>
+
+<script>
+  var T_LO=13, T_HI=15, H_LO=70, H_HI=80;     // Zielfenster
+  var T_LOY=11, T_HIY=17, H_LOY=60, H_HIY=88; // Toleranz (gelb)
+
+  function isDE(){ return document.body.className === 'de'; }
+
+  function updateAmpel(){
+    var t = parseFloat(document.getElementById('aTemp').value);
+    var h = parseFloat(document.getElementById('aHum').value);
+    var box = document.getElementById('ampelBox');
+    var dot = document.getElementById('ampelDot');
+    var st  = document.getElementById('ampelStatus');
+    var ad  = document.getElementById('ampelAdvice');
+    var de = isDE();
+
+    if (isNaN(t) || isNaN(h)){
+      st.textContent = de ? 'Werte eintragen' : 'Enter values';
+      ad.textContent = '';
+      box.style.background = '#f3ead7'; box.style.borderColor = '#c9b48a'; dot.style.background = '#c9b48a';
+      return;
+    }
+
+    var tips = [];
+    if (t > T_HI) tips.push(de ? 'Temperatur runter (kälter stellen)' : 'lower the temperature');
+    else if (t < T_LO) tips.push(de ? 'Temperatur rauf (wärmer stellen)' : 'raise the temperature');
+    if (h > H_HI) tips.push(de ? 'Feuchte runter (weniger vernebeln, lüften)' : 'reduce humidity (less misting, vent)');
+    else if (h < H_LO) tips.push(de ? 'Feuchte rauf (Wasserschale/Vernebler)' : 'raise humidity (water dish / mister)');
+
+    var tOk = (t >= T_LO && t <= T_HI);
+    var hOk = (h >= H_LO && h <= H_HI);
+    var tYel = (t >= T_LOY && t <= T_HIY);
+    var hYel = (h >= H_LOY && h <= H_HIY);
+
+    var color, bg, border, status, advice;
+    if (tOk && hOk){
+      color = '#5a6b4a'; bg = '#eef0e4'; border = '#5a6b4a';
+      status = de ? 'Im Zielfenster ✓' : 'In the target window ✓';
+      advice = de ? 'Klima passt. Werte gelegentlich gegenchecken und stabil halten.'
+                  : 'Climate is on target. Re-check occasionally and keep it stable.';
+    } else if (tYel && hYel){
+      color = '#9a6b2f'; bg = '#f3ead7'; border = '#9a6b2f';
+      status = de ? 'Knapp daneben' : 'Slightly off';
+      advice = (de ? 'Fast da — nachjustieren: ' : 'Almost there — adjust: ') + tips.join(de ? ' · ' : ' · ') + '.';
+    } else {
+      color = '#9a3b1c'; bg = '#f6e3da'; border = '#9a3b1c';
+      status = de ? 'Außerhalb des Fensters' : 'Outside the window';
+      advice = (de ? 'Deutlich daneben: ' : 'Clearly off: ') + tips.join(de ? ' · ' : ' · ') + '.';
+    }
+
+    dot.style.background = color;
+    box.style.background = bg;
+    box.style.borderColor = border;
+    st.style.color = color;
+    st.textContent = status;
+    ad.textContent = advice;
+  }
+
+  function updateVerlust(){
+    var s = parseFloat(document.getElementById('vStart').value);
+    var n = parseFloat(document.getElementById('vNow').value);
+    var z = parseFloat(document.getElementById('vTarget').value);
+    var de = isDE();
+    var lossEl = document.getElementById('vLossPct');
+    var tgEl = document.getElementById('vTargetG');
+    var remEl = document.getElementById('vRemain');
+    var bar = document.getElementById('vBar');
+    var note = document.getElementById('vNote');
+
+    if (isNaN(s) || s <= 0 || isNaN(n) || isNaN(z)){
+      lossEl.textContent = '—'; tgEl.textContent = '—'; remEl.textContent = '—';
+      bar.style.width = '0%'; note.textContent = '';
+      return;
+    }
+    if (n > s) n = s;
+    var loss = (s - n) / s * 100;
+    var targetG = s * (1 - z/100);
+    var remain = Math.max(0, n - targetG);
+
+    lossEl.textContent = loss.toFixed(1);
+    tgEl.textContent = Math.round(targetG);
+    remEl.textContent = Math.round(remain);
+
+    var pct = Math.max(0, Math.min(100, loss / z * 100));
+    bar.style.width = pct.toFixed(0) + '%';
+
+    if (loss >= z){
+      bar.style.background = '#5a6b4a';
+      note.textContent = de ? '✓ Ziel-Verlust erreicht — die Reife sitzt.'
+                            : '✓ Target loss reached — it\u2019s ready.';
+      note.style.color = '#4a5a3a';
+    } else {
+      bar.style.background = '#9a3b1c';
+      note.textContent = de
+        ? 'Noch ' + Math.round(remain) + ' g bis zum Zielgewicht von ' + Math.round(targetG) + ' g (' + z + ' % Verlust).'
+        : 'Still ' + Math.round(remain) + ' g to the target weight of ' + Math.round(targetG) + ' g (' + z + '% loss).';
+      note.style.color = '#6b5a42';
+    }
+  }
+
+  function setLoss(pct, btn){
+    var t = document.getElementById('vTarget');
+    if(t){ t.value = pct; updateVerlust(); }
+    var all = document.querySelectorAll('.preset');
+    all.forEach(function(b){ b.classList.remove('active'); });
+    // alle Buttons mit gleichem data-loss in der sichtbaren Sprache markieren
+    document.querySelectorAll('.preset[data-loss="'+pct+'"]').forEach(function(b){
+      if(b.offsetParent !== null) b.classList.add('active');
+    });
+  }
+  function clearPreset(){
+    document.querySelectorAll('.preset').forEach(function(b){ b.classList.remove('active'); });
+  }
+
+  function loadPhase(t, h){
+    var aT = document.getElementById('aTemp');
+    var aH = document.getElementById('aHum');
+    if(aT && aH){
+      aT.value = t; aH.value = h;
+      updateAmpel();
+      var box = document.getElementById('ampelBox');
+      if(box){
+        box.scrollIntoView({behavior:'smooth', block:'center'});
+        var prev = box.style.boxShadow;
+        box.style.boxShadow = '0 0 0 4px rgba(154,59,28,0.35)';
+        setTimeout(function(){ box.style.boxShadow = prev; }, 1100);
+      }
+    }
+  }
+
+  function setLang(l){
+    document.body.className = l;
+    document.documentElement.lang = l;
+    document.querySelectorAll('.lang button').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-set')===l);
+    });
+    try{ localStorage.setItem('sb_legal_lang', l); }catch(e){}
+    updateAmpel(); updateVerlust();
+  }
+
+  (function(){
+    var l = 'de';
+    try{ l = localStorage.getItem('sb_legal_lang') || 'de'; }catch(e){}
+    setLang(l);
+  })();
+</script>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#241a10"/>
+    <rect x="34" y="22" width="32" height="56" rx="4" fill="#f3ead7" stroke="#d6603a" stroke-width="2"/>
+    <line x1="40" y1="34" x2="60" y2="34" stroke="#9a3b1c" stroke-width="2"/>
+    <ellipse cx="46" cy="52" rx="4" ry="10" fill="#b8694a"/>
+    <ellipse cx="56" cy="50" rx="3.5" ry="8" fill="#a85c40"/>
+  </svg>
+</template>
+</body>
+</html>
