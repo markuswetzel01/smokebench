@@ -44,7 +44,7 @@
 <div style="min-height:100vh;background:#f3ead7;background-image:repeating-linear-gradient(0deg,rgba(140,90,40,0.04) 0 1px,transparent 1px 32px);padding-bottom:80px;">
 
   <!-- MASTHEAD -->
-  <header style="background:#2a1a0e;padding:36px 48px;position:relative;z-index:50;">
+  <header style="background:#2a1a0e;padding:28px 48px;position:relative;z-index:50;">
     <div style="position:absolute;inset:0;overflow:hidden;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.025) 0 1px,transparent 1px 10px);pointer-events:none;"></div>
     <div style="position:relative;display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;gap:16px;">
       <div style="display:flex;align-items:center;gap:20px;">
@@ -56,37 +56,40 @@
         <div style="font-family:'Spectral',serif;font-style:italic;font-size:12px;color:#8a6f4e;margin-top:3px;">{{ L.deviceNote }}</div>
         </div>
       </div>
-      <div style="display:flex;align-items:center;gap:16px;flex-shrink:0;">
-        <div style="display:flex;flex-direction:column;gap:7px;">
-          <button onClick="{{ onToggleLang }}" title="{{ L.langTitle }}" style="font-family:'Spectral',serif;font-size:12px;font-weight:600;letter-spacing:0.08em;cursor:pointer;border-radius:3px;padding:6px 14px;border:1.5px solid #c9a87a;background:transparent;color:#c9a87a;white-space:nowrap;align-self:flex-end;">🌐 {{ L.langBtn }}</button>
-          <button onClick="{{ onNewRecipe }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 14px;border:1.5px solid #9a3b1c;background:#9a3b1c;color:#f3ead7;white-space:nowrap;font-weight:600;">{{ L.newRecipe }}</button>
-          <button style="{{ listButtonStyle }}" onClick="{{ onToggleShoppingList }}">{{ listButtonLabel }}</button>
-          <div style="position:relative;">
-            <button style="{{ toolsButtonStyle }}" onClick="{{ onToggleTools }}">{{ L.tools }} ▾</button>
-            <sc-if value="{{ showTools }}" hint-placeholder-val="{{ false }}">
-              <div style="position:absolute;top:calc(100% + 6px);right:0;z-index:60;background:#f3ead7;border:1.5px solid #6b5a42;border-radius:6px;box-shadow:0 12px 32px -8px rgba(0,0,0,0.45);padding:10px;width:230px;display:flex;flex-direction:column;gap:5px;">
-                <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#9a8a72;padding:2px 4px 0;">{{ L.toolsHead }}</div>
-                <button onClick="{{ onToggleNPS }}" style="text-align:left;font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:8px 10px;border:1px solid #c9b48a;background:#faf5e8;color:#3a2a1a;" style-hover="background:#ede0c5;">{{ L.nps }}</button>
-                <button onClick="{{ onToggleDorr }}" style="text-align:left;font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:8px 10px;border:1px solid #c9b48a;background:#faf5e8;color:#3a2a1a;" style-hover="background:#ede0c5;">{{ L.dorr }}</button>
-                <button onClick="{{ onToggleConv }}" style="text-align:left;font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:8px 10px;border:1px solid #c9b48a;background:#faf5e8;color:#3a2a1a;" style-hover="background:#ede0c5;">{{ L.conv }}</button>
-                <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#9a8a72;padding:6px 4px 0;border-top:1px dashed #c9b48a;margin-top:2px;">{{ L.backupHead }}</div>
-                <div style="display:flex;gap:6px;">
-                  <button onClick="{{ onExportData }}" title="{{ L.saveTitle }}" style="flex:1;font-family:'Spectral',serif;font-size:12px;cursor:pointer;border-radius:3px;padding:7px 8px;border:1px solid #6b5a42;background:#faf5e8;color:#3a2a1a;" style-hover="background:#ede0c5;">{{ L.save }}</button>
-                  <label title="{{ L.loadTitle }}" style="flex:1;font-family:'Spectral',serif;font-size:12px;cursor:pointer;border-radius:3px;padding:7px 8px;border:1px solid #6b5a42;background:#faf5e8;color:#3a2a1a;white-space:nowrap;text-align:center;">{{ L.load }}<input type="file" accept="application/json,.json" onChange="{{ onImportFile }}" style="display:none;" /></label>
-                </div>
-                <div style="font-family:'Spectral',serif;font-style:italic;font-size:10.5px;color:#8a6f4e;padding:2px 4px;line-height:1.4;">{{ L.backupHint }}</div>
-                <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#9a8a72;padding:6px 4px 0;border-top:1px dashed #c9b48a;margin-top:2px;">{{ L.feedbackHead }}</div>
-                <a href="{{ feedbackHref }}" target="_blank" rel="noopener" style="display:block;text-align:left;text-decoration:none;font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:8px 10px;border:1px solid #c9b48a;background:#faf5e8;color:#3a2a1a;" style-hover="background:#ede0c5;">{{ L.feedback }}</a>
-              </div>
-            </sc-if>
-          </div>
-          <button onClick="{{ onOpenChamber }}" title="{{ L.chamberHint }}" style="text-align:left;font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 14px;border:1.5px solid #6b8a4a;background:#eef2e3;color:#3d5226;white-space:nowrap;font-weight:600;display:flex;align-items:center;gap:7px;" style-hover="background:#e3ebd2;">
-            <span aria-hidden="true" style="font-size:14px;line-height:1;">🏛️</span>{{ L.chamber }}
-          </button>
-        </div>
-      </div>
     </div>
   </header>
+
+  <!-- STICKY ACTION BAR (bleibt beim Scrollen oben) -->
+  <div style="position:sticky;top:0;z-index:90;background:#2a1a0e;border-bottom:1.5px solid #6b5a42;box-shadow:0 5px 16px -8px rgba(0,0,0,0.5);">
+    <div style="max-width:1200px;margin:0 auto;padding:8px 48px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:0;font-family:'DM Serif Display',serif;font-size:19px;letter-spacing:0.02em;color:#f3ead7;white-space:nowrap;">Smoke<span style="color:#d6603a;">bench</span></div>
+      <button onClick="{{ onToggleLang }}" title="{{ L.langTitle }}" style="font-family:'Spectral',serif;font-size:12px;font-weight:600;letter-spacing:0.08em;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #c9a87a;background:transparent;color:#c9a87a;white-space:nowrap;">🌐 {{ L.langBtn }}</button>
+      <button onClick="{{ onNewRecipe }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #9a3b1c;background:#9a3b1c;color:#f3ead7;white-space:nowrap;font-weight:600;">{{ L.newRecipe }}</button>
+      <button style="{{ listButtonStyle }}" onClick="{{ onToggleShoppingList }}">{{ listButtonLabel }}</button>
+      <div style="position:relative;">
+        <button style="{{ toolsButtonStyle }}" onClick="{{ onToggleTools }}">{{ L.tools }} ▾</button>
+        <sc-if value="{{ showTools }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;top:calc(100% + 6px);right:0;z-index:60;background:#f3ead7;border:1.5px solid #6b5a42;border-radius:6px;box-shadow:0 12px 32px -8px rgba(0,0,0,0.45);padding:10px;width:230px;display:flex;flex-direction:column;gap:5px;">
+            <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#9a8a72;padding:2px 4px 0;">{{ L.toolsHead }}</div>
+            <button onClick="{{ onToggleNPS }}" style="text-align:left;font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:8px 10px;border:1px solid #c9b48a;background:#faf5e8;color:#3a2a1a;" style-hover="background:#ede0c5;">{{ L.nps }}</button>
+            <button onClick="{{ onToggleDorr }}" style="text-align:left;font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:8px 10px;border:1px solid #c9b48a;background:#faf5e8;color:#3a2a1a;" style-hover="background:#ede0c5;">{{ L.dorr }}</button>
+            <button onClick="{{ onToggleConv }}" style="text-align:left;font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:8px 10px;border:1px solid #c9b48a;background:#faf5e8;color:#3a2a1a;" style-hover="background:#ede0c5;">{{ L.conv }}</button>
+            <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#9a8a72;padding:6px 4px 0;border-top:1px dashed #c9b48a;margin-top:2px;">{{ L.backupHead }}</div>
+            <div style="display:flex;gap:6px;">
+              <button onClick="{{ onExportData }}" title="{{ L.saveTitle }}" style="flex:1;font-family:'Spectral',serif;font-size:12px;cursor:pointer;border-radius:3px;padding:7px 8px;border:1px solid #6b5a42;background:#faf5e8;color:#3a2a1a;" style-hover="background:#ede0c5;">{{ L.save }}</button>
+              <label title="{{ L.loadTitle }}" style="flex:1;font-family:'Spectral',serif;font-size:12px;cursor:pointer;border-radius:3px;padding:7px 8px;border:1px solid #6b5a42;background:#faf5e8;color:#3a2a1a;white-space:nowrap;text-align:center;">{{ L.load }}<input type="file" accept="application/json,.json" onChange="{{ onImportFile }}" style="display:none;" /></label>
+            </div>
+            <div style="font-family:'Spectral',serif;font-style:italic;font-size:10.5px;color:#8a6f4e;padding:2px 4px;line-height:1.4;">{{ L.backupHint }}</div>
+            <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#9a8a72;padding:6px 4px 0;border-top:1px dashed #c9b48a;margin-top:2px;">{{ L.feedbackHead }}</div>
+            <a href="{{ feedbackHref }}" target="_blank" rel="noopener" style="display:block;text-align:left;text-decoration:none;font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:8px 10px;border:1px solid #c9b48a;background:#faf5e8;color:#3a2a1a;" style-hover="background:#ede0c5;">{{ L.feedback }}</a>
+          </div>
+        </sc-if>
+      </div>
+      <button onClick="{{ onOpenChamber }}" title="{{ L.chamberHint }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #6b8a4a;background:#eef2e3;color:#3d5226;white-space:nowrap;font-weight:600;display:flex;align-items:center;gap:7px;" style-hover="background:#e3ebd2;">
+        <span aria-hidden="true" style="font-size:14px;line-height:1;">🏛️</span>{{ L.chamber }}
+      </button>
+    </div>
+  </div>
 
   <!-- DATEN-SICHERUNG (sichtbar, sobald eigene Daten existieren) -->
   <sc-if value="{{ hasUserData }}" hint-placeholder-val="{{ false }}">
@@ -325,7 +328,7 @@
   </sc-if>
 
   <!-- STICKY FILTER BAR -->
-  <div style="position:sticky;top:0;z-index:20;background:#ede0c5;border-bottom:2px solid #c9b48a;padding:10px 48px;">
+  <div style="position:sticky;top:54px;z-index:80;background:#ede0c5;border-bottom:2px solid #c9b48a;padding:10px 48px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
       <div style="display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;flex-wrap:nowrap;">
         <sc-for list="{{ tabs }}" as="tab" hint-placeholder-count="9">
@@ -412,7 +415,126 @@
           </div>
         </sc-if>
 
-        <!-- META STRIP -->
+        <!-- INFOGRAFIK (Grundlagen-Guides, zweisprachig aus Daten) -->
+        <sc-if value="{{ selShowGenericGuide }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#1c130b;border:1px solid #3a2a1a;border-radius:10px;padding:30px 32px;margin-bottom:30px;">
+            <div style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#d98a3d;">{{ selGuide.eyebrow }}</div>
+            <div style="font-family:'DM Serif Display',serif;font-size:32px;line-height:1.08;color:#f3ead7;margin-top:6px;">{{ selGuide.title }}</div>
+            <div style="font-family:'Spectral',serif;font-style:italic;font-size:15px;color:#bfae8e;margin-top:8px;line-height:1.55;">{{ selGuide.subtitle }}</div>
+            <sc-if value="{{ selGuide.hasPhoto }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ selGuide.photo }}" loading="lazy" decoding="async" style="width:100%;max-height:300px;object-fit:cover;border-radius:8px;border:1px solid #3d2c1a;margin-top:18px;display:block;" />
+            </sc-if>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px;">
+              <sc-for list="{{ selGuide.steps }}" as="s" hint-placeholder-count="3">
+                <div style="background:#241910;border:1px solid #3d2c1a;border-radius:8px;padding:17px 18px 15px;">
+                  <div style="display:flex;align-items:center;gap:11px;margin-bottom:9px;">
+                    <span style="flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#d98a3d;color:#1c130b;font-family:'DM Serif Display',serif;font-size:16px;display:flex;align-items:center;justify-content:center;">{{ s.n }}</span>
+                    <span style="font-family:'Spectral',serif;font-weight:600;font-size:15px;color:#f3ead7;line-height:1.25;">{{ s.label }}</span>
+                  </div>
+                  <p style="margin:0 0 10px;font-family:'Spectral',serif;font-size:13.5px;line-height:1.6;color:#cbb795;">{{ s.text }}</p>
+                  <sc-if value="{{ s.hasBullets }}" hint-placeholder-val="{{ false }}">
+                    <div style="display:flex;flex-direction:column;gap:6px;">
+                      <sc-for list="{{ s.bullets }}" as="b" hint-placeholder-count="2">
+                        <div style="display:flex;gap:9px;font-family:'Spectral',serif;font-size:12.5px;color:#a8946f;line-height:1.5;">
+                          <span style="color:#d98a3d;flex-shrink:0;">▸</span><span>{{ b }}</span>
+                        </div>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+            <sc-if value="{{ selGuide.hasTips }}" hint-placeholder-val="{{ false }}">
+              <div style="margin-top:20px;border:1px solid #6b4a22;border-radius:8px;padding:15px 18px;background:#241910;">
+                <div style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#d98a3d;margin-bottom:9px;">{{ selGuide.tipsLabel }}</div>
+                <sc-for list="{{ selGuide.tips }}" as="t" hint-placeholder-count="2">
+                  <div style="display:flex;gap:10px;font-family:'Spectral',serif;font-size:13.5px;color:#cbb795;line-height:1.6;margin-bottom:7px;">
+                    <span style="color:#d98a3d;flex-shrink:0;">★</span><span>{{ t }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+            <div style="margin-top:20px;padding-top:15px;border-top:1px solid #3a2a1a;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+              <span style="font-family:'DM Serif Display',serif;font-size:17px;letter-spacing:0.03em;color:#f3ead7;">Smoke<span style="color:#d98a3d;">Bench</span></span>
+              <span style="font-family:'Spectral',serif;font-style:italic;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#8a7355;">{{ selGuide.tagline }}</span>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- INFOGRAFIK SPEZIAL: Räucherholz-Guide (4-Spalten + Intensitäts-Flammen) -->
+        <sc-if value="{{ selIsWoodGuide }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#1c130b;border:1px solid #3a2a1a;border-radius:10px;padding:30px 32px;margin-bottom:30px;">
+            <div style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#d98a3d;">{{ woodGuide.eyebrow }}</div>
+            <div style="font-family:'DM Serif Display',serif;font-size:32px;line-height:1.08;color:#f3ead7;margin-top:6px;">{{ woodGuide.title }}</div>
+            <div style="font-family:'Spectral',serif;font-style:italic;font-size:15px;color:#bfae8e;margin-top:8px;line-height:1.55;">{{ woodGuide.subtitle }}</div>
+            <sc-if value="{{ woodGuide.hasPhoto }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ woodGuide.photo }}" loading="lazy" decoding="async" style="width:100%;max-height:300px;object-fit:cover;border-radius:8px;border:1px solid #3d2c1a;margin-top:18px;display:block;" />
+            </sc-if>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:24px;">
+              <sc-for list="{{ woodGuide.cols }}" as="wd" hint-placeholder-count="4">
+                <div style="background:#241910;border:1px solid #3d2c1a;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;">
+                  <sc-if value="{{ wd.hasPhoto }}" hint-placeholder-val="{{ false }}">
+                    <img src="{{ wd.photo }}" loading="lazy" decoding="async" style="width:100%;height:110px;object-fit:cover;display:block;" />
+                  </sc-if>
+                  <div style="padding:16px 16px 18px;display:flex;flex-direction:column;flex:1;">
+                    <div style="display:flex;align-items:center;gap:10px;">
+                      <span style="font-size:22px;line-height:1;">{{ wd.emoji }}</span>
+                      <span style="font-family:'DM Serif Display',serif;font-size:21px;color:#f3ead7;">{{ wd.name }}</span>
+                    </div>
+                    <p style="margin:11px 0 0;font-family:'Spectral',serif;font-size:13px;line-height:1.55;color:#cbb795;">{{ wd.desc }}</p>
+                    <div style="margin-top:13px;font-family:'Spectral',serif;font-size:10px;letter-spacing:0.13em;text-transform:uppercase;color:#d98a3d;">{{ woodGuide.profileLabel }}</div>
+                    <div style="margin-top:4px;font-family:'Spectral',serif;font-size:12.5px;color:#e6d6ba;">{{ wd.profile }}</div>
+                    <div style="margin-top:13px;font-family:'Spectral',serif;font-size:10px;letter-spacing:0.13em;text-transform:uppercase;color:#7fa05a;">{{ woodGuide.idealLabel }}</div>
+                    <div style="margin-top:5px;display:flex;flex-direction:column;gap:4px;">
+                      <sc-for list="{{ wd.ideal }}" as="it" hint-placeholder-count="3">
+                        <div style="display:flex;gap:7px;font-family:'Spectral',serif;font-size:12px;color:#a8946f;line-height:1.4;">
+                          <span style="color:#7fa05a;flex-shrink:0;">›</span><span>{{ it }}</span>
+                        </div>
+                      </sc-for>
+                    </div>
+                    <div style="margin-top:auto;padding-top:14px;">
+                      <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.13em;text-transform:uppercase;color:#9a8a72;margin-bottom:4px;">{{ woodGuide.intensityLabel }}</div>
+                      <div style="display:flex;gap:3px;">
+                        <sc-for list="{{ wd.flames }}" as="fl" hint-placeholder-count="5">
+                          <span style="font-size:15px;line-height:1;opacity:{{ fl.opacity }};filter:{{ fl.filter }};">🔥</span>
+                        </sc-for>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin-top:20px;">
+              <div style="border:1px solid #6b2a22;border-radius:8px;padding:16px 18px;background:#241310;">
+                <div style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#d9603d;margin-bottom:11px;">✕ {{ woodGuide.avoidLabel }}</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;">
+                  <sc-for list="{{ woodGuide.avoid }}" as="av" hint-placeholder-count="4">
+                    <div>
+                      <div style="font-family:'Spectral',serif;font-weight:600;font-size:12.5px;color:#e6c2b5;">{{ av.t }}</div>
+                      <div style="font-family:'Spectral',serif;font-size:11.5px;color:#a8857c;line-height:1.45;margin-top:2px;">{{ av.d }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+              <div style="border:1px solid #4a6b2a;border-radius:8px;padding:16px 18px;background:#1a2410;">
+                <div style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7fa05a;margin-bottom:9px;">🌿 {{ woodGuide.combineLabel }}</div>
+                <p style="margin:0;font-family:'Spectral',serif;font-size:13px;line-height:1.6;color:#c3d3a8;">{{ woodGuide.combineText }}</p>
+              </div>
+            </div>
+
+            <div style="margin-top:16px;border:1px solid #6b4a22;border-radius:8px;padding:14px 18px;background:#241910;">
+              <span style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#d98a3d;">💡 {{ woodGuide.tipLabel }}: </span>
+              <span style="font-family:'Spectral',serif;font-size:13px;color:#cbb795;line-height:1.6;">{{ woodGuide.tipText }}</span>
+            </div>
+
+            <div style="margin-top:20px;padding-top:15px;border-top:1px solid #3a2a1a;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+              <span style="font-family:'DM Serif Display',serif;font-size:17px;letter-spacing:0.03em;color:#f3ead7;">Smoke<span style="color:#d98a3d;">Bench</span></span>
+              <span style="font-family:'Spectral',serif;font-style:italic;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#8a7355;">{{ woodGuide.tagline }}</span>
+            </div>
+          </div>
+        </sc-if>
         <div style="display:flex;flex-wrap:wrap;border:1.5px solid #c9b48a;border-radius:4px;overflow:hidden;margin-bottom:32px;">
           <div style="flex:1;min-width:120px;padding:12px 16px;border-right:1px solid #c9b48a;">
             <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#9a8a72;">{{ L.totalTime }}</div>
@@ -476,6 +598,7 @@
         </sc-if>
 
         <!-- PHASES TIMELINE -->
+        <sc-if value="{{ selShowStandard }}" hint-placeholder-val="{{ true }}">
         <section style="margin-bottom:32px;">
           <h2 style="font-family:'DM Serif Display',serif;font-size:26px;color:#3a2a1a;margin:0 0 18px;padding-bottom:8px;border-bottom:2px solid #c9b48a;">{{ L.method }}</h2>
           <sc-for list="{{ selPhases }}" as="phase" hint-placeholder-count="3">
@@ -511,6 +634,7 @@
             </div>
           </sc-for>
         </section>
+        </sc-if>
 
         <!-- TIPS -->
         <sc-if value="{{ selHasTips }}" hint-placeholder-val="{{ false }}">
@@ -1171,7 +1295,17 @@ class Component extends DCLogic {
       const layered = overrides[r.id] ? { ...r, ...overrides[r.id] } : r;
       return (lang === 'en') ? { ...layered, _deOnly: true } : layered;
     });
-    return [...base, ...(userRecipes || [])].map(r => ({ ...r, image: (images || {})[r.id] || baked[r.id] || r.image || null }));
+    const withDirect = [...base, ...(userRecipes || [])].map(r => {
+      const enImg = (lang === 'en') ? ((images || {})[r.id + '__en'] || baked[r.id + '__en']) : null;
+      return { ...r, image: enImg || (images || {})[r.id] || baked[r.id] || r.image || null };
+    });
+    // Gleichnamige Rezepte teilen sich ein Bild: hat eine Variante ein Foto,
+    // bekommen alle gleichnamigen (z. B. „Beer Can Chicken" Heiß & Grill) dasselbe.
+    const nameToImg = {};
+    for (const r of withDirect) {
+      if (r.image) { const key = (r.name || '').trim().toLowerCase(); if (key && !nameToImg[key]) nameToImg[key] = r.image; }
+    }
+    return withDirect.map(r => r.image ? r : { ...r, image: nameToImg[(r.name || '').trim().toLowerCase()] || null });
   }
 
   _blankDraft(method) {
@@ -1795,6 +1929,96 @@ class Component extends DCLogic {
       }),
     } : null;
 
+    // ---- Grundlagen-Guides als zweisprachige HTML-Infografik (statt eingebackenem Bild) ----
+    const GUIDE_IDS = ['g-abhaengen','g-wasserschale','g-minion','g-holz','g-kaltrauch','g-sicherheit'];
+    const selIsGuide_ = !!(sel && GUIDE_IDS.indexOf(sel.id) >= 0);
+    const isEn_ = this.state.lang === 'en';
+    const selGuide_ = selIsGuide_ ? {
+      eyebrow: isEn_ ? 'Basics Guide' : 'Grundlagen-Guide',
+      title: sel.name,
+      subtitle: sel.blurb || '',
+      steps: (sel.phases || []).map((p, i) => ({ n: i + 1, label: p.label, text: p.text, bullets: p.bullets || [], hasBullets: !!(p.bullets && p.bullets.length > 0) })),
+      tips: sel.tips || [],
+      hasTips: !!(sel.tips && sel.tips.length > 0),
+      tipsLabel: isEn_ ? 'Tips' : 'Tipps',
+      tagline: isEn_ ? 'Smoke · Know · Enjoy' : 'Rauch · Wissen · Genuss',
+    } : null;
+
+    // optionales textfreies Deko-Foto pro Guide (Schlüssel "<id>__photo")
+    const bakedG_ = (typeof window !== 'undefined' && window.WSM_IMAGES) ? window.WSM_IMAGES : {};
+    if (selGuide_) { const ph = bakedG_[sel.id + '__photo']; selGuide_.photo = ph || ''; selGuide_.hasPhoto = !!ph; }
+
+    // Spezial-Layout: Räucherholz-Guide als 4-Spalten-Tabelle mit Intensitäts-Flammen
+    const selIsWoodGuide_ = !!(sel && sel.id === 'g-holz');
+    const woodGuide_ = selIsWoodGuide_ ? (() => {
+      const WOODS = [
+        { key:'cherry', emoji:'🍒', de:'Kirsche', en:'Cherry',
+          descDe:'Mild, leicht süßlich und fruchtig. Sorgt für eine schöne rötliche Farbe und ein feines Aroma.',
+          descEn:'Mild, slightly sweet and fruity. Gives a nice reddish color and a fine aroma.',
+          profDe:['Fruchtig','Mild','Leicht süßlich'], profEn:['Fruity','Mild','Lightly sweet'],
+          idDe:['Schwein (Spare Ribs, Schulter)','Geflügel (Hähnchen, Pute)','Lachs & Fisch','Wild'],
+          idEn:['Pork (spare ribs, shoulder)','Poultry (chicken, turkey)','Salmon & fish','Game'], int:2 },
+        { key:'beech', emoji:'🌿', de:'Buche', en:'Beech',
+          descDe:'Mild und ausgewogen. Ein echter Allrounder mit angenehmem, feinem Rauch.',
+          descEn:'Mild and balanced. A true all-rounder with a pleasant, fine smoke.',
+          profDe:['Mild','Neutral','Ausgewogen'], profEn:['Mild','Neutral','Balanced'],
+          idDe:['Rind (Brisket, Roastbeef)','Schwein (Pulled Pork, Kotelett)','Geflügel','Gemüse & Käse'],
+          idEn:['Beef (brisket, roast beef)','Pork (pulled pork, chops)','Poultry','Vegetables & cheese'], int:2 },
+        { key:'hickory', emoji:'🪵', de:'Hickory', en:'Hickory',
+          descDe:'Kräftig, würzig und klassisch. Das typisch amerikanische BBQ-Holz für intensives Raucharoma.',
+          descEn:'Bold, spicy and classic. The quintessential American BBQ wood for intense smoke flavor.',
+          profDe:['Kräftig','Würzig','Deftig'], profEn:['Bold','Spicy','Hearty'],
+          idDe:['Rind (Brisket, Short Ribs)','Schwein (Rippchen, Bauch)','Wild','Lamm'],
+          idEn:['Beef (brisket, short ribs)','Pork (ribs, belly)','Game','Lamb'], int:4 },
+        { key:'apple', emoji:'🍎', de:'Apfel', en:'Apple',
+          descDe:'Mild, fruchtig und leicht süß. Ideal für ein sanftes Raucharoma mit feiner Fruchtnote.',
+          descEn:'Mild, fruity and lightly sweet. Ideal for a gentle smoke aroma with a fine fruit note.',
+          profDe:['Fruchtig','Mild','Leicht süßlich'], profEn:['Fruity','Mild','Lightly sweet'],
+          idDe:['Schwein (Lende, Filet)','Geflügel','Fisch','Desserts & Früchte'],
+          idEn:['Pork (loin, fillet)','Poultry','Fish','Desserts & fruit'], int:2 },
+      ];
+      const cols = WOODS.map(wd => {
+        const photo = bakedG_['wood-' + wd.key];
+        return {
+          name: isEn_ ? wd.en : wd.de,
+          emoji: wd.emoji,
+          photo: photo || '', hasPhoto: !!photo,
+          desc: isEn_ ? wd.descEn : wd.descDe,
+          profile: (isEn_ ? wd.profEn : wd.profDe).join(' · '),
+          ideal: isEn_ ? wd.idEn : wd.idDe,
+          flames: [1,2,3,4,5].map(n => ({ opacity: n <= wd.int ? '1' : '0.22', filter: n <= wd.int ? 'none' : 'grayscale(1)' })),
+        };
+      });
+      const avoid = isEn_ ? [
+        { t:'Resinous woods', d:'e.g. pine, spruce, fir — produce soot and a bitter taste.' },
+        { t:'Treated woods', d:'Lacquers, paints, stains or pressure-treated wood are harmful to health.' },
+        { t:'Driftwood & scrap', d:'Unknown origin, possibly contaminated with pollutants.' },
+        { t:'Damp or mouldy wood', d:'Produces lots of smoke, little aroma and can be unhealthy.' },
+      ] : [
+        { t:'Harzhaltige Hölzer', d:'z. B. Kiefer, Fichte, Tanne — erzeugen Ruß und einen bitteren Geschmack.' },
+        { t:'Behandelte Hölzer', d:'Lacke, Farben, Lasuren oder druckimprägniertes Holz sind gesundheitsschädlich.' },
+        { t:'Treibholz & Sperrmüll', d:'Unbekannte Herkunft, möglicherweise mit Schadstoffen belastet.' },
+        { t:'Feuchtes/schimmeliges Holz', d:'Erzeugt viel Rauch, wenig Aroma und kann ungesund sein.' },
+      ];
+      return {
+        eyebrow: isEn_ ? 'Basics Guide' : 'Grundlagen-Guide',
+        title: isEn_ ? 'Smoking Wood Guide' : 'Räucherholz-Guide',
+        subtitle: isEn_ ? 'Which wood suits which dish — and which you should avoid.' : 'Welches Holz passt zu welchem Gericht – und welches du meiden solltest.',
+        photo: bakedG_['g-holz__photo'] || '', hasPhoto: !!bakedG_['g-holz__photo'],
+        cols,
+        profileLabel: isEn_ ? 'Flavor profile' : 'Geschmacksprofil',
+        idealLabel: isEn_ ? 'Ideal for' : 'Ideal für',
+        intensityLabel: isEn_ ? 'Intensity' : 'Intensität',
+        avoidLabel: isEn_ ? 'Avoid these' : 'Meiden solltest du',
+        avoid,
+        combineLabel: isEn_ ? 'Combine for more aroma' : 'Kombiniere für mehr Aroma',
+        combineText: isEn_ ? 'Mix e.g. hickory for power with apple for a light sweetness or cherry for color and fruit.' : 'Mische z. B. Hickory für Kraft mit Apfel für eine leichte Süße oder Kirsche für Farbe und Frucht.',
+        tipLabel: isEn_ ? 'Tip' : 'Tipp',
+        tipText: isEn_ ? 'Use only untreated, natural wood. No paints, lacquers or chemically treated woods!' : 'Verwende nur naturbelassenes, unbehandeltes Holz. Keine Farben, Lacke oder chemisch behandelte Hölzer!',
+        tagline: isEn_ ? 'Smoke · Know · Enjoy' : 'Rauch · Wissen · Genuss',
+      };
+    })() : null;
+
     const w = parseFloat(npsWeight) || 0;
     const fmt1 = v => (v > 0 ? v.toFixed(1) : '—');
     const tb = (on) => ({ fontFamily:"'Spectral',serif", fontSize:'13px', cursor:'pointer', borderRadius:'3px', padding:'7px 14px', border:'1.5px solid #9a7a50', background:on?'#9a7a50':'transparent', color:on?'#2a1a0e':'#c9a87a', whiteSpace:'nowrap' });
@@ -1931,7 +2155,13 @@ class Component extends DCLogic {
       selWoodLabel:      D.woodLabel(sel ? sel.method : ''),
       selHasCore:        sel ? !!sel.core : false,
       selHasIngredients: sel ? !!(sel.ingredients && sel.ingredients.length > 0) : false,
-      selHasTips:        sel ? !!(sel.tips && sel.tips.length > 0) : false,
+      selHasTips:        sel ? (!!(sel.tips && sel.tips.length > 0) && !selIsGuide_) : false,
+      selIsGuide:        selIsGuide_,
+      selShowGenericGuide: selIsGuide_ && !selIsWoodGuide_,
+      selIsWoodGuide:    selIsWoodGuide_,
+      woodGuide:         woodGuide_ || {},
+      selGuide:          selGuide_ || {},
+      selShowStandard:   !selIsGuide_,
       selHasTables:      sel ? !!(sel.tables && sel.tables.length > 0) : false,
       selTables: sel ? (sel.tables || []).map(t => ({
         ...t,
@@ -1949,9 +2179,9 @@ class Component extends DCLogic {
       onAddToList: () => this._addToList(),
       onPrint: () => this._printRecipe(),
       // ---- Bild & Bearbeiten im Detail ----
-      selHasImage: !!(sel && sel.image), selImage: (sel && sel.image) ? sel.image : 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+      selHasImage: !!(sel && sel.image) && !selIsGuide_, selImage: (sel && sel.image) ? sel.image : 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
       onSelImageClick: () => sel && sel.image && this._openLightbox(sel.image),
-      lightboxImage: lightboxImage || '', lightboxOpen: !!lightboxImage,
+      lightboxImage: lightboxImage || 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', lightboxOpen: !!lightboxImage,
       onCloseLightbox: () => this._closeLightbox(),
       selIsUser: !!(sel && sel.userCreated), selIsEdited: !!(sel && !sel.userCreated && overrides[sel.id]),
       selDeOnly: !!(selR && selR._deOnly),
@@ -1972,7 +2202,7 @@ class Component extends DCLogic {
       draftName: draft.name, draftCat: draft.cat, draftBlurb: draft.blurb,
       draftTime: draft.time, draftPit: draft.pit, draftCore: draft.core, draftWood: draft.wood, draftYield: draft.yield,
       draftTipsText: draft.tipsText,
-      draftImage: draft.image || '', hasDraftImage: !!draft.image, noDraftImage: !draft.image,
+      draftImage: draft.image || 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', hasDraftImage: !!draft.image, noDraftImage: !draft.image,
       draftIngredients, draftPhases, draftDiffOptions,
       onDraftName: e => this._setDraft('name', e.target.value),
       onDraftCat: e => this._setDraft('cat', e.target.value),
