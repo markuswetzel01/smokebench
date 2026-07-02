@@ -1989,6 +1989,246 @@
       </div>
     </div>
 
+    <!-- HYGROMETER-KALIBRIERUNG (SALZTEST) -->
+    <div class="eyebrow de-only">Kalibrierung · Salztest</div>
+    <div class="eyebrow en-only">Calibration · salt test</div>
+    <h2 class="de-only">Trau keinem Fühler ungeprüft</h2>
+    <h2 class="en-only">Don't trust a sensor unverified</h2>
+    <p class="body de-only">Die ganze Regelung hängt an der Genauigkeit deiner Feuchte-Fühler — und billige Sensoren liegen gern <strong>5–10&nbsp;%</strong> daneben. Der Salztest zeigt dir die Abweichung mit Hausmitteln: Eine gesättigte Kochsalzlösung erzeugt in einem geschlossenen Behälter immer <strong>exakt 75&nbsp;% relative Feuchte</strong>.</p>
+    <p class="body en-only">Your entire control loop depends on the accuracy of the humidity sensors — and cheap sensors are often <strong>5–10&nbsp;%</strong> off. The salt test reveals the deviation with household items: a saturated table-salt solution always creates <strong>exactly 75&nbsp;% relative humidity</strong> in a sealed container.</p>
+    <div class="checks">
+      <div class="check">
+        <div class="num" style="background:#9a3b1c;">1</div>
+        <div>
+          <h4 style="color:#9a3b1c;" class="de-only">Salzbrei anrühren</h4>
+          <h4 style="color:#9a3b1c;" class="en-only">Mix the salt slurry</h4>
+          <p class="de-only">Einen Schnapsbecher mit Kochsalz füllen und nur so viel Wasser zugeben, dass ein <strong>feuchter Brei</strong> entsteht — kein flüssiges Salzwasser.</p>
+          <p class="en-only">Fill a shot glass with table salt and add just enough water to make a <strong>damp slurry</strong> — not liquid brine.</p>
+        </div>
+      </div>
+      <div class="check">
+        <div class="num" style="background:#5b6b78;">2</div>
+        <div>
+          <h4 style="color:#41525e;" class="de-only">Einschließen &amp; warten</h4>
+          <h4 style="color:#41525e;" class="en-only">Seal &amp; wait</h4>
+          <p class="de-only">Becher und Fühler (ITH-21-B und den IHC-200-Fühler) zusammen in einen <strong>dicht schließenden Gefrierbeutel</strong> oder eine Frischhaltedose. <strong>8–12 Stunden</strong> bei Zimmertemperatur warten, nicht öffnen.</p>
+          <p class="en-only">Put the glass and the sensors (ITH-21-B and the IHC-200 probe) together in a <strong>tightly sealed freezer bag</strong> or food container. Wait <strong>8–12 hours</strong> at room temperature without opening.</p>
+        </div>
+      </div>
+      <div class="check">
+        <div class="num" style="background:#5a6b4a;">3</div>
+        <div>
+          <h4 style="color:#4a5a3a;" class="de-only">Ablesen &amp; Offset setzen</h4>
+          <h4 style="color:#4a5a3a;" class="en-only">Read &amp; set the offset</h4>
+          <p class="de-only">Der Fühler muss jetzt <strong>75&nbsp;%</strong> zeigen. Zeigt er z.&nbsp;B. 70&nbsp;%, liegt er 5&nbsp;% zu niedrig — die Differenz als <strong>Kalibrier-Offset</strong> im IHC-200 (Menü „CA") bzw. in der Inkbird-App hinterlegen. Test <strong>alle 6–12 Monate</strong> wiederholen.</p>
+          <p class="en-only">The sensor must now read <strong>75&nbsp;%</strong>. If it shows e.g. 70&nbsp;%, it reads 5&nbsp;% low — store the difference as a <strong>calibration offset</strong> in the IHC-200 (menu "CA") or in the Inkbird app. Repeat the test <strong>every 6–12 months</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- EINFAHR-PROTOKOLL -->
+    <div class="eyebrow de-only">Vor der ersten Beladung</div>
+    <div class="eyebrow en-only">Before the first load</div>
+    <h2 class="de-only">48 Stunden Probelauf — leer</h2>
+    <h2 class="en-only">48-hour dry run — empty</h2>
+    <p class="body de-only">Erst beweisen, dann beladen: Die Kammer läuft <strong>zwei Tage leer</strong> mit vollem Setup (Wasser im Vernebler, Sollwerte gesetzt). So findest du Regelprobleme, solange noch nichts auf dem Spiel steht.</p>
+    <p class="body en-only">Prove it first, load it second: run the chamber <strong>empty for two days</strong> with the full setup (water in the mister, setpoints configured). That way you find control problems while nothing is at stake.</p>
+    <div class="checks">
+      <div class="check">
+        <div class="num" style="background:#9a3b1c;">1</div>
+        <div>
+          <h4 style="color:#9a3b1c;" class="de-only">Sollwerte setzen</h4>
+          <h4 style="color:#9a3b1c;" class="en-only">Set the targets</h4>
+          <p class="de-only">ITC-308 auf <strong>12&nbsp;°C</strong> (Differenz 1&nbsp;°C), IHC-200 auf <strong>75&nbsp;%</strong> (Differenz 3–5&nbsp;%). Lüfter auf Reife-Drehzahl (siehe Referenz oben).</p>
+          <p class="en-only">ITC-308 to <strong>12&nbsp;°C</strong> (1&nbsp;°C differential), IHC-200 to <strong>75&nbsp;%</strong> (3–5&nbsp;% differential). Fans at aging speed (see reference above).</p>
+        </div>
+      </div>
+      <div class="check">
+        <div class="num" style="background:#5b6b78;">2</div>
+        <div>
+          <h4 style="color:#41525e;" class="de-only">Verlauf beobachten</h4>
+          <h4 style="color:#41525e;" class="en-only">Watch the history</h4>
+          <p class="de-only">Nach 24&nbsp;h den <strong>App-Verlauf des ITH-21-B</strong> ansehen: Pendelt die Temperatur um höchstens <strong>±1&nbsp;°C</strong> und die Feuchte um <strong>±5&nbsp;%</strong>, ist die Regelung gesund. Größere Ausschläge → Differenzen und Lüfter-Drehzahl anpassen.</p>
+          <p class="en-only">After 24&nbsp;h, check the <strong>ITH-21-B app history</strong>: if temperature swings stay within <strong>±1&nbsp;°C</strong> and humidity within <strong>±5&nbsp;%</strong>, the loop is healthy. Bigger swings → adjust differentials and fan speed.</p>
+        </div>
+      </div>
+      <div class="check">
+        <div class="num" style="background:#5a6b4a;">3</div>
+        <div>
+          <h4 style="color:#4a5a3a;" class="de-only">Störfall proben</h4>
+          <h4 style="color:#4a5a3a;" class="en-only">Rehearse a disturbance</h4>
+          <p class="de-only">Tür einmal <strong>30 Sekunden öffnen</strong> und zusehen, wie schnell sich das Klima erholt (Richtwert: unter 30&nbsp;Minuten zurück im Fenster). So weißt du später, was eine Sichtkontrolle „kostet".</p>
+          <p class="en-only">Open the door once for <strong>30 seconds</strong> and watch how fast the climate recovers (guide: back in the window within 30&nbsp;minutes). Then you know what a visual check "costs" later.</p>
+        </div>
+      </div>
+      <div class="check">
+        <div class="num" style="background:#9a6b2f;">4</div>
+        <div>
+          <h4 style="color:#9a6b2f;" class="de-only">Erst jetzt beladen</h4>
+          <h4 style="color:#9a6b2f;" class="en-only">Only now load it</h4>
+          <p class="de-only">Beide Werte stabil über 48&nbsp;h? Dann ist die Kammer eingefahren. Notiere die finalen Einstellungen — sie sind dein Ausgangspunkt für jede weitere Charge.</p>
+          <p class="en-only">Both values stable over 48&nbsp;h? The chamber is broken in. Write down the final settings — they're your starting point for every future batch.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BELADUNGSREGELN -->
+    <div class="eyebrow de-only">Beladung</div>
+    <div class="eyebrow en-only">Loading</div>
+    <h2 class="de-only">Luft braucht Platz</h2>
+    <h2 class="en-only">Air needs room</h2>
+    <p class="body de-only">Die häufigste Anfängersünde ist die volle Kammer: Wo sich Würste berühren, steht die Luft — dort trocknet nichts und Fehlschimmel nistet zuerst.</p>
+    <p class="body en-only">The most common beginner's sin is a full chamber: where sausages touch, the air stands still — nothing dries there and off-mould nests first.</p>
+    <div class="fanref de-only">
+      <div class="fr">
+        <h4>Abstand</h4>
+        <div class="fl"><span class="k">Zwischen Würsten</span><span class="v">2–3 Finger</span></div>
+        <div class="fl"><span class="k">Zur Wand</span><span class="v">nie anliegen</span></div>
+      </div>
+      <div class="fr">
+        <h4>Menge</h4>
+        <div class="fl"><span class="k">Füllgrad max.</span><span class="v">⅔ der Kapazität</span></div>
+        <div class="fl"><span class="k">Unter Reifegut</span><span class="v blue">Tropfschale</span></div>
+      </div>
+      <div class="fr">
+        <h4>Frische Ware</h4>
+        <div class="fl"><span class="k">Erste 24–48 h</span><span class="v blue">Abluft höher</span></div>
+        <div class="fl"><span class="k">Grund</span><span class="v">Feuchte-Spitze</span></div>
+      </div>
+      <div class="fr">
+        <h4>Chargen mischen</h4>
+        <div class="fl"><span class="k">Frisch + fast fertig</span><span class="v">ungünstig</span></div>
+        <div class="fl"><span class="k">Besser</span><span class="v blue">phasenweise</span></div>
+      </div>
+    </div>
+    <div class="fanref en-only">
+      <div class="fr">
+        <h4>Spacing</h4>
+        <div class="fl"><span class="k">Between sausages</span><span class="v">2–3 fingers</span></div>
+        <div class="fl"><span class="k">To the wall</span><span class="v">never touching</span></div>
+      </div>
+      <div class="fr">
+        <h4>Quantity</h4>
+        <div class="fl"><span class="k">Max. fill</span><span class="v">⅔ of capacity</span></div>
+        <div class="fl"><span class="k">Below the goods</span><span class="v blue">drip tray</span></div>
+      </div>
+      <div class="fr">
+        <h4>Fresh goods</h4>
+        <div class="fl"><span class="k">First 24–48 h</span><span class="v blue">more exhaust</span></div>
+        <div class="fl"><span class="k">Reason</span><span class="v">humidity spike</span></div>
+      </div>
+      <div class="fr">
+        <h4>Mixing batches</h4>
+        <div class="fl"><span class="k">Fresh + nearly done</span><span class="v">unfavourable</span></div>
+        <div class="fl"><span class="k">Better</span><span class="v blue">in phases</span></div>
+      </div>
+    </div>
+    <div class="warn">
+      <div class="ic">!</div>
+      <div class="wt de-only"><strong>Frisch gefüllte Wurst ist nass:</strong> Eine volle neue Charge treibt die Feuchte über Stunden auf 90&nbsp;%+. Das ist normal — die ersten 1–2 Tage Abluft höher drehen und den Nebler machen lassen; er springt erst wieder an, wenn die Spitze abgebaut ist.</div>
+      <div class="wt en-only"><strong>Freshly stuffed sausage is wet:</strong> a full new batch pushes humidity above 90&nbsp;%+ for hours. That's normal — run the exhaust higher for the first 1–2 days and let the mister rest; it only kicks back in once the spike has cleared.</div>
+    </div>
+
+    <!-- ALARM-EINRICHTUNG -->
+    <div class="eyebrow de-only">Wachhund · App-Alarme</div>
+    <div class="eyebrow en-only">Watchdog · app alarms</div>
+    <h2 class="de-only">Die Kammer meldet sich selbst</h2>
+    <h2 class="en-only">The chamber reports in on its own</h2>
+    <p class="body de-only">In einer Charge stecken Wochen — ein leerer Wassertank oder ein hängender Regler darf nicht erst nach Tagen auffallen. Der <strong>ITH-21-B</strong> kann in der Inkbird-App <strong>Alarm-Schwellen</strong> mit Push-Benachrichtigung: einmal einrichten, dann wacht er.</p>
+    <p class="body en-only">A batch holds weeks of work — an empty water tank or a stuck controller must not go unnoticed for days. The <strong>ITH-21-B</strong> supports <strong>alarm thresholds</strong> with push notifications in the Inkbird app: set them once and it stands guard.</p>
+    <div class="fanref de-only">
+      <div class="fr">
+        <h4>Temperatur</h4>
+        <div class="fl"><span class="k">Alarm unter</span><span class="v">Soll −3 °C</span></div>
+        <div class="fl"><span class="k">Alarm über</span><span class="v">Soll +3 °C</span></div>
+      </div>
+      <div class="fr">
+        <h4>Feuchte</h4>
+        <div class="fl"><span class="k">Alarm unter</span><span class="v blue">Soll −10 %</span></div>
+        <div class="fl"><span class="k">Alarm über</span><span class="v blue">Soll +10 %</span></div>
+      </div>
+      <div class="fr">
+        <h4>Routine</h4>
+        <div class="fl"><span class="k">App-Blick</span><span class="v">1× täglich</span></div>
+        <div class="fl"><span class="k">Wassertank</span><span class="v blue">alle 2–3 Tage</span></div>
+      </div>
+    </div>
+    <div class="fanref en-only">
+      <div class="fr">
+        <h4>Temperature</h4>
+        <div class="fl"><span class="k">Alarm below</span><span class="v">target −3 °C</span></div>
+        <div class="fl"><span class="k">Alarm above</span><span class="v">target +3 °C</span></div>
+      </div>
+      <div class="fr">
+        <h4>Humidity</h4>
+        <div class="fl"><span class="k">Alarm below</span><span class="v blue">target −10 %</span></div>
+        <div class="fl"><span class="k">Alarm above</span><span class="v blue">target +10 %</span></div>
+      </div>
+      <div class="fr">
+        <h4>Routine</h4>
+        <div class="fl"><span class="k">App glance</span><span class="v">1× daily</span></div>
+        <div class="fl"><span class="k">Water tank</span><span class="v blue">every 2–3 days</span></div>
+      </div>
+    </div>
+    <p class="body de-only" style="font-size:14.5px;color:#6b5a42;font-style:italic;margin-top:14px;">Feuchte-Alarm „zu niedrig" ist dein wichtigster: Er bedeutet fast immer <strong>Wassertank leer</strong> oder Nebler-Disc verbraucht. Bluetooth reicht nur in Reichweite — wer unterwegs Alarm will, stellt ein altes Smartphone als Brücke daneben oder wählt ein WLAN-Gateway-Modell.</p>
+    <p class="body en-only" style="font-size:14.5px;color:#6b5a42;font-style:italic;margin-top:14px;">The "humidity too low" alarm is your most important one: it almost always means the <strong>water tank is empty</strong> or the mister disc is worn. Bluetooth only reaches so far — for alerts away from home, park an old smartphone next to it as a bridge or choose a Wi-Fi gateway model.</p>
+
+    <!-- REINIGUNG & HYGIENE -->
+    <div class="eyebrow de-only">Zwischen den Chargen</div>
+    <div class="eyebrow en-only">Between batches</div>
+    <h2 class="de-only">Reinigen wie ein Metzger</h2>
+    <h2 class="en-only">Clean like a butcher</h2>
+    <p class="body de-only">Jede Charge hinterlässt Sporen, Fett und Kalk. Wer zwischen den Durchgängen <strong>eine Stunde</strong> investiert, erspart sich Fehlschimmel im nächsten — und hält den Nebler am Leben.</p>
+    <p class="body en-only">Every batch leaves spores, fat and limescale behind. Investing <strong>one hour</strong> between runs prevents off-mould in the next one — and keeps the mister alive.</p>
+    <div class="checks">
+      <div class="check">
+        <div class="num" style="background:#9a3b1c;">1</div>
+        <div>
+          <h4 style="color:#9a3b1c;" class="de-only">Innenraum</h4>
+          <h4 style="color:#9a3b1c;" class="en-only">Interior</h4>
+          <p class="de-only">Roste, Stange und Haken raus und <strong>heiß spülen</strong>. Wände und Tür mit <strong>Essigwasser</strong> (1:4) auswischen — kein Chlorreiniger, der greift Edelstahl und Dichtungen an. Tür offen lassen, bis alles <strong>komplett trocken</strong> ist.</p>
+          <p class="en-only">Take out racks, rod and hooks and <strong>wash them hot</strong>. Wipe walls and door with <strong>vinegar water</strong> (1:4) — no chlorine cleaner, it attacks stainless steel and seals. Leave the door open until everything is <strong>completely dry</strong>.</p>
+        </div>
+      </div>
+      <div class="check">
+        <div class="num" style="background:#5b6b78;">2</div>
+        <div>
+          <h4 style="color:#41525e;" class="de-only">Nebler &amp; Wasser</h4>
+          <h4 style="color:#41525e;" class="en-only">Mister &amp; water</h4>
+          <p class="de-only">Nur <strong>destilliertes Wasser</strong> in den Vernebler — Leitungswasser verkalkt die Disc und vernebelt Kalkstaub auf dein Reifegut. Wasser <strong>alle 2–3 Tage wechseln</strong> (stehendes Wasser verkeimt), Behälter dabei ausspülen. Verkalkte Disc in <strong>Zitronensäure</strong> einlegen oder tauschen (Cent-Artikel).</p>
+          <p class="en-only">Only <strong>distilled water</strong> in the mister — tap water scales up the disc and mists lime dust onto your goods. <strong>Change the water every 2–3 days</strong> (standing water breeds germs) and rinse the reservoir. Soak a scaled disc in <strong>citric acid</strong> or replace it (costs pennies).</p>
+        </div>
+      </div>
+      <div class="check">
+        <div class="num" style="background:#5a6b4a;">3</div>
+        <div>
+          <h4 style="color:#4a5a3a;" class="de-only">Dichtung &amp; Ablauf</h4>
+          <h4 style="color:#4a5a3a;" class="en-only">Seal &amp; drain</h4>
+          <p class="de-only">Die <strong>Türdichtung</strong> ist das Lieblingsversteck von Schimmel: Falten mit Essigwasser und Wattestäbchen auswischen. <strong>Kondenswasser-Ablauf</strong> hinten unten prüfen und freihalten.</p>
+          <p class="en-only">The <strong>door seal</strong> is mould's favourite hiding place: wipe the folds with vinegar water and a cotton swab. Check the <strong>condensate drain</strong> at the back bottom and keep it clear.</p>
+        </div>
+      </div>
+      <div class="check">
+        <div class="num" style="background:#9a6b2f;">4</div>
+        <div>
+          <h4 style="color:#9a6b2f;" class="de-only">Nach Edelschimmel-Chargen</h4>
+          <h4 style="color:#9a6b2f;" class="en-only">After noble-mould batches</h4>
+          <p class="de-only">Gründlicher ran: Sporen sitzen überall. Erst Essigwasser, dann mit <strong>70-%-Alkohol</strong> nachwischen, Lüfterblätter nicht vergessen — sonst impft die Kammer die nächste Charge ungefragt.</p>
+          <p class="en-only">Go deeper: spores sit everywhere. Vinegar water first, then wipe down with <strong>70&nbsp;% alcohol</strong>, and don't forget the fan blades — otherwise the chamber inoculates the next batch uninvited.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STROMKOSTEN -->
+    <div class="eyebrow de-only">Betriebskosten</div>
+    <div class="eyebrow en-only">Running costs</div>
+    <h2 class="de-only">Was kostet der Dauerbetrieb?</h2>
+    <h2 class="en-only">What does 24/7 operation cost?</h2>
+    <p class="body de-only">Grobe Rechnung für einen Flaschenkühlschrank (~200&nbsp;l) bei 18–22&nbsp;°C Raumtemperatur und 12&nbsp;°C Soll: Der Kompressor läuft wenig, weil die Differenz klein ist — <strong>0,3–0,5&nbsp;kWh/Tag</strong>. Nebler und Lüfter takten und liegen zusammen bei <strong>0,1–0,2&nbsp;kWh/Tag</strong>. Macht rund <strong>0,4–0,7&nbsp;kWh/Tag</strong> — bei 0,30&nbsp;€/kWh etwa <strong>4–6&nbsp;€ im Monat</strong>.</p>
+    <p class="body en-only">Rough numbers for a ~200&nbsp;l bottle fridge at 18–22&nbsp;°C room temperature and a 12&nbsp;°C setpoint: the compressor barely runs because the delta is small — <strong>0.3–0.5&nbsp;kWh/day</strong>. Mister and fans cycle, adding <strong>0.1–0.2&nbsp;kWh/day</strong>. That's roughly <strong>0.4–0.7&nbsp;kWh/day</strong> — about <strong>€4–6 a month</strong> at €0.30/kWh.</p>
+    <p class="body de-only" style="font-size:14px;font-style:italic;color:#6b5a42;">Ein älterer, schlecht gedämmter Schrank kann das Doppelte ziehen — ein Zwischenstecker-Messgerät (~10&nbsp;€) eine Woche mitlaufen lassen liefert deine echte Zahl. Biltong-Modus (30&nbsp;°C mit Heizmatte) liegt höher: Heizmatte + Lüfter auf hoch ≈ 1–1,5&nbsp;kWh/Tag — dafür läuft er nur 4–6 Tage.</p>
+    <p class="body en-only" style="font-size:14px;font-style:italic;color:#6b5a42;">An older, poorly insulated cabinet can draw twice that — run a plug-in energy meter (~€10) for a week to get your real number. Biltong mode (30&nbsp;°C with the heat mat) runs higher: mat + fans on high ≈ 1–1.5&nbsp;kWh/day — but only for 4–6 days.</p>
+
     <!-- TROUBLESHOOTING -->
     <div class="eyebrow de-only">Fehlerfinder</div>
     <div class="eyebrow en-only">Troubleshooting</div>
