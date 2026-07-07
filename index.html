@@ -408,6 +408,38 @@
 
         <h1 style="margin:0 0 10px;font-family:'DM Serif Display',serif;font-size:48px;line-height:1.0;color:#3a2a1a;">{{ selName }}</h1>
         <p style="margin:0 0 24px;font-family:'Spectral',serif;font-style:italic;font-size:17px;color:#6b5a42;line-height:1.65;">{{ selBlurb }}</p>
+        <sc-if value="{{ selHasOrigin }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#ede0c5;border:1.5px solid #c9b48a;border-left:4px solid #9a6b2f;border-radius:4px;padding:16px 20px;margin:0 0 24px;font-family:'Spectral',serif;font-size:14.5px;line-height:1.65;color:#5a4632;">{{ selOrigin }}</div>
+        </sc-if>
+        <sc-if value="{{ selHasAuth }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;gap:13px;align-items:flex-start;background:#eef2e6;border:1.5px solid #b9c9a3;border-left:4px solid #5a6b4a;border-radius:4px;padding:14px 18px;margin:0 0 24px;">
+            <div style="flex-shrink:0;display:flex;align-items:baseline;gap:2px;font-family:'DM Serif Display',serif;color:#4a5a3a;">
+              <span style="font-size:26px;line-height:1;">{{ selAuthScore }}</span><span style="font-size:14px;">/10</span>
+            </div>
+            <div>
+              <div style="font-family:'Spectral',serif;font-weight:600;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#4a5a3a;margin-bottom:4px;">🟢 {{ L.authLabel }}</div>
+              <div style="font-family:'Spectral',serif;font-size:13.5px;line-height:1.6;color:#4a5237;">{{ selAuthNote }}</div>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ selHasEquip }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1.5px solid #c9b48a;border-radius:4px;padding:16px 20px;margin:0 0 24px;background:#f6efe0;">
+            <div style="font-family:'Spectral',serif;font-weight:600;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#9a8a72;margin-bottom:12px;">{{ L.equipLabel }}</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <sc-for list="{{ selEquipment }}" as="e" hint-placeholder-count="4">
+                <div style="display:flex;align-items:center;gap:11px;flex-wrap:wrap;">
+                  <span style="flex-shrink:0;font-size:13px;">{{ e.dot }}</span>
+                  <span style="flex-shrink:0;font-size:19px;width:26px;text-align:center;">{{ e.icon }}</span>
+                  <span style="font-family:'Spectral',serif;font-size:14.5px;color:#3a2a1a;min-width:150px;flex:1;">{{ e.label }}</span>
+                  <span style="font-family:'DM Serif Display',serif;font-size:15px;letter-spacing:1px;color:{{ e.color }};">{{ e.stars }}</span>
+                  <sc-if value="{{ e.hasNote }}" hint-placeholder-val="{{ false }}">
+                    <span style="font-family:'Spectral',serif;font-style:italic;font-size:12.5px;color:#8a7355;flex-basis:100%;padding-left:37px;">{{ e.note }}</span>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
         <sc-if value="{{ selHasImage }}" hint-placeholder-val="{{ false }}">
           <div style="position:relative;margin-bottom:26px;">
             <img src="{{ selImage }}" loading="lazy" decoding="async" onClick="{{ onSelImageClick }}" style="width:100%;max-height:440px;object-fit:cover;border-radius:6px;border:1.5px solid #c9b48a;display:block;cursor:zoom-in;" />
@@ -554,6 +586,12 @@
             <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#9a8a72;">{{ selWoodLabel }}</div>
             <div style="font-family:'DM Serif Display',serif;font-size:18px;color:#3a2a1a;margin-top:3px;">{{ selWood }}</div>
           </div>
+          <sc-if value="{{ selHasCutWeight }}" hint-placeholder-val="{{ false }}">
+            <div style="flex:1;min-width:120px;padding:12px 16px;border-left:1px solid #c9b48a;">
+              <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#9a8a72;">{{ L.cutWeight }}</div>
+              <div style="font-family:'DM Serif Display',serif;font-size:18px;color:#3a2a1a;margin-top:3px;">{{ selCutWeight }}</div>
+            </div>
+          </sc-if>
         </div>
 
         <!-- INGREDIENTS -->
@@ -636,6 +674,17 @@
         </section>
         </sc-if>
 
+        <!-- PROFI-TIPP (wiederverwendbar, ein Satz je Rezept) -->
+        <sc-if value="{{ selShowProTip }}" hint-placeholder-val="{{ false }}">
+          <section style="background:#1c130b;border:1px solid #3a2a1a;border-left:4px solid #d98a3d;border-radius:6px;padding:20px 24px;margin-bottom:32px;">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px;">
+              <span style="font-size:19px;">💡</span>
+              <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#d98a3d;margin:0;">{{ L.proTipLabel }}</h2>
+            </div>
+            <p style="font-family:'DM Serif Display',serif;font-size:19px;line-height:1.4;color:#f3ead7;margin:0;">{{ selProTip }}</p>
+          </section>
+        </sc-if>
+
         <!-- TIPS -->
         <sc-if value="{{ selHasTips }}" hint-placeholder-val="{{ false }}">
           <section style="background:#ede0c5;border:1.5px solid #c9b48a;border-radius:4px;padding:20px 24px;margin-bottom:32px;">
@@ -646,6 +695,58 @@
                 <span>{{ tip }}</span>
               </div>
             </sc-for>
+          </section>
+        </sc-if>
+
+        <!-- NACHREIFUNG (Kalträuchern, wiederverwendbar) -->
+        <sc-if value="{{ selShowMaturing }}" hint-placeholder-val="{{ false }}">
+          <section style="background:#1c130b;border:1px solid #3a2a1a;border-left:4px solid #5b6b78;border-radius:6px;padding:22px 26px;margin-bottom:32px;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <span style="font-size:20px;">🌡️</span>
+              <h2 style="font-family:'DM Serif Display',serif;font-size:22px;color:#f3ead7;margin:0;">{{ L.maturingLabel }}</h2>
+            </div>
+            <p style="font-family:'Spectral',serif;font-size:14.5px;color:#cbb795;line-height:1.65;margin:0 0 16px;">{{ L.maturingIntro }}</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:9px 20px;">
+              <sc-for list="{{ maturingBullets }}" as="b" hint-placeholder-count="5">
+                <div style="display:flex;gap:10px;font-family:'Spectral',serif;font-size:13.5px;color:#e0d0b0;line-height:1.5;align-items:baseline;">
+                  <span style="color:#8aa0b0;flex-shrink:0;">▸</span><span>{{ b }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <a href="reifekammer.html" style="display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-family:'Spectral',serif;font-size:13px;color:#8aa0b0;text-decoration:none;border-bottom:1px solid rgba(138,160,176,0.4);padding-bottom:1px;">{{ L.maturingChamber }} →</a>
+            <div style="display:flex;gap:11px;margin-top:16px;padding:13px 15px;background:#241910;border-radius:6px;font-family:'Spectral',serif;">
+              <span style="color:#d98a3d;flex-shrink:0;font-size:15px;">★</span>
+              <span style="font-size:13px;color:#cbb795;line-height:1.6;">{{ L.maturingTip }}</span>
+            </div>
+          </section>
+        </sc-if>
+
+        <!-- GARPROBE & RUHEN (heiß/warm Fisch, wiederverwendbar) -->
+        <sc-if value="{{ selShowFishFinish }}" hint-placeholder-val="{{ false }}">
+          <section style="background:#ede0c5;border:1.5px solid #c9b48a;border-left:4px solid #9a3b1c;border-radius:4px;padding:20px 24px;margin-bottom:32px;">
+            <h2 style="font-family:'DM Serif Display',serif;font-size:22px;color:#3a2a1a;margin:0 0 12px;">{{ L.fishFinishLabel }}</h2>
+            <div style="display:flex;gap:12px;font-family:'Spectral',serif;font-size:14px;color:#5a4632;line-height:1.65;margin-bottom:9px;">
+              <span style="color:#9a3b1c;flex-shrink:0;margin-top:1px;">✦</span>
+              <span>{{ fishFinishDoneLine }}</span>
+            </div>
+            <div style="display:flex;gap:12px;font-family:'Spectral',serif;font-size:14px;color:#5a4632;line-height:1.65;">
+              <span style="color:#9a3b1c;flex-shrink:0;margin-top:1px;">✦</span>
+              <span>{{ L.fishFinishRest }}</span>
+            </div>
+          </section>
+        </sc-if>
+
+        <!-- DAS LERNST DU (wiederverwendbar, Technik-Lerneffekt) -->
+        <sc-if value="{{ selShowLearn }}" hint-placeholder-val="{{ false }}">
+          <section style="background:#ede0c5;border:1.5px solid #c9b48a;border-radius:4px;padding:20px 24px;margin-bottom:32px;">
+            <h2 style="font-family:'DM Serif Display',serif;font-size:22px;color:#3a2a1a;margin:0 0 14px;">{{ L.learnLabel }}</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:9px 22px;">
+              <sc-for list="{{ selLearn }}" as="l" hint-placeholder-count="4">
+                <div style="display:flex;gap:11px;font-family:'Spectral',serif;font-size:14.5px;color:#5a4632;line-height:1.5;align-items:baseline;">
+                  <span style="color:#5a6b4a;flex-shrink:0;font-weight:700;">✔</span><span>{{ l }}</span>
+                </div>
+              </sc-for>
+            </div>
           </section>
         </sc-if>
 
@@ -1653,7 +1754,22 @@ class Component extends DCLogic {
       dorrNote: c => c ? (c.hi > 12 ? p('Über Nacht einplanen','Plan overnight') : c.hi > 8 ? p('Ganzen Nachmittag','A full afternoon') : p('Überschaubar','Manageable')) : p('Werte eintragen','Enter values'),
       L: {
         tagline: p('Räuchern · Dörren · Grillen · Low & Slow','Smoking · Drying · Grilling · Low & Slow'),
-        deviceNote: p('Beispiel-Setup – die Rezepte gelingen mit jedem Smoker, Grill & Dörrgerät','Example setup — these recipes work with any smoker, grill & dehydrator'),
+        maturingLabel: p('Nachreifung nach dem Kalträuchern','Maturing after cold smoking'),
+        maturingIntro: p('Nach dem Kalträuchern alle Fleischstücke frei hängend nachreifen lassen. Die Reifezeit richtet sich nach Fleischart, Dicke und gewünschter Festigkeit (siehe Reifezeit oben im Rezept).','After cold smoking, let all cuts mature hanging freely. Maturing time depends on the type of meat, its thickness and the firmness you want (see the maturing time at the top of the recipe).'),
+        maturingBullets: en
+          ? ['10–15 °C (ideal 12–14 °C)', '70–80 % relative humidity', 'gentle air circulation', 'never wrap it — hang freely', 'mature until the desired firmness is reached']
+          : ['10–15 °C (ideal 12–14 °C)', '70–80 % relative Luftfeuchtigkeit', 'leichte Luftzirkulation', 'nicht einpacken – frei hängend', 'bis zur gewünschten Festigkeit reifen lassen'],
+        maturingChamber: p('Perfekt planbar in einer Reifekammer','Perfectly controllable in an aging chamber'),
+        maturingTip: p('Kein Feuchte-Regler (z. B. Inkbird)? Eine kleine Schale Wasser im Kühlschrank hebt die Luftfeuchte spürbar – so lässt sie sich grob einstellen. Über die Schalengröße dosieren und mit einem Hygrometer nachregeln.','No humidity controller (e.g. Inkbird)? A small bowl of water in the fridge noticeably raises humidity — an easy way to dial it in roughly. Adjust via the bowl size and fine-tune with a hygrometer.'),
+        fishFinishLabel: p('Garprobe & Ruhen','Doneness & resting'),
+        fishFinishDone: p('Fertig, wenn: die Rückenflosse sich leicht herausziehen lässt','Done when: the dorsal fin pulls out easily'),
+        fishFinishCore: p('oder die Kerntemperatur erreicht ist','or the core temperature is reached'),
+        fishFinishRest: p('Nach dem Räuchern 15–30 Minuten ruhen lassen. Der Fleischsaft verteilt sich gleichmäßig und die Haut löst sich leichter.','Rest for 15–30 minutes after smoking. The juices redistribute evenly and the skin comes off more easily.'),
+        proTipLabel: p('Profi-Tipp','Pro Tip'),
+        learnLabel: p('Das lernst du bei diesem Rezept','What you learn with this recipe'),
+        authLabel: p('Authentizität','Authenticity'),
+        equipLabel: p('Empfohlenes Setup','Recommended setup'),
+        cutWeight: p('Typ. Fleischgewicht','Typical cut weight'),        deviceNote: p('Beispiel-Setup – die Rezepte gelingen mit jedem Smoker, Grill & Dörrgerät','Example setup — these recipes work with any smoker, grill & dehydrator'),
         newRecipe: p('✚ Eigenes Rezept','✚ New Recipe'),
         nps: p('⚖ NPS-Rechner','⚖ Cure-Salt Calc'),
         tools: p('🧰 Werkzeuge','🧰 Tools'), toolsHead: p('Rechner','Calculators'), backupHead: p('Daten','Data'),
@@ -1864,6 +1980,36 @@ class Component extends DCLogic {
     const g = this._num(b.weight);
     this.setState({ scaleOpen: !!(g && g > 0), scaleWeight: (g && g > 0) ? String(g) : '', batchDraft: { weight: b.weight || '', wood: b.wood || '', temp: b.temp || '', dur: b.dur || '', humidity: b.humidity || '', rating: '', result: '' }, batchSaved: false });
     try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) {}
+  }
+
+  _buildEquipment(sel) {
+    if (!sel || !sel.equipment || !sel.equipment.length) return [];
+    const lang = this.state.lang;
+    const DEV = {
+      wsm:{i:'🛢️',de:'Weber Smokey Mountain',en:'Weber Smokey Mountain'},
+      kettle:{i:'🍖',de:'Weber Kugelgrill',en:'Weber kettle'},
+      gas:{i:'🔥',de:'Gasgrill',en:'Gas grill'},
+      dutch:{i:'🍲',de:'Dutch Oven',en:'Dutch oven'},
+      stove:{i:'🍳',de:'Herd / Schmortopf',en:'Stove / pot'},
+      potjie:{i:'🥘',de:'Potjie',en:'Potjie'},
+      dehydrator:{i:'🌬️',de:'Dörrautomat (DA506)',en:'Dehydrator (DA506)'},
+      chamber:{i:'🚪',de:'Reifeschrank',en:'Curing chamber'},
+      vac:{i:'📦',de:'Vakuumierer',en:'Vacuum sealer'},
+      coals:{i:'♨️',de:'Kohle / Feuerstelle',en:'Coals / fire'},
+      oven:{i:'🔆',de:'Backofen',en:'Oven'},
+    };
+    const noGo = lang === 'en' ? 'Not recommended' : 'Nicht empfohlen';
+    return sel.equipment.map(e => {
+      const d = DEV[e[0]] || {i:'•',de:e[0],en:e[0]};
+      const s = e[1] | 0;
+      let color, dot;
+      if (s >= 4) { color = '#5a6b4a'; dot = '🟢'; }
+      else if (s >= 2) { color = '#9a6b2f'; dot = '🟡'; }
+      else { color = '#9a3b1c'; dot = '🔴'; }
+      const stars = s > 0 ? ('★★★★★'.slice(0, s) + '☆☆☆☆☆'.slice(0, 5 - s)) : '✕';
+      let note = e[2] ? (typeof e[2] === 'string' ? e[2] : (e[2][lang] || e[2].de || '')) : (s === 0 ? noGo : '');
+      return { icon: d.i, label: lang === 'en' ? d.en : d.de, stars, color, dot, note, hasNote: !!note };
+    });
   }
 
   renderVals() {
@@ -2134,10 +2280,19 @@ class Component extends DCLogic {
       // Detail
       selName:           sel ? sel.name : '',
       selBlurb:          sel ? sel.blurb : '',
+      selHasOrigin:      !!(sel && sel.origin),
+      selOrigin:         (sel && sel.origin) ? sel.origin : '',
+      selHasAuth:        !!(sel && sel.authenticity),
+      selAuthScore:      (sel && sel.authenticity) ? (this.state.lang === 'en' ? String(sel.authenticity) : String(sel.authenticity).replace('.', ',')) : '',
+      selAuthNote:       (sel && sel.authenticityNote) ? sel.authenticityNote : '',
+      selHasEquip:       !!(sel && sel.equipment && sel.equipment.length),
+      selEquipment:      this._buildEquipment(sel),
       selMethodColor:    sel ? sel.methodColor : '#7a6f60',
       selMethod:         sel ? sel.methodLabel : '',
       selPit:            sel ? sel.pit : '', selCore: sel ? (sel.core || '') : '',
       selTime:           sel ? sel.time : '', selWood: sel ? sel.wood : '',
+      selHasCutWeight:   !!(sel && sel.cutWeight),
+      selCutWeight:      (sel && sel.cutWeight) ? sel.cutWeight : '',
       selPhases:         sel ? sel.phases : [],
       selIngredients:    sel ? this._scaleIngList(sel) : [],
       scaleHasBase:      sel ? (this._baseWeightG(sel.ingredients) > 0) : false,
@@ -2162,6 +2317,18 @@ class Component extends DCLogic {
       woodGuide:         woodGuide_ || {},
       selGuide:          selGuide_ || {},
       selShowStandard:   !selIsGuide_,
+      selShowMaturing:   !!(sel && sel.method === 'kalt' && !selIsGuide_ && ['Käse','Vegetarisch','Würzen & Extras','Grundlagen'].indexOf(sel.cat) < 0),
+      maturingBullets:   L.maturingBullets,
+      selShowFishFinish: !!(sel && ['heiss','warm'].indexOf(sel.method) >= 0 && !selIsGuide_
+                             && (sel.cat === 'Fisch' || sel.cat === 'Fisch & Meeresfrüchte')
+                             && !/garnel|muschel|oktopus|gambas|calamari|tintenfisch/i.test(sel.id + ' ' + sel.name)),
+      fishFinishDoneLine: (sel && sel.core && /\d/.test(sel.core))
+                            ? (L.fishFinishDone + ', ' + L.fishFinishCore + ' ' + sel.core + '.')
+                            : (L.fishFinishDone + '.'),
+      selShowProTip:     !!(sel && sel.proTip && !selIsGuide_),
+      selProTip:         (sel && sel.proTip) ? sel.proTip : '',
+      selShowLearn:      !!(sel && sel.learn && sel.learn.length > 0 && !selIsGuide_),
+      selLearn:          (sel && sel.learn) ? sel.learn : [],
       selHasTables:      sel ? !!(sel.tables && sel.tables.length > 0) : false,
       selTables: sel ? (sel.tables || []).map(t => ({
         ...t,

@@ -53,6 +53,10 @@ const RECIPES = [
     id: "schwarzwaelder-schinken", name: "Schwarzwälder Schinken", method: "kalt", cat: "Schinken", diff: 3,
     time: "5–7 Wochen", pit: "15–22 °C", core: "", wood: "Buche + Tanne/Wacholder", yield: "ca. 2,5 kg",
     blurb: "Der Klassiker: trocken gepökelter Schweineschinken, langsam kalt geräuchert. Braucht Zeit – belohnt mit Tiefe.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
+    origin: "🇩🇪 Der Schwarzwälder Schinken ist eine geschützte Spezialität (g.g.A.) aus dem Schwarzwald. Traditionell wird er über Tannen- und Wacholderholz kalt geräuchert – daher sein dunkles Äußeres und das unverwechselbare, harzig-würzige Aroma.",
+    authenticity: 9,
+    authenticityNote: "Folgt der traditionellen Schwarzwälder Kalträucherung über Tanne und Wacholder. Angepasst nur bei Salz (NPS) und einem hobbytauglichen Zeitplan.",
     ingredients: [
       { a: "2,5 kg", i: "Schweineschinken (Oberschale/Nuss, küchenfertig)" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -67,11 +71,14 @@ const RECIPES = [
       { label: "Reifen", kind: "mature", dur: "1–3 Wochen", temp: "12–15 °C", text: "Nachreifen lassen, bis Aroma rund und Schnittfestigkeit erreicht ist.", bullets: ["Gewichtsverlust ~30–40 % anpeilen", "Je länger, desto intensiver"] },
     ],
     tips: ["Kalträuchern nur in der kalten Jahreszeit (Okt–März) – sonst zu warm.", "Buchenmehl ist Standard; Tanne/Wacholder geben den typischen Schwarzwald-Ton.", "Hygiene ist alles: saubere Hände, saubere Haken, frisches Fleisch vom Metzger."],
+    proTip: "Der Gewichtsverlust ist das Reifezeugnis: erst bei ~30–40 % weniger Gewicht ist der Schinken durchgereift und schnittfest.",
+    learn: ["Trockenpökeln (NPS exakt)", "Durchbrennen", "Pellicle bilden", "Kalträuchern in Gängen", "Nachreifen (Gewichtsverlust)"],
   }),
   r({
     id: "lachsschinken", name: "Lachsschinken", method: "kalt", cat: "Schinken", diff: 2,
     time: "2–3 Wochen", pit: "15–22 °C", core: "", wood: "Buche", yield: "ca. 800 g",
     blurb: "Mager, fein und schnell fertig: gepökeltes Schweinelachsfilet, dünn aufgeschnitten ein Genuss.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
     ingredients: [
       { a: "1 kg", i: "Schweinelachs (Rückenfilet, pariert)" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -86,11 +93,14 @@ const RECIPES = [
       { label: "Reifen", kind: "mature", dur: "3–5 Tage", temp: "12–15 °C", text: "Kurz nachreifen, dann hauchdünn schneiden.", bullets: [] },
     ],
     tips: ["Perfekt für Einsteiger ins Kalträuchern – kurze Reifezeit, geringes Risiko.", "Hauchdünn aufschneiden, am besten mit der Maschine."],
+    proTip: "Mageres Fleisch pökelt schnell und sicher durch – der ideale Einstieg ins Kalträuchern mit kurzer Reifezeit.",
+    learn: ["Trockenpökeln (NPS)", "Durchbrennen", "Pellicle bilden", "Kalträuchern (wenige Gänge)", "Nachreifen"],
   }),
   r({
     id: "nussschinken", name: "Nussschinken", method: "kalt", cat: "Schinken", diff: 2,
     time: "3–4 Wochen", pit: "15–22 °C", core: "", wood: "Buche", yield: "ca. 1 kg",
     blurb: "Aus der Oberschale (Nuss) geschnitten – zart, mager und unkompliziert.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
     ingredients: [
       { a: "1,2 kg", i: "Schweinenuss (Oberschale)" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -105,11 +115,17 @@ const RECIPES = [
       { label: "Reifen", kind: "mature", dur: "1 Woche", temp: "12–15 °C", text: "Nachreifen.", bullets: [] },
     ],
     tips: ["Günstiges Stück mit gutem Ergebnis – ideal zum Üben."],
+    proTip: "Ein Tag Pökelzeit je Zentimeter Dicke plus Reserve – die einfachste Faustregel für sicheres Durchpökeln.",
+    learn: ["Trockenpökeln (Faustregel)", "Durchbrennen", "Pellicle bilden", "Kalträuchern in Gängen", "Nachreifen"],
   }),
   r({
     id: "coppa", name: "Coppa (Schweinenacken)", method: "kalt", cat: "Schinken", diff: 3,
     time: "6–8 Wochen", pit: "15–20 °C", core: "", wood: "Buche", yield: "ca. 1,5 kg",
     blurb: "Italienischer Klassiker aus dem Nacken – marmoriert, würzig, luftgetrocknet mit dezentem Rauch.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
+    origin: "🇮🇹 Coppa (auch Capocollo) stammt aus Italien und wird aus dem Schweinenacken hergestellt. Die feine Marmorierung macht sie besonders saftig – luftgetrocknet und dünn aufgeschnitten ist sie ein Salumi-Klassiker.",
+    authenticity: 9,
+    authenticityNote: "Orientiert sich eng an der italienischen Salumi-Tradition. Angepasst bei Salz (NPS) und einem dezenten Räuchergang, der die Reproduzierbarkeit erhöht.",
     ingredients: [
       { a: "1,8 kg", i: "Schweinenacken am Stück, ohne Knochen" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -124,11 +140,288 @@ const RECIPES = [
       { label: "Reifen / Trocknen", kind: "mature", dur: "4–6 Wochen", temp: "12–15 °C, 75 % rF", text: "Reifen bis ~35 % Gewichtsverlust.", bullets: ["Gleichmäßige Trocknung wichtig", "Bei Trockenrand kurz höher anfeuchten"] },
     ],
     tips: ["Reifekammer oder kühler Keller mit Luftfeuchte ideal.", "Edelschimmel (weiß) ist erwünscht – grün/schwarz abwischen mit Salzlake."],
+    proTip: "Coppa lebt mehr von der Luft als vom Rauch – gleichmäßige Trocknung ist wichtiger als viele Räuchergänge.",
+    learn: ["Pökeln", "Durchbrennen", "In Darm füllen", "Dezent kalträuchern", "Luftreifen (~35 % Verlust)"],
+  }),
+  r({
+    id: "guanciale", name: "Guanciale", method: "kalt", cat: "Schinken", diff: 3,
+    time: "8–12 Wochen", pit: "12–15 °C", core: "", wood: "Nicht räuchern", yield: "ca. 700 g",
+    blurb: "Luftgetrocknete Schweinebacke aus Mittelitalien – das Herz von Carbonara, Amatriciana und Gricia. Nicht geräuchert, nur gepökelt und gereift.",
+    equipment: [["chamber",5],["dehydrator",2,{de:"nur kleine Stücke",en:"only small cuts"}],["wsm",0,{de:"wird nicht geräuchert",en:"not smoked"}]],
+    origin: "🇮🇹 Guanciale stammt aus Latium, Umbrien und den Abruzzen und wird aus der Schweinebacke (Jowl) hergestellt. Traditionell nur mit Salz und schwarzem Pfeffer gewürzt, je nach Region ergänzt um Knoblauch, Rosmarin oder Chili. Es wird nie geräuchert – die ganze Tiefe kommt aus der langen Lufttrocknung.",
+    authenticity: 9.5,
+    authenticityNote: "Orientiert sich eng an der traditionellen Herstellung aus Mittelitalien. Angepasst nur dort, wo es die Reproduzierbarkeit oder Produktsicherheit für Hobbyanwender verbessert (Nitritpökelsalz statt reinem Meersalz).",
+    cutWeight: "1000–1800 g",
+    ingredients: [
+      { a: "1000 g", i: "Schweinebacke (Jowl) mit Schwarte, Drüsen/Blutreste entfernt" },
+      { a: "28 g", i: "Nitritpökelsalz" },
+      { a: "3 g", i: "schwarzer Pfeffer (grob)" },
+      { a: "2 g", i: "Wacholderbeeren (zerstoßen)" },
+      { a: "1", i: "Lorbeerblatt (zerbröselt)" },
+      { a: "1 Zehe", i: "Knoblauch (gerieben)" },
+      { a: "1 g", i: "Rosmarin" },
+      { a: "optional 1 g", i: "Chiliflocken" },
+    ],
+    phases: [
+      { label: "Vorbereiten", kind: "prep", dur: "20 min", temp: "kalt", text: "Schweinebacke parieren, Drüsen und Blutreste sorgfältig entfernen. Schwarte dranlassen.", bullets: ["Schwarte schützt beim Reifen vor Austrocknung"] },
+      { label: "Trockenpökeln", kind: "cure", dur: "7–10 Tage", temp: "2–5 °C", text: "Mit der Gewürzmischung rundum einreiben, vakuumieren oder in den Beutel. Einmal täglich wenden.", bullets: ["Austretende Flüssigkeit bleibt im Beutel", "Fest und gleichmäßig einreiben"] },
+      { label: "Abspülen & Trocknen", kind: "dry", dur: "12–24 h", temp: "10–15 °C", text: "Kurz kalt abspülen, gründlich trocken tupfen, bis die Oberfläche trocken ist.", bullets: ["Trockene Oberfläche = sauberer Reifestart"] },
+      { label: "Reifen", kind: "mature", dur: "8–12 Wochen", temp: "12–15 °C, 70–75 % rF", text: "Frei hängend reifen lassen, bis ~30 % Gewichtsverlust erreicht ist.", bullets: ["Nicht vakuumiert reifen", "Weißer Edelschimmel ist erwünscht"] },
+    ],
+    tips: ["Nicht räuchern – Guanciale ist ein reines Luftreife-Produkt.", "Nicht vakuumiert reifen lassen.", "Fertig bei ~30 % Gewichtsverlust: Fett weiß, Fleisch dunkelrot, fest aber leicht elastisch.", "Zum Kochen in dünne Scheiben oder Würfel schneiden und das Fett langsam auslassen, nicht knusprig braten."],
+    proTip: "Guanciale wird nie geröstet, sondern langsam ausgelassen – das Fett soll schmelzen und die Pasta seidig binden, nicht knusprig werden. Das ist der Unterschied zwischen echter Carbonara und Speck-Nudeln.",
+    learn: ["Trockenpökeln (Backe)", "Abspülen & Antrocknen", "Luftreifen bei 70–75 % rF", "Gewichtsverlust-Test (~30 %)", "Fett richtig auslassen"],
+  }),
+  r({
+    id: "lomo-embuchado", name: "Lomo Embuchado", method: "kalt", cat: "Schinken", diff: 3,
+    time: "5–8 Wochen", pit: "12–15 °C", core: "", wood: "Nicht räuchern", yield: "ca. 700 g",
+    blurb: "Spanischer luftgetrockneter Schweinelachs mit Pimentón – zart, mager und tief paprikawürzig. Ein Tapas-Klassiker, den kaum jemand selbst macht.",
+    equipment: [["chamber",5],["dehydrator",2,{de:"nur kleine Stücke",en:"only small cuts"}],["wsm",0,{de:"wird nicht geräuchert",en:"not smoked"}]],
+    origin: "🇪🇸 Lomo Embuchado stammt aus Spanien und wird aus dem ganzen Schweinelachs (Lende) hergestellt. Traditionell gewürzt mit Meersalz, geräuchertem Paprika (Pimentón), Knoblauch und Oregano – nie geräuchert. Der intensive Paprikageschmack kommt vom Pimentón de la Vera, der über Eichenholz geräuchert wird, sodass das Fleisch selbst rauchfrei bleibt.",
+    authenticity: 9.5,
+    authenticityNote: "Orientiert sich eng an der traditionellen spanischen Herstellung. Angepasst nur dort, wo es die Reproduzierbarkeit oder Produktsicherheit für Hobbyanwender verbessert (Nitritpökelsalz statt reinem Meersalz).",
+    cutWeight: "500–1000 g",
+    ingredients: [
+      { a: "1000 g", i: "Schweinelachs (Lende), Silberhaut entfernt" },
+      { a: "28 g", i: "Nitritpökelsalz" },
+      { a: "15 g", i: "geräuchertes Paprikapulver (Pimentón de la Vera, süß)" },
+      { a: "3 g", i: "schwarzer Pfeffer" },
+      { a: "2 g", i: "Knoblauchpulver" },
+      { a: "1 g", i: "Oregano" },
+      { a: "optional 1 g", i: "Zucker" },
+    ],
+    phases: [
+      { label: "Würzen", kind: "prep", dur: "20 min", temp: "kalt", text: "Gewürze gründlich vermischen, die Lende vollständig einreiben, dann vakuumieren.", bullets: ["Silberhaut vorher sorgfältig entfernen", "Rundum gleichmäßig einreiben"] },
+      { label: "Trockenpökeln", kind: "cure", dur: "7–10 Tage", temp: "2–5 °C", text: "Vakuumiert pökeln, einmal täglich wenden.", bullets: ["Austretende Flüssigkeit bleibt im Beutel"] },
+      { label: "Abspülen & Trocknen", kind: "dry", dur: "12–24 h", temp: "10–15 °C", text: "Kurz abspülen, gründlich trocken tupfen, bis die Oberfläche trocken ist.", bullets: [] },
+      { label: "Reifen", kind: "mature", dur: "5–8 Wochen", temp: "12–15 °C, 70–75 % rF", text: "Frei hängend reifen, bis 30–35 % Gewichtsverlust erreicht sind.", bullets: ["Optional in Kunstdarm füllen für gleichmäßige Form", "Weißer Edelschimmel ist erwünscht"] },
+    ],
+    tips: ["Nicht räuchern – das Raucharoma kommt allein vom Pimentón.", "Dünn aufschneiden.", "Vor dem Verzehr 15 Minuten temperieren.", "Fertig bei 30–35 % Gewichtsverlust: außen trocken, innen dunkelrot, leicht elastisch."],
+    proTip: "Der ganze Charakter kommt vom Pimentón de la Vera – nimm echtes spanisches, über Eiche geräuchertes Paprikapulver, kein normales. Das ist der Unterschied zwischen Lomo und nur getrocknetem Schweinelachs.",
+    learn: ["Silberhaut entfernen", "Trockenpökeln mit Pimentón", "Abspülen & Antrocknen", "Luftreifen bei 70–75 % rF", "Gewichtsverlust-Test (30–35 %)"],
+  }),
+  r({
+    id: "magret-seche", name: "Magret Séché", method: "kalt", cat: "Geflügel", diff: 1,
+    time: "3–5 Wochen", pit: "12–15 °C", core: "", wood: "Nicht räuchern", yield: "ca. 350 g",
+    blurb: "Luftgetrocknete Entenbrust aus Südwestfrankreich – einfach zu machen, edel im Geschmack. Hauchdünn geschnitten eine echte Delikatesse.",
+    equipment: [["chamber",5],["dehydrator",2,{de:"nur kleine Stücke",en:"only small cuts"}],["wsm",0,{de:"wird nicht geräuchert",en:"not smoked"}]],
+    origin: "🇫🇷 Magret Séché stammt aus der Gascogne und dem Périgord. Ursprünglich, um überschüssige Entenbrüste aus der Foie-gras-Produktion haltbar zu machen; heute eine Delikatesse. Traditionell nur mit grobem Meersalz und Pfeffer gewürzt, nie geräuchert – hauchdünn geschnitten als Vorspeise oder Tapas.",
+    authenticity: 9.5,
+    authenticityNote: "Orientiert sich eng an der traditionellen Herstellung aus Südwestfrankreich. Angepasst nur dort, wo es die Reproduzierbarkeit oder Produktsicherheit für Hobbyanwender verbessert (Nitritpökelsalz statt grobem Meersalz).",
+    cutWeight: "300–450 g",
+    ingredients: [
+      { a: "1000 g", i: "Entenbrust (Magret de Canard), Haut & Fett vollständig erhalten" },
+      { a: "28 g", i: "Nitritpökelsalz" },
+      { a: "4 g", i: "schwarzer Pfeffer" },
+      { a: "2 g", i: "Thymian" },
+      { a: "1 g", i: "Rosmarin" },
+      { a: "optional 1 g", i: "Piment d'Espelette" },
+    ],
+    phases: [
+      { label: "Würzen", kind: "prep", dur: "15 min", temp: "kalt", text: "Gewürze gleichmäßig verteilen, dann vakuumieren.", bullets: ["Haut und Fettschicht dranlassen – sie schützen beim Reifen"] },
+      { label: "Trockenpökeln", kind: "cure", dur: "5–7 Tage", temp: "2–5 °C", text: "Vakuumiert pökeln, einmal täglich wenden.", bullets: [] },
+      { label: "Abspülen & Trocknen", kind: "dry", dur: "12 h", temp: "10–15 °C", text: "Kurz abspülen, gründlich trocken tupfen.", bullets: [] },
+      { label: "Reifen", kind: "mature", dur: "2–4 Wochen", temp: "12–15 °C, 70–75 % rF", text: "Frei hängend reifen, bis 25–30 % Gewichtsverlust erreicht sind.", bullets: ["Mit dem Fett nach außen aufhängen"] },
+    ],
+    tips: ["Sehr dünn schneiden.", "Vor dem Servieren 10 Minuten temperieren.", "Nicht räuchern.", "Fertig bei 25–30 % Gewichtsverlust: fest, innen dunkelrot, Fett cremig-weiß."],
+    proTip: "Die dicke Fettschicht ist kein Abfall, sondern der Schlüssel – sie schützt das Fleisch beim Reifen vor dem Austrocknen und schmilzt beim Essen seidig auf der Zunge. Nie entfernen.",
+    learn: ["Trockenpökeln (Entenbrust)", "Fettschicht nutzen", "Abspülen & Antrocknen", "Kurz luftreifen (2–4 Wochen)", "Gewichtsverlust-Test (25–30 %)"],
+  }),
+  r({
+    id: "rillettes", name: "Rillettes de Porc", method: "warm", cat: "Schinken", diff: 2,
+    time: "1 Tag + 5–7 h Schmoren", pit: "110–120 °C", core: "zart zerfasernd", wood: "Nicht räuchern", yield: "ca. 900 g",
+    blurb: "Französischer Klassiker aus der Touraine – Schweinefleisch langsam im eigenen Fett geschmort, zerpflückt und im Schmalz konserviert. Pulled Pork auf Französisch.",
+    origin: "🇫🇷 Rillettes stammen aus der Touraine und der Region Le Mans. Ursprünglich entstanden sie, um Schweinefleisch durch langsames Garen im eigenen Fett haltbar zu machen. Nicht geräuchert – der Geschmack kommt aus dem langen, sanften Schmoren.",
+    authenticity: 10,
+    authenticityNote: "Folgt der klassischen französischen Herstellung nahezu unverändert. Nur Mengen und Temperaturen sind für die reproduzierbare Zubereitung präzisiert.",
+    cutWeight: "800–1500 g",
+    equipment: [["dutch",5],["stove",5],["gas",5,{de:"sehr konstante Temperatur",en:"very steady temperature"}],["kettle",4,{de:"indirekt bei 110–120 °C",en:"indirect at 110–120 °C"}],["potjie",4,{de:"dicke Gusswand hält die Hitze gleichmäßig",en:"thick cast wall holds heat evenly"}],["coals",5,{de:"Dutch Oven auf Kohle – fast traditionell",en:"Dutch oven on coals — almost traditional"}],["wsm",0,{de:"Rauch passt nicht zu klassischen Rillettes",en:"smoke doesn't suit classic rillettes"}]],
+    ingredients: [
+      { a: "1000 g", i: "Schweinenacken oder -schulter, gewürfelt" },
+      { a: "18 g", i: "Salz" },
+      { a: "2 g", i: "schwarzer Pfeffer" },
+      { a: "1", i: "Lorbeerblatt" },
+      { a: "2 Zweige", i: "Thymian" },
+      { a: "2 Zehen", i: "Knoblauch" },
+      { a: "100 ml", i: "trockener Weißwein" },
+      { a: "250 g", i: "Schweineschmalz" },
+    ],
+    phases: [
+      { label: "Würzen", kind: "cure", dur: "12–24 h", temp: "2–5 °C", text: "Fleischwürfel mit Salz und Gewürzen einreiben, abgedeckt über Nacht ziehen lassen.", bullets: ["Über Nacht durchziehen vertieft den Geschmack"] },
+      { label: "Schmoren", kind: "cook", dur: "5–7 h", temp: "110–120 °C", text: "Mit Schmalz und Weißwein sehr langsam schmoren – nicht kochen, nur leicht simmern, bis das Fleisch zerfällt.", bullets: ["Niemals sprudelnd kochen", "Deckel drauf, kaum Verdunstung"] },
+      { label: "Zerpflücken", kind: "finish", dur: "15 min", temp: "—", text: "Fleisch mit zwei Gabeln zerfasern und mit etwas Garfett vermengen.", bullets: ["Je gröber die Fasern, desto authentischer"] },
+      { label: "Abfüllen", kind: "prep", dur: "20 min", temp: "—", text: "In sterile Gläser füllen und mit ~5 mm Schmalz luftdicht bedecken.", bullets: ["Die Schmalzschicht konserviert"] },
+      { label: "Reifen", kind: "rest", dur: "2 Tage", temp: "Kühlschrank", text: "Vor dem Verzehr mindestens 2 Tage durchziehen lassen.", bullets: ["Aroma rundet sich ab"] },
+    ],
+    tips: ["Nicht räuchern – Rillettes sind ein reines Schmorprodukt.", "Je gröber die Fasern bleiben, desto authentischer.", "Mit knusprigem Baguette und Cornichons servieren.", "Unter der Schmalzschicht im Kühlschrank wochenlang haltbar."],
+    proTip: "Das Fleisch nie kochen, nur bei 110–120 °C sanft im Fett confieren – sobald es sprudelt, wird es trocken und faserig statt zart schmelzend.",
+    learn: ["Sanftes Schmoren im Fett", "Konservieren mit Fett", "Einwecken", "Zerpflücken (grobe Faser)"],
+  }),
+  r({
+    id: "porchetta", name: "Porchetta di Ariccia", method: "bbq", cat: "Schwein", diff: 3,
+    time: "1 Tag + 3–4 h", pit: "130–150 °C, Finish 220 °C", core: "75 °C", wood: "Optional dezent", yield: "ca. 2,5 kg",
+    blurb: "Der spektakuläre italienische Rollbraten: Schweinebauch um das Filet gerollt, mit Fenchel und Kräutern gewürzt, low & slow gegart bis die Schwarte glasknusprig splittert.",
+    origin: "🇮🇹 Die Porchetta di Ariccia (g.g.A.) stammt aus den Albaner Bergen bei Rom. Traditionell wird ein ganzes entbeintes Spanferkel mit Fenchel, Rosmarin, Knoblauch und Pfeffer gewürzt, gerollt und im Holzofen gegart – ein Fest-Klassiker Mittelitaliens.",
+    authenticity: 9,
+    authenticityNote: "Folgt der Ariccia-Tradition (Fenchel, Kräuter, Rollen, Krustenbildung). Angepasst auf haushaltsübliche Bauch-/Filet-Rollen statt ganzem Spanferkel.",
+    cutWeight: "2000–3500 g",
+    equipment: [["kettle",5,{de:"indirekt, für rundum knusprige Schwarte",en:"indirect, for all-round crackling"}],["gas",5],["oven",4,{de:"Finish bei 220 °C für die Kruste",en:"finish at 220 °C for the crackling"}],["wsm",4,{de:"optional dezenter Rauch",en:"optional light smoke"}],["dehydrator",0]],
+    ingredients: [
+      { a: "1,5 kg", i: "Schweinebauch mit Schwarte, flach" },
+      { a: "600 g", i: "Schweinefilet oder -lachs (als Kern)" },
+      { a: "20 g", i: "Salz" },
+      { a: "6 g", i: "Fenchelsamen, geröstet & gemörsert" },
+      { a: "4 g", i: "schwarzer Pfeffer" },
+      { a: "3 Zehen", i: "Knoblauch" },
+      { a: "2 Zweige", i: "Rosmarin + Salbei, gehackt" },
+      { a: "1 TL", i: "Chiliflocken (optional)" },
+    ],
+    phases: [
+      { label: "Würzen & Rollen", kind: "prep", dur: "45 min", temp: "kalt", text: "Bauch innen einschneiden, mit Kräutermischung würzen, Filet einlegen, fest aufrollen und im Abstand binden. Schwarte trocken und ungewürzt lassen.", bullets: ["Schwarte rautenförmig einschneiden", "Kräuter nur innen – außen nur Salz für die Kruste"] },
+      { label: "Trocknen", kind: "dry", dur: "12–24 h", temp: "Kühlschrank, offen", text: "Offen im Kühlschrank ruhen lassen, damit die Schwarte für die Kruste abtrocknet.", bullets: ["Trockene Schwarte = knusprige Kruste"] },
+      { label: "Low & Slow", kind: "cook", dur: "2,5–3,5 h", temp: "130–150 °C", text: "Indirekt garen bis 72–75 °C Kern.", bullets: ["Optional ein Stück Holz für dezenten Rauch"] },
+      { label: "Kruste finishen", kind: "finish", dur: "15–25 min", temp: "220 °C+", text: "Hitze stark erhöhen, bis die Schwarte glasig aufpoppt und splittert.", bullets: ["Im Blick behalten – brennt schnell an"] },
+      { label: "Ruhen", kind: "rest", dur: "20 min", temp: "—", text: "Ruhen lassen, dann in dicke Scheiben schneiden.", bullets: ["Mit scharfem Messer durch die Kruste sägen"] },
+    ],
+    tips: ["Die Schwarte muss trocken und salzig sein – nie mit Kräutern/Öl außen, sonst wird sie zäh statt knusprig.", "Fenchel ist das Signatur-Aroma – nicht weglassen.", "Kalt in dünnen Scheiben als Panino grandios."],
+    proTip: "Kruste und Kern brauchen zwei Temperaturen: erst geduldig low & slow auf Kerntemperatur, dann kurz sehr heiß für die splitternde Schwarte. Wer durchgehend heiß gart, bekommt zähe Schwarte und trockenes Fleisch.",
+    learn: ["Würzen (Fenchel/Kräuter)", "Rollen & Binden", "Schwarte für Kruste vorbereiten", "Low & Slow auf Kerntemperatur", "Krusten-Finish bei Starkhitze"],
+  }),
+  r({
+    id: "confit-de-canard", name: "Confit de Canard", method: "warm", cat: "Geflügel", diff: 2,
+    time: "1 Tag + 2–3 h", pit: "80–90 °C", core: "zart vom Knochen lösend", wood: "Nicht räuchern", yield: "4 Keulen",
+    blurb: "Entenkeulen, langsam im eigenen Fett confiert – der Klassiker aus Südwestfrankreich. Zart, aromatisch und im Fett wochenlang haltbar.",
+    origin: "🇫🇷 Confit de Canard stammt aus der Gascogne. „Confire“ heißt konservieren: Entenkeulen werden gesalzen und stundenlang bei niedriger Temperatur in Entenfett gegart, dann im Fett gelagert – eine der ältesten Haltbarmachungen Frankreichs.",
+    authenticity: 9.5,
+    authenticityNote: "Folgt der klassischen Gascogne-Methode. Angepasst nur bei präzisierten Temperaturen für sicheres Gelingen.",
+    cutWeight: "je 200–300 g / Keule",
+    equipment: [["dutch",5],["stove",5],["oven",5],["gas",4,{de:"mit Dutch Oven",en:"with a Dutch oven"}],["wsm",0,{de:"Rauch gehört nicht dazu",en:"smoke doesn't belong here"}]],
+    ingredients: [
+      { a: "4", i: "Entenkeulen (Magret-Ente)" },
+      { a: "20 g", i: "grobes Salz" },
+      { a: "2 Zweige", i: "Thymian" },
+      { a: "2", i: "Lorbeerblätter" },
+      { a: "3 Zehen", i: "Knoblauch, angedrückt" },
+      { a: "600–800 g", i: "Entenfett (zum Bedecken)" },
+    ],
+    phases: [
+      { label: "Salzen", kind: "cure", dur: "12–24 h", temp: "2–5 °C", text: "Keulen mit Salz, Thymian, Lorbeer und Knoblauch einreiben, abgedeckt ziehen lassen.", bullets: ["Salz kurz abspülen und trocken tupfen vor dem Garen"] },
+      { label: "Confieren", kind: "cook", dur: "2–3 h", temp: "80–90 °C", text: "Keulen vollständig in geschmolzenem Entenfett bei niedriger Temperatur garen, bis das Fleisch fast vom Knochen fällt.", bullets: ["Nur leicht simmern, nie sprudelnd kochen"] },
+      { label: "Lagern", kind: "finish", dur: "—", temp: "Kühlschrank", text: "Im Fett vollständig bedeckt abkühlen und lagern – so wochenlang haltbar.", bullets: ["Vor dem Servieren die Haut knusprig braten/backen"] },
+    ],
+    tips: ["Nicht räuchern.", "Vor dem Servieren die Hautseite kurz sehr heiß knusprig braten.", "Das aromatisierte Entenfett wiederverwenden (z. B. Bratkartoffeln)."],
+    proTip: "Die Temperatur nie über 90 °C treiben – Confit gart, es kocht nicht. Sprudelndes Fett macht das Fleisch trocken statt seidig zart.",
+    learn: ["Trockensalzen", "Confieren im Fett", "Konservieren im Fett", "Haut knusprig finishen"],
+  }),
+  r({
+    id: "fenalaar", name: "Fenalår (luftgetrocknete Lammkeule)", method: "kalt", cat: "Wild & Lamm", diff: 3,
+    time: "3 Wochen Pökeln + 2–3 Monate", pit: "6–12 °C", core: "", wood: "Optional Kaltrauch", yield: "ca. 2 kg",
+    blurb: "Norwegische Spezialität: gepökelte, luftgetrocknete Lammkeule. Ein großes Stück am Knochen, das Geduld verlangt und mit tiefem, mildem Aroma belohnt.",
+    origin: "🇳🇴 Fenalår ist eine geschützte norwegische Spezialität (g.g.A.) mit jahrhundertealter Tradition. Die Lammkeule wird gepökelt, teils leicht kaltgeräuchert und über Monate luftgetrocknet – früher eine überlebenswichtige Wintervorratsmethode.",
+    authenticity: 9,
+    authenticityNote: "Folgt der norwegischen Tradition (Pökeln, optional Kaltrauch, lange Lufttrocknung). Angepasst bei Salz (NPS) und einem hobbytauglichen Zeitrahmen.",
+    cutWeight: "2000–3000 g",
+    equipment: [["chamber",5],["dehydrator",1,{de:"zu groß für die meisten Geräte",en:"too large for most units"}],["wsm",3,{de:"nur für optionalen Kaltrauch",en:"only for optional cold smoke"}]],
+    ingredients: [
+      { a: "1", i: "Lammkeule am Knochen (~2,5 kg)" },
+      { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
+      { a: "je 1 TL", i: "Pfeffer, Wacholder, Knoblauch" },
+      { a: "1 TL", i: "Zucker" },
+    ],
+    phases: [
+      { label: "Pökeln", kind: "cure", dur: "2–3 Wochen", temp: "2–5 °C", text: "Trocken pökeln, regelmäßig wenden. Große Keule braucht Zeit, bis das Salz den Knochen erreicht.", bullets: ["Um den Knochen besonders sorgfältig einreiben"] },
+      { label: "Trocknen anfangen", kind: "dry", dur: "1 Woche", temp: "6–12 °C", text: "Abspülen, trocknen, dann kühl und luftig anhängen.", bullets: [] },
+      { label: "Kaltrauch (optional)", kind: "smoke", dur: "2–3 Gänge", temp: "unter 20 °C", text: "In manchen Regionen wird leicht kaltgeräuchert – optional.", bullets: [] },
+      { label: "Reifen", kind: "mature", dur: "2–3 Monate", temp: "8–12 °C, 70–75 % rF", text: "Frei hängend reifen, bis ~35 % Gewichtsverlust erreicht sind.", bullets: ["Regelmäßig auf Fehlschimmel prüfen"] },
+    ],
+    tips: ["Hauchdünn schneiden, klassisch mit Flatbrød und Butter.", "Sehr großes Stück – nur in einer echten Reifekammer sicher machbar.", "Wacholder gibt den typisch nordischen Ton."],
+    proTip: "Bei einer großen Keule am Knochen ist die Knochennähe der kritische Punkt – dort besonders gründlich pökeln und die Reife nicht überstürzen, sonst verdirbt es von innen.",
+    learn: ["Großes Stück pökeln (am Knochen)", "Optionaler Kaltrauch", "Lange Luftreifung", "Gewichtsverlust-Test (~35 %)"],
+  }),
+  r({
+    id: "cecina", name: "Cecina de León", method: "kalt", cat: "Rind", diff: 3,
+    time: "3 Wochen + 4–6 Wochen", pit: "12–15 °C", core: "", wood: "Eiche (Kaltrauch)", yield: "ca. 1,2 kg",
+    blurb: "Spanisches geräuchertes Rind-Trockenfleisch aus León. Anders als Bresaola wird Cecina über Eiche kaltgeräuchert – rauchig, tiefrot, hauchdünn geschnitten.",
+    origin: "🇪🇸 Cecina de León ist eine geschützte spanische Spezialität (g.g.A.). Magere Rinderkeule wird gesalzen, über Eichenholz kaltgeräuchert und luftgetrocknet – die rauchige Schwester des italienischen Bresaola.",
+    authenticity: 9,
+    authenticityNote: "Folgt der León-Tradition (Salzen, Eichen-Kaltrauch, Lufttrocknung). Angepasst nur bei Salz (NPS) für sichere Herstellung.",
+    cutWeight: "1000–2000 g",
+    equipment: [["wsm",4,{de:"für den Eichen-Kaltrauch",en:"for the oak cold smoke"}],["chamber",5],["kettle",3,{de:"nur mit Kaltrauch-Adapter",en:"only with a cold-smoke adapter"}],["dehydrator",1]],
+    ingredients: [
+      { a: "1,5 kg", i: "Rinderkeule (Oberschale), mager pariert" },
+      { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
+      { a: "je 1 TL", i: "Pfeffer, Knoblauch, Paprika (optional)" },
+    ],
+    phases: [
+      { label: "Pökeln", kind: "cure", dur: "2–3 Wochen", temp: "2–7 °C", text: "Trocken pökeln, regelmäßig wenden.", bullets: [] },
+      { label: "Durchbrennen & Trocknen", kind: "rest", dur: "5–7 Tage", temp: "2–7 °C", text: "Abspülen, trocknen, Oberfläche antrocknen lassen.", bullets: [] },
+      { label: "Kalträuchern", kind: "smoke", dur: "8 h · 3–5 Gänge", temp: "unter 22 °C", text: "Über Eichenholz kalt räuchern – das ist der Cecina-Charakter.", bullets: ["Eiche ist typisch – nicht durch mildes Holz ersetzen"] },
+      { label: "Reifen", kind: "mature", dur: "4–6 Wochen", temp: "12–15 °C, 75 % rF", text: "Reifen bis ~40 % Gewichtsverlust.", bullets: [] },
+    ],
+    tips: ["Hauchdünn schneiden, mit Olivenöl und etwas Zitrone servieren.", "Eichen-Kaltrauch ist das Markenzeichen – nicht weglassen.", "Wie Bresaola, aber rauchig."],
+    proTip: "Der Unterschied zu Bresaola ist der Eichen-Kaltrauch vor der Reife – er gibt Cecina ihr unverwechselbares rauchiges Aroma. Mildes Holz wäre hier falsch.",
+    learn: ["Trockenpökeln (Rind)", "Über Eiche kalträuchern", "Luftreifen bei 75 % rF", "Gewichtsverlust-Test (~40 %)"],
+  }),
+  r({
+    id: "buendnerfleisch-echt", name: "Bündnerfleisch (Original, ungeräuchert)", method: "kalt", cat: "Rind", diff: 3,
+    time: "3 Wochen + 5–7 Wochen", pit: "12–15 °C", core: "", wood: "Nicht räuchern", yield: "ca. 1 kg",
+    blurb: "Die authentische Schweizer Version: mageres Rind, gewürzt, gepresst und in reiner Bergluft getrocknet – ohne jeden Rauch. So wie es in Graubünden gemacht wird.",
+    origin: "🇨🇭 Bündnerfleisch stammt aus dem Kanton Graubünden und ist eine geschützte Spezialität (g.g.A.). Es wird ausschließlich luftgetrocknet – nie geräuchert. Das regelmäßige Pressen gibt ihm die typische rechteckige Form und dichte Textur.",
+    authenticity: 9.5,
+    authenticityNote: "Die originalgetreue, ungeräucherte Version. Angepasst nur bei Salz (NPS). Für die geräucherte Hausvariante siehe „Bündnerfleisch (Rind)“.",
+    cutWeight: "1000–1500 g",
+    equipment: [["chamber",5],["dehydrator",2,{de:"nur kleine Stücke, Farbe leidet",en:"only small cuts, color suffers"}],["wsm",0,{de:"Original ist nie geräuchert",en:"the original is never smoked"}]],
+    ingredients: [
+      { a: "1,3 kg", i: "Rinderhüfte/Oberschale, mager pariert" },
+      { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
+      { a: "je 1 TL", i: "Wacholder, Lorbeer, Knoblauch, Pfeffer, Rotwein" },
+    ],
+    phases: [
+      { label: "Pökeln", kind: "cure", dur: "2–3 Wochen", temp: "2–7 °C", text: "Würzig trocken pökeln, regelmäßig wenden.", bullets: [] },
+      { label: "Durchbrennen", kind: "rest", dur: "5–7 Tage", temp: "2–7 °C", text: "Ruhen lassen, Salz gleichmäßig verteilen.", bullets: [] },
+      { label: "Trocknen & Pressen", kind: "dry", dur: "5–7 Wochen", temp: "12–15 °C, 70–75 % rF", text: "Frei hängend trocknen und zwischendurch pressen, bis ~45 % Gewichtsverlust und die typische Form erreicht sind.", bullets: ["Pressen gibt die rechteckige Form", "Kein Rauch – reine Lufttrocknung"] },
+    ],
+    tips: ["Niemals räuchern – das ist der Kern des Originals.", "Hauchdünn schneiden, leicht überlappend servieren.", "Zwischendurch pressen für die typische Form."],
+    proTip: "Das regelmäßige Pressen zwischen den Trocknungsphasen ist kein Deko-Schritt: Es verdichtet das Fleisch, gibt die typische Form und sorgt für gleichmäßige Trocknung ohne Trockenrand.",
+    learn: ["Trockenpökeln (Rind)", "Reine Lufttrocknung ohne Rauch", "Pressen zur Formgebung", "Gewichtsverlust-Test (~45 %)"],
+  }),
+  r({
+    id: "chashu-authentic", name: "Chashu (Original Ramen-Style)", method: "warm", cat: "Schwein", diff: 2,
+    time: "1 Tag + 2,5–3 h", pit: "90–95 °C", core: "sehr zart", wood: "Nicht räuchern", yield: "ca. 800 g",
+    blurb: "Das echte japanische Ramen-Chashu: gerollter Schweinebauch, sanft in einer Soja-Mirin-Sake-Brühe geschmort und im Sud gereift. Kein Rauch – reine Umami-Tiefe.",
+    origin: "🇯🇵 Chashu krönt klassisch die japanische Ramen. Der gerollte Schweinebauch wird nicht gebraten, sondern in einer aromatischen Soja-Mirin-Sake-Brühe langsam geschmort und im Sud durchgezogen – ein Grundpfeiler der Ramen-Küche.",
+    authenticity: 9,
+    authenticityNote: "Folgt der japanischen Ramen-Tradition (Rollen, Schmoren im Sud, Reifen im Sud). Kein Rauch – so wie es im Original gemacht wird.",
+    cutWeight: "800–1200 g",
+    equipment: [["stove",5],["dutch",5],["potjie",5,{de:"hoher Topf – Bauch liegt komplett im Sud",en:"tall pot — belly fully submerged in broth"}],["gas",4,{de:"mit Dutch Oven",en:"with a Dutch oven"}],["kettle",4,{de:"mit Dutch Oven",en:"with a Dutch oven"}],["wsm",3,{de:"geht, aber Rauch gehört nicht dazu",en:"works, but smoke doesn't belong"}]],
+    ingredients: [
+      { a: "1000 g", i: "Schweinebauch, ohne Knochen" },
+      { a: "120 ml", i: "Sojasauce" },
+      { a: "120 ml", i: "Mirin" },
+      { a: "100 ml", i: "Sake" },
+      { a: "40 g", i: "Zucker" },
+      { a: "4 Zehen", i: "Knoblauch" },
+      { a: "30 g", i: "Ingwer, in Scheiben" },
+      { a: "2", i: "Frühlingszwiebeln" },
+    ],
+    phases: [
+      { label: "Rollen & Binden", kind: "prep", dur: "15 min", temp: "kalt", text: "Bauch fest aufrollen und mit Küchengarn eng binden.", bullets: ["Eng binden – hält Form beim Schmoren"] },
+      { label: "Schmoren", kind: "cook", dur: "2,5–3 h", temp: "90–95 °C", text: "In der Brühe sanft schmoren – nicht kochen, nur leicht simmern, bis eine Sonde fast ohne Widerstand gleitet.", bullets: ["Nie sprudelnd kochen", "Gelegentlich wenden"] },
+      { label: "Im Sud abkühlen", kind: "rest", dur: "über Nacht", temp: "Kühlschrank", text: "Vollständig im Sud auskühlen lassen – so bleibt es saftig und fest.", bullets: ["Über Nacht durchziehen"] },
+      { label: "Aufschneiden", kind: "finish", dur: "10 min", temp: "—", text: "Kalt in dünne Scheiben schneiden, dann kurz im heißen Sud erwärmen.", bullets: ["Niemals heiß schneiden – zerfällt sonst"] },
+    ],
+    tips: ["Chashu nie heiß schneiden – erst vollständig auskühlen lassen.", "Den Sud als Ramen-Würze oder für marinierte Eier (Ajitama) verwenden.", "Nicht räuchern."],
+    proTip: "Chashu erst vollständig im Sud auskühlen lassen, bevor du schneidest – heiß zerfällt die Rolle, kalt schneidet sie sauber in dünne Scheiben, die im heißen Ramen zergehen.",
+    learn: ["Rollen & Binden", "Sanftes Schmoren im Sud", "Aromatisieren (Soja/Mirin/Sake)", "Im Sud reifen", "Dünn aufschneiden"],
   }),
   r({
     id: "buendnerfleisch", name: "Bündnerfleisch (Rind)", method: "kalt", cat: "Rind", diff: 3,
     time: "6–8 Wochen", pit: "15–20 °C", core: "", wood: "Buche (sehr dezent)", yield: "ca. 1 kg",
     blurb: "Mageres Rindfleisch, luftgetrocknet, klassisch eigentlich ungeräuchert – hier mit Hauch Rauch.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
+    origin: "🇨🇭 Bündnerfleisch stammt aus dem Schweizer Kanton Graubünden. Mageres Rind wird gewürzt, in Form gepresst und in klarer Bergluft luftgetrocknet – nie geräuchert. Hauchdünn geschnitten ein Alpen-Klassiker.",
+    authenticity: 8,
+    authenticityNote: "Original ist Bündnerfleisch ungeräuchert. Diese Version ist bewusst als leicht geräucherte Variante angelegt – schmeckt hervorragend, weicht aber vom reinen Original ab.",
     ingredients: [
       { a: "1,3 kg", i: "Rinderhüfte/Oberschale, mager pariert" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -147,6 +440,10 @@ const RECIPES = [
     id: "kalter-raeucherlachs", name: "Kaltgeräucherter Lachs", method: "kalt", cat: "Fisch", diff: 2,
     time: "2–3 Tage", pit: "unter 25 °C", core: "", wood: "Buche / Erle", yield: "1 Seite",
     blurb: "Seidiger Räucherlachs nach Skandi-Art: erst beizen, dann kalt räuchern.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",3,{de:"optional zum Nachtrocknen",en:"optional for further drying"}]],
+    origin: "🇳🇴 Kaltgeräucherter Lachs nach skandinavischer Art: erst gebeizt, dann kalt geräuchert – eine nordische Tradition.",
+    authenticity: 9,
+    authenticityNote: "Folgt der skandinavischen Räucherlachs-Tradition.",
     ingredients: [
       { a: "1", i: "Lachsseite mit Haut, entgrätet (Sushi-/Sashimi-Qualität)" },
       { a: "200 g : 100 g", i: "Meersalz : Zucker (Trockenbeize)" },
@@ -164,6 +461,7 @@ const RECIPES = [
     id: "bacon", name: "Bacon / Frühstücksspeck", method: "kalt", cat: "Speck", diff: 2,
     time: "2–3 Wochen", pit: "15–22 °C", core: "", wood: "Hickory / Buche", yield: "ca. 1,5 kg",
     blurb: "Hausgemachter Bacon aus dem Schweinebauch – knusprig gebraten unschlagbar.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
     ingredients: [
       { a: "1,8 kg", i: "Schweinebauch ohne Knochen, ohne Schwarte" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -178,11 +476,14 @@ const RECIPES = [
       { label: "Reifen", kind: "mature", dur: "2–3 Tage", temp: "kühl", text: "Vor dem Schneiden anfrieren – schneidet besser.", bullets: [] },
     ],
     tips: ["Roh nicht verzehren – Bacon immer durchbraten.", "Auch warm/heiß machbar: dann garziehen statt nur räuchern."],
+    proTip: "Kalträuchern gart nicht durch – dieser Bacon ist roh und muss vor dem Essen immer gebraten werden.",
+    learn: ["Trockenpökeln (NPS)", "Durchbrennen", "Pellicle bilden", "Kräftig kalträuchern", "Vor dem Schneiden anfrieren"],
   }),
   r({
     id: "raeucherspeck", name: "Bauchspeck (durchwachsen)", method: "kalt", cat: "Speck", diff: 2,
     time: "3–4 Wochen", pit: "15–20 °C", core: "", wood: "Buche + Wacholder", yield: "ca. 1,5 kg",
     blurb: "Deftiger geräucherter Bauchspeck – wie vom Bauernhof, zum Brotzeitbrett.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
     ingredients: [
       { a: "1,8 kg", i: "Schweinebauch mit Schwarte" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -196,11 +497,14 @@ const RECIPES = [
       { label: "Reifen", kind: "mature", dur: "1–2 Wochen", temp: "12–15 °C", text: "Durchziehen lassen.", bullets: [] },
     ],
     tips: ["Schwarte dranlassen – schützt und gibt Biss.", "Dünn geschnitten roh als Brotzeit oder ausgelassen zum Anbraten."],
+    proTip: "Die Schwarte dranlassen – sie schützt vor Austrocknung und gibt dem Speck seinen Biss.",
+    learn: ["Trockenpökeln (NPS)", "Durchbrennen", "Pellicle bilden", "Kräftig kalträuchern", "Nachreifen"],
   }),
   r({
     id: "mettenden", name: "Mettenden / Mettwurst", method: "kalt", cat: "Wurst", diff: 3,
     time: "2–3 Wochen", pit: "15–20 °C", core: "", wood: "Buche", yield: "ca. 1,5 kg",
     blurb: "Schnittfeste, geräucherte Rohwurst – würzig und herzhaft.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
     ingredients: [
       { a: "1,2 kg", i: "Schweinefleisch (mager)" },
       { a: "0,6 kg", i: "Rückenspeck" },
@@ -216,11 +520,14 @@ const RECIPES = [
       { label: "Trocknen / Reifen", kind: "mature", dur: "1–2 Wochen", temp: "14–16 °C", text: "Bis Schnittfestigkeit reifen (~25–30 % Verlust).", bullets: [] },
     ],
     tips: ["Rohwurst ist anspruchsvoll – Hygiene und Temperaturen ernst nehmen.", "Starterkulturen senken das Risiko deutlich."],
+    proTip: "Bei Rohwurst zählt jedes Grad und jede Minute Hygiene – kalt arbeiten (unter 5 °C), damit das Fett nicht schmiert und die Bindung hält.",
+    learn: ["Kalt wolfen & kuttern", "Fermentieren (Starterkultur)", "Umröten", "Kalträuchern in Gängen", "Trocknen zur Schnittfestigkeit"],
   }),
   r({
     id: "salami", name: "Salami (luftgetrocknet)", method: "kalt", cat: "Wurst", diff: 3,
     time: "4–6 Wochen", pit: "15–18 °C", core: "", wood: "Buche (dezent)", yield: "ca. 2 kg",
     blurb: "Edelschimmel-Salami: fermentiert, kalt geräuchert, luftgetrocknet.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
     ingredients: [
       { a: "1,4 kg", i: "Schweinefleisch (mager)" },
       { a: "0,6 kg", i: "Rückenspeck" },
@@ -236,11 +543,14 @@ const RECIPES = [
       { label: "Reifen / Trocknen", kind: "mature", dur: "4–6 Wochen", temp: "14–16 °C, 75–80 % rF", text: "Langsam trocknen bis ~30 % Verlust.", bullets: ["Weißer Edelschimmel erwünscht"] },
     ],
     tips: ["Klima konstant halten – zu schnelles Trocknen gibt Trockenrand.", "Starterkultur dringend empfohlen für Sicherheit."],
+    proTip: "Trockenrand (harter Rand, weicher Kern) ist der häufigste Salami-Fehler – lieber langsam und feucht reifen als schnell und trocken.",
+    learn: ["Fermentieren (pH-Absenkung)", "Starterkultur einsetzen", "Edelschimmel-Impfung", "Kalträuchern", "Reifen bis ~30 % Gewichtsverlust"],
   }),
   r({
     id: "raeucherkaese", name: "Räucherkäse", method: "kalt", cat: "Käse", diff: 1,
     time: "1 Tag + Reife", pit: "unter 25 °C", core: "", wood: "Buche / Erle / Kirsche", yield: "beliebig",
     blurb: "Gouda, Bergkäse oder Cheddar im Kaltrauch – schnelles, dankbares Projekt.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}]],
     ingredients: [
       { a: "500–800 g", i: "fester Käse am Stück (Gouda, Bergkäse, Cheddar)" },
     ],
@@ -255,6 +565,7 @@ const RECIPES = [
     id: "raeuchertofu", name: "Räuchertofu", method: "kalt", cat: "Vegetarisch", diff: 1,
     time: "1 Tag", pit: "unter 25 °C", core: "", wood: "Buche / Erle", yield: "beliebig",
     blurb: "Vegetarisch und schnell: marinierter, gepresster Tofu mit echtem Räucheraroma.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}]],
     ingredients: [
       { a: "400 g", i: "fester Naturtofu" },
       { a: "3 EL + je 1 TL", i: "Sojasauce, Knoblauch, Pfeffer (Marinade)" },
@@ -270,6 +581,7 @@ const RECIPES = [
     id: "raeuchersalz", name: "Räuchersalz", method: "kalt", cat: "Würzen & Extras", diff: 1,
     time: "4–8 h", pit: "unter 25 °C", core: "", wood: "Buche / Hickory", yield: "beliebig",
     blurb: "Würzbombe für die Küche: grobes Salz im Kaltrauch.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}]],
     ingredients: [ { a: "300 g", i: "grobes Meersalz" } ],
     phases: [
       { label: "Ausbreiten", kind: "prep", dur: "5 min", temp: "kalt", text: "Salz dünn auf Blech/Schale verteilen.", bullets: [] },
@@ -281,6 +593,7 @@ const RECIPES = [
     id: "raeucherknoblauch", name: "Geräucherter Knoblauch", method: "kalt", cat: "Würzen & Extras", diff: 1,
     time: "4–6 h", pit: "unter 25 °C", core: "", wood: "Buche / Kirsche", yield: "beliebig",
     blurb: "Aromatischer Knoblauch fürs Würzen – mild und rauchig.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}]],
     ingredients: [ { a: "4–6 Stück", i: "ganze Knoblauchknollen" } ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "5 min", temp: "kühl", text: "Knollen halbieren oder ganz lassen.", bullets: [] },
@@ -294,6 +607,7 @@ const RECIPES = [
     id: "warm-forelle", name: "Warmgeräucherte Forelle", method: "warm", cat: "Fisch", diff: 2,
     time: "1 Tag + 3 h", pit: "30–45 °C → kurz 60 °C", core: "63 °C", wood: "Buche / Erle", yield: "4 Forellen",
     blurb: "Besonders saftig: erst lange warm, am Ende kurz heißer zum Garziehen.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [
       { a: "4", i: "Forellen, ausgenommen" },
       { a: "60 g/l", i: "Salz (Nasslake)" },
@@ -306,11 +620,14 @@ const RECIPES = [
       { label: "Garziehen", kind: "cook", dur: "20–40 min", temp: "kurz auf 60–70 °C", text: "Zum Schluss heißer, bis Kern 63 °C erreicht.", bullets: ["Rückenflosse löst sich leicht = gar"] },
     ],
     tips: ["Warm + Finish heiß ist der saftigste Kompromiss.", "Erle gibt den klassischen Fisch-Räucherton."],
+    proTip: "Erst niedrig warmräuchern, dann kurz heiß garziehen – so bleibt die Forelle saftig statt trocken.",
+    learn: ["Salzlake ansetzen", "Pellicle bilden", "Warmräuchern", "Garziehen auf Kerntemperatur"],
   }),
   r({
     id: "warm-kassler", name: "Warmgeräuchertes Kassler", method: "warm", cat: "Schwein", diff: 2,
     time: "1 Woche + 3 h", pit: "40–55 °C", core: "65 °C", wood: "Buche", yield: "ca. 1,5 kg",
     blurb: "Gepökeltes Kotelett/Karree, warm geräuchert – das Original für Sauerkraut & Co.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [
       { a: "1,8 kg", i: "Schweinekarree/Kotelett" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -324,11 +641,14 @@ const RECIPES = [
       { label: "Garziehen", kind: "cook", dur: "1 h", temp: "70–80 °C", text: "Auf Kern 65 °C bringen.", bullets: ["Danach gekühlt aufschneiden"] },
     ],
     tips: ["Kassler kann roh verarbeitet weiterverwendet werden (es ist gegart).", "Klassisch zu Kraut, Erbspüree oder als Schnitte."],
+    proTip: "Kassler ist bereits gepökelt – beim Warmräuchern zählt nur, den Kern schonend auf 65 °C zu bringen, ohne dass es trocken wird. Nicht über 55 °C Garraum treiben.",
+    learn: ["Gepökeltes Fleisch verstehen", "Warmräuchern (schonend)", "Auf 65 °C garziehen", "Gekühlt aufschneiden"],
   }),
   r({
     id: "warm-raclette", name: "Warmgeräucherter Käse (mild)", method: "warm", cat: "Käse", diff: 1,
     time: "2–3 h", pit: "30–40 °C", core: "", wood: "Buche / Kirsche", yield: "beliebig",
     blurb: "Für weichere Käse, die etwas Wärme vertragen – cremiger Rauchton.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [ { a: "500 g", i: "halbfester Käse (Raclette, junger Gouda)" } ],
     phases: [
       { label: "Antrocknen", kind: "prep", dur: "30 min", temp: "kühl", text: "Oberfläche trocknen.", bullets: [] },
@@ -343,6 +663,7 @@ const RECIPES = [
     id: "raeucherforelle", name: "Klassische Räucherforelle", method: "heiss", cat: "Fisch", diff: 1,
     time: "1 Tag + 1,5 h", pit: "80–110 °C", core: "63 °C", wood: "Erle / Buche", yield: "4 Forellen",
     blurb: "Der Räucher-Klassiker schlechthin – goldgelb, saftig, in unter zwei Stunden gar.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "4", i: "Forellen, ausgenommen" },
       { a: "60 g/l", i: "Salz (Nasslake 6 %)" },
@@ -350,15 +671,19 @@ const RECIPES = [
     ],
     phases: [
       { label: "Salzlake", kind: "cure", dur: "8–12 h", temp: "0–7 °C", text: "In 6 %-Lake legen, kühlen.", bullets: ["Pro Liter Wasser 60 g Salz"] },
-      { label: "Trocknen", kind: "dry", dur: "1–2 h", temp: "luftig", text: "Abspülen, aufhängen, Haut antrocknen.", bullets: ["Wichtig für Farbe und Glanz"] },
-      { label: "Heiß räuchern", kind: "smoke", dur: "30–60 min", temp: "80–110 °C", text: "Erst ohne, dann mit Räuchermehl/Chips. Garen bis Kern 63 °C.", bullets: ["Rückenflosse lässt sich leicht ziehen = gar", "Bauchlappen mit Zahnstocher spreizen"] },
+      { label: "Trocknen", kind: "dry", dur: "1–2 h", temp: "10–18 °C, luftig", text: "Abspülen, trocken tupfen und frei aufhängen, bis die Oberfläche trocken und leicht klebrig (Pellicle) ist.", bullets: ["Rauch haftet nur auf trockener Oberfläche optimal", "Keine direkte Sonneneinstrahlung"] },
+      { label: "Heißräuchern", kind: "smoke", dur: "30–60 min", temp: "80–110 °C", text: "Erst ohne, dann mit Räuchermehl/Chips. Garen bis Kerntemperatur 63 °C.", bullets: ["Fertig, wenn: Rückenflosse leicht herausziehbar oder Kern 63 °C", "Deckel möglichst geschlossen halten", "Buche als Standard, Erle für klassischen Fischgeschmack"] },
+      { label: "Ruhen", kind: "rest", dur: "15–30 min", temp: "—", text: "Forelle nach dem Räuchern ruhen lassen. Der Fleischsaft verteilt sich gleichmäßig und die Haut löst sich leichter.", bullets: [] },
     ],
-    tips: ["Im WSM ohne Wasserschale arbeiten, damit es heiß genug wird.", "Forellen am Schwanz aufhängen oder auf gut geöltes Gitter legen."],
+    tips: ["Im WSM ohne Wasserschale räuchern. Die höhere Garraumtemperatur sorgt für eine knusprigere Haut.", "Forellen vor dem Räuchern gut trocken tupfen.", "Nicht zu dicht nebeneinander aufhängen.", "Bauch mit Holzspieß spreizen.", "Forellen am Schwanz aufhängen oder auf gut geöltes Gitter legen."],
+    proTip: "Rauch haftet nur auf trockener Haut – der Pellicle (matt-klebrige Oberfläche) entscheidet über Farbe und Aroma, nicht die Rauchmenge.",
+    learn: ["Salzlake ansetzen", "Pellicle bilden", "Heißräuchern", "Garprobe (Flossentest)", "Ruhen"],
   }),
   r({
     id: "raeuchermakrele", name: "Geräucherte Makrele", method: "heiss", cat: "Fisch", diff: 1,
     time: "1 Tag + 1 h", pit: "90–110 °C", core: "65 °C", wood: "Buche / Erle", yield: "4 Stück",
     blurb: "Fett und aromatisch – nimmt Rauch wunderbar auf, kaum zu trocken zu bekommen.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "4", i: "Makrelen, ausgenommen" },
       { a: "60 g/l", i: "Salz (Lake)" },
@@ -370,11 +695,14 @@ const RECIPES = [
       { label: "Heiß räuchern", kind: "smoke", dur: "45–60 min", temp: "90–110 °C", text: "Garen bis Kern 65 °C.", bullets: [] },
     ],
     tips: ["Durch hohen Fettgehalt sehr gutmütig – ideal für Anfänger."],
+    proTip: "Der hohe Fettgehalt verzeiht fast alles – Makrele ist der perfekte erste Räucherfisch.",
+    learn: ["Salzlake ansetzen", "Pellicle bilden", "Heißräuchern", "Garprobe (Kerntemperatur)"],
   }),
   r({
     id: "heiss-lachs", name: "Heißgeräucherter Lachs", method: "heiss", cat: "Fisch", diff: 2,
     time: "1 Tag + 1,5 h", pit: "70–90 °C", core: "60 °C", wood: "Erle / Kirsche", yield: "1 Seite",
     blurb: "Flockig-saftig, mit feinem Rauch – wunderbar warm oder kalt.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "1", i: "Lachsseite mit Haut, entgrätet" },
       { a: "200 g : 100 g", i: "Salz : Zucker (Trockenbeize)" },
@@ -386,11 +714,14 @@ const RECIPES = [
       { label: "Heiß räuchern", kind: "smoke", dur: "45–90 min", temp: "70–90 °C", text: "Sanft garen bis Kern 60 °C.", bullets: ["Nicht überhitzen – sonst tritt weißes Eiweiß aus"] },
     ],
     tips: ["Auf der Haut räuchern – hält den Fisch zusammen.", "60 °C Kern gibt den saftigsten Punkt."],
+    proTip: "Unter 90 °C bleiben – wird der Lachs zu heiß, tritt weißes Eiweiß (Albumin) aus und er wird trocken.",
+    learn: ["Trockenbeizen (Salz/Zucker)", "Pellicle bilden", "Heißräuchern", "Kerntemperatur 60 °C treffen"],
   }),
   r({
     id: "raeucherhaehnchen", name: "Räucherhähnchen (ganz)", method: "heiss", cat: "Geflügel", diff: 2,
     time: "1 Tag + 3 h", pit: "120–140 °C", core: "75 °C (Brust)", wood: "Kirsche / Apfel", yield: "1 Hähnchen",
     blurb: "Knusprige Haut, saftiges Fleisch – durch Trockenpökeln (Dry Brine) perfekt gewürzt.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "1", i: "Hähnchen (1,5–1,8 kg)" },
       { a: "12 g/kg", i: "Salz (Dry Brine)" },
@@ -402,11 +733,14 @@ const RECIPES = [
       { label: "Heiß räuchern", kind: "smoke", dur: "2–3 h", temp: "120–140 °C", text: "Garen bis Brust 75 °C, Keule 80–85 °C.", bullets: ["Geflügel braucht höhere Pit-Temp für knusprige Haut", "Wasserschale leer/heiß lassen"] },
     ],
     tips: ["Geflügel nie unter 75 °C Kern – Salmonellengefahr.", "Apfel-/Kirschholz passt mild zu hellem Fleisch."],
+    proTip: "Trockenpökeln (Dry Brine) über Nacht mit offener Lagerung im Kühlschrank trocknet die Haut – das ist das Geheimnis knuspriger statt gummiger Räucherhaut.",
+    learn: ["Trockenpökeln (Dry Brine)", "Haut trocknen", "Heißräuchern", "Kerntemperatur 75 °C (Sicherheit)", "Ruhen"],
   }),
   r({
     id: "beer-can-chicken", name: "Beer Can Chicken", method: "heiss", cat: "Geflügel", diff: 1,
     time: "2,5 h", pit: "140–160 °C", core: "75 °C (Brust)", wood: "Apfel / Buche", yield: "1 Hähnchen",
     blurb: "Hähnchen aufrecht auf der Dose – Dampf von innen, Rauch von außen.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "1", i: "Hähnchen (1,5 kg)" },
       { a: "1", i: "halbvolle Bierdose (oder Halter mit Brühe)" },
@@ -418,11 +752,14 @@ const RECIPES = [
       { label: "Heiß räuchern", kind: "smoke", dur: "2–2,5 h", temp: "140–160 °C", text: "Garen bis Brust 75 °C.", bullets: ["Dampf hält das Fleisch saftig"] },
     ],
     tips: ["Einfach und gelingsicher – top für Gäste.", "Standfest aufstellen, sonst kippt es."],
+    proTip: "Der Dampf aus der Dose hält das Fleisch saftig, während die aufrechte Form die Haut rundum knusprig werden lässt – Geschmack kommt vom Rub, kaum vom Bier.",
+    learn: ["Würzen (Rub)", "Aufrecht aufsetzen", "Heißräuchern mit Dampf", "Kerntemperatur 75 °C treffen"],
   }),
   r({
     id: "raeucherente", name: "Geräucherte Entenbrust", method: "heiss", cat: "Geflügel", diff: 2,
     time: "1 Tag + 1,5 h", pit: "120–140 °C", core: "62 °C (rosa)", wood: "Kirsche / Buche", yield: "2 Stück",
     blurb: "Rosa gegart, kräftig im Aroma – Haut rautenförmig eingeschnitten.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "2", i: "Entenbrüste" },
       { a: "12 g/kg", i: "Salz" },
@@ -433,11 +770,14 @@ const RECIPES = [
       { label: "Heiß räuchern", kind: "smoke", dur: "60–90 min", temp: "120–140 °C", text: "Garen bis Kern 62 °C für rosa.", bullets: ["Haut zum Schluss scharf nachbraten für Knusprigkeit"] },
     ],
     tips: ["Rosa bei 62 °C, durch bei 70 °C.", "Honig-Orangen-Glasur passt hervorragend."],
+    proTip: "Entenbrust ist kein Geflügel-Standard: Sie darf rosa bleiben (62 °C). Haut rautenförmig einschneiden und zum Schluss scharf nachbraten – so läuft das Fett aus und die Haut wird knusprig.",
+    learn: ["Haut einschneiden", "Dry Brine", "Heißräuchern auf 62 °C (rosa)", "Haut knusprig nachbraten"],
   }),
   r({
     id: "raeuchergarnelen", name: "Geräucherte Garnelen", method: "heiss", cat: "Fisch", diff: 1,
     time: "1 h", pit: "100–120 °C", core: "—", wood: "Kirsche / Erle", yield: "ca. 500 g",
     blurb: "In Minuten fertig, perfekt als Vorspeise oder Salat-Topping.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "500 g", i: "große Garnelen, geschält, entdarmt" },
       { a: "2–3 EL", i: "Olivenöl, Knoblauch, Paprika, Salz" },
@@ -454,23 +794,34 @@ const RECIPES = [
     id: "pulled-pork", name: "Pulled Pork", method: "bbq", cat: "Schwein", diff: 2,
     time: "12–16 h", pit: "110–120 °C", core: "92–94 °C", wood: "Hickory / Apfel", yield: "ca. 2,5 kg",
     blurb: "Der WSM-Klassiker: Schweinenacken stundenlang bis butterzart, dann gezupft.",
+    origin: "🇺🇸 Pulled Pork stammt aus dem Süden der USA (Carolinas) und ist ein Eckpfeiler des amerikanischen Barbecue. Der Schweinenacken wird über Stunden low & slow geräuchert, bis er sich zupfen lässt.",
+    authenticity: 9.5,
+    authenticityNote: "Folgt dem klassischen US-Southern-BBQ. Kaum angepasst – im WSM gelingt es originalgetreu.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode für stabile Low-&-Slow-Hitze",en:"Snake method for stable low & slow heat"}],["gas",3,{de:"nur mit Räucherbox",en:"only with a smoker box"}],["dutch",0],["dehydrator",0]],
     ingredients: [
       { a: "3 kg", i: "Schweinenacken (Boston Butt), mit Fettdeckel" },
       { a: "2 EL + 4 EL", i: "Senf (Binder) + BBQ-Rub (Paprika, Zucker, Salz, Pfeffer, Knoblauch)" },
     ],
     phases: [
-      { label: "Würzen", kind: "prep", dur: "1–12 h", temp: "Kühlschrank", text: "Dünn mit Senf einstreichen, kräftig rubben, ruhen lassen.", bullets: ["Über Nacht würzen vertieft den Geschmack"] },
-      { label: "Räuchern", kind: "smoke", dur: "6–8 h", temp: "110–120 °C", text: "Mit Minion-Methode + Wasserschale anlegen, räuchern bis Bark steht.", bullets: ["Stabile Glut über Minion-Ring", "Wasserschale puffert die Temperatur"] },
-      { label: "Texas Crutch (Stall)", kind: "cook", dur: "3–5 h", temp: "110–120 °C", text: "Bei ~68 °C Kern (Stall) in Folie/Butcher Paper wickeln, weitergaren.", bullets: ["Folie bricht den Stall und beschleunigt", "Butcher Paper hält die Bark knuspriger"] },
-      { label: "Ziehen lassen", kind: "rest", dur: "1–2 h", temp: "Kühlbox", text: "Bei 92–94 °C Kern entnehmen, eingewickelt in Kühlbox ruhen lassen.", bullets: ["Ruhephase macht es erst richtig saftig"] },
-      { label: "Pullen", kind: "finish", dur: "15 min", temp: "—", text: "Mit Krallen/Gabeln zerzupfen, mit Saft und etwas Sauce mischen.", bullets: ["Knochen muss sich leicht lösen lassen"] },
+      { label: "Würzen", kind: "prep", dur: "1–12 h", temp: "Kühlschrank", text: "Dünn mit Senf einstreichen, kräftig rubben, ruhen lassen.", bullets: ["Über Nacht würzen vertieft den Geschmack", "Fettdeckel nicht entfernen – er schützt das Fleisch während der langen Garzeit"] },
+      { label: "Räuchern", kind: "smoke", dur: "6–8 h", temp: "110–120 °C", text: "Mit Minion-Methode + Wasserschale anlegen, räuchern bis Bark steht.", bullets: ["Rauch ist nur in den ersten 3–5 Stunden entscheidend", "Deckel möglichst geschlossen halten", "Bark entsteht durch Zeit, Rauch und trockene Hitze – nicht durch mehr Rub"] },
+      { label: "Texas Crutch (Stall)", kind: "cook", dur: "3–5 h", temp: "110–120 °C", text: "Bei ~68 °C Kern (Stall) in Folie/Butcher Paper wickeln, weitergaren.", bullets: ["Butcher Paper = festere Bark", "Alufolie = schneller & saftiger"] },
+      { label: "Ruhephase", kind: "rest", dur: "1–2 h", temp: "Kühlbox", text: "Bei 92–94 °C Kern entnehmen, eingewickelt in Kühlbox ruhen lassen.", bullets: ["Mindestens 1 Stunde ruhen lassen – je länger, desto saftiger"] },
+      { label: "Pullen", kind: "finish", dur: "15 min", temp: "—", text: "Mit Krallen/Gabeln zerzupfen.", bullets: ["Fleisch mit dem aufgefangenen Fleischsaft vermengen", "Überschüssiges Fett aussortieren", "Erst jetzt bei Bedarf nachwürzen"] },
+      { label: "Servieren", kind: "finish", dur: "—", temp: "—", text: "Klassisch im Brioche Bun.", bullets: ["Coleslaw · BBQ-Sauce · Essiggurken · Pickled Onions"] },
     ],
     tips: ["Kerntemperatur entscheidet, nicht die Uhr – plane Puffer ein.", "Wasserschale im WSM macht die lange Temperaturführung kinderleicht."],
+    proTip: "Pulled Pork wird nicht nach der Uhr fertig, sondern wenn sich die Temperatursonde ohne Widerstand einstechen lässt – „wie in warme Butter\".",
+    learn: ["Minion-Methode", "Stall verstehen", "Texas Crutch", "Kerntemperatur beurteilen", "Ruhephase", "Pullen"],
   }),
   r({
     id: "baby-back-ribs", name: "Baby Back Ribs (2-2-1)", method: "bbq", cat: "Schwein", diff: 2,
     time: "5–6 h", pit: "110–120 °C", core: "—", wood: "Apfel / Kirsche", yield: "2 Leitern",
     blurb: "Zarte Kotelettrippchen nach der bewährten 2-2-1-Methode.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇺🇸 Baby Back Ribs sind ein US-BBQ-Klassiker aus dem oberen Rippenbereich. Die 2-2-1-Methode ist die verbreitete Heimversion für zartes, glasiertes Ergebnis.",
+    authenticity: 9,
+    authenticityNote: "Folgt der gängigen US-BBQ-Praxis. Die 2-2-1-Zeiten sind für den WSM präzisiert.",
     ingredients: [
       { a: "2", i: "Leitern Baby Back Ribs" },
       { a: "2 EL + 4 EL", i: "Senf + Rub, Butter, brauner Zucker, Honig, BBQ-Sauce" },
@@ -482,11 +833,17 @@ const RECIPES = [
       { label: "Glasieren", kind: "finish", dur: "1 h", temp: "110–120 °C", text: "Auspacken, mit Sauce glasieren, antrocknen lassen.", bullets: ["Bend-Test: Ribs biegen und reißen leicht an"] },
     ],
     tips: ["Baby Backs sind kleiner als Spareribs – daher 2-2-1 statt 3-2-1.", "Glasur erst zum Schluss – Zucker verbrennt sonst."],
+    proTip: "Der Biegetest schlägt jede Uhr: Hebt man die Leiter mit der Zange an und die Oberfläche reißt leicht auf, sind die Ribs perfekt.",
+    learn: ["Silberhaut entfernen", "Rubben", "2-2-1-Methode (Dämpfphase)", "Glasieren", "Biegetest"],
   }),
   r({
     id: "spareribs", name: "Spareribs St. Louis (3-2-1)", method: "bbq", cat: "Schwein", diff: 2,
     time: "6 h", pit: "110–120 °C", core: "—", wood: "Hickory / Apfel", yield: "2 Leitern",
     blurb: "Die kräftigeren Bauchrippen – nach 3-2-1 fallen sie fast vom Knochen.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇺🇸 St.-Louis-Cut Spareribs sind ein Herzstück des amerikanischen BBQ. Die 3-2-1-Methode ist der Klassiker für fall-off-bone-Rippchen.",
+    authenticity: 9,
+    authenticityNote: "Folgt der klassischen US-BBQ-Methode, Zeiten für den WSM präzisiert.",
     ingredients: [
       { a: "2", i: "Leitern Spareribs (St. Louis Cut)" },
       { a: "2 EL + 4 EL", i: "Senf + Rub, Butter, Zucker, Honig, Apfelsaft, BBQ-Sauce" },
@@ -498,11 +855,17 @@ const RECIPES = [
       { label: "Glasieren", kind: "finish", dur: "1 h", temp: "110–120 °C", text: "Auspacken, glasieren, antrocknen.", bullets: [] },
     ],
     tips: ["3-2-1 ist sehr weich (fall-off-bone); für mehr Biss 3-1-1 probieren."],
+    proTip: "Die mittlere Ziffer (die Folienphase) steuert die Zartheit – kürzer = mehr Biss, länger = fall-off-bone. Danach dosierst du deine perfekte Rippe.",
+    learn: ["Silberhaut entfernen", "Rubben", "3-2-1-Methode", "Dämpfphase steuern", "Glasieren"],
   }),
   r({
     id: "brisket", name: "Beef Brisket", method: "bbq", cat: "Rind", diff: 3,
     time: "12–18 h", pit: "110–120 °C", core: "90–96 °C", wood: "Eiche / Hickory", yield: "ca. 4 kg",
     blurb: "Die Königsdisziplin: ganze Rinderbrust, Geduld und Gefühl.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇺🇸 Das Brisket ist die Königsdisziplin des Texas BBQ. Die ganze Rinderbrust wird über Stunden bei niedriger Hitze geräuchert, klassisch nur mit Salz und Pfeffer (Texas-Style) – Geduld und Gefühl entscheiden.",
+    authenticity: 9.5,
+    authenticityNote: "Folgt dem Texas-Style BBQ: nur Salz und Pfeffer, low & slow über Stunden. Kaum angepasst – so wird es auch in Texas gemacht.",
     ingredients: [
       { a: "5 kg", i: "Brisket (Packer Cut, Flat + Point)" },
       { a: "je 3 EL", i: "grobes Salz + grober Pfeffer (Texas-Style)" },
@@ -515,11 +878,17 @@ const RECIPES = [
       { label: "Schneiden", kind: "finish", dur: "15 min", temp: "—", text: "Quer zur Faser schneiden, Point und Flat getrennt.", bullets: ["Faserrichtung wechselt zwischen Flat und Point"] },
     ],
     tips: ["Brisket verzeiht wenig – Thermometer und Geduld sind Pflicht.", "Gar ist es nach Gefühl (Probe), nicht nach Uhr."],
+    proTip: "Nicht in Panik durch den Stall wickeln zu früh – erst wenn die gewünschte Bark steht, in Butcher Paper wickeln, sonst weicht die Kruste auf.",
+    learn: ["Trimmen (Fettkappe)", "Rubben", "Stall verstehen", "Wickeln (Butcher Paper)", "Ruhen (mind. 1 h)"],
   }),
   r({
     id: "burnt-ends", name: "Pork Belly Burnt Ends", method: "bbq", cat: "Schwein", diff: 2,
     time: "5–6 h", pit: "120 °C", core: "95 °C", wood: "Hickory / Kirsche", yield: "ca. 1,5 kg",
     blurb: "Klebrig-süße Schweinebauch-Würfel – „Meat Candy“.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇺🇸 Burnt Ends stammen aus Kansas City und galten einst als Abschnitt-Reste vom Brisket. Heute sind die glasierten, karamellisierten Würfel eine BBQ-Delikatesse („Meat Candy“).",
+    authenticity: 9.5,
+    authenticityNote: "Folgt der Kansas-City-Tradition. Hier mit Schweinebauch statt Brisket-Point – eine gängige Variante.",
     ingredients: [
       { a: "1,5 kg", i: "Schweinebauch, in 4 cm Würfel" },
       { a: "3–4 EL", i: "Rub, Butter, brauner Zucker, Honig, BBQ-Sauce" },
@@ -531,11 +900,17 @@ const RECIPES = [
       { label: "Glasieren", kind: "finish", dur: "30 min", temp: "120 °C", text: "Offen einreduzieren bis klebrig.", bullets: [] },
     ],
     tips: ["Funktioniert auch mit Brisket-Point (Beef Burnt Ends)."],
+    proTip: "Erst Bark aufbauen, dann würfeln – wer zu früh schneidet, verliert die karamellisierte Kruste, die Burnt Ends erst zu „Meat Candy“ macht.",
+    learn: ["Bauch würfeln", "Rubben", "Räuchern bis Bark", "Glasieren & einkochen", "Klebrig karamellisieren"],
   }),
   r({
     id: "beef-short-ribs", name: "Beef Short Ribs", method: "bbq", cat: "Rind", diff: 3,
     time: "8–10 h", pit: "110–120 °C", core: "94–96 °C", wood: "Eiche / Hickory", yield: "ca. 2 kg",
     blurb: "Die „Dino-Ribs“ – fleischige Rinderrippen, butterzart und kräftig.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇺🇸 Beef Short Ribs sind der Star des Texas-BBQ – „Dino Ribs“. Nur mit Salz und Pfeffer über Stunden geräuchert, bis das Kollagen schmilzt.",
+    authenticity: 9.5,
+    authenticityNote: "Folgt dem Texas-Style. Kaum angepasst.",
     ingredients: [
       { a: "2,5 kg", i: "Beef Short Ribs (Plate, 3-Knochen)" },
       { a: "je 2 EL", i: "Salz + grober Pfeffer" },
@@ -547,11 +922,17 @@ const RECIPES = [
       { label: "Ruhen", kind: "rest", dur: "45 min", temp: "warm", text: "Kurz ruhen lassen.", bullets: [] },
     ],
     tips: ["Saftigstes Rindfleisch vom Smoker – sehr nachsichtig.", "Texas-Style nur Salz/Pfeffer reicht völlig."],
+    proTip: "Short Ribs sind gar, wenn die Sonde zwischen den Knochen wie in Butter gleitet (94–96 °C) – hier zählt Gefühl mehr als eine Zielzahl.",
+    learn: ["Trimmen", "Salz/Pfeffer-Rub (Texas)", "Räuchern", "Kerntemperatur & Fühltest", "Ruhen"],
   }),
   r({
     id: "pastrami", name: "Pastrami", method: "bbq", cat: "Rind", diff: 3,
     time: "1 Woche + 8 h", pit: "110–120 °C", core: "90 °C", wood: "Eiche / Kirsche", yield: "ca. 2 kg",
     blurb: "Gepökeltes Rinderbrust (Flat), würzig ummantelt, geräuchert und gedämpft.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇺🇸 Pastrami hat seine Wurzeln in Rumänien und wurde von jüdischen Einwanderern nach New York gebracht. Gepökeltes Rind wird in einer Pfeffer-Koriander-Kruste geräuchert und gedämpft – der Star jedes New Yorker Delis.",
+    authenticity: 9,
+    authenticityNote: "Folgt der jüdisch-New-Yorker Deli-Tradition (Pökeln, Pfeffer-Koriander-Kruste, Räuchern, Dämpfen). Angepasst nur bei Salz (NPS) für sichere Herstellung.",
     ingredients: [
       { a: "2,5 kg", i: "Brisket Flat" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS) für die Pökellake" },
@@ -565,6 +946,8 @@ const RECIPES = [
       { label: "Schneiden", kind: "finish", dur: "10 min", temp: "—", text: "Dünn quer zur Faser schneiden.", bullets: [] },
     ],
     tips: ["Aufwendig, aber jeder Schritt zahlt ein.", "Auf Roggenbrot mit Senf = New-York-Deli-Klassiker."],
+    proTip: "Der Dämpf-Schritt am Ende ist das Geheimnis – er macht das gepökelte Brisket erst zart und saftig, wie beim New Yorker Deli.",
+    learn: ["Pökeln (Corned Beef)", "Wässern & Pfefferkruste", "Räuchern", "Dämpfen", "Quer zur Faser schneiden"],
   }),
 
   /* ============================ GRUNDLAGEN ============================ */
@@ -672,6 +1055,10 @@ const RECIPES = [
     id: "biltong-klassisch", name: "Biltong (klassisch)", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
     time: "4–7 Tage", pit: "20–30 °C (Raumtemperatur) oder DA506 35–40 °C", core: "Außen trocken, innen leicht rosa", wood: "Graef DA506 oder Trockenkammer", yield: "ca. 400 g/kg",
     blurb: "Südafrikanisches Trockenfleisch – intensiv gewürzt, ohne Pökelsalz, traditionell luftgetrocknet.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
+    origin: "🇿🇦 Biltong stammt von den Voortrekkern Südafrikas, die Fleisch mit Salz, Essig und Koriander haltbar machten, um lange Wege zu überstehen. Anders als amerikanisches Jerky wird Biltong nicht gegart, sondern luftgetrocknet – und mit Essig statt Rauch konserviert.",
+    authenticity: 9.5,
+    authenticityNote: "Orientiert sich eng an der südafrikanischen Tradition: Essig, Salz und Koriander, luftgetrocknet ohne Rauch. Sehr nah am Original.",
     ingredients: [
       { a: "1 kg", i: "Rindfleisch (Oberschale oder Silverside, mager, pariert)" },
       { a: "60 ml", i: "brauner Malzessig oder Apfelessig" },
@@ -691,12 +1078,18 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl, trocken", text: "In Papier einwickeln und im Kühlschrank lagern oder vakuumieren.", bullets: ["Feucht-Biltong: 1–2 Wochen; trockenes Biltong: 4–6 Wochen", "NICHT luftdicht bei feuchtem Biltong – schimmelt sonst"] },
     ],
     tips: ["Koriandersamen trocken in der Pfanne rösten bis sie duften – das ist der Schlüssel zum Geschmack.", "Backpulver ist traditionell und zart macht das Fleisch – nicht weglassen.", "Die Stärke 20–25 mm ist wichtig: dünner wird es zu trocken wie Jerky, nicht wie Biltong.", "Weber-Variante: im WSM bei geschlossenen Lüftungen als 'Kalttrockner' nutzen – kein Feuer, nur Belüftung."],
+    proTip: "Biltong kommt ohne Pökelsalz aus – Essig senkt den pH und schützt, während kühle, luftige Trocknung den Rest macht. Nach Vorliebe rosa-feucht oder durchgetrocknet.",
+    learn: ["Beizen (Essig/Gewürz)","Luftig trocknen","Biegetest","Reifegrad wählen"],
   }),
 
   r({
     id: "biltong-weber", name: "Biltong im Weber Kugelgrill", method: "grill", cat: "Biltong & Südafrika", diff: 3,
     time: "3–5 Tage", pit: "Kein Feuer – Raumtemperatur + Belüftung", core: "Außen trocken, innen rosa", wood: "Weber Kugelgrill 57 cm (als Trocknungskammer)", yield: "ca. 400 g/kg",
     blurb: "Der Weber Kugelgrill als Trocknungskammer – kein Feuer, nur Belüftung. Perfekt bei 20–25 °C.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
+    origin: "🇿🇦 Biltong ist Südafrikas berühmtester Fleischsnack – luftgetrocknet mit Essig und Koriander. Hier im Weber-Kugelgrill als Trockenkammer.",
+    authenticity: 9,
+    authenticityNote: "Folgt der südafrikanischen Biltong-Tradition, umgesetzt im Kugelgrill.",
     ingredients: [
       { a: "1 kg", i: "Rindfleisch (Oberschale), 20–25 mm dick geschnitten" },
       { a: "60 ml", i: "Malzessig" },
@@ -710,12 +1103,18 @@ const RECIPES = [
       { label: "Fertig-Test", kind: "finish", dur: "—", temp: "—", text: "Streifen biegen: Außen fest und dunkel, innen leicht rosa und nachgebend. Für trockenes Biltong: komplett fest.", bullets: [] },
     ],
     tips: ["Der Weber-Trick: Die Kuppelform erzeugt einen natürlichen Kaminzug – perfekte Luftzirkulation.", "Im Sommer draußen aufstellen (Schatten), im Winter drinnen – Temperatur entscheidet.", "Optional: Ein Stückchen Holzkohle-Brikettasche unten für minimalen Rauch (kalt, kein Feuer!)."],
+    proTip: "Der Weber wird zur Trockenkammer: Deckel- und Bodenventile weit offen für Durchzug, kein Feuer – ein Fliegengitter über den Lüftungen hält Insekten fern.",
+    learn: ["Beizen (Essig/Gewürz)","Weber als Trockenkammer","Belüftung steuern","Biegetest"],
   }),
 
   r({
     id: "boerewors", name: "Boerewors (Südafrikanische Bratwurst)", method: "grill", cat: "Biltong & Südafrika", diff: 3,
     time: "2 h Herstellung + 20 min Grillen", pit: "direkt: 180–220 °C", core: "72 °C Kerntemperatur", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Das südafrikanische Nationalwurstgericht – Rind+Schweinefett, Koriander, Nelken, im Spiral gegrillt.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
+    origin: "🇿🇦 Boerewors („Bauernwurst“ auf Afrikaans) ist Südafrikas Nationalwurst und fester Bestandteil jedes Braai (Grillfests). Charakteristisch sind der grobe Wolf, viel Koriander und die aufgerollte Spiralform auf dem Rost.",
+    authenticity: 9.5,
+    authenticityNote: "Folgt der südafrikanischen Braai-Tradition: grober Wolf, viel Koriander, Spiralform. Kaum angepasst.",
     ingredients: [
       { a: "800 g", i: "Rindfleisch (Schulter oder Wade, mager)" },
       { a: "200 g", i: "Schweinespeck oder Rinderfett (NICHT weglassen!)" },
@@ -737,6 +1136,8 @@ const RECIPES = [
       { label: "Grillen", kind: "direct", dur: "15–20 min", temp: "180–220 °C direkt", text: "Als Spirale direkt auf den Grill. Einmal wenden. Wurst soll leicht aufplatzen – das ist erwünscht.", bullets: ["NIEMALS aufstechen vor dem Grillen", "Weber: Grillrost direkt über Kohlen", "Gasgrill: mittlere-hohe Hitze, Deckel offen", "Kerntemperatur 72 °C – Garprobe"] },
     ],
     tips: ["Das Fett ist NICHT optional – Boerewors ohne Fett ist trocken und nicht authentisch.", "Das 'Aufplatzen' ist Teil der Boerewors-Erfahrung – kein Fehler.", "Traditionell mit 'Pap' (Maismehlbrei) und Chakalaka-Relish servieren.", "Niemals einfrieren wenn bereits angetaut – immer frisch greifen."],
+    proTip: "Boerewors wird nie abgedreht, sondern in einer Spirale gegrillt – so gart sie gleichmäßig und reißt nicht. Grober Wolf und viel Koriander sind Pflicht.",
+    learn: ["Grob wolfen","In Spirale füllen","Direkt grillen","Kern 72 °C"],
   }),
 
   /* ============================ GRILL & SPIEß ============================ */
@@ -745,6 +1146,7 @@ const RECIPES = [
     id: "haenchen-rotisserie", name: "Hähnchen am Spieß (Rotisserie)", method: "grill", cat: "Geflügel am Spieß", diff: 2,
     time: "1,5–2 h", pit: "indirekt 180–200 °C", core: "82 °C (Oberschenkel)", wood: "Weber Kugelgrill + Rotisserie-Set oder Rössle Gasgrill",
     blurb: "Knusprig-saftiges Rotisserie-Hähnchen – das Beste, was du mit einem Grill machen kannst.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "ganzes Hähnchen (1,5–1,8 kg)" },
       { a: "je 1 TL", i: "grobes Meersalz, Pfeffer, Paprika" },
@@ -759,12 +1161,18 @@ const RECIPES = [
       { label: "Ruhen & Tranchieren", kind: "finish", dur: "10 min", temp: "Raumtemperatur", text: "Hähnchen vom Spieß nehmen, 10 min ruhen lassen bevor tranchieren.", bullets: ["Ruhezeit = saftigeres Ergebnis", "Saft aus der Tropfschale als Jus servieren"] },
     ],
     tips: ["Dry Brine: 12–24 h vorher salzen und offen im Kühlschrank lagern – beste Knusprigkeit.", "Butter unter der Haut: Krauterbutter zwischen Haut und Brust schieben vor dem Aufspießen.", "Holzchips in die Kohle = leichter Rauch = hervorragendes Aroma (Apfel, Kirsche)."],
+    proTip: "Balance auf dem Spieß ist alles – sitzt das Hähnchen mittig, dreht der Motor ruhig und die Haut bräunt rundum gleichmäßig.",
+    learn: ["Aufspießen & trussen","Balance prüfen","Indirekt rotieren","Kern 82 °C (Schenkel)"],
   }),
 
   r({
     id: "doener-spieß", name: "Döner-Spieß (Rind/Lamm)", method: "grill", cat: "Geflügel am Spieß", diff: 3,
     time: "1 Tag marinieren + 2–3 h Spieß", pit: "indirekt 160–180 °C", core: "70–75 °C", wood: "Rössle Gasgrill (ideal) oder Weber Kugelgrill",
     blurb: "Selbstgemachter Döner-Spieß für zuhause – schichtenweise aufgebaut, langsam gegrillt.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
+    origin: "🇹🇷 Der Döner-Spieß hat seine Wurzeln in der türkischen Küche und wurde in Deutschland zum Kult. Schichtweise aufgebautes, mariniertes Fleisch gart rotierend am Spieß und wird außen dünn abgeschnitten.",
+    authenticity: 8,
+    authenticityNote: "Als reproduzierbare Heimversion des türkischen Drehspießes angelegt. Aromatik nah am Original, Aufbau und Technik für Haushaltsgeräte vereinfacht.",
     ingredients: [
       { a: "800 g", i: "Rinderhüfte oder Lammkeule, dünn aufgeschnitten (3–5 mm)" },
       { a: "200 g", i: "Lammhackfleisch (Verbindungsschichten)" },
@@ -781,12 +1189,15 @@ const RECIPES = [
       { label: "Servieren", kind: "finish", dur: "—", temp: "sofort", text: "Mit Fladenbrot, Joghurtsauce, Tomaten, Zwiebeln, Salat servieren.", bullets: [] },
     ],
     tips: ["Lammhackfleisch als Verbindungsschicht ist der Trick: hält alles zusammen und gibt Fett ab.", "Für Hähnchen-Döner: Hähnchenoberschenkel statt Rind, selbe Marinade.", "Gasgrill ist ideal: gleichmäßige Hitze von allen Seiten ohne Flammenzonen."],
+    proTip: "Dünn geschnittenes, mariniertes Fleisch mit etwas Hack als Kleber fest stapeln – rotierend gart die Außenschicht knusprig und wird schichtweise abgeschnitten.",
+    learn: ["Fleisch marinieren","Spieß schichten","Indirekt drehen","Außen abschneiden"],
   }),
 
   r({
     id: "lammkeule-spieß", name: "Lammkeule am Spieß", method: "grill", cat: "Lammfleisch", diff: 2,
     time: "1 Tag + 2,5–3,5 h", pit: "indirekt 160–175 °C", core: "70–75 °C (medium)", wood: "Weber Kugelgrill + Rotisserie oder Rössle Gasgrill",
     blurb: "Entbeinte Lammkeule, aufgerollt und am Rotisserie-Spieß – saftig, aromatisch, mediterran.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1,5–2 kg", i: "Lammkeule, entbeint und aufgerollt (beim Metzger)" },
       { a: "4 Zehen + je 1 TL", i: "Knoblauch (4 Zehen), Rosmarin, Thymian, Oregano" },
@@ -800,12 +1211,15 @@ const RECIPES = [
       { label: "Ruhen", kind: "finish", dur: "15 min", temp: "—", text: "Auf Brett ruhen lassen, erst dann aufschneiden.", bullets: [] },
     ],
     tips: ["Entbeint und aufgerollt vom Metzger ist einfacher als selbst entbeinen.", "Knoblauchzehen tief ins Fleisch stecken vor dem Aufspießen für intensiveres Aroma."],
+    proTip: "Entbeint, aufgerollt und gebunden gart die Lammkeule ausbalanciert am Spieß – ohne Knochen dreht sie ruhig und lässt sich sauber tranchieren.",
+    learn: ["Entbeinen & rollen","Aufspießen & binden","Indirekt rotieren","Kern 70–75 °C"],
   }),
 
   r({
     id: "beer-can-chicken-grill", name: "Beer Can Chicken", method: "grill", cat: "Geflügel am Spieß", diff: 1,
     time: "1,5–2 h", pit: "indirekt 190–210 °C", core: "82 °C", wood: "Weber Kugelgrill 57 cm",
     blurb: "Das Hähnchen thront aufrecht auf einer Bierdose – Dampf von innen, Hitze von außen, perfekt saftig.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "Hähnchen (1,5–1,8 kg)" },
       { a: "1", i: "halb gefüllte Bierdose (oder Tomatendose mit Brühe)" },
@@ -819,12 +1233,15 @@ const RECIPES = [
       { label: "Abnehmen", kind: "finish", dur: "10 min", temp: "—", text: "VORSICHT: Dose ist sehr heiß! Mit Grillhandschuhen abnehmen.", bullets: [] },
     ],
     tips: ["Das Bier macht erstaunlich wenig Geschmack – der Dampf hält das Hähnchen saftig.", "Für mehr Aroma: Kräuter und Knoblauch in die Bierdose geben.", "Chipottle-Rub für rauchige Schärfe."],
+    proTip: "Dose nur halb füllen – der Dampf hält das Fleisch saftig, während die aufrechte Form die Haut rundum knusprig macht.",
+    learn: ["Rub auftragen","Aufrecht stellen","Indirekt grillen","Kern 82 °C"],
   }),
 
   r({
     id: "spareribs-kettle", name: "Spareribs – Weber Kettle (3-2-1)", method: "grill", cat: "Schweinefleisch", diff: 2,
     time: "6 h", pit: "110–120 °C indirekt", core: "93–95 °C (Zahnstochertest)", wood: "Weber Kugelgrill – Snake Method · Kirsche/Apfel",
     blurb: "Classic 3-2-1 Ribs auf dem Weber Kugelgrill mit der Snake Method – ohne Smoker.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "2", i: "Leitern Baby Back Ribs (Schweinerückenrippchen)" },
       { a: "3–4 EL", i: "Rub: Paprika, Zucker, Salz, Pfeffer, Knoblauch, Zwiebelpulver" },
@@ -839,12 +1256,15 @@ const RECIPES = [
       { label: "Phase 1h (Glasieren)", kind: "finish", dur: "1 h", temp: "120–130 °C", text: "Folie entfernen, BBQ-Sauce auftragen, letzte Stunde offen auf dem Rost karamellisieren.", bullets: ["Zahnstochertest: dringt ohne Widerstand ein = fertig", "Sauce alle 20 min neu auftragen"] },
     ],
     tips: ["Snake Method ist der Schlüssel: gleichmäßig 110–120 °C für 5–6 h ohne nachzulegen.", "Für mehr Rauch: Kirschholz-Chunks (nicht Chips) direkt auf die Kohlen.", "Bend Test: Ribs in der Mitte anheben – biegen 45° ohne zu reißen = perfekt."],
+    proTip: "Die Snake Method macht den Kugelgrill zum Smoker: Briketts im C-Bogen brennen Stück für Stück ab und halten stundenlang 110–120 °C – ganz ohne WSM.",
+    learn: ["Silberhaut entfernen","Snake Method aufbauen","3-2-1-Methode","Zahnstochertest"],
   }),
 
   r({
     id: "pulled-pork-kettle", name: "Pulled Pork – Weber Kettle (Snake)", method: "grill", cat: "Schweinefleisch", diff: 3,
     time: "12–16 h", pit: "110–120 °C", core: "92–96 °C", wood: "Weber Kugelgrill – Snake Method · Hickory/Buche",
     blurb: "Pulled Pork vom Kugelgrill mit der Snake Method – nicht nur vom WSM. 16 h Geduld lohnt sich.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "2–3 kg", i: "Schweinenacken" },
       { a: "3–4 EL", i: "Rub: Paprika, Salz, Pfeffer, Zucker, Knoblauch, Senf (Dijon als Binder)" },
@@ -857,12 +1277,15 @@ const RECIPES = [
       { label: "Ruhen & Pullen", kind: "finish", dur: "1 h", temp: "in Folie eingewickelt", text: "1 h ruhen, dann mit zwei Gabeln oder Bärenkrallen auseinanderpullen.", bullets: ["Saft aus der Folie untermengen für Saftigkeit"] },
     ],
     tips: ["Volle Brikettschlange = 14+ h. Prüfe nach 12 h – gut durchgebrannte Kohle läuft länger.", "Schweineschmalz an der Außenseite parieren, aber Fettdeckel oben lassen für Safthaltung."],
+    proTip: "Mit der Snake Method hält der Weber Kessel 16 Stunden stabil Low & Slow – lange genug für Pulled Pork ohne Nachlegen.",
+    learn: ["Snake Method aufbauen","Temperatur halten","Stall & Wickeln","Auf 92–96 °C garen"],
   }),
 
   r({
     id: "cote-de-boeuf", name: "Côte de Bœuf – Reverse Sear", method: "grill", cat: "Rindfleisch", diff: 2,
     time: "2–3 h", pit: "indirekt 100–110 °C → direkte Hitze 250–300 °C", core: "52–54 °C (medium-rare)", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Das Steak der Steaks – Reverse Sear: langsam auf Temperatur, dann kurz sehr scharf anbraten.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "Côte de Bœuf (600–900 g, mind. 4 cm dick)" },
       { a: "je 1–2 TL", i: "grobes Meersalz, schwarzer Pfeffer" },
@@ -876,12 +1299,15 @@ const RECIPES = [
       { label: "Ruhen & Tranchieren", kind: "finish", dur: "8 min", temp: "—", text: "Ruhen lassen, dann quer zur Faser aufschneiden.", bullets: [] },
     ],
     tips: ["Reverse Sear = perfekte gleichmäßige Garung + maximale Kruste. Besser als klassisches Angrillen.", "Für den Sear: Gusseisenrost oder GBS-Pizzastein auf 300 °C vorheizt = perfekte Kruste."],
+    proTip: "Reverse Sear: erst sanft indirekt auf Kerntemperatur, dann kurz sehr heiß angrillen – so wird das Steak randscharf und innen gleichmäßig rosa.",
+    learn: ["Indirekt vorgaren","Kern 52–54 °C","Scharf searen","Ruhen"],
   }),
 
   r({
     id: "entenbrust-indirekt", name: "Entenbrust indirekt mit Orangenglasur", method: "grill", cat: "Geflügel am Spieß", diff: 2,
     time: "1,5–2 h", pit: "indirekt 150–160 °C → direkt 220 °C", core: "68 °C (Brust)", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Entenbrust braucht niedrige indirekte Hitze damit das Fett ausläuft – am Ende kurz scharf angeknuspert.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "2", i: "Entenbrüste (200–250 g, mit Haut)" },
       { a: "je 1 TL", i: "Salz, Pfeffer, 5-Spice-Gewürz" },
@@ -894,12 +1320,18 @@ const RECIPES = [
       { label: "Ruhen", kind: "finish", dur: "8 min", temp: "—", text: "Ruhen lassen, quer aufschneiden.", bullets: [] },
     ],
     tips: ["Entenfett ist hochentzündlich – Tropfschale ist Pflicht.", "5-Spice + Orange + Soja ist die klassische Kombination."],
+    proTip: "Niedrige indirekte Hitze lässt das Fett langsam auslaufen, bevor die Haut zum Schluss scharf knusprig gebraten wird – Tropfschale ist wegen Fettbränden Pflicht.",
+    learn: ["Haut einschneiden","Indirekt garen (Fett auslassen)","Glasieren & anknuspern","Kern 68 °C"],
   }),
 
   r({
     id: "gyros-spieß", name: "Gyros-Spieß vom Grill", method: "grill", cat: "Geflügel am Spieß", diff: 2,
     time: "1 Tag marinieren + 2–2,5 h", pit: "indirekt 170–185 °C", core: "75 °C", wood: "Rössle Gasgrill (Rotisserie) oder Weber Kugelgrill",
     blurb: "Schweinebauch-Gyros am Rotisserie-Spieß – saftig, würzig, die griechische Variante des Drehspießes.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
+    origin: "🇬🇷 Gyros („Drehung“ auf Griechisch) ist der griechische Drehspieß: mariniertes Fleisch schichtweise gestapelt, rotierend gegart und außen abgeschnitten. Klassisch mit Tzatziki, Fladenbrot und Zwiebeln.",
+    authenticity: 8.5,
+    authenticityNote: "Orientiert sich an der griechischen Gyros-Tradition (mariniertes Schwein, Drehspieß). Für Haushaltsgeräte etwas vereinfacht.",
     ingredients: [
       { a: "1 kg", i: "Schweinebauch, dünn aufgeschnitten (5–8 mm)" },
       { a: "150 ml", i: "Olivenöl" },
@@ -914,12 +1346,15 @@ const RECIPES = [
       { label: "Servieren", kind: "finish", dur: "—", temp: "sofort", text: "Mit Tsatsiki, Pitabrot, Tomaten, roten Zwiebeln und Pommes servieren.", bullets: [] },
     ],
     tips: ["Schweinebauch ist ideal wegen des Fettgehalts – mageres Fleisch wird trocken.", "Für Hühnchen-Gyros: Oberschenkelfilet, gleiche Marinade, auf 75 °C KT."],
+    proTip: "Dünn geschnittenen, marinierten Schweinebauch schichtweise auf den Spieß – rotierend gart die Außenschicht knusprig und wird fortlaufend abgeschnitten.",
+    learn: ["Marinieren","Spieß schichten","Rotisserie-Garen","Außen abschneiden"],
   }),
 
   r({
     id: "pizza-grill", name: "Pizza vom Grill (Pizzastein)", method: "grill", cat: "Sonstiges", diff: 1,
     time: "30 min + 8–12 min Grillen", pit: "300–320 °C (Pizzastein vorgeheizt)", core: "—", wood: "Rössle Gasgrill (GBS-Pizzastein) oder Weber Kugelgrill",
     blurb: "Pizzastein auf dem Gasgrill bei 300 °C – knusperig wie aus dem Holzofen.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "500 g", i: "Pizzateig (Fertig oder selbstgemacht)" },
       { a: "je nach Belag", i: "Tomatensauce, Mozzarella, Belag nach Wahl" },
@@ -930,12 +1365,15 @@ const RECIPES = [
       { label: "Fertig", kind: "finish", dur: "—", temp: "—", text: "Rand ist goldbraun, Käse blubbert. Mit Pizzaschaufel herausheben.", bullets: [] },
     ],
     tips: ["Weber GBS-Pizzastein oder Monolith-Stein funktionieren hervorragend.", "Mehl + Grieß unter dem Teig verhindert Kleben."],
+    proTip: "Der Pizzastein muss vollständig durchgeheizt sein (mind. 30 min) – nur dann wird der Boden in Minuten knusprig statt labberig.",
+    learn: ["Stein vorheizen","Hohe Hitze halten","Kurz backen"],
   }),
 
   r({
     id: "haenchen-indirekt-gasgrill", name: "Hähnchen (halb) indirekt – Gasgrill", method: "grill", cat: "Geflügel am Spieß", diff: 1,
     time: "1–1,5 h", pit: "indirekt 180–200 °C", core: "82 °C", wood: "Rössle Gasgrill",
     blurb: "Halbes Hähnchen indirekt auf dem Gasgrill – einfach und zuverlässig saftig.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "Hähnchen, halbiert (Rückgrat entfernt)" },
       { a: "2–3 EL", i: "Olivenöl, Zitrone, Knoblauch, Paprika, Salz, Pfeffer" },
@@ -946,12 +1384,18 @@ const RECIPES = [
       { label: "Finish", kind: "finish", dur: "5 min", temp: "—", text: "Kurz bei direkter Hitze (Brenner an) die Haut final knuspern.", bullets: [] },
     ],
     tips: ["Rückgrat entfernen (Spatchcock) = gleichmäßigeres Garen.", "Mit Holzchips-Box im Gasgrill leichten Rauchgeschmack erzeugen."],
+    proTip: "Äußere Brenner an, mittlerer aus – so gart das halbe Hähnchen indirekt saftig, und ein kurzer direkter Finish macht die Haut knusprig.",
+    learn: ["2-Zonen-Setup (Gas)","Indirekt garen","Haut knuspern","Kern 82 °C"],
   }),
 
   r({
     id: "bacon-explosion", name: "Bacon Explosion", method: "grill", cat: "Schweinefleisch", diff: 2,
     time: "2–2,5 h", pit: "indirekt 120–135 °C", core: "72 °C", wood: "Weber Kugelgrill oder Rössle Gasgrill · Hickory",
     blurb: "Eine Hackfleischrolle, eingewickelt in ein gewebtes Bacon-Netz – der Klassiker der BBQ-Welt.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
+    origin: "🇺🇸 Die Bacon Explosion wurde 2008 von US-BBQ-Bloggern erfunden und ging viral: Bratwurst im Bacon-Geflecht, gefüllt und geräuchert.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt dem bekannten US-BBQ-Originalrezept.",
     ingredients: [
       { a: "500 g", i: "gemischtes Hackfleisch" },
       { a: "500 g", i: "Baconstreifen (ca. 20 Stück)" },
@@ -963,12 +1407,15 @@ const RECIPES = [
       { label: "Grillen", kind: "indirect", dur: "2–2,5 h", temp: "120–135 °C", text: "Indirekt grillen bis 72 °C KT. Letzten 30 min mit BBQ-Sauce glasieren.", bullets: [] },
     ],
     tips: ["Innen einen Käsestreifen einrollen für einen flüssigen Kern.", "Der Klassiker des BBQ-Internets – optisch beeindruckend, geschmacklich intensiv."],
+    proTip: "Das gewebte Bacon-Netz hält die Rolle zusammen, bastet das Hack beim Garen und wird außen knusprig – der Signature-Move des BBQ.",
+    learn: ["Bacon-Weave flechten","Füllen & rollen","Indirekt räuchern","Kern 72 °C"],
   }),
 
   r({
     id: "mais-grill", name: "Gegrillter Mais (Mexican Style)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
     time: "20–25 min", pit: "direkt 200–220 °C", core: "—", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Mais mit Schale direkt in der Glut oder über der Flamme – karamellisiert und rauchig.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "4", i: "Maiskolben (mit Blättern)" },
       { a: "je 1–2 EL", i: "Butter, Limette, Chili, Mayonnaise, Parmesan, Salz (Mexican Style)" },
@@ -980,6 +1427,8 @@ const RECIPES = [
       { label: "Würzen", kind: "finish", dur: "—", temp: "—", text: "Mit Butter bestreichen, dann Mayo, Parmesan, Chili und Limettensaft – Mexican Street Corn (Elote).", bullets: [] },
     ],
     tips: ["Ohne Schale grillen geht auch – dann nur 8–10 min direkt, regelmäßig wenden."],
+    proTip: "Mais in der Schale angrillen dämpft ihn zuerst weich, dann karamellisiert das direkte Feuer die Körner – süß und rauchig zugleich.",
+    learn: ["In Schale garen","Direkt karamellisieren","Würzen (Mexican)"],
   }),
 
   /* ---- GRUNDLAGEN GRILL ---- */
@@ -1021,6 +1470,7 @@ const RECIPES = [
     id: "apfelringe", name: "Apfelringe", method: "dorr", cat: "Obst", diff: 1,
     time: "6–10 h", pit: "55–65 °C", core: "Lederig, nicht klebrig", wood: "Graef DA506", yield: "ca. 100 g/kg Apfel",
     blurb: "Der Klassiker: dünne Scheiben, leicht zitroniert – knusprig oder lederig je nach Vorliebe.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Äpfel (fest, z. B. Elstar, Braeburn)" },
       { a: "1", i: "Zitrone (Saft, zum Wässern)" },
@@ -1032,11 +1482,14 @@ const RECIPES = [
       { label: "Abkühlen & Lagern", kind: "finish", dur: "1 h", temp: "Raumtemperatur", text: "Vollständig abkühlen lassen, dann luftdicht lagern.", bullets: ["Noch warm fühlen sich Chips weich an – täuscht", "Im Schraubglas 6–12 Monate haltbar"] },
     ],
     tips: ["Nicht zu dünn schneiden – unter 4 mm werden die Scheiben brüchig.", "Zimt nach dem Dörren aufstreuen, nicht vorher – verbrennt sonst."],
+    proTip: "Dünn und gleichmäßig schneiden (Mandoline) und kurz in Zitronenwasser tauchen – das hält die Ringe hell und sie trocknen gleichmäßig.",
+    learn: ["Gleichmäßig schneiden","Zitronenbad (Farbe)","Bei 55–65 °C dörren","Trockentest"],
   }),
   r({
     id: "bananenchips", name: "Bananenchips", method: "dorr", cat: "Obst", diff: 1,
     time: "8–12 h", pit: "55–65 °C", core: "Knusprig oder lederig", wood: "Graef DA506", yield: "ca. 150 g/kg",
     blurb: "Süßlich, bissfest – viel besser als gekaufte Varianten ohne Frittieröl.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Bananen (leicht reif, nicht überreif)" },
       { a: "1", i: "Zitrone (Saft)" },
@@ -1047,11 +1500,14 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl, trocken", text: "Vollständig auskühlen, luftdicht lagern.", bullets: [] },
     ],
     tips: ["Mit Honig bepinseln vor dem Dörren gibt karamelliges Aroma.", "Lederige Variante ideal als Backzutat."],
+    proTip: "Reife, aber feste Bananen dünn schneiden – zu reif werden sie matschig, zu dünn zerfallen sie.",
+    learn: ["Dünn schneiden","Bei 55–65 °C dörren","Knusprig vs. lederig"],
   }),
   r({
     id: "mangoscheiben", name: "Mangoscheiben", method: "dorr", cat: "Obst", diff: 1,
     time: "8–12 h", pit: "55–65 °C", core: "Lederig, nicht klebrig", wood: "Graef DA506", yield: "ca. 120 g/kg",
     blurb: "Tropisch-intensive Süße, konzentriert durch langsames Dörren.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "2", i: "reife Mangos" },
       { a: "2 EL + 1 TL", i: "Limettensaft, Chiliflocken (optional)" },
@@ -1062,11 +1518,14 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl, trocken", text: "Abkühlen lassen, luftdicht lagern.", bullets: [] },
     ],
     tips: ["Chili-Limetten-Variante: vor dem Dörren mit Limettensaft + Chiliflocken würzen.", "Im Sommer ideal, wenn Mangos günstig und reif sind."],
+    proTip: "Feste, nicht überreife Mango dünn schneiden – die konzentrierte Süße kommt beim langsamen Dörren, nicht durch Hitze.",
+    learn: ["Gleichmäßig schneiden","Langsam dörren","Lederig treffen"],
   }),
   r({
     id: "erdbeerscheiben", name: "Erdbeerscheiben", method: "dorr", cat: "Obst", diff: 1,
     time: "6–10 h", pit: "55–60 °C", core: "Knusprig oder lederig", wood: "Graef DA506", yield: "ca. 80 g/kg",
     blurb: "Intensive Süße, tolle Farbe – als Snack, Müsli-Topping oder Backzutat.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Erdbeeren (reif)" },
     ],
@@ -1076,11 +1535,14 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl, trocken", text: "Luftdicht lagern, möglichst kühl.", bullets: ["Erdbeeren ziehen Feuchtigkeit – Silicagel im Glas hilft"] },
     ],
     tips: ["Ganze kleine Erdbeeren lassen sich auch gut dörren – dann 10–14 h.", "Perfekt für hausgemachtes Müsli."],
+    proTip: "Gleich dicke Scheiben trocknen gleichmäßig – dünn gibt knusprige Chips, etwas dicker lederig-fruchtig.",
+    learn: ["Gleichmäßig schneiden","Bei 55–60 °C dörren","Textur wählen"],
   }),
   r({
     id: "pflaumen-doerren", name: "Pflaumen (Trockenpflaumen)", method: "dorr", cat: "Obst", diff: 1,
     time: "10–18 h", pit: "55–65 °C", core: "Weich-lederig, kein Feuchtigkeitskern", wood: "Graef DA506", yield: "ca. 250 g/kg",
     blurb: "Selbstgemachte Trockenpflaumen: konzentriert, saftig, ohne Zusätze.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "reife Pflaumen/Zwetschgen" },
     ],
@@ -1090,11 +1552,14 @@ const RECIPES = [
       { label: "Abkühlen & Lagern", kind: "finish", dur: "2 h", temp: "Raumtemperatur", text: "Auskühlen, luftdicht lagern.", bullets: ["Im Kühlschrank monatelang haltbar"] },
     ],
     tips: ["Blanchieren (1 min kochendes Wasser, abschrecken) beschleunigt das Dörren.", "Für Müsli, als Kompott-Base oder einfach pur."],
+    proTip: "Pflaumen kurz blanchieren oder die Haut anritzen, damit die Feuchtigkeit entweicht – sonst trocknen sie außen und bleiben innen feucht.",
+    learn: ["Blanchieren/anritzen","Langsam dörren","Kein Feuchtkern"],
   }),
   r({
     id: "fruchtleder", name: "Fruchtleder (Apfel-Himbeere)", method: "dorr", cat: "Obst", diff: 2,
     time: "8–12 h", pit: "55–65 °C", core: "Nicht klebend, biegsam", wood: "Graef DA506", yield: "ca. 6–8 Streifen",
     blurb: "Püriertes Obst dünn auf Folie gestrichen – das gesunde Fruit Rollup.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "500 g", i: "Äpfel, geschält und entkernt" },
       { a: "250 g", i: "Himbeeren (frisch oder TK)" },
@@ -1107,11 +1572,14 @@ const RECIPES = [
       { label: "Rollen & Lagern", kind: "finish", dur: "—", temp: "kühl", text: "Auf Backpapier aufgerollt lagern.", bullets: [] },
     ],
     tips: ["Dörrfolie (Silikonmatte) ist Pflicht – normales Gitter hält das Püree nicht.", "Mit Beeren, Mango, Aprikose oder Mischungen variieren."],
+    proTip: "Das Püree gleichmäßig dünn auf Folie streichen – dicke Stellen bleiben klebrig, dünne werden brüchig.",
+    learn: ["Pürieren","Dünn ausstreichen","Bis biegsam dörren","Aufrollen"],
   }),
   r({
     id: "tomatenchips", name: "Tomatenchips / getrocknete Tomaten", method: "dorr", cat: "Obst", diff: 1,
     time: "6–10 h", pit: "55–65 °C", core: "Lederig bis knusprig", wood: "Graef DA506", yield: "ca. 80 g/kg",
     blurb: "In Olivenöl und Kräutern mariniert oder pur – intensivste Tomatenwürze.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Strauchtomaten oder Kirschtomaten" },
       { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Oregano, Knoblauch" },
@@ -1123,6 +1591,8 @@ const RECIPES = [
       { label: "Einlegen (optional)", kind: "finish", dur: "—", temp: "kühl", text: "Lederige Tomaten in Olivenöl mit Kräutern und Knoblauch einlegen.", bullets: ["Im Kühlschrank bis 4 Wochen haltbar"] },
     ],
     tips: ["Getrocknete Tomaten in Öl sind kein Langzeitprodukt – kühl und innerhalb 4 Wochen aufbrauchen.", "Zum Backen von Brot, als Pasta-Zutat oder auf Käseplatten."],
+    proTip: "Tomaten entkernen reduziert die Trockenzeit deutlich – das wässrige Innere ist der Feuchtigkeitsträger.",
+    learn: ["Entkernen","Gleichmäßig schneiden","Dörren","In Öl einlegen (optional)"],
   }),
 
   /* ---- GEMÜSE ---- */
@@ -1130,6 +1600,7 @@ const RECIPES = [
     id: "pilze-getrocknet", name: "Getrocknete Pilze", method: "dorr", cat: "Gemüse", diff: 1,
     time: "4–8 h", pit: "40–50 °C", core: "Knusprig-trocken, kein feuchter Kern", wood: "Graef DA506", yield: "ca. 80 g/kg",
     blurb: "Champignons, Steinpilze oder Pfifferlinge: konzentriert, aromatisch, monatelang haltbar.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "frische Pilze (Champignons, Steinpilze, Pfifferlinge)" },
     ],
@@ -1139,11 +1610,14 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl, dunkel", text: "Vollständig trocken, luftdicht lagern.", bullets: ["Im Schraubglas 12+ Monate haltbar"] },
     ],
     tips: ["Wildpilze vor dem Dörren auf Schädlinge prüfen.", "Gemahlen als Pilzpulver: intensiver Umami-Würzer für Saucen."],
+    proTip: "Pilze nie waschen, nur abbürsten – Wasser saugen sie auf und die Trocknung dauert ewig. Niedrig dörren erhält das Aroma.",
+    learn: ["Abbürsten (nicht waschen)","Niedrig dörren (40–50 °C)","Knochentrocken lagern"],
   }),
   r({
     id: "karottenchips", name: "Karottenchips", method: "dorr", cat: "Gemüse", diff: 1,
     time: "6–10 h", pit: "55–65 °C", core: "Knusprig", wood: "Graef DA506", yield: "ca. 100 g/kg",
     blurb: "Leicht süßlich, knusprig – weit besser als Fertig-Gemüsechips.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Karotten" },
       { a: "je 1 TL", i: "Salz, Paprika, Kreuzkümmel (optional)" },
@@ -1154,11 +1628,14 @@ const RECIPES = [
       { label: "Dörren", kind: "dry", dur: "6–10 h", temp: "55–65 °C", text: "Bis knusprig dörren.", bullets: ["Abkühlen lassen – Chips werden dann erst wirklich knusprig"] },
     ],
     tips: ["Auch ohne Blanchieren möglich, aber Farbe und Biss sind dann schlechter.", "Mit Curry-Salz würzen für eine spannende Variante."],
+    proTip: "Karotten kurz blanchieren behält Farbe und Süße – roh gedörrt werden sie blass und strohig.",
+    learn: ["Blanchieren","Dünn schneiden","Bei 55–65 °C dörren"],
   }),
   r({
     id: "paprikachips", name: "Paprikachips", method: "dorr", cat: "Gemüse", diff: 1,
     time: "6–10 h", pit: "55–65 °C", core: "Knusprig oder lederig", wood: "Graef DA506", yield: "ca. 80 g/kg",
     blurb: "Süße Paprika als Chips oder lederig für Gulasch-Würzmischungen.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "rote, gelbe oder orangefarbene Paprika" },
       { a: "1 TL + 1 EL", i: "Salz, Olivenöl (optional)" },
@@ -1169,11 +1646,14 @@ const RECIPES = [
       { label: "Lagern / Verarbeiten", kind: "finish", dur: "—", temp: "kühl, trocken", text: "Luftdicht lagern oder zu Pulver mahlen.", bullets: [] },
     ],
     tips: ["Selbstgemachtes Paprikapulver ist weitaus aromatischer als Supermarktware.", "Rote Paprika ergibt süßes, gelbe ein milderes Pulver."],
+    proTip: "Paprika mit der Hautseite nach unten dörren – die wachsige Haut trocknet langsamer, das Fruchtfleisch schneller.",
+    learn: ["Streifen schneiden","Dörren","Knusprig/lederig wählen"],
   }),
   r({
     id: "gruenkohl-chips", name: "Grünkohl-Chips", method: "dorr", cat: "Gemüse", diff: 1,
     time: "3–6 h", pit: "50–55 °C", core: "Knusprig", wood: "Graef DA506", yield: "ca. 30 g/100 g Kohl",
     blurb: "Leicht, knusprig, gesund – mit Olivenöl und Meersalz kaum zu überbieten.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "500 g", i: "Grünkohl, Stiele entfernt" },
       { a: "2 EL", i: "Olivenöl" },
@@ -1184,11 +1664,14 @@ const RECIPES = [
       { label: "Dörren", kind: "dry", dur: "3–5 h", temp: "50–55 °C", text: "Einlagig auf Gitter legen, dörren bis knusprig.", bullets: ["Kohl verliert viel Volumen – mehrere Ladungen einplanen"] },
     ],
     tips: ["Hefeflocken + Knoblauch ergibt einen 'Käse'-ähnlichen Geschmack.", "Sofort essen – nimmt schnell Feuchtigkeit aus der Luft auf."],
+    proTip: "Blätter gründlich trocknen – jeder Wassertropfen dämpft statt zu dörren; mit wenig Öl und Salz werden sie hauchknusprig.",
+    learn: ["Trocken schleudern","Mit Öl massieren","Niedrig knusprig dörren"],
   }),
   r({
     id: "zucchini-chips", name: "Zucchini-Chips", method: "dorr", cat: "Gemüse", diff: 1,
     time: "5–8 h", pit: "55–65 °C", core: "Knusprig", wood: "Graef DA506", yield: "ca. 60 g/kg",
     blurb: "Wenn der Garten Zucchini-Überschuss produziert – die beste Verwertung.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Zucchini" },
       { a: "je 1 TL", i: "Meersalz, Kräuter der Provence, Parmesan (optional)" },
@@ -1198,11 +1681,14 @@ const RECIPES = [
       { label: "Dörren", kind: "dry", dur: "5–8 h", temp: "55–65 °C", text: "Einlagig dörren bis knusprig.", bullets: [] },
     ],
     tips: ["Parmesan draufhobeln vor dem Dörren = intensiver Umami-Snack.", "Auch gelbe Zucchini / Patisson funktionieren super."],
+    proTip: "Zucchini geben viel Wasser ab – dünn schneiden und locker auf den Horden verteilen, dann werden sie knusprig.",
+    learn: ["Dünn schneiden","Locker verteilen","Bei 55–65 °C dörren"],
   }),
   r({
     id: "kraeuter-getrocknet", name: "Kräuter trocknen", method: "dorr", cat: "Gemüse", diff: 1,
     time: "2–4 h", pit: "35–40 °C", core: "Rascheltrocken, zerreibbar", wood: "Graef DA506", yield: "ca. 15–20 g/100 g frisch",
     blurb: "Garten- oder Balkenkräuter schonend bei niedriger Temperatur trocknen.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "je 1 Bund", i: "Basilikum, Petersilie, Rosmarin, Thymian, Oregano, Minze" },
     ],
@@ -1212,11 +1698,14 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "dunkel, trocken", text: "Ganz lagern, erst kurz vor Verwendung zerreiben.", bullets: ["Ganzblätter behalten Aroma länger als gemahlen"] },
     ],
     tips: ["Morgens nach dem Tau ernten – dann höchster Aromastoffgehalt.", "Im Dunkeln lagern (Licht baut ätherische Öle ab)."],
+    proTip: "Kräuter nur schonend bei niedriger Temperatur (35–40 °C) trocknen – Hitze verflüchtigt die ätherischen Öle und damit das Aroma.",
+    learn: ["Niedrig trocknen","Aroma erhalten","Zerreiben & lagern"],
   }),
   r({
     id: "zwiebeln-knoblauch", name: "Zwiebeln & Knoblauch (Pulver)", method: "dorr", cat: "Gemüse", diff: 1,
     time: "6–10 h", pit: "55–65 °C", core: "Knochentrocken, bricht", wood: "Graef DA506", yield: "ca. 120 g Pulver/kg",
     blurb: "Selbstgemachtes Zwiebel- und Knoblauchpulver – deutlich aromatischer als Fertigprodukte.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Zwiebeln oder Knoblauchzehen" },
     ],
@@ -1226,6 +1715,8 @@ const RECIPES = [
       { label: "Mahlen", kind: "finish", dur: "5 min", temp: "—", text: "In Gewürzmühle oder Mixer fein mahlen.", bullets: ["Luftdicht lagern – nimmt sonst Feuchtigkeit auf"] },
     ],
     tips: ["Feuchtigkeit ist der Feind – absolut trocken mahlen und sofort luftdicht verpacken.", "Knoblauch scharf im Zimmer riechen lassen oder Fenster öffnen."],
+    proTip: "Erst knochentrocken dörren, dann zu Pulver mahlen – jede Restfeuchte verklumpt das Pulver später.",
+    learn: ["Dünn schneiden","Knochentrocken dörren","Zu Pulver mahlen"],
   }),
 
   /* ---- FLEISCH & FISCH ---- */
@@ -1233,6 +1724,10 @@ const RECIPES = [
     id: "beef-jerky", name: "Beef Jerky (klassisch)", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
     time: "1 Tag + 4–8 h", pit: "70 °C", core: "Lederig, kein feuchter Kern", wood: "Graef DA506", yield: "ca. 400 g/kg",
     blurb: "Würzige Rindfleisch-Streifen, bei maximaler Dörrtemperatur sicher getrocknet.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
+    origin: "🇺🇸 Beef Jerky hat seine modernen Wurzeln bei den Ureinwohnern Amerikas und den Cowboys – haltbares, mariniertes Trockenfleisch.",
+    authenticity: 9,
+    authenticityNote: "Folgt der klassischen US-Jerky-Herstellung, bei 70 °C für Sicherheit.",
     ingredients: [
       { a: "1 kg", i: "Rindfleisch (Oberschale, Hüfte, mager, pariert)" },
       { a: "80 ml", i: "Sojasoße" },
@@ -1247,11 +1742,14 @@ const RECIPES = [
       { label: "Abkühlen & Lagern", kind: "finish", dur: "1 h", temp: "Raumtemperatur", text: "Auf Gitter abkühlen, dann luftdicht verpacken.", bullets: ["Vakuumverpackt im Kühlschrank 2–4 Wochen", "Ungekühlt nur wenige Tage"] },
     ],
     tips: ["70 °C ist das Maximum des DA506 – für sichere Jerky-Herstellung ideal nutzen.", "Alternative: Fleisch vor dem Dörren 10 min bei 160 °C im Ofen vorerhitzen.", "Immer mageres Fleisch verwenden – Fett wird ranzig."],
+    proTip: "Bei 70 °C dörren, damit das Fleisch sicher gart – quer zur Faser für Biss, längs für mehr Zähigkeit.",
+    learn: ["Marinieren","Quer/längs schneiden","Sicher bei 70 °C dörren","Trockentest"],
   }),
   r({
     id: "chicken-jerky", name: "Chicken Strips Jerky", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
     time: "1 Tag + 4–6 h", pit: "70 °C", core: "Lederig-trocken, kein rosa Kern", wood: "Graef DA506", yield: "ca. 350 g/kg",
     blurb: "Asiatisch-marinierte Hähnchenstreifen – leichter als Rinderjerk, sehr würzig.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Hähnchenbrust, pariert" },
       { a: "80 ml", i: "Sojasoße" },
@@ -1263,11 +1761,14 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl", text: "Abkühlen, vakuumieren, kühlen.", bullets: [] },
     ],
     tips: ["Hähnchen NIE unter 70 °C dörren – Salmonellen-Risiko.", "Teriyaki-Marinade mit Soja, Mirin und Zucker ist eine klassische Variante."],
+    proTip: "Geflügel-Jerky immer bei 70 °C+ dörren (Salmonellen) – dünne, gleichmäßige Streifen trocknen sicher durch.",
+    learn: ["Marinieren","Dünn schneiden","Sicher bei 70 °C dörren","Kein rosa Kern"],
   }),
   r({
     id: "lachs-jerky", name: "Lachs-Jerky", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
     time: "1 Tag + 4–6 h", pit: "60–65 °C", core: "Lederig, trocken", wood: "Graef DA506", yield: "ca. 300 g/kg",
     blurb: "Intensives Rauch-Teriyaki-Aroma, kompaktes Format – asiatischer Snack-Klassiker.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Lachsfilet, Sushi-Qualität, entgrätet, ohne Haut" },
       { a: "80 ml", i: "Sojasoße" },
@@ -1280,11 +1781,14 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "Kühlschrank", text: "Im Kühlschrank 1–2 Wochen haltbar.", bullets: [] },
     ],
     tips: ["Qualitativ hochwertigen, frischen Lachs (Sashimi-Qualität) verwenden.", "Sesamsamen vor dem Dörren aufstreuen."],
+    proTip: "Lachs vorher in Teriyaki beizen entzieht Wasser und würzt – dann bei moderater Hitze zu festem, aromatischem Jerky trocknen.",
+    learn: ["Beizen (Teriyaki)","Bei 60–65 °C dörren","Lederig trocknen"],
   }),
   r({
     id: "wild-jerky", name: "Wild-Jerky (Reh/Wildschwein)", method: "dorr", cat: "Fleisch & Fisch", diff: 3,
     time: "1 Tag + 6–8 h", pit: "70 °C", core: "Lederig, kein roter Kern", wood: "Graef DA506", yield: "ca. 350 g/kg",
     blurb: "Kräftiges Wildaroma, fein gewürzt – besonders hochwertige Jerky-Variante.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Wildfleisch (Rehkeule, Wildschweinrücken, mager)" },
       { a: "je 1 TL + 50 ml", i: "Wacholder, Rotwein, Knoblauch, Pfeffer, Sojasoße, Lorbeer" },
@@ -1296,6 +1800,8 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "Kühlschrank", text: "Vakuumieren und kühlen.", bullets: [] },
     ],
     tips: ["Bei Schwarzwild Trichinenuntersuchung durch den Jagdausübungsberechtigten Pflicht.", "Rehfleisch ist zarter als Schwein – Dörrzeit eher kürzer."],
+    proTip: "Wild ist sehr mager und ideal für Jerky – Fett und Sehnen restlos entfernen, denn Fett wird beim Lagern ranzig.",
+    learn: ["Fett/Sehnen entfernen","Marinieren","Bei 70 °C dörren","Lagern"],
   }),
 
   /* ---- SONSTIGES ---- */
@@ -1303,6 +1809,7 @@ const RECIPES = [
     id: "aktivierte-nuesse", name: "Aktivierte Nüsse & Mandeln", method: "dorr", cat: "Sonstiges", diff: 1,
     time: "12 h einweichen + 12–24 h", pit: "40–45 °C", core: "Knusprig", wood: "Graef DA506", yield: "ca. 350 g",
     blurb: "Eingeweichte, dann langsam getrocknete Nüsse – bekömmlicher und knuspriger.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "500 g", i: "Mandeln, Walnüsse oder Cashews" },
       { a: "1 TL", i: "Meersalz pro 500 g" },
@@ -1315,11 +1822,14 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl, trocken", text: "In Schraubglas lagern.", bullets: [] },
     ],
     tips: ["Cashews maximal 6–8 h einweichen – werden sonst schleimig.", "Mit Tamari + Chiliflocken für eine würzige Variante."],
+    proTip: "Erst einweichen, dann langsam bei niedriger Temperatur trocknen – das macht die Nüsse bekömmlicher und wieder knusprig.",
+    learn: ["Einweichen","Niedrig trocknen (40–45 °C)","Knusprig lagern"],
   }),
   r({
     id: "brotchips", name: "Brotchips / Knäckebrot", method: "dorr", cat: "Sonstiges", diff: 1,
     time: "3–5 h", pit: "50–60 °C", core: "Knusprig, bricht sauber", wood: "Graef DA506", yield: "ca. 300 g",
     blurb: "Altbackenes Brot sinnvoll verwerten – knusprige Chips oder selbstgemachtes Knäcke.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "400 g", i: "altbackenes Brot oder Sauerteigbrot" },
       { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Rosmarin, Paprika" },
@@ -1330,11 +1840,14 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "trocken", text: "Offen lagern oder in Papier wickeln.", bullets: [] },
     ],
     tips: ["Perfekt für Reste – kein Brot wegwerfen.", "Als Croutons für Salate oder Suppen."],
+    proTip: "Altbackenes Brot dünn schneiden und niedrig dörren – so bricht es sauber und schimmelt nicht.",
+    learn: ["Dünn schneiden","Niedrig dörren","Knusprig lagern"],
   }),
   r({
     id: "granola-doerren", name: "Selbstgemachtes Granola", method: "dorr", cat: "Sonstiges", diff: 1,
     time: "4–6 h", pit: "50–55 °C", core: "Goldbraun, knusprig", wood: "Graef DA506", yield: "ca. 500 g",
     blurb: "Haferflocken, Nüsse, Honig – schonend im Dörrer statt aggressiv im Ofen.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "300 g", i: "Haferflocken (grob)" },
       { a: "100 g", i: "Nüsse und Kerne (Mandeln, Kürbiskerne, Cashews)" },
@@ -1348,6 +1861,8 @@ const RECIPES = [
       { label: "Auskühlen", kind: "finish", dur: "1 h", temp: "Raumtemperatur", text: "Vollständig auskühlen – erst dann wird es richtig knusprig.", bullets: [] },
     ],
     tips: ["Trockenfrüchte erst nach dem Dörren untermengen – sonst werden sie hart.", "Im Schraubglas 4–6 Wochen haltbar."],
+    proTip: "Im Dörrer statt Ofen verbrennt nichts – langsam bei niedriger Hitze wird das Granola gleichmäßig goldbraun und knusprig.",
+    learn: ["Mischen","Niedrig dörren","Goldbraun & knusprig"],
   }),
 
   /* ---- GRUNDLAGEN DÖRREN ---- */
@@ -1373,6 +1888,7 @@ const RECIPES = [
     id: "wildschinken-reh", name: "Wildschinken (Rehkeule)", method: "kalt", cat: "Schinken", diff: 3,
     time: "4–5 Wochen", pit: "8–15 °C", core: "", wood: "Buche + Wacholder + Tanne", yield: "ca. 1,5 kg",
     blurb: "Zartes Rehfleisch als edler Wildschinken – milder, aromatischer als Schwein.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
     ingredients: [
       { a: "1 Rehkeule", i: "ca. 2 kg, ausgelöst oder am Knochen" },
       { a: "40 g/kg", i: "40 g/kg Fleisch" },
@@ -1388,12 +1904,18 @@ const RECIPES = [
       { label: "Reifen", kind: "mature", dur: "1–2 Wochen", temp: "10–15 °C, trocken", text: "Kühler, luftiger Ort – Geschmack entwickelt sich weiter.", bullets: [] },
     ],
     tips: ["Rehfleisch ist deutlich magerer als Schwein – kürzere Pökelzeit reicht.", "Wacholder-Rauch ist das typische Wildschinken-Aroma, nie weglassen.", "Im Zweifelsfall eher kürzer räuchern – Wild nimmt Rauch intensiver auf."],
+    proTip: "Wild nimmt Rauch intensiver auf als Schwein – im Zweifel kürzer räuchern, und Fett/Sehnen makellos parieren, denn Wildfett wird schnell ranzig.",
+    learn: ["Parieren (Wild)", "Trockenpökeln (NPS)", "Durchbrennen", "Pellicle bilden", "Kalträuchern + Nachreifen"],
   }),
 
   r({
     id: "schwarzer-speck", name: "Tiroler Speck (Bauchspeck kaltgeräuchert)", method: "kalt", cat: "Schinken", diff: 2,
     time: "4–5 Wochen", pit: "unter 22 °C", core: "", wood: "Buche + Fichte/Tanne", yield: "ca. 1,2 kg",
     blurb: "Typischer Südtiroler Speck – trocken gepökelt, kaltgeräuchert und an der Luft gereift.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
+    origin: "🇮🇹 Der Südtiroler Speck (Tiroler Speck g.g.A.) wird trocken gepökelt, kaltgeräuchert und luftgereift – die alpine Verbindung aus Räuchern und Trocknen.",
+    authenticity: 9,
+    authenticityNote: "Folgt der Südtiroler Speck-Tradition.",
     ingredients: [
       { a: "1,5 kg", i: "Schweinebauch, Schwarte dran, ohne Rippen" },
       { a: "38 g/kg", i: "38 g/kg" },
@@ -1407,12 +1929,15 @@ const RECIPES = [
       { label: "Luftreifen", kind: "mature", dur: "2–3 Wochen", temp: "12–16 °C", text: "Luftig und kühl hängen, leicht ansteigendes Raumklima tolerierbar.", bullets: [] },
     ],
     tips: ["Schwarte dran lassen – schützt und verhindert Austrocknung.", "Echter Südtiroler Speck reift mind. 22 Wochen – für Hausversion reichen 5 Wochen."],
+    proTip: "Tanne und Fichte machen den typischen Südtiroler Ton – hier darf kräftiger geräuchert werden als beim Schwarzwälder.",
+    learn: ["Pökeln", "Abwaschen & Trocknen", "Pellicle bilden", "Kräftig kalträuchern", "Luftreifen"],
   }),
 
   r({
     id: "haehnchenkeulen-heiss", name: "Hähnchenkeulen heißgeräuchert", method: "heiss", cat: "Geflügel", diff: 1,
     time: "4–6 h", pit: "85–110 °C", core: "82 °C", wood: "WSM · Apfel + Kirsche",
     blurb: "Zarte, saftige Keulen mit tiefem Raucharoma – Einsteigerrezept für den WSM.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "6", i: "Hähnchenkeulen (Ober- und Unterschenkel)" },
       { a: "3–4 EL", i: "Rub: Paprika, Knoblauch, Salz, Pfeffer, brauner Zucker, Thymian" },
@@ -1431,6 +1956,7 @@ const RECIPES = [
     id: "garnelen-heiss", name: "Geräucherte Garnelen", method: "heiss", cat: "Fisch & Meeresfrüchte", diff: 1,
     time: "45 min", pit: "110–130 °C", core: "opal-rosa, leicht festig", wood: "WSM · Zitrusholz oder Apfel",
     blurb: "Schnellstes Räucherprojekt – Garnelen nach 30–40 min fertig, Rauch macht sie unwiderstehlich.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "500 g", i: "Riesengarnelen, roh, mit Schale (16/20er)" },
       { a: "2–3 EL", i: "Olivenöl, Zitrone, Knoblauch, Paprika, Salz, Pfeffer" },
@@ -1449,6 +1975,7 @@ const RECIPES = [
     id: "ananas-dorr", name: "Ananas-Scheiben getrocknet", method: "dorr", cat: "Obst", diff: 1,
     time: "8–12 h", pit: "55–65 °C", core: "Lederig, nicht klebrig", wood: "Graef DA506", yield: "ca. 150 g/kg",
     blurb: "Süß-säuerlich konzentriert – frische Ananas trocknen ist viel besser als Dose.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1", i: "reife Ananas" },
     ],
@@ -1458,12 +1985,15 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl, trocken", text: "Vollständig abkühlen, luftdicht lagern.", bullets: [] },
     ],
     tips: ["Für Hawaii-Jerky: in Sojasoße + Ingwer marinieren vor dem Dörren.", "Perfekt als Müsli-Topping oder Dekoration für Desserts."],
+    proTip: "Ananas ist sehr wasserreich – dünn schneiden und Geduld haben; die Süße konzentriert sich stark.",
+    learn: ["Dünn schneiden","Langsam dörren","Lederig treffen"],
   }),
 
   r({
     id: "chili-flakes", name: "Chili-Flakes selbst gemacht", method: "dorr", cat: "Gemüse", diff: 1,
     time: "4–6 h", pit: "55–65 °C", core: "Knochentrocken, knistert", wood: "Graef DA506", yield: "ca. 50 g/500 g",
     blurb: "Selbst getrocknete Chilis sind weit aromatischer als gekaufte – und du bestimmst die Schärfe.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "500 g", i: "frische Chilis (Cayenne, Jalapeño, Bird's Eye – je nach Schärfe)" },
     ],
@@ -1473,12 +2003,15 @@ const RECIPES = [
       { label: "Zu Flocken", kind: "finish", dur: "5 min", temp: "—", text: "Im Mörser, Mixer oder mit Gewürzmühle zu Flocken verarbeiten.", bullets: ["Gröber = Flocken, feiner = Pulver (Cayennepfeffer)", "Sofort luftdicht verpacken"] },
     ],
     tips: ["Rauchige Chili-Flakes: vorher kurz im WSM heißräuchern (30 min), dann im Dörrer fertig trocknen.", "Gemischte Sorten = komplexes Aroma."],
+    proTip: "Chilis knochentrocken dörren, dann mörsern – Restfeuchte lässt die Flakes verklumpen und schimmeln.",
+    learn: ["Knochentrocken dörren","Mörsern/mahlen","Schärfe dosieren"],
   }),
 
   r({
     id: "rote-bete-chips", name: "Rote Bete Chips", method: "dorr", cat: "Gemüse", diff: 1,
     time: "6–8 h", pit: "55–65 °C", core: "Knusprig", wood: "Graef DA506", yield: "ca. 80 g/kg",
     blurb: "Leuchtend rote, knusprige Chips – erdig-süßlicher Geschmack, optisch beeindruckend.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "500 g", i: "rohe Rote Bete, geschält" },
       { a: "2 EL", i: "Olivenöl, Meersalz, optional Balsamico" },
@@ -1489,6 +2022,8 @@ const RECIPES = [
       { label: "Dörren", kind: "dry", dur: "6–8 h", temp: "55–65 °C", text: "Einlagig dörren. Nach dem Abkühlen werden sie noch knuspriger.", bullets: [] },
     ],
     tips: ["Goldene Rote Bete für eine schöne Farbkombination dazumischen.", "Als Salat-Topping oder zum Aperitif servieren."],
+    proTip: "Rote Bete dünn und gleichmäßig schneiden (Mandoline) – die Farbe bleibt leuchtend, wenn nicht zu heiß gedörrt wird.",
+    learn: ["Dünn schneiden","Bei 55–65 °C dörren","Knusprig treffen"],
   }),
 
   /* ============================ MEHR GRILL ============================ */
@@ -1497,6 +2032,7 @@ const RECIPES = [
     id: "tomahawk-steak", name: "Tomahawk Steak – Reverse Sear", method: "grill", cat: "Rindfleisch", diff: 2,
     time: "2,5–3 h", pit: "95–105 °C → 280–320 °C sear", core: "52–54 °C (medium-rare)", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Das spektakulärste Steak – 1 kg Ribeye mit langem Knochen, Reverse Sear für perfekte Garung.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "Tomahawk Steak (900 g–1,3 kg, mind. 5 cm dick)" },
       { a: "je 1–2 TL", i: "grobes Meersalz (1–2 h vorher), schwarzer Pfeffer erst nach dem Sear" },
@@ -1509,12 +2045,15 @@ const RECIPES = [
       { label: "Ruhen", kind: "finish", dur: "10 min", temp: "—", text: "Auf Holzbrett ruhen. Erst DANN pfeffern und aufschneiden.", bullets: [] },
     ],
     tips: ["Pfeffer erst nach dem Sear – verbrennt bei 300 °C und wird bitter.", "Knochen nach dem Essen aushöhlen und Knochenmark auflecken – nicht zu übertreffen."],
+    proTip: "Der lange Knochen leitet kaum Hitze – deshalb Reverse Sear: geduldig indirekt auf Kern, dann sehr heiß searen für die Kruste.",
+    learn: ["Indirekt vorgaren","Kern 52–54 °C","Scharf searen","Ruhen & schneiden"],
   }),
 
   r({
     id: "lammrack", name: "Lammrack vom Grill", method: "grill", cat: "Lammfleisch", diff: 2,
     time: "45 min", pit: "indirekt 150 °C → direkt 230 °C", core: "58–62 °C (rosé)", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Frenched Lammrack – kurz und heiß, mit Kräuterkruste, rosé serviert.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "Lammrack (8 Knochen), frenched (Knochen gesäubert)" },
       { a: "je 1–2 EL", i: "Dijonsenf, Rosmarin, Thymian, Knoblauch, Paniermehl, Olivenöl" },
@@ -1527,12 +2066,15 @@ const RECIPES = [
       { label: "Ruhen", kind: "finish", dur: "8 min", temp: "—", text: "Ruhen, dann zwischen den Knochen aufschneiden.", bullets: [] },
     ],
     tips: ["Knochen mit Alufolie einwickeln damit sie nicht schwarz werden.", "Rosé ist für Lamm die ideale Garung – 58–62 °C."],
+    proTip: "Kurz und heiß mit Kräuterkruste – Lammrack rosé bei 58–62 °C, nicht länger, sonst verliert das feine Fleisch Saft.",
+    learn: ["Parieren (frenched)","Indirekt vorgaren","Kräuterkruste & searen","Kern 58–62 °C"],
   }),
 
   r({
     id: "garnelen-spieß-grill", name: "Garnelen-Spieße vom Grill", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
     time: "1 h marinieren + 8 min Grillen", pit: "direkt 220–250 °C", core: "opal-rosa, fest", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "In 8 Minuten fertig – marinierte Garnelen direkt über der Glut, perfekt als Vorspeise.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "500 g", i: "Riesengarnelen roh, mit Schale (16/20er)" },
       { a: "4 EL", i: "Olivenöl" },
@@ -1543,6 +2085,8 @@ const RECIPES = [
       { label: "Grillen", kind: "direct", dur: "2–4 min/Seite", temp: "220–250 °C direkt", text: "Direkt über Kohlen/Brenner. Je Seite 2–3 min bis opal-rosa.", bullets: ["Sofort vom Grill wenn rosa – Garnelen werden schnell gummig", "Mit Schale grillen = mehr Aroma und Schutz"] },
     ],
     tips: ["Chili-Limetten-Variante: Chiliflocken + Limettenzeste in die Marinade.", "Knoblauchmayonnaise als Dip ist perfekt dazu."],
+    proTip: "Garnelen sind in Minuten fertig – opal-rosa und fest heißt gar; eine Minute zu lang und sie werden gummig.",
+    learn: ["Marinieren","Aufspießen","Kurz direkt grillen","Garpunkt erkennen"],
   }),
 
   /* ============================ TEMPERATURTABELLE ============================ */
@@ -1821,6 +2365,10 @@ const RECIPES = [
     id: "biltong-wsm", name: "Biltong im Weber Smokey Mountain", method: "bbq", cat: "Biltong & Südafrika", diff: 2,
     time: "3–5 Tage", pit: "Kein Feuer – natürliche Luftzirkulation", core: "Außen trocken, innen rosa-ledrig", wood: "WSM als Trocknungsturm (kein Feuer)",
     blurb: "Der WSM ist ideal als Biltong-Trocknungsturm: gute Belüftung, Schutz vor Insekten, optionaler Hauch Rauch.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇿🇦 Biltong ist Südafrikas Klassiker unter den Fleischsnacks. Hier im Weber Smokey Mountain als Trockenkammer umgesetzt.",
+    authenticity: 9,
+    authenticityNote: "Folgt der südafrikanischen Biltong-Tradition, umgesetzt im WSM.",
     ingredients: [
       { a: "1 kg", i: "Rindfleisch (Oberschale), 20–25 mm dicke Streifen" },
       { a: "60 ml", i: "Malzessig" },
@@ -1840,6 +2388,10 @@ const RECIPES = [
     id: "boerewors-geraeuchert", name: "Boerewors geräuchert (WSM)", method: "heiss", cat: "Biltong & Südafrika", diff: 2,
     time: "2 h Herstellung + 2–3 h Räuchern", pit: "85–100 °C", core: "72 °C", wood: "WSM · Apfel oder Kirsche",
     blurb: "Boerewors nicht direkt gegrillt sondern heiß im WSM geräuchert – saftig, rauchig, intensiv.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇿🇦 Boerewors ist die südafrikanische Nationalwurst vom Braai. Hier geräuchert für zusätzliche Tiefe.",
+    authenticity: 9,
+    authenticityNote: "Folgt der südafrikanischen Tradition, um Rauch ergänzt.",
     ingredients: [
       { a: "800 g", i: "Rindfleisch (Schulter), 200 g Schweinespeck" },
       { a: "je 1 TL", i: "Koriander geröstet, Salz, Pfeffer, Nelken, Muskat, Piment, Malzessig" },
@@ -1855,19 +2407,35 @@ const RECIPES = [
   }),
 
   r({
-    id: "boerewors-gedoerrt", name: "Boerewors gedörrt (Dröe Wors)", method: "dorr", cat: "Biltong & Südafrika", diff: 3,
-    time: "2 h + 2–3 Tage Dörren", pit: "35–40 °C (Graef DA506)", core: "Fest, trocken, dunkel", wood: "Graef DA506",
-    blurb: "Dröe Wors – getrocknete Boerewors, die südafrikanische Antwort auf Landjäger.",
+    id: "boerewors-gedoerrt", name: "Droëwors (Original südafrikanisch)", method: "dorr", cat: "Biltong & Südafrika", diff: 3,
+    time: "1 Tag + 12–72 h Trocknen", pit: "35–40 °C (DA506) oder 18–22 °C Lufttrocknung", core: "Biegsam, ~40 % Gewichtsverlust", wood: "Graef DA506 oder Lufttrocknung",
+    blurb: "Südafrikanische Trockenwurst – grob, würzig mit Koriander und Nelken, nur mit Salz und Essig haltbar gemacht. Der Wurst-Bruder des Biltong.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
+    origin: "🇿🇦 Droëwors bedeutet auf Afrikaans „Trockenwurst“ und ist neben Biltong einer der bekanntesten Snacks Südafrikas. Anders als Salami wird Droëwors nicht fermentiert, sondern allein durch Salz, Essig und kontrolliertes Trocknen haltbar gemacht – ganz ohne Nitritpökelsalz.",
+    authenticity: 9.5,
+    authenticityNote: "Orientiert sich eng an der südafrikanischen Droëwors-Tradition: Salz, Essig, Koriander, luftgetrocknet ohne Nitritpökelsalz. Sehr nah am Original.",
     ingredients: [
-      { a: "1 kg", i: "Boerewors (frisch hergestellt, wie Hauptrezept)" },
+      { a: "700 g", i: "Rindfleisch" },
+      { a: "300 g", i: "Schweinebauch oder fettes Rind (20–25 % Fett)" },
+      { a: "25 g", i: "Salz (Kochsalz, kein NPS!)" },
+      { a: "12 g", i: "Koriander, grob geröstet & gemörsert" },
+      { a: "2,5 g", i: "schwarzer Pfeffer" },
+      { a: "2 g", i: "Muskat" },
+      { a: "1 g", i: "Nelken" },
+      { a: "1 g", i: "Piment (optional)" },
+      { a: "25–30 ml", i: "brauner Essig (Malzessig oder Apfelessig)" },
+      { a: "ca. 2 m", i: "Schafsdarm 22–24 mm" },
     ],
     phases: [
-      { label: "Frische Boerewors herstellen", kind: "prep", dur: "2 h", temp: "kalt", text: "Wie das Boerewors-Rezept. Spirale formen oder in Würste aufteilen (gerade Würste trocknen gleichmäßiger).", bullets: ["Für Dörren: gerade Würste à 20–25 cm sind besser als Spirale", "Keine Luftblasen – einstechen wenn nötig"] },
-      { label: "24 h abtropfen", kind: "rest", dur: "24 h", temp: "Kühlschrank, offen auf Gitter", text: "Frische Würste offen im Kühlschrank abtropfen lassen – Oberfläche trocknet leicht an.", bullets: [] },
-      { label: "Dörren bei 35–40 °C", kind: "dry", dur: "2–3 Tage", temp: "35–40 °C", text: "Im Graef DA506 auf niedrigster Stufe. Würste einlagig auf die Gitter legen. Täglich wenden und Gitter rotieren.", bullets: ["35–40 °C = kein Garen, reines Trocknen", "Für DA506: Timer auf 12 h, täglich wiederholen", "Test: Wurst biegen – fest und lederig = fertig"] },
-      { label: "Lagern", kind: "finish", dur: "—", temp: "trocken, kühl", text: "In Papier oder Leinentuch einwickeln, nicht luftdicht – Wurst muss noch etwas 'atmen'.", bullets: ["Im Kühlschrank 2–3 Wochen haltbar", "Vakuumiert und eingefroren: 3+ Monate"] },
+      { label: "Würzen & Wolfen", kind: "prep", dur: "30 min", temp: "unter 5 °C", text: "Koriander grob rösten und mörsern. Fleisch und Fett mit allen Gewürzen und Essig mischen, dann durch die grobe Scheibe (6–8 mm) wolfen.", bullets: ["Nicht zu fein – Droëwors lebt von der groben Struktur", "Kalt arbeiten, damit das Fett nicht schmiert", "Kein Nitritpökelsalz – nur Kochsalz und Essig"] },
+      { label: "Füllen", kind: "prep", dur: "20 min", temp: "kalt", text: "In Schafsdarm 22–24 mm füllen, nicht zu straff. Würste à 40–60 cm formen.", bullets: ["Locker füllen – zu straff platzt beim Trocknen", "Luftblasen anstechen"] },
+      { label: "Methode 1 ⭐ Einsteiger – Graef DA506", kind: "dry", dur: "12–24 h", temp: "35–40 °C", text: "Würste einlagig auf die Gitter, bei 35–40 °C trocknen. Nach 12 h prüfen.", bullets: ["35–40 °C = reines Trocknen, kein Garen", "Täglich Gitter rotieren"] },
+      { label: "Methode 2 ⭐ Original – Lufttrocknung", kind: "air", dur: "3–5 Tage", temp: "18–22 °C, 55–65 % LF", text: "Frei hängend an einem kühlen, luftigen Ort trocknen – die traditionelle südafrikanische Methode.", bullets: ["Nähert sich am meisten dem Original", "Vor Insekten schützen (Fliegengitter)"] },
+      { label: "Fertig-Test", kind: "finish", dur: "—", temp: "—", text: "Droëwors ist fertig bei ~35–45 % Gewichtsverlust: biegsam, aber nicht weich. Beim Knicken dürfen kleine Risse entstehen, sie soll aber nicht brechen.", bullets: ["Gewichtsverlust ist zuverlässiger als jede Zeitangabe", "Trocken und kühl lagern, nicht luftdicht"] },
     ],
-    tips: ["Dröe Wors ist das südafrikanische Pendant zum Landjäger – intensiver Geschmack.", "Wacholderpfeffer in die Würzmischung gibt extra Tiefe beim Trocknen."],
+    tips: ["Grober 6–8-mm-Wolf ist Pflicht – fein gewolft wird es keine echte Droëwors.", "Koriander vor dem Mörsern rösten holt das volle Aroma heraus.", "Kein Nitritpökelsalz – Salz und Essig konservieren traditionell."],
+    proTip: "Droëwors ist fertig, wenn sie rund 40 % ihres Ausgangsgewichts verloren hat – das ist zuverlässiger als jede feste Zeitangabe. Vorher wiegen und mitrechnen.",
+    learn: ["Grob wolfen (6–8 mm)", "Mit Salz & Essig konservieren", "In Schafsdarm füllen", "Trocknen (DA506 oder Luft)", "Gewichtsverlust-Test (~40 %)"],
   }),
 
   /* ============================ FISCHVIELFALT ============================ */
@@ -1876,6 +2444,10 @@ const RECIPES = [
     id: "lachs-kalt", name: "Kaltgeräucherter Lachs (Graved-Smoked)", method: "kalt", cat: "Fisch & Meeresfrüchte", diff: 2,
     time: "2–3 Tage", pit: "unter 22 °C", core: "Saftig, transparent-orangerot", wood: "WSM · Erle oder Buche",
     blurb: "Der Klassiker – Lachs erst gebeizt (Gravad Lax), dann kaltgeräuchert. Hauchdünn aufgeschnitten servieren.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",3,{de:"optional zum Nachtrocknen",en:"optional for further drying"}]],
+    origin: "🇳🇴 Graved-Smoked Lachs verbindet das skandinavische Gravad-Beizen mit anschließendem Kalträuchern – seidig und aromatisch.",
+    authenticity: 9,
+    authenticityNote: "Folgt der skandinavischen Gravad-Tradition, um Kaltrauch ergänzt.",
     ingredients: [
       { a: "1 kg", i: "Lachsfilet, Sushi-Qualität, mit Haut, entgrätet" },
       { a: "60 g", i: "grobes Meersalz" },
@@ -1896,6 +2468,10 @@ const RECIPES = [
     id: "hering-kalt", name: "Räucherhering kaltgeräuchert (Bückling-Vorstufe)", method: "kalt", cat: "Fisch & Meeresfrüchte", diff: 2,
     time: "2 Tage", pit: "unter 20 °C", core: "Fest, goldgelb", wood: "WSM · Buche + Erle",
     blurb: "Kaltgeräucherter ganzer Hering – stark gesalzen, leicht geräuchert. Norddeutsche Tradition.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}]],
+    origin: "🇩🇪 Der kaltgeräucherte Hering ist die Vorstufe zum Bückling und Teil der norddeutschen Fischräuchertradition.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt der norddeutschen Tradition.",
     ingredients: [
       { a: "8", i: "frische Heringe, ausgenommen, Kopf dran" },
       { a: "1–2 l", i: "Salzlake 10 %: 100 g Salz pro Liter Wasser" },
@@ -1912,6 +2488,10 @@ const RECIPES = [
     id: "bueckling", name: "Bückling (Hering warmgeräuchert)", method: "warm", cat: "Fisch & Meeresfrüchte", diff: 2,
     time: "1 Tag + 2–3 h Räuchern", pit: "40–70 °C", core: "Gar, goldbraun, saftig", wood: "WSM · Buche + Erle",
     blurb: "Bückling = ganzer Hering warmgeräuchert. Nordsee-Klassiker, fettig, intensiv aromatisch.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
+    origin: "🇩🇪 Der Bückling ist ein warm geräucherter ganzer Hering – eine norddeutsche und Ostsee-Tradition. Klassisch auf Schwarzbrot mit Butter und Zwiebeln, am besten frisch aus dem Rauch.",
+    authenticity: 9,
+    authenticityNote: "Folgt der norddeutschen/Ostsee-Tradition des warm geräucherten Herings. Nur bei den Temperaturstufen für reproduzierbares Gelingen präzisiert.",
     ingredients: [
       { a: "8", i: "frische Heringe, ausgenommen" },
       { a: "1–2 l", i: "Salzlake 8 %: 80 g Salz/Liter" },
@@ -1922,12 +2502,18 @@ const RECIPES = [
       { label: "Warmräuchern", kind: "smoke", dur: "2–3 h", temp: "40–70 °C stufenweise", text: "WSM auf 40–50 °C starten, langsam auf 65–70 °C steigern. Hering ist gar wenn Haut goldbraun und Fleisch fest.", bullets: ["Langsame Temperatursteigerung verhindert Platzen der Haut", "Mit Erlholz räuchern = typisches Nordsee-Aroma"] },
     ],
     tips: ["Sofort essen oder innerhalb 3 Tagen – Bückling hält sich nicht lange.", "Klassisch auf Schwarzbrot mit Butter und Zwiebeln."],
+    proTip: "Temperatur langsam steigern – zu schnelle Hitze lässt die Heringshaut platzen.",
+    learn: ["Einlaken", "Pellicle bilden", "Warmräuchern (stufenweise)", "Garprobe"],
   }),
 
   r({
     id: "schillerlocken", name: "Schillerlocken (Dornhai warmgeräuchert)", method: "warm", cat: "Fisch & Meeresfrüchte", diff: 2,
     time: "1 Tag + 3–4 h", pit: "40–65 °C", core: "Goldbraun, saftig", wood: "WSM · Buche",
     blurb: "Die bekannte Räucherware aus Dornhai-Bauchstreifen – gerollt, geräuchert, goldbraun.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
+    origin: "🇩🇪 Schillerlocken sind eine norddeutsche Spezialität aus dem Bauchlappen des Dornhais, warm geräuchert und zur typischen Locke aufgerollt.",
+    authenticity: 9,
+    authenticityNote: "Folgt der norddeutschen Räuchertradition.",
     ingredients: [
       { a: "800 g", i: "Dornhai-Bauchstreifen (beim Fischhändler bestellen)" },
       { a: "1–2 l", i: "Salzlake 8–10 %: 80–100 g Salz/Liter" },
@@ -1938,12 +2524,18 @@ const RECIPES = [
       { label: "Warmräuchern", kind: "smoke", dur: "3–4 h", temp: "45–65 °C", text: "Langsam aufheizen, Buche räuchern bis goldbraun.", bullets: [] },
     ],
     tips: ["Dornhai (Schillerlocken) ist reguliert – beim seriösen Fischhändler kaufen.", "Hält sich im Kühlschrank 5–7 Tage."],
+    proTip: "Die Rollenform gibt die typische Schillerlocken-Optik – erst aufrollen, dann Pellicle bilden lassen.",
+    learn: ["Einlaken", "Aufrollen & Pellicle", "Warmräuchern", "Goldbraun garen"],
   }),
 
   r({
     id: "raeucheraal", name: "Räucheraal (heißgeräuchert)", method: "heiss", cat: "Fisch & Meeresfrüchte", diff: 2,
     time: "1 Tag + 3–4 h", pit: "70–90 °C", core: "Fest, goldbraun, glänzend", wood: "WSM · Buche + Erle",
     blurb: "Räucheraal – fettreich, intensiv aromatisch. Einer der besten Räucherfische überhaupt.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇩🇪 Räucheraal ist eine Delikatesse aus Norddeutschland und dem Ostseeraum, traditionell über Buchenholz heißgeräuchert.",
+    authenticity: 9,
+    authenticityNote: "Folgt der norddeutschen Aal-Räuchertradition.",
     ingredients: [
       { a: "2–3", i: "Aale (je 500–800 g), ausgenommen" },
       { a: "1–2 l", i: "Salzlake 10 %: 100 g Salz/Liter, 1 h Einlegen" },
@@ -1955,12 +2547,15 @@ const RECIPES = [
       { label: "Abkühlen", kind: "finish", dur: "1 h", temp: "Raumtemperatur", text: "Hängend abkühlen lassen. Glänzende, goldbraune Oberfläche.", bullets: [] },
     ],
     tips: ["Räucheraal hält sich ungekühlt nur wenige Stunden – kühl lagern.", "Für maximales Aroma: Holzscheite (keine Chips) aus Buchenholz."],
+    proTip: "Aal ist gar, wenn die Haut aufplatzt und sich das Fleisch leicht vom Knochen löst – das austretende Fett zeigt den Punkt an.",
+    learn: ["Kurz einlaken", "Pellicle bilden", "Heißräuchern (stufenweise)", "Garprobe"],
   }),
 
   r({
     id: "raeucherkarpfen", name: "Räucherkarpfen (heißgeräuchert)", method: "heiss", cat: "Fisch & Meeresfrüchte", diff: 2,
     time: "1 Tag + 4–5 h", pit: "70–90 °C", core: "Fest, weiß, saftig", wood: "WSM · Buche + Pflaume",
     blurb: "Ganzer Karpfen heißgeräuchert – saisonal, kräftig, für Weihnachtszeit klassisch.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "1", i: "Karpfen (1,5–2 kg), ausgenommen und geschuppt" },
       { a: "1–2 l", i: "Salzlake 8 %: 80 g Salz/Liter" },
@@ -1972,12 +2567,15 @@ const RECIPES = [
       { label: "Heißräuchern", kind: "smoke", dur: "4–5 h", temp: "70–90 °C", text: "WSM auf 75 °C, nach 2 h auf 85 °C steigern. Pflaumeholz für Süße.", bullets: ["Karpfen ist fertig wenn Rückenflosse sich leicht herausziehen lässt"] },
     ],
     tips: ["Karpfen aus sauberen Gewässern bevorzugen – lagert Geschmack des Gewässers ein.", "In der Weihnachtszeit günstig beim Teichwirt kaufen."],
+    proTip: "Bauch mit Holzstäbchen offen spreizen – so räuchert der Karpfen gleichmäßig von innen und außen.",
+    learn: ["Einlaken", "Bauch spreizen & Pellicle", "Heißräuchern", "Garprobe (Flossentest)"],
   }),
 
   r({
     id: "makrele-heiss", name: "Räuchermakrele (heißgeräuchert)", method: "heiss", cat: "Fisch & Meeresfrüchte", diff: 1,
     time: "4–5 h", pit: "75–95 °C", core: "65 °C, fest und goldbraun", wood: "WSM · Buche + Erle",
     blurb: "Heißgeräucherte Makrele – fettreich, kräftig aromatisch, schnell gemacht.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "4", i: "frische Makrelen, ausgenommen" },
       { a: "1–2 l", i: "Salzlake 8 %: 80 g Salz/Liter, 1–2 h einlegen" },
@@ -1987,12 +2585,15 @@ const RECIPES = [
       { label: "Heißräuchern", kind: "smoke", dur: "2–3 h", temp: "75–95 °C stufenweise", text: "WSM auf 75 °C, nach 1 h auf 90–95 °C. Makrelen am Schwanz aufhängen oder auf Rost.", bullets: ["Goldbraune, glänzende Haut = fertig", "KT 65 °C"] },
     ],
     tips: ["Sehr fettreich – Makrele eignet sich hervorragend zum Räuchern.", "Sofort nach dem Räuchern essen oder innerhalb 2 Tagen."],
+    proTip: "Goldbraun-glänzende Haut ist das sicherste Zeichen – bei 65 °C Kern ist die Makrele perfekt.",
+    learn: ["Einlaken", "Pellicle bilden", "Heißräuchern (stufenweise)", "Garprobe (Kerntemperatur)"],
   }),
 
   r({
     id: "lachs-warm", name: "Lachsforelle warmgeräuchert", method: "warm", cat: "Fisch & Meeresfrüchte", diff: 2,
     time: "1 Tag + 3–4 h", pit: "40–65 °C", core: "Saftig, hellorange, fest", wood: "WSM · Erle + Apfel",
     blurb: "Lachsforelle beim Warmräuchern entwickelt außergewöhnliche Saftigkeit und mildes Raucharoma.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [
       { a: "1", i: "Lachsforelle (1–1,5 kg), ausgenommen" },
       { a: "1–2 l", i: "Salzlake 7 %: 70 g Salz/Liter + 1 TL Zucker" },
@@ -2004,12 +2605,15 @@ const RECIPES = [
       { label: "Warmräuchern", kind: "smoke", dur: "3–4 h", temp: "40–65 °C stufenweise", text: "Auf 40 °C starten, langsam auf 60–65 °C steigern. Erle + Apfel.", bullets: ["Langsame Temperatursteigerung = maximale Saftigkeit", "KT 58–60 °C am dicksten Punkt"] },
     ],
     tips: ["Lachsforelle ist aromatischer und fettreicher als Regenbogenforelle.", "Erle ist das klassische Holz für Lachsartige – nie Nadelholz!"],
+    proTip: "Langsame Temperatursteigerung ist das Geheimnis der Saftigkeit – nie über 65 °C treiben.",
+    learn: ["Einlaken", "Pellicle bilden", "Warmräuchern (stufenweise)", "Kerntemperatur treffen"],
   }),
 
   r({
     id: "sardinen-geraeuchert", name: "Geräucherte Sardinen / Sprotten", method: "heiss", cat: "Fisch & Meeresfrüchte", diff: 1,
     time: "3–4 h", pit: "75–90 °C", core: "Goldbraun, fest", wood: "WSM · Buche + Erle",
     blurb: "Kleine Fische heißgeräuchert – Sardinen oder Sprotten wie aus der Dose, nur unendlich besser.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "500 g", i: "frische Sardinen oder Sprotten, ausgenommen" },
       { a: "1–2 l", i: "Salzlake 6 %: 60 g Salz/Liter, 30–45 min einlegen" },
@@ -2020,6 +2624,8 @@ const RECIPES = [
       { label: "In Öl einlegen (optional)", kind: "finish", dur: "—", temp: "—", text: "Abgekühlte Sardinen in Olivenöl einlegen – 3–4 Wochen im Kühlschrank haltbar.", bullets: [] },
     ],
     tips: ["In Olivenöl eingelegt und nach 24 h gegessen = beste Qualität.", "Auf Crostinis oder als Tapas servieren."],
+    proTip: "Kleine Fische brauchen nur kurze Lakezeit – 30 Minuten reichen, sonst werden sie zu salzig.",
+    learn: ["Kurz einlaken", "Pellicle bilden", "Heißräuchern", "Optional in Öl einlegen"],
   }),
 
   /* ============================ SALAMI VARIANTEN ============================ */
@@ -2028,6 +2634,10 @@ const RECIPES = [
     id: "milano-salami", name: "Mailänder Salami (Milano)", method: "kalt", cat: "Wurst & Salami", diff: 3,
     time: "6–8 Wochen", pit: "10–14 °C, 75–85 % LF", core: "Fest, gereift, weißer Edelschimmel", wood: "WSM Kalträuchern (1 Gang) · Buche",
     blurb: "Die klassische Mailänder Salami – grob gemahlen, dezent gewürzt, lang gereift.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
+    origin: "🇮🇹 Die Mailänder Salami (Salame Milano) ist fein gewolft und dezent gewürzt – eine der bekanntesten Salami Italiens. Ihr feiner, gleichmäßiger Anschnitt und der weiße Edelschimmel sind ihr Markenzeichen.",
+    authenticity: 9,
+    authenticityNote: "Orientiert sich eng an der Salame-Milano-Tradition: fein gewolft, dezent gewürzt, luftgereift. Angepasst um Starterkultur und NPS für sichere Fermentation.",
     ingredients: [
       { a: "750 g", i: "Schweineschulter (mager)" },
       { a: "250 g", i: "Rückenspeck (fest, gekühlt)" },
@@ -2046,12 +2656,18 @@ const RECIPES = [
       { label: "Trocknen & Reifen", kind: "mature", dur: "5–7 Wochen", temp: "10–14 °C, 75–85 % LF", text: "Kühl und luftig hängen. Tägliche Kontrolle. Weißer Schimmelfilm (Penicillium) ist erwünscht und schützt die Wurst.", bullets: ["Weißer Schimmel = gut, mit feuchtem Tuch leicht einreiben", "Grüner/schwarzer Schimmel = entfernen mit Essig-Tuch"] },
     ],
     tips: ["Starterkultur ist bei Salami Pflicht – kontrollierte Fermentation verhindert Fehlgärung.", "Reifekeller: kühler Keller, Vorratskammer oder Weinkühlschrank sind ideal.", "Salamireifung braucht Geduld – nach 3 Wochen probieren, ob Salz und Reife stimmen."],
+    proTip: "Grober Anschnitt braucht grobes Fett – Rückenspeck (nicht Bauchfett) hält bei der langen Milano-Reifung seine Form und schmiert nicht.",
+    learn: ["Grob wolfen", "Fermentieren (Starterkultur)", "1 Gang kalträuchern", "Edelschimmel", "6–8 Wochen luftreifen"],
   }),
 
   r({
     id: "chorizo", name: "Chorizo (spanisch-style)", method: "kalt", cat: "Wurst & Salami", diff: 2,
     time: "3–4 Wochen", pit: "12–16 °C, 75–80 % LF", core: "Fest, leuchtend rot, aromatisch", wood: "WSM Kalträuchern · Buche",
     blurb: "Hausgemachte Chorizo – scharf, paprikarot, knoblauchintensiv. Spanische Traditionskultur.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
+    origin: "🇪🇸 Chorizo ist die spanische Paprikawurst schlechthin. Ihr Charakter kommt vom Pimentón de la Vera – geräuchertem Paprikapulver –, das ihr Farbe, Rauch und Tiefe gibt. Als Rohwurst gereift oder frisch gebraten.",
+    authenticity: 9,
+    authenticityNote: "Folgt der spanischen Tradition mit Pimentón. Angepasst um Starterkultur und NPS für sichere Fermentation.",
     ingredients: [
       { a: "700 g", i: "Schweinebauch oder Schulter" },
       { a: "300 g", i: "Rückenspeck" },
@@ -2071,12 +2687,18 @@ const RECIPES = [
       { label: "Reifen", kind: "mature", dur: "2–3 Wochen", temp: "12–16 °C, 75–80 % LF", text: "Trocken und kühl reifen. Oberfläche wird fest und dunkelrot.", bullets: [] },
     ],
     tips: ["Pimentón de la Vera (geräuchertes spanisches Paprikapulver) ist der Schlüssel – kein normales Paprikapulver.", "Frische Chorizo (ungereift) direkt nach dem Füllen braten – auch sehr lecker."],
+    proTip: "Pimentón de la Vera bringt schon Rauch mit – deshalb nur dezent nachräuchern, sonst wird die Chorizo bitter.",
+    learn: ["Würzen (Pimentón)", "Fermentieren", "Dezent kalträuchern", "Reifen bis fest & dunkelrot"],
   }),
 
   r({
     id: "landjaeger", name: "Landjäger", method: "kalt", cat: "Wurst & Salami", diff: 2,
     time: "2–3 Wochen", pit: "12–15 °C, 70–80 % LF", core: "Fest, trocken, dunkel", wood: "WSM Kalträuchern · Buche + Tanne",
     blurb: "Der Landjäger – geräucherte, gepresste, getrocknete Dauerwurst. Alpenklassiker.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
+    origin: "🇩🇪 Der Landjäger ist eine geräucherte, gepresste Dauerwurst aus dem Alpenraum (Schwaben, Schweiz, Österreich). Die flache Form entsteht durch das Pressen zwischen Brettern – ideal als haltbarer Wander- und Jagdproviant.",
+    authenticity: 9,
+    authenticityNote: "Folgt der alpenländischen Landjäger-Tradition inklusive Pressen. Angepasst um Starterkultur und NPS für sichere Reifung.",
     ingredients: [
       { a: "700 g", i: "Rindfleisch (Schulter)" },
       { a: "300 g", i: "Schweinebauch" },
@@ -2094,6 +2716,8 @@ const RECIPES = [
       { label: "Trocknen", kind: "mature", dur: "1–2 Wochen", temp: "12–15 °C, 70–80 % LF", text: "Fest und trocken reifen lassen.", bullets: [] },
     ],
     tips: ["Das Pressen ist der definitive Schritt – ohne Pressen ist es kein Landjäger.", "Rindfleisch-Anteil gibt die typische dunkle Farbe und feste Konsistenz."],
+    proTip: "Das Pressen zwischen Brettern ist Pflicht, nicht Deko – es gibt dem Landjäger die flache Form und die dichte, kernige Textur.",
+    learn: ["Wolfen & Mischen", "Füllen & Abteilen", "Pressen (24–48 h)", "Mehrfach kalträuchern", "Trocknen"],
   }),
 
   /* ============================ NEUE KALTRÄUCHERN ============================ */
@@ -2102,6 +2726,10 @@ const RECIPES = [
     id: "bresaola", name: "Bresaola (Rinderfilet)", method: "kalt", cat: "Rind", diff: 3,
     time: "5–6 Wochen", pit: "12–16 °C, 75–80 % rF", core: "", wood: "Buche (dezent, 1–2 Gänge)", yield: "ca. 700 g",
     blurb: "Edelstes Trockenfleisch aus dem Rinderfilet – tiefdunkelrot, hauchdünn, intensiv aromatisch.",
+    equipment: [["chamber",5],["dehydrator",2,{de:"nur kleine Stücke",en:"only small cuts"}],["wsm",0,{de:"wird nicht geräuchert",en:"not smoked"}]],
+    origin: "🇮🇹 Bresaola stammt aus dem Veltlin (Valtellina) in Norditalien und wird aus magerem Rind luftgetrocknet – nie geräuchert. Tiefdunkelrot, hauchdünn geschnitten, klassisch mit Rucola, Parmesan und Zitrone.",
+    authenticity: 9,
+    authenticityNote: "Orientiert sich eng an der Valtellina-Tradition: mageres Rind, gewürzt, luftgetrocknet ohne Rauch. Angepasst nur bei Salz (NPS).",
     ingredients: [
       { a: "1 kg", i: "Rinderfilet oder Rinderhüfte, komplett pariert" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -2122,6 +2750,10 @@ const RECIPES = [
     id: "pancetta", name: "Pancetta (gerollter Bauchspeck)", method: "kalt", cat: "Speck", diff: 2,
     time: "4–6 Wochen", pit: "12–16 °C, 75–80 % rF", core: "", wood: "Buche (optional, 1–2 Gänge)", yield: "ca. 1,2 kg",
     blurb: "Italiens Antwort auf Bacon: gewürzter, gerollter Schweinebauch, luftgetrocknet. Roh als Aufschnitt oder zum Kochen.",
+    equipment: [["chamber",5],["dehydrator",2,{de:"nur kleine Stücke",en:"only small cuts"}],["wsm",0,{de:"wird nicht geräuchert",en:"not smoked"}]],
+    origin: "🇮🇹 Pancetta ist die italienische Antwort auf Bacon: gewürzter, gerollter Schweinebauch, luftgetrocknet statt geräuchert. Roh hauchdünn oder gewürfelt als Basis für Pasta, Sugo und Soffritto.",
+    authenticity: 9.5,
+    authenticityNote: "Orientiert sich eng an der italienischen Tradition: gewürzter, gerollter Bauch, luftgetrocknet ohne Rauch. Angepasst nur bei Salz (NPS).",
     ingredients: [
       { a: "1,5 kg", i: "Schweinebauch, ohne Knochen und Schwarte, rechteckig pariert" },
       { a: "38 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -2136,12 +2768,15 @@ const RECIPES = [
       { label: "Reifen", kind: "mature", dur: "3–5 Wochen", temp: "12–16 °C, 75–80 % rF", text: "Aufgehängt reifen bis ca. 30 % Gewichtsverlust. Rolle bleibt kompakt.", bullets: ["Gleichmäßige Temperatur und Luftfeuchte vermeiden Trockenrand"] },
     ],
     tips: ["Pancetta in Scheiben (2–3 mm) roh servieren oder gewürfelt für Pasta, Risotto, Saucen.", "Pancetta Affumicata (geräuchert) ist die Variante aus Norditalien.", "Schimmel am Rand mit Essig-Salzwasser-Tuch abwischen."],
+    proTip: "Je fester die Rolle gebunden ist, desto gleichmäßiger reift die Pancetta – Luft in der Spirale ruiniert sie.",
+    learn: ["Würzen & Pökeln", "Aufrollen & Abbinden", "Durchbrennen & Trocknen", "Optional kalträuchern", "Reifen (~30 % Verlust)"],
   }),
 
   r({
     id: "raeucherbutter", name: "Geräucherte Butter & Kräuterbutter", method: "kalt", cat: "Würzen & Extras", diff: 1,
     time: "2–3 h", pit: "unter 20 °C", core: "", wood: "Kirsche / Apfel / Buche", yield: "beliebig",
     blurb: "Butter im Kaltrauch veredelt – als Finishing-Butter für Steaks, auf frischem Brot unschlagbar.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}]],
     ingredients: [
       { a: "250 g", i: "gute Butter (Zimmertemperatur, ungesalzen)" },
       { a: "je 1 TL", i: "Kräuter, Knoblauch, Salz (für Kräuterbutter-Variante)" },
@@ -2162,6 +2797,7 @@ const RECIPES = [
     id: "warm-haehnchenbrust", name: "Warmgeräucherte Hähnchenbrust", method: "warm", cat: "Geflügel", diff: 1,
     time: "1 Tag + 3–4 h", pit: "45–60 °C", core: "74 °C", wood: "WSM · Apfel + Kirsche",
     blurb: "Zarte, saftige Hähnchenbrust im Warmrauch – perfekt als Aufschnitt, auf Salaten oder kalt.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [
       { a: "4", i: "Hähnchenbrüste (je 200–250 g)" },
       { a: "1–2 l", i: "Salzlake: 60 g Salz + 20 g Zucker pro Liter Wasser" },
@@ -2180,6 +2816,7 @@ const RECIPES = [
     id: "warm-mozzarella", name: "Geräucherter Mozzarella / Scamorza", method: "warm", cat: "Käse", diff: 1,
     time: "2–3 h", pit: "30–45 °C", core: "", wood: "WSM · Kirsche + Apfel",
     blurb: "Mozzarella oder Scamorza sanft warm geräuchert – cremig mit feinem Raucharoma, wie aus Süditalien.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [
       { a: "400 g", i: "Mozzarella (Fior di Latte, gut abgetropft) oder Scamorza" },
     ],
@@ -2195,6 +2832,10 @@ const RECIPES = [
     id: "chashu-bauch", name: "Chashu Schweinebauch (Ramen-Style)", method: "warm", cat: "Schwein", diff: 2,
     time: "1 Woche + 4 h", pit: "40–55 °C Räuchern + 75 °C Garen", core: "72 °C", wood: "WSM · Apfel + Kirsche",
     blurb: "Japanischer Rollbraten – gepökelt, warm geräuchert, in Sojabrühe gegart. Für Ramen oder als Aufschnitt.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
+    origin: "🇯🇵 Chashu ist der geschmorte/geräucherte Schweinebauch, der klassisch japanische Ramen krönt – gerollt, gebunden und in Sojabrühe gegart.",
+    authenticity: 9,
+    authenticityNote: "Folgt der japanischen Ramen-Tradition, um einen Räuchergang ergänzt.",
     ingredients: [
       { a: "1 kg", i: "Schweinebauch, ohne Knochen, ohne Schwarte" },
       { a: "40 g/kg", i: "NPS" },
@@ -2215,6 +2856,7 @@ const RECIPES = [
     id: "schwarzpfeffer-schinken", name: "Schwarzer Pfeffer Schinken", method: "kalt", cat: "Schinken", diff: 2,
     time: "4–5 Wochen", pit: "15–20 °C", core: "", wood: "WSM · Buche",
     blurb: "Rohschinken mit einer kräftigen schwarzen Pfefferkruste – intensiv und aromatisch.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
     ingredients: [
       { a: "1 kg", i: "Schweinekamm oder -keule, ausgelöst" },
       { a: "40 g/kg", i: "NPS" },
@@ -2230,12 +2872,15 @@ const RECIPES = [
       { label: "Reifen", kind: "mature", dur: "2–3 Wochen", temp: "12–16 °C", text: "Aufgehängt in kühlem, luftigem Raum reifen.", bullets: [] },
     ],
     tips: ["Pfefferkruste schützt vor Austrocknung und gibt intensives Aroma.", "Variante: Paprika statt Pfeffer für eine mildere, rote Kruste."],
+    proTip: "Die grobe Pfefferkruste ist nicht nur Geschmack – sie schützt die Oberfläche vor dem Austrocknen.",
+    learn: ["Pökeln", "Durchbrennen", "Pfefferkruste auftragen", "Kalträuchern", "Nachreifen"],
   }),
 
   r({
     id: "honigschinken", name: "Honig-Senf Schinken (gekocht)", method: "warm", cat: "Schinken", diff: 2,
     time: "2–3 Tage", pit: "60–75 °C Brühtemperatur + 35–45 °C Räuchern", core: "72 °C", wood: "WSM · Apfel + Kirsche",
     blurb: "Zarter, milder gekochter Schinken mit Honig-Senf-Glasur und leichtem Raucharoma.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [
       { a: "1 kg", i: "Schweinekamm oder -keule, ausgelöst" },
       { a: "40 g/kg", i: "40 g/kg" },
@@ -2257,6 +2902,7 @@ const RECIPES = [
     id: "knochen-rohschinken", name: "Nussknochen-Rohschinken (Kräuter)", method: "kalt", cat: "Schinken", diff: 2,
     time: "5–6 Wochen", pit: "12–18 °C", core: "", wood: "WSM · Buche + Kirsche",
     blurb: "Nussknochen (Schweinekeule ohne Knochen) mit Kräuterkruste kaltgeräuchert – typisch hausgemacht.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
     ingredients: [
       { a: "1,5 kg", i: "Nussknochen (Schweinekeule, ausgelöst)" },
       { a: "40 g/kg", i: "NPS" },
@@ -2271,6 +2917,8 @@ const RECIPES = [
       { label: "Reifen", kind: "mature", dur: "3–4 Wochen", temp: "12–18 °C", text: "Luftig hängen bis gewünschter Trocknungsgrad erreicht.", bullets: [] },
     ],
     tips: ["Kräuterkruste gibt Aroma und schützt die Oberfläche.", "Kirschholz macht den Schinken angenehm rotgolden."],
+    proTip: "Die Kräuterkruste würzt und schützt zugleich – Kirschholz gibt dem Schinken sein rotgoldenes Finish.",
+    learn: ["Pökeln", "Durchbrennen", "Kräuterkruste", "Kalträuchern", "Nachreifen"],
   }),
 
   /* ============================ NEUE HEISSRÄUCHERN ============================ */
@@ -2279,6 +2927,7 @@ const RECIPES = [
     id: "raucherpute", name: "Räucherpute (ganz)", method: "heiss", cat: "Geflügel", diff: 3,
     time: "1 Tag + 6–8 h", pit: "130–150 °C", core: "74 °C (Brust), 82 °C (Keule)", wood: "WSM · Apfel + Hickory",
     blurb: "Ganze Räucherpute für besondere Anlässe – durch Brine saftig, durch Rauch unwiderstehlich.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "1", i: "Pute (4–5 kg)" },
       { a: "1–2 l", i: "Brine: 80 g Salz + 60 g Zucker + Lorbeer, Thymian, Pfefferkörner pro Liter" },
@@ -2299,6 +2948,7 @@ const RECIPES = [
     id: "zander-heiss", name: "Heißgeräucherter Zander / Barsch", method: "heiss", cat: "Fisch & Meeresfrüchte", diff: 2,
     time: "1 Tag + 2–3 h", pit: "75–95 °C", core: "65 °C", wood: "WSM · Erle + Apfel",
     blurb: "Heimischer Süßwasserfisch heißgeräuchert – mageres, zartes Fleisch mit feinem Raucharoma.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "2–4", i: "Zander oder Barsch (je 400–700 g), ausgenommen, geschuppt" },
       { a: "1–2 l", i: "Salzlake 6 %: 60 g Salz pro Liter + Pfeffer, Lorbeer, Dill" },
@@ -2310,12 +2960,15 @@ const RECIPES = [
       { label: "Abkühlen", kind: "finish", dur: "30 min", temp: "Raumtemperatur", text: "Auf Gitter abkühlen lassen, dann kühlen.", bullets: [] },
     ],
     tips: ["Erle ist das klassische Holz für Süßwasserfische – kein Hickory oder starke Hölzer.", "Mit Senf-Dill-Sauce und Schwarzbrot servieren.", "Zander und Barsch vom Anglerkollegen oder seriösen Fischhändler."],
+    proTip: "Zander ist mager und übergart schnell – der Pellicle ist hier besonders wichtig, damit das Fleisch nicht austrocknet.",
+    learn: ["Einlaken (kurz)", "Pellicle bilden", "Heißräuchern", "Garprobe (weiß-flockig)"],
   }),
 
   r({
     id: "ribs-hot-fast", name: "Schnelle Ribs (Hot & Fast)", method: "heiss", cat: "Schwein", diff: 2,
     time: "3,5–4 h", pit: "150–165 °C", core: "93–95 °C (Zahnstochertest)", wood: "WSM · Apfel + Kirsche",
     blurb: "Ribs in unter 4 Stunden – Hot & Fast statt 3-2-1. Weniger Zeit, saftig und rauchig.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "2", i: "Leitern Baby Back Ribs" },
       { a: "3–4 EL", i: "Rub: Paprika, Salz, Pfeffer, brauner Zucker, Knoblauch, Zwiebelpulver" },
@@ -2337,6 +2990,10 @@ const RECIPES = [
     id: "chuck-roast-bbq", name: "Smoked Chuck Roast (Poor Man's Brisket)", method: "bbq", cat: "Rind", diff: 2,
     time: "6–8 h", pit: "110–125 °C", core: "92–95 °C", wood: "WSM · Eiche + Hickory",
     blurb: "Rinderschulter als günstiger Brisket-Ersatz – saftig, aromatisch, herrliche Kruste.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇺🇸 Smoked Chuck Roast gilt als „Poor Man's Brisket“ im US-BBQ – gleiche Technik, günstigeres Stück.",
+    authenticity: 9,
+    authenticityNote: "Folgt der US-BBQ-Technik des Brisket, auf das nachsichtigere Chuck übertragen.",
     ingredients: [
       { a: "2 kg", i: "Rinderschulter (Chuck Roast), am Stück" },
       { a: "je 3 EL", i: "grobes Meersalz + schwarzer Pfeffer (Texas-Style Rub)" },
@@ -2350,12 +3007,15 @@ const RECIPES = [
       { label: "Servieren", kind: "finish", dur: "—", temp: "—", text: "Als ganzes Stück aufschneiden oder wie Pulled Beef zupfen.", bullets: ["Für Pulled Beef: bis 96–98 °C garen", "Quer zur Faser aufschneiden"] },
     ],
     tips: ["Chuck Roast kostet 1/3 von Brisket und ist nachsichtiger beim Garen – ideal zum Üben.", "Intramuskuläres Fett schmilzt bei 92+ °C = butterweiche Textur.", "Als Pulled Beef auf Burgern oder Sandwiches grandios."],
+    proTip: "Chuck Roast ist das perfekte Brisket-Trainingsstück: gleiche Technik, ein Drittel des Preises und deutlich nachsichtiger beim Garpunkt.",
+    learn: ["Rubben", "Stall verstehen", "Wickeln", "Auf 92+ °C garen", "Zupfen oder schneiden"],
   }),
 
   r({
     id: "lammschulter-bbq", name: "Lammschulter Low & Slow", method: "bbq", cat: "Lamm", diff: 2,
     time: "8–10 h", pit: "110–120 °C", core: "90–94 °C", wood: "WSM · Eiche + Rosmarinzweig auf den Kohlen",
     blurb: "Lammschulter low & slow bis sie auseinanderfällt – mediterrane Würze trifft BBQ-Geduld.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "1,5–2 kg", i: "Lammschulter, mit Knochen" },
       { a: "4 EL + je 1 TL", i: "Würzpaste: Olivenöl, Knoblauch (6 Zehen), Rosmarin, Thymian, Zitronenschale, Pfeffer, Salz" },
@@ -2368,12 +3028,18 @@ const RECIPES = [
       { label: "Servieren", kind: "finish", dur: "—", temp: "—", text: "Fleisch löst sich vom Knochen – in große Stücke rupfen.", bullets: ["Mit Tzatziki, Fladenbrot und frischen Kräutern servieren", "Knochenmark auslöffeln!"] },
     ],
     tips: ["Lammschulter mit Knochen – der Knochen gibt Geschmack.", "Lamm nimmt Rauch intensiver auf als Schwein – Eiche statt Hickory für mildere Note.", "Reste in Pita-Brot mit Harissa hervorragend."],
+    proTip: "Lamm nimmt Rauch intensiver auf als Schwein – milde Eiche statt Hickory nehmen, sonst überdeckt der Rauch das feine Lammaroma.",
+    learn: ["Würzen (mediterran)", "Am Knochen garen", "Räuchern low & slow", "Auf 90–94 °C ziehen", "Zupfen"],
   }),
 
   r({
     id: "smoked-meatloaf", name: "BBQ Meatloaf (Hackfleisch-Laib)", method: "bbq", cat: "Schwein", diff: 1,
     time: "3–4 h", pit: "120–135 °C", core: "72 °C", wood: "WSM · Kirsche + Apfel",
     blurb: "Hausmannskost trifft BBQ: klassischer Hackfleischlaib vom Smoker, glasiert.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇺🇸 BBQ Meatloaf ist die geräucherte Variante des amerikanischen Hackbraten-Klassikers – mit Glasur und Rauch statt Ofen.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt der US-BBQ-Interpretation des Meatloaf.",
     ingredients: [
       { a: "1 kg", i: "Rinderhack oder gemischtes Hack (Rind + Schwein)" },
       { a: "1", i: "Ei" },
@@ -2389,6 +3055,8 @@ const RECIPES = [
       { label: "Ruhen", kind: "rest", dur: "15 min", temp: "—", text: "Vor dem Aufschneiden ruhen.", bullets: [] },
     ],
     tips: ["In der Mitte ein Stück Cheddar einrollen für flüssigen Käsekern.", "Reste kalt aufgeschnitten auf Brot sind hervorragend.", "Variante: Baconstreifen außen herum weben für Speckmantel."],
+    proTip: "Kerntemperatur ist beim Hackfleisch-Laib Sicherheit, nicht Geschmack: 72 °C müssen erreicht werden – bei Hack führt kein Weg an der Sonde vorbei.",
+    learn: ["Hackmasse binden", "Laib formen", "Räuchern", "Auf 72 °C garen (Sicherheit)", "Glasieren"],
   }),
 
   /* ============================ NEUE DÖRREN ============================ */
@@ -2397,6 +3065,7 @@ const RECIPES = [
     id: "birnen-dorr", name: "Birnenscheiben / Birnenchips", method: "dorr", cat: "Obst", diff: 1,
     time: "6–10 h", pit: "55–65 °C", core: "Lederig oder knusprig", wood: "Graef DA506", yield: "ca. 100 g/kg",
     blurb: "Sanft süßlich und zart – getrocknete Birnen sind ein unterschätzter Snack.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "feste Birnen (Williams, Conference)" },
       { a: "1", i: "Zitrone (Saft)" },
@@ -2407,12 +3076,15 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl, trocken", text: "Auskühlen, luftdicht lagern.", bullets: [] },
     ],
     tips: ["Mit Vanille und Kardamom würzen vor dem Dörren für ein Weihnachtsaroma.", "Getrocknete Birnen auf Käseplatten sind ein Highlight."],
+    proTip: "Feste Birnen dünn schneiden und kurz in Zitronenwasser – das hält sie hell; überreife werden matschig.",
+    learn: ["Schneiden","Zitronenbad","Dörren"],
   }),
 
   r({
     id: "aprikosen-dorr", name: "Aprikosenhälften getrocknet", method: "dorr", cat: "Obst", diff: 1,
     time: "10–16 h", pit: "55–65 °C", core: "Lederig-weich, kein Feuchtkern", wood: "Graef DA506", yield: "ca. 200 g/kg",
     blurb: "Selbstgemachte Aprikosen – süß-säuerlich konzentriert, ohne Schwefeldioxid.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "reife Aprikosen" },
       { a: "1 TL", i: "Zitronensaft (verhindert Bräunung)" },
@@ -2423,12 +3095,15 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl, trocken", text: "Auskühlen, luftdicht lagern.", bullets: [] },
     ],
     tips: ["Perfekt für Müsli, Konfitüre oder als Snack zu Käse.", "Vollständig getrocknet monatelang haltbar im Kühlschrank."],
+    proTip: "Aprikosen halbieren und mit der Schnittseite nach oben dörren – so läuft kein Saft aus und sie bleiben weich-lederig.",
+    learn: ["Halbieren","Schnittseite oben","Lederig dörren"],
   }),
 
   r({
     id: "susskartoffel-chips", name: "Süßkartoffelchips", method: "dorr", cat: "Gemüse", diff: 1,
     time: "6–10 h", pit: "55–65 °C", core: "Knusprig", wood: "Graef DA506", yield: "ca. 100 g/kg",
     blurb: "Natürlich süßlich, knusprig – weit besser als alles aus der Tüte.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Süßkartoffeln" },
       { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Paprika oder Zimt (herzhaft oder süß)" },
@@ -2439,12 +3114,15 @@ const RECIPES = [
       { label: "Dörren", kind: "dry", dur: "6–10 h", temp: "55–65 °C", text: "Einlagig auf Gitter, nach halber Zeit wenden. Erst nach vollständigem Abkühlen wirklich knusprig.", bullets: ["Süßkartoffeln haben viel Zucker – etwas länger als Karotten"] },
     ],
     tips: ["Süß-Variante mit Zimt ist ein hervorragendes Dessert-Topping.", "Im Dörrer ohne Frittieröl – deutlich kalorienärmer als gebackene Chips."],
+    proTip: "Süßkartoffel sehr dünn schneiden (Mandoline) – dick werden sie zäh statt knusprig.",
+    learn: ["Dünn schneiden","Bei 55–65 °C dörren","Knusprig"],
   }),
 
   r({
     id: "kurbis-chips", name: "Kürbischips (Hokkaido)", method: "dorr", cat: "Gemüse", diff: 1,
     time: "5–8 h", pit: "55–65 °C", core: "Knusprig", wood: "Graef DA506", yield: "ca. 80 g/kg",
     blurb: "Herbst im Glas: Hokkaidokürbis gedörrt – nussig, süßlich, knusprig.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Hokkaido-Kürbis (Schale bleibt dran)" },
       { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Pfeffer, Paprika, Kreuzkümmel oder Muskatnuss" },
@@ -2454,12 +3132,15 @@ const RECIPES = [
       { label: "Würzen & Dörren", kind: "dry", dur: "5–8 h", temp: "55–65 °C", text: "Mit Öl und Gewürzen vermengen, einlagig auf Gitter. Dörren bis knusprig.", bullets: ["Kürbis hat viel Wasser – Geduld einplanen"] },
     ],
     tips: ["Kürbiskerne bei 60 °C 2–3 h mit Salz nebenher dörren.", "Chips nehmen schnell Feuchtigkeit an – sofort luftdicht verpacken."],
+    proTip: "Hokkaido muss nicht geschält werden – dünn schneiden, die Schale gibt Biss und Nussigkeit.",
+    learn: ["Dünn schneiden (mit Schale)","Dörren","Knusprig"],
   }),
 
   r({
     id: "weintrauben-rosinen", name: "Selbstgemachte Rosinen", method: "dorr", cat: "Obst", diff: 1,
     time: "24–48 h", pit: "55–65 °C", core: "Weich-lederig, zäh", wood: "Graef DA506", yield: "ca. 250 g/kg",
     blurb: "Aus frischen Weintrauben – aromatischer als Supermarkt-Rosinen, ohne Zusatzstoffe.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "kernlose Weintrauben (Muskateller oder Sultaninen)" },
     ],
@@ -2469,6 +3150,8 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl, trocken", text: "In Schraubglas luftdicht lagern.", bullets: [] },
     ],
     tips: ["Rote Trauben = dunklere, intensivere Rosinen; weiße Trauben = goldene Sultaninen.", "Für Kuchen, Müsli oder pur als Snack."],
+    proTip: "Kernlose Trauben kurz anritzen oder blanchieren – die wachsige Haut bremst sonst die Trocknung enorm.",
+    learn: ["Haut anritzen/blanchieren","Lange dörren","Weich-lederig"],
   }),
 
   /* ============================ NEUE GRILL ============================ */
@@ -2477,6 +3160,7 @@ const RECIPES = [
     id: "flank-steak", name: "Flank Steak / Bavette", method: "grill", cat: "Rindfleisch", diff: 2,
     time: "30–60 min", pit: "direkt 250–280 °C", core: "52–54 °C (medium-rare)", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Das unterschätzte Steak – günstiger als Filet, intensiver im Geschmack. Quer zur Faser aufschneiden ist Pflicht.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "600–800 g", i: "Flank Steak / Bavette, pariert" },
       { a: "je 1–2 TL", i: "grobes Meersalz (1 h vorher), schwarzer Pfeffer erst nach dem Grillen" },
@@ -2489,12 +3173,15 @@ const RECIPES = [
       { label: "Ruhen & Aufschneiden", kind: "finish", dur: "8 min", temp: "—", text: "8 min ruhen, dann QUER zur Faser in dünne Scheiben aufschneiden.", bullets: ["Quer zur Faser ist Pflicht – sonst zäh", "Faser läuft diagonal – Schnittrichtung beachten!"] },
     ],
     tips: ["Bavette = französischer Begriff für das gleiche Stück.", "Ab 58 °C wird es zäh – Medium-rare ist optimal.", "Marinade (Sojasauce + Öl + Knoblauch + Limette) für 4–8 h gibt Tiefe."],
+    proTip: "Flank Steak immer quer zur langen Faser aufschneiden – nur so wird das grobfaserige Stück zart statt zäh.",
+    learn: ["Direkt heiß grillen","Kern 52–54 °C","Ruhen","Quer zur Faser schneiden"],
   }),
 
   r({
     id: "zedernbrett-lachs", name: "Lachs auf Zedernholz-Brett", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
     time: "30 min einweichen + 25–35 min Grillen", pit: "indirekt 180–200 °C", core: "55–60 °C", wood: "Zedernholz-Brett + Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Lachs auf dem Zedernbrett – saftig, aromatisch, kein Klebestress, perfektes Showstück.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "Lachsseite (600–800 g) mit Haut, entgrätet" },
       { a: "1", i: "Zedernholz-Grillbrett (Food Grade, 30 min eingewässert)" },
@@ -2507,12 +3194,18 @@ const RECIPES = [
       { label: "Servieren", kind: "finish", dur: "—", temp: "—", text: "Direkt vom Brett servieren. Haut bleibt am Brett kleben – Lachs löst sich leicht.", bullets: [] },
     ],
     tips: ["Zedernholz-Bretter im Fachhandel – immer Food Grade kaufen.", "Brett nach Benutzung abkratzen, einölen und 2–3 mal wiederverwenden.", "Maple-Miso-Glasur: Ahornsirup + weißes Miso + Ingwer = außergewöhnlich gut."],
+    proTip: "Das gewässerte Zedernbrett schwelt und gibt dem Lachs ein feines Raucharoma, während es ihn vor direkter Hitze schützt – nie ungewässert auflegen.",
+    learn: ["Brett wässern","Lachs auflegen","Indirekt garen","Aroma vom Holz"],
   }),
 
   r({
     id: "halloumi-grill", name: "Gegrillter Halloumi & Gemüse-Platte", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
     time: "20–30 min", pit: "direkt 200–230 °C", core: "—", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Halloumi wird auf dem Grill goldbraun ohne zu schmelzen – perfekt für vegetarische Runden.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
+    origin: "🇨🇾 Halloumi stammt aus Zypern – ein Grillkäse, der nicht schmilzt und heiß gegrillt Röststreifen bekommt.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt der zyprischen Tradition.",
     ingredients: [
       { a: "2", i: "Packungen Halloumi (je 250 g)" },
       { a: "je 1 Stk", i: "Zucchini, Auberginen, Paprika, rote Zwiebeln" },
@@ -2525,12 +3218,18 @@ const RECIPES = [
       { label: "Anrichten", kind: "finish", dur: "—", temp: "—", text: "Alles auf Platte, mit Zitrone beträufeln, Oregano und Meersalz.", bullets: [] },
     ],
     tips: ["Halloumi sofort heiß essen – abgekühlt wird er fest und gummiartig.", "Mit Honig und Chiliflocken ist es noch besser.", "Mit Hummus und Fladenbrot als vollständige Mahlzeit servieren."],
+    proTip: "Halloumi schmilzt nicht – heiß und kurz grillen für Röststreifen, sonst wird er quietschig-zäh.",
+    learn: ["Heiß angrillen","Röststreifen","Mit Gemüse kombinieren"],
   }),
 
   r({
     id: "oktopus-grill", name: "Oktopus vom Grill (vorgegart)", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 2,
     time: "1 h Vorgaren + 10–15 min Grillen", pit: "direkt 220–260 °C", core: "—", wood: "Rössle Gasgrill oder Weber Kugelgrill",
     blurb: "Knusprige Arme, zartes Innere – der Trick ist das Vorkochen. Grillen gibt die Röstung.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
+    origin: "🇬🇷 Gegrillter Oktopus ist ein Klassiker der griechischen und mediterranen Küche – erst weich geschmort, dann kurz heiß gegrillt.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt der mediterranen Zubereitung.",
     ingredients: [
       { a: "1", i: "Oktopus (1,5–2 kg), tiefgekühlt aufgetaut" },
       { a: "je 1 TL", i: "Vorkoch-Wasser: Lorbeer, Pfefferkörner, Weißwein, Salz" },
@@ -2543,6 +3242,8 @@ const RECIPES = [
       { label: "Anrichten", kind: "finish", dur: "—", temp: "—", text: "Mit frischer Zitrone, Olivenöl, Petersilie und Paprika servieren.", bullets: [] },
     ],
     tips: ["Tiefgekühlt kaufen und langsam auftauen ist besser als frisch.", "Tentakel auf den Rost – der Körper hat wenig Grillfläche.", "Auf Rucola-Salat mit Parmesan und Zitronenvinaigrette servieren."],
+    proTip: "Oktopus erst weich schmoren, dann nur kurz heiß angrillen – Röstaromen außen, zart innen; direkt roh gegrillt wird er zäh.",
+    learn: ["Vorgaren (weich schmoren)","Kurz heiß angrillen","Röstaromen"],
   }),
 
   /* ============================ NEUE WARMRÄUCHERN (Schwein · Rind · Gemüse) ============================ */
@@ -2551,6 +3252,7 @@ const RECIPES = [
     id: "warm-bauchspeck", name: "Warmgeräucherter Bauchspeck", method: "warm", cat: "Schwein", diff: 2,
     time: "1 Woche + 4 h", pit: "40–55 °C", core: "", wood: "Buche / Hickory", yield: "ca. 1,2 kg",
     blurb: "Gepökelter Schweinebauch, warm geräuchert – das Original für Bauernspeck, Bratspeck und herzhafte Würfel.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [
       { a: "1,5 kg", i: "Schweinebauch ohne Schwarte, am Stück" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -2570,6 +3272,10 @@ const RECIPES = [
     id: "warm-schaeufele", name: "Warmgeräucherter Schweinenacken (Schäufele-Style)", method: "warm", cat: "Schwein", diff: 2,
     time: "1 Woche + 4 h", pit: "45–55 °C → 75 °C Garen", core: "70 °C", wood: "Buche", yield: "ca. 1,5 kg",
     blurb: "Gepökelter Nacken, warm geräuchert und sanft gegart – saftig, mild rauchig, fränkische Schäufele-Idee ohne Knochen.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
+    origin: "🇩🇪 Das Schäufele ist ein fränkischer Klassiker aus dem Schweinenacken/-schulter mit Schwarte. Hier warmgeräuchert statt gebraten.",
+    authenticity: 8.5,
+    authenticityNote: "Fränkische Tradition, als Räuchervariante interpretiert.",
     ingredients: [
       { a: "1,8 kg", i: "Schweinenacken am Stück, ohne Knochen" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -2589,6 +3295,7 @@ const RECIPES = [
     id: "warm-roastbeef", name: "Warmgeräuchertes Roastbeef", method: "warm", cat: "Rind", diff: 3,
     time: "1 Tag + 3 h", pit: "50–60 °C → Sear", core: "54 °C (medium-rare)", wood: "Buche / Kirsche", yield: "ca. 1,2 kg",
     blurb: "Rinderrücken sanft warm geräuchert, dann scharf angebraten – rosa Kern mit feinem Rauchmantel.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [
       { a: "1,4 kg", i: "Roastbeef / Rinderrücken am Stück, pariert" },
       { a: "12 g/kg", i: "grobes Meersalz (Dry Brine)" },
@@ -2607,6 +3314,7 @@ const RECIPES = [
     id: "warm-rinderzunge", name: "Warmgeräucherte Rinderzunge", method: "warm", cat: "Rind", diff: 3,
     time: "1 Woche + 4 h", pit: "45–55 °C", core: "gegart", wood: "Buche", yield: "ca. 900 g",
     blurb: "Gepökelt, zart gekocht und warm geräuchert – eine unterschätzte Delikatesse, fein und würzig.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [
       { a: "1", i: "Rinderzunge (ca. 1,2 kg)" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -2625,6 +3333,7 @@ const RECIPES = [
     id: "warm-knoblauch-gemuese", name: "Warmgeräucherter Knoblauch & Gemüse", method: "warm", cat: "Gemüse", diff: 1,
     time: "2–4 h", pit: "40–55 °C", core: "", wood: "Buche / Kirsche / Apfel", yield: "beliebig",
     blurb: "Knoblauchknollen, Zwiebeln, Paprika und Tomaten warm geräuchert – tiefes Aroma als Würzbasis für Saucen, Butter und Dips.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [
       { a: "4–6", i: "ganze Knoblauchknollen (Deckel abgeschnitten)" },
       { a: "2–3", i: "rote Zwiebeln, halbiert" },
@@ -2645,6 +3354,7 @@ const RECIPES = [
     id: "heiss-krustenbraten", name: "Heißgeräucherter Krustenbraten", method: "heiss", cat: "Schwein", diff: 3,
     time: "1 Tag + 4 h", pit: "130–150 °C → 230 °C Kruste", core: "82–85 °C", wood: "Buche / Apfel", yield: "ca. 1,8 kg",
     blurb: "Schweineschulter mit Schwarte – erst rauchig gegart, dann mit Krachkruste finalisiert.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "2 kg", i: "Schweineschulter mit Schwarte" },
       { a: "12 g/kg", i: "Salz" },
@@ -2664,6 +3374,7 @@ const RECIPES = [
     id: "heiss-nackensteaks", name: "Heißgeräucherte Nackensteaks", method: "heiss", cat: "Schwein", diff: 1,
     time: "2–3 h", pit: "120–140 °C", core: "65 °C", wood: "Apfel / Kirsche", yield: "4 Steaks",
     blurb: "Dicke Schweinenackensteaks, saftig durchzogen – rauchig gegart, schnell und gelingsicher.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "4", i: "Schweinenackensteaks (je ca. 250 g, 3 cm dick)" },
       { a: "3–4 EL", i: "BBQ-Rub (Paprika, Zucker, Knoblauch, Pfeffer, Salz)" },
@@ -2681,6 +3392,10 @@ const RECIPES = [
     id: "heiss-tri-tip", name: "Heißgeräuchertes Tri-Tip (Bürgermeisterstück)", method: "heiss", cat: "Rind", diff: 2,
     time: "2–3 h", pit: "120 °C → Sear", core: "54 °C (medium-rare)", wood: "Eiche / Kirsche", yield: "ca. 1 kg",
     blurb: "Kalifornischer Klassiker: Bürgermeisterstück rauchig gegart und scharf angegrillt – Reverse Sear vom Feinsten.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇺🇸 Tri-Tip (Bürgermeisterstück) wurde in Santa Maria, Kalifornien, berühmt – das Herzstück des Santa-Maria-BBQ.",
+    authenticity: 9,
+    authenticityNote: "Folgt der kalifornischen Santa-Maria-Tradition.",
     ingredients: [
       { a: "1,2 kg", i: "Tri-Tip / Bürgermeisterstück, pariert" },
       { a: "je 1 EL", i: "grobes Salz, grober Pfeffer, Knoblauchgranulat (SPG-Rub)" },
@@ -2698,6 +3413,7 @@ const RECIPES = [
     id: "heiss-beef-ribs-fast", name: "Heißgeräucherte Beef Ribs (Hot & Fast)", method: "heiss", cat: "Rind", diff: 2,
     time: "4–5 h", pit: "150–160 °C", core: "94–96 °C", wood: "Eiche / Hickory", yield: "1 Leiter",
     blurb: "Fleischige Rinderrippen in unter 5 Stunden – Hot & Fast statt Low & Slow, butterzart und kräftig.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "1", i: "Beef-Rib-Leiter (Short Ribs, 1,5–2 kg)" },
       { a: "je 1 EL", i: "grobes Salz, grober Pfeffer, Knoblauchgranulat" },
@@ -2715,6 +3431,7 @@ const RECIPES = [
     id: "heiss-chipotle", name: "Heißgeräucherte Jalapeños (Chipotle)", method: "heiss", cat: "Gemüse", diff: 2,
     time: "4–8 h", pit: "70–110 °C", core: "trocken-ledrig", wood: "Pecan / Hickory", yield: "ca. 100 g/kg",
     blurb: "Reife rote Jalapeños langsam heiß geräuchert und getrocknet – die selbstgemachten Chipotle, rauchig und scharf.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "500 g", i: "reife rote Jalapeños (oder andere fleischige Chilis)" },
     ],
@@ -2732,6 +3449,7 @@ const RECIPES = [
     id: "pork-jerky", name: "Pork Jerky (Schweinefleisch)", method: "dorr", cat: "Fleisch & Fisch", diff: 3,
     time: "1 Tag + 5–8 h", pit: "70 °C (Maximum)", core: "Ledrig, kein feuchter Kern", wood: "Graef DA506", yield: "ca. 350 g/kg",
     blurb: "Würzige Schweinefleisch-Streifen – mit Pökelsalz und sicherer Temperaturführung zum gelingsicheren Jerky.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Schweinelachs / Rückenfilet (sehr mager, pariert)" },
       { a: "3 g/kg", i: "Nitritpökelsalz (NPS, für Sicherheit)" },
@@ -2745,12 +3463,15 @@ const RECIPES = [
       { label: "Abkühlen & Lagern", kind: "finish", dur: "1 h", temp: "Raumtemperatur", text: "Auf Gitter abkühlen, dann luftdicht verpacken.", bullets: ["Vakuumiert im Kühlschrank 2–4 Wochen haltbar"] },
     ],
     tips: ["Schwein nur mit NPS und bei 70 °C dörren – alternativ vorher 10 min bei 160 °C im Ofen erhitzen.", "Nur hochwertiges, mageres Fleisch aus sicherer Quelle verwenden.", "Mit etwas Chili oder Ahornsirup spannend variieren."],
+    proTip: "Schweine-Jerky bei 70 °C+ dörren (Sicherheit) und nur mageres Fleisch nehmen – Fett wird beim Lagern ranzig.",
+    learn: ["Mager schneiden","Marinieren","Sicher bei 70 °C dörren"],
   }),
 
   r({
     id: "ground-beef-jerky", name: "Hackfleisch-Jerky (Beef Sticks)", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
     time: "1 Tag + 5–7 h", pit: "70 °C", core: "Ledrig-fest", wood: "Graef DA506", yield: "ca. 400 g/kg",
     blurb: "Aus magerem Rinderhack geformt – gleichmäßig, zart und ohne teure Edelstücke. Die günstige Jerky-Variante.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "mageres Rinderhack (max. 5 % Fett)" },
       { a: "3 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -2763,12 +3484,15 @@ const RECIPES = [
       { label: "Dörren", kind: "dry", dur: "5–7 h", temp: "70 °C", text: "Auf Gitter oder Dörrfolie bei 70 °C trocknen bis ledrig-fest.", bullets: ["Zwischendurch das austretende Fett abtupfen", "Test: Stick biegen – fest, kein feuchter Kern"] },
     ],
     tips: ["Hackfleisch-Jerky ist gleichmäßiger und zarter zu kauen als Streifen-Jerky.", "Eine Jerky-Presse oder Spritzbeutel gibt saubere Sticks.", "Nur frisches, sehr mageres Hack vom Metzger verwenden."],
+    proTip: "Hackfleisch durch eine Jerky-Presse in gleichmäßige Streifen drücken – gleichmäßige Dicke trocknet sicher und gleichmäßig durch.",
+    learn: ["Würzen & pressen","Gleichmäßig formen","Bei 70 °C dörren"],
   }),
 
   r({
     id: "pastinaken-chips", name: "Pastinaken- & Wurzelgemüse-Chips", method: "dorr", cat: "Gemüse", diff: 1,
     time: "6–10 h", pit: "55–65 °C", core: "Knusprig", wood: "Graef DA506", yield: "ca. 90 g/kg",
     blurb: "Pastinake, Petersilienwurzel und Schwarzwurzel als bunte Wurzel-Chips – nussig-süß und knusprig.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Pastinaken (oder gemischt: Petersilienwurzel, Topinambur)" },
       { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Kreuzkümmel oder Rosmarin" },
@@ -2779,12 +3503,15 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl, trocken", text: "Vollständig auskühlen, sofort luftdicht verpacken.", bullets: ["Nehmen schnell Feuchtigkeit auf"] },
     ],
     tips: ["Eine Mischung verschiedener Wurzeln ergibt eine bunte, aromatische Chips-Auswahl.", "Ohne Frittieröl deutlich kalorienärmer als gebackene Chips."],
+    proTip: "Wurzelgemüse kurz blanchieren behält Farbe und Süße – dünn und gleichmäßig für knusprige Chips.",
+    learn: ["Blanchieren","Dünn schneiden","Dörren"],
   }),
 
   r({
     id: "auberginen-chips", name: "Auberginenchips", method: "dorr", cat: "Gemüse", diff: 1,
     time: "6–10 h", pit: "55–65 °C", core: "Knusprig", wood: "Graef DA506", yield: "ca. 60 g/kg",
     blurb: "Würzig-herzhaft und überraschend knusprig – mariniert ein vollwertiger Snack oder veganes Bacon.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Auberginen" },
       { a: "3 EL + je 1 TL", i: "Olivenöl, Sojasoße, Knoblauch, Paprika, Meersalz" },
@@ -2795,12 +3522,15 @@ const RECIPES = [
       { label: "Dörren", kind: "dry", dur: "6–10 h", temp: "55–65 °C", text: "Einlagig auf Gitter, dörren bis knusprig.", bullets: ["Aubergine schrumpft stark – großzügig belegen"] },
     ],
     tips: ["Mit Rauchsalz mariniert ein verblüffend guter veganer Bacon-Ersatz.", "Sofort luftdicht lagern, sonst werden die Chips zäh."],
+    proTip: "Auberginen vorher salzen entzieht Bitterstoffe und Wasser – dann trocknen sie schneller und werden knuspriger.",
+    learn: ["Salzen (entwässern)","Dünn schneiden","Dörren"],
   }),
 
   r({
     id: "zwiebeln-getrocknet", name: "Getrocknete Zwiebeln / Zwiebelpulver", method: "dorr", cat: "Gemüse", diff: 1,
     time: "6–10 h", pit: "50–60 °C", core: "Knusprig-spröde", wood: "Graef DA506", yield: "ca. 100 g/kg",
     blurb: "Selbstgemachte Zwiebelflocken und -pulver – intensiv, ohne Rieselhilfen, ideal für Rubs und Saucen.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Zwiebeln (gelb oder rot)" },
     ],
@@ -2810,12 +3540,15 @@ const RECIPES = [
       { label: "Mahlen & Lagern", kind: "finish", dur: "—", temp: "—", text: "Als Flocken lassen oder zu Pulver mahlen, luftdicht lagern.", bullets: ["Mit Reiskorn im Glas gegen Klumpen"] },
     ],
     tips: ["Zwiebelpulver ist die Basis vieler BBQ-Rubs – frisch gemahlen unschlagbar.", "Geröstete Zwiebeln (vorher kurz anbraten) ergeben ein tieferes Aroma."],
+    proTip: "Zwiebeln knochentrocken dörren, dann mahlen – am besten draußen, der Geruch zieht sonst überallhin.",
+    learn: ["Dünn schneiden","Knochentrocken dörren","Zu Pulver mahlen"],
   }),
 
   r({
     id: "sellerie-getrocknet", name: "Selleriechips & Suppengemüse", method: "dorr", cat: "Gemüse", diff: 1,
     time: "5–9 h", pit: "50–60 °C", core: "Knusprig-trocken", wood: "Graef DA506", yield: "ca. 80 g/kg",
     blurb: "Knollen- und Staudensellerie getrocknet – als Chips, gemahlen als Selleriesalz oder als Vorrat fürs Suppengemüse.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Knollensellerie oder Staudensellerie" },
       { a: "je 1 TL", i: "Meersalz, Pfeffer (für Chips, optional)" },
@@ -2826,6 +3559,8 @@ const RECIPES = [
       { label: "Lagern / Mahlen", kind: "finish", dur: "—", temp: "kühl, trocken", text: "Als Stücke fürs Suppengemüse lagern oder mit Salz zu Selleriesalz mahlen.", bullets: ["Getrocknetes Suppengemüse: Sellerie, Karotte, Lauch, Petersilie mischen"] },
     ],
     tips: ["Selbstgemachtes Selleriesalz (mit Meersalz gemahlen) ist ein toller Würzer.", "Getrocknetes Suppengemüse im Glas ist monatelang haltbar und immer griffbereit."],
+    proTip: "Sellerie und Suppengemüse fein dörren ergibt eine intensive Suppenwürze – knochentrocken für lange Haltbarkeit.",
+    learn: ["Fein schneiden","Dörren","Als Würze mahlen"],
   }),
 
   /* ============================ NEUE GRILL – FISCH & MEERESFRÜCHTE ============================ */
@@ -2834,6 +3569,7 @@ const RECIPES = [
     id: "forelle-grill", name: "Ganze Forelle vom Grill (Fischkorb)", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
     time: "30 min + 15–20 min Grillen", pit: "direkt 200–230 °C", core: "60 °C, Flosse löst sich", wood: "Weber Kugelgrill oder Rössle Gasgrill · Fischkorb",
     blurb: "Knusprige Haut, saftiges Fleisch – im Fischkorb gewendet, klebt nichts am Rost.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "4", i: "Forellen, ausgenommen, geschuppt" },
       { a: "je 1", i: "Zitrone, Bund Petersilie/Dill (in die Bauchhöhle)" },
@@ -2845,12 +3581,15 @@ const RECIPES = [
       { label: "Servieren", kind: "finish", dur: "—", temp: "—", text: "Mit Zitrone und etwas Olivenöl servieren.", bullets: [] },
     ],
     tips: ["Ohne Fischkorb: Rost penibel ölen und den Fisch erst wenden, wenn er sich von selbst löst.", "Mit Speck umwickelt bleibt die Forelle noch saftiger.", "Saibling und Renke gelingen genauso."],
+    proTip: "Im Fischkorb lässt sich die ganze Forelle sicher wenden, ohne dass die Haut kleben bleibt oder der Fisch zerfällt.",
+    learn: ["Fischkorb ölen","Direkt grillen","Sicher wenden","Garpunkt"],
   }),
 
   r({
     id: "lachsfilet-grill", name: "Lachsfilet mit Haut vom Grill", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
     time: "20 min", pit: "direkt 200–220 °C, Haut zuerst", core: "50–55 °C", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Knusprige Hautseite, glasig-saftiger Kern – der einfachste Weg zu perfektem Grilllachs.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "4", i: "Lachsfilets mit Haut (je 180 g), entgrätet" },
       { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Pfeffer, Zitronenschale" },
@@ -2862,12 +3601,15 @@ const RECIPES = [
       { label: "Kurz wenden", kind: "direct", dur: "1–2 min", temp: "200–220 °C", text: "Nur kurz auf die Fleischseite drehen, bis Kern 50–55 °C (glasig-saftig).", bullets: ["Nicht über 55 °C – sonst tritt weißes Eiweiß aus und der Lachs wird trocken"] },
     ],
     tips: ["Glasig bei 50 °C, durch bei 60 °C – Geschmackssache.", "Eine Glasur aus Ahornsirup + Sojasoße in den letzten 2 Minuten gibt eine tolle Lackschicht."],
+    proTip: "Lachs auf der Hautseite grillen und nur einmal wenden – die Haut schützt das Filet und löst sich vom Rost, wenn sie knusprig ist.",
+    learn: ["Auf Hautseite grillen","Einmal wenden","Garpunkt (glasig-rosa)"],
   }),
 
   r({
     id: "thunfisch-steak-grill", name: "Thunfischsteak mit Sesamkruste", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 2,
     time: "30 min marinieren + 5 min Grillen", pit: "direkt 260–300 °C (sehr heiß)", core: "innen rosé (kurz angegrillt)", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Außen kross, innen roh-rosa – Thunfisch wird sehr heiß und nur ganz kurz gegrillt.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "4", i: "Thunfischsteaks in Sashimi-Qualität (je 200 g, 3 cm dick)" },
       { a: "3 EL + je 1 EL", i: "Sojasoße, Sesamöl, Limette, Ingwer (Marinade)" },
@@ -2879,12 +3621,15 @@ const RECIPES = [
       { label: "Aufschneiden", kind: "finish", dur: "—", temp: "—", text: "Kurz ruhen, dann quer in Scheiben schneiden – rosa Kern sichtbar.", bullets: ["Mit Wasabi, Sojasoße und eingelegtem Ingwer servieren"] },
     ],
     tips: ["Nur Thunfisch in ausgewiesener Sashimi-/Sushi-Qualität verwenden.", "Schwertfisch und Lachs gelingen so ebenfalls (dann etwas länger garen).", "Achte auf nachhaltigen Fang (z. B. MSC, Angelrute statt Ringwade)."],
+    proTip: "Thunfisch nur kurz sehr heiß angrillen – innen rosa bleibt saftig; durchgegart wird er trocken und mehlig.",
+    learn: ["Sesamkruste","Sehr heiß angrillen","Rosa Kern halten"],
   }),
 
   r({
     id: "dorade-grill", name: "Dorade ganz vom Grill", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 2,
     time: "30 min + 20 min Grillen", pit: "direkt → indirekt 200–220 °C", core: "Rückgrat löst sich leicht", wood: "Weber Kugelgrill oder Rössle Gasgrill · Fischkorb",
     blurb: "Mediterraner Klassiker: ganze Dorade (oder Wolfsbarsch) mit Zitrone und Kräutern, knusprig gegrillt.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "2", i: "Doraden oder Wolfsbarsche (je ca. 400 g), küchenfertig" },
       { a: "je 1", i: "Zitrone, Knoblauchzehen, Bund Rosmarin/Thymian" },
@@ -2896,12 +3641,15 @@ const RECIPES = [
       { label: "Indirekt fertig garen", kind: "indirect", dur: "8–12 min", temp: "200 °C, Deckel zu", text: "In die indirekte Zone ziehen und mit Deckel fertig garen.", bullets: ["Fertig, wenn sich das Rückgrat leicht löst", "Bei dickeren Fischen entsprechend länger"] },
     ],
     tips: ["In der Salzkruste gebacken (1,5 kg grobes Salz + Eiweiß) wird sie noch saftiger.", "Wolfsbarsch, Goldbrasse und Forelle funktionieren identisch."],
+    proTip: "Ganze Dorade grillt gutmütig – Haut einschneiden, Bauch mit Zitrone und Kräutern füllen, im Korb wenden.",
+    learn: ["Haut einschneiden","Bauch füllen","Im Korb wenden","Garpunkt"],
   }),
 
   r({
     id: "jakobsmuscheln-grill", name: "Jakobsmuscheln vom Grill", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 2,
     time: "15 min", pit: "direkt 240–280 °C (sehr heiß)", core: "gerade undurchsichtig", wood: "Weber Kugelgrill oder Rössle Gasgrill · Plancha/Gusspfanne",
     blurb: "In zwei Minuten fertig: außen karamellige Kruste, innen zart-glasig. Eine elegante Vorspeise.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "12", i: "große Jakobsmuscheln (ohne Schale, trocken getupft)" },
       { a: "2 EL + je 1 TL", i: "Olivenöl/Butter, Meersalz, Knoblauch, Zitrone" },
@@ -2912,12 +3660,15 @@ const RECIPES = [
       { label: "Servieren", kind: "finish", dur: "—", temp: "—", text: "Mit Knoblauchbutter und Zitrone beträufeln.", bullets: ["Auf Erbsenpüree oder mit Speckchips servieren"] },
     ],
     tips: ["Eine Gusseisenpfanne oder Plancha hält die Hitze besser als der nackte Rost.", "Der Seitenkocher des Rössle eignet sich hervorragend für die Pfanne.", "Garnelen und Tintenfischtuben gelingen genauso schnell."],
+    proTip: "Jakobsmuscheln brauchen nur 1–2 Minuten pro Seite für eine goldene Kruste – Sekunden zu lang und sie werden gummig.",
+    learn: ["Trocken tupfen","Sehr heiß angrillen","Goldene Kruste","Punkt erkennen"],
   }),
 
   r({
     id: "schwertfisch-spieß", name: "Schwertfisch-Spieße (Espetada)", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
     time: "30 min marinieren + 10 min Grillen", pit: "direkt 220–250 °C", core: "saftig, gerade durch", wood: "Weber Kugelgrill oder Rössle Gasgrill · Spieße",
     blurb: "Fester Schwertfisch bleibt am Spieß perfekt in Form – mediterran mariniert, schnell gegrillt.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "800 g", i: "Schwertfisch (oder Thunfisch/Seeteufel), in 3-cm-Würfeln" },
       { a: "1", i: "Zitrone, 1 Zucchini, 1 rote Zwiebel, Cherrytomaten" },
@@ -2929,6 +3680,8 @@ const RECIPES = [
       { label: "Direkt grillen", kind: "direct", dur: "8–10 min", temp: "220–250 °C", text: "Über direkter Hitze rundum grillen, dabei einige Male drehen.", bullets: ["Fertig, sobald der Fisch gerade durch und saftig ist – nicht übergaren"] },
     ],
     tips: ["Auf Madeira heißt das Espetada – traditionell am Lorbeerast gegrillt.", "Mit Limette und einem Joghurt-Knoblauch-Dip servieren.", "Festes Fischfleisch ist Pflicht – Lachs und Kabeljau zerfallen am Spieß."],
+    proTip: "Schwertfisch ist fest genug für Spieße (Espetada) – nur kurz grillen, da mager und schnell trocken.",
+    learn: ["Würfeln & aufspießen","Marinieren","Kurz direkt grillen"],
   }),
 
   /* ============================ NEUE GRILL – SEITENKOCHER (Gemüse) ============================ */
@@ -2937,6 +3690,10 @@ const RECIPES = [
     id: "sideburner-padron", name: "Blistered Padrón-Paprika (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
     time: "10 min", pit: "Seitenkocher – Gusspfanne, volle Hitze", core: "—", wood: "Rössle Gasgrill · Seitenkocher + Gusseisenpfanne",
     blurb: "In Minuten fertig: Padrón- oder Spitzpaprika in der glühend heißen Pfanne, Blasen werfend, mit grobem Salz. Tapas-Klassiker.",
+    equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2]],
+    origin: "🇪🇸 Pimientos de Padrón stammen aus Galicien in Spanien – in heißem Öl geblistert und nur mit grobem Salz serviert.",
+    authenticity: 9,
+    authenticityNote: "Folgt der galicischen Tradition.",
     ingredients: [
       { a: "300 g", i: "Padrón- oder Pimientos-de-Padrón-Paprika (ganz)" },
       { a: "2 EL", i: "Olivenöl" },
@@ -2948,12 +3705,15 @@ const RECIPES = [
       { label: "Salzen & Servieren", kind: "finish", dur: "—", temp: "—", text: "Sofort mit grobem Meersalz bestreuen und heiß servieren.", bullets: ["Klassische Tapas-Warnung: jede zehnte Schote ist scharf"] },
     ],
     tips: ["Der Seitenkocher ist perfekt für solche Pfannengerichte – starke, regelbare Hitze ohne Umbau des Hauptgrills.", "Genauso gut: Shishito-Paprika, grüner Spargel oder Pilze.", "Ein Spritzer Zitrone und etwas Knoblauch heben es zusätzlich."],
+    proTip: "Padrón in sehr heißer, trockener Pfanne blistern, bis die Haut Blasen wirft – nur grobes Salz dazu, das ist das ganze Geheimnis.",
+    learn: ["Pfanne heiß werden lassen","Blistern","Mit Meersalz servieren"],
   }),
 
   r({
     id: "sideburner-zwiebeln", name: "Balsamico-Schmorzwiebeln (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
     time: "35–45 min", pit: "Seitenkocher – kleine bis mittlere Flamme", core: "weich, sirupartig", wood: "Rössle Gasgrill · Seitenkocher + Gusstopf",
     blurb: "Langsam weich geschmorte Zwiebeln mit Balsamico – die perfekte Beilage zu Steak und Burger, ohne den Grill zu blockieren.",
+    equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2]],
     ingredients: [
       { a: "1 kg", i: "Zwiebeln (rot und gelb), in dünne Ringe geschnitten" },
       { a: "3 EL", i: "Butter oder Olivenöl" },
@@ -2965,6 +3725,8 @@ const RECIPES = [
       { label: "Ablöschen & Einkochen", kind: "finish", dur: "5 min", temp: "—", text: "Mit Balsamico und Zucker ablöschen, sirupartig einkochen, mit Thymian abschmecken.", bullets: ["Bis fast die ganze Flüssigkeit verdampft ist"] },
     ],
     tips: ["Hält im Glas im Kühlschrank 1–2 Wochen – ein tolles Zwiebel-Chutney.", "Auf Burger, zu Käse, Bratwurst oder Steak.", "Genauso auf dem Seitenkocher: Pilzpfanne, Chili-Con-Carne oder eine BBQ-Sauce einkochen."],
+    proTip: "Zwiebeln langsam in Balsamico schmoren, bis sie weich und dunkel karamellisieren – Geduld statt Hitze.",
+    learn: ["Langsam schmoren","Balsamico reduzieren","Karamellisieren"],
   }),
 
   /* ============================ NEUE GRILL – SEITENKOCHER (mehr) ============================ */
@@ -2973,6 +3735,7 @@ const RECIPES = [
     id: "sideburner-pilze", name: "Knoblauch-Kräuter-Pilzpfanne (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
     time: "15 min", pit: "Seitenkocher – Gusspfanne, hohe Hitze", core: "—", wood: "Rössle Gasgrill · Seitenkocher + Gusseisenpfanne",
     blurb: "Goldbraun gebratene Pilze mit Knoblauch, Butter und Petersilie – die ideale Steak-Beilage, in 15 Minuten fertig.",
+    equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2]],
     ingredients: [
       { a: "500 g", i: "gemischte Pilze (Champignons, Kräuterseitlinge, Shiitake)" },
       { a: "3 EL + 1 EL", i: "Butter, Olivenöl" },
@@ -2984,12 +3747,15 @@ const RECIPES = [
       { label: "Aromatisieren", kind: "finish", dur: "2 min", temp: "—", text: "Butter, Knoblauch und Thymian zugeben, schwenken, mit Salz, Pfeffer und Petersilie abschmecken.", bullets: ["Knoblauch erst am Ende – verbrennt sonst"] },
     ],
     tips: ["Der Seitenkocher liefert die starke Hitze, die Pilze zum Bräunen brauchen – ohne den Grill zu belegen.", "Ein Schuss Sahne macht daraus eine Rahm-Pilz-Sauce.", "Auch genial: über Steak, in Burger oder auf geröstetem Brot."],
+    proTip: "Pilze in die schon heiße Pfanne geben und erst salzen, wenn sie gebräunt sind – zu früh gesalzen ziehen sie Wasser und kochen statt zu braten.",
+    learn: ["Heiß anbraten","Spät salzen","Knoblauch & Kräuter zum Schluss"],
   }),
 
   r({
     id: "sideburner-spargel", name: "Gebratener grüner Spargel mit Parmesan (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
     time: "12 min", pit: "Seitenkocher – Gusspfanne, mittlere bis hohe Hitze", core: "bissfest", wood: "Rössle Gasgrill · Seitenkocher + Gusseisenpfanne",
     blurb: "Grüner Spargel mit Röstaromen, Zitrone und Parmesan – schnell, frisch und unkompliziert.",
+    equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2]],
     ingredients: [
       { a: "500 g", i: "grüner Spargel (holzige Enden entfernt)" },
       { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Pfeffer, Zitronenschale" },
@@ -3001,12 +3767,15 @@ const RECIPES = [
       { label: "Vollenden", kind: "finish", dur: "1 min", temp: "—", text: "Mit Salz, Pfeffer, Zitronensaft und -schale würzen, Parmesan darüberhobeln.", bullets: [] },
     ],
     tips: ["Der Seitenkocher ist perfekt, wenn der Hauptgrill schon mit Fleisch belegt ist.", "Mit Speck umwickelt vor dem Braten wird es noch herzhafter.", "Brokkoli, Pak Choi und Bohnen gelingen genauso."],
+    proTip: "Grünen Spargel nur kurz in heißem Fett schwenken – bissfest mit Parmesan, nicht weich kochen.",
+    learn: ["Kurz braten","Bissfest halten","Mit Parmesan"],
   }),
 
   r({
     id: "sideburner-bohnen", name: "Geschmorte Speck-Bohnen (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
     time: "30 min", pit: "Seitenkocher – Gusstopf, kleine bis mittlere Flamme", core: "weich", wood: "Rössle Gasgrill · Seitenkocher + Gusstopf",
     blurb: "Grüne Bohnen langsam mit Speck und Zwiebeln geschmort – deftige Beilage, die nebenher fertig wird.",
+    equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2]],
     ingredients: [
       { a: "750 g", i: "grüne Bohnen, geputzt" },
       { a: "150 g", i: "Speckwürfel" },
@@ -3019,12 +3788,18 @@ const RECIPES = [
       { label: "Abschmecken", kind: "finish", dur: "2 min", temp: "—", text: "Mit Salz und Pfeffer abschmecken.", bullets: [] },
     ],
     tips: ["Klassische Beilage zu Lamm, Steak und Bratwurst.", "Ohne Speck mit Räuchertofu oder Rauchsalz ebenso lecker.", "Mit Tomaten und Hackfleisch wird ein vollwertiger Eintopf daraus."],
+    proTip: "Speck auslassen, dann die Bohnen darin schmoren – das Speckfett trägt den ganzen Geschmack.",
+    learn: ["Speck auslassen","Bohnen schmoren","Abschmecken"],
   }),
 
   r({
     id: "sideburner-gambas", name: "Gambas al Ajillo (Seitenkocher)", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
     time: "15 min", pit: "Seitenkocher – Gusspfanne, mittlere Hitze", core: "opal-rosa", wood: "Rössle Gasgrill · Seitenkocher + Gusspfanne/Cazuela",
     blurb: "Garnelen im sprudelnden Knoblauch-Chili-Öl – der spanische Tapas-Klassiker, wie gemacht für den Seitenkocher.",
+    equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2]],
+    origin: "🇪🇸 Gambas al Ajillo sind ein spanischer Tapas-Klassiker: Garnelen in Knoblauch-Chili-Öl.",
+    authenticity: 9,
+    authenticityNote: "Folgt der spanischen Tapas-Tradition.",
     ingredients: [
       { a: "500 g", i: "Garnelen, geschält, entdarmt" },
       { a: "100 ml", i: "Olivenöl" },
@@ -3037,12 +3812,18 @@ const RECIPES = [
       { label: "Servieren", kind: "finish", dur: "—", temp: "—", text: "Salzen, mit Petersilie und Zitrone, brutzelnd heiß servieren – Brot ins Öl tunken.", bullets: ["Traditionell direkt in der Tonschale (Cazuela) auf den Tisch"] },
     ],
     tips: ["Der Seitenkocher ist ideal für so ein schnelles Pfannengericht direkt am Grillplatz.", "Mit Tintenfischtuben oder Champignons (vegetarisch) genauso gut.", "Das aromatisierte Öl ist halb so gut wie die Garnelen – reichlich Brot bereithalten."],
+    proTip: "Öl mit Knoblauch und Chili nur sanft erhitzen, nicht bräunen – dann die Gambas kurz gar ziehen, bis sie rosa sind.",
+    learn: ["Aromaöl ansetzen","Gambas gar ziehen","Nicht übergaren"],
   }),
 
   r({
     id: "sideburner-shakshuka", name: "Shakshuka (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
     time: "30 min", pit: "Seitenkocher – Gusspfanne, mittlere Flamme", core: "Eiweiß gestockt, Dotter wachsweich", wood: "Rössle Gasgrill · Seitenkocher + Gusspfanne",
     blurb: "Pochierte Eier in würzigem Paprika-Tomaten-Sugo – herzhaftes Pfannengericht für jede Tageszeit, direkt am Grill.",
+    equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2]],
+    origin: "🇮🇱 Shakshuka ist in der Levante und Nordafrika beheimatet: Eier, pochiert in einem würzigen Tomaten-Paprika-Sugo.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt der levantinisch-nordafrikanischen Tradition.",
     ingredients: [
       { a: "4–5", i: "Eier" },
       { a: "2 + 1 + 2", i: "Paprika, Zwiebel, Knoblauchzehen" },
@@ -3055,12 +3836,15 @@ const RECIPES = [
       { label: "Eier pochieren", kind: "finish", dur: "6–8 min", temp: "kleine Flamme", text: "Mulden ins Sugo drücken, Eier hineingleiten lassen, zugedeckt stocken lassen, bis das Eiweiß fest und der Dotter wachsweich ist.", bullets: ["Deckel hält die Hitze für gleichmäßig gestockte Eier"] },
     ],
     tips: ["Mit Feta, frischer Petersilie und Fladenbrot servieren.", "Der Seitenkocher macht Shakshuka zum perfekten Grill-Frühstück.", "Mit Merguez oder Chorizo wird es deftiger."],
+    proTip: "Erst ein kräftiges Sugo einkochen, dann die Eier in Mulden hineingleiten lassen und zugedeckt stocken – Eiweiß fest, Eigelb noch weich.",
+    learn: ["Sugo einkochen","Eier pochieren","Zugedeckt stocken"],
   }),
 
   r({
     id: "sideburner-bratkartoffeln", name: "Bratkartoffeln aus Gusseisen (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
     time: "30 min", pit: "Seitenkocher – Gusspfanne, mittlere bis hohe Hitze", core: "außen kross, innen weich", wood: "Rössle Gasgrill · Seitenkocher + Gusseisenpfanne",
     blurb: "Knusprige Bratkartoffeln mit Zwiebeln und Speck – die Beilage, die jeden Grillteller komplett macht.",
+    equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2]],
     ingredients: [
       { a: "1 kg", i: "festkochende Kartoffeln (vorgekocht, ausgekühlt)" },
       { a: "100 g + 1", i: "Speckwürfel, Zwiebel" },
@@ -3072,12 +3856,15 @@ const RECIPES = [
       { label: "Speck & Zwiebel", kind: "finish", dur: "5 min", temp: "—", text: "Speck und Zwiebel zugeben, mitbraten, mit Salz, Pfeffer, Kümmel und Petersilie abschmecken.", bullets: [] },
     ],
     tips: ["Die Gusseisenpfanne auf dem Seitenkocher hält die Hitze konstant für gleichmäßige Bräune.", "Ein gebratenes Spiegelei obendrauf macht es zur Mahlzeit.", "Reste vom Vortag werden so am besten verwertet."],
+    proTip: "Vorgekochte Kartoffeln in heißem Gusseisen wenig bewegen – nur so bildet sich die knusprige Kruste.",
+    learn: ["Vorkochen","In Gusseisen braten","Kruste bilden"],
   }),
 
   r({
     id: "sideburner-bbq-sauce", name: "Hausgemachte BBQ-Sauce einkochen (Seitenkocher)", method: "grill", cat: "Sonstiges", diff: 1,
     time: "40 min", pit: "Seitenkocher – Topf, kleine Flamme", core: "sirupartig", wood: "Rössle Gasgrill · Seitenkocher + Topf",
     blurb: "Eine kräftige, rauchig-süße BBQ-Sauce langsam einkochen – während das Fleisch auf dem Grill liegt.",
+    equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2]],
     ingredients: [
       { a: "400 g", i: "passierte Tomaten (oder Ketchup als Basis)" },
       { a: "je 3 EL", i: "brauner Zucker, Apfelessig, Worcestershire" },
@@ -3090,6 +3877,8 @@ const RECIPES = [
       { label: "Abschmecken & Lagern", kind: "finish", dur: "—", temp: "—", text: "Mit Salz, Säure und Schärfe ausbalancieren. Heiß in ein sauberes Glas füllen.", bullets: ["Im Kühlschrank 2–3 Wochen haltbar"] },
     ],
     tips: ["Direkt am Grill frisch eingekocht schmeckt sie unvergleichlich besser als gekaufte.", "Als Mop in den letzten 20 Minuten aufs Fleisch pinseln oder als Dip servieren.", "Mit Bourbon, Kaffee oder Pfirsich spannend variieren."],
+    proTip: "BBQ-Sauce offen köcheln, bis sie an einem Löffel haftet – Geduld beim Einreduzieren macht die Tiefe.",
+    learn: ["Zutaten einkochen","Reduzieren","Abschmecken & lagern"],
   }),
 
   /* ============================ QUERBEET – 35 GEMISCHTE REZEPTE ============================ */
@@ -3099,6 +3888,7 @@ const RECIPES = [
     id: "fruehstuecksspeck", name: "Frühstücksspeck (Bacon)", method: "kalt", cat: "Schinken", diff: 2,
     time: "1 Woche + Räuchern", pit: "15–22 °C", core: "", wood: "Buche / Hickory", yield: "ca. 1,2 kg",
     blurb: "Selbstgemachter Bacon aus dem Schweinebauch – gepökelt und kalt geräuchert, dünn aufgeschnitten und kross gebraten.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}]],
     ingredients: [
       { a: "1,5 kg", i: "Schweinebauch ohne Knochen, ohne Schwarte" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -3111,11 +3901,17 @@ const RECIPES = [
       { label: "Kalt räuchern", kind: "smoke", dur: "8 h · 3–4 Gänge", temp: "unter 25 °C", text: "In Gängen kalt räuchern, dazwischen auslüften.", bullets: ["Hickory gibt das amerikanische Aroma"] },
     ],
     tips: ["Vor dem Aufschneiden gut durchkühlen – dann lässt er sich hauchdünn schneiden.", "Roh und muss vor dem Verzehr gebraten werden."],
+    proTip: "Gut durchgekühlt lässt sich der Speck hauchdünn schneiden – roh bleibt er und muss vor dem Verzehr gebraten werden.",
+    learn: ["Trockenpökeln (NPS)", "Durchbrennen & Pellicle", "Kalträuchern in Gängen", "Durchkühlen & schneiden"],
   }),
   r({
     id: "katenschinken", name: "Katenschinken (norddeutsch)", method: "kalt", cat: "Schinken", diff: 2,
     time: "4–6 Wochen", pit: "15–20 °C", core: "", wood: "Buche + Wacholder", yield: "ca. 1,5 kg",
     blurb: "Kräftig geräucherter norddeutscher Knochenschinken – herzhaft, rauchig, traditionell über Buchenholz und Wacholder.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
+    origin: "🇩🇪 Der Katenschinken ist ein norddeutscher Klassiker, benannt nach der „Kate“ (dem Bauernhaus), in dessen Rauchfang er einst hing. Er wird kräftiger und länger geräuchert als der Schwarzwälder – oft über Wochen.",
+    authenticity: 9,
+    authenticityNote: "Folgt der norddeutschen Katenschinken-Tradition mit kräftiger Buchen-/Wacholderräucherung. Angepasst bei Salz (NPS) und Zeitplan.",
     ingredients: [
       { a: "2 kg", i: "Schweinekeule oder -schulter, ausgelöst" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
@@ -3130,11 +3926,17 @@ const RECIPES = [
       { label: "Reifen", kind: "mature", dur: "2–3 Wochen", temp: "12–15 °C", text: "Nachreifen bis schnittfest.", bullets: [] },
     ],
     tips: ["Kräftiger und rauchiger als Schwarzwälder – der norddeutsche Klassiker.", "Wacholder gibt den typisch herben Ton."],
+    proTip: "Mehr Räuchergänge = kräftigeres Aroma – der Katenschinken ist bewusst rauchiger als der Schwarzwälder.",
+    learn: ["Trockenpökeln (NPS)", "Durchbrennen", "Pellicle bilden", "Kräftig kalträuchern (5–6 Gänge)", "Nachreifen"],
   }),
   r({
     id: "cabanossi", name: "Cabanossi (Schinkenkrakauer)", method: "kalt", cat: "Wurst", diff: 3,
     time: "2–3 Wochen", pit: "15–20 °C", core: "", wood: "Buche", yield: "ca. 1,5 kg",
     blurb: "Dünne, würzige Schnittwurst für den Snack – geräuchert und luftgetrocknet.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
+    origin: "🇵🇱 Cabanossi (Kabanos) stammt aus Polen und ist eine dünne, würzige Dauerwurst. Im dünnen Saitling reift sie schnell und bekommt ihren typischen festen Biss – der klassische Snack für unterwegs.",
+    authenticity: 8.5,
+    authenticityNote: "Orientiert sich an der polnischen Kabanos-Tradition (dünn, würzig, getrocknet). Angepasst um Starterkultur und NPS für sichere Fermentation.",
     ingredients: [
       { a: "1 kg", i: "Schweinefleisch (mager)" },
       { a: "0,5 kg", i: "Rückenspeck" },
@@ -3150,11 +3952,14 @@ const RECIPES = [
       { label: "Trocknen", kind: "mature", dur: "1–2 Wochen", temp: "14–16 °C", text: "Bis schnittfest trocknen.", bullets: [] },
     ],
     tips: ["Dünner Saitling = schnelle Reife und typischer Biss.", "Perfekt als Snack oder auf der Brotzeit."],
+    proTip: "Dünner Saitling reift schnell, aber trocknet auch schnell aus – engmaschig kontrollieren, sonst wird die Cabanossi hart statt schnittfest.",
+    learn: ["Wolfen & Würzen", "In dünnen Saitling füllen", "Fermentieren", "Kalträuchern", "Trocknen zur Schnittfestigkeit"],
   }),
   r({
     id: "geraeucherter-tofu-kalt", name: "Kalt geräucherter Tofu", method: "kalt", cat: "Käse", diff: 1,
     time: "1 Tag + Räuchern", pit: "unter 25 °C", core: "", wood: "Buche / Kirsche", yield: "beliebig",
     blurb: "Fester Tofu mariniert und kalt geräuchert – herzhaft, vielseitig, vegan.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}]],
     ingredients: [
       { a: "400 g", i: "fester Tofu (gut gepresst)" },
       { a: "4 EL + je 1 TL", i: "Sojasoße, Rauchsalz, Knoblauch, Paprika (Marinade)" },
@@ -3170,6 +3975,7 @@ const RECIPES = [
     id: "geraeuchertes-salz", name: "Geräuchertes Salz", method: "kalt", cat: "Grundlagen", diff: 1,
     time: "6–10 h Räuchern", pit: "unter 25 °C", core: "", wood: "Buche / Hickory / Kirsche", yield: "beliebig",
     blurb: "Grobes Meersalz kalt geräuchert – ein intensiver Würzer, der jedem Gericht Rauchnote gibt.",
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}]],
     ingredients: [
       { a: "500 g", i: "grobes Meersalz (Flockensalz oder grobes Steinsalz)" },
     ],
@@ -3186,6 +3992,10 @@ const RECIPES = [
     id: "warm-bratwurst", name: "Geräucherte Bratwurst", method: "warm", cat: "Wurst", diff: 2,
     time: "Herstellung + 2–3 h", pit: "45–60 °C", core: "68–72 °C", wood: "Buche", yield: "ca. 1,5 kg",
     blurb: "Grobe Bratwurst warm geräuchert – aromatisch, haltbarer und mit feinem Rauchton.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
+    origin: "🇩🇪 Die Bratwurst ist ein deutscher Klassiker in unzähligen Regionalvarianten. Hier warmgeräuchert für Aroma und Haltbarkeit.",
+    authenticity: 8.5,
+    authenticityNote: "Deutsche Wursttradition, als Räuchervariante.",
     ingredients: [
       { a: "1,2 kg", i: "Schweineschulter" },
       { a: "300 g", i: "Rückenspeck" },
@@ -3205,6 +4015,10 @@ const RECIPES = [
     id: "warm-fleischwurst", name: "Geräucherte Fleischwurst (Lyoner)", method: "warm", cat: "Wurst", diff: 3,
     time: "Herstellung + 2 h", pit: "45–55 °C → 75 °C brühen", core: "72 °C", wood: "Buche", yield: "ca. 1,5 kg",
     blurb: "Feine Brühwurst im Kranz – warm geräuchert und gebrüht, klassisch zum Aufschnitt.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
+    origin: "🇩🇪 Die Fleischwurst (Lyoner) ist eine deutsch-französische Brühwursttradition. Geräuchert bekommt sie ihre typische Farbe und Note.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt der Brühwursttradition.",
     ingredients: [
       { a: "1 kg", i: "Schweinefleisch (mager)" },
       { a: "0,5 kg", i: "Rückenspeck / fettes Schweinefleisch" },
@@ -3225,6 +4039,10 @@ const RECIPES = [
     id: "warm-leberkaese", name: "Geräucherter Leberkäse", method: "warm", cat: "Wurst", diff: 2,
     time: "Herstellung + Backen", pit: "Räuchern 50 °C + Backen 160 °C", core: "75 °C", wood: "Buche", yield: "1 Laib (ca. 1 kg)",
     blurb: "Bayerischer Leberkäse mit Rauchnote – erst warm angeräuchert, dann im Kasten gebacken.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
+    origin: "🇩🇪 Leberkäse ist eine bayerisch-österreichische Spezialität. Hier geräuchert für eine herzhafte, rauchige Note.",
+    authenticity: 8.5,
+    authenticityNote: "Bayerische Tradition, um Rauch ergänzt.",
     ingredients: [
       { a: "600 g", i: "Schweinefleisch (mager)" },
       { a: "300 g", i: "Rückenspeck" },
@@ -3243,6 +4061,7 @@ const RECIPES = [
     id: "warm-raeuchertofu", name: "Warm geräucherter Räuchertofu", method: "warm", cat: "Käse", diff: 1,
     time: "4 h + Räuchern", pit: "35–45 °C", core: "", wood: "Buche / Erle", yield: "beliebig",
     blurb: "Tofu mariniert und warm geräuchert – festere, herzhaftere Textur als die kalte Variante.",
+    equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [
       { a: "400 g", i: "Räuchertofu oder fester Naturtofu (gepresst)" },
       { a: "4 EL + je 1 TL", i: "Sojasoße, Sesamöl, Knoblauch, Paprika, Ahornsirup" },
@@ -3260,6 +4079,7 @@ const RECIPES = [
     id: "raeucher-haehnchenschenkel", name: "Geräucherte Hähnchenschenkel", method: "heiss", cat: "Geflügel", diff: 1,
     time: "1 Tag + 2 h", pit: "120–140 °C", core: "82 °C", wood: "Kirsche / Apfel", yield: "6 Schenkel",
     blurb: "Saftige Schenkel mit knuspriger Haut – gutmütig, günstig und sehr aromatisch.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "6", i: "Hähnchenschenkel" },
       { a: "12 g/kg", i: "Salz (Dry Brine)" },
@@ -3276,6 +4096,7 @@ const RECIPES = [
     id: "raeucherzander", name: "Geräucherter Zander", method: "heiss", cat: "Fisch", diff: 2,
     time: "1 Tag + 1,5 h", pit: "75–95 °C", core: "62 °C", wood: "Erle / Buche", yield: "ca. 800 g",
     blurb: "Edler Süßwasserfisch, fein im Geschmack – heiß geräuchert ein zarter Genuss.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "2", i: "Zander (je ca. 600 g), küchenfertig" },
       { a: "60 g/l", i: "Salzlake 6 %" },
@@ -3287,11 +4108,14 @@ const RECIPES = [
       { label: "Heiß räuchern", kind: "smoke", dur: "45–60 min", temp: "75–95 °C", text: "Garen bis Kern 62 °C.", bullets: ["Zander ist mager – nicht übergaren"] },
     ],
     tips: ["Erle ist der klassische Begleiter für Süßwasserfisch.", "Sehr fein – sparsam würzen."],
+    proTip: "Mager und fein – sparsam würzen und nicht übergaren, sonst wird das zarte Fleisch trocken.",
+    learn: ["Salzlake ansetzen", "Pellicle bilden", "Heißräuchern", "Garprobe (Kerntemperatur)"],
   }),
   r({
     id: "raeuchersaibling", name: "Geräucherter Saibling", method: "heiss", cat: "Fisch", diff: 1,
     time: "1 Tag + 1,5 h", pit: "80–100 °C", core: "62 °C", wood: "Buche / Erle", yield: "4 Stück",
     blurb: "Der Forellenverwandte mit besonders feinem, leicht nussigem Aroma.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "4", i: "Saiblinge, ausgenommen" },
       { a: "60 g/l", i: "Salzlake 6 %" },
@@ -3303,11 +4127,14 @@ const RECIPES = [
       { label: "Heiß räuchern", kind: "smoke", dur: "40–60 min", temp: "80–100 °C", text: "Garen bis Kern 62 °C.", bullets: [] },
     ],
     tips: ["Wie Forelle zu behandeln, aber feiner im Aroma.", "Frisch aus dem Räucherofen am besten."],
+    proTip: "Wie Forelle, nur feiner – das nussige Aroma kommt frisch aus dem Ofen am besten zur Geltung.",
+    learn: ["Salzlake ansetzen", "Pellicle bilden", "Heißräuchern", "Garprobe"],
   }),
   r({
     id: "raeucher-eier", name: "Geräucherte Eier", method: "heiss", cat: "Sonstiges", diff: 1,
     time: "1 h", pit: "90–110 °C", core: "—", wood: "Buche / Kirsche", yield: "6–12 Eier",
     blurb: "Hartgekochte Eier mit Rauchnote – ein verblüffend guter Snack und Salat-Topping.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "6–12", i: "Eier (hart gekocht, gepellt)" },
       { a: "optional", i: "Sojasoße oder Rauchsalz zum Würzen" },
@@ -3322,6 +4149,7 @@ const RECIPES = [
     id: "heiss-schweinefilet", name: "Geräuchertes Schweinefilet", method: "heiss", cat: "Schwein", diff: 1,
     time: "1 Tag + 1,5 h", pit: "110–130 °C", core: "62 °C", wood: "Apfel / Kirsche", yield: "ca. 800 g",
     blurb: "Mageres Filet bleibt durch sanftes Heißräuchern zart und rosa – schnell und edel.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "2", i: "Schweinefilets (je ca. 400 g, pariert)" },
       { a: "12 g/kg", i: "Salz (Dry Brine)" },
@@ -3338,6 +4166,7 @@ const RECIPES = [
     id: "raeucher-bockwurst", name: "Geräucherte Bockwurst", method: "heiss", cat: "Wurst", diff: 2,
     time: "Herstellung + 1,5 h", pit: "Räuchern 60 °C + Brühen 75 °C", core: "72 °C", wood: "Buche", yield: "ca. 1,5 kg",
     blurb: "Feine Brühwurst mit Rauchnote – geräuchert und gebrüht, der Klassiker fürs Würstchen.",
+    equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "1 kg", i: "Schweinefleisch (mager)" },
       { a: "0,5 kg", i: "Rückenspeck" },
@@ -3360,6 +4189,7 @@ const RECIPES = [
     id: "beef-cheeks", name: "Smoked Beef Cheeks (Rinderbäckchen)", method: "bbq", cat: "Rind", diff: 2,
     time: "6–8 h", pit: "120 °C", core: "92–95 °C", wood: "Eiche / Kirsche", yield: "ca. 1,2 kg",
     blurb: "Stark durchzogene Rinderbäckchen werden butterzart – das beste 'unbekannte' BBQ-Stück.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "1,5 kg", i: "Rinderbäckchen, pariert" },
       { a: "je 1 EL", i: "Salz, Pfeffer, Knoblauchgranulat (SPG)" },
@@ -3372,11 +4202,17 @@ const RECIPES = [
       { label: "Ruhen", kind: "rest", dur: "30 min", temp: "—", text: "Ruhen lassen, dann aufschneiden oder zupfen.", bullets: [] },
     ],
     tips: ["Wie Mini-Brisket, aber schneller und günstiger.", "Auch toll für Tacos und Sandwiches."],
+    proTip: "Rinderbäckchen sind stark von Kollagen durchzogen – sie brauchen Zeit über 90 °C, damit das Bindegewebe zu Gelatine schmilzt und alles butterzart wird.",
+    learn: ["Parieren", "Rubben", "Räuchern", "Kollagen schmelzen (92–95 °C)", "Ruhen"],
   }),
   r({
     id: "picanha-bbq", name: "Picanha (Tafelspitz) Low & Slow", method: "bbq", cat: "Rind", diff: 2,
     time: "2–3 h", pit: "120 °C → Sear", core: "54 °C (medium-rare)", wood: "Eiche / Buche", yield: "ca. 1,2 kg",
     blurb: "Brasilianisches Kultstück mit Fettdeckel – langsam geräuchert, dann scharf angegrillt.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇧🇷 Picanha ist das Kultstück des brasilianischen Churrasco. Mit Fettdeckel über offener Glut oder low & slow gegart, nur grob gesalzen.",
+    authenticity: 9.5,
+    authenticityNote: "Folgt der brasilianischen Churrasco-Tradition, hier als Reverse-Sear-Variante.",
     ingredients: [
       { a: "1,3 kg", i: "Picanha (Tafelspitz) mit Fettdeckel" },
       { a: "reichlich", i: "grobes Meersalz" },
@@ -3387,11 +4223,17 @@ const RECIPES = [
       { label: "Scharf angrillen", kind: "finish", dur: "5 min", temp: "sehr heiß", text: "Über direkter Glut rundum searen bis Kern 54 °C, Fettdeckel knusprig.", bullets: ["Quer zur Faser aufschneiden"] },
     ],
     tips: ["Den Fettdeckel unbedingt dranlassen – er macht das Aroma.", "Traditionell in dicke Scheiben quer zur Faser."],
+    proTip: "Picanha ist kein Low-&-Slow bis weich, sondern Reverse Sear: sanft auf 50 °C räuchern, dann heiß searen – Fettdeckel nach oben, damit er einbrät.",
+    learn: ["Fettdeckel einschneiden", "Sanft räuchern", "Reverse Sear", "Kern 54 °C treffen", "Quer zur Faser schneiden"],
   }),
   r({
     id: "pulled-chicken", name: "Pulled Chicken", method: "bbq", cat: "Geflügel", diff: 1,
     time: "3–4 h", pit: "120–135 °C", core: "85 °C", wood: "Apfel / Kirsche", yield: "ca. 1,5 kg",
     blurb: "Saftiges, gezupftes Hähnchen – schneller und leichter als Pulled Pork, ideal für Burger.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇺🇸 Pulled Chicken ist die Geflügel-Variante des US-BBQ-Klassikers Pulled Pork – schneller und leichter.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt der US-BBQ-Praxis.",
     ingredients: [
       { a: "4–6", i: "Hähnchenschenkel oder 1 ganzes Hähnchen" },
       { a: "3 EL", i: "BBQ-Rub" },
@@ -3403,11 +4245,17 @@ const RECIPES = [
       { label: "Zupfen", kind: "finish", dur: "10 min", temp: "—", text: "Mit Gabeln zupfen, mit etwas Brühe und Sauce mischen.", bullets: ["Brühe hält es saftig"] },
     ],
     tips: ["Schenkelfleisch wird saftiger als Brust.", "Auf Burgerbun mit Coleslaw – ein Traum."],
+    proTip: "Dunkles Schenkelfleisch statt Brust nehmen – es zupft saftiger und verzeiht ein paar Grad zu viel, während Brust schnell trocken wird.",
+    learn: ["Würzen", "Räuchern auf 85 °C", "Saftig zupfen", "Mit Brühe & Sauce mischen"],
   }),
   r({
     id: "smoked-wings", name: "Smoked Chicken Wings", method: "bbq", cat: "Geflügel", diff: 1,
     time: "2 h", pit: "120 °C → 180 °C", core: "85 °C", wood: "Kirsche / Hickory", yield: "ca. 1,5 kg",
     blurb: "Erst rauchig gegart, dann knusprig nachgegrillt – die besten Wings überhaupt.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇺🇸 Smoked Wings mit Buffalo-Sauce stammen aus Buffalo, New York. Geräuchert und heiß finassiert für knusprige Haut.",
+    authenticity: 9,
+    authenticityNote: "Folgt der US-Buffalo-Tradition, um Rauch ergänzt.",
     ingredients: [
       { a: "1,5 kg", i: "Chicken Wings" },
       { a: "1 TL", i: "Backpulver (für knusprige Haut)" },
@@ -3419,11 +4267,17 @@ const RECIPES = [
       { label: "Knusprig finishen", kind: "finish", dur: "15–20 min", temp: "180 °C direkt", text: "Heiß nachgrillen bis Haut kross, Kern 85 °C. In Sauce wenden.", bullets: [] },
     ],
     tips: ["Hohe Endhitze ist der Schlüssel zur knusprigen Haut.", "Buffalo-Sauce + Blauschimmel-Dip für Klassik."],
+    proTip: "Erst niedrig räuchern, dann heiß finishen – dieser zweistufige Weg gibt Rauchgeschmack UND knusprige Haut, was reines Low & Slow nie schafft.",
+    learn: ["Trocken tupfen (Haut)", "Rauchig garen", "Heiß finishen (knusprig)", "In Sauce wenden"],
   }),
   r({
     id: "bbq-fatty", name: "BBQ Fatty (Hack-Bacon-Rolle)", method: "bbq", cat: "Schwein", diff: 2,
     time: "2,5–3 h", pit: "120–135 °C", core: "72 °C", wood: "Hickory / Kirsche", yield: "ca. 1,2 kg",
     blurb: "Gewürztes Hackfleisch, gefüllt und im Bacon-Mantel geräuchert – herzhaft und spektakulär.",
+    equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
+    origin: "🇺🇸 Der BBQ Fatty ist eine amerikanische Wettbewerbs- und Backyard-BBQ-Spezialität: gefüllte Hackrolle im Bacon-Geflecht.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt der US-BBQ-Tradition des Fatty.",
     ingredients: [
       { a: "800 g", i: "Hackfleisch (gemischt oder Schwein)" },
       { a: "400 g", i: "Bacon (für das Geflecht)" },
@@ -3436,6 +4290,8 @@ const RECIPES = [
       { label: "Glasieren & Ruhen", kind: "finish", dur: "15 min", temp: "—", text: "Mit BBQ-Sauce glasieren, kurz ruhen, in Scheiben schneiden.", bullets: [] },
     ],
     tips: ["Endlos variierbar bei der Füllung.", "Reste kalt in Scheiben sind ein toller Snack."],
+    proTip: "Das Bacon-Gewebe (Bacon Weave) ist nicht nur Optik – es hält die Rolle zusammen, bastet das Hackfleisch beim Garen und wird außen knusprig.",
+    learn: ["Hackmasse würzen", "Bacon-Weave flechten", "Füllen & rollen", "Räuchern auf 72 °C", "Glasieren"],
   }),
 
   /* ---- DÖRREN ---- */
@@ -3443,6 +4299,7 @@ const RECIPES = [
     id: "kraeuter-trocknen", name: "Kräuter trocknen", method: "dorr", cat: "Sonstiges", diff: 1,
     time: "2–5 h", pit: "35–40 °C", core: "spröde-trocken", wood: "Graef DA506", yield: "beliebig",
     blurb: "Petersilie, Oregano, Thymian & Co. schonend trocknen – behalten Farbe und Aroma viel besser als luftgetrocknet.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "nach Wunsch", i: "frische Kräuter (Petersilie, Oregano, Thymian, Minze, Basilikum)" },
     ],
@@ -3452,11 +4309,14 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "dunkel, trocken", text: "Zwischen den Fingern zerreiben oder ganz lassen, luftdicht und dunkel lagern.", bullets: [] },
     ],
     tips: ["Dunkle Lagerung erhält die grüne Farbe.", "Eigene Kräutermischungen (z. B. Kräuter der Provence) zusammenstellen."],
+    proTip: "Kräuter bei niedriger Temperatur (35–40 °C) trocknen erhält Farbe und ätherische Öle – erst nach dem Trocknen zerreiben.",
+    learn: ["Niedrig trocknen","Aroma erhalten","Zerreiben & lagern"],
   }),
   r({
     id: "feigen-dorr", name: "Getrocknete Feigen", method: "dorr", cat: "Obst", diff: 1,
     time: "10–16 h", pit: "55–65 °C", core: "Weich-lederig", wood: "Graef DA506", yield: "ca. 250 g/kg",
     blurb: "Honigsüß und konzentriert – selbstgetrocknete Feigen sind ein edler Snack und passen perfekt zu Käse.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "reife Feigen" },
     ],
@@ -3466,11 +4326,14 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl, trocken", text: "Auskühlen, luftdicht lagern.", bullets: [] },
     ],
     tips: ["Auf der Käseplatte mit Blauschimmel oder Ziegenkäse hervorragend.", "Mit etwas Honig und Walnuss gefüllt ein Festtags-Snack."],
+    proTip: "Feigen halbieren, damit das feuchte Innere trocknen kann – ganz gedörrt bleiben sie innen feucht und verderben.",
+    learn: ["Halbieren","Langsam dörren","Weich-lederig"],
   }),
   r({
     id: "kiwi-dorr", name: "Kiwischeiben getrocknet", method: "dorr", cat: "Obst", diff: 1,
     time: "8–12 h", pit: "55–60 °C", core: "Lederig", wood: "Graef DA506", yield: "ca. 90 g/kg",
     blurb: "Leuchtend grün mit hübschen Kernen – süß-säuerlicher Snack und schöne Deko.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "8–10", i: "feste Kiwis" },
     ],
@@ -3480,11 +4343,14 @@ const RECIPES = [
       { label: "Lagern", kind: "finish", dur: "—", temp: "kühl, trocken", text: "Luftdicht lagern.", bullets: [] },
     ],
     tips: ["Behalten ihre Farbe gut – tolle Deko für Müsli und Kuchen.", "Etwas Zitrone hält die Farbe noch frischer."],
+    proTip: "Kiwi geschält dünn schneiden – die Säure konzentriert sich zu einem süß-sauren Snack.",
+    learn: ["Schälen & schneiden","Dörren","Lederig treffen"],
   }),
   r({
     id: "knoblauch-pulver", name: "Knoblauchgranulat & -pulver", method: "dorr", cat: "Gemüse", diff: 1,
     time: "8–12 h", pit: "50–60 °C", core: "spröde-trocken", wood: "Graef DA506", yield: "ca. 40 g/Knolle-Charge",
     blurb: "Selbstgemachtes Knoblauchpulver – intensiver als jede Supermarktware, perfekt für Rubs.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "10–15", i: "Knoblauchknollen" },
     ],
@@ -3494,11 +4360,14 @@ const RECIPES = [
       { label: "Mahlen & Lagern", kind: "finish", dur: "—", temp: "—", text: "Zu Granulat oder feinem Pulver mahlen, luftdicht lagern.", bullets: ["Reiskorn im Glas gegen Klumpen"] },
     ],
     tips: ["Frisch gemahlenes Knoblauchpulver ist die Basis fast jedes BBQ-Rubs.", "Gleiches Verfahren für Zwiebel-, Sellerie- oder Chilipulver."],
+    proTip: "Knoblauch knochentrocken dörren, dann fein mahlen – jede Restfeuchte verklumpt das Granulat. Am besten draußen dörren.",
+    learn: ["Dünn schneiden","Knochentrocken dörren","Zu Pulver mahlen"],
   }),
   r({
     id: "granola-dorr", name: "Granola / Knuspermüsli", method: "dorr", cat: "Sonstiges", diff: 1,
     time: "6–10 h", pit: "50–60 °C", core: "Knusprig", wood: "Graef DA506", yield: "ca. 600 g",
     blurb: "Schonend getrocknetes Knuspermüsli – ohne Backofenhitze, dadurch besonders aromatisch.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "300 g", i: "Haferflocken (kernig)" },
       { a: "150 g", i: "Nüsse & Kerne (Mandeln, Walnüsse, Sonnenblumenkerne)" },
@@ -3511,11 +4380,14 @@ const RECIPES = [
       { label: "Verfeinern", kind: "finish", dur: "—", temp: "—", text: "Getrocknete Früchte erst nach dem Dörren untermischen, luftdicht lagern.", bullets: ["Trockenfrüchte würden im Dörrer hart werden"] },
     ],
     tips: ["Niedrige Temperatur erhält die Nährstoffe besser als der Backofen.", "Endlos variierbar mit Saaten, Kakao oder Kokos."],
+    proTip: "Langsam im Dörrer statt heiß im Ofen – so wird das Müsli gleichmäßig knusprig, ohne dass Honig und Nüsse verbrennen.",
+    learn: ["Mischen","Niedrig dörren","Knusprig"],
   }),
   r({
     id: "kraeutersalz", name: "Kräutersalz selbst gemacht", method: "dorr", cat: "Sonstiges", diff: 1,
     time: "4–8 h", pit: "40–50 °C", core: "trocken-rieselfähig", wood: "Graef DA506", yield: "ca. 300 g",
     blurb: "Frische Kräuter mit Salz getrocknet und gemahlen – ein aromatischer Allrounder für die Küche.",
+    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 Bund je", i: "Petersilie, Liebstöckel, Schnittlauch, Rosmarin" },
       { a: "200 g", i: "grobes Meersalz" },
@@ -3527,6 +4399,8 @@ const RECIPES = [
       { label: "Mahlen & Lagern", kind: "finish", dur: "—", temp: "—", text: "Im Mörser oder Mixer fein mahlen, luftdicht lagern.", bullets: [] },
     ],
     tips: ["Das selbstgemachte 'Maggikraut'-Salz mit Liebstöckel ist ein Universalwürzer.", "Ein tolles Geschenk im hübschen Glas."],
+    proTip: "Frische Kräuter zusammen mit dem Salz trocknen – das Salz entzieht Wasser und konserviert das Aroma; danach fein mahlen.",
+    learn: ["Kräuter & Salz mischen","Trocknen","Fein mahlen"],
   }),
 
   /* ---- GRILL & SPIEß ---- */
@@ -3534,6 +4408,10 @@ const RECIPES = [
     id: "flammkuchen-grill", name: "Flammkuchen vom Grill (Pizzastein)", method: "grill", cat: "Sonstiges", diff: 1,
     time: "30 min + 8 min Grillen", pit: "280–320 °C (Pizzastein)", core: "—", wood: "Rössle Gasgrill (Pizzastein) oder Weber Kugelgrill",
     blurb: "Knuspriger Flammkuchen mit Crème fraîche, Speck und Zwiebeln – in Minuten von der heißen Steinplatte.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
+    origin: "🇫🇷 Der Flammkuchen (Tarte flambée) stammt aus dem Elsass – dünner Teig mit Crème fraîche, Speck und Zwiebeln, sehr heiß gebacken.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt der elsässischen Tradition, hier auf dem Pizzastein.",
     ingredients: [
       { a: "1", i: "Flammkuchenteig (dünn ausgerollt)" },
       { a: "200 g", i: "Crème fraîche / Schmand" },
@@ -3546,11 +4424,14 @@ const RECIPES = [
       { label: "Grillen", kind: "direct", dur: "6–8 min", temp: "280–320 °C", text: "Auf dem heißen Stein backen bis der Rand kross und gebräunt ist.", bullets: [] },
     ],
     tips: ["Süße Variante: Apfel, Zimt und Calvados.", "Vegetarisch mit Ziegenkäse, Birne und Walnuss."],
+    proTip: "Flammkuchen braucht sehr hohe Hitze und dünnen Teig – auf dem vorgeheizten Stein in Minuten knusprig.",
+    learn: ["Stein vorheizen","Dünn belegen","Kurz backen"],
   }),
   r({
     id: "gegrillte-pfirsiche", name: "Gegrillte Pfirsiche mit Honig", method: "grill", cat: "Sonstiges", diff: 1,
     time: "15 min", pit: "direkt 200 °C", core: "—", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Karamellisierte Pfirsichhälften mit Honig und Joghurt – ein blitzschnelles Grill-Dessert.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "4", i: "reife, feste Pfirsiche (halbiert, entsteint)" },
       { a: "2 EL + 1 TL", i: "Honig, etwas Butter, Zimt" },
@@ -3562,11 +4443,14 @@ const RECIPES = [
       { label: "Servieren", kind: "finish", dur: "—", temp: "—", text: "Mit Honig beträufeln, mit Joghurt oder Eis servieren.", bullets: [] },
     ],
     tips: ["Auch mit Aprikosen, Ananas oder Feigen.", "Ein Hauch Rosmarin oder Thymian überrascht angenehm."],
+    proTip: "Pfirsiche mit der Schnittfläche auf den heißen Rost – der Zucker karamellisiert zu Röstaromen, Honig erst danach.",
+    learn: ["Halbieren","Schnittseite grillen","Karamellisieren","Honig dazu"],
   }),
   r({
     id: "camembert-grill", name: "Gegrillter Camembert", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
     time: "15 min", pit: "indirekt 180–200 °C", core: "innen flüssig", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Cremig geschmolzener Camembert mit Honig, Nüssen und Kräutern – die perfekte kleine Vorspeise.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1–2", i: "Camembert oder Brie (im Holzspankörbchen oder Auflaufförmchen)" },
       { a: "2 EL + Handvoll", i: "Honig, Walnüsse, Rosmarin, Knoblauch" },
@@ -3577,11 +4461,14 @@ const RECIPES = [
       { label: "Servieren", kind: "finish", dur: "—", temp: "—", text: "Mit Honig und Walnüssen toppen, mit Brot servieren.", bullets: [] },
     ],
     tips: ["Mit Preiselbeeren oder Feigensenf statt Honig variieren.", "Baguette oder geröstetes Brot zum Tunken bereithalten."],
+    proTip: "Camembert im Holzkästchen oder auf Folie indirekt erwärmen, bis er innen flüssig, die Rinde aber intakt ist.",
+    learn: ["Rinde einritzen","Indirekt erwärmen","Flüssigen Kern treffen"],
   }),
   r({
     id: "blumenkohl-steak", name: "Blumenkohl-Steak vom Grill", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
     time: "30 min", pit: "direkt + indirekt 200 °C", core: "weich, mit Biss", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Dicke Blumenkohlscheiben mit Röstaromen – ein sättigendes vegetarisches Hauptgericht.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "großer Blumenkopf (in 2–3 cm dicke Scheiben)" },
       { a: "4 EL + je 1 TL", i: "Olivenöl, Kurkuma, Paprika, Knoblauch, Salz, Pfeffer" },
@@ -3593,11 +4480,14 @@ const RECIPES = [
       { label: "Indirekt fertig garen", kind: "indirect", dur: "10–15 min", temp: "200 °C, Deckel zu", text: "Bis innen weich mit Biss.", bullets: [] },
     ],
     tips: ["Mit Tahini-Zitronen-Sauce orientalisch, mit Parmesan mediterran.", "Die zerfallenen Röschen nicht wegwerfen – mitgrillen als Beilage."],
+    proTip: "Dicke Scheiben aus der Mitte halten zusammen – erst indirekt garen, dann direkt für Röstaromen.",
+    learn: ["Dick schneiden","Indirekt garen","Röstaromen","Würzen"],
   }),
   r({
     id: "gefuellte-champignons", name: "Gefüllte Champignons vom Grill", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
     time: "25 min", pit: "indirekt 180–200 °C", core: "—", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Mit Frischkäse, Kräutern und Speck gefüllte Champignons – beliebter Snack und Beilage.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "16", i: "große Champignons (Stiele entfernt)" },
       { a: "200 g + 100 g", i: "Frischkäse, geriebener Käse" },
@@ -3609,11 +4499,14 @@ const RECIPES = [
       { label: "Grillen", kind: "indirect", dur: "12–18 min", temp: "180–200 °C, Deckel zu", text: "Indirekt grillen bis die Füllung goldbraun und blubbernd ist.", bullets: ["Indirekt, damit sie nicht verbrennen"] },
     ],
     tips: ["Vegetarisch: Speck durch getrocknete Tomaten ersetzen.", "Auf einer Grillschale, falls die Pilze Saft ziehen."],
+    proTip: "Große Champignons indirekt garen, damit die Füllung durchzieht, ohne dass Wasser austritt und alles verwässert.",
+    learn: ["Füllen","Indirekt garen","Käse gratinieren"],
   }),
   r({
     id: "susskartoffel-grill", name: "Gegrillte Süßkartoffel-Spalten", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
     time: "30 min", pit: "indirekt → direkt 200–220 °C", core: "weich, außen kross", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Würzige Süßkartoffel-Spalten mit Paprika und Kreuzkümmel – die bessere Pommes-Alternative.",
+    equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1 kg", i: "Süßkartoffeln (in Spalten)" },
       { a: "4 EL + je 1 TL", i: "Olivenöl, Paprika, Kreuzkümmel, Knoblauch, Salz, Chili" },
@@ -3624,6 +4517,8 @@ const RECIPES = [
       { label: "Direkt knusprig", kind: "direct", dur: "5–8 min", temp: "220 °C", text: "Über direkter Hitze außen kross grillen.", bullets: [] },
     ],
     tips: ["Mit einem Joghurt-Limetten- oder Aioli-Dip servieren.", "Auf dem Seitenkocher in der Gusspfanne genauso möglich."],
+    proTip: "Süßkartoffel-Spalten erst indirekt weich garen, dann direkt für die Kruste – roh direkt gegrillt verbrennen sie außen.",
+    learn: ["Indirekt vorgaren","Direkt Kruste","Würzen"],
   }),
 
   /* ---- GRUNDLAGEN ---- */
@@ -3697,6 +4592,9 @@ const RECIPES = [
     id: "marinade-teriyaki", name: "Teriyaki-Soja-Marinade", method: "marinaden", cat: "Geflügel", diff: 1,
     time: "Ziehzeit 1–8 h", pit: "ca. 1 kg", core: "", wood: "Sojasoße · Mirin", yield: "ca. 200 ml",
     blurb: "Salzig-süß mit Ingwer und Knoblauch – asiatischer Klassiker für Hähnchen, Lachs, Tofu und Spieße.",
+    origin: "🇯🇵 Teriyaki ist eine japanische Zubereitung mit Sojasauce, Mirin und Zucker – süß-salzig glänzend.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt der japanischen Teriyaki-Tradition.",
     ingredients: [
       { a: "6 EL", i: "Sojasoße" },
       { a: "3 EL", i: "Mirin (oder Honig + Schuss Reisessig)" },
@@ -3734,6 +4632,9 @@ const RECIPES = [
     id: "marinade-tandoori", name: "Joghurt-Tandoori-Marinade", method: "marinaden", cat: "Geflügel", diff: 1,
     time: "Ziehzeit 4–24 h", pit: "ca. 1 kg", core: "", wood: "Joghurt", yield: "ca. 300 ml",
     blurb: "Joghurt macht Geflügel besonders zart, indische Gewürze geben Tiefe und die typisch rote Farbe.",
+    origin: "🇮🇳 Die Tandoori-Marinade stammt aus Indien: Joghurt mit Garam Masala, Ingwer und Knoblauch, klassisch für den Tandoor-Ofen.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt der indischen Tandoori-Tradition.",
     ingredients: [
       { a: "250 g", i: "Naturjoghurt (vollfett)" },
       { a: "2 EL", i: "Zitronensaft" },
@@ -3787,6 +4688,9 @@ const RECIPES = [
     id: "marinade-chimichurri", name: "Chimichurri (Argentinisch)", method: "marinaden", cat: "Rind", diff: 1,
     time: "Ziehzeit 30 min – 4 h", pit: "ca. 1 kg", core: "", wood: "Petersilie · Öl · Essig", yield: "ca. 200 ml",
     blurb: "Kräftig, kräuterfrisch und leicht scharf – die argentinische Kräutersauce als Marinade UND Dip fürs Steak.",
+    origin: "🇦🇷 Chimichurri ist die argentinische Kräutersauce aus Petersilie, Knoblauch, Oregano und Essig – der klassische Begleiter zu Asado.",
+    authenticity: 9,
+    authenticityNote: "Folgt der argentinischen Tradition.",
     ingredients: [
       { a: "1 Bund", i: "glatte Petersilie (fein gehackt)" },
       { a: "8 EL", i: "Olivenöl" },
@@ -3824,6 +4728,9 @@ const RECIPES = [
     id: "marinade-whiskey-mop", name: "Whiskey-BBQ-Mop (Texas)", method: "marinaden", cat: "Rind", diff: 2,
     time: "Mopfen während des Garens", pit: "ca. 2–4 kg", core: "", wood: "Whiskey · Brühe", yield: "ca. 400 ml",
     blurb: "Dünnflüssige Mop-Sauce zum Bestreichen während des Smokens – hält Brisket und Ribs saftig und baut Kruste auf.",
+    origin: "🇺🇸 Der Whiskey-Mop ist eine texanische BBQ-Sauce zum Bestreichen (Mopping) während des langen Garens.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt der texanischen BBQ-Tradition.",
     ingredients: [
       { a: "150 ml", i: "Rinderbrühe" },
       { a: "4 EL", i: "Bourbon Whiskey" },
@@ -3859,6 +4766,9 @@ const RECIPES = [
     id: "marinade-bulgogi", name: "Bulgogi-Marinade (Koreanisch)", method: "marinaden", cat: "Rind", diff: 1,
     time: "Ziehzeit 2–12 h", pit: "ca. 1 kg", core: "", wood: "Sojasoße · Birne", yield: "ca. 250 ml",
     blurb: "Süß-herzhaft mit Birne, Sesam und Knoblauch – die koreanische Marinade für hauchdünn geschnittenes Rind.",
+    origin: "🇰🇷 Bulgogi ist eine koreanische Marinade aus Sojasauce, Birne, Sesamöl und Knoblauch – süß, herzhaft, umami.",
+    authenticity: 8.5,
+    authenticityNote: "Folgt der koreanischen Bulgogi-Tradition.",
     ingredients: [
       { a: "6 EL", i: "Sojasoße" },
       { a: "½", i: "Birne oder Apfel (gerieben – macht zart)" },
