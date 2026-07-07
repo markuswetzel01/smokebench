@@ -110,7 +110,7 @@
     <div style="background:#9a3b1c;background-image:repeating-linear-gradient(45deg,rgba(0,0,0,0.06) 0 1px,transparent 1px 9px);border-bottom:2px solid #6e2912;position:relative;z-index:40;">
       <div style="max-width:1200px;margin:0 auto;padding:16px 48px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;">
         <div style="flex:1;min-width:260px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;">
-          <span style="font-family:'Spectral',serif;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#f3ead7;background:rgba(0,0,0,0.22);border:1px solid rgba(243,234,215,0.35);border-radius:3px;padding:4px 9px;white-space:nowrap;">{{ L.betaTag }}</span>
+          <span style="font-family:'Spectral',serif;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#f3ead7;background:rgba(0,0,0,0.22);border:1px solid rgba(243,234,215,0.35);border-radius:3px;padding:4px 9px;white-space:nowrap;">{{ L.betaTag }} · {{ appVersion }}</span>
           <div>
             <div style="font-family:'DM Serif Display',serif;font-size:21px;color:#f9f1df;line-height:1.15;">{{ L.betaHead }}</div>
             <div style="font-family:'Spectral',serif;font-size:14px;color:#f0d9c4;line-height:1.45;margin-top:3px;max-width:640px;">{{ L.betaText }}</div>
@@ -1798,9 +1798,10 @@ class Component extends DCLogic {
         npsLegal: p('Unverbindliche Beispielwerte, keine Dosierempfehlung — Mengen in Eigenverantwortung anpassen und gegen geltende Nitrit-Höchstmengen (VO (EU) 2023/2108) prüfen. NPS exakt abwiegen.','Non-binding example values, not a dosing recommendation — adjust amounts on your own responsibility and check against current nitrite limits (Reg. (EU) 2023/2108). Weigh cure salt precisely.'),
         betaTag: p('Testphase','Beta'),
         betaHead: p('Smokebench ist in der Testphase','Smokebench is in beta'),
-        betaText: p('Schmeckt etwas nicht, fehlt ein Rezept oder stimmt eine Zeit nicht? Sag\u2019s mir \u2013 dein Feedback formt die App. Dauert 2 Minuten.','Something off, a recipe missing or a time wrong? Tell me \u2013 your feedback shapes the app. Takes 2 minutes.'),
-        betaCta: p('📝 Feedback geben','📝 Give feedback'),
+        betaText: p('Es kommen laufend neue Rezepte und Updates. Dein Feedback formt die App – und wer seine E-Mail im Formular hinterlässt, bekommt zum Release der Vollversion einen exklusiven Beta-Tester-Preis.','New recipes and updates land continuously. Your feedback shapes the app – and everyone who leaves their email in the form gets an exclusive beta-tester price when the full version launches.'),
+        betaCta: p('📝 Feedback & Beta-Preis sichern','📝 Give feedback & claim the beta price'),
         betaDismiss: p('Später','Later'),
+        betaVersionLabel: p('Version','Version'),
         // NPS
         npsWeight: p('Fleischgewicht (Gramm)','Meat weight (grams)'),
         npsCure: p('NPS (40 g/kg)','Cure salt (40 g/kg)'), npsSugar: p('Zucker (5 g/kg)','Sugar (5 g/kg)'), npsPepper: p('Pfeffer (2 g/kg)','Pepper (2 g/kg)'),
@@ -2018,6 +2019,7 @@ class Component extends DCLogic {
     const allRecipes = this._effective();
 
     const feedbackHref = 'https://forms.gle/J2ksxrL1pyJTu1NB8';
+    const appVersion = 'v0.9.0';
     const year = new Date().getFullYear();
 
     const M_KEYS = ['alle','kalt','warm','heiss','bbq','basis','dorr','grill','marinaden','favs'];
@@ -2229,7 +2231,7 @@ class Component extends DCLogic {
       showTools: this.state.showTools, onToggleTools: () => this.setState({ showTools: !this.state.showTools }),
       toolsButtonStyle: tb(this.state.showTools || showNPS || showDorr || this.state.showConv),
       ...this._convVals(tb),
-      L, lang, onToggleLang: () => this._toggleLang(), feedbackHref, year,
+      L, lang, onToggleLang: () => this._toggleLang(), feedbackHref, year, appVersion,
       showChamber: this.state.showChamber,
       chamberHtml: (typeof window !== 'undefined' && window.__CHAMBER_HTML) || '',
       onOpenChamber: () => this.setState({ showChamber: true, showTools: false }),
