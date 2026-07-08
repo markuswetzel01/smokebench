@@ -1601,3 +1601,189 @@
     throw err;
   });
 })();
+
+
+/**
+ * SmokeBench AI-Interface Extension
+ * Integriert intelligente Methoden-Empfehlungen und Hardware-Steuerungsparameter.
+ */
+window.SmokeBenchAI = {
+  
+  // 1. Hardware-Profile passend zu den Keys deiner METHODS-Struktur in recipes.js
+  HARDWARE_PROFILES: {
+    "kalt": {
+      targetTemp: 18,
+      maxTemp: 25,            // Kritische Grenze für Kaltrauch (Eiweißgerinnung)
+      targetHumidity: 75,     // % relative Luftfeuchtigkeit
+      fanCycle: "15m ON / 45m OFF",
+      hardwareNote: "Sparbrand / Kaltrauchgenerator im WSM unten platzieren. Keine Heizung aktivieren."
+    },
+    "warm": {
+      targetTemp: 35,
+      maxTemp: 50,
+      targetHumidity: 65,
+      fanCycle: "30m ON / 30m OFF",
+      hardwareNote: "Geringe Hitzezufuhr (z.B. durch wenige Kohlen oder kleine Heizschleife)."
+    },
+    "heiss": {
+      targetTemp: 85,
+      maxTemp: 110,
+      targetHumidity: 50,
+      fanCycle: "Dauerbetrieb (Abluft leicht offen)",
+      hardwareNote: "Klassischer Heißrauch. Fokus auf Garprozess und Core-Temperatur."
+    },
+    "bbq": {
+      targetTemp: 110,
+      maxTemp: 130,
+      targetHumidity: 60,
+      fanCycle: "Gesteuert durch Pit-Controller",
+      hardwareNote: "Low & Slow Modus. Wasserschale im WSM befüllen zur Temperaturpufferung."
+    },
+    "dorr": {
+      targetTemp: 45,
+      maxTemp: 65,
+      targetHumidity: 30,
+      fanCycle: "Dauerbetrieb (Volllast)",
+      hardwareNote: "Graef DA506 Profile: Dörrgitter gleichmäßig bestücken, Abluftschlitze frei halten."
+    },
+    "grill": {
+      targetTemp: 180,
+      maxTemp: 250,
+      targetHumidity: 20,
+      fanCycle: "Kein Lüfter-Takt",
+      hardwareNote: "Direktes/Indirektes Grillen auf dem Kugelgrill oder am Spieß (Rotisserie)."
+    }
+  },
+
+  /**
+   * Generiert den System-Prompt für die KI basierend auf dem App-Status.
+   * @param {Array} appMethods - Das METHODS-Array aus deiner recipes.js
+   * @param {String} userGoal - Die Eingabe des Nutzers (z.B. "Salami reifen lassen bei feuchtem Wetter")
+   * @param {Object|null} sensorData - Optionale Live-Daten { temp: 22, humidity: 78 }
+   * @returns {String} Der fertige Text-Prompt für den KI-API-Aufruf
+   */
+  generatePrompt: function(appMethods, userGoal, sensorData = null) {
+    // Reduziere das globale METHODS-Array auf das, was die KI wissen muss
+    const filteredMethods = appMethods
+      .filter(m => m.key !== "alle" && m.key !== "basis") // Filter irrelevante Filter-Keys
+      .map(m => ({
+        id: m.key,
+        label: m.label,
+        beschreibung: m.sub
+      }));
+
+    let envContext = "Aktuell liegen keine Live-Sensordaten aus der Reifekammer vor.";
+    if (sensorData) {
+      envContext = `Die aktuellen Messwerte in der Kammer sind: Temperatur ${sensorData.temp}°C, relative Luftfeuchtigkeit ${sensorData.humidity}%.`;
+    }
+
+    return `
+Du bist das Logik-Modul der Räucher- und Dörrapp 'SmokeBench'.
+Deine Aufgabe ist es, basierend auf dem Ziel des Nutzers und den Umweltbedingungen die beste Veredelungsmethode auszuwählen.
+
+VERFÜGBARE METHODEN (ID entspricht dem 'key'):
+${JSON.stringify(filteredMethods, null, 2)}
+
+UMGEBUNGSBEDINGUNGEN:
+${envContext}
+
+ZIEL DES NUTZERS:
+"${userGoal}"
+
+ANWEISUNG:
+Wähle die passendste Methode aus. Antworte AUSSCHLIESSLICH im folgenden JSON-Format, ohne zusätzlichen Text oder Markdown-Formatierung:
+{
+  "recommendedMethodId": "ID_AUS_DEN_METHODEN",
+  "reasoning": "Kurze, prägnante Begründung auf Deutsch, warum diese Methode optimal ist.",
+  "warnings": "Falls die Außentemperatur/Feuchtigkeit riskant für die Methode ist, gib hier einen konkreten Warnhinweis aus (z.B. Fettbrandrisiko, Trockenrandgefahr), ansonsten null."
+}
+    `.trim();
+  },
+
+  /**
+   * Verarbeitet die strukturierte JSON-Antwort der KI und aktualisiert das HTML-UI.
+   * Erzeugt automatisch ein Anzeige-Panel, falls es noch nicht im HTML existiert.
+   * @param {String|Object} aiResponse - Die Antwort der KI
+   */
+  handleResponse: function(aiResponse) {
+    try {
+      // Falls die KI trotz Anweisung Markdown-Code-Blöcke mitsendet, bereinigen:
+      let cleanResponse = aiResponse;
+      if (typeof aiResponse === 'string') {
+        cleanResponse = aiResponse.replace(/```json|```/g, '').trim();
+      }
+      
+      const data = typeof cleanResponse === 'string' ? JSON.parse(cleanResponse) : cleanResponse;
+      const methodId = data.recommendedMethodId;
+      const profile = this.HARDWARE_PROFILES[methodId];
+
+      // Hole oder erstelle den Container in deiner index.html
+      let panel = document.getElementById("smokebench-ai-panel");
+      if (!panel) {
+        panel = document.createElement("div");
+        panel.id = "smokebench-ai-panel";
+        panel.style.margin = "15px 0";
+        panel.style.padding = "15px";
+        panel.style.borderRadius = "6px";
+        panel.style.fontFamily = "sans-serif";
+        // Einfügen am Anfang des Bodys oder nach einem bestimmten Hauptelement
+        document.body.insertBefore(panel, document.body.firstChild);
+      }
+
+      // Styles & Content basierend auf dem Profil setzen
+      if (profile) {
+        panel.style.backgroundColor = "#3a2a1a";
+        panel.style.color = "#fff";
+        panel.style.border = "2px solid #e0a96d";
+
+        let warningHtml = "";
+        if (data.warnings) {
+          warningHtml = `
+            <div style="background: #9a3b1c; color: #fff; padding: 8px; margin: 10px 0; border-radius: 4px; font-weight: bold;">
+              ⚠️ ACHTUNG: ${data.warnings}
+            </div>
+          `;
+        }
+
+        panel.innerHTML = `
+          <h3 style="margin-top:0; color: #e0a96d; border-bottom: 1px solid #5a4531; padding-bottom: 5px;">
+            🤖 SmokeBench KI-Assistent
+          </h3>
+          <p style="font-style: italic; color: #dcdcdc; line-height: 1.4;">"${data.reasoning}"</p>
+          
+          ${warningHtml}
+          
+          <div style="background: rgba(0,0,0,0.2); padding: 10px; margin-top: 10px; border-radius: 4px;">
+            <strong style="color: #e0a96d; display: block; margin-bottom: 5px;">🎛️ Steuerungs-Sollwerte (Inkbird / Controller):</strong>
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.95em;">
+              <tr><td style="padding: 4px 0;"><strong>Modus:</strong></td><td style="color: #e0a96d;">${methodId.toUpperCase()}</td></tr>
+              <tr><td style="padding: 4px 0;"><strong>Soll-Temperatur:</strong></td><td>${profile.targetTemp} °C (Max: ${profile.maxTemp} °C)</td></tr>
+              <tr><td style="padding: 4px 0;"><strong>Soll-Feuchtigkeit:</strong></td><td>${profile.targetHumidity} % rH</td></tr>
+              <tr><td style="padding: 4px 0;"><strong>Lüfter-Taktung:</strong></td><td>${profile.fanCycle}</td></tr>
+            </table>
+            <p style="font-size: 0.85em; color: #a89480; margin: 8px 0 0 0; padding-top: 5px; border-top: 1px dashed #5a4531;">
+              💡 <strong>Hardware-Setup:</strong> ${profile.hardwareNote}
+            </p>
+          </div>
+        `;
+
+        // Trigger: Automatisch das Filter-Dropdown deiner App auf die neue Methode umstellen
+        // Falls du in deiner index.html ein Select-Element für die Methoden hast
+        const appSelector = document.querySelector(`[value="${methodId}"]`);
+        if (appSelector && typeof appSelector.click === 'function') {
+          appSelector.click(); 
+        }
+
+      } else {
+        console.error("Empfohlene Method-ID im Hardware-Profil nicht gefunden:", methodId);
+      }
+
+    } catch (e) {
+      console.error("Fehler beim Parsen oder Rendern des SmokeBench KI-Outputs:", e);
+    }
+  }
+};
+
+
+
+
