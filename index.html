@@ -18,55 +18,6 @@
   <rect x="34" y="73" width="36" height="5" rx="2" fill="#7a6f60"/>
 </svg>
 </template>
-  <div style="background: #2a1f14; border: 1px solid #e0a96d; padding: 15px; margin: 10px; color: #fff; border-radius: 6px;">
-  <h4>🤖 SmokeBench KI-Schnittstelle (Test-Modus)</h4>
-  
-  <input type="text" id="ai-user-goal" placeholder="z.B. Ich will Salami reifen lassen, draußen ist es schwül" style="width: 100%; padding: 8px; margin-bottom: 10px; background: #3a2a1a; color: #fff; border: 1px solid #5a4531;">
-  
-  <button onclick="starteKiPromptGeneration()" style="background: #e0a96d; color: #3a2a1a; border: none; padding: 8px 12px; cursor: pointer; font-weight: bold; margin-right: 10px;">
-    1. Prompt für Gemini generieren
-  </button>
-  
-  <textarea id="ai-copy-space" style="width: 100%; height: 100px; margin-top: 10px; display: none; background: #1a120b; color: #00ff00; font-family: monospace;"></textarea>
-  
-  <hr style="border: 0; border-top: 1px dashed #5a4531; margin: 15px 0;">
-  
-  <p style="font-size: 0.9em; margin-bottom: 5px;">2. Antwort-JSON von Gemini hier einfügen:</p>
-  <textarea id="ai-paste-space" placeholder='Füge das JSON hier ein (z.B. {"recommendedMethodId": "kalt", ...})' style="width: 100%; height: 60px; background: #3a2a1a; color: #fff; border: 1px solid #5a4531;"></textarea>
-  
-  <button onclick="verarbeiteKiAntwort()" style="background: #9a3b1c; color: #fff; border: none; padding: 8px 12px; cursor: pointer; font-weight: bold; margin-top: 5px;">
-    3. UI aktualisieren
-  </button>
-</div>
-
-<script>
-  // Diese kleinen Helfer-Funktionen verbinden deine UI mit dem Code in der support.js
-  function starteKiPromptGeneration() {
-    const goal = document.getElementById("ai-user-goal").value || "Ich möchte Fleisch veredeln";
-    
-    // Simulierte Sensordaten (später kommen die vom Inkbird)
-    const testSensoren = { temp: 24, humidity: 78 }; 
-    
-    // WSM_DATA.METHODS oder WSM_METHODS – je nachdem, wie dein Array in recipes.js heißt
-    // Wir nehmen hier das globale Array deiner App
-    const methodenArray = window.WSM_DATA ? window.WSM_DATA.METHODS : []; 
-    
-    const fertigerPrompt = window.SmokeBenchAI.generatePrompt(methodenArray, goal, testSensoren);
-    
-    const outputField = document.getElementById("ai-copy-space");
-    outputField.value = fertigerPrompt;
-    outputField.style.display = "block";
-    alert("Prompt generiert! Kopiere den grünen Text und füge ihn bei Gemini ein.");
-  }
-
-  function verarbeiteKiAntwort() {
-    const jsonInput = document.getElementById("ai-paste-space").value;
-    if(!jsonInput) return alert("Bitte zuerst das JSON aus dem Chat hier hineinkopieren!");
-    
-    // Ruft deine neue Logik aus der support.js auf
-    window.SmokeBenchAI.handleResponse(jsonInput);
-  }
-</script>
 <x-dc>
 <helmet>
 <meta name="apple-mobile-web-app-capable" content="yes">
