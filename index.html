@@ -338,6 +338,14 @@
       </div>
       <input type="text" placeholder="{{ L.search }}" value="{{ query }}" onChange="{{ onSearch }}" style="margin-left:auto;padding:7px 13px;border:1.5px solid #c9b48a;border-radius:3px;background:#f3ead7;font-family:'Spectral',serif;font-size:14px;color:#3a2a1a;min-width:180px;outline:none;" />
     </div>
+    <div style="max-width:1200px;margin:9px auto 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+      <span style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#9a8a72;">{{ L.sortLabel }}</span>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;">
+        <sc-for list="{{ sortChips }}" as="s" hint-placeholder-count="4">
+          <button style="{{ s.style }}" onClick="{{ s.onClick }}">{{ s.label }}</button>
+        </sc-for>
+      </div>
+    </div>
   </div>
 
   <!-- LOADING -->
@@ -1263,6 +1271,7 @@ class Component extends DCLogic {
   state = {
     method: 'alle', query: '', selectedId: null, recipes: [], ready: false,
     favorites: [], notes: {},
+    sortBy: 'default',
     showNPS: false, npsWeight: '1000',
     timerLabel: '', timerTotalSec: 0, timerRemaining: 0, timerRunning: false, timerRecipeId: null,
     showDorr: false, dorrType: 'obst', dorrMm: '5', dorrTemp: '58',
@@ -1392,6 +1401,25 @@ class Component extends DCLogic {
     if (/\bh\b/.test(s)) return Math.round(val * 3600);
     if (/min/.test(s)) return Math.round(val * 60);
     return 0;
+  }
+
+  _timeRank(s) {
+    // Grobe Gesamtdauer in Minuten f\u00fcr die Sortierung (DE + EN, kleinste Zahl je Einheit).
+    if (!s || s === '\u2014') return 0;
+    const str = String(s).toLowerCase();
+    const units = [
+      { re: /(\d+(?:[.,]\d+)?)\s*(?:monat|month)/g, f: 43200 },
+      { re: /(\d+(?:[.,]\d+)?)\s*(?:woche|week|wk)/g, f: 10080 },
+      { re: /(\d+(?:[.,]\d+)?)\s*(?:tag|tage|day|days|d\b)/g, f: 1440 },
+      { re: /(\d+(?:[.,]\d+)?)\s*(?:std|stunde|stunden|hour|hrs|hr|h)\b/g, f: 60 },
+      { re: /(\d+(?:[.,]\d+)?)\s*(?:min|minute|minuten)/g, f: 1 },
+    ];
+    let total = 0, matched = false;
+    for (const u of units) {
+      let m;
+      while ((m = u.re.exec(str)) !== null) { total += parseFloat(m[1].replace(',', '.')) * u.f; matched = true; }
+    }
+    return matched ? total : 0;
   }
 
   _fmt(sec) {
@@ -2107,6 +2135,8 @@ class Component extends DCLogic {
         cupSaltFine: p('Salz, fein','Salt, fine'), cupSaltKosher: p('Salz, koscher/grob','Salt, kosher/coarse'), cupFlour: p('Mehl','Flour'), cupHoney: p('Honig / Sirup','Honey / syrup'),
         // Filter / states
         search: p('Suchen…','Search…'), loading: p('Lade Rezepte…','Loading recipes…'),
+        sortLabel: p('Sortieren','Sort'),
+        sortDefault: p('Standard','Default'), sortName: p('A–Z','A–Z'), sortDiff: p('Schwierigkeit','Difficulty'), sortTime: p('Dauer','Duration'),
         noResults: p('Keine Rezepte gefunden.','No recipes found.'), noResultsSub: p('Anderen Filter oder andere Suche probieren.','Try a different filter or search.'),
         // Detail
         allRecipes: p('← Alle Rezepte','← All recipes'),
@@ -2294,7 +2324,7 @@ class Component extends DCLogic {
     const appVersion = 'v0.11.0';
     const year = new Date().getFullYear();
 
-    const M_KEYS = ['alle','kalt','warm','heiss','bbq','basis','dorr','grill','marinaden','favs'];
+    const M_KEYS = ['alle','kalt','warm','heiss','bbq','dorr','grill','marinaden','basis','favs'];
     const M_LABELS = D.M_LABELS;
     const M_COLORS = { kalt:'#5b6b78', warm:'#b5872f', heiss:'#9a3b1c', bbq:'#7a4a22', basis:'#5a6b4a', dorr:'#c47a15', grill:'#8a6a3a', marinaden:'#6f8c3a' };
     const DIFF = D.DIFF;
@@ -2307,6 +2337,33 @@ class Component extends DCLogic {
       if (method !== 'alle' && r.method !== method) return false;
       if (q) return r.name.toLowerCase().includes(q) || r.cat.toLowerCase().includes(q) || r.blurb.toLowerCase().includes(q);
       return true;
+    });
+
+    const sortBy = this.state.sortBy || 'default';
+    if (sortBy !== 'default') {
+      const coll = new Intl.Collator(this.state.lang === 'en' ? 'en' : 'de', { sensitivity: 'base' });
+      const byName = (a, b) => coll.compare(a.name || '', b.name || '');
+      filtered.sort((a, b) => {
+        if (sortBy === 'name') return byName(a, b);
+        if (sortBy === 'diff') return ((a.diff || 0) - (b.diff || 0)) || byName(a, b);
+        if (sortBy === 'time') return ((this._timeRank(a.time) || 0) - (this._timeRank(b.time) || 0)) || byName(a, b);
+        return 0;
+      });
+    }
+
+    const SORT_KEYS = [
+      { key: 'default', label: L.sortDefault },
+      { key: 'name', label: L.sortName },
+      { key: 'diff', label: L.sortDiff },
+      { key: 'time', label: L.sortTime },
+    ];
+    const sortChips = SORT_KEYS.map(s => {
+      const on = sortBy === s.key;
+      return {
+        key: s.key, label: s.label,
+        onClick: () => this.setState({ sortBy: s.key }),
+        style: { fontFamily: "'Spectral',serif", fontSize: '12px', cursor: 'pointer', whiteSpace: 'nowrap', borderRadius: '20px', padding: '5px 12px', border: on ? '1.5px solid #9a6b2f' : '1.5px solid #c9b48a', background: on ? '#9a6b2f' : 'transparent', color: on ? '#f3ead7' : '#6b5a42' },
+      };
     });
 
     const tabBase = { fontFamily:"'Spectral', serif", fontSize:'13px', cursor:'pointer', whiteSpace:'nowrap', borderRadius:'3px', padding:'6px 13px', transition:'all 0.15s' };
@@ -2491,7 +2548,7 @@ class Component extends DCLogic {
     }));
 
     return {
-      ready, loading: !ready, tabs, filteredRecipes,
+      ready, loading: !ready, tabs, filteredRecipes, sortChips,
       hasSelected: !!sel, noResults: ready && filtered.length === 0, query,
       onSearch: (e) => this.setState({ query: e.target.value }),
       onBack: () => this.setState({ selectedId: null }),
