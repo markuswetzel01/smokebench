@@ -63,7 +63,8 @@
   <div style="position:sticky;top:0;z-index:90;background:#2a1a0e;border-bottom:1.5px solid #6b5a42;box-shadow:0 5px 16px -8px rgba(0,0,0,0.5);">
     <div style="max-width:1200px;margin:0 auto;padding:8px 48px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
       <div style="flex:1;min-width:0;font-family:'DM Serif Display',serif;font-size:19px;letter-spacing:0.02em;color:#f3ead7;white-space:nowrap;">Smoke<span style="color:#d6603a;">bench</span></div>
-      <button onClick="{{ onToggleLang }}" title="{{ L.langTitle }}" style="font-family:'Spectral',serif;font-size:12px;font-weight:600;letter-spacing:0.08em;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #c9a87a;background:transparent;color:#c9a87a;white-space:nowrap;">🌐 {{ L.langBtn }}</button>
+      <button onClick="{{ onToggleLang }}" title="{{ L.langTitle }}" style="font-family:'Spectral',serif;font-size:12px;font-weight:600;letter-spacing:0.08em;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #c9a87a;background:transparent;color:#c9a87a;white-space:nowrap;display:inline-flex;align-items:center;gap:7px;"><span style="display:inline-flex;width:20px;height:14px;border-radius:2px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,0.3);flex-shrink:0;"><sc-if value="{{ langIsDe }}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 60 30" width="20" height="14" preserveAspectRatio="none" aria-hidden="true"><clipPath id="ukflag"><path d="M0,0 v30 h60 v-30 z"></path></clipPath><clipPath id="ukflag2"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"></path></clipPath><g clip-path="url(#ukflag)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"></path><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"></path><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#ukflag2)" stroke="#C8102E" stroke-width="4"></path><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"></path><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"></path></g></svg></sc-if><sc-if value="{{ langIsEn }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 5 3" width="20" height="14" preserveAspectRatio="none" aria-hidden="true"><rect width="5" height="1" y="0" fill="#000000"></rect><rect width="5" height="1" y="1" fill="#DD0000"></rect><rect width="5" height="1" y="2" fill="#FFCE00"></rect></svg></sc-if></span>{{ L.langBtn }}</button>
+      <button onClick="{{ onOpenAI }}" title="{{ L.aiTitle }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #9a6b2f;background:#9a6b2f;color:#f3ead7;white-space:nowrap;font-weight:600;display:inline-flex;align-items:center;gap:7px;" style-hover="background:#875d29;"><span aria-hidden="true" style="font-size:13px;line-height:1;">✦</span>{{ L.aiBtn }}</button>
       <button onClick="{{ onNewRecipe }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #9a3b1c;background:#9a3b1c;color:#f3ead7;white-space:nowrap;font-weight:600;">{{ L.newRecipe }}</button>
       <button style="{{ listButtonStyle }}" onClick="{{ onToggleShoppingList }}">{{ listButtonLabel }}</button>
       <div style="position:relative;">
@@ -1066,6 +1067,141 @@
     <button onClick="{{ onOpenDisclaimerInfo }}" style="font-family:'Spectral',serif;font-size:13px;color:#9a3b1c;background:transparent;border:0;border-bottom:1px solid #d8c49a;padding:0 0 1px;cursor:pointer;">{{ L.discFooter }}</button>
   </footer>
 
+  <!-- BACKUP-ERINNERUNG (nach dem Speichern eines neuen Rezepts) -->
+  <sc-if value="{{ showSaveBackupHint }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;left:0;right:0;bottom:0;z-index:9200;display:flex;justify-content:center;padding:16px;pointer-events:none;">
+      <div style="pointer-events:auto;max-width:520px;width:100%;background:#3a2a1a;color:#f3ead7;border:1px solid #6b5a42;border-radius:8px;box-shadow:0 14px 40px -10px rgba(0,0,0,0.6);padding:14px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <span aria-hidden="true" style="font-size:18px;line-height:1;">⤓</span>
+        <span style="flex:1;min-width:200px;font-family:'Spectral',serif;font-size:13px;line-height:1.45;color:#e8dcc2;">{{ L.saveToastMsg }}</span>
+        <div style="display:flex;gap:8px;flex-shrink:0;">
+          <button onClick="{{ onBackupNow }}" style="font-family:'Spectral',serif;font-size:13px;font-weight:600;cursor:pointer;border-radius:4px;padding:8px 14px;border:1.5px solid #c9a87a;background:#c9a87a;color:#3a2a1a;white-space:nowrap;">{{ L.saveToastBtn }}</button>
+          <button onClick="{{ onDismissBackupHint }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:4px;padding:8px 12px;border:1.5px solid #6b5a42;background:transparent;color:#c9b48a;white-space:nowrap;">{{ L.saveToastDismiss }}</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- KI-RÄUCHERBERATER -->
+  <sc-if value="{{ showAI }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;z-index:9300;background:rgba(20,12,6,0.84);display:flex;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto;">
+      <div style="background:#f3ead7;max-width:640px;width:100%;border:1.5px solid #6b5a42;border-radius:8px;box-shadow:0 24px 60px -12px rgba(0,0,0,0.6);margin:20px 0;display:flex;flex-direction:column;">
+        <div style="padding:20px 24px 14px;border-bottom:1px solid #d8c49a;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+          <div>
+            <div style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#9a6b2f;">{{ L.aiEyebrow }}</div>
+            <div style="font-family:'DM Serif Display',serif;font-size:26px;color:#3a2a1a;margin-top:3px;">{{ L.aiTitle }}</div>
+          </div>
+          <button onClick="{{ onCloseAI }}" title="{{ L.chamberClose }}" style="flex-shrink:0;background:transparent;border:1.5px solid #b09a72;color:#6b5a42;border-radius:50%;width:34px;height:34px;font-size:15px;cursor:pointer;line-height:1;">✕</button>
+        </div>
+        <div style="padding:18px 24px 24px;display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;gap:10px;background:#f7e4d0;border:1px solid #d99a5a;border-left:4px solid #9a3b1c;border-radius:5px;padding:11px 13px;">
+            <span aria-hidden="true" style="font-size:15px;line-height:1.4;">⚠️</span>
+            <div style="font-family:'Spectral',serif;font-size:12.5px;line-height:1.55;color:#5a3a1a;">{{ L.aiDisclaimer }}</div>
+          </div>
+          <sc-if value="{{ aiUnavailable }}" hint-placeholder-val="{{ false }}">
+            <div style="font-family:'Spectral',serif;font-size:12.5px;line-height:1.55;color:#6b5a42;background:#efe4cc;border:1px dashed #b09a72;border-radius:5px;padding:10px 13px;">{{ L.aiOffline }}</div>
+          </sc-if>
+          <div style="font-family:'Spectral',serif;font-size:13px;color:#6b5a42;line-height:1.5;">{{ L.aiPrompt }}</div>
+          <textarea value="{{ aiInput }}" onInput="{{ onAiInput }}" placeholder="{{ L.aiPlaceholder }}" rows="3" style="width:100%;box-sizing:border-box;font-family:'Spectral',serif;font-size:15px;color:#3a2a1a;background:#faf5e8;border:1.5px solid #c9b48a;border-radius:5px;padding:11px 13px;resize:vertical;line-height:1.5;"></textarea>
+          <div style="display:flex;flex-wrap:wrap;gap:7px;">
+            <sc-for list="{{ aiExamples }}" as="ex" hint-placeholder-count="3">
+              <button onClick="{{ ex.onClick }}" style="font-family:'Spectral',serif;font-size:12px;cursor:pointer;border-radius:20px;padding:5px 13px;border:1px solid #c9b48a;background:#faf5e8;color:#6b5a42;" style-hover="background:#ede0c5;">{{ ex.label }}</button>
+            </sc-for>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+            <button onClick="{{ onAiSend }}" style="{{ aiSendStyle }}">{{ aiSendLabel }}</button>
+            <sc-if value="{{ aiHasResult }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ onAiReset }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:4px;padding:10px 16px;border:1.5px solid #b09a72;background:transparent;color:#6b5a42;">{{ L.aiReset }}</button>
+            </sc-if>
+          </div>
+          <sc-if value="{{ aiHasError }}" hint-placeholder-val="{{ false }}">
+            <div style="font-family:'Spectral',serif;font-size:13px;color:#9a3b1c;background:#f7e4d0;border:1px solid #d99a5a;border-radius:5px;padding:11px 13px;line-height:1.5;">{{ aiError }}</div>
+          </sc-if>
+          <sc-if value="{{ aiHasResult }}" hint-placeholder-val="{{ false }}">
+            <div style="border-top:1px dashed #c9b48a;padding-top:18px;display:flex;flex-direction:column;gap:15px;">
+              <div>
+                <div style="display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:8px;">
+                  <span style="{{ aiResult.methodBadgeStyle }}">{{ aiResult.methodLabel }}</span>
+                  <sc-if value="{{ aiResult.hasDiff }}" hint-placeholder-val="{{ false }}"><span style="font-family:'Spectral',serif;font-size:11px;color:#6b5a42;border:1px solid #c9b48a;border-radius:3px;padding:3px 9px;">{{ aiResult.diffLabel }}</span></sc-if>
+                </div>
+                <div style="font-family:'DM Serif Display',serif;font-size:24px;color:#3a2a1a;line-height:1.1;">{{ aiResult.name }}</div>
+                <div style="font-family:'Spectral',serif;font-style:italic;font-size:14px;color:#6b5a42;margin-top:5px;line-height:1.5;">{{ aiResult.blurb }}</div>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                <sc-for list="{{ aiResult.facts }}" as="f" hint-placeholder-count="3">
+                  <div style="background:#faf5e8;border:1px solid #d8c49a;border-radius:4px;padding:6px 11px;">
+                    <div style="font-family:'Spectral',serif;font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;color:#9a8a72;">{{ f.k }}</div>
+                    <div style="font-family:'Spectral',serif;font-size:13px;color:#3a2a1a;font-weight:600;">{{ f.v }}</div>
+                  </div>
+                </sc-for>
+              </div>
+              <sc-if value="{{ aiResult.hasIngredients }}" hint-placeholder-val="{{ false }}">
+                <div>
+                  <div style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#9a3b1c;margin-bottom:7px;">{{ L.aiIngredients }}</div>
+                  <div style="display:flex;flex-direction:column;gap:4px;">
+                    <sc-for list="{{ aiResult.ingredients }}" as="ing" hint-placeholder-count="3">
+                      <div style="display:flex;gap:10px;font-family:'Spectral',serif;font-size:14px;color:#3a2a1a;line-height:1.4;">
+                        <span style="min-width:82px;color:#6b5a42;font-weight:600;">{{ ing.a }}</span>
+                        <span>{{ ing.i }}</span>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+              </sc-if>
+              <sc-if value="{{ aiResult.hasPhases }}" hint-placeholder-val="{{ false }}">
+                <div>
+                  <div style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#9a3b1c;margin-bottom:9px;">{{ L.aiSteps }}</div>
+                  <div style="display:flex;flex-direction:column;gap:11px;">
+                    <sc-for list="{{ aiResult.phases }}" as="ph" hint-placeholder-count="2">
+                      <div style="border-left:3px solid #d8c49a;padding-left:12px;">
+                        <div style="display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:4px;">
+                          <span style="{{ ph.kindBadgeStyle }}">{{ ph.kindLabel }}</span>
+                          <span style="font-family:'Spectral',serif;font-size:14px;font-weight:600;color:#3a2a1a;">{{ ph.label }}</span>
+                        </div>
+                        <sc-if value="{{ ph.hasMeta }}" hint-placeholder-val="{{ false }}">
+                          <div style="font-family:'Spectral',serif;font-size:12px;color:#8a6f4e;margin-bottom:3px;">{{ ph.dur }}{{ ph.metaSep }}{{ ph.temp }}</div>
+                        </sc-if>
+                        <div style="font-family:'Spectral',serif;font-size:13.5px;color:#3a2a1a;line-height:1.5;">{{ ph.text }}</div>
+                        <ul style="margin:5px 0 0;padding-left:18px;">
+                          <sc-for list="{{ ph.bullets }}" as="b" hint-placeholder-count="0">
+                            <li style="font-family:'Spectral',serif;font-size:12.5px;color:#5a4a38;line-height:1.5;">{{ b }}</li>
+                          </sc-for>
+                        </ul>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+              </sc-if>
+              <sc-if value="{{ aiResult.hasTips }}" hint-placeholder-val="{{ false }}">
+                <div>
+                  <div style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5a6b4a;margin-bottom:7px;">{{ L.aiTips }}</div>
+                  <ul style="margin:0;padding-left:18px;">
+                    <sc-for list="{{ aiResult.tips }}" as="t" hint-placeholder-count="2">
+                      <li style="font-family:'Spectral',serif;font-size:13.5px;color:#3a2a1a;line-height:1.55;margin-bottom:2px;">{{ t }}</li>
+                    </sc-for>
+                  </ul>
+                </div>
+              </sc-if>
+              <sc-if value="{{ aiResult.hasSafety }}" hint-placeholder-val="{{ false }}">
+                <div style="background:#f7e4d0;border:1px solid #d99a5a;border-left:4px solid #9a3b1c;border-radius:5px;padding:13px 15px;">
+                  <div style="display:flex;gap:8px;align-items:center;font-family:'Spectral',serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#9a3b1c;margin-bottom:8px;"><span aria-hidden="true">⚠️</span>{{ L.aiSafety }}</div>
+                  <ul style="margin:0;padding-left:18px;">
+                    <sc-for list="{{ aiResult.safety }}" as="sf" hint-placeholder-count="2">
+                      <li style="font-family:'Spectral',serif;font-size:13.5px;color:#5a3a1a;line-height:1.55;margin-bottom:3px;">{{ sf }}</li>
+                    </sc-for>
+                  </ul>
+                </div>
+              </sc-if>
+              <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;border-top:1px dashed #c9b48a;padding-top:15px;">
+                <button onClick="{{ onAiAdopt }}" style="font-family:'Spectral',serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:4px;padding:11px 20px;border:1.5px solid #9a3b1c;background:#9a3b1c;color:#f3ead7;">{{ L.aiAdopt }}</button>
+                <div style="font-family:'Spectral',serif;font-style:italic;font-size:12px;color:#8a6f4e;line-height:1.4;flex:1;min-width:180px;">{{ L.aiAdoptHint }}</div>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
   <!-- SICHERHEITS-/HAFTUNGS-GATE (Erststart, bestätigungspflichtig) -->
   <sc-if value="{{ showDisclaimerGate }}" hint-placeholder-val="{{ false }}">
     <div style="position:fixed;inset:0;z-index:9500;background:rgba(20,12,6,0.84);display:flex;align-items:center;justify-content:center;padding:24px;">
@@ -1143,6 +1279,8 @@ class Component extends DCLogic {
     betaDismissed: false,
     showChamber: false,
     showDisclaimerGate: false, showDisclaimerInfo: false,
+    showAI: false, aiInput: '', aiLoading: false, aiError: '', aiResult: null, aiAvailable: false,
+    saveBackupHint: false,
   };
   _iv = null;
 
@@ -1571,7 +1709,7 @@ class Component extends DCLogic {
       if (this.state.editorMode === 'edit') {
         this.setState({ ...newState, editorOpen: false, selectedId: id });
       } else {
-        this.setState({ ...newState, editorDraft: this._blankDraft(d.method), editorJustSaved: recipe.name, method: d.method });
+        this.setState({ ...newState, editorDraft: this._blankDraft(d.method), editorJustSaved: recipe.name, method: d.method, saveBackupHint: true });
         if (this._savedTO) clearTimeout(this._savedTO);
         this._savedTO = setTimeout(() => this.setState({ editorJustSaved: '' }), 3500);
       }
@@ -1581,6 +1719,117 @@ class Component extends DCLogic {
   }
 
   _cancelEditor() { this.setState({ editorOpen: false, editorJustSaved: '' }); }
+
+  // ====== KI-RÄUCHERBERATER ======
+  _openAI() {
+    let avail = false;
+    try { avail = !!(typeof window !== 'undefined' && window.claude && typeof window.claude.complete === 'function'); } catch (e) {}
+    this.setState({ showAI: true, aiAvailable: avail, showTools: false, editorJustSaved: '' });
+  }
+
+  _aiSystem(en) {
+    const METHODS = '"kalt"|"warm"|"heiss"|"bbq"|"dorr"|"grill"|"marinaden"';
+    const KINDS = '"prep"|"cure"|"rest"|"dry"|"smoke"|"cook"|"mature"|"finish"|"marinate"|"spit"|"indirect"|"direct"|"air"';
+    if (en) {
+      return 'You are an experienced smoking, curing and grilling expert for the Weber Smokey Mountain (57 cm), Weber kettle grill, gas grill and food dehydrator. The user describes what they want to make. Answer with ONE concrete, food-safe recipe suggestion.\n\n'
+        + 'Return ONLY valid JSON (no explanation, no markdown, no code fences) with exactly these fields:\n'
+        + '{"name":string,"method":one of ' + METHODS + ',"cat":short category (e.g. "Sausage","Fish","Pork"),"diff":1|2|3 (1=easy,3=pro),"time":total duration,"pit":cooking/smoking temperature,"core":core temperature if relevant else "","wood":recommended wood,"yield":approx amount,"blurb":one-sentence description,"ingredients":[{"a":amount,"i":ingredient}],"phases":[{"label":name,"kind":one of ' + KINDS + ',"dur":duration,"temp":temperature,"text":description,"bullets":[short points]}],"tips":[useful notes],"safety":[MANDATORY: at least 2 concrete food-safety notes fitting the dish]}\n\n'
+        + 'Phase "kind" must match what actually happens in that step: use "smoke" ONLY for steps where smoke is applied; for braising/roasting/simmering or any moist or dry heat cooking without smoke use "cook", for indirect-heat grilling use "indirect", for direct grilling "direct". Never label a non-smoking cooking step as "smoke".\n'
+        + 'For safety, always cover the risks that actually apply: exact curing-salt (nitrite) dosing and botulism risk for raw/cold-smoked sausage and ham; avoid the danger zone (about 4-60 C / 40-140 F) for perishable foods; kitchen hygiene; safe core temperature for poultry and pork. All temperatures in C. All text in English. If the request is unclear or risky, pick the safest sensible variant and flag it in "safety".';
+    }
+    return 'Du bist ein erfahrener Räucher-, Pökel- und Grill-Experte für den Weber Smokey Mountain (57 cm), Weber Kugelgrill, Gasgrill und Dörrautomat. Der Nutzer beschreibt, was er zubereiten möchte. Antworte mit EINEM konkreten, lebensmittelsicheren Rezeptvorschlag.\n\n'
+      + 'Gib AUSSCHLIESSLICH gültiges JSON zurück (keine Erklärung, kein Markdown, keine Code-Fences), exakt mit diesen Feldern:\n'
+      + '{"name":string,"method":eine von ' + METHODS + ',"cat":kurze Kategorie (z.B. "Wurst","Fisch","Schwein"),"diff":1|2|3 (1=einfach,3=Profi),"time":Gesamtdauer,"pit":Gar-/Räuchertemperatur,"core":Kerntemperatur falls relevant sonst "","wood":empfohlenes Holz,"yield":ungefähre Menge,"blurb":ein Satz Beschreibung,"ingredients":[{"a":Menge,"i":Zutat}],"phases":[{"label":Name,"kind":eine von ' + KINDS + ',"dur":Dauer,"temp":Temperatur,"text":Beschreibung,"bullets":[Stichpunkte]}],"tips":[nützliche Hinweise],"safety":[PFLICHT: mindestens 2 konkrete Lebensmittelsicherheits-Hinweise passend zum Gericht]}\n\n'
+      + 'Die Phasen-"kind" muss zu dem passen, was im Schritt wirklich geschieht: "smoke" NUR für Schritte mit Raucheinsatz; fürs Schmoren/Braten/Köcheln oder jedes Garen mit feuchter oder trockener Hitze ohne Rauch nutze "cook", für indirektes Grillen "indirect", für direktes Grillen "direct". Kennzeichne einen Gar-Schritt ohne Rauch niemals als "smoke".\n'
+      + 'Weise bei "safety" immer auf die tatsächlich zutreffenden Risiken hin: Nitritpökelsalz exakt dosieren und Botulismus-Risiko bei roher/kalt geräucherter Wurst und Schinken; kritischen Temperaturbereich (ca. 4-60 C) bei verderblichen Lebensmitteln meiden; Küchenhygiene; sichere Kerntemperatur bei Geflügel und Schwein. Temperaturen immer in C. Alle Texte auf Deutsch. Wenn die Anfrage unklar oder unsicher ist, wähle die sicherste sinnvolle Variante und weise in "safety" darauf hin.';
+  }
+
+  async _aiSend(override) {
+    const q = (typeof override === 'string' ? override : (this.state.aiInput || '')).trim();
+    if (!q || this.state.aiLoading) return;
+    let avail = false;
+    try { avail = !!(typeof window !== 'undefined' && window.claude && typeof window.claude.complete === 'function'); } catch (e) {}
+    if (!avail) { this.setState({ aiInput: q, aiAvailable: false, aiError: this._dict().L.aiOffline, aiResult: null }); return; }
+    const en = this.state.lang === 'en';
+    this.setState({ aiInput: q, aiLoading: true, aiError: '', aiResult: null });
+    try {
+      const raw = await window.claude.complete({ model: 'claude-sonnet-4-5', max_tokens: 2400, system: this._aiSystem(en), messages: [{ role: 'user', content: q }] });
+      const obj = this._aiParse(raw);
+      if (!obj || !obj.name) throw new Error('parse');
+      this.setState({ aiLoading: false, aiResult: obj });
+    } catch (e) {
+      this.setState({ aiLoading: false, aiError: this._dict().L.aiFail });
+    }
+  }
+
+  _aiParse(raw) {
+    if (!raw) return null;
+    let s = String(raw).trim().replace(/^```[a-zA-Z]*\s*/, '').replace(/```\s*$/, '');
+    const a = s.indexOf('{'); const b = s.lastIndexOf('}');
+    if (a < 0 || b < 0 || b <= a) return null;
+    try { return JSON.parse(s.slice(a, b + 1)); } catch (e) { return null; }
+  }
+
+  _aiToDraft(o) {
+    const VM = ['kalt','warm','heiss','bbq','dorr','grill','marinaden'];
+    const VK = ['prep','cure','rest','dry','smoke','cook','mature','finish','marinate','spit','indirect','direct','air'];
+    const method = VM.indexOf(o.method) >= 0 ? o.method : 'heiss';
+    const diff = [1,2,3].indexOf(o.diff) >= 0 ? o.diff : 1;
+    const en = this.state.lang === 'en';
+    const safety = (o.safety || []).filter(Boolean);
+    const tips = (o.tips || []).filter(Boolean);
+    const tipsLines = [...tips];
+    if (safety.length) { tipsLines.push(''); tipsLines.push(en ? 'SAFETY:' : 'SICHERHEIT:'); safety.forEach(x => tipsLines.push('- ' + x)); }
+    return {
+      editId: null, isOriginal: false, method,
+      name: o.name || '', cat: o.cat || '', diff, time: o.time || '', pit: o.pit || '', core: o.core || '', wood: o.wood || '', yield: o.yield || '', blurb: o.blurb || '',
+      ingredients: (o.ingredients || []).map(x => ({ a: (x.a == null ? '' : String(x.a)), i: (x.i == null ? '' : String(x.i)) })),
+      phases: (o.phases || []).map(p => ({ label: p.label || '', kind: VK.indexOf(p.kind) >= 0 ? p.kind : 'prep', dur: p.dur || '', temp: p.temp || '', text: p.text || '', bulletsText: (p.bullets || []).filter(Boolean).join('\n') })),
+      tipsText: tipsLines.join('\n'), image: null,
+    };
+  }
+
+  _aiAdopt() {
+    const air = this.state.aiResult;
+    if (!air) return;
+    const draft = this._aiToDraft(air);
+    if (!draft.ingredients.length) draft.ingredients = [{ a: '', i: '' }];
+    if (!draft.phases.length) draft.phases = [{ label: '', kind: 'prep', dur: '', temp: '', text: '', bulletsText: '' }];
+    this.setState({ showAI: false, editorOpen: true, editorStep: 'form', editorMode: 'new', editorDraft: draft, selectedId: null, editorJustSaved: '', showConv: false, showNPS: false, showDorr: false, showShoppingList: false });
+  }
+
+  _aiView() {
+    const air = this.state.aiResult;
+    if (!air) return null;
+    const D = this._dict(); const L = D.L;
+    const M_LABELS = D.M_LABELS;
+    const M_COLORS = { kalt:'#5b6b78', warm:'#b5872f', heiss:'#9a3b1c', bbq:'#7a4a22', basis:'#5a6b4a', dorr:'#c47a15', grill:'#8a6a3a', marinaden:'#6f8c3a' };
+    const PH_C = { prep:'#7a6f60', cure:'#9a3b1c', rest:'#8a5a2a', dry:'#5b6b78', smoke:'#6b4a22', cook:'#b5491c', mature:'#5a6b4a', finish:'#9a6b2f', warm:'#b5872f', marinate:'#7a5a30', spit:'#8a4a20', indirect:'#6b5a42', direct:'#b5491c', air:'#5b6b78' };
+    const badge = (bg) => ({ fontFamily: "'Spectral',serif", fontSize: '11px', fontWeight: 600, letterSpacing: '0.04em', color: '#fff', background: bg, borderRadius: '3px', padding: '3px 9px', whiteSpace: 'nowrap' });
+    return {
+      name: air.name || '', blurb: air.blurb || '',
+      methodBadgeStyle: badge(M_COLORS[air.method] || '#7a6f60'),
+      methodLabel: M_LABELS[air.method] || air.method || '',
+      diffLabel: D.DIFF[air.diff] || '', hasDiff: !!D.DIFF[air.diff],
+      facts: [
+        air.time && { k: L.aiFactTime, v: air.time },
+        air.pit && { k: L.aiFactPit, v: air.pit },
+        air.core && { k: L.aiFactCore, v: air.core },
+        air.wood && { k: L.aiFactWood, v: air.wood },
+        air.yield && { k: L.aiFactYield, v: air.yield },
+      ].filter(Boolean),
+      ingredients: (air.ingredients || []).map(x => ({ a: (x.a == null ? '' : String(x.a)), i: (x.i == null ? '' : String(x.i)) })),
+      hasIngredients: (air.ingredients || []).length > 0,
+      phases: (air.phases || []).map(p => ({
+        label: p.label || '', kindLabel: D.PH_L[p.kind] || p.kind || '', kindBadgeStyle: badge(PH_C[p.kind] || '#7a6f60'),
+        dur: p.dur || '', temp: p.temp || '', hasMeta: !!(p.dur || p.temp), metaSep: (p.dur && p.temp) ? '  ·  ' : '',
+        text: p.text || '', bullets: (p.bullets || []).filter(Boolean),
+      })),
+      hasPhases: (air.phases || []).length > 0,
+      tips: (air.tips || []).filter(Boolean), hasTips: (air.tips || []).filter(Boolean).length > 0,
+      safety: (air.safety || []).filter(Boolean), hasSafety: (air.safety || []).filter(Boolean).length > 0,
+    };
+  }
 
   _openLightbox(src) { if (src) this.setState({ lightboxImage: src }); }
   _closeLightbox() { this.setState({ lightboxImage: null }); }
@@ -1779,7 +2028,29 @@ class Component extends DCLogic {
         save: p('⤓ Sichern','⤓ Backup'), saveTitle: p('Eigene Rezepte, Bilder & Favoriten in eine Datei sichern','Back up your recipes, images & favorites to a file'),
         load: p('⤒ Laden','⤒ Restore'), loadTitle: p('Backup-Datei laden','Load a backup file'),
         backupHint: p('Eigene Bilder regelmäßig mit „⤓ Sichern" als Datei sichern','Back up your images regularly via "⤓ Backup"'),
+        saveToastMsg: p('Nur auf diesem Gerät gespeichert. Zum Übertragen auf andere Geräte: als Datei sichern.','Saved on this device only. To move it to other devices, back up to a file.'),
+        saveToastBtn: p('⤓ Jetzt sichern','⤓ Back up now'),
+        saveToastDismiss: p('Später','Later'),
         langBtn: p('EN','DE'), langTitle: p('Switch to English','Auf Deutsch umschalten'),
+        aiBtn: p('Räucher-KI','Smoke AI'),
+        aiEyebrow: p('KI-Assistent · Beta','AI assistant · beta'),
+        aiTitle: p('Räucher-Berater','Smoking advisor'),
+        aiPrompt: p('Beschreibe, was du zubereiten möchtest — die KI schlägt Methode, Temperatur, Dauer und Holz vor.','Describe what you want to make — the AI suggests method, temperature, time and wood.'),
+        aiPlaceholder: p('z. B. „Ich möchte Salami kalträuchern"','e.g. "I want to cold-smoke salami"'),
+        aiSend: p('Vorschlag holen','Get a suggestion'),
+        aiThinking: p('Denkt nach …','Thinking …'),
+        aiReset: p('Neue Frage','New question'),
+        aiDisclaimer: p('Die KI kann sich irren. Prüfe jeden Vorschlag selbst — besonders Pökelsalz-Mengen sowie Kern- und Räuchertemperaturen. Räuchern und Pökeln sind lebensmittelsicherheitskritisch.','The AI can be wrong. Verify every suggestion yourself — especially curing-salt amounts and core/smoking temperatures. Smoking and curing are food-safety critical.'),
+        aiOffline: p('Der KI-Berater läuft nur in der Vorschau-/Testumgebung. Auf der öffentlichen Seite ist er noch nicht verfügbar.','The AI advisor only runs in the preview/test environment. It is not yet available on the public site.'),
+        aiFail: p('Da ist etwas schiefgelaufen. Bitte formuliere die Anfrage etwas anders und versuche es erneut.','Something went wrong. Please rephrase your request and try again.'),
+        aiIngredients: p('Zutaten','Ingredients'),
+        aiSteps: p('Ablauf','Steps'),
+        aiTips: p('Tipps','Tips'),
+        aiSafety: p('Sicherheit — bitte lesen','Safety — please read'),
+        aiAdopt: p('In App übernehmen','Add to app'),
+        aiAdoptHint: p('Öffnet den Rezept-Editor mit vorausgefüllten Feldern — prüfe und passe alles an, bevor du speicherst.','Opens the recipe editor with fields pre-filled — review and adjust everything before saving.'),
+        aiFactTime: p('Zeit','Time'), aiFactPit: p('Temperatur','Temperature'), aiFactCore: p('Kerntemp.','Core temp'), aiFactWood: p('Holz','Wood'), aiFactYield: p('Menge','Yield'),
+        aiEx: en ? ['Cold-smoke salami','Hot-smoke trout','Pulled pork low & slow'] : ['Salami kalträuchern','Forelle heißräuchern','Pulled Pork Low & Slow'],
         backupBar: p('Deine Rezepte, Bilder, Notizen & Chargen liegen nur in diesem Browser — exportiere sie, bevor du Browser oder Gerät wechselst.','Your recipes, images, notes & batches live only in this browser — export them before switching browser or device.'),
         feedbackHead: p('Mithelfen','Help out'), feedback: p('📝 Feedback geben','📝 Give feedback'),
         imprint: p('Impressum','Imprint'), privacy: p('Datenschutz','Privacy'),
@@ -2233,6 +2504,21 @@ class Component extends DCLogic {
       toolsButtonStyle: tb(this.state.showTools || showNPS || showDorr || this.state.showConv),
       ...this._convVals(tb),
       L, lang, onToggleLang: () => this._toggleLang(), feedbackHref, year, appVersion,
+      langIsDe: lang === 'de', langIsEn: lang === 'en',
+      showAI: this.state.showAI, aiInput: this.state.aiInput,
+      onAiInput: e => this.setState({ aiInput: e.target.value }),
+      aiLoading: this.state.aiLoading,
+      aiHasError: !!this.state.aiError, aiError: this.state.aiError,
+      aiHasResult: !!this.state.aiResult, aiResult: this._aiView(),
+      aiUnavailable: this.state.showAI && !this.state.aiAvailable && !this.state.aiError,
+      aiExamples: (L.aiEx || []).map(x => ({ label: x, onClick: () => this._aiSend(x) })),
+      aiSendLabel: this.state.aiLoading ? L.aiThinking : L.aiSend,
+      aiSendStyle: (() => { const off = this.state.aiLoading || !(this.state.aiInput || '').trim(); return { fontFamily: "'Spectral',serif", fontSize: '14px', fontWeight: 600, cursor: off ? 'default' : 'pointer', borderRadius: '4px', padding: '11px 20px', border: '1.5px solid #9a6b2f', background: off ? '#c9b48a' : '#9a6b2f', color: '#f3ead7', opacity: off ? 0.75 : 1 }; })(),
+      onOpenAI: () => this._openAI(),
+      onCloseAI: () => this.setState({ showAI: false }),
+      onAiSend: () => this._aiSend(),
+      onAiReset: () => this.setState({ aiInput: '', aiResult: null, aiError: '' }),
+      onAiAdopt: () => this._aiAdopt(),
       showChamber: this.state.showChamber,
       chamberHtml: (typeof window !== 'undefined' && window.__CHAMBER_HTML) || '',
       onOpenChamber: () => this.setState({ showChamber: true, showTools: false }),
@@ -2359,6 +2645,9 @@ class Component extends DCLogic {
       // ---- Editor ----
       onNewRecipe: () => this._openNewEditor(),
       onExportData: () => this._exportData(),
+      showSaveBackupHint: this.state.saveBackupHint,
+      onBackupNow: () => { this.setState({ saveBackupHint: false }); this._exportData(); },
+      onDismissBackupHint: () => this.setState({ saveBackupHint: false }),
       hasUserData: ((this.state.userRecipes && this.state.userRecipes.length > 0) || (this.state.notes && Object.keys(this.state.notes).length > 0) || (this.state.batches && Object.keys(this.state.batches).length > 0) || (this.state.images && Object.keys(this.state.images).length > 0)),
       onImportFile: (e) => { const f = e.target.files && e.target.files[0]; if (f) this._importData(f); e.target.value = ''; },
       editorOpen,
