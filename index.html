@@ -1998,6 +1998,7 @@ class Component extends DCLogic {
       vac:{i:'📦',de:'Vakuumierer',en:'Vacuum sealer'},
       coals:{i:'♨️',de:'Kohle / Feuerstelle',en:'Coals / fire'},
       oven:{i:'🔆',de:'Backofen',en:'Oven'},
+      smokegen:{i:'💨',de:'Kaltrauchgenerator (Sparbrand)',en:'Cold-smoke generator (maze/tube)'},
     };
     const noGo = lang === 'en' ? 'Not recommended' : 'Nicht empfohlen';
     return sel.equipment.map(e => {
@@ -2019,7 +2020,7 @@ class Component extends DCLogic {
     const allRecipes = this._effective();
 
     const feedbackHref = 'https://forms.gle/J2ksxrL1pyJTu1NB8';
-    const appVersion = 'v0.9.0';
+    const appVersion = 'v0.11.0';
     const year = new Date().getFullYear();
 
     const M_KEYS = ['alle','kalt','warm','heiss','bbq','basis','dorr','grill','marinaden','favs'];
