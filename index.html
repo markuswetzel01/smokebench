@@ -34,9 +34,9 @@
   @keyframes timerPulse { 0%,100% { opacity:1; } 50% { opacity:.6; } }
   ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: #ede0c5; } ::-webkit-scrollbar-thumb { background: #c9b48a; border-radius: 3px; }
 </style>
-<script src="./recipes.js?v=0124"></script>
-<script src="./recipes-en.js?v=0124"></script>
-<script src="./images-data.js?v=0124"></script>
+<script src="./recipes.js?v=0125"></script>
+<script src="./recipes-en.js?v=0125"></script>
+<script src="./images-data.js?v=0125"></script>
 <script src="./wsm-restore.js"></script>
 <script src="./chamber-embed.js?v=2"></script>
 </helmet>
@@ -1547,9 +1547,8 @@ class Component extends DCLogic {
       : '';
     const coreRow = recipe.core ? '<div class="mc"><div class="ml">' + esc(T.L.coreTemp) + '</div><div class="mv" style="color:#9a3b1c">' + esc(recipe.core) + '</div></div>' : '';
     const noteHtml = note ? '<div class="nb"><div class="nl">' + esc(T.p('Cook-Log','Cook Log')) + '</div><div class="nt">' + esc(note) + '</div></div>' : '';
-    const autorun = '<' + 'script>window.onload=()=>{try{window.print();}catch(e){}}</' + 'script>';
     const css = '<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:Georgia,serif;color:#3a2a1a;padding:14mm;font-size:10pt;line-height:1.5}h1{font-size:24pt;line-height:1.0;margin-bottom:6px}.blurb{font-style:italic;font-size:11pt;color:#6b5a42;margin-bottom:12px}.badge{display:inline-block;padding:2px 8px;border-radius:2px;font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:8px}.ms{display:flex;border:1px solid #c9b48a;border-radius:3px;overflow:hidden;margin-bottom:14px}.mc{flex:1;padding:7px 11px;border-right:1px solid #c9b48a}.mc:last-child{border:none}.ml{font-size:7pt;letter-spacing:.14em;text-transform:uppercase;color:#9a8a72}.mv{font-size:13pt;margin-top:1px}h2{font-size:14pt;margin:12px 0 7px;padding-bottom:4px;border-bottom:1.5px solid #c9b48a}.ing{display:flex;gap:12px;padding:4px 0;border-bottom:1px dashed #d4c29a}.ia{min-width:88px;font-weight:bold;color:#9a3b1c;font-size:9pt}.ph{display:flex;gap:10px;margin-bottom:11px}.pm{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:4px}.pc{flex:1}.phdr{display:flex;gap:8px;align-items:baseline;margin-bottom:2px}.pn{font-size:13pt}.pk{font-style:italic;font-size:9pt}.pmeta{font-size:9pt;color:#9a8a72;margin-bottom:3px}.pt{font-size:10pt;color:#5a4632;margin-bottom:3px}.bul{font-size:9pt;color:#6b5a42;padding-left:10px;margin-bottom:2px}.tips{background:#ede0c5;border:1px solid #c9b48a;border-radius:3px;padding:9px 13px;margin-top:13px}.tip{font-size:10pt;color:#5a4632;margin-bottom:5px}.nb{margin-top:13px;border:1px solid #c9b48a;border-radius:3px;padding:9px 13px}.nl{font-size:7pt;letter-spacing:.1em;text-transform:uppercase;color:#9a8a72;margin-bottom:4px}.nt{font-style:italic;font-size:10pt;color:#5a4632;white-space:pre-wrap}.footer{margin-top:13px;padding-top:7px;border-top:1px solid #c9b48a;font-size:8pt;color:#9a8a72;text-align:center;font-style:italic}.ph,.tips,.nb,.ms,.ing{break-inside:avoid}h2{break-after:avoid}@page{size:A4;margin:12mm}@media print{body{padding:0}}</style>';
-    const html = '<!DOCTYPE html><html lang="' + (T.en ? 'en' : 'de') + '"><head><meta charset="UTF-8"><title>' + esc(recipe.name) + '</title>' + css + autorun + '</head><body>'
+    const html = '<!DOCTYPE html><html lang="' + (T.en ? 'en' : 'de') + '"><head><meta charset="UTF-8"><title>' + esc(recipe.name) + '</title>' + css + '</head><body>'
       + '<div class="badge" style="background:' + (MC[recipe.method] || '#7a6f60') + '">' + esc(ML[recipe.method] || recipe.method) + '</div>'
       + '<h1>' + esc(recipe.name) + '</h1><p class="blurb">' + esc(recipe.blurb) + '</p>'
       + (recipe.image ? '<img src="' + recipe.image + '" style="width:100%;max-height:300px;object-fit:cover;border-radius:4px;margin-bottom:12px;" />' : '')
@@ -1559,11 +1558,31 @@ class Component extends DCLogic {
       + '<div class="mc"><div class="ml">' + esc(T.woodLabel(recipe.method)) + '</div><div class="mv">' + esc(recipe.wood) + '</div></div></div>'
       + ingrHtml + '<h2>' + esc(T.L.method) + '</h2>' + phasesHtml + tipsHtml + noteHtml
       + '<div class="footer">Smokebench · Weber Smokey Mountain 57 cm · Graef DA506</div></body></html>';
-    const win = window.open('', '_blank');
-    if (win) { win.document.write(html); win.document.close(); }
+    // Druck über ein verstecktes iframe – funktioniert auf iPad/iOS-Safari, wo window.open-Popups blockiert werden
+    const old = document.getElementById('__print_frame');
+    if (old) { try { old.remove(); } catch (e) {} }
+    const frame = document.createElement('iframe');
+    frame.id = '__print_frame';
+    frame.setAttribute('aria-hidden', 'true');
+    frame.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0;opacity:0;';
+    document.body.appendChild(frame);
+    let printed = false;
+    const doPrint = () => {
+      if (printed) return; printed = true;
+      try { frame.contentWindow.focus(); frame.contentWindow.print(); } catch (e) {}
+      setTimeout(() => { try { frame.remove(); } catch (e) {} }, 3000);
+    };
+    frame.onload = () => setTimeout(doPrint, 400);
+    try {
+      const fdoc = frame.contentWindow.document;
+      fdoc.open(); fdoc.write(html); fdoc.close();
+    } catch (e) {
+      const win = window.open('', '_blank');
+      if (win) { win.document.write(html + '<' + 'script>window.onload=function(){try{window.print()}catch(e){}}</' + 'script>'); win.document.close(); }
+      return;
+    }
+    setTimeout(doPrint, 1000);
   }
-
-  // ====== EIGENE REZEPTE / EDITOR ======
   _effective() {
     const { recipes, userRecipes, overrides, images, lang } = this.state;
     const baked = (typeof window !== 'undefined' && window.WSM_IMAGES) ? window.WSM_IMAGES : {};
@@ -2344,7 +2363,7 @@ class Component extends DCLogic {
     const allRecipes = this._effective();
 
     const feedbackHref = 'https://forms.gle/J2ksxrL1pyJTu1NB8';
-    const appVersion = 'v0.13.2';
+    const appVersion = 'v0.13.3';
     const year = new Date().getFullYear();
 
     const M_KEYS = ['alle','kalt','warm','heiss','bbq','schmoren','dorr','grill','marinaden','basis','favs'];
