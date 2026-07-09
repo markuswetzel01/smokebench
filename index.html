@@ -431,6 +431,23 @@
             </div>
           </div>
         </sc-if>
+        <sc-if value="{{ selHasTwoWays }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1.5px solid #8a4438;border-radius:6px;padding:16px 20px 18px;margin:0 0 24px;background:#f7ece2;">
+            <div style="font-family:'Spectral',serif;font-weight:600;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#8a4438;margin-bottom:14px;">{{ L.twoWaysLabel }}</div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;">
+              <div style="background:#fff;border:1px solid #e0cdb8;border-left:4px solid #9a3b1c;border-radius:5px;padding:13px 15px;">
+                <div style="font-family:'Spectral',serif;font-weight:600;font-size:15px;color:#3a2a1a;margin-bottom:4px;">{{ L.braaiWay }}</div>
+                <div style="font-family:'Spectral',serif;font-size:12px;color:#9a8a72;margin-bottom:9px;">{{ L.braaiWaySub }}</div>
+                <div style="font-family:'Spectral',serif;font-size:14px;line-height:1.55;color:#3a2a1a;">{{ selBraai }}</div>
+              </div>
+              <div style="background:#fff;border:1px solid #e0cdb8;border-left:4px solid #6b5a42;border-radius:5px;padding:13px 15px;">
+                <div style="font-family:'Spectral',serif;font-weight:600;font-size:15px;color:#3a2a1a;margin-bottom:4px;">{{ L.dutchWay }}</div>
+                <div style="font-family:'Spectral',serif;font-size:12px;color:#9a8a72;margin-bottom:9px;">{{ L.dutchWaySub }}</div>
+                <div style="font-family:'Spectral',serif;font-size:14px;line-height:1.55;color:#3a2a1a;">{{ selDutch }}</div>
+              </div>
+            </div>
+          </div>
+        </sc-if>
         <sc-if value="{{ selHasEquip }}" hint-placeholder-val="{{ false }}">
           <div style="border:1.5px solid #c9b48a;border-radius:4px;padding:16px 20px;margin:0 0 24px;background:#f6efe0;">
             <div style="font-family:'Spectral',serif;font-weight:600;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#9a8a72;margin-bottom:12px;">{{ L.equipLabel }}</div>
@@ -1831,7 +1848,7 @@ class Component extends DCLogic {
     if (!air) return null;
     const D = this._dict(); const L = D.L;
     const M_LABELS = D.M_LABELS;
-    const M_COLORS = { kalt:'#5b6b78', warm:'#b5872f', heiss:'#9a3b1c', bbq:'#7a4a22', basis:'#5a6b4a', dorr:'#c47a15', grill:'#8a6a3a', marinaden:'#6f8c3a' };
+    const M_COLORS = { kalt:'#5b6b78', warm:'#b5872f', heiss:'#9a3b1c', bbq:'#7a4a22', schmoren:'#8a4438', basis:'#5a6b4a', dorr:'#c47a15', grill:'#8a6a3a', marinaden:'#6f8c3a' };
     const PH_C = { prep:'#7a6f60', cure:'#9a3b1c', rest:'#8a5a2a', dry:'#5b6b78', smoke:'#6b4a22', cook:'#b5491c', mature:'#5a6b4a', finish:'#9a6b2f', warm:'#b5872f', marinate:'#7a5a30', spit:'#8a4a20', indirect:'#6b5a42', direct:'#b5491c', air:'#5b6b78' };
     const badge = (bg) => ({ fontFamily: "'Spectral',serif", fontSize: '11px', fontWeight: 600, letterSpacing: '0.04em', color: '#fff', background: bg, borderRadius: '3px', padding: '3px 9px', whiteSpace: 'nowrap' });
     return {
@@ -2005,7 +2022,7 @@ class Component extends DCLogic {
     const p = (de, eng) => en ? eng : de;
     return {
       en, p,
-      M_LABELS: { alle:p('Alle','All'), kalt:p('Kalträuchern','Cold Smoking'), warm:p('Warmräuchern','Warm Smoking'), heiss:p('Heißräuchern','Hot Smoking'), bbq:p('Low & Slow','Low & Slow'), basis:p('Grundlagen','Basics'), dorr:p('Dörren','Dehydrating'), grill:p('Grill & Spieß','Grill & Spit'), marinaden:p('Marinaden','Marinades'), favs:p('Favoriten','Favorites') },
+      M_LABELS: { alle:p('Alle','All'), kalt:p('Kalträuchern','Cold Smoking'), warm:p('Warmräuchern','Warm Smoking'), heiss:p('Heißräuchern','Hot Smoking'), bbq:p('Low & Slow','Low & Slow'), schmoren:p('Schmoren','Braising'), basis:p('Grundlagen','Basics'), dorr:p('Dörren','Dehydrating'), grill:p('Grill & Spieß','Grill & Spit'), marinaden:p('Marinaden','Marinades'), favs:p('Favoriten','Favorites') },
       DIFF: { 1:p('Einfach','Easy'), 2:p('Mittel','Medium'), 3:p('Profi','Pro') },
       PH_L: { prep:p('Vorbereitung','Prep'), cure:p('Pökeln','Curing'), rest:p('Durchbrennen','Equalizing'), dry:p('Abhängen','Drying'), smoke:p('Räuchern','Smoking'), cook:p('Garen','Cooking'), mature:p('Reifen','Maturing'), finish:p('Finish','Finish'), warm:p('Anwärmen','Warming'), marinate:p('Marinieren','Marinating'), spit:p('Am Spieß','On the Spit'), indirect:p('Indirekt','Indirect'), direct:p('Direkt','Direct'), air:p('Lufttrocknen','Air-drying') },
       KIND_OPTS: [
@@ -2046,6 +2063,11 @@ class Component extends DCLogic {
         learnLabel: p('Das lernst du bei diesem Rezept','What you learn with this recipe'),
         authLabel: p('Authentizität','Authenticity'),
         equipLabel: p('Empfohlenes Setup','Recommended setup'),
+        twoWaysLabel: p('Zwei Wege – ein Rezept','Two ways — one recipe'),
+        braaiWay: p('🔥 Original Braai','🔥 Original braai'),
+        braaiWaySub: p('Potjie über Holzkohle oder Holzfeuer','Potjie over charcoal or wood fire'),
+        dutchWay: p('🫕 Dutch Oven','🫕 Dutch oven'),
+        dutchWaySub: p('Im WSM, Kugelgrill, Gasgrill oder auf dem Herd','In the WSM, kettle, gas grill or on the stove'),
         cutWeight: p('Typ. Fleischgewicht','Typical cut weight'),        deviceNote: p('Beispiel-Setup – die Rezepte gelingen mit jedem Smoker, Grill & Dörrgerät','Example setup — these recipes work with any smoker, grill & dehydrator'),
         newRecipe: p('✚ Eigenes Rezept','✚ New Recipe'),
         nps: p('⚖ NPS-Rechner','⚖ Cure-Salt Calc'),
@@ -2325,9 +2347,9 @@ class Component extends DCLogic {
     const appVersion = 'v0.11.0';
     const year = new Date().getFullYear();
 
-    const M_KEYS = ['alle','kalt','warm','heiss','bbq','dorr','grill','marinaden','basis','favs'];
+    const M_KEYS = ['alle','kalt','warm','heiss','bbq','schmoren','dorr','grill','marinaden','basis','favs'];
     const M_LABELS = D.M_LABELS;
-    const M_COLORS = { kalt:'#5b6b78', warm:'#b5872f', heiss:'#9a3b1c', bbq:'#7a4a22', basis:'#5a6b4a', dorr:'#c47a15', grill:'#8a6a3a', marinaden:'#6f8c3a' };
+    const M_COLORS = { kalt:'#5b6b78', warm:'#b5872f', heiss:'#9a3b1c', bbq:'#7a4a22', schmoren:'#8a4438', basis:'#5a6b4a', dorr:'#c47a15', grill:'#8a6a3a', marinaden:'#6f8c3a' };
     const DIFF = D.DIFF;
     const PH_C = { prep:'#7a6f60', cure:'#9a3b1c', rest:'#8a5a2a', dry:'#5b6b78', smoke:'#6b4a22', cook:'#b5491c', mature:'#5a6b4a', finish:'#9a6b2f', warm:'#b5872f', marinate:'#7a5a30', spit:'#8a4a20', indirect:'#6b5a42', direct:'#b5491c', air:'#5b6b78' };
     const PH_L = D.PH_L;
@@ -2408,7 +2430,7 @@ class Component extends DCLogic {
     } : null;
 
     // ---- Grundlagen-Guides als zweisprachige HTML-Infografik (statt eingebackenem Bild) ----
-    const GUIDE_IDS = ['g-abhaengen','g-wasserschale','g-minion','g-holz','g-kaltrauch','g-sicherheit','g-jerkygun'];
+    const GUIDE_IDS = ['g-abhaengen','g-wasserschale','g-minion','g-holz','g-kaltrauch','g-sicherheit','g-jerkygun','g-potjie','g-dutchoven'];
     const selIsGuide_ = !!(sel && GUIDE_IDS.indexOf(sel.id) >= 0);
     const isEn_ = this.state.lang === 'en';
     const selGuide_ = selIsGuide_ ? {
@@ -2634,6 +2656,9 @@ class Component extends DCLogic {
       selAuthNote:       (sel && sel.authenticityNote) ? sel.authenticityNote : '',
       selHasEquip:       !!(sel && sel.equipment && sel.equipment.length),
       selEquipment:      this._buildEquipment(sel),
+      selHasTwoWays:     !!(sel && (sel.braaiSetup || sel.dutchSetup)),
+      selBraai:          (sel && sel.braaiSetup) ? sel.braaiSetup : '',
+      selDutch:          (sel && sel.dutchSetup) ? sel.dutchSetup : '',
       selMethodColor:    sel ? sel.methodColor : '#7a6f60',
       selMethod:         sel ? sel.methodLabel : '',
       selPit:            sel ? sel.pit : '', selCore: sel ? (sel.core || '') : '',
