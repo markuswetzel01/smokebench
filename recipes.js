@@ -1050,6 +1050,19 @@ const RECIPES = [
     tips: ["Sand statt Wasser puffert noch länger (mit Folie abgedeckt).", "Deckelthermometer zeigt oft höher als die Rosthöhe – kalibrieren lohnt."],
   }),
   r({
+    id: "g-jerkygun", name: "Jerky-Pistole nutzen", method: "basis", cat: "Grundlagen", diff: 1,
+    time: "Wissen", pit: "—", core: "", wood: "—", yield: "",
+    blurb: "Aufbau, Düsen und Reinigung der Jerky-Pistole – für gleichmäßiges Hackfleisch-Jerky.",
+    ingredients: [],
+    phases: [
+      { label: "Aufbau & Düsen", kind: "prep", dur: "—", temp: "—", text: "Die Edelstahl-Pistole wird von hinten mit der Fleischmasse befüllt; über den Hebel wird sie durch die aufgesteckte Düse gepresst. Die Düsen bestimmen die Form.", bullets: ["Flachdüse: breite Jerky-Streifen", "Runddüsen: dünne Sticks / Snack-Würstchen", "Doppeldüse: zwei Stränge gleichzeitig", "Große Röhre: dicke Sticks"] },
+      { label: "Befüllen", kind: "prep", dur: "—", temp: "kalt", text: "Gut durchgeknetete, gekühlte Masse blasenfrei in den Zylinder füllen. Kalte Masse lässt sich sauberer pressen.", bullets: ["Masse fest eindrücken – keine Lufteinschlüsse", "Kolben ansetzen und die Düse aufschrauben", "Direkt aufs Dörrgitter oder auf Backpapier pressen"] },
+      { label: "Pressen", kind: "prep", dur: "—", temp: "—", text: "Mit gleichmäßigem Druck am Hebel Streifen oder Sticks in einheitlicher Dicke formen. Gleichmäßig = trocknet gleichmäßig.", bullets: ["Ca. 5 mm dick anstreben", "In einem Zug ziehen für saubere Streifen"] },
+      { label: "Reinigung", kind: "finish", dur: "—", temp: "—", text: "Sofort nach Gebrauch zerlegen und reinigen. Das Set enthält große und feine Bürsten für Zylinder und Düsen.", bullets: ["Zylinder mit der großen Bürste, Düsen mit den feinen Bürsten", "Warmes Wasser + Spülmittel, gründlich trocknen", "Hygiene bei rohem Hack besonders wichtig"] },
+    ],
+    tips: ["Masse vor dem Füllen mind. 30 Min kühlen – presst sich deutlich sauberer.", "Passt zum Rezept „Hackfleisch-Jerky (mit Jerky-Pistole)“.", "Edelstahldüsen sind spülmaschinenfest – die Kunststoffteile lieber von Hand reinigen."],
+  }),
+  r({
     id: "g-holz", name: "Räucherholz-Guide", method: "basis", cat: "Grundlagen", diff: 1,
     time: "Wissen", pit: "—", core: "", wood: "alle", yield: "",
     blurb: "Welches Holz passt zu welchem Gericht – und welches du meiden solltest.",
@@ -1786,7 +1799,7 @@ const RECIPES = [
     id: "beef-jerky", name: "Beef Jerky (klassisch)", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
     time: "1 Tag + 4–8 h", pit: "70 °C", core: "Lederig, kein feuchter Kern", wood: "Graef DA506", yield: "ca. 400 g/kg",
     blurb: "Würzige Rindfleisch-Streifen, bei maximaler Dörrtemperatur sicher getrocknet.",
-    equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
+    equipment: [["dehydrator",5],["jerkygun",3,{de:"für die Hack-Variante statt geschnittener Streifen",en:"for the ground-meat version instead of sliced strips"}],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     origin: "🇺🇸 Beef Jerky hat seine modernen Wurzeln bei den Ureinwohnern Amerikas und den Cowboys – haltbares, mariniertes Trockenfleisch.",
     authenticity: 9,
     authenticityNote: "Folgt der klassischen US-Jerky-Herstellung, bei 70 °C für Sicherheit.",
@@ -1864,6 +1877,37 @@ const RECIPES = [
     tips: ["Bei Schwarzwild Trichinenuntersuchung durch den Jagdausübungsberechtigten Pflicht.", "Rehfleisch ist zarter als Schwein – Dörrzeit eher kürzer."],
     proTip: "Wild ist sehr mager und ideal für Jerky – Fett und Sehnen restlos entfernen, denn Fett wird beim Lagern ranzig.",
     learn: ["Fett/Sehnen entfernen","Marinieren","Bei 70 °C dörren","Lagern"],
+  }),
+
+  r({
+    id: "hackfleisch-jerky", name: "Hackfleisch-Jerky (mit Jerky-Pistole)", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
+    time: "12–24 h + 4–6 h", pit: "70 °C", core: "Lederig, kein feuchter Kern", wood: "Graef DA506", yield: "ca. 350 g/kg",
+    blurb: "Aus gewürztem Hack mit der Jerky-Pistole geformt – die flexibelste Jerky-Variante: jedes Fleisch, jede Würze, gleichmäßig zart.",
+    equipment: [["jerkygun",5,{de:"formt gleichmäßige Streifen aus Hack",en:"extrudes even strips from ground meat"}],["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}],["vac",4,{de:"zum Lagern",en:"for storage"}]],
+    origin: "🇺🇸 Ground-Meat-Jerky ist die moderne US-Variante: Statt ganze Streifen zu schneiden, wird gewürztes Hack mit einer Jerky-Pistole zu gleichmäßigen Sticks oder Flachstreifen gepresst. Zarter im Biss und beliebig würzbar.",
+    authenticity: 8,
+    authenticityNote: "Moderne Hack-Methode – kein historisches Traditionsrezept, sondern die verbreitete Jerky-Gun-Technik. Bei 70 °C für sichere Herstellung.",
+    ingredients: [
+      { a: "1 kg", i: "mageres Hack (Rind, Schwein, Lamm, Geflügel oder Fisch – auch gemischt)" },
+      { a: "1 Beutel", i: "Jerky-Cure/Pökelmischung ODER 2,5 g/kg NPS (empfohlen bei langer Trocknung)" },
+      { a: "60 ml", i: "Sojasoße oder Worcestershire" },
+      { a: "je 1–2 TL", i: "Knoblauch, Pfeffer, Paprika, Zucker, Chili (frei nach Geschmack)" },
+    ],
+    phases: [
+      { label: "Würzen & Kneten", kind: "cure", dur: "12–24 h", temp: "0–4 °C", text: "Hack mit Gewürzen, Pökel-/Cure-Mischung und Flüssigkeit gründlich verkneten, bis die Masse klebrig-bindig ist. Abgedeckt im Kühlschrank durchziehen lassen.", bullets: ["Gut kneten = bessere Bindung, die Streifen fallen nicht auseinander", "Mageres Hack wählen – Fett wird beim Lagern ranzig", "Bei Geflügel/Fisch penibel kühl arbeiten"] },
+      { label: "Formen mit der Jerky-Pistole", kind: "prep", dur: "20–30 min", temp: "kalt", text: "Masse in die Jerky-Pistole füllen und direkt auf die Dörrgitter oder auf Backpapier gleichmäßige Streifen/Sticks pressen.", bullets: ["Gleichmäßig dick pressen (ca. 5 mm) – trocknet einheitlich", "Flachdüse für Streifen, Runddüse für Sticks", "Masse kalt verarbeiten – lässt sich sauberer pressen"] },
+      { label: "Dörren", kind: "dry", dur: "4–6 h", temp: "70 °C (Graef-Maximum)", text: "Bei 70 °C dörren – der einzige sichere Wert für rohes Hack im DA506. Hack hat viel Oberfläche, daher ist die Kerntemperatur besonders wichtig.", bullets: ["70 °C tötet Keime ab (E. coli, Salmonellen) – bei Hack Pflicht, da Keime durch die ganze Masse verteilt sind", "Nach 2 h einmal wenden/abtupfen", "Test: Streifen biegen – bricht faserig, kein feuchter Kern = fertig"] },
+      { label: "Abkühlen & Lagern", kind: "finish", dur: "1 h", temp: "Raumtemperatur", text: "Auf Gitter abkühlen, dann luftdicht verpacken.", bullets: ["Vakuumverpackt im Kühlschrank 2–4 Wochen", "Ohne NPS: nur wenige Tage und gekühlt lagern"] },
+    ],
+    tips: [
+      "Der große Vorteil von Hack: Gewürze verteilen sich in der ganzen Masse – Geschmack wird intensiver und gleichmäßiger als bei geschnittenen Streifen.",
+      "Funktioniert mit jedem Fleisch: Rind, Schwein, Lamm, Geflügel, Fisch – auch als Mischung (z. B. Rind/Schwein für Saftigkeit).",
+      "Immer mageres Hack (unter 10 % Fett) – Fett verkürzt die Haltbarkeit stark.",
+      "Bei langer Lagerung Nitritpökelsalz (NPS) verwenden – schützt zusätzlich gegen Botulismus.",
+      "Sicherheit: rohes Hack (v. a. Geflügel/Fisch) verdirbt schneller als ganze Stücke – kühl arbeiten, Utensilien und Pistole nach Gebrauch gründlich reinigen.",
+    ],
+    proTip: "Hack ist die Universal-Basis fürs Jerky: einmal Grundmasse, beliebig würzen. Entscheidend ist gleichmäßiges Pressen und konsequente 70 °C – dann gelingt jede Fleischsorte sicher und zart.",
+    learn: ["Hack würzen & binden","Mit der Jerky-Pistole formen","Sicher bei 70 °C dörren","Fleischsorten & Würze frei kombinieren"],
   }),
 
   /* ---- SONSTIGES ---- */

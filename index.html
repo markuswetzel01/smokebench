@@ -2300,6 +2300,7 @@ class Component extends DCLogic {
       coals:{i:'♨️',de:'Kohle / Feuerstelle',en:'Coals / fire'},
       oven:{i:'🔆',de:'Backofen',en:'Oven'},
       smokegen:{i:'💨',de:'Kaltrauchgenerator (Sparbrand)',en:'Cold-smoke generator (maze/tube)'},
+      jerkygun:{i:'🔫',de:'Jerky-Pistole (Fleischpresse)',en:'Jerky gun (meat extruder)'},
     };
     const noGo = lang === 'en' ? 'Not recommended' : 'Nicht empfohlen';
     return sel.equipment.map(e => {
@@ -2407,7 +2408,7 @@ class Component extends DCLogic {
     } : null;
 
     // ---- Grundlagen-Guides als zweisprachige HTML-Infografik (statt eingebackenem Bild) ----
-    const GUIDE_IDS = ['g-abhaengen','g-wasserschale','g-minion','g-holz','g-kaltrauch','g-sicherheit'];
+    const GUIDE_IDS = ['g-abhaengen','g-wasserschale','g-minion','g-holz','g-kaltrauch','g-sicherheit','g-jerkygun'];
     const selIsGuide_ = !!(sel && GUIDE_IDS.indexOf(sel.id) >= 0);
     const isEn_ = this.state.lang === 'en';
     const selGuide_ = selIsGuide_ ? {
