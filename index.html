@@ -89,6 +89,9 @@
       <button onClick="{{ onOpenChamber }}" title="{{ L.chamberHint }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #6b8a4a;background:#eef2e3;color:#3d5226;white-space:nowrap;font-weight:600;display:flex;align-items:center;gap:7px;" style-hover="background:#e3ebd2;">
         <span aria-hidden="true" style="font-size:14px;line-height:1;">🏛️</span>{{ L.chamber }}
       </button>
+      <button onClick="{{ onOpenManual }}" title="{{ L.manualTitle }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #6b5a42;background:transparent;color:#c9a87a;white-space:nowrap;font-weight:600;display:flex;align-items:center;gap:7px;" style-hover="background:rgba(201,168,122,0.12);">
+        <span aria-hidden="true" style="font-size:14px;line-height:1;">📖</span>{{ L.manual }}
+      </button>
     </div>
   </div>
 
@@ -1281,6 +1284,135 @@
     </div>
   </sc-if>
 
+  <!-- BEDIENUNGSANLEITUNG / MANUAL -->
+  <sc-if value="{{ showManual }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;z-index:9200;background:#f3ead7;background-image:repeating-linear-gradient(0deg,rgba(140,90,40,0.04) 0 1px,transparent 1px 32px);display:flex;flex-direction:column;">
+      <!-- Kopf -->
+      <div style="flex-shrink:0;background:#2a1a0e;border-bottom:1.5px solid #6b5a42;box-shadow:0 5px 16px -8px rgba(0,0,0,0.5);">
+        <div style="max-width:920px;margin:0 auto;padding:16px 32px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+          <div>
+            <div style="font-family:'Spectral',serif;font-style:italic;font-size:12px;letter-spacing:0.2em;color:#9a7a50;text-transform:uppercase;">{{ L.manualEyebrow }}</div>
+            <div style="font-family:'DM Serif Display',serif;font-size:30px;color:#f3ead7;line-height:1.05;margin-top:4px;">📖 {{ L.manualTitle }}</div>
+            <div style="font-family:'Spectral',serif;font-size:13.5px;color:#c9a87a;margin-top:5px;">{{ L.manualSub }}</div>
+          </div>
+          <button onClick="{{ onCloseManual }}" style="flex-shrink:0;font-family:'Spectral',serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:4px;padding:9px 18px;border:1.5px solid #9a3b1c;background:#9a3b1c;color:#f3ead7;white-space:nowrap;">✕ {{ L.manualClose }}</button>
+        </div>
+        <!-- Suche -->
+        <div style="max-width:920px;margin:0 auto;padding:0 32px 16px;">
+          <div style="position:relative;">
+            <span style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#9a8a72;font-size:15px;pointer-events:none;">🔎</span>
+            <input value="{{ manualQuery }}" onInput="{{ onManualSearch }}" placeholder="{{ L.manualSearch }}" style="width:100%;box-sizing:border-box;font-family:'Spectral',serif;font-size:15px;color:#3a2a1a;background:#faf5e8;border:1.5px solid #6b5a42;border-radius:6px;padding:12px 40px 12px 40px;outline:none;" />
+            <sc-if value="{{ manualHasQuery }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ onManualClearSearch }}" title="{{ L.manualClose }}" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);cursor:pointer;border:0;background:transparent;color:#9a8a72;font-size:18px;line-height:1;padding:4px;">✕</button>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inhalt -->
+      <div style="flex:1;overflow-y:auto;">
+        <div style="max-width:920px;margin:0 auto;padding:22px 32px 80px;">
+
+          <sc-if value="{{ manualNoResults }}" hint-placeholder-val="{{ false }}">
+            <div style="font-family:'Spectral',serif;font-size:16px;color:#8a6f4e;text-align:center;padding:60px 20px;">{{ L.manualNoRes }}</div>
+          </sc-if>
+
+          <sc-for list="{{ manualSections }}" as="sec" hint-placeholder-count="6">
+            <div style="border:1.5px solid #d8c49a;border-radius:8px;background:#faf5e8;margin-bottom:14px;overflow:hidden;">
+              <!-- Abschnitts-Kopf -->
+              <button onClick="{{ sec.onToggle }}" style="width:100%;box-sizing:border-box;text-align:left;cursor:pointer;border:0;background:transparent;padding:16px 20px;display:flex;align-items:center;gap:14px;" style-hover="background:#f0e6cf;">
+                <span style="font-size:22px;line-height:1;flex-shrink:0;">{{ sec.icon }}</span>
+                <span style="flex:1;font-family:'DM Serif Display',serif;font-size:21px;color:#3a2a1a;">{{ sec.title }}</span>
+                <span style="flex-shrink:0;font-family:'Spectral',serif;font-size:22px;font-weight:600;color:#9a3b1c;width:26px;height:26px;display:flex;align-items:center;justify-content:center;">{{ sec.chevron }}</span>
+              </button>
+
+              <!-- Abschnitts-Körper -->
+              <sc-if value="{{ sec.isOpen }}" hint-placeholder-val="{{ true }}">
+                <div style="padding:4px 22px 22px;border-top:1px dashed #d8c49a;">
+
+                  <sc-if value="{{ sec.hasIntro }}" hint-placeholder-val="{{ false }}">
+                    <p style="font-family:'Spectral',serif;font-size:15px;line-height:1.6;color:#5a4a38;margin:16px 0 4px;">{{ sec.intro }}</p>
+                  </sc-if>
+
+                  <!-- Illustration: Aktionsleiste -->
+                  <sc-if value="{{ sec.figActionbar }}" hint-placeholder-val="{{ false }}">
+                    <div style="margin:16px 0 8px;padding:14px;background:#2a1a0e;border-radius:6px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+                      <span style="font-family:'Spectral',serif;font-size:12px;font-weight:600;letter-spacing:0.06em;border-radius:3px;padding:6px 11px;border:1.5px solid #c9a87a;color:#c9a87a;">EN</span>
+                      <span style="font-family:'Spectral',serif;font-size:12px;font-weight:600;border-radius:3px;padding:6px 11px;background:#9a6b2f;color:#f3ead7;">✦ Räucher-KI</span>
+                      <span style="font-family:'Spectral',serif;font-size:12px;font-weight:600;border-radius:3px;padding:6px 11px;background:#9a3b1c;color:#f3ead7;">✚ Eigenes Rezept</span>
+                      <span style="font-family:'Spectral',serif;font-size:12px;font-weight:600;border-radius:3px;padding:6px 11px;border:1.5px solid #c9b48a;color:#c9a87a;">☰ Einkaufsliste</span>
+                      <span style="font-family:'Spectral',serif;font-size:12px;font-weight:600;border-radius:3px;padding:6px 11px;border:1.5px solid #c9b48a;color:#c9a87a;">Werkzeuge ▾</span>
+                      <span style="font-family:'Spectral',serif;font-size:12px;font-weight:600;border-radius:3px;padding:6px 11px;border:1.5px solid #6b8a4a;background:#eef2e3;color:#3d5226;">🏛️ Reifekammer</span>
+                      <span style="font-family:'Spectral',serif;font-size:12px;font-weight:600;border-radius:3px;padding:6px 11px;border:1.5px solid #6b5a42;color:#c9a87a;">📖 Anleitung</span>
+                    </div>
+                  </sc-if>
+
+                  <!-- Illustration: Rezeptkarte -->
+                  <sc-if value="{{ sec.figCard }}" hint-placeholder-val="{{ false }}">
+                    <div style="margin:16px 0 8px;max-width:300px;border:1.5px solid #d8c49a;border-radius:8px;overflow:hidden;background:#fff;">
+                      <div style="height:96px;background:linear-gradient(135deg,#6b4a22,#9a3b1c);display:flex;align-items:flex-start;justify-content:flex-start;padding:10px;">
+                        <span style="font-family:'Spectral',serif;font-size:10px;font-weight:600;letter-spacing:0.06em;color:#fff;background:#9a3b1c;border-radius:3px;padding:4px 9px;">HEISSRÄUCHERN</span>
+                      </div>
+                      <div style="padding:12px 14px;">
+                        <div style="font-family:'DM Serif Display',serif;font-size:17px;color:#3a2a1a;">Geräucherte Forelle</div>
+                        <div style="font-family:'Spectral',serif;font-size:12px;color:#8a6f4e;margin-top:3px;">Fisch · saftig, dezent rauchig</div>
+                        <div style="display:flex;gap:14px;margin-top:9px;font-family:'Spectral',serif;font-size:12px;color:#6b5a42;">
+                          <span>● ○ ○ Einfach</span><span>⏱ ca. 3 h</span>
+                        </div>
+                      </div>
+                    </div>
+                  </sc-if>
+
+                  <!-- Illustration: Detail-Werkzeugzeile -->
+                  <sc-if value="{{ sec.figDetail }}" hint-placeholder-val="{{ false }}">
+                    <div style="margin:16px 0 8px;padding:12px;background:#efe6cf;border:1px solid #d8c49a;border-radius:6px;display:flex;flex-wrap:wrap;gap:8px;">
+                      <span style="font-family:'Spectral',serif;font-size:12px;border-radius:3px;padding:6px 11px;border:1.5px solid #c9b48a;background:#faf5e8;color:#3a2a1a;">♥ Favorit</span>
+                      <span style="font-family:'Spectral',serif;font-size:12px;border-radius:3px;padding:6px 11px;border:1.5px solid #c9b48a;background:#faf5e8;color:#3a2a1a;">✎ Bearbeiten</span>
+                      <span style="font-family:'Spectral',serif;font-size:12px;border-radius:3px;padding:6px 11px;border:1.5px solid #c9b48a;background:#faf5e8;color:#3a2a1a;">⎙ Drucken</span>
+                      <span style="font-family:'Spectral',serif;font-size:12px;border-radius:3px;padding:6px 11px;border:1.5px solid #9a3b1c;background:#9a3b1c;color:#f3ead7;">⚖ Mengen umrechnen</span>
+                      <span style="font-family:'Spectral',serif;font-size:12px;border-radius:3px;padding:6px 11px;border:1.5px solid #6b4a22;background:#6b4a22;color:#f3ead7;">▷ Timer starten</span>
+                    </div>
+                  </sc-if>
+
+                  <!-- Illustration: NPS-Rechner -->
+                  <sc-if value="{{ sec.figNps }}" hint-placeholder-val="{{ false }}">
+                    <div style="margin:16px 0 8px;padding:16px;background:#fff;border:1px solid #d8c49a;border-radius:6px;max-width:360px;">
+                      <div style="font-family:'Spectral',serif;font-size:12px;color:#8a6f4e;margin-bottom:4px;">Fleischgewicht (Gramm)</div>
+                      <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#3a2a1a;border:1.5px solid #c9b48a;border-radius:4px;padding:8px 12px;background:#faf5e8;">1000</div>
+                      <div style="display:flex;gap:10px;margin-top:12px;">
+                        <div style="flex:1;text-align:center;background:#efe6cf;border-radius:5px;padding:9px 6px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;color:#9a3b1c;">40 g</div><div style="font-family:'Spectral',serif;font-size:10.5px;color:#8a6f4e;">NPS</div></div>
+                        <div style="flex:1;text-align:center;background:#efe6cf;border-radius:5px;padding:9px 6px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;color:#9a3b1c;">5 g</div><div style="font-family:'Spectral',serif;font-size:10.5px;color:#8a6f4e;">Zucker</div></div>
+                        <div style="flex:1;text-align:center;background:#efe6cf;border-radius:5px;padding:9px 6px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;color:#9a3b1c;">2 g</div><div style="font-family:'Spectral',serif;font-size:10.5px;color:#8a6f4e;">Pfeffer</div></div>
+                      </div>
+                    </div>
+                  </sc-if>
+
+                  <!-- Einträge -->
+                  <sc-for list="{{ sec.entries }}" as="entry" hint-placeholder-count="3">
+                    <div style="margin-top:18px;">
+                      <div style="font-family:'DM Serif Display',serif;font-size:16.5px;color:#9a3b1c;margin-bottom:5px;">{{ entry.h }}</div>
+                      <sc-for list="{{ entry.b }}" as="para" hint-placeholder-count="1">
+                        <p style="font-family:'Spectral',serif;font-size:14.5px;line-height:1.6;color:#4a3a2a;margin:0 0 6px;">{{ para }}</p>
+                      </sc-for>
+                      <sc-for list="{{ entry.bullets }}" as="bullet" hint-placeholder-count="0">
+                        <div style="display:flex;gap:9px;font-family:'Spectral',serif;font-size:14.5px;line-height:1.55;color:#4a3a2a;margin:4px 0;">
+                          <span style="color:#9a6b2f;flex-shrink:0;">▸</span><span style="flex:1;">{{ bullet }}</span>
+                        </div>
+                      </sc-for>
+                    </div>
+                  </sc-for>
+
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+
+          <div style="font-family:'Spectral',serif;font-style:italic;font-size:12.5px;color:#8a6f4e;text-align:center;margin-top:22px;">{{ L.manualHint }}</div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
@@ -1304,6 +1436,7 @@ class Component extends DCLogic {
     lang: 'de',
     betaDismissed: false,
     showChamber: false,
+    showManual: false, manualQuery: '', manualOpen: {},
     showDisclaimerGate: false, showDisclaimerInfo: false,
     showAI: false, aiInput: '', aiLoading: false, aiError: '', aiResult: null, aiAvailable: false,
     saveBackupHint: false,
@@ -2111,6 +2244,14 @@ class Component extends DCLogic {
         feedbackHead: p('Mithelfen','Help out'), feedback: p('📝 Feedback geben','📝 Give feedback'),
         imprint: p('Impressum','Imprint'), privacy: p('Datenschutz','Privacy'),
         chamber: p('Reifekammer','Aging chamber'),
+        manual: p('Anleitung','Guide'),
+        manualTitle: p('Bedienungsanleitung','User guide'),
+        manualEyebrow: p('Smokebench · Handbuch','Smokebench · handbook'),
+        manualSub: p('Funktionen, Fachbegriffe & Sicherheit — Schritt für Schritt erklärt.','Features, terms & safety — explained step by step.'),
+        manualSearch: p('Anleitung durchsuchen … (z. B. „NPS", „Kerntemperatur")','Search the guide … (e.g. "cure salt", "core temp")'),
+        manualNoRes: p('Kein Treffer. Versuche einen anderen Begriff.','No match. Try a different term.'),
+        manualClose: p('Schließen','Close'),
+        manualHint: p('Tipp: Abschnitte an- und zuklappen oder oben suchen.','Tip: expand/collapse sections or search above.'),
         chamberHint: p('Bauanleitung: Reifekammer für Schinken, Salami & Biltong','Build guide: aging chamber for ham, salami & biltong'),
         chamberClose: p('Schließen','Close'),
         chamberNewTab: p('Neuer Tab','New tab'),
@@ -2342,6 +2483,265 @@ class Component extends DCLogic {
       let note = e[2] ? (typeof e[2] === 'string' ? e[2] : (e[2][lang] || e[2].de || '')) : (s === 0 ? noGo : '');
       return { icon: d.i, label: lang === 'en' ? d.en : d.de, stars, color, dot, note, hasNote: !!note };
     });
+  }
+
+  // ===== BEDIENUNGSANLEITUNG / MANUAL =====
+  _manualData() {
+    const en = this.state.lang === 'en';
+    const p = (de, eng) => en ? eng : de;
+    return [
+      {
+        id: 'start', icon: '🚀', fig: 'actionbar',
+        title: p('Erste Schritte', 'Getting started'),
+        intro: p('Smokebench läuft komplett im Browser — ohne Konto, ohne Installation. Alle deine Daten (eigene Rezepte, Bilder, Favoriten, Notizen, Chargen) bleiben auf deinem Gerät. Oben findest du die Aktionsleiste, die beim Scrollen mitwandert.',
+                 'Smokebench runs entirely in the browser — no account, no install. All your data (custom recipes, images, favorites, notes, batches) stays on your device. The action bar at the top stays with you while scrolling.'),
+        entries: [
+          { h: p('Die Aktionsleiste', 'The action bar'), b: [p('Von links nach rechts:', 'From left to right:')], bullets: [
+            p('EN / DE — schaltet die Sprache der gesamten App um.', 'EN / DE — switches the language of the whole app.'),
+            p('✦ Räucher-KI — beschreibe dein Vorhaben, die KI schlägt Methode, Temperatur, Dauer und Holz vor.', '✦ Smoke AI — describe your plan and the AI suggests method, temperature, time and wood.'),
+            p('✚ Eigenes Rezept — öffnet den Editor für ein neues, eigenes Rezept.', '✚ New recipe — opens the editor to create your own recipe.'),
+            p('☰ Einkaufsliste — sammelt Zutaten aus deinen Rezepten.', '☰ Shopping list — collects ingredients from your recipes.'),
+            p('Werkzeuge ▾ — NPS-, Dörrzeit- und Einheiten-Rechner sowie Sichern/Laden und Feedback.', 'Tools ▾ — cure-salt, drying-time and unit calculators plus backup/restore and feedback.'),
+            p('Reifekammer — Bauanleitung für eine Reifekammer (Schinken, Salami, Biltong).', 'Aging chamber — build guide for a curing chamber (ham, salami, biltong).'),
+          ] },
+          { h: p('In 3 Schritten zum ersten Räuchergang', 'Your first smoke in 3 steps'), b: [], bullets: [
+            p('1. Kategorie oben wählen (z. B. „Heißräuchern") oder in der Suche einen Begriff eingeben.', '1. Pick a category up top (e.g. "Hot smoking") or type a term into the search box.'),
+            p('2. Rezept antippen, Eckdaten und Ablauf lesen, bei Bedarf die Mengen auf dein Gewicht umrechnen.', '2. Tap a recipe, read the key data and steps, and scale the amounts to your weight if needed.'),
+            p('3. Timer starten, nach dem Räuchern das Ergebnis als Charge im Cook-Log festhalten.', '3. Start the timer, and after smoking log the result as a batch in the cook log.'),
+          ] },
+          { h: p('Als App installieren', 'Install as an app'), b: [p('Smokebench lässt sich wie eine App auf den Startbildschirm legen — im Browser-Menü „Zum Startbildschirm hinzufügen" bzw. „Installieren". Dann startet sie im Vollbild, auch offline.',
+                 'Smokebench can be added to your home screen like an app — use "Add to home screen" / "Install" in your browser menu. It then launches full-screen, even offline.')], bullets: [] },
+        ],
+      },
+      {
+        id: 'find', icon: '🔎', fig: 'card',
+        title: p('Rezepte finden & lesen', 'Finding & reading recipes'),
+        intro: p('Die Rezeptübersicht lässt sich filtern, durchsuchen und sortieren. Jede Karte zeigt auf einen Blick Methode, Schwierigkeit und Dauer.',
+                 'The recipe overview can be filtered, searched and sorted. Every card shows method, difficulty and duration at a glance.'),
+        entries: [
+          { h: p('Kategorie-Filter', 'Category filter'), b: [p('Die Reiter über der Liste filtern nach Methode: Alle, Kalträuchern, Warmräuchern, Heißräuchern, Low & Slow, Schmoren, Dörren, Grill & Spieß, Marinaden, Basis sowie ♥ Favoriten.',
+                 'The tabs above the list filter by method: All, Cold smoking, Warm smoking, Hot smoking, Low & Slow, Braising, Drying, Grill & spit, Marinades, Basics and ♥ Favorites.')], bullets: [] },
+          { h: p('Suche', 'Search'), b: [p('Das Suchfeld durchsucht Name, Kategorie und Kurzbeschreibung gleichzeitig. Tippe z. B. „Forelle", „Buche" oder „Pulled".',
+                 'The search box scans name, category and short description at once. Try "trout", "beech" or "pulled".')], bullets: [] },
+          { h: p('Sortieren', 'Sorting'), b: [], bullets: [
+            p('Standard — die redaktionelle Reihenfolge.', 'Default — the editorial order.'),
+            p('A–Z — alphabetisch nach Name.', 'A–Z — alphabetical by name.'),
+            p('Schwierigkeit — von einfach nach anspruchsvoll.', 'Difficulty — from easy to advanced.'),
+            p('Dauer — von kurz nach lang.', 'Duration — from short to long.'),
+          ] },
+          { h: p('Favoriten (♥)', 'Favorites (♥)'), b: [p('Auf jeder Rezeptseite kannst du ein Herz setzen. Über den Reiter „♥ Favoriten" siehst du nur deine markierten Rezepte.',
+                 'On any recipe page you can tap the heart. The "♥ Favorites" tab shows only the recipes you flagged.')], bullets: [] },
+          { h: p('Was steht auf einer Karte?', 'What a card shows'), b: [], bullets: [
+            p('Farbiges Methoden-Etikett (z. B. Heißräuchern).', 'Colored method badge (e.g. Hot smoking).'),
+            p('Schwierigkeit als Punkte/Stufe.', 'Difficulty as dots/level.'),
+            p('Gesamtzeit als Richtwert.', 'Total time as a guideline.'),
+            p('DE-Abzeichen: Rezept ist noch nicht auf Englisch übersetzt und wird auf Deutsch gezeigt.', 'DE badge: recipe not yet translated to English, shown in German.'),
+          ] },
+        ],
+      },
+      {
+        id: 'detail', icon: '📖', fig: 'detail',
+        title: p('Die Rezeptseite', 'The recipe page'),
+        intro: p('Öffnest du ein Rezept, siehst du Eckdaten, Zutaten, den Ablauf in Phasen und Tipps. Über der Seite liegt eine Werkzeugzeile.',
+                 'Opening a recipe shows key data, ingredients, the step-by-step method and tips. A toolbar sits above the page.'),
+        entries: [
+          { h: p('Eckdaten', 'Key data'), b: [p('Gesamtzeit, Pit-/Räuchertemperatur, Kerntemperatur, Räucherholz und Ausbeute. Kerntemperatur ist bei Fleisch und Fisch das wichtigste Sicherheitskriterium — nicht nach Zeit, sondern nach Kerntemperatur garen.',
+                 'Total time, pit/smoking temperature, core temperature, wood and yield. For meat and fish the core temperature is the key safety criterion — cook to core temperature, not to the clock.')], bullets: [] },
+          { h: p('⚖ Mengen umrechnen', '⚖ Scale amounts'), b: [p('Gib dein Fleischgewicht ein — alle Zutaten werden automatisch mitskaliert, inklusive der Pökelsalz-Mengen aus g/kg. „Grundrezept" zeigt wieder die Ausgangswerte, „Zurücksetzen" verwirft deine Eingabe.',
+                 'Enter your meat weight — every ingredient scales automatically, including cure-salt amounts from g/kg. "Base recipe" restores the original values, "Reset" clears your entry.')], bullets: [] },
+          { h: p('▷ Timer', '▷ Timer'), b: [p('Startet einen Countdown für eine Phase. Der Timer läuft weiter, während du in der App browst, und meldet sich am Ende.',
+                 'Starts a countdown for a phase. It keeps running while you browse the app and alerts you at the end.')], bullets: [] },
+          { h: p('+ Einkaufsliste', '+ Shopping list'), b: [p('Fügt die Zutaten des Rezepts der Einkaufsliste hinzu. Die Liste lässt sich später kopieren (↗) und in Notizen oder Nachrichten einfügen.',
+                 'Adds the recipe\u2019s ingredients to the shopping list. You can copy the list later (↗) and paste it into notes or messages.')], bullets: [] },
+          { h: p('Weitere Aktionen', 'More actions'), b: [], bullets: [
+            p('✎ Bearbeiten — öffnet das Rezept im Editor (auch redaktionelle Rezepte lassen sich anpassen; ↺ setzt sie wieder aufs Original zurück).', '✎ Edit — opens the recipe in the editor (editorial recipes can be tweaked too; ↺ resets to the original).'),
+            p('⎙ Drucken — druckfreundliche Ansicht bzw. Speichern als PDF.', '⎙ Print — printer-friendly view or save as PDF.'),
+            p('⤢ Großansicht — Bild in voller Größe.', '⤢ Enlarge — full-size image.'),
+            p('♥ Favorit — merkt das Rezept vor.', '♥ Favorite — bookmarks the recipe.'),
+          ] },
+        ],
+      },
+      {
+        id: 'batch', icon: '📓',
+        title: p('Cook-Log & Chargen', 'Cook log & batches'),
+        intro: p('Jeder Räuchergang ist anders. Das Cook-Log auf der Rezeptseite hält fest, was du gemacht hast — damit du das beste Ergebnis reproduzieren kannst.',
+                 'Every smoke is different. The cook log on the recipe page records what you did — so you can reproduce your best result.'),
+        entries: [
+          { h: p('Eine Charge erfassen', 'Log a batch'), b: [p('Trage nach dem Durchgang Gewicht, Holz, Temperatur, Dauer, Luftfeuchte, eine Bewertung (1–10) und eine kurze Notiz zum Ergebnis ein.',
+                 'After a run, enter weight, wood, temperature, duration, humidity, a rating (1–10) and a short note on the result.')], bullets: [] },
+          { h: p('↻ Reproduzieren', '↻ Reproduce'), b: [p('Übernimmt die Werte einer gespeicherten Charge in eine neue Erfassung — ideal, um ein gelungenes Ergebnis exakt zu wiederholen.',
+                 'Copies a saved batch\u2019s values into a new entry — ideal for repeating a great result exactly.')], bullets: [] },
+          { h: p('Warum lohnt sich das?', 'Why bother?'), b: [p('Räuchern ist Handwerk. Nach ein paar dokumentierten Chargen erkennst du Muster: welches Holz, welche Temperatur, welche Dauer für dich am besten funktionieren.',
+                 'Smoking is a craft. After a few logged batches you\u2019ll spot patterns: which wood, temperature and time work best for you.')], bullets: [] },
+        ],
+      },
+      {
+        id: 'editor', icon: '✚',
+        title: p('Eigene Rezepte anlegen', 'Creating your own recipes'),
+        intro: p('Über „✚ Eigenes Rezept" legst du eigene Rezepte an. Der Editor führt dich Schritt für Schritt durch Kategorie, Eckdaten, Zutaten und Ablauf.',
+                 'Use "✚ New recipe" to create your own. The editor walks you through category, key data, ingredients and method step by step.'),
+        entries: [
+          { h: p('Kategorie zuerst', 'Category first'), b: [p('Wähle zuerst die Methode/Kategorie — danach öffnen sich die passenden Felder (z. B. Pökel-Phasen beim Kalträuchern).',
+                 'Choose the method/category first — the matching fields then appear (e.g. curing phases for cold smoking).')], bullets: [] },
+          { h: p('Zutaten & Phasen', 'Ingredients & phases'), b: [p('Zutaten bestehen aus Menge + Bezeichnung. Tipp: Schreibe Mengen als „40 g/kg" o. Ä., damit die Mengen-Umrechnung sauber mitskaliert. Der Ablauf besteht aus Phasen mit Art, Dauer, Temperatur und Beschreibung.',
+                 'Ingredients are amount + name. Tip: write amounts like "40 g/kg" so the scaling works cleanly. The method consists of phases with type, duration, temperature and description.')], bullets: [] },
+          { h: p('Eigenes Bild', 'Your own image'), b: [p('Du kannst jedem Rezept ein eigenes Foto geben. Bilder werden nur auf deinem Gerät gespeichert — sichere sie regelmäßig als Datei (siehe „Daten sichern").',
+                 'You can add your own photo to any recipe. Images are stored on your device only — back them up regularly to a file (see "Backing up data").')], bullets: [] },
+          { h: p('Bearbeiten & Zurücksetzen', 'Editing & resetting'), b: [p('Auch die mitgelieferten Rezepte lassen sich bearbeiten. Mit „↺ Auf Original zurücksetzen" holst du das ursprüngliche Rezept zurück; eigene Rezepte lassen sich löschen.',
+                 'The built-in recipes can be edited too. Use "↺ Reset to original" to restore the shipped recipe; your own recipes can be deleted.')], bullets: [] },
+        ],
+      },
+      {
+        id: 'calc', icon: '🧮', fig: 'nps',
+        title: p('Rechner & Werkzeuge', 'Calculators & tools'),
+        intro: p('Unter „Werkzeuge ▾" liegen vier Rechner. Alle Werte sind unverbindliche Beispielwerte — prüfe Mengen stets selbst, besonders bei Pökelsalz.',
+                 'Four calculators live under "Tools ▾". All figures are non-binding example values — always verify amounts yourself, especially cure salt.'),
+        entries: [
+          { h: p('NPS-Rechner (Pökeln)', 'Cure-salt calculator'), b: [p('Gib das Fleischgewicht ein und erhalte Richtwerte für NPS (Nitritpökelsalz), Zucker und Pfeffer sowie eine 6-%-Nasspökel-Lake. NPS immer exakt abwiegen, nie schätzen, und die Kühlkette bei 2–7 °C halten.',
+                 'Enter the meat weight to get guideline amounts for cure salt, sugar and pepper plus a 6% wet brine. Always weigh cure salt precisely, never estimate, and keep the cold chain at 2–7 °C.')], bullets: [] },
+          { h: p('Spritzpökelung', 'Injection curing'), b: [p('Berechnet Spritzmenge und NPS-Anteil für die Injektionspökelung (z. B. Schinken, Kassler, Rollbraten). Einspritzen plus 1–3 Tage Nasspökelung wirkt gleichmäßiger als reine Trockenbeize.',
+                 'Calculates injection volume and cure-salt share for injection curing (e.g. ham, smoked loin, rolled roast). Injecting plus 1–3 days of wet curing is more even than dry cure alone.')], bullets: [] },
+          { h: p('Dörrzeit-Rechner', 'Drying-time calculator'), b: [p('Schätzt die Dörrzeit anhand von Lebensmittel, Scheibendicke und Temperatur. Immer nur ein Richtwert — mach am Ende den Biegtest, denn warm fühlt sich vieles weicher an.',
+                 'Estimates drying time from food, slice thickness and temperature. Always a guideline only — do the bend test at the end, since things feel softer while warm.')], bullets: [] },
+          { h: p('Einheiten-Rechner', 'Unit converter'), b: [p('Rechnet Europa ⇄ USA um: Temperatur, Gewicht, Volumen, Länge und US-Cups in Gramm. Achtung bei Salz aus US-Rezepten — koscheres Salz wiegt pro Volumen nur etwa halb so viel wie feines Salz.',
+                 'Converts Europe ⇄ USA: temperature, weight, volume, length and US cups to grams. Watch out for salt in US recipes — kosher salt weighs only about half as much per volume as fine salt.')], bullets: [] },
+        ],
+      },
+      {
+        id: 'ai', icon: '✦',
+        title: p('Räucher-KI', 'Smoke AI'),
+        intro: p('Der KI-Berater schlägt dir für ein Vorhaben Methode, Temperatur, Dauer, Holz und einen groben Ablauf vor.',
+                 'The AI advisor suggests method, temperature, time, wood and a rough workflow for your plan.'),
+        entries: [
+          { h: p('So nutzt du sie', 'How to use it'), b: [p('Beschreibe in einem Satz, was du zubereiten möchtest — z. B. „Ich möchte Salami kalträuchern". Du kannst den Vorschlag mit „In App übernehmen" in den Rezept-Editor laden, dort prüfen und speichern.',
+                 'Describe in one sentence what you want to make — e.g. "I want to cold-smoke salami". You can load the suggestion into the recipe editor via "Add to app", then review and save it.')], bullets: [] },
+          { h: p('Wichtig', 'Important'), b: [p('Die KI kann sich irren. Prüfe jeden Vorschlag selbst — besonders Pökelsalz-Mengen sowie Kern- und Räuchertemperaturen. Räuchern und Pökeln sind lebensmittelsicherheitskritisch.',
+                 'The AI can be wrong. Verify every suggestion yourself — especially cure-salt amounts and core/smoking temperatures. Smoking and curing are food-safety critical.')], bullets: [] },
+        ],
+      },
+      {
+        id: 'chamber', icon: '🏛️',
+        title: p('Reifekammer', 'Aging chamber'),
+        intro: p('Für luftgetrocknete Produkte wie Schinken, Salami oder Biltong brauchst du kontrollierte Bedingungen. Die Bauanleitung zeigt, wie du dir eine Reifekammer baust.',
+                 'Air-dried products like ham, salami or biltong need controlled conditions. The build guide shows how to build a curing chamber.'),
+        entries: [
+          { h: p('Zielwerte', 'Target values'), b: [], bullets: [
+            p('Temperatur 10–15 °C (ideal 12–14 °C).', 'Temperature 10–15 °C (ideal 12–14 °C).'),
+            p('70–80 % relative Luftfeuchte.', '70–80% relative humidity.'),
+            p('Leichte Luftzirkulation, frei hängend — nicht einpacken.', 'Gentle air circulation, hanging freely — do not wrap.'),
+          ] },
+          { h: p('Ohne Feuchte-Regler', 'Without a humidity controller'), b: [p('Kein Regler (z. B. Inkbird)? Eine kleine Schale Wasser im Kühlschrank hebt die Luftfeuchte spürbar und lässt sich über die Schalengröße grob dosieren.',
+                 'No controller (e.g. Inkbird)? A small bowl of water in the fridge noticeably raises humidity and can be dosed roughly via the bowl size.')], bullets: [] },
+        ],
+      },
+      {
+        id: 'backup', icon: '💾',
+        title: p('Daten sichern & übertragen', 'Backing up & moving data'),
+        intro: p('Deine eigenen Rezepte, Bilder, Favoriten, Notizen und Chargen liegen nur in diesem Browser auf diesem Gerät. Es gibt kein Konto und keine Cloud — deshalb ist das Sichern wichtig.',
+                 'Your custom recipes, images, favorites, notes and batches live only in this browser on this device. There is no account and no cloud — so backing up matters.'),
+        entries: [
+          { h: p('⤓ Sichern', '⤓ Backup'), b: [p('Speichert all deine Daten in eine Datei. Lege sie regelmäßig an — besonders bevor du den Browser wechselst, den Verlauf löschst oder ein neues Gerät nutzt.',
+                 'Saves all your data to a file. Do this regularly — especially before switching browser, clearing history or using a new device.')], bullets: [] },
+          { h: p('⤒ Laden', '⤒ Restore'), b: [p('Liest eine zuvor gesicherte Datei wieder ein — so überträgst du deine Daten auf ein anderes Gerät oder stellst sie nach dem Löschen wieder her.',
+                 'Reads a previously saved file back in — this is how you move your data to another device or restore it after clearing.')], bullets: [] },
+          { h: p('Warum kein automatisches Speichern in der Cloud?', 'Why no automatic cloud sync?'), b: [p('Smokebench funktioniert ohne Konto und ohne Server — das schützt deine Privatsphäre, bedeutet aber, dass nur du für deine Sicherungen verantwortlich bist.',
+                 'Smokebench works without an account or server — this protects your privacy but means you alone are responsible for your backups.')], bullets: [] },
+        ],
+      },
+      {
+        id: 'glossary', icon: '📚',
+        title: p('Glossar der Fachbegriffe', 'Glossary of terms'),
+        intro: p('Die wichtigsten Begriffe rund ums Räuchern, Pökeln und Trocknen — kurz erklärt.',
+                 'The most important terms around smoking, curing and drying — briefly explained.'),
+        entries: [
+          { h: p('Kalträuchern', 'Cold smoking'), b: [p('Räuchern unter ~25 °C, meist 15–22 °C, in mehreren Durchgängen. Das Lebensmittel wird nicht gegart, sondern konserviert und aromatisiert (z. B. Lachs, Salami, Speck). Erfordert vorheriges Pökeln.',
+                 'Smoking below ~25 °C, usually 15–22 °C, in several sessions. The food is not cooked but preserved and flavored (e.g. salmon, salami, bacon). Requires prior curing.')], bullets: [] },
+          { h: p('Warmräuchern', 'Warm smoking'), b: [p('Räuchern bei etwa 25–50 °C. Zwischenstufe zwischen kalt und heiß, z. B. für bestimmte Würste und Käse.',
+                 'Smoking at roughly 25–50 °C. A middle ground between cold and hot, e.g. for certain sausages and cheese.')], bullets: [] },
+          { h: p('Heißräuchern', 'Hot smoking'), b: [p('Räuchern bei etwa 50–90 °C. Das Lebensmittel wird gleichzeitig gegart und geräuchert (z. B. Forelle, Makrele). Auf die Kerntemperatur achten.',
+                 'Smoking at roughly 50–90 °C. The food is cooked and smoked at the same time (e.g. trout, mackerel). Mind the core temperature.')], bullets: [] },
+          { h: p('Low & Slow', 'Low & Slow'), b: [p('BBQ-Methode bei niedriger Temperatur (ca. 100–130 °C) über viele Stunden. Bindegewebe wird zart, typisch für Pulled Pork, Brisket und Ribs.',
+                 'BBQ method at low temperature (approx. 100–130 °C) over many hours. Connective tissue turns tender — typical for pulled pork, brisket and ribs.')], bullets: [] },
+          { h: p('Pökeln', 'Curing'), b: [p('Haltbarmachen mit Salz — trocken (Fleisch mit Salz einreiben), nass (in Lake einlegen) oder per Spritzpökelung. Entzieht Wasser, hemmt Keime und ist bei kaltgeräucherten Produkten unverzichtbar.',
+                 'Preserving with salt — dry (rubbing meat with salt), wet (submerging in brine) or by injection. It draws out water, inhibits microbes and is essential for cold-smoked products.')], bullets: [] },
+          { h: p('NPS (Nitritpökelsalz)', 'Cure salt (nitrite)'), b: [p('Speisesalz mit einem kleinen Anteil Natriumnitrit. Sorgt für Umrötung, typisches Pökelaroma und Schutz vor Botulismus. Exakt abwiegen und geltende Nitrit-Höchstmengen einhalten.',
+                 'Table salt with a small share of sodium nitrite. It provides the cured color, the typical cured flavor and protection against botulism. Weigh precisely and observe nitrite limits.')], bullets: [] },
+          { h: p('Umrötung', 'Cured color / reddening'), b: [p('Die stabile rote Farbe gepökelter Ware, ausgelöst durch das Nitrit im NPS. Braucht Zeit und kühle Temperaturen.',
+                 'The stable red color of cured products, caused by the nitrite in cure salt. It needs time and cool temperatures.')], bullets: [] },
+          { h: p('Pellicle (Abtrocknen)', 'Pellicle'), b: [p('Eine leicht klebrige, trockene Haut auf der Oberfläche, die sich beim luftigen Abtrocknen (kühl, mit Ventilator) bildet. An ihr haftet der Rauch besser — wichtig vor dem Räuchern.',
+                 'A slightly tacky, dry skin that forms on the surface during airy drying (cool, with a fan). Smoke adheres to it better — important before smoking.')], bullets: [] },
+          { h: p('Kerntemperatur', 'Core temperature'), b: [p('Die Temperatur im Inneren des Lebensmittels, gemessen mit einem Einstichthermometer. Das entscheidende Kriterium für „gar" und für Sicherheit — wichtiger als die Zeit.',
+                 'The temperature inside the food, measured with a probe thermometer. The decisive criterion for "done" and for safety — more important than time.')], bullets: [] },
+          { h: p('Pit-Temperatur', 'Pit temperature'), b: [p('Die Temperatur im Garraum des Smokers/Grills. Bei Low & Slow deutlich höher als die Kerntemperatur des Fleisches.',
+                 'The temperature inside the smoker/grill chamber. In Low & Slow it is much higher than the meat\u2019s core temperature.')], bullets: [] },
+          { h: p('Stall / Plateau', 'Stall / plateau'), b: [p('Beim Low & Slow eine Phase, in der die Kerntemperatur lange stehen bleibt, weil verdunstendes Wasser das Fleisch kühlt. Aussitzen — oder in Folie einpacken („Texas Crutch").',
+                 'In Low & Slow a phase where the core temperature stalls for a long time because evaporating moisture cools the meat. Wait it out — or wrap in foil ("Texas crutch").')], bullets: [] },
+          { h: p('Bark', 'Bark'), b: [p('Die dunkle, würzige Kruste, die sich beim langen Räuchern aus Rub und Rauch bildet.',
+                 'The dark, savory crust that forms from rub and smoke during long smoking.')], bullets: [] },
+          { h: p('Rub', 'Rub'), b: [p('Eine trockene Gewürzmischung, die vor dem Garen auf das Fleisch aufgetragen wird.',
+                 'A dry spice mix applied to the meat before cooking.')], bullets: [] },
+          { h: p('Lake / Brine', 'Brine'), b: [p('Eine Salz-(und oft Zucker-)Lösung zum Nasspökeln oder Aromatisieren. Prozentangaben beziehen sich auf den Salzanteil im Wasser (z. B. 6 %).',
+                 'A salt (and often sugar) solution for wet curing or flavoring. Percentages refer to the salt share in the water (e.g. 6%).')], bullets: [] },
+          { h: p('Mop / Spritzen', 'Mop / spritz'), b: [p('Während des Garens wird die Oberfläche mit Flüssigkeit befeuchtet, damit sie nicht austrocknet und Aromen aufnimmt.',
+                 'During cooking the surface is moistened with liquid so it doesn\u2019t dry out and takes on flavor.')], bullets: [] },
+          { h: p('Sparbrand / Räuchermehl', 'Cold smoke generator / smoke dust'), b: [p('Für kalten Rauch: Feines Räuchermehl glimmt in einer Räucherschnecke (Sparbrand) über viele Stunden bei sehr wenig Hitze.',
+                 'For cold smoke: fine smoke dust smoulders in a maze-shaped generator for many hours with very little heat.')], bullets: [] },
+          { h: p('Chunks & Chips', 'Chunks & chips'), b: [p('Holzstücke (Chunks) für langen Rauch, Holzspäne (Chips) für kurzen, schnellen Rauch. Immer trockenes, unbehandeltes Holz verwenden.',
+                 'Wood chunks for long smoke, wood chips for short, quick smoke. Always use dry, untreated wood.')], bullets: [] },
+          { h: p('Minion-Ring / Snake', 'Minion ring / snake'), b: [p('Anordnung der Kohle, bei der nur ein Ende angezündet wird und sich die Glut langsam weiterfrisst — für stundenlange, gleichmäßige Hitze ohne Nachlegen.',
+                 'A coal layout where only one end is lit and the embers slowly travel along — for hours of even heat without refueling.')], bullets: [] },
+          { h: p('Wassermethode', 'Water pan method'), b: [p('Eine Wasserschale im Smoker stabilisiert die Temperatur und hält die Luft feucht, damit das Gargut saftig bleibt. Typisch beim Weber Smokey Mountain.',
+                 'A water pan in the smoker stabilizes temperature and keeps the air moist so the food stays juicy. Typical of the Weber Smokey Mountain.')], bullets: [] },
+          { h: p('Indirekt / Direkt', 'Indirect / direct'), b: [p('Direkt: über der Glut, hohe Hitze. Indirekt: neben der Glut, sanfte Umluft-Hitze — die Basis für Low & Slow und Räuchern.',
+                 'Direct: over the coals, high heat. Indirect: beside the coals, gentle convection heat — the basis for Low & Slow and smoking.')], bullets: [] },
+          { h: p('Biegtest', 'Bend test'), b: [p('Prüfmethode für Dörrfleisch/Jerky: Ein fertiges Stück biegt sich und reißt leicht ein, bricht aber nicht. Erst nach dem Abkühlen beurteilen.',
+                 'Doneness check for jerky: a finished piece bends and cracks slightly but does not snap. Judge only after it has cooled.')], bullets: [] },
+          { h: p('Biltong', 'Biltong'), b: [p('Südafrikanisches, luftgetrocknetes und gewürztes Fleisch. Wird nicht geräuchert, sondern in kühler, luftiger Umgebung getrocknet.',
+                 'South African air-dried, spiced meat. Not smoked but dried in a cool, airy environment.')], bullets: [] },
+          { h: p('aw-Wert (Wasseraktivität)', 'Water activity (aw)'), b: [p('Maß für das frei verfügbare Wasser im Lebensmittel. Je niedriger, desto haltbarer — Mikroorganismen brauchen Wasser zum Wachsen.',
+                 'A measure of the freely available water in food. The lower it is, the longer it keeps — microorganisms need water to grow.')], bullets: [] },
+        ],
+      },
+      {
+        id: 'safety', icon: '⚠️',
+        title: p('Sicherheit & Hygiene', 'Safety & hygiene'),
+        intro: p('Räuchern, Pökeln und Trocknen bergen mikrobiologische Risiken (u. a. Botulismus, Listerien). Smokebench liefert Beispielwerte — keine verbindlichen Anweisungen. Die Verantwortung liegt bei dir.',
+                 'Smoking, curing and drying carry microbiological risks (incl. botulism, listeria). Smokebench provides example values — not binding instructions. The responsibility is yours.'),
+        entries: [
+          { h: p('Kühlkette', 'Cold chain'), b: [p('Fleisch und Fisch beim Pökeln und Zwischenlagern durchgehend bei 2–7 °C halten. Unterbrechungen der Kühlkette sind das größte Risiko.',
+                 'Keep meat and fish at 2–7 °C throughout curing and interim storage. Breaks in the cold chain are the biggest risk.')], bullets: [] },
+          { h: p('Pökelsalz exakt dosieren', 'Dose cure salt precisely'), b: [p('NPS immer mit einer Feinwaage abwiegen, nie schätzen. Zu wenig ist unsicher, zu viel ungesund. Halte die geltenden Nitrit-Höchstmengen ein (z. B. VO (EU) 2023/2108).',
+                 'Always weigh cure salt with a precise scale, never estimate. Too little is unsafe, too much is unhealthy. Observe current nitrite limits (e.g. Reg. (EU) 2023/2108).')], bullets: [] },
+          { h: p('Auf Kerntemperatur garen', 'Cook to core temperature'), b: [p('Bei Heißräuchern und Low & Slow entscheidet die Kerntemperatur über die Sicherheit — nicht die Uhr. Ein Einstichthermometer ist Pflicht.',
+                 'For hot smoking and Low & Slow the core temperature decides safety — not the clock. A probe thermometer is a must.')], bullets: [] },
+          { h: p('Hygiene', 'Hygiene'), b: [p('Saubere Hände, Bretter und Werkzeuge; rohes und fertiges Gut trennen. Im Zweifel eine fachkundige Quelle hinzuziehen und im Zweifel entsorgen.',
+                 'Clean hands, boards and tools; keep raw and finished products separate. When in doubt consult a qualified source — and when in doubt, throw it out.')], bullets: [] },
+          { h: p('Räuchern nur im Freien', 'Smoke outdoors only'), b: [p('Rauch enthält Kohlenmonoxid. Smoker und Grills nur draußen und nie in geschlossenen Räumen betreiben.',
+                 'Smoke contains carbon monoxide. Only run smokers and grills outdoors, never in enclosed spaces.')], bullets: [] },
+        ],
+      },
+      {
+        id: 'faq', icon: '❓',
+        title: p('Häufige Fragen', 'FAQ'),
+        intro: '',
+        entries: [
+          { h: p('Brauche ich ein Konto?', 'Do I need an account?'), b: [p('Nein. Smokebench läuft ohne Anmeldung. Alle Daten bleiben lokal auf deinem Gerät.',
+                 'No. Smokebench works without sign-in. All data stays local on your device.')], bullets: [] },
+          { h: p('Funktioniert die App offline?', 'Does it work offline?'), b: [p('Ja, nach dem ersten Laden weitgehend. Der KI-Berater braucht allerdings eine Verbindung und läuft nur in der Test-/Vorschau-Umgebung.',
+                 'Yes, largely, after the first load. The AI advisor, however, needs a connection and only runs in the test/preview environment.')], bullets: [] },
+          { h: p('Wo sind meine Rezepte gespeichert?', 'Where are my recipes stored?'), b: [p('Im Speicher deines Browsers. Löschst du den Browser-Verlauf/Website-Daten, sind sie weg — deshalb regelmäßig sichern.',
+                 'In your browser\u2019s storage. Clearing browser history/site data removes them — so back up regularly.')], bullets: [] },
+          { h: p('Wie komme ich mit meinen Daten auf ein neues Gerät?', 'How do I move my data to a new device?'), b: [p('Auf dem alten Gerät „⤓ Sichern", die Datei übertragen, auf dem neuen Gerät „⤒ Laden".',
+                 'On the old device tap "⤓ Backup", transfer the file, then on the new device tap "⤒ Restore".')], bullets: [] },
+          { h: p('Warum ist ein Rezept auf Deutsch, obwohl ich EN gewählt habe?', 'Why is a recipe in German although I chose EN?'), b: [p('Dieses Rezept ist noch nicht übersetzt (DE-Abzeichen). Es kommen laufend Übersetzungen dazu.',
+                 'That recipe is not translated yet (DE badge). Translations are added continuously.')], bullets: [] },
+          { h: p('Sind die Mengen und Zeiten verbindlich?', 'Are the amounts and times binding?'), b: [p('Nein. Es sind unverbindliche Beispielwerte zur Veranschaulichung — keine Dosierempfehlung. Du passt sie eigenverantwortlich an.',
+                 'No. They are non-binding example values for illustration — not a dosing recommendation. You adjust them on your own responsibility.')], bullets: [] },
+          { h: p('Kann ich Feedback geben?', 'Can I give feedback?'), b: [p('Ja — über „Werkzeuge ▾ → Feedback geben" bzw. den Banner. In der Testphase formt dein Feedback die App direkt mit.',
+                 'Yes — via "Tools ▾ → Give feedback" or the banner. During the beta your feedback shapes the app directly.')], bullets: [] },
+        ],
+      },
+    ];
   }
 
   renderVals() {
@@ -2576,8 +2976,43 @@ class Component extends DCLogic {
       style: { cursor:'pointer', padding:'8px 16px', borderRadius:'3px', fontFamily:"'Spectral',serif", fontSize:'14px', whiteSpace:'nowrap', border:'1.5px solid '+(Number(draft.diff)===n?'#9a3b1c':'#c9b48a'), background:(Number(draft.diff)===n?'#9a3b1c':'transparent'), color:(Number(draft.diff)===n?'#f3ead7':'#6b5a42') },
     }));
 
+    // ===== BEDIENUNGSANLEITUNG =====
+    const mq = (this.state.manualQuery || '').trim().toLowerCase();
+    const manualOpenState = this.state.manualOpen || {};
+    const manualSections = this._manualData().map(sec => {
+      const matchEntry = (e) => {
+        if (!mq) return true;
+        const hay = (e.h + ' ' + (e.b || []).join(' ') + ' ' + (e.bullets || []).join(' ')).toLowerCase();
+        return hay.includes(mq);
+      };
+      const secText = (sec.title + ' ' + (sec.intro || '')).toLowerCase();
+      const secMatchesSelf = mq && secText.includes(mq);
+      const entries = (sec.entries || [])
+        .filter(e => secMatchesSelf ? true : matchEntry(e))
+        .map(e => ({ h: e.h, b: e.b || [], bullets: e.bullets || [] }));
+      const hasMatch = !mq || secMatchesSelf || entries.length > 0;
+      const isOpen = mq ? true : !!manualOpenState[sec.id];
+      return {
+        id: sec.id, icon: sec.icon, title: sec.title, intro: sec.intro || '', hasIntro: !!sec.intro,
+        entries, entryCount: entries.length, isOpen, visible: hasMatch,
+        chevron: isOpen ? '\u2013' : '+',
+        figActionbar: sec.fig === 'actionbar', figCard: sec.fig === 'card',
+        figDetail: sec.fig === 'detail', figNps: sec.fig === 'nps',
+        onToggle: () => this.setState(st => ({ manualOpen: { ...(st.manualOpen||{}), [sec.id]: !(st.manualOpen||{})[sec.id] } })),
+      };
+    }).filter(s => s.visible);
+    const manualNoResults = !!mq && manualSections.length === 0;
+
     return {
       ready, loading: !ready, tabs, filteredRecipes, sortChips,
+      showManual: this.state.showManual,
+      onOpenManual: () => this.setState({ showManual: true, showTools: false }),
+      onCloseManual: () => this.setState({ showManual: false }),
+      manualQuery: this.state.manualQuery,
+      onManualSearch: (e) => this.setState({ manualQuery: e.target.value }),
+      onManualClearSearch: () => this.setState({ manualQuery: '' }),
+      manualHasQuery: !!mq,
+      manualSections, manualNoResults,
       hasSelected: !!sel, noResults: ready && filtered.length === 0, query,
       onSearch: (e) => this.setState({ query: e.target.value }),
       onBack: () => this.setState({ selectedId: null }),
