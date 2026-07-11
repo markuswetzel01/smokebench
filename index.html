@@ -33,6 +33,11 @@
   @keyframes slideIn { from { transform: translateX(48px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
   @keyframes timerPulse { 0%,100% { opacity:1; } 50% { opacity:.6; } }
   ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: #ede0c5; } ::-webkit-scrollbar-thumb { background: #c9b48a; border-radius: 3px; }
+  @media (max-width: 860px) {
+    #sb-actionbar-inner { flex-wrap: wrap; }
+    #sb-actionbar-title { flex-basis: 100%; order: 1; }
+    #sb-actionbar-btns { order: 2; flex-basis: 100%; justify-content: flex-start; }
+  }
 </style>
 <script src="./recipes.js?v=0126"></script>
 <script src="./recipes-en.js?v=0126"></script>
@@ -61,8 +66,9 @@
 
   <!-- STICKY ACTION BAR (bleibt beim Scrollen oben) -->
   <div style="position:sticky;top:0;z-index:90;background:#2a1a0e;border-bottom:1.5px solid #6b5a42;box-shadow:0 5px 16px -8px rgba(0,0,0,0.5);">
-    <div style="max-width:1200px;margin:0 auto;padding:8px 48px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-      <div style="flex:1;min-width:0;font-family:'DM Serif Display',serif;font-size:19px;letter-spacing:0.02em;color:#f3ead7;white-space:nowrap;">Smoke<span style="color:#d6603a;">bench</span></div>
+    <div id="sb-actionbar-inner" style="max-width:1200px;margin:0 auto;padding:8px 48px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <div id="sb-actionbar-title" style="flex:1;min-width:0;font-family:'DM Serif Display',serif;font-size:19px;letter-spacing:0.02em;color:#f3ead7;white-space:nowrap;">Smoke<span style="color:#d6603a;">bench</span></div>
+      <div id="sb-actionbar-btns" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
       <button onClick="{{ onToggleLang }}" title="{{ L.langTitle }}" style="font-family:'Spectral',serif;font-size:12px;font-weight:600;letter-spacing:0.08em;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #c9a87a;background:transparent;color:#c9a87a;white-space:nowrap;display:inline-flex;align-items:center;gap:7px;"><span style="display:inline-flex;width:20px;height:14px;border-radius:2px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,0.3);flex-shrink:0;"><sc-if value="{{ langIsDe }}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 60 30" width="20" height="14" preserveAspectRatio="none" aria-hidden="true"><clipPath id="ukflag"><path d="M0,0 v30 h60 v-30 z"></path></clipPath><clipPath id="ukflag2"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"></path></clipPath><g clip-path="url(#ukflag)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"></path><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"></path><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#ukflag2)" stroke="#C8102E" stroke-width="4"></path><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"></path><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"></path></g></svg></sc-if><sc-if value="{{ langIsEn }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 5 3" width="20" height="14" preserveAspectRatio="none" aria-hidden="true"><rect width="5" height="1" y="0" fill="#000000"></rect><rect width="5" height="1" y="1" fill="#DD0000"></rect><rect width="5" height="1" y="2" fill="#FFCE00"></rect></svg></sc-if></span>{{ L.langBtn }}</button>
       <button onClick="{{ onOpenAI }}" title="{{ L.aiTitle }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #9a6b2f;background:#9a6b2f;color:#f3ead7;white-space:nowrap;font-weight:600;display:inline-flex;align-items:center;gap:7px;" style-hover="background:#875d29;"><span aria-hidden="true" style="font-size:13px;line-height:1;">✦</span>{{ L.aiBtn }}</button>
       <button onClick="{{ onNewRecipe }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #9a3b1c;background:#9a3b1c;color:#f3ead7;white-space:nowrap;font-weight:600;">{{ L.newRecipe }}</button>
@@ -92,6 +98,7 @@
       <button onClick="{{ onOpenManual }}" title="{{ L.manualTitle }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #6b5a42;background:transparent;color:#c9a87a;white-space:nowrap;font-weight:600;display:flex;align-items:center;gap:7px;" style-hover="background:rgba(201,168,122,0.12);">
         <span aria-hidden="true" style="font-size:14px;line-height:1;">📖</span>{{ L.manual }}
       </button>
+      </div>
     </div>
   </div>
 
@@ -277,7 +284,7 @@
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px;margin-bottom:18px;">
           <sc-for list="{{ convRows }}" as="row" hint-placeholder-count="6">
-            <div style="background:#f8f0e0;border:1.5px solid #c9b48a;border-left:5px solid {{ row.accent }};border-radius:5px;padding:13px 16px;">
+            <div style="background:#f8f0e0;border:1.5px solid #c9b48a;border-left:5px solid {{ row.accent }};border-radius:4px;padding:13px 16px;">
               <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;">
                 <span style="font-family:'DM Serif Display',serif;font-size:16px;color:#3a2a1a;">{{ row.title }}</span>
                 <span style="font-family:'Spectral',serif;font-style:italic;font-size:11px;color:#9a8a72;">{{ row.note }}</span>
@@ -419,7 +426,16 @@
         </div>
 
         <h1 style="margin:0 0 10px;font-family:'DM Serif Display',serif;font-size:48px;line-height:1.0;color:#3a2a1a;">{{ selName }}</h1>
-        <p style="margin:0 0 24px;font-family:'Spectral',serif;font-style:italic;font-size:17px;color:#6b5a42;line-height:1.65;">{{ selBlurb }}</p>
+        <p style="margin:0 0 24px;font-family:'Spectral',serif;font-style:italic;font-size:17px;color:#6b5a42;line-height:1.65;">
+          <sc-for list="{{ selBlurbParts }}" as="part" hint-placeholder-count="1">
+            <sc-if value="{{ part.isTerm }}" hint-placeholder-val="{{ false }}">
+              <span onClick="{{ part.onClick }}" title="{{ L.glossaryJump }}" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-decoration-color:#9a6b2f;text-underline-offset:3px;color:inherit;font-style:italic;">{{ part.text }}</span>
+            </sc-if>
+            <sc-if value="{{ part.isPlain }}" hint-placeholder-val="{{ true }}">
+              <span>{{ part.text }}</span>
+            </sc-if>
+          </sc-for>
+        </p>
         <sc-if value="{{ selHasOrigin }}" hint-placeholder-val="{{ false }}">
           <div style="background:#ede0c5;border:1.5px solid #c9b48a;border-left:4px solid #9a6b2f;border-radius:4px;padding:16px 20px;margin:0 0 24px;font-family:'Spectral',serif;font-size:14.5px;line-height:1.65;color:#5a4632;">{{ selOrigin }}</div>
         </sc-if>
@@ -435,15 +451,15 @@
           </div>
         </sc-if>
         <sc-if value="{{ selHasTwoWays }}" hint-placeholder-val="{{ false }}">
-          <div style="border:1.5px solid #8a4438;border-radius:6px;padding:16px 20px 18px;margin:0 0 24px;background:#f7ece2;">
+          <div style="border:1.5px solid #8a4438;border-radius:4px;padding:16px 20px 18px;margin:0 0 24px;background:#f7ece2;">
             <div style="font-family:'Spectral',serif;font-weight:600;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#8a4438;margin-bottom:14px;">{{ L.twoWaysLabel }}</div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;">
-              <div style="background:#fff;border:1px solid #e0cdb8;border-left:4px solid #9a3b1c;border-radius:5px;padding:13px 15px;">
+              <div style="background:#f8f0e0;border:1px solid #e0cdb8;border-left:4px solid #9a3b1c;border-radius:4px;padding:13px 15px;">
                 <div style="font-family:'Spectral',serif;font-weight:600;font-size:15px;color:#3a2a1a;margin-bottom:4px;">{{ L.braaiWay }}</div>
                 <div style="font-family:'Spectral',serif;font-size:12px;color:#9a8a72;margin-bottom:9px;">{{ L.braaiWaySub }}</div>
                 <div style="font-family:'Spectral',serif;font-size:14px;line-height:1.55;color:#3a2a1a;">{{ selBraai }}</div>
               </div>
-              <div style="background:#fff;border:1px solid #e0cdb8;border-left:4px solid #6b5a42;border-radius:5px;padding:13px 15px;">
+              <div style="background:#f8f0e0;border:1px solid #e0cdb8;border-left:4px solid #6b5a42;border-radius:4px;padding:13px 15px;">
                 <div style="font-family:'Spectral',serif;font-weight:600;font-size:15px;color:#3a2a1a;margin-bottom:4px;">{{ L.dutchWay }}</div>
                 <div style="font-family:'Spectral',serif;font-size:12px;color:#9a8a72;margin-bottom:9px;">{{ L.dutchWaySub }}</div>
                 <div style="font-family:'Spectral',serif;font-size:14px;line-height:1.55;color:#3a2a1a;">{{ selDutch }}</div>
@@ -585,7 +601,7 @@
               </div>
             </div>
 
-            <div style="margin-top:16px;border:1px solid #6b4a22;border-radius:8px;padding:14px 18px;background:#241910;">
+            <div style="margin-top:16px;border:1px solid #6b4a22;border-radius:4px;padding:14px 18px;background:#241910;">
               <span style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#d98a3d;">💡 {{ woodGuide.tipLabel }}: </span>
               <span style="font-family:'Spectral',serif;font-size:13px;color:#cbb795;line-height:1.6;">{{ woodGuide.tipText }}</span>
             </div>
@@ -633,7 +649,7 @@
               </sc-if>
             </div>
             <sc-if value="{{ scaleOpen }}" hint-placeholder-val="{{ false }}">
-              <div style="background:#eef0e6;border:1.5px solid #c2cdb0;border-radius:6px;padding:14px 16px;margin-bottom:16px;">
+              <div style="background:#eef0e6;border:1.5px solid #c2cdb0;border-radius:4px;padding:14px 16px;margin-bottom:16px;">
                 <div style="display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;">
                   <div>
                     <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5a6b4a;margin-bottom:5px;">{{ L.scaleBaseLabel }}</div>
@@ -683,7 +699,16 @@
                   <span>{{ phase.dur }}</span>
                   <span>{{ phase.temp }}</span>
                 </div>
-                <p style="margin:0 0 8px;font-family:'Spectral',serif;font-size:15px;color:#5a4632;line-height:1.72;">{{ phase.text }}</p>
+                <p style="margin:0 0 8px;font-family:'Spectral',serif;font-size:15px;color:#5a4632;line-height:1.72;">
+                  <sc-for list="{{ phase.textParts }}" as="part" hint-placeholder-count="1">
+                    <sc-if value="{{ part.isTerm }}" hint-placeholder-val="{{ false }}">
+                      <span onClick="{{ part.onClick }}" title="{{ L.glossaryJump }}" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-decoration-color:#9a6b2f;text-underline-offset:3px;color:inherit;">{{ part.text }}</span>
+                    </sc-if>
+                    <sc-if value="{{ part.isPlain }}" hint-placeholder-val="{{ true }}">
+                      <span>{{ part.text }}</span>
+                    </sc-if>
+                  </sc-for>
+                </p>
                 <sc-if value="{{ phase.hasBullets }}" hint-placeholder-val="{{ false }}">
                   <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:8px;">
                     <sc-for list="{{ phase.bullets }}" as="bullet" hint-placeholder-count="2">
@@ -705,7 +730,7 @@
 
         <!-- PROFI-TIPP (wiederverwendbar, ein Satz je Rezept) -->
         <sc-if value="{{ selShowProTip }}" hint-placeholder-val="{{ false }}">
-          <section style="background:#1c130b;border:1px solid #3a2a1a;border-left:4px solid #d98a3d;border-radius:6px;padding:20px 24px;margin-bottom:32px;">
+          <section style="background:#1c130b;border:1px solid #3a2a1a;border-left:4px solid #d98a3d;border-radius:4px;padding:20px 24px;margin-bottom:32px;">
             <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px;">
               <span style="font-size:19px;">💡</span>
               <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#d98a3d;margin:0;">{{ L.proTipLabel }}</h2>
@@ -718,10 +743,19 @@
         <sc-if value="{{ selHasTips }}" hint-placeholder-val="{{ false }}">
           <section style="background:#ede0c5;border:1.5px solid #c9b48a;border-radius:4px;padding:20px 24px;margin-bottom:32px;">
             <h2 style="font-family:'DM Serif Display',serif;font-size:22px;color:#3a2a1a;margin:0 0 12px;">{{ L.tips }}</h2>
-            <sc-for list="{{ selTips }}" as="tip" hint-placeholder-count="2">
+            <sc-for list="{{ selTipsParts }}" as="tip" hint-placeholder-count="2">
               <div style="display:flex;gap:12px;font-family:'Spectral',serif;font-size:14px;color:#5a4632;line-height:1.65;margin-bottom:9px;">
                 <span style="color:#9a3b1c;flex-shrink:0;margin-top:1px;">✦</span>
-                <span>{{ tip }}</span>
+                <span>
+                  <sc-for list="{{ tip.parts }}" as="part" hint-placeholder-count="1">
+                    <sc-if value="{{ part.isTerm }}" hint-placeholder-val="{{ false }}">
+                      <span onClick="{{ part.onClick }}" title="{{ L.glossaryJump }}" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-decoration-color:#9a6b2f;text-underline-offset:3px;color:inherit;">{{ part.text }}</span>
+                    </sc-if>
+                    <sc-if value="{{ part.isPlain }}" hint-placeholder-val="{{ true }}">
+                      <span>{{ part.text }}</span>
+                    </sc-if>
+                  </sc-for>
+                </span>
               </div>
             </sc-for>
           </section>
@@ -729,7 +763,7 @@
 
         <!-- NACHREIFUNG (Kalträuchern, wiederverwendbar) -->
         <sc-if value="{{ selShowMaturing }}" hint-placeholder-val="{{ false }}">
-          <section style="background:#1c130b;border:1px solid #3a2a1a;border-left:4px solid #5b6b78;border-radius:6px;padding:22px 26px;margin-bottom:32px;">
+          <section style="background:#1c130b;border:1px solid #3a2a1a;border-left:4px solid #5b6b78;border-radius:4px;padding:22px 26px;margin-bottom:32px;">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
               <span style="font-size:20px;">🌡️</span>
               <h2 style="font-family:'DM Serif Display',serif;font-size:22px;color:#f3ead7;margin:0;">{{ L.maturingLabel }}</h2>
@@ -743,7 +777,7 @@
               </sc-for>
             </div>
             <a href="reifekammer.html" style="display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-family:'Spectral',serif;font-size:13px;color:#8aa0b0;text-decoration:none;border-bottom:1px solid rgba(138,160,176,0.4);padding-bottom:1px;">{{ L.maturingChamber }} →</a>
-            <div style="display:flex;gap:11px;margin-top:16px;padding:13px 15px;background:#241910;border-radius:6px;font-family:'Spectral',serif;">
+            <div style="display:flex;gap:11px;margin-top:16px;padding:13px 15px;background:#241910;border-radius:4px;font-family:'Spectral',serif;">
               <span style="color:#d98a3d;flex-shrink:0;font-size:15px;">★</span>
               <span style="font-size:13px;color:#cbb795;line-height:1.6;">{{ L.maturingTip }}</span>
             </div>
@@ -809,7 +843,7 @@
           <h2 style="font-family:'DM Serif Display',serif;font-size:22px;color:#3a2a1a;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid #c9b48a;">{{ L.cookLog }}</h2>
 
           <!-- Neue Charge erfassen -->
-          <div style="background:#faf5e8;border:1.5px solid #c9b48a;border-radius:6px;padding:16px 18px;margin-bottom:18px;">
+          <div style="background:#faf5e8;border:1.5px solid #c9b48a;border-radius:4px;padding:16px 18px;margin-bottom:18px;">
             <div style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#9a6b2f;margin-bottom:12px;">{{ L.batchNew }}</div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:10px;">
               <label style="display:flex;flex-direction:column;gap:4px;font-family:'Spectral',serif;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#9a8a72;">{{ L.bWeight }}
@@ -838,7 +872,7 @@
           <sc-if value="{{ hasBatches }}" hint-placeholder-val="{{ false }}">
             <div style="display:flex;flex-direction:column;gap:12px;">
               <sc-for list="{{ batchList }}" as="b" hint-placeholder-count="2">
-                <div style="background:#fff;border:1.5px solid #d4c29a;border-left:4px solid #5a6b4a;border-radius:5px;padding:13px 16px;">
+                <div style="background:#f8f0e0;border:1.5px solid #d4c29a;border-left:4px solid #5a6b4a;border-radius:4px;padding:13px 16px;">
                   <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px;">
                     <div style="display:flex;align-items:baseline;gap:10px;">
                       <span style="font-family:'DM Serif Display',serif;font-size:17px;color:#3a2a1a;">{{ L.bCharge }} #{{ b.n }}</span>
@@ -958,12 +992,12 @@
           <div style="margin-bottom:30px;">
             <sc-if value="{{ hasDraftImage }}" hint-placeholder-val="{{ false }}">
               <div style="position:relative;display:inline-block;max-width:100%;">
-                <img src="{{ draftImage }}" loading="lazy" decoding="async" style="max-width:100%;max-height:300px;border-radius:5px;border:1.5px solid #c9b48a;display:block;" />
+                <img src="{{ draftImage }}" loading="lazy" decoding="async" style="max-width:100%;max-height:300px;border-radius:4px;border:1.5px solid #c9b48a;display:block;" />
                 <button onClick="{{ onRemoveDraftImage }}" style="position:absolute;top:8px;right:8px;background:#2a1a0e;color:#f3ead7;border:none;border-radius:3px;padding:6px 11px;font-family:'Spectral',serif;font-size:12px;cursor:pointer;">{{ L.removeImage }}</button>
               </div>
             </sc-if>
             <sc-if value="{{ noDraftImage }}" hint-placeholder-val="{{ false }}">
-              <label style="display:inline-flex;align-items:center;gap:9px;padding:14px 22px;border:1.5px dashed #c9b48a;border-radius:5px;cursor:pointer;font-family:'Spectral',serif;font-size:14px;color:#6b5a42;background:#f8f0e0;" style-hover="background:#ede0c5;">
+              <label style="display:inline-flex;align-items:center;gap:9px;padding:14px 22px;border:1.5px dashed #c9b48a;border-radius:4px;cursor:pointer;font-family:'Spectral',serif;font-size:14px;color:#6b5a42;background:#f8f0e0;" style-hover="background:#ede0c5;">
                 {{ L.chooseImage }}
                 <input type="file" accept="image/*" onChange="{{ onImageChange }}" style="display:none;" />
               </label>
@@ -985,7 +1019,7 @@
           <h2 style="font-family:'DM Serif Display',serif;font-size:24px;color:#3a2a1a;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid #c9b48a;">{{ L.method }}</h2>
           <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:12px;">
             <sc-for list="{{ draftPhases }}" as="ph" hint-placeholder-count="2">
-              <div style="border:1.5px solid #c9b48a;border-radius:5px;padding:16px;background:#f8f0e0;">
+              <div style="border:1.5px solid #c9b48a;border-radius:4px;padding:16px;background:#f8f0e0;">
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
                   <span style="font-family:'DM Serif Display',serif;font-size:18px;color:#9a3b1c;">{{ L.step }} {{ ph.num }}</span>
                   <div style="display:flex;gap:5px;">
@@ -1121,12 +1155,12 @@
           <button onClick="{{ onCloseAI }}" title="{{ L.chamberClose }}" style="flex-shrink:0;background:transparent;border:1.5px solid #b09a72;color:#6b5a42;border-radius:50%;width:34px;height:34px;font-size:15px;cursor:pointer;line-height:1;">✕</button>
         </div>
         <div style="padding:18px 24px 24px;display:flex;flex-direction:column;gap:14px;">
-          <div style="display:flex;gap:10px;background:#f7e4d0;border:1px solid #d99a5a;border-left:4px solid #9a3b1c;border-radius:5px;padding:11px 13px;">
+          <div style="display:flex;gap:10px;background:#f7e4d0;border:1px solid #d99a5a;border-left:4px solid #9a3b1c;border-radius:4px;padding:11px 13px;">
             <span aria-hidden="true" style="font-size:15px;line-height:1.4;">⚠️</span>
             <div style="font-family:'Spectral',serif;font-size:12.5px;line-height:1.55;color:#5a3a1a;">{{ L.aiDisclaimer }}</div>
           </div>
           <sc-if value="{{ aiUnavailable }}" hint-placeholder-val="{{ false }}">
-            <div style="font-family:'Spectral',serif;font-size:12.5px;line-height:1.55;color:#6b5a42;background:#efe4cc;border:1px dashed #b09a72;border-radius:5px;padding:10px 13px;">{{ L.aiOffline }}</div>
+            <div style="font-family:'Spectral',serif;font-size:12.5px;line-height:1.55;color:#6b5a42;background:#efe4cc;border:1px dashed #b09a72;border-radius:4px;padding:10px 13px;">{{ L.aiOffline }}</div>
           </sc-if>
           <div style="font-family:'Spectral',serif;font-size:13px;color:#6b5a42;line-height:1.5;">{{ L.aiPrompt }}</div>
           <textarea value="{{ aiInput }}" onInput="{{ onAiInput }}" placeholder="{{ L.aiPlaceholder }}" rows="3" style="width:100%;box-sizing:border-box;font-family:'Spectral',serif;font-size:15px;color:#3a2a1a;background:#faf5e8;border:1.5px solid #c9b48a;border-radius:5px;padding:11px 13px;resize:vertical;line-height:1.5;"></textarea>
@@ -1142,7 +1176,7 @@
             </sc-if>
           </div>
           <sc-if value="{{ aiHasError }}" hint-placeholder-val="{{ false }}">
-            <div style="font-family:'Spectral',serif;font-size:13px;color:#9a3b1c;background:#f7e4d0;border:1px solid #d99a5a;border-radius:5px;padding:11px 13px;line-height:1.5;">{{ aiError }}</div>
+            <div style="font-family:'Spectral',serif;font-size:13px;color:#9a3b1c;background:#f7e4d0;border:1px solid #d99a5a;border-radius:4px;padding:11px 13px;line-height:1.5;">{{ aiError }}</div>
           </sc-if>
           <sc-if value="{{ aiHasResult }}" hint-placeholder-val="{{ false }}">
             <div style="border-top:1px dashed #c9b48a;padding-top:18px;display:flex;flex-direction:column;gap:15px;">
@@ -1210,7 +1244,7 @@
                 </div>
               </sc-if>
               <sc-if value="{{ aiResult.hasSafety }}" hint-placeholder-val="{{ false }}">
-                <div style="background:#f7e4d0;border:1px solid #d99a5a;border-left:4px solid #9a3b1c;border-radius:5px;padding:13px 15px;">
+                <div style="background:#f7e4d0;border:1px solid #d99a5a;border-left:4px solid #9a3b1c;border-radius:4px;padding:13px 15px;">
                   <div style="display:flex;gap:8px;align-items:center;font-family:'Spectral',serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#9a3b1c;margin-bottom:8px;"><span aria-hidden="true">⚠️</span>{{ L.aiSafety }}</div>
                   <ul style="margin:0;padding-left:18px;">
                     <sc-for list="{{ aiResult.safety }}" as="sf" hint-placeholder-count="2">
@@ -1310,7 +1344,7 @@
       </div>
 
       <!-- Inhalt -->
-      <div style="flex:1;overflow-y:auto;">
+      <div data-manual-scroll="1" style="flex:1;overflow-y:auto;scroll-behavior:smooth;">
         <div style="max-width:920px;margin:0 auto;padding:22px 32px 80px;">
 
           <sc-if value="{{ manualNoResults }}" hint-placeholder-val="{{ false }}">
@@ -1389,7 +1423,7 @@
 
                   <!-- Einträge -->
                   <sc-for list="{{ sec.entries }}" as="entry" hint-placeholder-count="3">
-                    <div style="margin-top:18px;">
+                    <div id="{{ entry.anchorId }}" style="margin-top:18px;border-radius:6px;transition:background-color 0.6s ease,box-shadow 0.6s ease;background-color:{{ entry.highlightBg }};box-shadow:{{ entry.highlightShadow }};padding:{{ entry.highlightPad }};">
                       <div style="font-family:'DM Serif Display',serif;font-size:16.5px;color:#9a3b1c;margin-bottom:5px;">{{ entry.h }}</div>
                       <sc-for list="{{ entry.b }}" as="para" hint-placeholder-count="1">
                         <p style="font-family:'Spectral',serif;font-size:14.5px;line-height:1.6;color:#4a3a2a;margin:0 0 6px;">{{ para }}</p>
@@ -1436,7 +1470,7 @@ class Component extends DCLogic {
     lang: 'de',
     betaDismissed: false,
     showChamber: false,
-    showManual: false, manualQuery: '', manualOpen: {},
+    showManual: false, manualQuery: '', manualOpen: {}, manualHighlightId: null,
     showDisclaimerGate: false, showDisclaimerInfo: false,
     showAI: false, aiInput: '', aiLoading: false, aiError: '', aiResult: null, aiAvailable: false,
     saveBackupHint: false,
@@ -1444,6 +1478,86 @@ class Component extends DCLogic {
   _iv = null;
 
   componentWillUnmount() { clearInterval(this._iv); }
+
+  componentDidUpdate() {
+    if (this._glossScrollPending) {
+      this._glossScrollPending = false;
+      const id = this.state.manualHighlightId;
+      if (id) {
+        const el = document.getElementById('gloss-' + id);
+        const container = el ? el.closest('[data-manual-scroll]') : null;
+        if (el && container) {
+          const cRect = container.getBoundingClientRect();
+          const eRect = el.getBoundingClientRect();
+          container.scrollTop += (eRect.top - cRect.top) - 90;
+        }
+        clearTimeout(this._glossHiTimer);
+        this._glossHiTimer = setTimeout(() => { if (this.state.manualHighlightId === id) this.setState({ manualHighlightId: null }); }, 2600);
+      }
+    }
+  }
+
+  _glossaryTerms() {
+    return [
+      { id: 'kaltraeuchern', variants: ['Kalträuchern'] },
+      { id: 'warmraeuchern', variants: ['Warmräuchern'] },
+      { id: 'heissraeuchern', variants: ['Heißräuchern'] },
+      { id: 'lowslow', variants: ['Low & Slow'] },
+      { id: 'poekeln', variants: ['Nasspökeln', 'Trockenpökeln', 'Spritzpökelung', 'Spritzpökeln', 'gepökelt', 'Pökeln'] },
+      { id: 'nps', variants: ['NPS'] },
+      { id: 'umroetung', variants: ['Umrötung'] },
+      { id: 'pellicle', variants: ['Pellicle'] },
+      { id: 'kerntemperatur', variants: ['Kerntemperatur'] },
+      { id: 'pittemperatur', variants: ['Pit-Temperatur'] },
+      { id: 'stall', variants: ['Stall/Plateau', 'Stall'] },
+      { id: 'bark', variants: ['Bark'] },
+      { id: 'rub', variants: ['Rub'] },
+      { id: 'lake', variants: ['Lake'] },
+      { id: 'mop', variants: ['Spritzen'] },
+      { id: 'sparbrand', variants: ['Sparbrand', 'Räuchermehl'] },
+      { id: 'chunkschips', variants: ['Chunks & Chips', 'Chunks', 'Chips'] },
+      { id: 'minionring', variants: ['Minion-Ring', 'Minion-Ring/Snake'] },
+      { id: 'wassermethode', variants: ['Wassermethode'] },
+      { id: 'biegtest', variants: ['Biegtest'] },
+      { id: 'biltong', variants: ['Biltong'] },
+      { id: 'awwert', variants: ['aw-Wert'] },
+      { id: 'starterkulturen', variants: ['Starterkulturen', 'Starterkultur'] },
+    ];
+  }
+
+  _openGlossaryTerm(termId) {
+    this._glossScrollPending = true;
+    this.setState(st => ({ showManual: true, showTools: false, manualQuery: '', manualOpen: { ...(st.manualOpen || {}), glossary: true }, manualHighlightId: termId }));
+  }
+
+  // Zerlegt einen Fließtext in Segmente; Fachbegriffe aus dem Glossar werden als klickbare Teile markiert
+  // (nur beim ersten Auftreten je Begriff und Rezeptaufruf, per usedSet nachverfolgt).
+  _linkify(text, usedSet) {
+    if (!text) return [];
+    const dict = this._glossaryTerms();
+    const variants = [];
+    dict.forEach(d => d.variants.forEach(v => variants.push({ v, id: d.id })));
+    variants.sort((a, b) => b.v.length - a.v.length);
+    const esc = s => s.replace(/[.*+?^${}()|[\]\\\/]/g, '\\$&');
+    const re = new RegExp('(' + variants.map(v => esc(v.v)).join('|') + ')', 'gi');
+    const parts = []; let lastIndex = 0, m, i = 0;
+    while ((m = re.exec(text))) {
+      if (m.index > lastIndex) parts.push({ key: 'k' + (i++), isTerm: false, isPlain: true, text: text.slice(lastIndex, m.index) });
+      const matched = m[0];
+      const entry = variants.find(v => v.v.toLowerCase() === matched.toLowerCase());
+      const termId = entry ? entry.id : null;
+      const already = termId && usedSet.has(termId);
+      if (termId && !already) {
+        usedSet.add(termId);
+        parts.push({ key: 'k' + (i++), isTerm: true, isPlain: false, text: matched, termId, onClick: () => this._openGlossaryTerm(termId) });
+      } else {
+        parts.push({ key: 'k' + (i++), isTerm: false, isPlain: true, text: matched });
+      }
+      lastIndex = re.lastIndex;
+    }
+    if (lastIndex < text.length) parts.push({ key: 'k' + (i++), isTerm: false, isPlain: true, text: text.slice(lastIndex) });
+    return parts;
+  }
 
   async componentDidMount() {
     try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {}
@@ -2250,6 +2364,7 @@ class Component extends DCLogic {
         manualSub: p('Funktionen, Fachbegriffe & Sicherheit — Schritt für Schritt erklärt.','Features, terms & safety — explained step by step.'),
         manualSearch: p('Anleitung durchsuchen … (z. B. „NPS", „Kerntemperatur")','Search the guide … (e.g. "cure salt", "core temp")'),
         manualNoRes: p('Kein Treffer. Versuche einen anderen Begriff.','No match. Try a different term.'),
+        glossaryJump: p('Begriff im Glossar nachschlagen','Look up term in the glossary'),
         manualClose: p('Schließen','Close'),
         manualHint: p('Tipp: Abschnitte an- und zuklappen oder oben suchen.','Tip: expand/collapse sections or search above.'),
         chamberHint: p('Bauanleitung: Reifekammer für Schinken, Salami & Biltong','Build guide: aging chamber for ham, salami & biltong'),
@@ -2654,52 +2769,54 @@ class Component extends DCLogic {
         intro: p('Die wichtigsten Begriffe rund ums Räuchern, Pökeln und Trocknen — kurz erklärt.',
                  'The most important terms around smoking, curing and drying — briefly explained.'),
         entries: [
-          { h: p('Kalträuchern', 'Cold smoking'), b: [p('Räuchern unter ~25 °C, meist 15–22 °C, in mehreren Durchgängen. Das Lebensmittel wird nicht gegart, sondern konserviert und aromatisiert (z. B. Lachs, Salami, Speck). Erfordert vorheriges Pökeln.',
+          { id:'kaltraeuchern', h: p('Kalträuchern', 'Cold smoking'), b: [p('Räuchern unter ~25 °C, meist 15–22 °C, in mehreren Durchgängen. Das Lebensmittel wird nicht gegart, sondern konserviert und aromatisiert (z. B. Lachs, Salami, Speck). Erfordert vorheriges Pökeln.',
                  'Smoking below ~25 °C, usually 15–22 °C, in several sessions. The food is not cooked but preserved and flavored (e.g. salmon, salami, bacon). Requires prior curing.')], bullets: [] },
-          { h: p('Warmräuchern', 'Warm smoking'), b: [p('Räuchern bei etwa 25–50 °C. Zwischenstufe zwischen kalt und heiß, z. B. für bestimmte Würste und Käse.',
+          { id:'warmraeuchern', h: p('Warmräuchern', 'Warm smoking'), b: [p('Räuchern bei etwa 25–50 °C. Zwischenstufe zwischen kalt und heiß, z. B. für bestimmte Würste und Käse.',
                  'Smoking at roughly 25–50 °C. A middle ground between cold and hot, e.g. for certain sausages and cheese.')], bullets: [] },
-          { h: p('Heißräuchern', 'Hot smoking'), b: [p('Räuchern bei etwa 50–90 °C. Das Lebensmittel wird gleichzeitig gegart und geräuchert (z. B. Forelle, Makrele). Auf die Kerntemperatur achten.',
+          { id:'heissraeuchern', h: p('Heißräuchern', 'Hot smoking'), b: [p('Räuchern bei etwa 50–90 °C. Das Lebensmittel wird gleichzeitig gegart und geräuchert (z. B. Forelle, Makrele). Auf die Kerntemperatur achten.',
                  'Smoking at roughly 50–90 °C. The food is cooked and smoked at the same time (e.g. trout, mackerel). Mind the core temperature.')], bullets: [] },
-          { h: p('Low & Slow', 'Low & Slow'), b: [p('BBQ-Methode bei niedriger Temperatur (ca. 100–130 °C) über viele Stunden. Bindegewebe wird zart, typisch für Pulled Pork, Brisket und Ribs.',
+          { id:'lowslow', h: p('Low & Slow', 'Low & Slow'), b: [p('BBQ-Methode bei niedriger Temperatur (ca. 100–130 °C) über viele Stunden. Bindegewebe wird zart, typisch für Pulled Pork, Brisket und Ribs.',
                  'BBQ method at low temperature (approx. 100–130 °C) over many hours. Connective tissue turns tender — typical for pulled pork, brisket and ribs.')], bullets: [] },
-          { h: p('Pökeln', 'Curing'), b: [p('Haltbarmachen mit Salz — trocken (Fleisch mit Salz einreiben), nass (in Lake einlegen) oder per Spritzpökelung. Entzieht Wasser, hemmt Keime und ist bei kaltgeräucherten Produkten unverzichtbar.',
+          { id:'poekeln', h: p('Pökeln', 'Curing'), b: [p('Haltbarmachen mit Salz — trocken (Fleisch mit Salz einreiben), nass (in Lake einlegen) oder per Spritzpökelung. Entzieht Wasser, hemmt Keime und ist bei kaltgeräucherten Produkten unverzichtbar.',
                  'Preserving with salt — dry (rubbing meat with salt), wet (submerging in brine) or by injection. It draws out water, inhibits microbes and is essential for cold-smoked products.')], bullets: [] },
-          { h: p('NPS (Nitritpökelsalz)', 'Cure salt (nitrite)'), b: [p('Speisesalz mit einem kleinen Anteil Natriumnitrit. Sorgt für Umrötung, typisches Pökelaroma und Schutz vor Botulismus. Exakt abwiegen und geltende Nitrit-Höchstmengen einhalten.',
+          { id:'nps', h: p('NPS (Nitritpökelsalz)', 'Cure salt (nitrite)'), b: [p('Speisesalz mit einem kleinen Anteil Natriumnitrit. Sorgt für Umrötung, typisches Pökelaroma und Schutz vor Botulismus. Exakt abwiegen und geltende Nitrit-Höchstmengen einhalten.',
                  'Table salt with a small share of sodium nitrite. It provides the cured color, the typical cured flavor and protection against botulism. Weigh precisely and observe nitrite limits.')], bullets: [] },
-          { h: p('Umrötung', 'Cured color / reddening'), b: [p('Die stabile rote Farbe gepökelter Ware, ausgelöst durch das Nitrit im NPS. Braucht Zeit und kühle Temperaturen.',
+          { id:'umroetung', h: p('Umrötung', 'Cured color / reddening'), b: [p('Die stabile rote Farbe gepökelter Ware, ausgelöst durch das Nitrit im NPS. Braucht Zeit und kühle Temperaturen.',
                  'The stable red color of cured products, caused by the nitrite in cure salt. It needs time and cool temperatures.')], bullets: [] },
-          { h: p('Pellicle (Abtrocknen)', 'Pellicle'), b: [p('Eine leicht klebrige, trockene Haut auf der Oberfläche, die sich beim luftigen Abtrocknen (kühl, mit Ventilator) bildet. An ihr haftet der Rauch besser — wichtig vor dem Räuchern.',
+          { id:'pellicle', h: p('Pellicle (Abtrocknen)', 'Pellicle'), b: [p('Eine leicht klebrige, trockene Haut auf der Oberfläche, die sich beim luftigen Abtrocknen (kühl, mit Ventilator) bildet. An ihr haftet der Rauch besser — wichtig vor dem Räuchern.',
                  'A slightly tacky, dry skin that forms on the surface during airy drying (cool, with a fan). Smoke adheres to it better — important before smoking.')], bullets: [] },
-          { h: p('Kerntemperatur', 'Core temperature'), b: [p('Die Temperatur im Inneren des Lebensmittels, gemessen mit einem Einstichthermometer. Das entscheidende Kriterium für „gar" und für Sicherheit — wichtiger als die Zeit.',
+          { id:'kerntemperatur', h: p('Kerntemperatur', 'Core temperature'), b: [p('Die Temperatur im Inneren des Lebensmittels, gemessen mit einem Einstichthermometer. Das entscheidende Kriterium für „gar" und für Sicherheit — wichtiger als die Zeit.',
                  'The temperature inside the food, measured with a probe thermometer. The decisive criterion for "done" and for safety — more important than time.')], bullets: [] },
-          { h: p('Pit-Temperatur', 'Pit temperature'), b: [p('Die Temperatur im Garraum des Smokers/Grills. Bei Low & Slow deutlich höher als die Kerntemperatur des Fleisches.',
+          { id:'pittemperatur', h: p('Pit-Temperatur', 'Pit temperature'), b: [p('Die Temperatur im Garraum des Smokers/Grills. Bei Low & Slow deutlich höher als die Kerntemperatur des Fleisches.',
                  'The temperature inside the smoker/grill chamber. In Low & Slow it is much higher than the meat\u2019s core temperature.')], bullets: [] },
-          { h: p('Stall / Plateau', 'Stall / plateau'), b: [p('Beim Low & Slow eine Phase, in der die Kerntemperatur lange stehen bleibt, weil verdunstendes Wasser das Fleisch kühlt. Aussitzen — oder in Folie einpacken („Texas Crutch").',
+          { id:'stall', h: p('Stall / Plateau', 'Stall / plateau'), b: [p('Beim Low & Slow eine Phase, in der die Kerntemperatur lange stehen bleibt, weil verdunstendes Wasser das Fleisch kühlt. Aussitzen — oder in Folie einpacken („Texas Crutch").',
                  'In Low & Slow a phase where the core temperature stalls for a long time because evaporating moisture cools the meat. Wait it out — or wrap in foil ("Texas crutch").')], bullets: [] },
-          { h: p('Bark', 'Bark'), b: [p('Die dunkle, würzige Kruste, die sich beim langen Räuchern aus Rub und Rauch bildet.',
+          { id:'bark', h: p('Bark', 'Bark'), b: [p('Die dunkle, würzige Kruste, die sich beim langen Räuchern aus Rub und Rauch bildet.',
                  'The dark, savory crust that forms from rub and smoke during long smoking.')], bullets: [] },
-          { h: p('Rub', 'Rub'), b: [p('Eine trockene Gewürzmischung, die vor dem Garen auf das Fleisch aufgetragen wird.',
+          { id:'rub', h: p('Rub', 'Rub'), b: [p('Eine trockene Gewürzmischung, die vor dem Garen auf das Fleisch aufgetragen wird.',
                  'A dry spice mix applied to the meat before cooking.')], bullets: [] },
-          { h: p('Lake / Brine', 'Brine'), b: [p('Eine Salz-(und oft Zucker-)Lösung zum Nasspökeln oder Aromatisieren. Prozentangaben beziehen sich auf den Salzanteil im Wasser (z. B. 6 %).',
+          { id:'lake', h: p('Lake / Brine', 'Brine'), b: [p('Eine Salz-(und oft Zucker-)Lösung zum Nasspökeln oder Aromatisieren. Prozentangaben beziehen sich auf den Salzanteil im Wasser (z. B. 6 %).',
                  'A salt (and often sugar) solution for wet curing or flavoring. Percentages refer to the salt share in the water (e.g. 6%).')], bullets: [] },
-          { h: p('Mop / Spritzen', 'Mop / spritz'), b: [p('Während des Garens wird die Oberfläche mit Flüssigkeit befeuchtet, damit sie nicht austrocknet und Aromen aufnimmt.',
+          { id:'mop', h: p('Mop / Spritzen', 'Mop / spritz'), b: [p('Während des Garens wird die Oberfläche mit Flüssigkeit befeuchtet, damit sie nicht austrocknet und Aromen aufnimmt.',
                  'During cooking the surface is moistened with liquid so it doesn\u2019t dry out and takes on flavor.')], bullets: [] },
-          { h: p('Sparbrand / Räuchermehl', 'Cold smoke generator / smoke dust'), b: [p('Für kalten Rauch: Feines Räuchermehl glimmt in einer Räucherschnecke (Sparbrand) über viele Stunden bei sehr wenig Hitze.',
+          { id:'sparbrand', h: p('Sparbrand / Räuchermehl', 'Cold smoke generator / smoke dust'), b: [p('Für kalten Rauch: Feines Räuchermehl glimmt in einer Räucherschnecke (Sparbrand) über viele Stunden bei sehr wenig Hitze.',
                  'For cold smoke: fine smoke dust smoulders in a maze-shaped generator for many hours with very little heat.')], bullets: [] },
-          { h: p('Chunks & Chips', 'Chunks & chips'), b: [p('Holzstücke (Chunks) für langen Rauch, Holzspäne (Chips) für kurzen, schnellen Rauch. Immer trockenes, unbehandeltes Holz verwenden.',
+          { id:'chunkschips', h: p('Chunks & Chips', 'Chunks & chips'), b: [p('Holzstücke (Chunks) für langen Rauch, Holzspäne (Chips) für kurzen, schnellen Rauch. Immer trockenes, unbehandeltes Holz verwenden.',
                  'Wood chunks for long smoke, wood chips for short, quick smoke. Always use dry, untreated wood.')], bullets: [] },
-          { h: p('Minion-Ring / Snake', 'Minion ring / snake'), b: [p('Anordnung der Kohle, bei der nur ein Ende angezündet wird und sich die Glut langsam weiterfrisst — für stundenlange, gleichmäßige Hitze ohne Nachlegen.',
+          { id:'minionring', h: p('Minion-Ring / Snake', 'Minion ring / snake'), b: [p('Anordnung der Kohle, bei der nur ein Ende angezündet wird und sich die Glut langsam weiterfrisst — für stundenlange, gleichmäßige Hitze ohne Nachlegen.',
                  'A coal layout where only one end is lit and the embers slowly travel along — for hours of even heat without refueling.')], bullets: [] },
-          { h: p('Wassermethode', 'Water pan method'), b: [p('Eine Wasserschale im Smoker stabilisiert die Temperatur und hält die Luft feucht, damit das Gargut saftig bleibt. Typisch beim Weber Smokey Mountain.',
+          { id:'wassermethode', h: p('Wassermethode', 'Water pan method'), b: [p('Eine Wasserschale im Smoker stabilisiert die Temperatur und hält die Luft feucht, damit das Gargut saftig bleibt. Typisch beim Weber Smokey Mountain.',
                  'A water pan in the smoker stabilizes temperature and keeps the air moist so the food stays juicy. Typical of the Weber Smokey Mountain.')], bullets: [] },
-          { h: p('Indirekt / Direkt', 'Indirect / direct'), b: [p('Direkt: über der Glut, hohe Hitze. Indirekt: neben der Glut, sanfte Umluft-Hitze — die Basis für Low & Slow und Räuchern.',
+          { id:'indirekt', h: p('Indirekt / Direkt', 'Indirect / direct'), b: [p('Direkt: über der Glut, hohe Hitze. Indirekt: neben der Glut, sanfte Umluft-Hitze — die Basis für Low & Slow und Räuchern.',
                  'Direct: over the coals, high heat. Indirect: beside the coals, gentle convection heat — the basis for Low & Slow and smoking.')], bullets: [] },
-          { h: p('Biegtest', 'Bend test'), b: [p('Prüfmethode für Dörrfleisch/Jerky: Ein fertiges Stück biegt sich und reißt leicht ein, bricht aber nicht. Erst nach dem Abkühlen beurteilen.',
+          { id:'biegtest', h: p('Biegtest', 'Bend test'), b: [p('Prüfmethode für Dörrfleisch/Jerky: Ein fertiges Stück biegt sich und reißt leicht ein, bricht aber nicht. Erst nach dem Abkühlen beurteilen.',
                  'Doneness check for jerky: a finished piece bends and cracks slightly but does not snap. Judge only after it has cooled.')], bullets: [] },
-          { h: p('Biltong', 'Biltong'), b: [p('Südafrikanisches, luftgetrocknetes und gewürztes Fleisch. Wird nicht geräuchert, sondern in kühler, luftiger Umgebung getrocknet.',
+          { id:'biltong', h: p('Biltong', 'Biltong'), b: [p('Südafrikanisches, luftgetrocknetes und gewürztes Fleisch. Wird nicht geräuchert, sondern in kühler, luftiger Umgebung getrocknet.',
                  'South African air-dried, spiced meat. Not smoked but dried in a cool, airy environment.')], bullets: [] },
-          { h: p('aw-Wert (Wasseraktivität)', 'Water activity (aw)'), b: [p('Maß für das frei verfügbare Wasser im Lebensmittel. Je niedriger, desto haltbarer — Mikroorganismen brauchen Wasser zum Wachsen.',
+          { id:'awwert', h: p('aw-Wert (Wasseraktivität)', 'Water activity (aw)'), b: [p('Maß für das frei verfügbare Wasser im Lebensmittel. Je niedriger, desto haltbarer — Mikroorganismen brauchen Wasser zum Wachsen.',
                  'A measure of the freely available water in food. The lower it is, the longer it keeps — microorganisms need water to grow.')], bullets: [] },
+          { id:'starterkulturen', h: p('Starterkulturen', 'Starter cultures'), b: [p('Ausgewählte, gefriergetrocknete Bakterienkulturen (z. B. Milchsäurebakterien wie Lactobacillus, dazu oft Schutzhefen/-schimmel), die man luftgetrockneten Rohwürsten wie Saucisson sec oder Salami zusetzt. Sie senken gezielt den pH-Wert (macht das Produkt sicherer vor Botulismus & Co.) und sorgen für das typische, leicht säuerliche Aroma sowie eine stabile Umrötung. Werden in warmem Wasser aktiviert und der Fleisch-Fett-Masse untergemischt, bevor sie in den Naturdarm gefüllt wird.',
+                 'Selected, freeze-dried bacterial cultures (e.g. lactic acid bacteria like Lactobacillus, often paired with protective yeasts/moulds) added to air-dried raw sausages such as saucisson sec or salami. They deliberately lower the pH (making the product safer against botulism and other pathogens) and create the typical, slightly tangy aroma plus a stable cured color. Activated in warm water and mixed into the meat-fat mass before it is stuffed into natural casing.')], bullets: [] },
         ],
       },
       {
@@ -2824,6 +2941,7 @@ class Component extends DCLogic {
     }));
 
     const selR = selectedId ? allRecipes.find(r => r.id === selectedId) : null;
+    const glossUsed = new Set();
     const sel = selR ? {
       ...selR,
       methodLabel: M_LABELS[selR.method] || selR.method,
@@ -2831,7 +2949,7 @@ class Component extends DCLogic {
       phases: selR.phases.map(p => {
         const ts = this._parseDur(p.dur);
         const hasTimer = ts > 0 && ts <= 57600;
-        return { ...p, kindLabel: PH_L[p.kind] || p.kind, kindColor: PH_C[p.kind] || '#7a6f60', hasBullets: !!(p.bullets && p.bullets.length > 0), hasTimer, onTimerStart: hasTimer ? () => this._startTimer(p.label, ts, selectedId) : null };
+        return { ...p, kindLabel: PH_L[p.kind] || p.kind, kindColor: PH_C[p.kind] || '#7a6f60', hasBullets: !!(p.bullets && p.bullets.length > 0), hasTimer, onTimerStart: hasTimer ? () => this._startTimer(p.label, ts, selectedId) : null, textParts: this._linkify(p.text, glossUsed) };
       }),
     } : null;
 
@@ -2989,7 +3107,12 @@ class Component extends DCLogic {
       const secMatchesSelf = mq && secText.includes(mq);
       const entries = (sec.entries || [])
         .filter(e => secMatchesSelf ? true : matchEntry(e))
-        .map(e => ({ h: e.h, b: e.b || [], bullets: e.bullets || [] }));
+        .map(e => {
+          const hi = !!(e.id && e.id === this.state.manualHighlightId);
+          return { h: e.h, b: e.b || [], bullets: e.bullets || [], anchorId: e.id ? ('gloss-' + e.id) : '',
+            highlightBg: hi ? '#f7e6c6' : 'transparent', highlightShadow: hi ? 'inset 0 0 0 1.5px #d98a3d' : 'none',
+            highlightPad: hi ? '10px 12px' : '0' };
+        });
       const hasMatch = !mq || secMatchesSelf || entries.length > 0;
       const isOpen = mq ? true : !!manualOpenState[sec.id];
       return {
@@ -3090,6 +3213,7 @@ class Component extends DCLogic {
       // Detail
       selName:           sel ? sel.name : '',
       selBlurb:          sel ? sel.blurb : '',
+      selBlurbParts:     sel ? this._linkify(sel.blurb, glossUsed) : [],
       selHasOrigin:      !!(sel && sel.origin),
       selOrigin:         (sel && sel.origin) ? sel.origin : '',
       selHasAuth:        !!(sel && sel.authenticity),
@@ -3119,6 +3243,7 @@ class Component extends DCLogic {
       onScaleWeight:     (e) => this.setState({ scaleWeight: e.target.value }),
       onScaleReset:      () => this.setState({ scaleWeight: '' }),
       selTips:           sel ? (sel.tips || []) : [],
+      selTipsParts:      sel ? (sel.tips || []).map((t, i) => ({ key: 'tip' + i, parts: this._linkify(t, glossUsed) })) : [],
       selPitLabel:       D.pitLabel(sel ? sel.method : ''),
       selWoodLabel:      D.woodLabel(sel ? sel.method : ''),
       selHasCore:        sel ? !!sel.core : false,
