@@ -98,6 +98,9 @@
       <button onClick="{{ onOpenManual }}" title="{{ L.manualTitle }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #6b5a42;background:transparent;color:#c9a87a;white-space:nowrap;font-weight:600;display:flex;align-items:center;gap:7px;" style-hover="background:rgba(201,168,122,0.12);">
         <span aria-hidden="true" style="font-size:14px;line-height:1;">📖</span>{{ L.manual }}
       </button>
+      <button onClick="{{ onOpenSides }}" title="{{ L.sidesTitle }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #6b8a4a;background:transparent;color:#c9a87a;white-space:nowrap;font-weight:600;display:flex;align-items:center;gap:7px;" style-hover="background:rgba(107,138,74,0.12);">
+        <span aria-hidden="true" style="font-size:14px;line-height:1;">🥗</span>{{ L.sides }}
+      </button>
       </div>
     </div>
   </div>
@@ -654,6 +657,14 @@
                   <div>
                     <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5a6b4a;margin-bottom:5px;">{{ L.scaleBaseLabel }}</div>
                     <div style="font-family:'DM Serif Display',serif;font-size:20px;color:#3a2a1a;">{{ scaleBaseDisplay }}</div>
+                  </div>
+                  <div style="font-family:'DM Serif Display',serif;font-size:20px;color:#5a6b4a;padding-bottom:4px;">→</div>
+                  <div>
+                    <div style="font-family:'Spectral',serif;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5a6b4a;margin-bottom:5px;">{{ L.scalePersonsLabel }}</div>
+                    <div style="display:flex;align-items:center;gap:8px;">
+                      <input type="number" value="{{ scalePersons }}" onChange="{{ onScalePersons }}" placeholder="4" min="1" step="1" style="width:70px;padding:8px 12px;border:1.5px solid #5a6b4a;border-radius:3px;background:#f8faf2;font-family:'DM Serif Display',serif;font-size:20px;color:#3a2a1a;text-align:right;outline:none;" />
+                      <span style="font-family:'Spectral',serif;font-size:14px;color:#5a6b4a;">{{ L.scalePersonsUnit }}</span>
+                    </div>
                   </div>
                   <div style="font-family:'DM Serif Display',serif;font-size:20px;color:#5a6b4a;padding-bottom:4px;">→</div>
                   <div>
@@ -1318,6 +1329,71 @@
     </div>
   </sc-if>
 
+  <!-- BEILAGEN -->
+  <sc-if value="{{ showSides }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;z-index:9100;background:#f3ead7;background-image:repeating-linear-gradient(0deg,rgba(140,90,40,0.04) 0 1px,transparent 1px 32px);display:flex;flex-direction:column;">
+      <div style="flex-shrink:0;background:#2a1a0e;border-bottom:1.5px solid #6b5a42;box-shadow:0 5px 16px -8px rgba(0,0,0,0.5);">
+        <div style="max-width:920px;margin:0 auto;padding:16px 32px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+          <div>
+            <div style="font-family:'Spectral',serif;font-style:italic;font-size:12px;letter-spacing:0.2em;color:#9a7a50;text-transform:uppercase;">{{ L.sidesEyebrow }}</div>
+            <div style="font-family:'DM Serif Display',serif;font-size:30px;color:#f3ead7;line-height:1.05;margin-top:4px;">🥗 {{ L.sidesTitle }}</div>
+          </div>
+          <button onClick="{{ onCloseSides }}" style="flex-shrink:0;font-family:'Spectral',serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:4px;padding:8px 18px;border:1.5px solid #9a3b1c;background:#9a3b1c;color:#f3ead7;white-space:nowrap;">✕</button>
+        </div>
+      </div>
+      <div style="flex:1;overflow-y:auto;">
+        <div style="max-width:920px;margin:0 auto;padding:22px 32px 80px;">
+
+          <!-- LISTE -->
+          <sc-if value="{{ sidesShowList }}" hint-placeholder-val="{{ true }}">
+            <p style="margin:0 0 22px;font-family:'Spectral',serif;font-style:italic;font-size:15px;color:#6b5a42;line-height:1.6;max-width:640px;">{{ L.sidesIntro }}</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;">
+              <sc-for list="{{ sidesEntries }}" as="s" hint-placeholder-count="8">
+                <div onClick="{{ s.onClick }}" style="cursor:pointer;background:#f8f0e0;border:1.5px solid #c9b48a;border-radius:4px;padding:16px 18px;box-shadow:0 3px 14px -8px rgba(0,0,0,0.45);transition:filter 0.15s;" style-hover="filter:brightness(1.03);">
+                  <div style="font-size:20px;margin-bottom:6px;">{{ s.flag }}</div>
+                  <div style="font-family:'DM Serif Display',serif;font-size:19px;color:#3a2a1a;margin-bottom:4px;">{{ s.name }}</div>
+                  <div style="font-family:'Spectral',serif;font-size:13px;color:#6b5a42;line-height:1.5;">{{ s.blurb }}</div>
+                  <div style="font-family:'Spectral',serif;font-size:11px;color:#9a8a72;letter-spacing:0.08em;text-transform:uppercase;margin-top:10px;">{{ s.time }} · {{ s.servingsLabel }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <!-- DETAIL -->
+          <sc-if value="{{ hasSidesSelected }}" hint-placeholder-val="{{ false }}">
+            <button onClick="{{ onSidesBack }}" style="font-family:'Spectral',serif;font-size:13px;font-weight:600;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #6b5a42;background:transparent;color:#6b5a42;margin-bottom:18px;">{{ L.sidesBack }}</button>
+            <div style="font-size:26px;margin-bottom:6px;">{{ sidesSelected.flag }}</div>
+            <h2 style="margin:0 0 6px;font-family:'DM Serif Display',serif;font-size:34px;color:#3a2a1a;line-height:1.05;">{{ sidesSelected.name }}</h2>
+            <div style="font-family:'Spectral',serif;font-size:12px;color:#9a8a72;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;">{{ sidesSelected.time }} · {{ sidesSelected.servingsLabel }}</div>
+            <p style="margin:0 0 22px;font-family:'Spectral',serif;font-style:italic;font-size:16px;color:#6b5a42;line-height:1.6;max-width:600px;">{{ sidesSelected.blurb }}</p>
+            <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:24px;max-width:760px;">
+              <div style="background:#ede0c5;border:1.5px solid #c9b48a;border-radius:4px;padding:16px 18px;">
+                <div style="font-family:'Spectral',serif;font-weight:600;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#9a3b1c;margin-bottom:10px;">{{ L.sidesIngredients }}</div>
+                <sc-for list="{{ sidesSelected.ingredientList }}" as="row" hint-placeholder-count="5">
+                  <div style="font-family:'Spectral',serif;font-size:13.5px;color:#3a2a1a;line-height:1.7;">• {{ row.ing }}</div>
+                </sc-for>
+              </div>
+              <div>
+                <div style="font-family:'Spectral',serif;font-weight:600;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#9a3b1c;margin-bottom:10px;">{{ L.sidesSteps }}</div>
+                <sc-for list="{{ sidesSelected.stepList }}" as="row" hint-placeholder-count="4">
+                  <div style="display:flex;gap:10px;font-family:'Spectral',serif;font-size:14.5px;color:#3a2a1a;line-height:1.65;margin-bottom:8px;">
+                    <span style="flex-shrink:0;color:#9a3b1c;font-weight:600;">{{ row.n }}.</span>
+                    <span>{{ row.st }}</span>
+                  </div>
+                </sc-for>
+                <div style="margin-top:16px;background:#1c130b;border:1px solid #3a2a1a;border-left:4px solid #d98a3d;border-radius:4px;padding:13px 15px;">
+                  <div style="font-family:'Spectral',serif;font-weight:600;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#d98a3d;margin-bottom:6px;">💡 {{ L.sidesTip }}</div>
+                  <div style="font-family:'Spectral',serif;font-size:13.5px;color:#e8dcc4;line-height:1.6;">{{ sidesSelected.tip }}</div>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
   <!-- BEDIENUNGSANLEITUNG / MANUAL -->
   <sc-if value="{{ showManual }}" hint-placeholder-val="{{ false }}">
     <div style="position:fixed;inset:0;z-index:9200;background:#f3ead7;background-image:repeating-linear-gradient(0deg,rgba(140,90,40,0.04) 0 1px,transparent 1px 32px);display:flex;flex-direction:column;">
@@ -1461,7 +1537,7 @@ class Component extends DCLogic {
     shoppingList: [], showShoppingList: false, listCopied: false,
     showConv: false, convC: '110', convG: '500', convKg: '2', convMl: '250', convL: '1', convCm: '5',
     showTools: false,
-    scaleOpen: false, scaleWeight: '',
+    scaleOpen: false, scaleWeight: '', scalePersons: '',
     batches: {}, batchDraft: { weight: '', wood: '', temp: '', dur: '', humidity: '', rating: '', result: '' }, batchSaved: false,
     spritzRate: '10', spritzConc: '6',
     userRecipes: [], overrides: {}, images: {},
@@ -1470,6 +1546,7 @@ class Component extends DCLogic {
     lang: 'de',
     betaDismissed: false,
     showChamber: false,
+    showSides: false, sidesSelectedId: null,
     showManual: false, manualQuery: '', manualOpen: {}, manualHighlightId: null,
     showDisclaimerGate: false, showDisclaimerInfo: false,
     showAI: false, aiInput: '', aiLoading: false, aiError: '', aiResult: null, aiAvailable: false,
@@ -1559,7 +1636,80 @@ class Component extends DCLogic {
     return parts;
   }
 
+  _sidesData() {
+    const isEn = this.state.lang === 'en';
+    const t = (de, en) => isEn ? en : de;
+    return [
+      { id: 'pap-sous', flag: '🇿🇦', name: t('Pap met Sous', 'Pap met Sous (Maize Porridge)'), time: t('30 Min.', '30 min'), servings: 4,
+        blurb: t('Cremiger Maisbrei mit würziger Tomaten-Zwiebel-Sauce — der Klassiker zum südafrikanischen Braai.', 'Creamy maize porridge with a spiced tomato-onion sauce — the classic partner to a South African braai.'),
+        ingredients: [t('250 g Maisgrieß (Mieliemeel)', '250 g maize meal'), t('750 ml Wasser', '750 ml water'), t('Salz', 'Salt'), t('2 Zwiebeln, gewürfelt', '2 onions, diced'), t('400 g Tomaten, gewürfelt', '400 g chopped tomatoes'), t('1 TL Zucker, Chili nach Geschmack', '1 tsp sugar, chili to taste')],
+        steps: [t('Maisgrieß in kochendes Salzwasser einrühren und unter Rühren 20 Min. quellen lassen.', 'Stir the maize meal into boiling salted water and let it swell for 20 min, stirring occasionally.'), t('Zwiebeln in Öl glasig braten, Tomaten, Zucker und Chili zugeben und 10 Min. einköcheln.', 'Sauté the onions in oil until translucent, add the tomatoes, sugar and chili and simmer for 10 min.'), t('Pap auf Tellern anrichten und mit der Sauce servieren.', 'Spoon the pap onto plates and serve with the sauce.')],
+        tip: t('Regelmäßig umrühren, sonst setzt der Brei am Topfboden an.', 'Stir regularly, or the porridge will stick to the bottom of the pot.') },
+      { id: 'coleslaw', flag: '🇺🇸', name: t('Coleslaw', 'Coleslaw'), time: t('20 Min. + 1 h ziehen', '20 min + 1 h resting'), servings: 4,
+        blurb: t('Knackiger Krautsalat mit cremigem Dressing — der klassische BBQ-Begleiter.', 'Crisp cabbage slaw in a creamy dressing — the classic BBQ companion.'),
+        ingredients: [t('½ Weißkohl, fein gehobelt', '½ white cabbage, finely shredded'), t('2 Karotten, geraspelt', '2 carrots, grated'), t('150 g Mayonnaise', '150 g mayonnaise'), t('1 EL Apfelessig', '1 tbsp apple cider vinegar'), t('1 TL Zucker, Salz, Pfeffer', '1 tsp sugar, salt, pepper')],
+        steps: [t('Kohl und Karotten in einer Schüssel vermengen.', 'Combine cabbage and carrots in a bowl.'), t('Mayonnaise, Essig, Zucker, Salz und Pfeffer zu einem Dressing verrühren.', 'Whisk mayonnaise, vinegar, sugar, salt and pepper into a dressing.'), t('Dressing untermischen, mindestens 1 h kalt durchziehen lassen.', 'Fold in the dressing and chill for at least 1 h before serving.')],
+        tip: t('Für mehr Biss den Kohl erst kurz vor dem Servieren salzen.', 'For extra crunch, salt the cabbage only just before serving.') },
+      { id: 'kartoffelsalat', flag: '🇩🇪', name: t('Warmer Kartoffelsalat', 'Warm German Potato Salad'), time: t('40 Min.', '40 min'), servings: 4,
+        blurb: t('Speckig-würziger Kartoffelsalat mit Essig-Öl-Dressing, warm serviert.', 'Smoky, tangy potato salad with a vinegar-oil dressing, served warm.'),
+        ingredients: [t('1 kg festkochende Kartoffeln', '1 kg waxy potatoes'), t('150 g Speckwürfel', '150 g diced bacon'), t('1 Zwiebel, fein gewürfelt', '1 onion, finely diced'), t('400 ml Brühe', '400 ml stock'), t('3 EL Weißweinessig', '3 tbsp white wine vinegar'), t('Salz, Pfeffer, etwas Senf', 'Salt, pepper, a little mustard')],
+        steps: [t('Kartoffeln kochen, noch warm pellen und in Scheiben schneiden.', 'Boil the potatoes, peel while warm and slice.'), t('Speck auslassen, Zwiebeln darin glasig braten.', 'Render the bacon, sauté the onion in the fat until translucent.'), t('Brühe, Essig und Senf zugeben, aufkochen und über die Kartoffeln geben.', 'Add stock, vinegar and mustard, bring to a boil and pour over the potatoes.'), t('Vorsichtig vermengen, warm ziehen lassen und servieren.', 'Toss gently, let it rest warm and serve.')],
+        tip: t('Kartoffeln nehmen die Flüssigkeit am besten auf, solange sie noch warm sind.', 'Potatoes absorb the dressing best while still warm.') },
+      { id: 'chakalaka', flag: '🇿🇦', name: t('Chakalaka', 'Chakalaka'), time: t('25 Min.', '25 min'), servings: 4,
+        blurb: t('Würzig-scharfer südafrikanischer Gemüse-Relish mit Bohnen — der klassische Braai-Begleiter.', 'A spicy South African vegetable relish with beans — the classic braai side.'),
+        ingredients: [t('1 Zwiebel, gewürfelt', '1 onion, diced'), t('2 Paprika, gewürfelt', '2 bell peppers, diced'), t('2 Karotten, geraspelt', '2 carrots, grated'), t('400 g Tomaten, gewürfelt', '400 g chopped tomatoes'), t('400 g Bohnen (Dose, abgetropft)', '400 g beans (canned, drained)'), t('1 TL Curry, Chili, Ingwer', '1 tsp curry powder, chili, ginger')],
+        steps: [t('Zwiebel, Paprika und Karotten in Öl anbraten.', 'Sauté onion, peppers and carrots in oil.'), t('Curry, Chili und Ingwer zugeben, kurz mitrösten.', 'Add curry, chili and ginger, toast briefly.'), t('Tomaten und Bohnen zugeben, 15 Min. offen einköcheln lassen.', 'Add the tomatoes and beans, simmer uncovered for 15 min.')],
+        tip: t('Schmeckt am nächsten Tag noch besser — die Gewürze ziehen durch.', 'Tastes even better the next day, once the spices have had time to settle.') },
+      { id: 'baked-beans', flag: '🇺🇸', name: t('Baked Beans', 'Baked Beans'), time: t('15 Min. + 1,5 h im Ofen/Smoker', '15 min + 1.5 h in the oven/smoker'), servings: 4,
+        blurb: t('Süß-rauchige Bohnen in dicker Tomate-Speck-Sauce — der Southern-BBQ-Klassiker.', 'Sweet, smoky beans in a thick tomato-bacon sauce — the classic Southern BBQ side.'),
+        ingredients: [t('800 g weiße Bohnen (Dose, abgetropft)', '800 g white beans (canned, drained)'), t('100 g Speckwürfel', '100 g diced bacon'), t('1 Zwiebel, gewürfelt', '1 onion, diced'), t('200 g Tomatensauce', '200 g tomato sauce'), t('2 EL brauner Zucker', '2 tbsp brown sugar'), t('1 EL Worcestersauce', '1 tbsp Worcestershire sauce'), t('1 TL Rauchpaprika', '1 tsp smoked paprika')],
+        steps: [t('Speck auslassen, Zwiebel darin andünsten.', 'Render the bacon, sauté the onion in the fat.'), t('Bohnen, Tomatensauce, Zucker, Worcestersauce und Rauchpaprika unterrühren.', 'Stir in the beans, tomato sauce, sugar, Worcestershire sauce and smoked paprika.'), t('In einer Auflaufform 1,5 h bei 150 °C offen im Ofen oder Smoker einkochen lassen.', 'Bake uncovered in a dish at 150 °C for 1.5 h in the oven or smoker until thickened.')],
+        tip: t('Im Smoker neben dem Fleisch garen — sie nehmen dabei zusätzlichen Rauch auf.', 'Cook alongside the meat in the smoker — they pick up extra smoke flavor.') },
+      { id: 'cornbread', flag: '🇺🇸', name: t('Cornbread', 'Cornbread'), time: t('15 Min. + 25 Min. backen', '15 min + 25 min baking'), servings: 4,
+        blurb: t('Leicht süßliches Maisbrot, saftig und knusprig aus der Gusseisenpfanne.', 'Slightly sweet corn bread, moist and crisp-edged from a cast-iron skillet.'),
+        ingredients: [t('200 g Maismehl', '200 g cornmeal'), t('100 g Mehl', '100 g flour'), t('2 EL Zucker', '2 tbsp sugar'), t('2 TL Backpulver', '2 tsp baking powder'), t('250 ml Buttermilch', '250 ml buttermilk'), t('1 Ei', '1 egg'), t('60 g Butter, geschmolzen', '60 g butter, melted')],
+        steps: [t('Trockene Zutaten vermengen.', 'Combine the dry ingredients.'), t('Buttermilch, Ei und Butter unterrühren, kurz verrühren.', 'Stir in buttermilk, egg and butter, mix briefly.'), t('In eine heiße, gefettete Gusseisenpfanne geben.', 'Pour into a hot, greased cast-iron skillet.'), t('25 Min. bei 200 °C goldbraun backen.', 'Bake at 200 °C for 25 min until golden.')],
+        tip: t('Die Pfanne vorheizen — das gibt eine knusprige Kruste am Boden.', 'Preheat the skillet — it gives a crisp bottom crust.') },
+      { id: 'kartoffelgratin', flag: '🇫🇷', name: t('Kartoffelgratin (Gratin Dauphinois)', 'Gratin Dauphinois'), time: t('20 Min. + 1 h backen', '20 min + 1 h baking'), servings: 4,
+        blurb: t('Zart geschichtete Kartoffelscheiben in Sahne und Knoblauch, goldbraun überbacken.', 'Thinly sliced potatoes layered in cream and garlic, baked until golden.'),
+        ingredients: [t('1 kg Kartoffeln, in dünne Scheiben', '1 kg potatoes, thinly sliced'), t('400 ml Sahne', '400 ml cream'), t('150 ml Milch', '150 ml milk'), t('2 Knoblauchzehen', '2 garlic cloves'), t('Salz, Pfeffer, Muskat', 'Salt, pepper, nutmeg'), t('Butter für die Form', 'Butter for the dish')],
+        steps: [t('Kartoffelscheiben in einer gebutterten Form schichten.', 'Layer the potato slices in a buttered dish.'), t('Sahne, Milch, zerdrückten Knoblauch und Gewürze vermengen und darübergießen.', 'Mix cream, milk, crushed garlic and seasoning and pour over.'), t('1 h bei 160 °C backen, bis die Kartoffeln weich sind und die Oberfläche Farbe hat.', 'Bake at 160 °C for 1 h until the potatoes are tender and the top is golden.')],
+        tip: t('Kartoffeln hauchdünn schneiden — so garen sie gleichmäßig durch.', 'Slice the potatoes paper-thin so they cook through evenly.') },
+      { id: 'yorkshire-pudding', flag: '🇬🇧', name: t('Yorkshire Pudding', 'Yorkshire Pudding'), time: t('10 Min. + 20 Min. backen', '10 min + 20 min baking'), servings: 4,
+        blurb: t('Luftig-knuspriges Schmalzgebäck aus Eierteig — der englische Klassiker zum Sonntagsbraten.', 'Light, crisp savory batter puffs — the English classic alongside a Sunday roast.'),
+        ingredients: [t('140 g Mehl', '140 g flour'), t('4 Eier', '4 eggs'), t('200 ml Milch', '200 ml milk'), t('Salz', 'Salt'), t('Rapsöl oder Bratenfett für die Form', 'Vegetable oil or beef fat for the tin')],
+        steps: [t('Mehl, Eier, Milch und Salz zu einem glatten, dünnflüssigen Teig verrühren, 30 Min. ruhen lassen.', 'Whisk flour, eggs, milk and salt into a smooth, thin batter and rest for 30 min.'), t('Muffinform mit Öl füllen und im Ofen bei 220 °C stark erhitzen.', 'Fill a muffin tin with oil and heat it very hot in the oven at 220 °C.'), t('Teig in die heißen Vertiefungen gießen und 20 Min. backen, ohne die Tür zu öffnen.', 'Pour the batter into the hot wells and bake for 20 min without opening the door.')],
+        tip: t('Fett und Form müssen richtig heiß sein — nur so geht der Pudding hoch.', 'The fat and tin must be searing hot — that is what makes the pudding rise.') },
+      { id: 'krautsalat', flag: '🇦🇹', name: t('Krautsalat', 'Austrian Cabbage Salad'), time: t('20 Min. + 30 Min. ziehen', '20 min + 30 min resting'), servings: 4,
+        blurb: t('Feiner, säuerlicher Weißkrautsalat mit Kümmel — schlank und erfrischend.', 'Fine, tangy white cabbage salad with caraway — light and refreshing.'),
+        ingredients: [t('½ Weißkohl, hauchdünn gehobelt', '½ white cabbage, thinly shaved'), t('3 EL Essig', '3 tbsp vinegar'), t('2 EL Öl', '2 tbsp oil'), t('1 TL Kümmel', '1 tsp caraway seeds'), t('Salz, Zucker', 'Salt, sugar')],
+        steps: [t('Kohl salzen und kurz durchkneten, damit er weich wird.', 'Salt the cabbage and knead briefly to soften.'), t('Essig, Öl, Kümmel und Zucker untermischen.', 'Mix in vinegar, oil, caraway and sugar.'), t('30 Min. ziehen lassen und abschmecken.', 'Let rest 30 min and adjust seasoning.')],
+        tip: t('Ganz ohne Mayonnaise — passt besonders gut zu fettigem Räucherfleisch.', 'Completely mayo-free — pairs especially well with fatty smoked meats.') },
+      { id: 'chakalaka2', flag: '🇩🇪', name: t('Gurkensalat', 'German Cucumber Salad'), time: t('15 Min. + 20 Min. ziehen', '15 min + 20 min resting'), servings: 4,
+        blurb: t('Erfrischender Schmand-Gurkensalat mit Dill — leicht und säuerlich zu deftigem Räucherfleisch.', 'A refreshing sour-cream cucumber salad with dill — light and tangy alongside rich smoked meats.'),
+        ingredients: [t('1 Salatgurke, hauchdünn gehobelt', '1 cucumber, thinly sliced'), t('150 g Schmand oder Saure Sahne', '150 g sour cream'), t('1 EL Weißweinessig', '1 tbsp white wine vinegar'), t('1 Bund Dill, gehackt', '1 bunch dill, chopped'), t('Salz, Pfeffer, 1 Prise Zucker', 'Salt, pepper, a pinch of sugar')],
+        steps: [t('Gurke salzen und 15 Min. ziehen lassen, dann Flüssigkeit ausdrücken.', 'Salt the cucumber and let it sit for 15 min, then squeeze out the liquid.'), t('Schmand, Essig, Dill, Pfeffer und Zucker zu einem Dressing verrühren.', 'Whisk sour cream, vinegar, dill, pepper and sugar into a dressing.'), t('Gurke unterheben, 20 Min. kalt durchziehen lassen.', 'Fold in the cucumber and chill for 20 min before serving.')],
+        tip: t('Das Ausdrücken der Gurke verhindert einen wässrigen Salat.', 'Squeezing out the cucumber keeps the salad from turning watery.') },
+      { id: 'mac-cheese', flag: '🇺🇸', name: t('Mac & Cheese', 'Mac & Cheese'), time: t('30 Min.', '30 min'), servings: 4,
+        blurb: t('Cremige Cheddar-Sauce über zart gegarten Nudeln, mit knuspriger Kruste.', 'Creamy cheddar sauce over tender pasta, finished with a crisp crust.'),
+        ingredients: [t('400 g Makkaroni', '400 g macaroni'), t('50 g Butter', '50 g butter'), t('50 g Mehl', '50 g flour'), t('500 ml Milch', '500 ml milk'), t('300 g Cheddar, gerieben', '300 g cheddar, grated'), t('Salz, Pfeffer, Muskat', 'Salt, pepper, nutmeg')],
+        steps: [t('Nudeln bissfest kochen.', 'Cook the pasta until al dente.'), t('Butter schmelzen, Mehl einrühren, mit Milch aufgießen und cremig einkochen.', 'Melt the butter, stir in the flour, whisk in the milk and simmer until creamy.'), t('Käse einrühren, würzen, mit den Nudeln vermengen.', 'Stir in the cheese, season, and toss with the pasta.'), t('Optional 10 Min. bei 200 °C überbacken.', 'Optionally bake at 200 °C for 10 min to brown the top.')],
+        tip: t('Etwas geräucherter Cheddar bringt die Aromen näher zusammen.', 'A little smoked cheddar ties the flavors together nicely.') },
+      { id: 'patatas-bravas', flag: '🇪🇸', name: t('Patatas Bravas', 'Patatas Bravas'), time: t('40 Min.', '40 min'), servings: 4,
+        blurb: t('Knusprig gebratene Kartoffelwürfel mit scharfer Tomatensauce und Aioli.', 'Crisply fried potato cubes with a spicy tomato sauce and aioli.'),
+        ingredients: [t('800 g Kartoffeln, gewürfelt', '800 g potatoes, diced'), t('Öl zum Braten', 'Oil for frying'), t('200 g passierte Tomaten', '200 g passata'), t('1 TL Paprika, etwas Chili', '1 tsp paprika, a little chili'), t('Aioli oder Knoblauchmayonnaise', 'Aioli or garlic mayonnaise')],
+        steps: [t('Kartoffelwürfel in reichlich Öl knusprig braten.', 'Fry the potato cubes in plenty of oil until crisp.'), t('Passierte Tomaten mit Paprika und Chili kurz einköcheln.', 'Simmer the passata briefly with paprika and chili.'), t('Kartoffeln mit der Sauce und einem Klecks Aioli servieren.', 'Serve the potatoes with the sauce and a dollop of aioli.')],
+        tip: t('Die Kartoffeln vor dem Braten kurz vorkochen — innen fluffig, außen knusprig.', 'Par-boil the potatoes before frying — fluffy inside, crisp outside.') },
+      { id: 'elote', flag: '🇲🇽', name: t('Elote (Mexikanischer Grillmais)', 'Elote (Mexican Street Corn)'), time: t('20 Min.', '20 min'), servings: 4,
+        blurb: t('Gegrillter Maiskolben mit Crema, Käse, Chili und Limette.', 'Grilled corn on the cob with crema, cheese, chili and lime.'),
+        ingredients: [t('4 Maiskolben', '4 corn cobs'), t('80 g Crema oder Saure Sahne + Mayonnaise', '80 g crema or sour cream mixed with mayonnaise'), t('60 g Cotija- oder Feta-Käse, zerkrümelt', '60 g cotija or feta cheese, crumbled'), t('Chilipulver, Limette, Koriander', 'Chili powder, lime, cilantro')],
+        steps: [t('Maiskolben direkt über der Glut rundum grillen, bis er Farbe nimmt.', 'Grill the corn directly over the coals, turning, until charred in spots.'), t('Mit der Crema-Mischung bestreichen.', 'Brush with the crema mixture.'), t('Mit Käse, Chilipulver und Limettensaft bestreuen.', 'Sprinkle with cheese, chili powder and lime juice.')],
+        tip: t('Der Mais soll wirklich Farbe und ein paar dunkle Stellen bekommen — das bringt das Röstaroma.', 'Let the corn really char in spots — that brings out the roasted flavor.') },
+    ];
+  }
+
   async componentDidMount() {
+
     try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {}
     // Sprache: gespeicherte Wahl, sonst Browsersprache beim ersten Besuch
     let lang = 'de';
@@ -2358,6 +2508,14 @@ class Component extends DCLogic {
         feedbackHead: p('Mithelfen','Help out'), feedback: p('📝 Feedback geben','📝 Give feedback'),
         imprint: p('Impressum','Imprint'), privacy: p('Datenschutz','Privacy'),
         chamber: p('Reifekammer','Aging chamber'),
+        sides: p('Beilagen','Sides'),
+        sidesTitle: p('Beilagen zum Grillen & Räuchern','Sides for grilling & smoking'),
+        sidesEyebrow: p('Smokebench · Beilagen','Smokebench · Sides'),
+        sidesIntro: p('Dreizehn internationale Beilagen, die zu jedem Rauch- und Grillgericht passen — von würzigem Chakalaka bis warmem Kartoffelsalat.','Thirteen international sides that pair with any smoked or grilled dish — from spicy chakalaka to warm potato salad.'),
+        sidesBack: p('← Alle Beilagen','← All sides'),
+        sidesIngredients: p('Zutaten','Ingredients'),
+        sidesSteps: p('Zubereitung','Method'),
+        sidesTip: p('Tipp','Tip'),
         manual: p('Anleitung','Guide'),
         manualTitle: p('Bedienungsanleitung','User guide'),
         manualEyebrow: p('Smokebench · Handbuch','Smokebench · handbook'),
@@ -2431,8 +2589,9 @@ class Component extends DCLogic {
         totalTime: p('Gesamtzeit','Total time'), coreTemp: p('Kerntemperatur','Core temp'),
         ingredients: p('Zutaten','Ingredients'), method: p('Zubereitung','Method'),
         scaleBtn: p('⚖ Mengen umrechnen','⚖ Scale amounts'), scaleForLabel: p('Umrechnen auf','Scale to'),
+        scalePersonsLabel: p('Für Personen','For servings'), scalePersonsUnit: p('Pers.','ppl'),
         scaleBaseLabel: p('Grundrezept','Base recipe'), scaleReset: p('Zurücksetzen','Reset'),
-        scaleHint: p('Mengen automatisch auf dein Gewicht berechnet — inkl. NPS aus g/kg.','Amounts auto-scaled to your weight — incl. cure salt from g/kg.'),
+        scaleHint: p('Mengen automatisch auf dein Gewicht berechnet — inkl. NPS aus g/kg. Personenzahl rechnet mit 300–350 g Rohgewicht pro Person (lieber etwas mehr als zu wenig, z. B. wegen Garverlust bei Pulled Pork).','Amounts auto-scaled to your weight — incl. cure salt from g/kg. Servings are calculated at 300–350 g raw weight per person (better a bit generous than too little, e.g. for cook loss on pulled pork).'),
         startTimer: p('▷ Timer starten','▷ Start timer'),
         tips: p('Tipps & Hinweise','Tips & Notes'),
         cookLog: p('Cook-Log & Chargen','Cook Log & Batches'),
@@ -3167,6 +3326,18 @@ class Component extends DCLogic {
       chamberHtml: (typeof window !== 'undefined' && window.__CHAMBER_HTML) || '',
       onOpenChamber: () => this.setState({ showChamber: true, showTools: false }),
       onCloseChamber: () => this.setState({ showChamber: false }),
+      showSides: this.state.showSides,
+      sidesSelectedId: this.state.sidesSelectedId,
+      sidesEntries: this._sidesData().map(s => ({ ...s, servingsLabel: (this.state.lang === 'en' ? 'Serves ' : 'Für ') + (s.servings || 4) + (this.state.lang === 'en' ? '' : ' Pers.'), onClick: () => this.setState({ sidesSelectedId: s.id }) })),
+      sidesSelected: (() => {
+        const s = this._sidesData().find(x => x.id === this.state.sidesSelectedId);
+        return s ? { ...s, servingsLabel: (this.state.lang === 'en' ? 'Serves ' : 'Für ') + (s.servings || 4) + (this.state.lang === 'en' ? '' : ' Pers.'), ingredientList: s.ingredients.map((ing, i) => ({ key: 'i' + i, ing })), stepList: s.steps.map((st, i) => ({ key: 's' + i, n: i + 1, st })) } : null;
+      })(),
+      hasSidesSelected: !!this.state.sidesSelectedId,
+      sidesShowList: !this.state.sidesSelectedId,
+      onOpenSides: () => this.setState({ showSides: true, showTools: false, sidesSelectedId: null }),
+      onCloseSides: () => this.setState({ showSides: false, sidesSelectedId: null }),
+      onSidesBack: () => this.setState({ sidesSelectedId: null }),
       onChamberNewTab: () => {
         const html = (typeof window !== 'undefined' && window.__CHAMBER_HTML) || '';
         const w = window.open('', '_blank');
@@ -3235,13 +3406,26 @@ class Component extends DCLogic {
       scaleHasBase:      sel ? (this._baseWeightG(sel.ingredients) > 0) : false,
       scaleOpen:         this.state.scaleOpen,
       scaleWeight:       this.state.scaleWeight,
+      scalePersons:      this.state.scalePersons,
+      scalePersonsLabel: L.scalePersonsLabel,
+      scalePersonsUnit:  L.scalePersonsUnit,
       scaleBaseDisplay:  sel ? this._fmtG(this._baseWeightG(sel.ingredients)) : '',
       scaleBaseGrams:    sel ? String(this._baseWeightG(sel.ingredients)) : '',
       scaleBtnBg:        this.state.scaleOpen ? '#5a6b4a' : 'transparent',
       scaleBtnColor:     this.state.scaleOpen ? '#f3ead7' : '#5a6b4a',
-      onToggleScale:     () => this.setState({ scaleOpen: !this.state.scaleOpen, scaleWeight: '' }),
-      onScaleWeight:     (e) => this.setState({ scaleWeight: e.target.value }),
-      onScaleReset:      () => this.setState({ scaleWeight: '' }),
+      onToggleScale:     () => this.setState({ scaleOpen: !this.state.scaleOpen, scaleWeight: '', scalePersons: '' }),
+      onScaleWeight:     (e) => this.setState({ scaleWeight: e.target.value, scalePersons: '' }),
+      onScalePersons:    (e) => {
+        const n = this._num(e.target.value);
+        if (n && n > 0) {
+          // 300–350 g Rohgewicht pro Person (lieber etwas mehr kalkulieren, z.B. bei Pulled Pork mit Garverlust)
+          const gPerPerson = 325;
+          this.setState({ scalePersons: e.target.value, scaleWeight: String(Math.round(n * gPerPerson / 10) * 10) });
+        } else {
+          this.setState({ scalePersons: e.target.value });
+        }
+      },
+      onScaleReset:      () => this.setState({ scaleWeight: '', scalePersons: '' }),
       selTips:           sel ? (sel.tips || []) : [],
       selTipsParts:      sel ? (sel.tips || []).map((t, i) => ({ key: 'tip' + i, parts: this._linkify(t, glossUsed) })) : [],
       selPitLabel:       D.pitLabel(sel ? sel.method : ''),
