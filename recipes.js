@@ -1433,7 +1433,7 @@ const RECIPES = [
   /* ============================ BILTONG & BOEREWORS ============================ */
 
   r({
-    id: "biltong-klassisch", name: "Biltong (klassisch)", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
+    id: "biltong-klassisch", name: "Biltong (klassisch)", method: "dorr", cat: "Fisch", diff: 2,
     time: "4–7 Tage", pit: "20–30 °C (Raumtemperatur) oder DA506 35–40 °C", core: "Außen trocken, innen leicht rosa", wood: "Graef DA506 oder Trockenkammer", yield: "ca. 400 g/kg",
     blurb: "Südafrikanisches Trockenfleisch – intensiv gewürzt, ohne Pökelsalz, traditionell luftgetrocknet.",
     equipment: [["chamber",5,{de:"ideal – gleichmäßige, kontrollierte Trocknung",en:"ideal – even, controlled drying"}],["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
@@ -1578,7 +1578,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "lammkeule-spieß", name: "Lammkeule am Spieß", method: "grill", cat: "Lammfleisch", diff: 2,
+    id: "lammkeule-spieß", name: "Lammkeule am Spieß", method: "grill", cat: "Wild & Lamm", diff: 2,
     time: "1 Tag + 2,5–3,5 h", pit: "indirekt 160–175 °C", core: "70–75 °C (medium)", wood: "Weber Kugelgrill + Rotisserie oder Rössle Gasgrill",
     blurb: "Entbeinte Lammkeule, aufgerollt und am Rotisserie-Spieß – saftig, aromatisch, mediterran.",
     origin: "🌍 Die ganze Lammkeule am Drehspieß ist rund ums Mittelmeer und im Nahen Osten verbreitet – vom griechischen Osterlamm bis zum orientalischen Festbraten. Entbeint und gebunden dreht sie ausbalanciert über der Hitze.",
@@ -1628,7 +1628,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "spareribs-kettle", name: "Spareribs – Weber Kettle (3-2-1)", method: "grill", cat: "Schweinefleisch", diff: 2,
+    id: "spareribs-kettle", name: "Spareribs – Weber Kettle (3-2-1)", method: "grill", cat: "Schwein", diff: 2,
     time: "6 h", pit: "110–120 °C indirekt", core: "93–95 °C (Zahnstochertest)", wood: "Weber Kugelgrill – Snake Method · Kirsche/Apfel",
     blurb: "Classic 3-2-1 Ribs auf dem Weber Kugelgrill mit der Snake Method – ohne Smoker.",
     origin: "🇺🇸 St.-Louis-Cut Spareribs sind ein Herzstück des amerikanischen BBQ. Die 3-2-1-Methode ist der Klassiker für zarte Rippchen – hier im Weber Kettle mit der Snake-Methode.",
@@ -1654,7 +1654,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "pulled-pork-kettle", name: "Pulled Pork – Weber Kettle (Snake)", method: "grill", cat: "Schweinefleisch", diff: 3,
+    id: "pulled-pork-kettle", name: "Pulled Pork – Weber Kettle (Snake)", method: "grill", cat: "Schwein", diff: 3,
     time: "12–16 h", pit: "110–120 °C", core: "92–96 °C", wood: "Weber Kugelgrill – Snake Method · Hickory/Buche",
     blurb: "Pulled Pork vom Kugelgrill mit der Snake Method – nicht nur vom WSM. 16 h Geduld lohnt sich.",
     origin: "🇺🇸 Pulled Pork stammt aus dem Süden der USA und ist ein Eckpfeiler des amerikanischen Barbecue. Hier im Weber Kettle mit der Snake-Methode für stundenlanges Low & Slow.",
@@ -1678,7 +1678,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "cote-de-boeuf", name: "Côte de Bœuf – Reverse Sear", method: "grill", cat: "Rindfleisch", diff: 2,
+    id: "cote-de-boeuf", name: "Côte de Bœuf – Reverse Sear", method: "grill", cat: "Rind", diff: 2,
     time: "2–3 h", pit: "indirekt 100–110 °C → direkte Hitze 250–300 °C", core: "52–54 °C (medium-rare)", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Das Steak der Steaks – Reverse Sear: langsam auf Temperatur, dann kurz sehr scharf anbraten.",
     origin: "🇫🇷 Die Côte de Bœuf ist das französische Rippensteak am Knochen – ein Bistro-Klassiker. Per Reverse Sear erst sanft indirekt gegart, dann heiß angebraten für die Kruste.",
@@ -1794,7 +1794,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "bacon-explosion", name: "Bacon Explosion", method: "grill", cat: "Schweinefleisch", diff: 2,
+    id: "bacon-explosion", name: "Bacon Explosion", method: "grill", cat: "Schwein", diff: 2,
     time: "2–2,5 h", pit: "indirekt 120–135 °C", core: "72 °C", wood: "Weber Kugelgrill oder Rössle Gasgrill · Hickory",
     blurb: "Eine Hackfleischrolle, eingewickelt in ein gewebtes Bacon-Netz – der Klassiker der BBQ-Welt.",
     equipment: [["kettle",5],["gas",5],["wsm",3]],
@@ -1817,7 +1817,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "mais-grill", name: "Gegrillter Mais (Mexican Style)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
+    id: "mais-grill", name: "Gegrillter Mais (Mexican Style)", method: "grill", cat: "Gemüse", diff: 1,
     time: "20–25 min", pit: "direkt 200–220 °C", core: "—", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Mais mit Schale direkt in der Glut oder über der Flamme – karamellisiert und rauchig.",
     equipment: [["kettle",5],["gas",5],["wsm",3]],
@@ -2126,7 +2126,7 @@ const RECIPES = [
 
   /* ---- FLEISCH & FISCH ---- */
   r({
-    id: "beef-jerky", name: "Beef Jerky (klassisch)", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
+    id: "beef-jerky", name: "Beef Jerky (klassisch)", method: "dorr", cat: "Fisch", diff: 2,
     time: "1 Tag + 4–8 h", pit: "70 °C", core: "Lederig, kein feuchter Kern", wood: "Graef DA506", yield: "ca. 400 g/kg",
     blurb: "Würzige Rindfleisch-Streifen, bei maximaler Dörrtemperatur sicher getrocknet.",
     equipment: [["dehydrator",5],["jerkygun",3,{de:"für die Hack-Variante statt geschnittener Streifen",en:"for the ground-meat version instead of sliced strips"}],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
@@ -2151,7 +2151,7 @@ const RECIPES = [
     learn: ["Marinieren","Quer/längs schneiden","Sicher bei 70 °C dörren","Trockentest"],
   }),
   r({
-    id: "chicken-jerky", name: "Chicken Strips Jerky", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
+    id: "chicken-jerky", name: "Chicken Strips Jerky", method: "dorr", cat: "Fisch", diff: 2,
     time: "1 Tag + 4–6 h", pit: "70 °C", core: "Lederig-trocken, kein rosa Kern", wood: "Graef DA506", yield: "ca. 350 g/kg",
     blurb: "Asiatisch-marinierte Hähnchenstreifen – leichter als Rinderjerk, sehr würzig.",
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
@@ -2170,7 +2170,7 @@ const RECIPES = [
     learn: ["Marinieren","Dünn schneiden","Sicher bei 70 °C dörren","Kein rosa Kern"],
   }),
   r({
-    id: "lachs-jerky", name: "Lachs-Jerky", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
+    id: "lachs-jerky", name: "Lachs-Jerky", method: "dorr", cat: "Fisch", diff: 2,
     time: "1 Tag + 4–6 h", pit: "60–65 °C", core: "Lederig, trocken", wood: "Graef DA506", yield: "ca. 300 g/kg",
     blurb: "Intensives Rauch-Teriyaki-Aroma, kompaktes Format – asiatischer Snack-Klassiker.",
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
@@ -2190,7 +2190,7 @@ const RECIPES = [
     learn: ["Beizen (Teriyaki)","Bei 60–65 °C dörren","Lederig trocknen"],
   }),
   r({
-    id: "wild-jerky", name: "Wild-Jerky (Reh/Wildschwein)", method: "dorr", cat: "Fleisch & Fisch", diff: 3,
+    id: "wild-jerky", name: "Wild-Jerky (Reh/Wildschwein)", method: "dorr", cat: "Fisch", diff: 3,
     time: "1 Tag + 6–8 h", pit: "70 °C", core: "Lederig, kein roter Kern", wood: "Graef DA506", yield: "ca. 350 g/kg",
     blurb: "Kräftiges Wildaroma, fein gewürzt – besonders hochwertige Jerky-Variante.",
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
@@ -2210,7 +2210,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "hackfleisch-jerky", name: "Hackfleisch-Jerky (mit Jerky-Pistole)", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
+    id: "hackfleisch-jerky", name: "Hackfleisch-Jerky (mit Jerky-Pistole)", method: "dorr", cat: "Fisch", diff: 2,
     time: "12–24 h + 4–6 h", pit: "70 °C", core: "Lederig, kein feuchter Kern", wood: "Graef DA506", yield: "ca. 350 g/kg",
     blurb: "Aus gewürztem Hack mit der Jerky-Pistole geformt – die flexibelste Jerky-Variante: jedes Fleisch, jede Würze, gleichmäßig zart.",
     equipment: [["jerkygun",5,{de:"formt gleichmäßige Streifen aus Hack",en:"extrudes even strips from ground meat"}],["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}],["vac",4,{de:"zum Lagern",en:"for storage"}]],
@@ -2241,7 +2241,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "gefluegel-jerky-pistole", name: "Geflügel-Jerky aus der Jerky-Pistole", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
+    id: "gefluegel-jerky-pistole", name: "Geflügel-Jerky aus der Jerky-Pistole", method: "dorr", cat: "Fisch", diff: 2,
     time: "12–24 h + 6–10 h", pit: "60–70 °C", core: "Biegsam, kein feuchter Kern", wood: "Graef DA506", yield: "ca. 300–400 g/kg",
     blurb: "Würziges Geflügel-Jerky aus Hackfleisch, mit der Jerky-Pistole geformt und im Dörrautomat sicher getrocknet.",
     equipment: [["jerkygun",5,{de:"formt gleichmäßige Streifen aus Hack",en:"extrudes even strips from ground meat"}],["dehydrator",5],["vac",4,{de:"zum Lagern",en:"for storage"}]],
@@ -2276,7 +2276,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "biltong-style-mischfleisch", name: "Biltong-Style Beef-Pork-Lamb Jerky", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
+    id: "biltong-style-mischfleisch", name: "Biltong-Style Beef-Pork-Lamb Jerky", method: "dorr", cat: "Fisch", diff: 2,
     time: "12–24 h + 10–14 h", pit: "60–70 °C", core: "Biegsam, fasert beim Biegen", wood: "Graef DA506", yield: "ca. 400–500 g aus 1,5 kg",
     blurb: "Würziges Mischfleisch-Jerky mit südafrikanischer Biltong-Gewürzmischung aus Koriander, schwarzem Pfeffer und Essig, im Dörrautomat getrocknet.",
     equipment: [["dehydrator",5],["jerkygun",4,{de:"für gleichmäßige Streifen aus grob gewolftem Fleisch",en:"for even strips from coarsely ground meat"}],["vac",4,{de:"zum Lagern",en:"for storage"}]],
@@ -2464,7 +2464,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "garnelen-heiss", name: "Geräucherte Garnelen", method: "heiss", cat: "Fisch & Meeresfrüchte", diff: 1,
+    id: "garnelen-heiss", name: "Geräucherte Garnelen", method: "heiss", cat: "Fisch", diff: 1,
     time: "45 min", pit: "110–130 °C", core: "opal-rosa, leicht festig", wood: "WSM · Zitrusholz oder Apfel",
     blurb: "Schnellstes Räucherprojekt – Garnelen nach 30–40 min fertig, Rauch macht sie unwiderstehlich.",
     equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
@@ -2540,7 +2540,7 @@ const RECIPES = [
   /* ============================ MEHR GRILL ============================ */
 
   r({
-    id: "tomahawk-steak", name: "Tomahawk Steak – Reverse Sear", method: "grill", cat: "Rindfleisch", diff: 2,
+    id: "tomahawk-steak", name: "Tomahawk Steak – Reverse Sear", method: "grill", cat: "Rind", diff: 2,
     time: "2,5–3 h", pit: "95–105 °C → 280–320 °C sear", core: "52–54 °C (medium-rare)", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Das spektakulärste Steak – 1 kg Ribeye mit langem Knochen, Reverse Sear für perfekte Garung.",
     origin: "🇺🇸 Das Tomahawk ist ein Ribeye am langen Knochen – das Schaustück amerikanischer Steakhouses. Per Reverse Sear geduldig indirekt gegart, dann sehr heiß für die Kruste.",
@@ -2564,7 +2564,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "lammrack", name: "Lammrack vom Grill", method: "grill", cat: "Lammfleisch", diff: 2,
+    id: "lammrack", name: "Lammrack vom Grill", method: "grill", cat: "Wild & Lamm", diff: 2,
     time: "45 min", pit: "indirekt 150 °C → direkt 230 °C", core: "58–62 °C (rosé)", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Frenched Lammrack – kurz und heiß, mit Kräuterkruste, rosé serviert.",
     origin: "🇬🇧 Das French-Trimmed Lammkarree (Rack of Lamb) ist ein europäischer Braten-Klassiker, besonders in Großbritannien und Frankreich. Kurz und heiß mit Kräuterkruste, rosé gegart.",
@@ -2588,7 +2588,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "garnelen-spieß-grill", name: "Garnelen-Spieße vom Grill", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
+    id: "garnelen-spieß-grill", name: "Garnelen-Spieße vom Grill", method: "grill", cat: "Fisch", diff: 1,
     time: "1 h marinieren + 8 min Grillen", pit: "direkt 220–250 °C", core: "opal-rosa, fest", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "In 8 Minuten fertig – marinierte Garnelen direkt über der Glut, perfekt als Vorspeise.",
     equipment: [["kettle",5],["gas",5],["wsm",3]],
@@ -3217,7 +3217,7 @@ const RECIPES = [
   /* ============================ FISCHVIELFALT ============================ */
 
   r({
-    id: "lachs-kalt", name: "Kaltgeräucherter Lachs (Graved-Smoked)", method: "kalt", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "lachs-kalt", name: "Kaltgeräucherter Lachs (Graved-Smoked)", method: "kalt", cat: "Fisch", diff: 2,
     time: "2–3 Tage", pit: "unter 22 °C", core: "Saftig, transparent-orangerot", wood: "WSM · Erle oder Buche",
     blurb: "Der Klassiker – Lachs erst gebeizt (Gravad Lax), dann kaltgeräuchert. Hauchdünn aufgeschnitten servieren.",
     equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",3,{de:"optional zum Nachtrocknen",en:"optional for further drying"}]],
@@ -3241,7 +3241,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "hering-kalt", name: "Räucherhering kaltgeräuchert (Bückling-Vorstufe)", method: "kalt", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "hering-kalt", name: "Räucherhering kaltgeräuchert (Bückling-Vorstufe)", method: "kalt", cat: "Fisch", diff: 2,
     time: "2 Tage", pit: "unter 20 °C", core: "Fest, goldgelb", wood: "WSM · Buche + Erle",
     blurb: "Kaltgeräucherter ganzer Hering – stark gesalzen, leicht geräuchert. Norddeutsche Tradition.",
     equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}]],
@@ -3261,7 +3261,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "bueckling", name: "Bückling (Hering warmgeräuchert)", method: "warm", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "bueckling", name: "Bückling (Hering warmgeräuchert)", method: "warm", cat: "Fisch", diff: 2,
     time: "1 Tag + 2–3 h Räuchern", pit: "40–70 °C", core: "Gar, goldbraun, saftig", wood: "WSM · Buche + Erle",
     blurb: "Bückling = ganzer Hering warmgeräuchert. Nordsee-Klassiker, fettig, intensiv aromatisch.",
     equipment: [["wsm",5],["kettle",4],["gas",4]],
@@ -3283,7 +3283,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "schillerlocken", name: "Schillerlocken (Dornhai warmgeräuchert)", method: "warm", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "schillerlocken", name: "Schillerlocken (Dornhai warmgeräuchert)", method: "warm", cat: "Fisch", diff: 2,
     time: "1 Tag + 3–4 h", pit: "40–65 °C", core: "Goldbraun, saftig", wood: "WSM · Buche",
     blurb: "Die bekannte Räucherware aus Dornhai-Bauchstreifen – gerollt, geräuchert, goldbraun.",
     equipment: [["wsm",5],["kettle",4],["gas",4]],
@@ -3305,7 +3305,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "raeucheraal", name: "Räucheraal (heißgeräuchert)", method: "heiss", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "raeucheraal", name: "Räucheraal (heißgeräuchert)", method: "heiss", cat: "Fisch", diff: 2,
     time: "1 Tag + 3–4 h", pit: "70–90 °C", core: "Fest, goldbraun, glänzend", wood: "WSM · Buche + Erle",
     blurb: "Räucheraal – fettreich, intensiv aromatisch. Einer der besten Räucherfische überhaupt.",
     equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
@@ -3328,7 +3328,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "raeucherkarpfen", name: "Räucherkarpfen (heißgeräuchert)", method: "heiss", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "raeucherkarpfen", name: "Räucherkarpfen (heißgeräuchert)", method: "heiss", cat: "Fisch", diff: 2,
     time: "1 Tag + 4–5 h", pit: "70–90 °C", core: "Fest, weiß, saftig", wood: "WSM · Buche + Pflaume",
     blurb: "Ganzer Karpfen heißgeräuchert – saisonal, kräftig, für Weihnachtszeit klassisch.",
     equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
@@ -3348,7 +3348,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "makrele-heiss", name: "Räuchermakrele (heißgeräuchert)", method: "heiss", cat: "Fisch & Meeresfrüchte", diff: 1,
+    id: "makrele-heiss", name: "Räuchermakrele (heißgeräuchert)", method: "heiss", cat: "Fisch", diff: 1,
     time: "4–5 h", pit: "75–95 °C", core: "65 °C, fest und goldbraun", wood: "WSM · Buche + Erle",
     blurb: "Heißgeräucherte Makrele – fettreich, kräftig aromatisch, schnell gemacht.",
     equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
@@ -3366,7 +3366,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "lachs-warm", name: "Lachsforelle warmgeräuchert", method: "warm", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "lachs-warm", name: "Lachsforelle warmgeräuchert", method: "warm", cat: "Fisch", diff: 2,
     time: "1 Tag + 3–4 h", pit: "40–65 °C", core: "Saftig, hellorange, fest", wood: "WSM · Erle + Apfel",
     blurb: "Lachsforelle beim Warmräuchern entwickelt außergewöhnliche Saftigkeit und mildes Raucharoma.",
     equipment: [["wsm",5],["kettle",4],["gas",4]],
@@ -3386,7 +3386,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "sardinen-geraeuchert", name: "Geräucherte Sardinen / Sprotten", method: "heiss", cat: "Fisch & Meeresfrüchte", diff: 1,
+    id: "sardinen-geraeuchert", name: "Geräucherte Sardinen / Sprotten", method: "heiss", cat: "Fisch", diff: 1,
     time: "3–4 h", pit: "75–90 °C", core: "Goldbraun, fest", wood: "WSM · Buche + Erle",
     blurb: "Kleine Fische heißgeräuchert – Sardinen oder Sprotten wie aus der Dose, nur unendlich besser.",
     equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
@@ -3407,7 +3407,7 @@ const RECIPES = [
   /* ============================ SALAMI VARIANTEN ============================ */
 
   r({
-    id: "milano-salami", name: "Mailänder Salami (Milano)", method: "kalt", cat: "Wurst & Salami", diff: 3,
+    id: "milano-salami", name: "Mailänder Salami (Milano)", method: "kalt", cat: "Wurst", diff: 3,
     time: "6–8 Wochen", pit: "10–14 °C, 75–85 % LF", core: "Fest, gereift, weißer Edelschimmel", wood: "WSM Kalträuchern (1 Gang) · Buche",
     blurb: "Die klassische Mailänder Salami – grob gemahlen, dezent gewürzt, lang gereift.",
     equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
@@ -3437,7 +3437,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "chorizo", name: "Chorizo (spanisch-style)", method: "kalt", cat: "Wurst & Salami", diff: 2,
+    id: "chorizo", name: "Chorizo (spanisch-style)", method: "kalt", cat: "Wurst", diff: 2,
     time: "3–4 Wochen", pit: "12–16 °C, 75–80 % LF", core: "Fest, leuchtend rot, aromatisch", wood: "WSM Kalträuchern · Buche",
     blurb: "Hausgemachte Chorizo – scharf, paprikarot, knoblauchintensiv. Spanische Traditionskultur.",
     equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
@@ -3468,7 +3468,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "landjaeger", name: "Landjäger", method: "kalt", cat: "Wurst & Salami", diff: 2,
+    id: "landjaeger", name: "Landjäger", method: "kalt", cat: "Wurst", diff: 2,
     time: "2–3 Wochen", pit: "12–15 °C, 70–80 % LF", core: "Fest, trocken, dunkel", wood: "WSM Kalträuchern · Buche + Tanne",
     blurb: "Der Landjäger – geräucherte, gepresste, getrocknete Dauerwurst. Alpenklassiker.",
     equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
@@ -3725,7 +3725,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "zander-heiss", name: "Heißgeräucherter Zander / Barsch", method: "heiss", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "zander-heiss", name: "Heißgeräucherter Zander / Barsch", method: "heiss", cat: "Fisch", diff: 2,
     time: "1 Tag + 2–3 h", pit: "75–95 °C", core: "65 °C", wood: "WSM · Erle + Apfel",
     blurb: "Heimischer Süßwasserfisch heißgeräuchert – mageres, zartes Fleisch mit feinem Raucharoma.",
     equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
@@ -3792,7 +3792,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "lammschulter-bbq", name: "Lammschulter Low & Slow", method: "bbq", cat: "Lamm", diff: 2,
+    id: "lammschulter-bbq", name: "Lammschulter Low & Slow", method: "bbq", cat: "Wild & Lamm", diff: 2,
     time: "8–10 h", pit: "110–120 °C", core: "90–94 °C", wood: "WSM · Eiche + Rosmarinzweig auf den Kohlen",
     blurb: "Lammschulter low & slow bis sie auseinanderfällt – mediterrane Würze trifft BBQ-Geduld.",
     equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
@@ -3937,7 +3937,7 @@ const RECIPES = [
   /* ============================ NEUE GRILL ============================ */
 
   r({
-    id: "flank-steak", name: "Flank Steak / Bavette", method: "grill", cat: "Rindfleisch", diff: 2,
+    id: "flank-steak", name: "Flank Steak / Bavette", method: "grill", cat: "Rind", diff: 2,
     time: "30–60 min", pit: "direkt 250–280 °C", core: "52–54 °C (medium-rare)", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Das unterschätzte Steak – günstiger als Filet, intensiver im Geschmack. Quer zur Faser aufschneiden ist Pflicht.",
     origin: "🇺🇸 Das Flank Steak (Bavette) stammt aus der US-amerikanischen und französischen Küche. Grobfaserig und aromatisch, heiß gegrillt und immer quer zur Faser aufgeschnitten.",
@@ -3961,7 +3961,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "asado-tira", name: "Tira de Asado (Argentinien)", method: "grill", cat: "Rindfleisch", diff: 2,
+    id: "asado-tira", name: "Tira de Asado (Argentinien)", method: "grill", cat: "Rind", diff: 2,
     time: "2–3 h", pit: "indirekt über Glut, 130–160 °C", core: "durch, zart", wood: "Holzkohle/Holzglut · Weber Kugelgrill",
     blurb: "Argentinische Short Ribs über der Glut – quer geschnitten, nur mit grobem Salz, langsam über niedriger Hitze gegart. Das Herz des Asado.",
     origin: "🇦🇷 Das Asado ist das kulturelle Grillritual Argentiniens. Die Tira de Asado (quergesägte Rinderrippen) wird über niedriger Holzglut stundenlang gegart, gewürzt nur mit grobem Salz. Der Asador arbeitet mit Geduld und der Hitze der Glut, nicht mit Flammen – dazu Chimichurri.",
@@ -3986,7 +3986,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "adana-kebap", name: "Adana Kebap (Türkei)", method: "grill", cat: "Lammfleisch", diff: 2,
+    id: "adana-kebap", name: "Adana Kebap (Türkei)", method: "grill", cat: "Wild & Lamm", diff: 2,
     time: "1 h + 10 min Grillen", pit: "direkt über Glut, 230–260 °C", core: "durch, saftig", wood: "Holzkohle · Weber Kugelgrill",
     blurb: "Handgehacktes, scharf gewürztes Lammhack auf breiten Flachspießen über Holzkohle. Würzig, saftig, mit dem typischen Paprika-Öl.",
     origin: "🇹🇷 Der Adana Kebap stammt aus der südtürkischen Stadt Adana und ist als geschützte Spezialität definiert. Traditionell handgehacktes Lamm mit Schwanzfett, gewürzt mit rotem Paprika und Chili, auf breite Flachspieße gedrückt und über Holzkohle gegrillt – serviert mit Fladenbrot, Sumak-Zwiebeln und gegrilltem Gemüse.",
@@ -4013,7 +4013,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "galbi", name: "Galbi (Korea)", method: "grill", cat: "Rindfleisch", diff: 2,
+    id: "galbi", name: "Galbi (Korea)", method: "grill", cat: "Rind", diff: 2,
     time: "4–12 h marinieren + 8 min Grillen", pit: "direkt 240–270 °C", core: "durch, karamellisiert", wood: "Holzkohle/Gas · Weber Kugelgrill oder Tischgrill",
     blurb: "Koreanische marinierte Rinderrippen: dünn geschnitten, in Sojasauce-Birne-Sesam mariniert, sehr heiß gegrillt bis süß-karamellig.",
     origin: "🇰🇷 Galbi (auch Kalbi) sind marinierte Rinderrippen und ein Herzstück des koreanischen Barbecue. Die Marinade aus Sojasauce, geriebener asiatischer Birne, Sesamöl, Knoblauch und Zucker macht das Fleisch zart und süß-herzhaft. Dünn (LA-Style, quer durch den Knochen) oder als Tasche geschnitten, sehr heiß am Tisch gegrillt.",
@@ -4040,7 +4040,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "jerk-pork", name: "Jerk Pork / Chicken (Jamaika)", method: "grill", cat: "Schweinefleisch", diff: 2,
+    id: "jerk-pork", name: "Jerk Pork / Chicken (Jamaika)", method: "grill", cat: "Schwein", diff: 2,
     time: "12–24 h + 40–60 min Grillen", pit: "indirekt 150–180 °C", core: "Schwein 75 °C / Hähnchen 80 °C", wood: "Pimentholz/Holzkohle · Weber Kugelgrill",
     blurb: "Jamaikanischer Klassiker: scharfe Scotch-Bonnet-Piment-Marinade, langsam über Pimentholz-Rauch gegrillt. Feurig, aromatisch, rauchig.",
     origin: "🇯🇲 Jerk ist die Signatur-Würztechnik Jamaikas, entwickelt von den Maroons. Fleisch wird in einer Paste aus Scotch-Bonnet-Chili, Piment (Allspice), Thymian, Frühlingszwiebeln und Ingwer mariniert und traditionell über Pimentholz langsam gegrillt – daher das unverwechselbare rauchig-scharfe Aroma.",
@@ -4067,7 +4067,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "sosaties", name: "Sosaties (Südafrika)", method: "grill", cat: "Lammfleisch", diff: 2,
+    id: "sosaties", name: "Sosaties (Südafrika)", method: "grill", cat: "Wild & Lamm", diff: 2,
     time: "12–24 h + 15 min Grillen", pit: "direkt/indirekt 200–230 °C", core: "durch, saftig", wood: "Holzkohle · Weber Kugelgrill",
     blurb: "Südafrikanische Curry-Aprikosen-Lammspieße, kapmalaiisch inspiriert. Süß-würzig mariniert, mit getrockneten Aprikosen und Zwiebeln aufgespießt.",
     origin: "🇿🇦 Sosaties sind ein Klassiker der kap-malaiischen Küche Südafrikas und fester Bestandteil jedes Braai. Der Name kommt von „sate“ (Spieß) und „saus“ (würzige Marinade). Lamm wird in einer Curry-Aprikosen-Marinade eingelegt und mit getrockneten Aprikosen und Zwiebeln aufgespießt – süß, würzig und leicht scharf.",
@@ -4095,7 +4095,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "zedernbrett-lachs", name: "Lachs auf Zedernholz-Brett", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
+    id: "zedernbrett-lachs", name: "Lachs auf Zedernholz-Brett", method: "grill", cat: "Fisch", diff: 1,
     time: "30 min einweichen + 25–35 min Grillen", pit: "indirekt 180–200 °C", core: "55–60 °C", wood: "Zedernholz-Brett + Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Lachs auf dem Zedernbrett – saftig, aromatisch, kein Klebestress, perfektes Showstück.",
     origin: "🇨🇦 Lachs auf dem Zedernbrett stammt von den indigenen Völkern der nordamerikanischen Pazifikküste. Das feuchte Holz schwelt, würzt den Lachs mit feinem Rauch und schützt ihn vor direkter Hitze.",
@@ -4119,7 +4119,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "halloumi-grill", name: "Gegrillter Halloumi & Gemüse-Platte", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
+    id: "halloumi-grill", name: "Gegrillter Halloumi & Gemüse-Platte", method: "grill", cat: "Gemüse", diff: 1,
     time: "20–30 min", pit: "direkt 200–230 °C", core: "—", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Halloumi wird auf dem Grill goldbraun ohne zu schmelzen – perfekt für vegetarische Runden.",
     equipment: [["kettle",5],["gas",5],["wsm",3]],
@@ -4143,7 +4143,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "oktopus-grill", name: "Oktopus vom Grill (vorgegart)", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "oktopus-grill", name: "Oktopus vom Grill (vorgegart)", method: "grill", cat: "Fisch", diff: 2,
     time: "1 h Vorgaren + 10–15 min Grillen", pit: "direkt 220–260 °C", core: "—", wood: "Rössle Gasgrill oder Weber Kugelgrill",
     blurb: "Knusprige Arme, zartes Innere – der Trick ist das Vorkochen. Grillen gibt die Röstung.",
     equipment: [["kettle",5],["gas",5],["wsm",3]],
@@ -4366,7 +4366,7 @@ const RECIPES = [
   /* ============================ NEUE DÖRREN (Schwein · Rind · Gemüse) ============================ */
 
   r({
-    id: "pork-jerky", name: "Pork Jerky (Schweinefleisch)", method: "dorr", cat: "Fleisch & Fisch", diff: 3,
+    id: "pork-jerky", name: "Pork Jerky (Schweinefleisch)", method: "dorr", cat: "Fisch", diff: 3,
     time: "1 Tag + 5–8 h", pit: "70 °C (Maximum)", core: "Ledrig, kein feuchter Kern", wood: "Graef DA506", yield: "ca. 350 g/kg",
     blurb: "Würzige Schweinefleisch-Streifen – mit Pökelsalz und sicherer Temperaturführung zum gelingsicheren Jerky.",
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
@@ -4388,7 +4388,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "ground-beef-jerky", name: "Hackfleisch-Jerky (Beef Sticks)", method: "dorr", cat: "Fleisch & Fisch", diff: 2,
+    id: "ground-beef-jerky", name: "Hackfleisch-Jerky (Beef Sticks)", method: "dorr", cat: "Fisch", diff: 2,
     time: "1 Tag + 5–7 h", pit: "70 °C", core: "Ledrig-fest", wood: "Graef DA506", yield: "ca. 400 g/kg",
     blurb: "Aus magerem Rinderhack geformt – gleichmäßig, zart und ohne teure Edelstücke. Die günstige Jerky-Variante.",
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
@@ -4486,7 +4486,7 @@ const RECIPES = [
   /* ============================ NEUE GRILL – FISCH & MEERESFRÜCHTE ============================ */
 
   r({
-    id: "forelle-grill", name: "Ganze Forelle vom Grill (Fischkorb)", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
+    id: "forelle-grill", name: "Ganze Forelle vom Grill (Fischkorb)", method: "grill", cat: "Fisch", diff: 1,
     time: "30 min + 15–20 min Grillen", pit: "direkt 200–230 °C", core: "60 °C, Flosse löst sich", wood: "Weber Kugelgrill oder Rössle Gasgrill · Fischkorb",
     blurb: "Knusprige Haut, saftiges Fleisch – im Fischkorb gewendet, klebt nichts am Rost.",
     equipment: [["kettle",5],["gas",5],["wsm",3]],
@@ -4506,7 +4506,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "sardinhas-assadas", name: "Sardinhas Assadas (Portugal)", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
+    id: "sardinhas-assadas", name: "Sardinhas Assadas (Portugal)", method: "grill", cat: "Fisch", diff: 1,
     time: "1 h salzen + 8 min Grillen", pit: "direkt 250–280 °C", core: "Haut kross, Fleisch gerade durch", wood: "Holzkohle · Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Portugals Straßenfest-Klassiker: fette Sardinen, nur grob gesalzen, sehr heiß über Kohle gegrillt. Auf Brot gelegt, das das Fett aufsaugt.",
     origin: "🇵🇹 Sardinhas assadas sind das Herz der portugiesischen Sommerfeste, allen voran der Santo-António-Feiern in Lissabon im Juni. Nur grobes Meersalz, keine Marinade – die frische, fette Sardine und das Kohlefeuer sind alles. Traditionell auf einer Scheibe Brot serviert, die den Saft auffängt.",
@@ -4529,7 +4529,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "saba-shioyaki", name: "Saba Shioyaki (Japan)", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
+    id: "saba-shioyaki", name: "Saba Shioyaki (Japan)", method: "grill", cat: "Fisch", diff: 1,
     time: "40 min salzen + 10 min Grillen", pit: "direkt/indirekt 220–240 °C", core: "Haut kross, Fleisch saftig", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Japanischer salzgegrillter Makrele: nur Salz, kurz gezogen, sehr heiß gegrillt bis die Haut kross ist. Schlicht und perfekt.",
     origin: "🇯🇵 Shioyaki („salzgegrillt“) ist eine japanische Grundtechnik für Fisch – am bekanntesten mit Makrele (Saba) oder Hörnhecht (Sanma). Das Salz zieht Feuchtigkeit und würzt, dann macht heißes Grillen die Haut kross. Serviert mit geriebenem Daikon und Sojasauce, ein Frühstücks- und Izakaya-Klassiker.",
@@ -4553,7 +4553,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "pescado-zarandeado", name: "Pescado Zarandeado (Mexiko)", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "pescado-zarandeado", name: "Pescado Zarandeado (Mexiko)", method: "grill", cat: "Fisch", diff: 2,
     time: "1–2 h marinieren + 20 min Grillen", pit: "indirekt/direkt 200–230 °C", core: "Fleisch flockig", wood: "Holz/Kohle · Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Aufgeklappter ganzer Fisch aus Nayarit, mit Chili-Marinade über Holz gegrillt. Rauchig, würzig, saftig – ein Fest auf dem Rost.",
     origin: "🇲🇽 Pescado Zarandeado stammt von der Pazifikküste Mexikos (Nayarit, Sinaloa) und wird traditionell mit dem namensgebenden „Zaranda“-Grillkorb über Mangrovenholz gegrillt. Der ganze Fisch wird schmetterlingsartig aufgeklappt, mit Chili, Achiote und Limette mariniert – ein Strand- und Familienklassiker.",
@@ -4580,7 +4580,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "braai-snoek", name: "Braai Snoek (Südafrika)", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "braai-snoek", name: "Braai Snoek (Südafrika)", method: "grill", cat: "Fisch", diff: 2,
     time: "30 min + 20–25 min Grillen", pit: "indirekt/direkt 200–220 °C", core: "Fleisch flockig", wood: "Holz/Kohle · Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Südafrikanischer Grillklassiker: aufgeklappter Snoek mit Aprikosen-Knoblauch-Butter glasiert, über Holz gegrillt. Süß-rauchig und saftig.",
     origin: "🇿🇦 Braai Snoek ist ein Kap-Klassiker der südafrikanischen Braai-Kultur. Der fettreiche Snoek wird aufgeklappt, mit einer „Basting“ aus Aprikosenkonfitüre, Butter, Knoblauch und Zitrone bestrichen und über Holz gegrillt. Wo kein Snoek verfügbar ist, funktioniert Makrele oder Lachsforelle genauso.",
@@ -4606,7 +4606,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "lachsfilet-grill", name: "Lachsfilet mit Haut vom Grill", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
+    id: "lachsfilet-grill", name: "Lachsfilet mit Haut vom Grill", method: "grill", cat: "Fisch", diff: 1,
     time: "20 min", pit: "direkt 200–220 °C, Haut zuerst", core: "50–55 °C", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Knusprige Hautseite, glasig-saftiger Kern – der einfachste Weg zu perfektem Grilllachs.",
     equipment: [["kettle",5],["gas",5],["wsm",3]],
@@ -4626,7 +4626,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "thunfisch-steak-grill", name: "Thunfischsteak mit Sesamkruste", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "thunfisch-steak-grill", name: "Thunfischsteak mit Sesamkruste", method: "grill", cat: "Fisch", diff: 2,
     time: "30 min marinieren + 5 min Grillen", pit: "direkt 260–300 °C (sehr heiß)", core: "innen rosé (kurz angegrillt)", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Außen kross, innen roh-rosa – Thunfisch wird sehr heiß und nur ganz kurz gegrillt.",
     equipment: [["kettle",5],["gas",5],["wsm",3]],
@@ -4646,7 +4646,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "dorade-grill", name: "Dorade ganz vom Grill", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "dorade-grill", name: "Dorade ganz vom Grill", method: "grill", cat: "Fisch", diff: 2,
     time: "30 min + 20 min Grillen", pit: "direkt → indirekt 200–220 °C", core: "Rückgrat löst sich leicht", wood: "Weber Kugelgrill oder Rössle Gasgrill · Fischkorb",
     blurb: "Mediterraner Klassiker: ganze Dorade (oder Wolfsbarsch) mit Zitrone und Kräutern, knusprig gegrillt.",
     origin: "🇬🇷 Ganzer Fisch vom Grill – Dorade oder Wolfsbarsch – ist ein Klassiker der griechischen und mediterranen Küche. Nur Zitrone, Olivenöl und Kräuter, über direkter Hitze knusprig gegrillt.",
@@ -4669,7 +4669,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "jakobsmuscheln-grill", name: "Jakobsmuscheln vom Grill", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 2,
+    id: "jakobsmuscheln-grill", name: "Jakobsmuscheln vom Grill", method: "grill", cat: "Fisch", diff: 2,
     time: "15 min", pit: "direkt 240–280 °C (sehr heiß)", core: "gerade undurchsichtig", wood: "Weber Kugelgrill oder Rössle Gasgrill · Plancha/Gusspfanne",
     blurb: "In zwei Minuten fertig: außen karamellige Kruste, innen zart-glasig. Eine elegante Vorspeise.",
     equipment: [["kettle",5],["gas",5],["wsm",3]],
@@ -4688,7 +4688,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "schwertfisch-spieß", name: "Schwertfisch-Spieße (Espetada)", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
+    id: "schwertfisch-spieß", name: "Schwertfisch-Spieße (Espetada)", method: "grill", cat: "Fisch", diff: 1,
     time: "30 min marinieren + 10 min Grillen", pit: "direkt 220–250 °C", core: "saftig, gerade durch", wood: "Weber Kugelgrill oder Rössle Gasgrill · Spieße",
     blurb: "Fester Schwertfisch bleibt am Spieß perfekt in Form – mediterran mariniert, schnell gegrillt.",
     origin: "🇵🇹 Espetada bezeichnet auf Madeira und in Portugal am Spieß Gegrilltes. Fester Schwertfisch eignet sich perfekt: mariniert, aufgespießt und kurz über direkter Hitze gegrillt.",
@@ -4713,7 +4713,7 @@ const RECIPES = [
   /* ============================ NEUE GRILL – SEITENKOCHER (Gemüse) ============================ */
 
   r({
-    id: "sideburner-padron", name: "Blistered Padrón-Paprika (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
+    id: "sideburner-padron", name: "Blistered Padrón-Paprika (Seitenkocher)", method: "grill", cat: "Gemüse", diff: 1,
     time: "10 min", pit: "Seitenkocher – Gusspfanne, volle Hitze", core: "—", wood: "Rössle Gasgrill · Seitenkocher + Gusseisenpfanne",
     blurb: "In Minuten fertig: Padrón- oder Spitzpaprika in der glühend heißen Pfanne, Blasen werfend, mit grobem Salz. Tapas-Klassiker.",
     equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2],["dutch",2,{de:"geht, flache Pfanne besser",en:"works, a flat pan is better"}]],
@@ -4736,7 +4736,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "sideburner-zwiebeln", name: "Balsamico-Schmorzwiebeln (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
+    id: "sideburner-zwiebeln", name: "Balsamico-Schmorzwiebeln (Seitenkocher)", method: "grill", cat: "Gemüse", diff: 1,
     time: "35–45 min", pit: "Seitenkocher – kleine bis mittlere Flamme", core: "weich, sirupartig", wood: "Rössle Gasgrill · Seitenkocher + Gusstopf",
     blurb: "Langsam weich geschmorte Zwiebeln mit Balsamico – die perfekte Beilage zu Steak und Burger, ohne den Grill zu blockieren.",
     equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2],["dutch",4,{de:"gut zum Schmoren",en:"good for braising"}]],
@@ -4758,7 +4758,7 @@ const RECIPES = [
   /* ============================ NEUE GRILL – SEITENKOCHER (mehr) ============================ */
 
   r({
-    id: "sideburner-pilze", name: "Knoblauch-Kräuter-Pilzpfanne (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
+    id: "sideburner-pilze", name: "Knoblauch-Kräuter-Pilzpfanne (Seitenkocher)", method: "grill", cat: "Gemüse", diff: 1,
     time: "15 min", pit: "Seitenkocher – Gusspfanne, hohe Hitze", core: "—", wood: "Rössle Gasgrill · Seitenkocher + Gusseisenpfanne",
     blurb: "Goldbraun gebratene Pilze mit Knoblauch, Butter und Petersilie – die ideale Steak-Beilage, in 15 Minuten fertig.",
     equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2],["dutch",3,{de:"geht, flache Pfanne besser",en:"works, a flat pan is better"}]],
@@ -4778,7 +4778,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "sideburner-spargel", name: "Gebratener grüner Spargel mit Parmesan (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
+    id: "sideburner-spargel", name: "Gebratener grüner Spargel mit Parmesan (Seitenkocher)", method: "grill", cat: "Gemüse", diff: 1,
     time: "12 min", pit: "Seitenkocher – Gusspfanne, mittlere bis hohe Hitze", core: "bissfest", wood: "Rössle Gasgrill · Seitenkocher + Gusseisenpfanne",
     blurb: "Grüner Spargel mit Röstaromen, Zitrone und Parmesan – schnell, frisch und unkompliziert.",
     equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2],["dutch",2,{de:"geht, flache Pfanne besser",en:"works, a flat pan is better"}]],
@@ -4798,7 +4798,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "sideburner-bohnen", name: "Geschmorte Speck-Bohnen (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
+    id: "sideburner-bohnen", name: "Geschmorte Speck-Bohnen (Seitenkocher)", method: "grill", cat: "Gemüse", diff: 1,
     time: "30 min", pit: "Seitenkocher – Gusstopf, kleine bis mittlere Flamme", core: "weich", wood: "Rössle Gasgrill · Seitenkocher + Gusstopf",
     blurb: "Grüne Bohnen langsam mit Speck und Zwiebeln geschmort – deftige Beilage, die nebenher fertig wird.",
     equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2],["dutch",4,{de:"gut zum Schmoren",en:"good for braising"}]],
@@ -4819,7 +4819,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "sideburner-gambas", name: "Gambas al Ajillo (Seitenkocher)", method: "grill", cat: "Fisch & Meeresfrüchte", diff: 1,
+    id: "sideburner-gambas", name: "Gambas al Ajillo (Seitenkocher)", method: "grill", cat: "Fisch", diff: 1,
     time: "15 min", pit: "Seitenkocher – Gusspfanne, mittlere Hitze", core: "opal-rosa", wood: "Rössle Gasgrill · Seitenkocher + Gusspfanne/Cazuela",
     blurb: "Garnelen im sprudelnden Knoblauch-Chili-Öl – der spanische Tapas-Klassiker, wie gemacht für den Seitenkocher.",
     equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2],["dutch",3,{de:"geht, flache Pfanne besser",en:"works, a flat pan is better"}]],
@@ -4843,7 +4843,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "sideburner-shakshuka", name: "Shakshuka (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
+    id: "sideburner-shakshuka", name: "Shakshuka (Seitenkocher)", method: "grill", cat: "Gemüse", diff: 1,
     time: "30 min", pit: "Seitenkocher – Gusspfanne, mittlere Flamme", core: "Eiweiß gestockt, Dotter wachsweich", wood: "Rössle Gasgrill · Seitenkocher + Gusspfanne",
     blurb: "Pochierte Eier in würzigem Paprika-Tomaten-Sugo – herzhaftes Pfannengericht für jede Tageszeit, direkt am Grill.",
     equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2],["dutch",4,{de:"Sugo köcheln",en:"simmer the sugo"}]],
@@ -4867,7 +4867,7 @@ const RECIPES = [
   }),
 
   r({
-    id: "sideburner-bratkartoffeln", name: "Bratkartoffeln aus Gusseisen (Seitenkocher)", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
+    id: "sideburner-bratkartoffeln", name: "Bratkartoffeln aus Gusseisen (Seitenkocher)", method: "grill", cat: "Gemüse", diff: 1,
     time: "30 min", pit: "Seitenkocher – Gusspfanne, mittlere bis hohe Hitze", core: "außen kross, innen weich", wood: "Rössle Gasgrill · Seitenkocher + Gusseisenpfanne",
     blurb: "Knusprige Bratkartoffeln mit Zwiebeln und Speck – die Beilage, die jeden Grillteller komplett macht.",
     equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2],["dutch",3,{de:"geht, Pfanne knuspriger",en:"works, a pan crisps better"}]],
@@ -5473,7 +5473,7 @@ const RECIPES = [
     learn: ["Halbieren","Schnittseite grillen","Karamellisieren","Honig dazu"],
   }),
   r({
-    id: "camembert-grill", name: "Gegrillter Camembert", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
+    id: "camembert-grill", name: "Gegrillter Camembert", method: "grill", cat: "Gemüse", diff: 1,
     time: "15 min", pit: "indirekt 180–200 °C", core: "innen flüssig", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Cremig geschmolzener Camembert mit Honig, Nüssen und Kräutern – die perfekte kleine Vorspeise.",
     equipment: [["kettle",5],["gas",5],["wsm",3]],
@@ -5491,7 +5491,7 @@ const RECIPES = [
     learn: ["Rinde einritzen","Indirekt erwärmen","Flüssigen Kern treffen"],
   }),
   r({
-    id: "blumenkohl-steak", name: "Blumenkohl-Steak vom Grill", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
+    id: "blumenkohl-steak", name: "Blumenkohl-Steak vom Grill", method: "grill", cat: "Gemüse", diff: 1,
     time: "30 min", pit: "direkt + indirekt 200 °C", core: "weich, mit Biss", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Dicke Blumenkohlscheiben mit Röstaromen – ein sättigendes vegetarisches Hauptgericht.",
     equipment: [["kettle",5],["gas",5],["wsm",3]],
@@ -5510,7 +5510,7 @@ const RECIPES = [
     learn: ["Dick schneiden","Indirekt garen","Röstaromen","Würzen"],
   }),
   r({
-    id: "gefuellte-champignons", name: "Gefüllte Champignons vom Grill", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
+    id: "gefuellte-champignons", name: "Gefüllte Champignons vom Grill", method: "grill", cat: "Gemüse", diff: 1,
     time: "25 min", pit: "indirekt 180–200 °C", core: "—", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Mit Frischkäse, Kräutern und Speck gefüllte Champignons – beliebter Snack und Beilage.",
     equipment: [["kettle",5],["gas",5],["wsm",3]],
@@ -5529,7 +5529,7 @@ const RECIPES = [
     learn: ["Füllen","Indirekt garen","Käse gratinieren"],
   }),
   r({
-    id: "susskartoffel-grill", name: "Gegrillte Süßkartoffel-Spalten", method: "grill", cat: "Gemüse & Beilagen", diff: 1,
+    id: "susskartoffel-grill", name: "Gegrillte Süßkartoffel-Spalten", method: "grill", cat: "Gemüse", diff: 1,
     time: "30 min", pit: "indirekt → direkt 200–220 °C", core: "weich, außen kross", wood: "Weber Kugelgrill oder Rössle Gasgrill",
     blurb: "Würzige Süßkartoffel-Spalten mit Paprika und Kreuzkümmel – die bessere Pommes-Alternative.",
     equipment: [["kettle",5],["gas",5],["wsm",3]],
@@ -5596,7 +5596,7 @@ const RECIPES = [
   /* ============================ MARINADEN ============================ */
 
   r({
-    id: "marinade-bbq-klassik", name: "BBQ-Marinade (Klassiker)", method: "marinaden", cat: "Universal", diff: 1,
+    id: "marinade-bbq-klassik", name: "BBQ-Marinade (Klassiker)", method: "marinaden", cat: "Sonstiges", diff: 1,
     time: "Ziehzeit 4–12 h", pit: "ca. 1–1,5 kg", core: "", wood: "Ketchup · Öl · Essig", yield: "ca. 250 ml",
     blurb: "Süß-rauchig-würzig: die Allround-Marinade für Spareribs, Hähnchen, Nackensteaks und Pulled Pork.",
     ingredients: [
@@ -5637,7 +5637,7 @@ const RECIPES = [
     tips: ["Eingekocht mit etwas Speisestärke wird daraus eine dicke Glaze.", "Genial für Lachs, Hähnchenschenkel und Gemüsespieße."],
   }),
   r({
-    id: "marinade-mediterran", name: "Mediterrane Kräuter-Knoblauch-Marinade", method: "marinaden", cat: "Lamm & Gemüse", diff: 1,
+    id: "marinade-mediterran", name: "Mediterrane Kräuter-Knoblauch-Marinade", method: "marinaden", cat: "Wild & Lamm", diff: 1,
     time: "Ziehzeit 2–12 h", pit: "ca. 1 kg", core: "", wood: "Olivenöl · Zitrone", yield: "ca. 200 ml",
     blurb: "Olivenöl, Zitrone und reichlich Kräuter – für Lamm, Hähnchen, Halloumi und Grillgemüse.",
     ingredients: [
@@ -5693,7 +5693,7 @@ const RECIPES = [
     tips: ["Restmarinade aufkochen und als Soße servieren.", "Passt hervorragend zu allem Deftigen vom Schwein."],
   }),
   r({
-    id: "marinade-zitrus", name: "Zitrus-Kräuter-Marinade (Fisch)", method: "marinaden", cat: "Fisch & Meeresfrüchte", diff: 1,
+    id: "marinade-zitrus", name: "Zitrus-Kräuter-Marinade (Fisch)", method: "marinaden", cat: "Fisch", diff: 1,
     time: "Ziehzeit 15–60 min", pit: "ca. 800 g", core: "", wood: "Zitrone · Olivenöl", yield: "ca. 150 ml",
     blurb: "Frisch und leicht mit Zitrone, Limette und Dill – für Fischfilets, Garnelen und Calamari. Nur kurz marinieren!",
     ingredients: [
@@ -5811,7 +5811,7 @@ const RECIPES = [
     tips: ["Klassisch mit Reis, Salatblättern zum Wickeln und Kimchi.", "Funktioniert auch hervorragend mit Schweinenacken (Dwaeji Bulgogi)."],
   }),
   r({
-    id: "marinade-rotwein-wild", name: "Rotwein-Wacholder-Marinade (Wild)", method: "marinaden", cat: "Wild", diff: 2,
+    id: "marinade-rotwein-wild", name: "Rotwein-Wacholder-Marinade (Wild)", method: "marinaden", cat: "Wild & Lamm", diff: 2,
     time: "Ziehzeit 12–48 h", pit: "ca. 1,5 kg", core: "", wood: "Rotwein · Wacholder", yield: "ca. 500 ml",
     blurb: "Kräftig und aromatisch – die klassische Beize für Reh, Hirsch und Wildschwein, mildert den Wildgeschmack.",
     ingredients: [
@@ -5828,6 +5828,18 @@ const RECIPES = [
     ],
     tips: ["Wildschwein immer komplett durchgaren (mind. 75 °C).", "Die abgeseihte Beize ergibt eine herrliche Wildsoße."],
   }),
+
+  r({"id":"haehnchen-marinade","name":"Würzige Hähnchen-Marinade","method":"marinaden","cat":"Geflügel","diff":1,"time":"3-24 Stunden (inkl. Marinierzeit)","pit":"—","core":"","wood":"—","yield":"ca. 300 ml (für 1-1,5 kg Hähnchen)","blurb":"Aromatische Allzweck-Marinade mit Paprika, Knoblauch und mediterranen Kräutern für saftiges Hähnchen vom Grill.","ingredients":[{"a":"100 ml","i":"Olivenöl"},{"a":"50 ml","i":"Zitronensaft (frisch gepresst)"},{"a":"3 EL","i":"Sojasauce"},{"a":"2 EL","i":"Honig oder Ahornsirup"},{"a":"4 Zehen","i":"Knoblauch (fein gehackt)"},{"a":"2 TL","i":"Paprikapulver (edelsüß)"},{"a":"1 TL","i":"Paprikapulver (geräuchert)"},{"a":"1 TL","i":"Chilipulver oder Cayennepfeffer"},{"a":"1 TL","i":"Kreuzkümmel (gemahlen)"},{"a":"1 TL","i":"getrockneter Thymian"},{"a":"1 TL","i":"getrockneter Oregano"},{"a":"1 TL","i":"schwarzer Pfeffer (frisch gemahlen)"},{"a":"1 TL","i":"Salz"}],"phases":[{"label":"Marinade zubereiten","kind":"prep","dur":"5 Minuten","temp":"Raumtemperatur","text":"Alle Zutaten in einer Schüssel gründlich verquirlen, bis eine homogene Marinade entsteht.","bullets":["Knoblauch sehr fein hacken oder pressen","Honig vorher leicht erwärmen, falls zu fest","Marinade kräftig vermischen, damit sich Öl und Säure verbinden"]},{"label":"Hähnchen marinieren","kind":"marinate","dur":"3-24 Stunden","temp":"4-7°C (Kühlschrank)","text":"Hähnchen in einem verschließbaren Beutel oder einer Schüssel mit der Marinade vollständig bedecken und im Kühlschrank ziehen lassen.","bullets":["Hähnchen vor dem Marinieren trocken tupfen","Bei ganzen Stücken ggf. die Haut einritzen für bessere Penetration","Beutel mehrmals wenden oder massieren für gleichmäßige Verteilung","Mindestens 3 Stunden, optimal über Nacht marinieren","Marinade vor dem Grillen leicht abtropfen lassen"]},{"label":"Grillen","kind":"indirect","dur":"30-45 Minuten (je nach Teilstück)","temp":"180-200°C indirekt","text":"Hähnchen indirekt bei mittlerer Hitze grillen, bis die Kerntemperatur erreicht ist. Zum Schluss kurz direkt über der Glut für Röstaromen.","bullets":["Grill auf 180-200°C vorheizen (indirekte Zone)","Hähnchen mit Hautseite nach oben starten","Kerntemperatur mit Thermometer überwachen","Letzten 3-5 Minuten über direkter Hitze für Karamellisierung","Nach dem Grillen 5 Minuten ruhen lassen"]}],"tips":["Die Marinade funktioniert für alle Hähnchenteile: Schenkel, Brust, Flügel oder ganzes Huhn","Für mehr Schärfe: zusätzlich frische Chili oder Harissa-Paste einrühren","Rest-Marinade NICHT als Sauce verwenden (Kontakt mit rohem Geflügel)","Alternativ im Backofen bei 190°C (Umluft 170°C) etwa 35-40 Minuten garen","Variante: Joghurt-Basis statt Öl macht die Marinade noch zarter (100 ml Joghurt + 50 ml Öl)","SICHERHEIT:","- Hähnchen muss IMMER eine Kerntemperatur von mindestens 75°C erreichen (besser 80°C), um Salmonellen und Campylobacter abzutöten","- Marinade ausschließlich im Kühlschrank (4-7°C) ansetzen, niemals bei Raumtemperatur – Geflügel ist besonders anfällig für bakterielles Wachstum","- Alle Utensilien, Schneidebretter und Hände nach Kontakt mit rohem Hähnchen gründlich mit heißem Wasser und Spülmittel reinigen","- Verwendete Marinade niemals für Saucen weiterverwenden – bei Bedarf vorher separate Portion abfüllen, bevor das rohe Fleisch damit in Kontakt kommt"],"userCreated":true,"equipment":[["kettle",5,{"de":"direkt & indirekt grillen","en":"direct & indirect grilling"}],["gas",5,{"de":"schnell & kontrollierbar","en":"fast & controllable"}],["wsm",4,{"de":"für rauchige Keulen & Flügel","en":"for smoky legs & wings"}],["stove",3,{"de":"Grillpfanne funktioniert","en":"a grill pan works"}]],"origin":"🌍 Öl-Säure-Gewürz-Marinaden sind die universelle Basis der Grillküche – diese Version kombiniert mediterrane Kräuter mit Paprika und Knoblauch zur Allzweck-Marinade für Geflügel.","authenticity":8,"authenticityNote":"Klassischer Öl-Säure-Aufbau (3:1) mit bewährter Gewürzbasis – kein regionales Original, aber handwerklich sauber aufgebaut.","proTip":"Öl trägt das Aroma, Säure macht zart, Zucker sorgt für Röstfarbe – nie länger als 24 h marinieren, sonst wird die Oberfläche mürbe statt saftig.","learn":["Öl-Säure-Verhältnis verstehen","Richtig marinieren (Zeit & Kühlung)","Zucker & Röstung steuern","Marinade vor dem Grillen abtropfen"]}),
+
+  r({"id":"franzoesische-ringsalami","name":"Französische Ringsalami","method":"kalt","cat":"Wurst","diff":3,"time":"6-8 Wochen","pit":"12-15°C","core":"","wood":"Buchenholz","yield":"ca. 2,5 kg Salami","blurb":"Klassische luftgetrocknete Ringsalami mit feiner Körnung, mildem Knoblauch und langer Reifung.","ingredients":[{"a":"2 kg","i":"Schweinefleisch (Schulter), grob entfettet"},{"a":"500 g","i":"Rückenspeck"},{"a":"55 g","i":"Nitritpökelsalz (0,5% vom Fleischanteil = 2,2% vom Gesamtgewicht)"},{"a":"3 g","i":"Zucker"},{"a":"8 g","i":"weißer Pfeffer, gemahlen"},{"a":"2 g","i":"Piment, gemahlen"},{"a":"3 g","i":"Knoblauchpulver"},{"a":"1 g","i":"Macis (Muskatblüte)"},{"a":"2,5 g","i":"Starterkulturen (z.B. T-SPX oder F-RM-52)"},{"a":"100 ml","i":"eiskaltes Wasser für Starterkulturen"},{"a":"3-4 m","i":"Rinderkranzdarm (60-80 mm Ø)"}],"phases":[{"label":"Vorbereitung","kind":"prep","dur":"2 Stunden","temp":"2-4°C","text":"Fleisch und Speck in 2-3 cm Würfel schneiden und tiefkühlen bis -2°C (anfrieren, nicht durchfrieren). Starterkulturen nach Herstellerangabe in eiskaltem Wasser ansetzen.","bullets":["Alle Geräte und Schüsseln vorkühlen","Sehnen und Silberhaut weitgehend entfernen","Speck in separate Schüssel geben"]},{"label":"Wolfen und Mischen","kind":"prep","dur":"30 Minuten","temp":"0-2°C","text":"Fleisch durch 4,5 mm Scheibe wolfen, Speck durch 3 mm Scheibe. Alle Zutaten inkl. Starterkulturen gründlich mischen bis eine homogene, leicht klebrige Masse entsteht.","bullets":["Temperatur während des Mischens nicht über 2°C steigen lassen","Brät intensiv kneten für gute Bindung (3-5 Minuten)","Starterkulturen gleichmäßig einarbeiten"]},{"label":"Füllen","kind":"prep","dur":"45 Minuten","temp":"2-4°C","text":"Rinderkranzdarm wässern und auf Tülle ziehen. Brät straff ohne Luftblasen füllen. Zu Ringen mit ca. 40 cm Umfang abdrehen und Enden verknoten.","bullets":["Darm vor dem Füllen gründlich spülen","Mit Füllhorn oder Wurstfüller arbeiten","Oberfläche mit sauberem Tuch abtupfen"]},{"label":"Reifung Phase 1 (Fermentation)","kind":"cure","dur":"2-3 Tage","temp":"22-24°C","text":"Würste in klimatisiertem Raum bei 90-95% Luftfeuchtigkeit hängen. Starterkulturen senken pH-Wert auf ca. 5,0-5,3 für Haltbarkeit und Aroma.","bullets":["Würste dürfen sich nicht berühren","Tägliche Sichtkontrolle auf Schimmel","Nach 48h sollte Oberfläche antrocknen"]},{"label":"Kalträuchern","kind":"smoke","dur":"3-4 Tage","temp":"12-15°C","text":"In mehreren Durchgängen insgesamt 12-16 Stunden kalträuchern: 3-4x täglich je 3-4 Stunden räuchern mit jeweils 8-12 Stunden Ruhezeit dazwischen.","bullets":["Nur kalter Rauch, Temperatur nie über 18°C","Buchenholz für mildes Aroma","Zwischen Räucherphasen gut lüften"]},{"label":"Trocknung und Reifung","kind":"mature","dur":"5-7 Wochen","temp":"12-15°C","text":"Im Reifeschrank bei 75-80% Luftfeuchtigkeit nachreifen bis 30-35% Gewichtsverlust erreicht sind. Regelmäßig kontrollieren und ggf. leicht mit Essigwasser abwischen.","bullets":["Guter Edelschimmel (weiß) ist erwünscht","Bei schwarzem/grünem Schimmel sofort entfernen","Würste wöchentlich wiegen zur Kontrolle","Idealgewicht: ca. 1,6-1,7 kg pro 2,5 kg Ausgangsmasse"]}],"tips":["Starterkulturen sind Pflicht bei Rohwurst - ohne sie besteht Botulismus-Gefahr","pH-Messgerät verwenden: pH sollte nach 48h unter 5,3 liegen","Gewichtsverlauf dokumentieren: bei unter 25% Verlust ist Wurst noch zu feucht","Weiße Salzausblühungen an Oberfläche sind normal und erwünscht","Salami ist fertig wenn sie fest ist und beim Anschneiden saubere Scheiben ergibt","Bei zu schneller Trocknung bildet sich Trockenrand - dann Luftfeuchtigkeit erhöhen","SICHERHEIT:","- Nitritpökelsalz EXAKT abwiegen (hier 55g für 2,5kg) - Überdosierung ist giftig, Unterdosierung begünstigt Botulismus","- Starterkulturen zwingend verwenden - sie senken pH-Wert und verhindern Clostridium botulinum","- Temperaturbereich 4-60°C so kurz wie möglich halten - in diesem Bereich vermehren sich gefährliche Bakterien","- Perfekte Küchenhygiene: Messer, Fleischwolf, Schüsseln mit kochendem Wasser sterilisieren","- Bei schlechtem Geruch, Schleimbildung oder untypischen Farben SOFORT entsorgen","- Reifung unter 12°C kann zu langsam sein, über 18°C ist gefährlich - Klimakontrolle ist essentiell","- Schwangere, Kleinkinder und Immungeschwächte sollten keine rohe Rohwurst verzehren"],"userCreated":true,"equipment":[["chamber",5,{"de":"ideal für Fermentation & Reifung","en":"ideal for fermentation & maturing"}],["wsm",4,{"de":"für den Kaltrauch (Sparbrand)","en":"for the cold smoke (smoke generator)"}],["kettle",3,{"de":"nur mit Kaltrauch-Adapter","en":"only with a cold-smoke adapter"}],["dehydrator",0,{"de":"zu warm, zu trocken – Trockenrand","en":"too warm, too dry — case hardening"}]],"origin":"🇫🇷 Die Saucisson-Tradition Frankreichs: luftgetrocknete Rohwurst im Ring, mild gewürzt mit Knoblauch und Pfeffer, oft mit Edelschimmel – das Pendant zur italienischen Salami.","authenticity":8,"authenticityNote":"Folgt der französischen Saucisson-Methode (Fermentation, Kaltrauch optional, Lufttrocknung). Starterkulturen für die sichere Heimproduktion ergänzt.","proTip":"Die Fermentation entscheidet: Starterkulturen aktivieren, 24–48 h bei 20–24 °C anfermentieren lassen – der pH-Abfall schützt vor Fehlgärung und gibt die typische Säure-Note.","learn":["Starterkulturen einsetzen","Fermentation führen (pH-Abfall)","Wursten & Abbinden im Ring","Langsam trocknen ohne Trockenrand","Biegtest & Gewichtsverlust prüfen"]}),
+
+  r({"id":"parmaschinken-style","name":"Parmaschinken-Style (Luftgetrockneter Rohschinken)","method":"kalt","cat":"Schwein","diff":3,"time":"12-18 Monate","pit":"12-18°C","core":"","wood":"keins (luftgetrocknet)","yield":"ca. 6-8 kg fertiger Schinken","blurb":"Traditionell luftgetrockneter Rohschinken nach Parma-Art mit monatelanger Reifung – ein Projekt für geduldige Profis.","ingredients":[{"a":"1 Stück (ca. 10-12 kg)","i":"Schweinekeule mit Schwarte und Knochen"},{"a":"ca. 1 kg pro 10 kg Fleisch","i":"grobes Meersalz (ohne Zusätze)"},{"a":"optional 2-3 g pro kg","i":"Pökelsalz Nr. 1 (0,5% Nitrit) für zusätzliche Sicherheit"}],"phases":[{"label":"Vorbereitung","kind":"prep","dur":"1 Stunde","temp":"4-7°C","text":"Keule gründlich parieren, überschüssiges Fett entfernen, Schwarte belassen. Fleisch und Arbeitsfläche müssen absolut sauber sein.","bullets":["Keule von Sehnen und lose hängenden Teilen befreien","Fleischende zum späteren Aufhängen vorbereiten","Fleisch trocken tupfen","Alle Utensilien sterilisieren"]},{"label":"Erstes Salzen","kind":"cure","dur":"7-10 Tage","temp":"2-4°C","text":"Keule komplett mit Salz einreiben, besonders dick an fleischigen Stellen. In Edelstahlwanne legen, kühl lagern.","bullets":["Salz großzügig auf alle Fleischflächen verteilen","Mindestens 1 cm Salzschicht an dicken Stellen","Täglich abtropfende Flüssigkeit entfernen","Nach 3-4 Tagen nachsalzen falls nötig","Temperatur konstant unter 4°C halten"]},{"label":"Zweites Salzen","kind":"cure","dur":"15-18 Tage","temp":"2-4°C","text":"Altes Salz abwaschen, trocknen, erneut dünn einsalzen. Weiter kühl lagern, täglich wenden.","bullets":["Salzreste gründlich abspülen und trocknen","Dünner mit Salz einreiben als beim ersten Mal","Täglich kontrollieren und wenden","Gesamte Pökeldauer: mindestens 1 Tag pro 500g Fleisch"]},{"label":"Ruhezeit","kind":"rest","dur":"60-90 Tage","temp":"12-15°C","text":"Salz abwaschen, trockentupfen, an einem kühlen, luftigen Ort aufhängen. Gleichmäßige Salzverteilung im Fleisch.","bullets":["Schinken hängend in luftigem Raum lagern","Relative Luftfeuchtigkeit 70-80%","Keine direkte Sonneneinstrahlung","Wöchentlich auf Schimmel oder Geruch kontrollieren","Leichter weißer Edelschimmel ist erwünscht"]},{"label":"Fettung (optional)","kind":"prep","dur":"30 Minuten","temp":"Raumtemperatur","text":"Fleischstellen mit Schmalz-Mehl-Paste bestreichen zum Schutz vor zu schnellem Austrocknen.","bullets":["Paste aus Schweineschmalz und Reismehl oder Weizenmehl","Nur die Fleischseiten bestreichen, nicht die Schwarte","Dünn auftragen, ca. 3-5 mm Schicht"]},{"label":"Reifung","kind":"mature","dur":"10-14 Monate","temp":"14-18°C","text":"Lange Lufttrocknung und enzymatischer Reifeprozess. Kontinuierliche Gewichtsabnahme bis zu 30-35%.","bullets":["Schinken weiter hängend lagern","Luftfeuchtigkeit langsam auf 65-75% senken","Temperatur darf auf max. 18°C im Sommer steigen","Monatlich wiegen und dokumentieren","Bei grünem oder schwarzem Schimmel sofort reagieren","Mindestens 12 Monate Gesamtreifezeit","Fertig wenn Gewichtsverlust 30-35% erreicht"]},{"label":"Qualitätsprüfung","kind":"finish","dur":"15 Minuten","temp":"Raumtemperatur","text":"Mit Pferdeknochnadel (Spillo) an 3-4 Stellen einstechen und riechen. Angenehm süßlich = reif.","bullets":["Nadel an dickster Stelle nahe Knochen einstechen","Geruch muss nussig-süßlich sein, niemals ranzig oder faulig","Bei Zweifeln weitere 2-3 Monate reifen lassen","Äußeren Schimmel vor dem Anschnitt abbürsten"]}],"tips":["Nur Keulen von hochwertigen, gut genährten Schweinen verwenden (mind. 160 kg Schlachtgewicht)","Ein Reifekeller mit natürlicher Belüftung ist ideal – notfalls klimatisierter Raum mit Luftbefeuchter","Die Temperatur- und Luftfeuchtigkeitskontrolle ist absolut kritisch für Erfolg","Niemals beschleunigen – echte Parma-Qualität braucht mindestens 12 Monate","Schwarzer oder grüner Schimmel muss sofort mit Essig-Wasser entfernt werden","Dokumentiere alle Parameter (Gewicht, Temp., Luftfeuchte) wöchentlich","Erste Versuche besser mit kleineren Teilstücken (Nacken, Lende) starten","SICHERHEIT:","- BOTULISMUS-RISIKO: Dies ist ein rohes, nicht erhitztes Produkt. Absolute Sauberkeit, präzise Salzung und korrekte Temperaturführung sind lebenswichtig. Bei zu warmer oder zu feuchter Lagerung können tödliche Bakterien wachsen.","- Salzmenge ist entscheidend: mindestens 3-4% vom Fleischgewicht für erste Pökelung, nie zu wenig salzen, da sonst Verderb droht","- Nur frisches Fleisch von vertrauenswürdigen Quellen verwenden, idealerweise mit Veterinärprüfung","- Temperatur MUSS während der Pökelung unter 4°C bleiben, sonst droht bakterielle Vermehrung","- Jeden Schimmel genau beobachten: weißer Edelschimmel OK, schwarzer/grüner Schimmel sofort entfernen und Schinken auf Verderb prüfen","- Bei fauligem, ranzigem oder ammoniakhaftem Geruch SOFORT entsorgen – nicht probieren","- Schwangere, Kleinkinder, Immungeschwächte und ältere Menschen sollten rohen Schinken grundsätzlich meiden","- Erste Versuche nur mit gründlicher Recherche und idealerweise unter Anleitung eines erfahrenen Metzgers"],"userCreated":true,"equipment":[["chamber",5,{"de":"konstante 12–18 °C über Monate","en":"steady 12–18 °C for months"}],["wsm",0,{"de":"wird nie geräuchert","en":"never smoked"}],["dehydrator",0,{"de":"völlig ungeeignet für ganze Keulen","en":"completely unsuitable for whole legs"}]],"origin":"🇮🇹 Prosciutto di Parma reift in den Hügeln um Parma nur mit Meersalz und Luft – kein Rauch, keine Gewürze. Die lange Reifung baut das typisch süßlich-nussige Aroma auf.","authenticity":9,"authenticityNote":"Folgt der Parma-Methode (nur Salz, Sugna-Fettung, monatelange Luftreifung). Optionales Pökelsalz als Sicherheitsnetz für Heimbedingungen ergänzt.","proTip":"Geduld ist die wichtigste Zutat: Temperatur und Feuchte konstant halten und die Keule nie hetzen – jeder Monat Reifung zahlt direkt aufs Aroma ein.","learn":["Ganze Keule trocken salzen","Sugna (Fettabdeckung) anwenden","Monatelange Reifung führen","Klima konstant halten","Qualitätsprüfung mit der Knochennadel"]}),
+
+  r({"id":"pata-negra-style","name":"Pata Negra Style Schinken (Serrano-Art)","method":"kalt","cat":"Schinken","diff":3,"time":"12-18 Monate","pit":"10-15°C","core":"","wood":"Buche oder Eiche (nur falls leicht nachgeräuchert)","yield":"1 Schinken ca. 5-7 kg","blurb":"Luftgetrockneter Rohschinken nach spanischer Tradition mit Salz-Pökelung und langer Reifung.","ingredients":[{"a":"1 Stück (7-9 kg)","i":"Schweinekeule mit Knochen und Schwarte (idealerweise von Ibérico oder gut marmoriertem Schwein)"},{"a":"ca. 3-4 kg","i":"grobes Meersalz"},{"a":"optional 50 g","i":"Nitritpökelsalz (0,5% der Fleischmasse für zusätzliche Sicherheit)"},{"a":"nach Bedarf","i":"Olivenöl oder Schweineschmalz zum Einreiben"}],"phases":[{"label":"Vorbereitung","kind":"prep","dur":"2-3 Stunden","temp":"4-8°C","text":"Keule säubern, überschüssiges Fett und Sehnen entfernen, Schwarte intakt lassen. Fleisch und alle Utensilien müssen gekühlt sein.","bullets":["Keule gründlich abwaschen und trocken tupfen","Blutgefäße am Knochenende ausdrücken","Kühlkette nie unterbrechen"]},{"label":"Trockenpökelung","kind":"cure","dur":"1-1,5 Tage pro kg (7-14 Tage)","temp":"2-4°C","text":"Keule vollständig in einer dicken Salzschicht begraben, besonders Knochenöffnungen gut salzen. Optional 0,4-0,5% Nitritpökelsalz vorher einmassieren.","bullets":["Fleisch in Salzwanne komplett bedecken (mind. 2 cm Salz rundherum)","Täglich wenden und Position wechseln","Bei 2-4°C und 80-90% Luftfeuchtigkeit lagern","Falls Nitritpökelsalz verwendet: max. 0,5% der Fleischmasse berechnen und vorher einmassieren"]},{"label":"Entsalzen und Ausgleich","kind":"rest","dur":"30-60 Tage","temp":"4-8°C","text":"Salz abwaschen, Schinken in kaltem Wasser 24-48h wässern (mehrmals Wasser wechseln), dann aufhängen zum Salzausgleich.","bullets":["In kaltem Wasser (2-4°C) entsalzen, alle 6-8h Wasser wechseln","Schinken abtrocknen und aufhängen","Bei 8-12°C und 75-80% Luftfeuchtigkeit lagern","Salz verteilt sich gleichmäßig im Fleisch"]},{"label":"Hauptreifung (Bodega)","kind":"mature","dur":"8-12 Monate","temp":"15-20°C","text":"Langsame Reifung bei steigenden Temperaturen und kontrollierter Luftfeuchtigkeit. Schinken entwickelt Aromen und verliert Feuchtigkeit.","bullets":["Aufhängen in gut belüftetem Raum","Luftfeuchtigkeit 60-70%, Temperatur graduell von 15 auf 20°C steigern","Alle 4 Wochen kontrollieren, bei Schimmel mit Essig-Öl-Gemisch abreiben","Außenfett kann mit Olivenöl oder Schweineschmalz eingerieben werden gegen Austrocknung","Gewichtsverlust von 30-35% ist normal"]},{"label":"Kalträucherung (optional)","kind":"smoke","dur":"2-3 Tage à 4-6h","temp":"10-18°C","text":"Nur bei Wunsch nach Rauchgeschmack: sehr leichte Kalträucherung mit Buche oder Eiche.","bullets":["Max. 4-6h pro Tag räuchern bei unter 18°C","Zwischen Räucherphasen 12-24h Ruhepause","Rauch sollte subtil sein, nicht dominierend","Diese Phase ist NICHT traditionell für echten Pata Negra"]},{"label":"Nachreifung (Keller)","kind":"mature","dur":"2-4 Monate","temp":"12-16°C","text":"Finale Reifung bei kühleren Temperaturen für Aromaverfeinerung.","bullets":["In kühlem, dunklem Raum bei 60-70% Luftfeuchtigkeit","Schinken ist fertig wenn er fest ist und nussig-würzig riecht","Gesamt-Gewichtsverlust sollte 32-38% betragen","Vor Anschnitt mindestens 12 Monate Gesamtreifung"]}],"tips":["Echter Pata Negra stammt von Ibérico-Schweinen mit Eichelmast - in Deutschland gute Alternative: Schwäbisch-Hällisches oder gut gemarmortes Landschwein verwenden","Temperatur- und Feuchtigkeitskontrolle ist absolut kritisch - Klimakammer oder geeigneter Keller essentiell","Zu schnelle Trocknung führt zu Rindenhärtung - lieber langsamer und kontrollierter arbeiten","Grünlicher Edelschimmel ist normal und erwünscht, weißer Schimmel mit Essig-Wasser-Lösung entfernen","Investition in Hygrometer und Thermometer ist Pflicht","Erste Verkostung frühestens nach 12 Monaten, optimal nach 16-18 Monaten","Angeschnittenen Schinken mit Fettdeckel oder Tuch abdecken","SICHERHEIT:","- BOTULISMUS-RISIKO bei Rohschinken: Salzkonzentration muss ausreichend sein (min. 5-6% im Endprodukt), Temperatur nie über 22°C während Reifung, keine beschleunigte Reifung versuchen","- Nitritpökelsalz EXAKT dosieren falls verwendet: max. 0,4-0,5% der Fleischmasse, niemals überdosieren - zu viel Nitrit ist giftig","- Kritischer Temperaturbereich 15-30°C in ersten Wochen: hier können pathogene Keime wachsen - Temperatur unter 8°C halten bis Salz eingezogen ist","- HYGIENE absolut kritisch: alle Werkzeuge sterilisieren, nur bei Fleisch mit einwandfreier Herkunft und Kühlkette arbeiten","- Verdorbenen Schinken erkennen: ranziger Geruch, schmierige Konsistenz, untypische Verfärbungen - im Zweifel ENTSORGEN","- Personen mit geschwächtem Immunsystem, Schwangere, Kleinkinder sollten nur industriell hergestellten oder durchgegarten Schinken verzehren","- Dokumentation: Beginn-Datum, Gewicht, Temperaturen notieren um Prozess nachvollziehen zu können"],"userCreated":true,"equipment":[["chamber",5,{"de":"Bodega-Ersatz: kühl & konstant","en":"bodega substitute: cool & steady"}],["wsm",3,{"de":"nur für den optionalen Kaltrauch","en":"only for the optional cold smoke"}],["dehydrator",0,{"de":"ungeeignet für ganze Keulen","en":"unsuitable for whole legs"}]],"origin":"🇪🇸 Vorbild ist der spanische Jamón Ibérico („Pata Negra\") aus Eichelmast-Schweinen, der jahrelang in kühlen Bodegas reift. Diese Version überträgt die Methode auf gut marmorierte Keulen.","authenticity":7,"authenticityNote":"Methodisch nah an der spanischen Bodega-Reifung; echtes Pata Negra erfordert Ibérico-Schweine aus Eichelmast – daher „Style\".","proTip":"Die Marmorierung macht den Unterschied: je besser das Fett verteilt ist, desto saftiger bleibt der Schinken über die lange Reifung – am besten Duroc- oder Ibérico-Kreuzungen.","learn":["Trockenpökeln nach Gewicht (1–1,5 Tage/kg)","Entsalzen & Ausgleich","Bodega-Reifung simulieren","Optionalen Kaltrauch einsetzen","Fett als Reifepartner verstehen"]}),
+
+  r({"id":"serrano-style","name":"Serrano-Style Schinken","method":"kalt","cat":"Schinken","diff":3,"time":"12-18 Monate","pit":"12-15°C","core":"","wood":"Eiche oder Buche","yield":"1 Schinken ca. 6-8 kg","blurb":"Luftgetrockneter Rohschinken nach spanischer Art mit intensivem Aroma durch lange Reifung.","ingredients":[{"a":"1 Stück (8-10 kg)","i":"Schweinekeule mit Knochen und Schwarte"},{"a":"800-1000 g pro kg Fleisch","i":"grobes Meersalz"},{"a":"nach Bedarf","i":"Nitritpökelsalz (0,5% vom Fleischgewicht, max. 150 ppm Nitrit)"}],"phases":[{"label":"Vorbereitung","kind":"prep","dur":"2 Stunden","temp":"4°C","text":"Keule parieren und für Salzbad vorbereiten","bullets":["Überflüssiges Fett entfernen, Schwarte belassen","V-förmigen Schnitt an der Kniekehle setzen für bessere Salzpenetration","Keule waschen und gründlich trocken tupfen","Alle Arbeitsflächen und Werkzeuge desinfizieren"]},{"label":"Pökeln Phase 1","kind":"cure","dur":"1-1,5 Tage pro kg (8-15 Tage)","temp":"2-4°C","text":"Trockenpökelung mit Salz","bullets":["Nitritpökelsalz exakt 0,5% vom Fleischgewicht abwiegen (z.B. 40g bei 8kg)","Restliches grobes Meersalz hinzufügen","Keule vollständig mit Salzmischung einreiben, besonders dick am Knochenkopf","In Pökelbehälter legen, mit restlichem Salz bedecken","Bei 2-4°C lagern, täglich wenden","Austretende Flüssigkeit abgießen"]},{"label":"Entsalzen","kind":"rest","dur":"24-48 Stunden","temp":"4°C","text":"Salz auswaschen und äquilibrieren","bullets":["Schinken gründlich unter fließendem Wasser abspülen","In kaltem Wasser 24-48h einlegen, Wasser mehrmals wechseln","Mit Küchenpapier gründlich abtrocknen","Schnur zum Aufhängen durch Kniekehle ziehen"]},{"label":"Antrocknen","kind":"dry","dur":"3-5 Tage","temp":"10-12°C","text":"Oberfläche stabilisieren","bullets":["Bei 10-12°C und 70-75% Luftfeuchtigkeit aufhängen","Gute Luftzirkulation sicherstellen","Oberfläche soll matt und fest werden","Täglich kontrollieren auf Schimmelbildung"]},{"label":"Kalträuchern","kind":"smoke","dur":"2-4 Wochen, täglich 6-8h","temp":"12-18°C","text":"Leichte Kalträucherung für Aromaentwicklung","bullets":["WSM auf niedrigste Temperatur einstellen, nur mit Glut und Räucherholz","Eiche oder Buche für milden Rauch verwenden","Temperatur niemals über 20°C steigen lassen","Täglich 6-8h räuchern, dann auslüften lassen","Nach 2-4 Wochen gewünschte Rauchnote erreicht"]},{"label":"Reifung Phase 1","kind":"mature","dur":"3-4 Monate","temp":"12-15°C","text":"Erste Reifephase mit Gewichtsverlust","bullets":["Bei 12-15°C und 70-75% Luftfeuchtigkeit aufhängen","Wöchentlich kontrollieren","Weißer Edelschimmel ist erwünscht, grünen/schwarzen Schimmel entfernen","Gewichtsverlust ca. 30% anstreben"]},{"label":"Reifung Phase 2","kind":"mature","dur":"6-12 Monate","temp":"15-20°C im Sommer, 10-15°C im Winter","text":"Lange Aromaentwicklung","bullets":["Natürliche Temperaturschwankungen sind ideal","Im Sommer wärmer (15-20°C), im Winter kühler","Luftfeuchtigkeit 65-75% halten","Gesamtgewichtsverlust 35-40% bis zur Fertigstellung","Regelmäßig auf Qualität prüfen","Schinken ist fertig, wenn er fest ist und nussig-süßlich duftet"]}],"tips":["Frische Keule vom Metzger mit intakter Schwarte und Knochen besorgen","Reiferaum mit kontrollierbarer Temperatur und Luftfeuchtigkeit ist essentiell","Luftzirkulation durch Ventilator verbessert Ergebnis deutlich","Nach 6 Monaten Probe mit dünner Nadel nehmen (Geruchstest)","Weißer Schimmel mit Essigwasser abreiben, ist aber unbedenklich","Professionelles Refraktometer zur Kontrolle der aw-Werte empfohlen","Bei zu schneller Trocknung Oberfläche mit Olivenöl oder Schweineschmalz einreiben","Dokumentiere Gewichtsverlust wöchentlich","Mindestens 12 Monate Gesamtreifung für authentischen Serrano-Charakter","SICHERHEIT:","- Nitritpökelsalz EXAKT dosieren: maximal 150 ppm Nitrit (0,5% NPS vom Fleischgewicht) - Überdosierung ist gesundheitsschädlich, Unterdosierung erhöht Botulismus-Risiko bei Rohprodukten","- Rohschinken ist ein unkontrolliertes Fermentationsprodukt mit HOHEM Botulismus-Risiko wenn falsch hergestellt - Temperatur, Salz und Luftfeuchtigkeit müssen präzise eingehalten werden","- Wasseraktivität (aw-Wert) muss unter 0,91 fallen für mikrobiologische Sicherheit - professionelle Kontrolle durch Labormessung nach 3 Monaten empfohlen","- Schwarzer oder grüner Schimmel sofort großzügig wegschneiden - nur weißer Edelschimmel ist unbedenklich","- Bei Unsicherheit, untypischem Geruch oder Schleimbildung NICHT verzehren - Lebensgefahr durch Botulinumtoxin","- Erstherstellung nur mit Erfahrung in Rohpökelung oder unter Anleitung durchführen","- Kühlkette bei der frischen Keule nicht unterbrechen","- Alle Werkzeuge und Arbeitsflächen sterilisieren"],"userCreated":true,"equipment":[["chamber",5,{"de":"konstante Reifebedingungen","en":"steady maturing conditions"}],["wsm",4,{"de":"für die Kalträucher-Phase","en":"for the cold-smoke phase"}],["kettle",3,{"de":"mit Kaltrauch-Adapter","en":"with a cold-smoke adapter"}],["dehydrator",0,{"de":"ungeeignet für ganze Keulen","en":"unsuitable for whole legs"}]],"origin":"🇪🇸 Jamón Serrano („Gebirgsschinken\") reift traditionell in der kühlen, trockenen Bergluft Spaniens – schlichter als Ibérico, aber mit intensivem, gereiftem Aroma.","authenticity":8,"authenticityNote":"Folgt der Serrano-Methode (Salz, Entsalzen, lange Luftreifung). Die Kalträucher-Phase ist eine Heimanpassung – original reift Serrano ungeräuchert.","proTip":"Nach dem Entsalzen gründlich antrocknen lassen, bevor Rauch oder Reifung starten – eine feuchte Oberfläche ist die häufigste Ursache für Fehlreifung.","learn":["Pökeln nach Gewicht","Entsalzen & Antrocknen","Lange Reifung in zwei Phasen","Gewichtsverlust als Reifemaß","Klimaführung über Monate"]}),
+
+  r({"id":"schweinebauch-heiss","name":"Heißgeräucherter Schweinebauch","method":"heiss","cat":"Schwein","diff":2,"time":"ca. 6-8 Stunden (inkl. 24h Pökeln)","pit":"110-120°C","core":"68-72°C","wood":"Buche oder Apfelholz","yield":"ca. 1,2 kg fertiges Produkt","blurb":"Saftiger, würziger Schweinebauch mit knuspriger Kruste und intensivem Raucharoma aus dem Weber Smokey Mountain.","ingredients":[{"a":"1,5 kg","i":"Schweinebauch mit Schwarte"},{"a":"30 g","i":"Nitritpökelsalz (0,5% vom Fleischgewicht)"},{"a":"15 g","i":"brauner Zucker"},{"a":"2 TL","i":"schwarzer Pfeffer, gemahlen"},{"a":"1 TL","i":"Knoblauchpulver"},{"a":"1 TL","i":"Paprikapulver edelsüß"},{"a":"1/2 TL","i":"Senfkörner, zerdrückt"},{"a":"2","i":"Lorbeerblätter"},{"a":"3-4 Stück","i":"Wacholderbeeren, zerdrückt"}],"phases":[{"label":"Vorbereitung","kind":"prep","dur":"20 Minuten","temp":"Raumtemperatur","text":"Schweinebauch waschen, trocken tupfen und auf beiden Seiten gleichmäßig mit der Gewürzmischung einreiben.","bullets":["Nitritpökelsalz EXAKT abwiegen (30g für 1,5kg)","Mit Zucker und allen Gewürzen mischen","Fleisch gründlich, aber gleichmäßig einreiben","Schwarte mit Messer mehrfach einritzen (Karo-Muster)"]},{"label":"Pökeln","kind":"cure","dur":"24 Stunden","temp":"4-6°C","text":"Fleisch in Vakuumbeutel oder verschließbarer Dose im Kühlschrank pökeln lassen.","bullets":["In luftdichtem Behälter verschließen","Im Kühlschrank lagern (niemals über 7°C)","Nach 12h einmal wenden","Lake die sich bildet, ist normal"]},{"label":"Trocknen","kind":"dry","dur":"2-3 Stunden","temp":"Kühlschrank 4°C","text":"Fleisch aus der Lake nehmen, abspülen, trocken tupfen und unabgedeckt im Kühlschrank trocknen lassen.","bullets":["Gründlich unter kaltem Wasser abspülen","Mit Küchenpapier komplett trocknen","Auf Rost legen, damit Luft zirkulieren kann","Pellicle (leicht klebrige Oberfläche) sollte sich bilden"]},{"label":"Smoker vorbereiten","kind":"prep","dur":"30 Minuten","temp":"Zieltemperatur 110-120°C","text":"Weber Smokey Mountain auf Betriebstemperatur bringen und stabilisieren.","bullets":["Wasserschale zu 3/4 füllen","3-4 Holzchunks Buche oder Apfel auf die Kohle","Untere Lüftungsklappen auf 1/3 offen","Temperatur bei 110-120°C stabilisieren"]},{"label":"Heißräuchern","kind":"smoke","dur":"4-5 Stunden","temp":"110-120°C","text":"Schweinebauch mit der Schwarte nach oben auf den Rost legen und bis zur Kerntemperatur räuchern.","bullets":["Fleisch auf oberen Rost, Schwarte nach oben","Temperatur konstant bei 110-120°C halten","Kerntemperaturmesser in dickster Stelle platzieren","Nicht zu oft öffnen (alle 90 Min. Wasserschale kontrollieren)","Bei 68-72°C Kerntemperatur fertig"]},{"label":"Schwarte kross machen","kind":"finish","dur":"10-15 Minuten","temp":"250°C","text":"Optional: Schwarte im Backofen oder direkt über heißer Glut knusprig rösten.","bullets":["Bauch aus Smoker nehmen","Schwarte mit Salz einreiben","Unter Grill-Oberhitze oder direkt über Glut","Bis Schwarte aufbläht und knusprig wird","Vorsicht: Nicht verbrennen lassen!"]},{"label":"Ruhen und Anrichten","kind":"rest","dur":"15 Minuten","temp":"Raumtemperatur","text":"Schweinebauch kurz ruhen lassen, dann in Scheiben schneiden.","bullets":["In Alufolie locker einwickeln","10-15 Minuten ruhen lassen","In ca. 1 cm dicke Scheiben schneiden","Warm servieren"]}],"tips":["Nitritpökelsalz exakt abwiegen – zu wenig ist unsicher, zu viel ungenießbar","Die Pellicle-Bildung sorgt für bessere Rauchaufnahme","Wasserschale verhindert Austrocknen und stabilisiert Temperatur","Für noch mehr Rauch: 1-2 Chunks nachhaltig nach 2 Stunden","Schweinebauch kann auch kalt gegessen werden (wie Bacon)","Hält sich vakuumiert im Kühlschrank ca. 10-14 Tage","Schwarte wird knuspriger, wenn sie vorher komplett trocken ist","Alternative Gewürze: Koriander, Thymian, Rosmarin","SICHERHEIT:","- Nitritpökelsalz EXAKT dosieren (0,4-0,5% vom Fleischgewicht) – Überdosierung ist gesundheitsschädlich, Unterdosierung birgt Botulismus-Risiko","- Fleisch während des gesamten Pökelvorgangs durchgehend bei 4-6°C lagern, niemals über 7°C","- Kerntemperatur von mindestens 68°C ist bei Schweinefleisch Pflicht zur Abtötung von Parasiten und Bakterien","- Nach dem Räuchern zügig abkühlen oder warm halten (nicht im kritischen Bereich 7-60°C belassen)","- Alle Arbeitsflächen, Messer und Hände vor und nach Kontakt mit rohem Fleisch gründlich reinigen","- Gepökeltes Fleisch sollte innerhalb von 2 Wochen verbraucht oder eingefroren werden"],"userCreated":true,"equipment":[["wsm",5,{"de":"ideal – konstante 100–120 °C mit Rauch","en":"ideal — steady 100–120 °C with smoke"}],["kettle",4,{"de":"indirekt mit Räucherholz","en":"indirect with smoking wood"}],["gas",3,{"de":"mit Räucherbox","en":"with a smoker box"}],["stove",0,{"de":"kein Rauch möglich","en":"no smoke possible"}]],"origin":"🇩🇪 Heißgeräucherter Bauch ist ein Klassiker der deutschen Räuchertradition – gepökelt und über Buche heiß geräuchert wird er sofort essfertig, saftig und kräftig im Aroma.","authenticity":9,"authenticityNote":"Traditionelle Kombination aus Pökeln und Heißrauch über Buche – wie vom Landmetzger.","proTip":"Den Bauch mit der Schwarte nach oben räuchern – das Fett bastet das Fleisch von oben und hält es saftig, während der Rauch von unten einzieht.","learn":["Pökeln & Durchbrennen","Pellicle bilden","Heißräuchern (100–120 °C)","Kerntemperatur treffen","Schwarte richtig behandeln"]}),
 
 ];
 

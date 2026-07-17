@@ -352,6 +352,14 @@
       <input type="text" placeholder="{{ L.search }}" value="{{ query }}" onChange="{{ onSearch }}" style="margin-left:auto;padding:7px 13px;border:1.5px solid #c9b48a;border-radius:3px;background:#f3ead7;font-family:'Spectral',serif;font-size:14px;color:#3a2a1a;min-width:180px;outline:none;" />
     </div>
     <div style="max-width:1200px;margin:9px auto 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+      <span style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#9a8a72;">{{ L.catLabel }}</span>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;">
+        <sc-for list="{{ catChips }}" as="c" hint-placeholder-count="5">
+          <button style="{{ c.style }}" onClick="{{ c.onClick }}">{{ c.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:9px auto 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
       <span style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#9a8a72;">{{ L.sortLabel }}</span>
       <div style="display:flex;gap:6px;flex-wrap:wrap;">
         <sc-for list="{{ sortChips }}" as="s" hint-placeholder-count="4">
@@ -404,6 +412,11 @@
         </article>
       </sc-for>
     </main>
+  </sc-if>
+
+  <!-- ZURÜCK NACH OBEN -->
+  <sc-if value="{{ showTopBtn }}" hint-placeholder-val="{{ false }}">
+    <button onClick="{{ onBackTop }}" style="position:fixed;bottom:22px;right:22px;z-index:90;cursor:pointer;font-family:'Spectral',serif;font-size:13px;font-weight:600;border-radius:20px;padding:10px 16px;border:1.5px solid #6b5a42;background:#2a1a0e;color:#f3ead7;box-shadow:0 6px 18px -6px rgba(0,0,0,0.5);">{{ L.backTop }}</button>
   </sc-if>
 
   <!-- DETAIL OVERLAY -->
@@ -846,6 +859,30 @@
                 </div>
               </div>
             </sc-for>
+          </section>
+        </sc-if>
+
+        <!-- QUERVERWEISE: Beilagen / Reifekammer -->
+        <sc-if value="{{ selShowCross }}" hint-placeholder-val="{{ false }}">
+          <section style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px;">
+            <sc-if value="{{ selShowSidesLink }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ onOpenSides }}" style="flex:1;min-width:240px;display:flex;align-items:center;gap:14px;cursor:pointer;text-align:left;background:#ede0c5;border:1.5px solid #6b8a4a;border-radius:4px;padding:14px 18px;">
+                <span aria-hidden="true" style="font-size:24px;line-height:1;">🥗</span>
+                <span style="display:flex;flex-direction:column;gap:2px;">
+                  <span style="font-family:'DM Serif Display',serif;font-size:17px;color:#3a2a1a;">{{ L.crossSides }}</span>
+                  <span style="font-family:'Spectral',serif;font-size:12.5px;color:#6b5a42;">{{ L.crossSidesSub }}</span>
+                </span>
+              </button>
+            </sc-if>
+            <sc-if value="{{ selShowChamberLink }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ onOpenChamber }}" style="flex:1;min-width:240px;display:flex;align-items:center;gap:14px;cursor:pointer;text-align:left;background:#ede0c5;border:1.5px solid #5b6b78;border-radius:4px;padding:14px 18px;">
+                <span aria-hidden="true" style="font-size:24px;line-height:1;">🌡️</span>
+                <span style="display:flex;flex-direction:column;gap:2px;">
+                  <span style="font-family:'DM Serif Display',serif;font-size:17px;color:#3a2a1a;">{{ L.crossChamber }}</span>
+                  <span style="font-family:'Spectral',serif;font-size:12.5px;color:#6b5a42;">{{ L.crossChamberSub }}</span>
+                </span>
+              </button>
+            </sc-if>
           </section>
         </sc-if>
 
@@ -1529,6 +1566,7 @@
 class Component extends DCLogic {
   state = {
     method: 'alle', query: '', selectedId: null, recipes: [], ready: false,
+    catFilter: 'alle',
     favorites: [], notes: {},
     sortBy: 'default',
     showNPS: false, npsWeight: '1000',
@@ -1546,6 +1584,7 @@ class Component extends DCLogic {
     lang: 'de',
     betaDismissed: false,
     showChamber: false,
+    showTopBtn: false,
     showSides: false, sidesSelectedId: null,
     showManual: false, manualQuery: '', manualOpen: {}, manualHighlightId: null,
     showDisclaimerGate: false, showDisclaimerInfo: false,
@@ -1709,6 +1748,12 @@ class Component extends DCLogic {
   }
 
   async componentDidMount() {
+
+    this._onScroll = () => {
+      const show = window.scrollY > 900;
+      if (show !== this.state.showTopBtn) this.setState({ showTopBtn: show });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
 
     try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {}
     // Sprache: gespeicherte Wahl, sonst Browsersprache beim ersten Besuch
@@ -2452,6 +2497,9 @@ class Component extends DCLogic {
       L: {
         tagline: p('Räuchern · Dörren · Grillen · Low & Slow','Smoking · Drying · Grilling · Low & Slow'),
         maturingLabel: p('Nachreifung nach dem Kalträuchern','Maturing after cold smoking'),
+        crossSides: p('Passende Beilagen','Matching sides'), crossSidesSub: p('Coleslaw, Kartoffelsalat & mehr in der Beilagen-Werkstatt','Coleslaw, potato salad & more in the sides workshop'),
+        crossChamber: p('Reifekammer öffnen','Open aging chamber'), crossChamberSub: p('Klima, Bau & Reifeführung für dieses Projekt','Climate, build & maturing guide for this project'),
+        backTop: p('↑ Nach oben','↑ Back to top'),
         maturingIntro: p('Nach dem Kalträuchern alle Fleischstücke frei hängend nachreifen lassen. Die Reifezeit richtet sich nach Fleischart, Dicke und gewünschter Festigkeit (siehe Reifezeit oben im Rezept).','After cold smoking, let all cuts mature hanging freely. Maturing time depends on the type of meat, its thickness and the firmness you want (see the maturing time at the top of the recipe).'),
         maturingBullets: en
           ? ['10–15 °C (ideal 12–14 °C)', '70–80 % relative humidity', 'gentle air circulation', 'never wrap it — hang freely', 'mature until the desired firmness is reached']
@@ -2578,6 +2626,7 @@ class Component extends DCLogic {
         // Filter / states
         search: p('Suchen…','Search…'), loading: p('Lade Rezepte…','Loading recipes…'),
         sortLabel: p('Sortieren','Sort'),
+        catLabel: p('Kategorie','Category'), catAll: p('Alle','All'),
         sortDefault: p('Standard','Default'), sortName: p('A–Z','A–Z'), sortDiff: p('Schwierigkeit','Difficulty'), sortTime: p('Dauer','Duration'),
         noResults: p('Keine Rezepte gefunden.','No recipes found.'), noResultsSub: p('Anderen Filter oder andere Suche probieren.','Try a different filter or search.'),
         // Detail
@@ -3037,12 +3086,17 @@ class Component extends DCLogic {
     const PH_L = D.PH_L;
 
     const q = query.trim().toLowerCase();
-    const filtered = allRecipes.filter(r => {
+    const catFilter = this.state.catFilter || 'alle';
+    const methodFiltered = allRecipes.filter(r => {
       if (method === 'favs') return favorites.includes(r.id);
       if (method !== 'alle' && r.method !== method) return false;
       if (q) return r.name.toLowerCase().includes(q) || r.cat.toLowerCase().includes(q) || r.blurb.toLowerCase().includes(q);
       return true;
     });
+    const catCounts = {};
+    methodFiltered.forEach(r => { if (r.cat) catCounts[r.cat] = (catCounts[r.cat] || 0) + 1; });
+    const catKeys = Object.keys(catCounts).sort((a, b) => catCounts[b] - catCounts[a]);
+    const filtered = catFilter === 'alle' ? methodFiltered : methodFiltered.filter(r => r.cat === catFilter);
 
     const sortBy = this.state.sortBy || 'default';
     if (sortBy !== 'default') {
@@ -3071,6 +3125,15 @@ class Component extends DCLogic {
       };
     });
 
+    const catChips = (catKeys.length > 1 ? [{ key: 'alle', label: L.catAll + ' (' + methodFiltered.length + ')' }].concat(catKeys.map(k => ({ key: k, label: k + ' (' + catCounts[k] + ')' }))) : []).map(c => {
+      const on = catFilter === c.key;
+      return {
+        key: c.key, label: c.label,
+        onClick: () => this.setState({ catFilter: c.key }),
+        style: { fontFamily: "'Spectral',serif", fontSize: '12px', cursor: 'pointer', whiteSpace: 'nowrap', borderRadius: '20px', padding: '5px 12px', border: on ? '1.5px solid #8a4438' : '1.5px solid #c9b48a', background: on ? '#8a4438' : 'transparent', color: on ? '#f3ead7' : '#6b5a42' },
+      };
+    });
+
     const tabBase = { fontFamily:"'Spectral', serif", fontSize:'13px', cursor:'pointer', whiteSpace:'nowrap', borderRadius:'3px', padding:'6px 13px', transition:'all 0.15s' };
     const tabs = M_KEYS.map(k => {
       const isActive = method === k;
@@ -3078,7 +3141,7 @@ class Component extends DCLogic {
       const label = isFavs ? `♥ ${M_LABELS.favs}${favorites.length ? ' ('+favorites.length+')' : ''}` : M_LABELS[k];
       return {
         key: k, label,
-        onClick: () => this.setState({ method: k, selectedId: null }),
+        onClick: () => this.setState({ method: k, selectedId: null, catFilter: 'alle' }),
         style: { ...tabBase, background: isActive ? '#9a3b1c' : 'transparent', color: isActive ? '#f3ead7' : isFavs ? '#9a3b1c' : '#6b5a42', border: isActive ? '1.5px solid #9a3b1c' : isFavs ? '1.5px solid #9a3b1c' : '1.5px solid #c9b48a' },
       };
     });
@@ -3286,7 +3349,7 @@ class Component extends DCLogic {
     const manualNoResults = !!mq && manualSections.length === 0;
 
     return {
-      ready, loading: !ready, tabs, filteredRecipes, sortChips,
+      ready, loading: !ready, tabs, filteredRecipes, sortChips, catChips,
       showManual: this.state.showManual,
       onOpenManual: () => this.setState({ showManual: true, showTools: false }),
       onCloseManual: () => this.setState({ showManual: false }),
@@ -3323,6 +3386,8 @@ class Component extends DCLogic {
       onAiReset: () => this.setState({ aiInput: '', aiResult: null, aiError: '' }),
       onAiAdopt: () => this._aiAdopt(),
       showChamber: this.state.showChamber,
+      showTopBtn: this.state.showTopBtn && !this.state.selectedId && !this.state.showChamber && !this.state.showSides && !this.state.showManual,
+      onBackTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
       chamberHtml: (typeof window !== 'undefined' && window.__CHAMBER_HTML) || '',
       onOpenChamber: () => this.setState({ showChamber: true, showTools: false }),
       onCloseChamber: () => this.setState({ showChamber: false }),
@@ -3440,6 +3505,9 @@ class Component extends DCLogic {
       selGuide:          selGuide_ || {},
       selShowStandard:   !selIsGuide_,
       selShowMaturing:   !!(sel && sel.method === 'kalt' && !selIsGuide_ && ['Käse','Vegetarisch','Würzen & Extras','Grundlagen'].indexOf(sel.cat) < 0),
+      selShowSidesLink:  !!(sel && !selIsGuide_ && ['bbq','grill','schmoren','heiss'].indexOf(sel.method) >= 0),
+      selShowChamberLink: !!(sel && sel.method === 'kalt' && !selIsGuide_ && ['Käse','Vegetarisch','Würzen & Extras','Grundlagen'].indexOf(sel.cat) < 0),
+      selShowCross:      !!(sel && !selIsGuide_ && (['bbq','grill','schmoren','heiss'].indexOf(sel.method) >= 0 || (sel.method === 'kalt' && ['Käse','Vegetarisch','Würzen & Extras','Grundlagen'].indexOf(sel.cat) < 0))),
       maturingBullets:   L.maturingBullets,
       selShowFishFinish: !!(sel && ['heiss','warm'].indexOf(sel.method) >= 0 && !selIsGuide_
                              && (sel.cat === 'Fisch' || sel.cat === 'Fisch & Meeresfrüchte')
