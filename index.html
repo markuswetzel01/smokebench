@@ -355,16 +355,27 @@
       </div>
       <input type="text" placeholder="{{ L.search }}" value="{{ query }}" onChange="{{ onSearch }}" style="margin-left:auto;padding:7px 13px;border:1.5px solid #c9b48a;border-radius:3px;background:#f3ead7;font-family:'Spectral',serif;font-size:14px;color:#3a2a1a;min-width:180px;outline:none;" />
     </div>
-    <div style="max-width:1200px;margin:9px auto 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-      <span style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#9a8a72;">{{ L.catLabel }}</span>
-      <div style="display:flex;gap:6px;flex-wrap:wrap;">
-        <sc-for list="{{ catChips }}" as="c" hint-placeholder-count="5">
-          <button style="{{ c.style }}" onClick="{{ c.onClick }}">{{ c.label }}</button>
+    <div style="max-width:1200px;margin:9px auto 0;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+      <span style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#9a8a72;">{{ L.filterLabel }}</span>
+      <select value="{{ catFilter }}" onChange="{{ onCatSelect }}" style="{{ catSelectStyle }}">
+        <sc-for list="{{ catOptions }}" as="o" hint-placeholder-count="5">
+          <option value="{{ o.key }}">{{ o.label }}</option>
         </sc-for>
-      </div>
-    </div>
-    <div style="max-width:1200px;margin:9px auto 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-      <span style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#9a8a72;">{{ L.sortLabel }}</span>
+      </select>
+      <select value="{{ diffFilter }}" onChange="{{ onDiffSelect }}" style="{{ diffSelectStyle }}">
+        <sc-for list="{{ diffOptions }}" as="o" hint-placeholder-count="4">
+          <option value="{{ o.key }}">{{ o.label }}</option>
+        </sc-for>
+      </select>
+      <select value="{{ durFilter }}" onChange="{{ onDurSelect }}" style="{{ durSelectStyle }}">
+        <sc-for list="{{ durOptions }}" as="o" hint-placeholder-count="5">
+          <option value="{{ o.key }}">{{ o.label }}</option>
+        </sc-for>
+      </select>
+      <sc-if value="{{ hasActiveFilters }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ onResetFilters }}" style="font-family:'Spectral',serif;font-size:12px;cursor:pointer;border-radius:20px;padding:5px 12px;border:1.5px solid #9a3b1c;background:transparent;color:#9a3b1c;">✕ {{ L.filterReset }}</button>
+      </sc-if>
+      <span style="font-family:'Spectral',serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#9a8a72;margin-left:auto;">{{ L.sortLabel }}</span>
       <div style="display:flex;gap:6px;flex-wrap:wrap;">
         <sc-for list="{{ sortChips }}" as="s" hint-placeholder-count="4">
           <button style="{{ s.style }}" onClick="{{ s.onClick }}">{{ s.label }}</button>
@@ -1665,7 +1676,7 @@
 class Component extends DCLogic {
   state = {
     method: 'alle', query: '', selectedId: null, recipes: [], ready: false,
-    catFilter: 'alle',
+    catFilter: 'alle', diffFilter: 'alle', durFilter: 'alle',
     favorites: [], notes: {},
     sortBy: 'default',
     showNPS: false, npsWeight: '1000',
@@ -2761,6 +2772,14 @@ class Component extends DCLogic {
         search: p('Suchen…','Search…'), loading: p('Lade Rezepte…','Loading recipes…'),
         sortLabel: p('Sortieren','Sort'),
         catLabel: p('Kategorie','Category'), catAll: p('Alle','All'),
+        filterLabel: p('Filter','Filter'), filterReset: p('Zurücksetzen','Reset'),
+        filterCatAll: p('Kategorie: Alle','Category: All'),
+        filterDiffAll: p('Schwierigkeit: Alle','Difficulty: All'),
+        filterDiffPrefix: p('Schwierigkeit','Difficulty'),
+        filterDurAll: p('Dauer: Alle','Duration: All'),
+        filterDurPrefix: p('Dauer','Duration'),
+        dur1: p('bis 1 Tag','up to 1 day'), dur2: p('2–7 Tage','2–7 days'), dur3: p('1–3 Wochen','1–3 weeks'), dur4: p('länger als 3 Wochen','more than 3 weeks'),
+        diffEasy: p('Einfach','Easy'), diffMedium: p('Mittel','Medium'), diffPro: p('Profi','Expert'),
         sortDefault: p('Standard','Default'), sortName: p('A–Z','A–Z'), sortDiff: p('Schwierigkeit','Difficulty'), sortTime: p('Dauer','Duration'),
         noResults: p('Keine Rezepte gefunden.','No recipes found.'), noResultsSub: p('Anderen Filter oder andere Suche probieren.','Try a different filter or search.'),
         // Detail
@@ -3221,6 +3240,16 @@ class Component extends DCLogic {
 
     const q = query.trim().toLowerCase();
     const catFilter = this.state.catFilter || 'alle';
+    const diffFilter = this.state.diffFilter || 'alle';
+    const durFilter = this.state.durFilter || 'alle';
+    const durBucket = (r) => {
+      const min = this._timeRank(r.time) || 0;
+      if (min <= 0) return 'd1';
+      if (min <= 1440) return 'd1';
+      if (min <= 7 * 1440) return 'd2';
+      if (min <= 21 * 1440) return 'd3';
+      return 'd4';
+    };
     const methodFiltered = allRecipes.filter(r => {
       if (method === 'favs') return favorites.includes(r.id);
       if (method !== 'alle' && r.method !== method) return false;
@@ -3230,7 +3259,11 @@ class Component extends DCLogic {
     const catCounts = {};
     methodFiltered.forEach(r => { if (r.cat) catCounts[r.cat] = (catCounts[r.cat] || 0) + 1; });
     const catKeys = Object.keys(catCounts).sort((a, b) => catCounts[b] - catCounts[a]);
-    const filtered = catFilter === 'alle' ? methodFiltered : methodFiltered.filter(r => r.cat === catFilter);
+    const filtered = methodFiltered.filter(r =>
+      (catFilter === 'alle' || r.cat === catFilter) &&
+      (diffFilter === 'alle' || String(r.diff || '') === diffFilter) &&
+      (durFilter === 'alle' || durBucket(r) === durFilter)
+    );
 
     const sortBy = this.state.sortBy || 'default';
     if (sortBy !== 'default') {
@@ -3259,14 +3292,19 @@ class Component extends DCLogic {
       };
     });
 
-    const catChips = (catKeys.length > 1 ? [{ key: 'alle', label: L.catAll + ' (' + methodFiltered.length + ')' }].concat(catKeys.map(k => ({ key: k, label: k + ' (' + catCounts[k] + ')' }))) : []).map(c => {
-      const on = catFilter === c.key;
-      return {
-        key: c.key, label: c.label,
-        onClick: () => this.setState({ catFilter: c.key }),
-        style: { fontFamily: "'Spectral',serif", fontSize: '12px', cursor: 'pointer', whiteSpace: 'nowrap', borderRadius: '20px', padding: '5px 12px', border: on ? '1.5px solid #8a4438' : '1.5px solid #c9b48a', background: on ? '#8a4438' : 'transparent', color: on ? '#f3ead7' : '#6b5a42' },
-      };
+    const diffCounts = {}; const durCounts = {};
+    methodFiltered.forEach(r => {
+      const dk = String(r.diff || ''); if (dk) diffCounts[dk] = (diffCounts[dk] || 0) + 1;
+      const bk = durBucket(r); durCounts[bk] = (durCounts[bk] || 0) + 1;
     });
+    const selectBase = (active) => ({ fontFamily: "'Spectral',serif", fontSize: '13px', cursor: 'pointer', borderRadius: '3px', padding: '6px 10px', border: active ? '1.5px solid #8a4438' : '1.5px solid #c9b48a', background: active ? '#8a4438' : '#f3ead7', color: active ? '#f3ead7' : '#4a3a2a', outline: 'none', maxWidth: '240px' });
+    const catOptions = [{ key: 'alle', label: L.filterCatAll + ' (' + methodFiltered.length + ')' }]
+      .concat(catKeys.map(k => ({ key: k, label: k + ' (' + catCounts[k] + ')' })));
+    const diffOptions = [{ key: 'alle', label: L.filterDiffAll }]
+      .concat([['1', L.diffEasy], ['2', L.diffMedium], ['3', L.diffPro]].map(([k, lbl]) => ({ key: k, label: L.filterDiffPrefix + ': ' + lbl + ' (' + (diffCounts[k] || 0) + ')' })));
+    const durOptions = [{ key: 'alle', label: L.filterDurAll }]
+      .concat([['d1', L.dur1], ['d2', L.dur2], ['d3', L.dur3], ['d4', L.dur4]].map(([k, lbl]) => ({ key: k, label: L.filterDurPrefix + ': ' + lbl + ' (' + (durCounts[k] || 0) + ')' })));
+    const hasActiveFilters = catFilter !== 'alle' || diffFilter !== 'alle' || durFilter !== 'alle';
 
     const tabBase = { fontFamily:"'Spectral', serif", fontSize:'13px', cursor:'pointer', whiteSpace:'nowrap', borderRadius:'3px', padding:'6px 13px', transition:'all 0.15s' };
     const tabs = M_KEYS.map(k => {
@@ -3275,7 +3313,7 @@ class Component extends DCLogic {
       const label = isFavs ? `♥ ${M_LABELS.favs}${favorites.length ? ' ('+favorites.length+')' : ''}` : M_LABELS[k];
       return {
         key: k, label,
-        onClick: () => this.setState({ method: k, selectedId: null, catFilter: 'alle' }),
+        onClick: () => this.setState({ method: k, selectedId: null, catFilter: 'alle', diffFilter: 'alle', durFilter: 'alle' }),
         style: { ...tabBase, background: isActive ? '#9a3b1c' : 'transparent', color: isActive ? '#f3ead7' : isFavs ? '#9a3b1c' : '#6b5a42', border: isActive ? '1.5px solid #9a3b1c' : isFavs ? '1.5px solid #9a3b1c' : '1.5px solid #c9b48a' },
       };
     });
@@ -3483,7 +3521,15 @@ class Component extends DCLogic {
     const manualNoResults = !!mq && manualSections.length === 0;
 
     return {
-      ready, loading: !ready, tabs, filteredRecipes, sortChips, catChips,
+      ready, loading: !ready, tabs, filteredRecipes, sortChips,
+      catFilter, diffFilter, durFilter, catOptions, diffOptions, durOptions, hasActiveFilters,
+      catSelectStyle: selectBase(catFilter !== 'alle'),
+      diffSelectStyle: selectBase(diffFilter !== 'alle'),
+      durSelectStyle: selectBase(durFilter !== 'alle'),
+      onCatSelect: (e) => this.setState({ catFilter: e.target.value }),
+      onDiffSelect: (e) => this.setState({ diffFilter: e.target.value }),
+      onDurSelect: (e) => this.setState({ durFilter: e.target.value }),
+      onResetFilters: () => this.setState({ catFilter: 'alle', diffFilter: 'alle', durFilter: 'alle' }),
       showManual: this.state.showManual,
       showAcademy: this.state.showAcademy,
       onOpenManual: () => this.setState({ showManual: true, showTools: false }),
