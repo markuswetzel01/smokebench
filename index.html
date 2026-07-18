@@ -44,6 +44,7 @@
 <script src="./images-data.js?v=0126"></script>
 <script src="./wsm-restore.js"></script>
 <script src="./chamber-embed.js?v=2"></script>
+<script src="./academy.js?v=1"></script>
 </helmet>
 
 <div style="min-height:100vh;background:#f3ead7;background-image:repeating-linear-gradient(0deg,rgba(140,90,40,0.04) 0 1px,transparent 1px 32px);padding-bottom:80px;">
@@ -97,6 +98,9 @@
       </button>
       <button onClick="{{ onOpenManual }}" title="{{ L.manualTitle }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #6b5a42;background:transparent;color:#c9a87a;white-space:nowrap;font-weight:600;display:flex;align-items:center;gap:7px;" style-hover="background:rgba(201,168,122,0.12);">
         <span aria-hidden="true" style="font-size:14px;line-height:1;">📖</span>{{ L.manual }}
+      </button>
+      <button onClick="{{ onOpenAcademy }}" title="{{ L.academyTitle }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #6b5a42;background:transparent;color:#c9a87a;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;">
+        <span aria-hidden="true" style="font-size:14px;line-height:1;">📚</span>{{ L.academy }}
       </button>
       <button onClick="{{ onOpenSides }}" title="{{ L.sidesTitle }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #6b8a4a;background:transparent;color:#c9a87a;white-space:nowrap;font-weight:600;display:flex;align-items:center;gap:7px;" style-hover="background:rgba(107,138,74,0.12);">
         <span aria-hidden="true" style="font-size:14px;line-height:1;">🥗</span>{{ L.sides }}
@@ -417,6 +421,89 @@
   <!-- ZURÜCK NACH OBEN -->
   <sc-if value="{{ showTopBtn }}" hint-placeholder-val="{{ false }}">
     <button onClick="{{ onBackTop }}" style="position:fixed;bottom:22px;right:22px;z-index:90;cursor:pointer;font-family:'Spectral',serif;font-size:13px;font-weight:600;border-radius:20px;padding:10px 16px;border:1.5px solid #6b5a42;background:#2a1a0e;color:#f3ead7;box-shadow:0 6px 18px -6px rgba(0,0,0,0.5);">{{ L.backTop }}</button>
+  </sc-if>
+
+  <!-- ACADEMY -->
+  <sc-if value="{{ showAcademy }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;z-index:9300;background:#f3ead7;background-image:repeating-linear-gradient(0deg,rgba(140,90,40,0.04) 0 1px,transparent 1px 32px);display:flex;flex-direction:column;">
+      <div style="flex-shrink:0;background:#2a1a0e;border-bottom:1.5px solid #6b5a42;box-shadow:0 5px 16px -8px rgba(0,0,0,0.5);">
+        <div style="max-width:920px;margin:0 auto;padding:16px 32px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+          <div>
+            <div style="font-family:'Spectral',serif;font-style:italic;font-size:12px;letter-spacing:0.2em;color:#9a7a50;text-transform:uppercase;">{{ L.academyEyebrow }}</div>
+            <div style="font-family:'DM Serif Display',serif;font-size:30px;color:#f3ead7;line-height:1.05;margin-top:4px;">📚 {{ L.academyTitle }}</div>
+            <div style="font-family:'Spectral',serif;font-size:13.5px;color:#c9a87a;margin-top:5px;">{{ L.academySub }}</div>
+          </div>
+          <button onClick="{{ onCloseAcademy }}" style="flex-shrink:0;font-family:'Spectral',serif;font-size:14px;font-weight:600;cursor:pointer;border-radius:4px;padding:9px 18px;border:1.5px solid #9a3b1c;background:#9a3b1c;color:#f3ead7;white-space:nowrap;">✕ {{ L.manualClose }}</button>
+        </div>
+      </div>
+
+      <div style="flex:1;overflow-y:auto;">
+        <div style="max-width:920px;margin:0 auto;padding:22px 32px 80px;">
+
+          <sc-if value="{{ academyShowArticle }}" hint-placeholder-val="{{ false }}">
+            <button onClick="{{ onAcademyBack }}" style="display:inline-flex;align-items:center;gap:6px;cursor:pointer;border:0;background:transparent;color:#9a3b1c;font-family:'Spectral',serif;font-size:14px;font-weight:600;padding:0 0 16px;">← {{ L.academyBack }}</button>
+            <div style="font-family:'Spectral',serif;font-style:italic;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9a7a50;">{{ academyArticle.catTitle }}</div>
+            <h2 style="font-family:'DM Serif Display',serif;font-size:28px;color:#3a2a1a;margin:6px 0 18px;">{{ academyArticle.title }}</h2>
+            <sc-for list="{{ academyArticle.body }}" as="sec" hint-placeholder-count="2">
+              <div style="margin-bottom:22px;">
+                <div style="font-family:'DM Serif Display',serif;font-size:17px;color:#9a3b1c;margin-bottom:8px;">{{ sec.h }}</div>
+                <sc-for list="{{ sec.p }}" as="para" hint-placeholder-count="1">
+                  <p style="font-family:'Spectral',serif;font-size:15px;line-height:1.65;color:#4a3a2a;margin:0 0 10px;">{{ para }}</p>
+                </sc-for>
+                <sc-if value="{{ sec.table }}" hint-placeholder-val="{{ false }}">
+                  <div style="margin-top:12px;border:1.5px solid #d8c49a;border-radius:6px;overflow:hidden;background:#faf5e8;">
+                    <div style="display:grid;grid-template-columns:1fr 1fr;background:#efe6cf;">
+                      <div style="padding:9px 14px;font-family:'Spectral',serif;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#6b5a42;border-right:1px solid #d8c49a;">{{ sec.table.head.0 }}</div>
+                      <div style="padding:9px 14px;font-family:'Spectral',serif;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#6b5a42;">{{ sec.table.head.1 }}</div>
+                    </div>
+                    <sc-for list="{{ sec.table.rows }}" as="row" hint-placeholder-count="3">
+                      <div style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #e5d8b8;">
+                        <div style="padding:10px 14px;font-family:'Spectral',serif;font-size:13.5px;color:#4a3a2a;border-right:1px solid #e5d8b8;">{{ row.0 }}</div>
+                        <div style="padding:10px 14px;font-family:'Spectral',serif;font-size:13.5px;color:#3a2a1a;">{{ row.1 }}</div>
+                      </div>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-for>
+            <sc-if value="{{ academyArticle.hasRelated }}" hint-placeholder-val="{{ false }}">
+              <div style="margin-top:8px;padding-top:18px;border-top:1px dashed #d8c49a;">
+                <div style="font-family:'Spectral',serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#9a8a72;margin-bottom:10px;">{{ L.academyRelatedRecipes }}</div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                  <sc-for list="{{ academyArticle.relatedChips }}" as="rc" hint-placeholder-count="2">
+                    <button onClick="{{ rc.onClick }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:20px;padding:7px 14px;border:1.5px solid #9a6b2f;background:transparent;color:#6b5a42;">{{ rc.name }} →</button>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+          </sc-if>
+
+          <sc-if value="{{ academyShowCategoryList }}" hint-placeholder-val="{{ false }}">
+            <button onClick="{{ onAcademyBack }}" style="display:inline-flex;align-items:center;gap:6px;cursor:pointer;border:0;background:transparent;color:#9a3b1c;font-family:'Spectral',serif;font-size:14px;font-weight:600;padding:0 0 16px;">← {{ L.academyBack }}</button>
+            <h2 style="font-family:'DM Serif Display',serif;font-size:26px;color:#3a2a1a;margin:0 0 16px;">{{ academyCategory.icon }} {{ academyCategory.title }}</h2>
+            <sc-for list="{{ academyCategory.articleList }}" as="a" hint-placeholder-count="3">
+              <button onClick="{{ a.onClick }}" style="width:100%;box-sizing:border-box;text-align:left;cursor:pointer;background:#faf5e8;border:1.5px solid #d8c49a;border-radius:6px;padding:16px 18px;margin-bottom:10px;">
+                <div style="font-family:'DM Serif Display',serif;font-size:17px;color:#3a2a1a;">{{ a.title }}</div>
+                <div style="font-family:'Spectral',serif;font-size:13px;color:#6b5a42;margin-top:4px;">{{ a.teaser }}</div>
+              </button>
+            </sc-for>
+          </sc-if>
+
+          <sc-if value="{{ academyShowRoot }}" hint-placeholder-val="{{ false }}">
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;">
+              <sc-for list="{{ academyCategories }}" as="c" hint-placeholder-count="5">
+                <button onClick="{{ c.onClick }}" style="text-align:left;cursor:pointer;background:#faf5e8;border:1.5px solid #d8c49a;border-radius:8px;padding:22px 18px;">
+                  <div style="font-size:28px;margin-bottom:8px;">{{ c.icon }}</div>
+                  <div style="font-family:'DM Serif Display',serif;font-size:18px;color:#3a2a1a;">{{ c.title }}</div>
+                  <div style="font-family:'Spectral',serif;font-size:12.5px;color:#8a6f4e;margin-top:4px;">{{ c.count }} {{ L.academyArticlesCount }}</div>
+                </button>
+              </sc-for>
+            </div>
+          </sc-if>
+
+        </div>
+      </div>
+    </div>
   </sc-if>
 
   <!-- DETAIL OVERLAY -->
@@ -860,6 +947,18 @@
               </div>
             </sc-for>
           </section>
+        </sc-if>
+
+        <!-- WUSSTEST DU? Academy-Verweis -->
+        <sc-if value="{{ selAcademyArticle }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ onOpenAcademyFromRecipe }}" style="width:100%;box-sizing:border-box;display:flex;align-items:flex-start;gap:14px;cursor:pointer;text-align:left;background:#efe6cf;border:1.5px solid #c9a87a;border-radius:4px;padding:16px 18px;margin-bottom:20px;">
+            <span aria-hidden="true" style="font-size:22px;line-height:1;flex-shrink:0;">💡</span>
+            <span style="display:flex;flex-direction:column;gap:3px;">
+              <span style="font-family:'Spectral',serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#9a6b2f;">{{ L.didYouKnow }}</span>
+              <span style="font-family:'DM Serif Display',serif;font-size:16.5px;color:#3a2a1a;">{{ selAcademyArticle.title }}</span>
+              <span style="font-family:'Spectral',serif;font-size:12.5px;color:#6b5a42;">{{ selAcademyArticle.teaser }} — {{ L.academyReadMore }}</span>
+            </span>
+          </button>
         </sc-if>
 
         <!-- QUERVERWEISE: Beilagen / Reifekammer -->
@@ -1587,6 +1686,7 @@ class Component extends DCLogic {
     showTopBtn: false,
     showSides: false, sidesSelectedId: null,
     showManual: false, manualQuery: '', manualOpen: {}, manualHighlightId: null,
+    showAcademy: false, academyCatId: null, academyArticleId: null,
     showDisclaimerGate: false, showDisclaimerInfo: false,
     showAI: false, aiInput: '', aiLoading: false, aiError: '', aiResult: null, aiAvailable: false,
     saveBackupHint: false,
@@ -1673,6 +1773,29 @@ class Component extends DCLogic {
     }
     if (lastIndex < text.length) parts.push({ key: 'k' + (i++), isTerm: false, isPlain: true, text: text.slice(lastIndex) });
     return parts;
+  }
+
+  _academyRecipeMap() {
+    return {
+      'poekel-nps': ['schwarzwaelder-schinken', 'coppa'],
+      'poekel-trocken-nass': ['guanciale', 'pastrami'],
+      'hist-schinken-1900': ['schwarzwaelder-schinken'],
+      'reif-klima': ['coppa', 'guanciale'],
+      'raeuch-methoden': ['schwarzwaelder-schinken', 'pastrami'],
+      'fleisch-schwein': ['coppa', 'guanciale'],
+      'fleisch-coppa-detail': ['coppa'],
+    };
+  }
+  _academyFlatArticles() {
+    if (typeof window === 'undefined' || !window.getAcademyData) return [];
+    const cats = window.getAcademyData(this.state.lang === 'en');
+    const out = [];
+    cats.forEach(c => (c.articles || []).forEach(a => out.push(Object.assign({}, a, { catId: c.id, catTitle: c.title, catIcon: c.icon }))));
+    return out;
+  }
+  _academyArticleForRecipe(recipeId) {
+    const flat = this._academyFlatArticles();
+    return flat.find(a => (a.related || []).indexOf(recipeId) >= 0) || null;
   }
 
   _sidesData() {
@@ -2570,6 +2693,12 @@ class Component extends DCLogic {
         sidesSteps: p('Zubereitung','Method'),
         sidesTip: p('Tipp','Tip'),
         manual: p('Anleitung','Guide'),
+        academy: p('Academy','Academy'), academyTitle: p('Smokebench Academy','Smokebench Academy'),
+        academyEyebrow: p('Smokebench · Hintergrundwissen','Smokebench · background knowledge'),
+        academySub: p('Historisches, Pökel-, Reife- und Räucherwissen sowie Fleischkunde — das Warum hinter dem Handwerk.','History, curing, maturing, and smoking knowledge plus meat cuts — the why behind the craft.'),
+        academyBack: p('Zurück','Back'), academyArticlesCount: p('Artikel','articles'),
+        academyRelatedRecipes: p('Passende Rezepte','Related recipes'),
+        didYouKnow: p('💡 Wusstest du?','💡 Did you know?'), academyReadMore: p('mehr in der Academy','more in the Academy'),
         manualTitle: p('Bedienungsanleitung','User guide'),
         manualEyebrow: p('Smokebench · Handbuch','Smokebench · handbook'),
         manualSub: p('Funktionen, Fachbegriffe & Sicherheit — Schritt für Schritt erklärt.','Features, terms & safety — explained step by step.'),
@@ -3356,7 +3485,10 @@ class Component extends DCLogic {
     return {
       ready, loading: !ready, tabs, filteredRecipes, sortChips, catChips,
       showManual: this.state.showManual,
+      showAcademy: this.state.showAcademy,
       onOpenManual: () => this.setState({ showManual: true, showTools: false }),
+      onOpenAcademy: () => this.setState({ showAcademy: true, showTools: false, academyCatId: null, academyArticleId: null }),
+      onCloseAcademy: () => this.setState({ showAcademy: false }),
       onCloseManual: () => this.setState({ showManual: false }),
       manualQuery: this.state.manualQuery,
       onManualSearch: (e) => this.setState({ manualQuery: e.target.value }),
@@ -3391,9 +3523,40 @@ class Component extends DCLogic {
       onAiReset: () => this.setState({ aiInput: '', aiResult: null, aiError: '' }),
       onAiAdopt: () => this._aiAdopt(),
       showChamber: this.state.showChamber,
-      showTopBtn: this.state.showTopBtn && !this.state.selectedId && !this.state.showChamber && !this.state.showSides && !this.state.showManual,
+      showTopBtn: this.state.showTopBtn && !this.state.selectedId && !this.state.showChamber && !this.state.showSides && !this.state.showManual && !this.state.showAcademy,
       onBackTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
       chamberHtml: (typeof window !== 'undefined' && window.__CHAMBER_HTML) || '',
+      academyCategories: (() => {
+        const acadCats = (typeof window !== 'undefined' && window.getAcademyData) ? window.getAcademyData(this.state.lang === 'en') : [];
+        return acadCats.map(c => ({ id: c.id, icon: c.icon, title: c.title, count: (c.articles || []).length, onClick: () => this.setState({ academyCatId: c.id, academyArticleId: null }) }));
+      })(),
+      academyShowRoot: this.state.showAcademy && !this.state.academyCatId,
+      academyShowCategoryList: this.state.showAcademy && !!this.state.academyCatId && !this.state.academyArticleId,
+      academyShowArticle: this.state.showAcademy && !!this.state.academyArticleId,
+      academyCategory: (() => {
+        if (!this.state.academyCatId) return null;
+        const acadCats = (typeof window !== 'undefined' && window.getAcademyData) ? window.getAcademyData(this.state.lang === 'en') : [];
+        const c = acadCats.find(x => x.id === this.state.academyCatId);
+        if (!c) return null;
+        return { icon: c.icon, title: c.title, articleList: (c.articles || []).map(a => ({ title: a.title, teaser: a.teaser, onClick: () => this.setState({ academyArticleId: a.id }) })) };
+      })(),
+      academyArticle: (() => {
+        if (!this.state.academyArticleId) return null;
+        const flat = this._academyFlatArticles();
+        const a = flat.find(x => x.id === this.state.academyArticleId);
+        if (!a) return null;
+        const related = a.related || [];
+        const relatedChips = related.map(rid => {
+          const r = allRecipes.find(rr => rr.id === rid);
+          return r ? { name: r.name, onClick: () => this.setState({ showAcademy: false, selectedId: rid }) } : null;
+        }).filter(Boolean);
+        return { title: a.title, catTitle: a.catTitle, body: a.body, hasRelated: relatedChips.length > 0, relatedChips };
+      })(),
+      onAcademyBack: () => {
+        if (this.state.academyArticleId) return this.setState({ academyArticleId: null });
+        if (this.state.academyCatId) return this.setState({ academyCatId: null });
+        this.setState({ showAcademy: false });
+      },
       onOpenChamber: () => this.setState({ showChamber: true, showTools: false }),
       onCloseChamber: () => this.setState({ showChamber: false }),
       showSides: this.state.showSides,
@@ -3513,6 +3676,11 @@ class Component extends DCLogic {
       selShowSidesLink:  !!(sel && !selIsGuide_ && ['bbq','grill','schmoren','heiss'].indexOf(sel.method) >= 0),
       selShowChamberLink: !!(sel && sel.method === 'kalt' && !selIsGuide_ && ['Käse','Vegetarisch','Würzen & Extras','Grundlagen'].indexOf(sel.cat) < 0),
       selShowCross:      !!(sel && !selIsGuide_ && (['bbq','grill','schmoren','heiss'].indexOf(sel.method) >= 0 || (sel.method === 'kalt' && ['Käse','Vegetarisch','Würzen & Extras','Grundlagen'].indexOf(sel.cat) < 0))),
+      selAcademyArticle: sel ? this._academyArticleForRecipe(sel.id) : null,
+      onOpenAcademyFromRecipe: () => {
+        const art = sel ? this._academyArticleForRecipe(sel.id) : null;
+        if (art) this.setState({ showAcademy: true, showTools: false, academyCatId: art.catId, academyArticleId: art.id });
+      },
       maturingBullets:   L.maturingBullets,
       selShowFishFinish: !!(sel && ['heiss','warm'].indexOf(sel.method) >= 0 && !selIsGuide_
                              && (sel.cat === 'Fisch' || sel.cat === 'Fisch & Meeresfrüchte')
