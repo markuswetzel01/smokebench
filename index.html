@@ -67,13 +67,20 @@
 
   <!-- STICKY ACTION BAR (bleibt beim Scrollen oben) -->
   <div style="position:sticky;top:0;z-index:90;background:#2a1a0e;border-bottom:1.5px solid #6b5a42;box-shadow:0 5px 16px -8px rgba(0,0,0,0.5);">
-    <div id="sb-actionbar-inner" style="max-width:1200px;margin:0 auto;padding:8px 48px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-      <div id="sb-actionbar-title" style="flex:1;min-width:0;font-family:'DM Serif Display',serif;font-size:19px;letter-spacing:0.02em;color:#f3ead7;white-space:nowrap;">Smoke<span style="color:#d6603a;">bench</span></div>
+    <div id="sb-actionbar-inner" style="max-width:1200px;margin:0 auto;padding:8px 48px;display:flex;flex-direction:column;gap:7px;">
+      <div style="display:flex;align-items:center;gap:10px;">
+      <div id="sb-actionbar-title" style="flex-shrink:0;font-family:'DM Serif Display',serif;font-size:19px;letter-spacing:0.02em;color:#f3ead7;white-space:nowrap;">Smoke<span style="color:#d6603a;">bench</span></div>
       <div id="sb-actionbar-btns" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
       <button onClick="{{ onToggleLang }}" title="{{ L.langTitle }}" style="font-family:'Spectral',serif;font-size:12px;font-weight:600;letter-spacing:0.08em;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #c9a87a;background:transparent;color:#c9a87a;white-space:nowrap;display:inline-flex;align-items:center;gap:7px;"><span style="display:inline-flex;width:20px;height:14px;border-radius:2px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,0.3);flex-shrink:0;"><sc-if value="{{ langIsDe }}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 60 30" width="20" height="14" preserveAspectRatio="none" aria-hidden="true"><clipPath id="ukflag"><path d="M0,0 v30 h60 v-30 z"></path></clipPath><clipPath id="ukflag2"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"></path></clipPath><g clip-path="url(#ukflag)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"></path><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"></path><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#ukflag2)" stroke="#C8102E" stroke-width="4"></path><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"></path><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"></path></g></svg></sc-if><sc-if value="{{ langIsEn }}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 5 3" width="20" height="14" preserveAspectRatio="none" aria-hidden="true"><rect width="5" height="1" y="0" fill="#000000"></rect><rect width="5" height="1" y="1" fill="#DD0000"></rect><rect width="5" height="1" y="2" fill="#FFCE00"></rect></svg></sc-if></span>{{ L.langBtn }}</button>
       <button onClick="{{ onOpenAI }}" title="{{ L.aiTitle }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #9a6b2f;background:#9a6b2f;color:#f3ead7;white-space:nowrap;font-weight:600;display:inline-flex;align-items:center;gap:7px;" style-hover="background:#875d29;"><span aria-hidden="true" style="font-size:13px;line-height:1;">✦</span>{{ L.aiBtn }}</button>
       <button onClick="{{ onNewRecipe }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #9a3b1c;background:#9a3b1c;color:#f3ead7;white-space:nowrap;font-weight:600;">{{ L.newRecipe }}</button>
+      <button onClick="{{ onOpenSides }}" title="{{ L.sidesTitle }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #6b8a4a;background:transparent;color:#c9a87a;white-space:nowrap;font-weight:600;display:flex;align-items:center;gap:7px;" style-hover="background:rgba(107,138,74,0.12);">
+        <span aria-hidden="true" style="font-size:14px;line-height:1;">🥗</span>{{ L.sides }}
+      </button>
       <button style="{{ listButtonStyle }}" onClick="{{ onToggleShoppingList }}">{{ listButtonLabel }}</button>
+      </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end;border-top:1px solid rgba(201,168,122,0.2);padding-top:7px;">
       <div style="position:relative;">
         <button style="{{ toolsButtonStyle }}" onClick="{{ onToggleTools }}">{{ L.tools }} ▾</button>
         <sc-if value="{{ showTools }}" hint-placeholder-val="{{ false }}">
@@ -101,9 +108,6 @@
       </button>
       <button onClick="{{ onOpenAcademy }}" title="{{ L.academyTitle }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #6b5a42;background:transparent;color:#c9a87a;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;">
         <span aria-hidden="true" style="font-size:14px;line-height:1;">📚</span>{{ L.academy }}
-      </button>
-      <button onClick="{{ onOpenSides }}" title="{{ L.sidesTitle }}" style="font-family:'Spectral',serif;font-size:13px;cursor:pointer;border-radius:3px;padding:7px 13px;border:1.5px solid #6b8a4a;background:transparent;color:#c9a87a;white-space:nowrap;font-weight:600;display:flex;align-items:center;gap:7px;" style-hover="background:rgba(107,138,74,0.12);">
-        <span aria-hidden="true" style="font-size:14px;line-height:1;">🥗</span>{{ L.sides }}
       </button>
       </div>
     </div>
@@ -251,6 +255,8 @@
           <h2 style="font-family:'DM Serif Display',serif;font-size:22px;color:#3a2a1a;margin:0;">{{ L.shoppingTitle }}</h2>
           <div style="display:flex;gap:7px;">
             <sc-if value="{{ hasShoppingItems }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ onPrintList }}" style="padding:6px 13px;background:transparent;border:1.5px solid #c9b48a;border-radius:3px;font-family:'Spectral',serif;font-size:13px;color:#6b5a42;cursor:pointer;" style-hover="background:#f3ead7;">🖨 {{ L.printList }}</button>
+              <button onClick="{{ onMailList }}" style="padding:6px 13px;background:transparent;border:1.5px solid #c9b48a;border-radius:3px;font-family:'Spectral',serif;font-size:13px;color:#6b5a42;cursor:pointer;" style-hover="background:#f3ead7;">✉ {{ L.mailList }}</button>
               <button onClick="{{ onCopyList }}" style="padding:6px 13px;background:transparent;border:1.5px solid #c9b48a;border-radius:3px;font-family:'Spectral',serif;font-size:13px;color:#6b5a42;cursor:pointer;" style-hover="background:#f3ead7;">{{ listCopyLabel }}</button>
               <button onClick="{{ onClearList }}" style="padding:6px 13px;background:transparent;border:1.5px solid #c9b48a;border-radius:3px;font-family:'Spectral',serif;font-size:13px;color:#9a8a72;cursor:pointer;" style-hover="background:#f3ead7;">{{ L.clearList }}</button>
             </sc-if>
@@ -2096,13 +2102,41 @@ class Component extends DCLogic {
     this.setState({ shoppingList: newList });
   }
 
-  _copyList() {
-    const text = this.state.shoppingList.map(r =>
-      '── ' + r.name + ' ──\n' + (r.ingredients || []).map(i => i.a + '  ' + i.i).join('\n')
+  _listText() {
+    return this.state.shoppingList.map(r =>
+      '── ' + r.name + ' ──\n' + (r.ingredients || []).map(i => (i.a ? i.a + '  ' : '') + i.i).join('\n')
     ).join('\n\n');
-    navigator.clipboard.writeText(text).catch(() => {});
+  }
+
+  _copyList() {
+    navigator.clipboard.writeText(this._listText()).catch(() => {});
     this.setState({ listCopied: true });
     setTimeout(() => this.setState({ listCopied: false }), 1500);
+  }
+
+  _mailList() {
+    const T = this._dict();
+    const subject = T.p('Einkaufsliste – Smokebench', 'Shopping list – Smokebench');
+    const body = this._listText() + '\n\n— Smokebench';
+    window.location.href = 'mailto:?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
+
+  _printList() {
+    const T = this._dict();
+    const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const cards = this.state.shoppingList.map(r =>
+      '<div class="lc"><h2>' + esc(r.name) + '</h2>' + (r.ingredients || []).map(i =>
+        '<div class="ing"><span class="box"></span><span class="ia">' + esc(i.a) + '</span><span>' + esc(i.i) + '</span></div>'
+      ).join('') + '</div>'
+    ).join('');
+    const inner = '<h1>' + esc(T.L.shoppingTitle) + '</h1><p class="sub">' + esc(new Date().toLocaleDateString(this.state.lang === 'en' ? 'en-GB' : 'de-DE')) + ' · ' + this.state.shoppingList.length + ' ' + esc(T.p('Rezepte', 'recipes')) + '</p>' + cards + '<div class="footer">Smokebench · Weber Smokey Mountain 57 cm</div>';
+    const pcss = '@media print{body>*:not(#__pr){display:none!important}#__pr{display:block!important;font-family:Georgia,serif;color:#3a2a1a;font-size:10pt;line-height:1.5}#__pr *{box-sizing:border-box;margin:0;padding:0}#__pr h1{font-size:22pt;margin-bottom:2px}#__pr .sub{font-style:italic;font-size:10pt;color:#9a8a72;margin-bottom:12px}#__pr .lc{break-inside:avoid;border:1px solid #c9b48a;border-radius:3px;padding:10px 13px;margin-bottom:10px}#__pr h2{font-size:13pt;margin-bottom:6px;padding-bottom:3px;border-bottom:1px solid #c9b48a}#__pr .ing{display:flex;gap:10px;align-items:baseline;padding:3px 0;border-bottom:1px dashed #e0d2ac}#__pr .ing:last-child{border-bottom:none}#__pr .box{display:inline-block;width:9pt;height:9pt;border:1px solid #9a8a72;border-radius:1px;flex-shrink:0;position:relative;top:1pt}#__pr .ia{min-width:80px;font-weight:bold;color:#9a3b1c;font-size:9pt}#__pr .footer{margin-top:12px;padding-top:6px;border-top:1px solid #c9b48a;font-size:8pt;color:#9a8a72;text-align:center;font-style:italic}}@page{size:A4;margin:14mm}#__pr{display:none}';
+    const oldS = document.getElementById('__print_style'); if (oldS) { try { oldS.remove(); } catch (e) {} }
+    const oldO = document.getElementById('__pr'); if (oldO) { try { oldO.remove(); } catch (e) {} }
+    const st = document.createElement('style'); st.id = '__print_style'; st.textContent = pcss;
+    const ov = document.createElement('div'); ov.id = '__pr'; ov.innerHTML = inner;
+    document.body.appendChild(st); document.body.appendChild(ov);
+    setTimeout(() => { try { window.print(); } catch (e) {} }, 60);
   }
 
   _printRecipe() {
@@ -2756,6 +2790,7 @@ class Component extends DCLogic {
         shoppingTitle: p('Einkaufsliste','Shopping List'), clearList: p('Liste leeren','Clear list'),
         shoppingEmpty: p('Noch kein Rezept hinzugefügt — öffne ein Rezept und klicke „+ Einkaufsliste".','No recipe added yet — open a recipe and tap "+ Shopping list".'),
         copyDone: p('✓ Kopiert!','✓ Copied!'), copyList: p('↗ Kopieren','↗ Copy'),
+        printList: p('Drucken','Print'), mailList: p('Per E-Mail','Email'),
         // Converter
         convTitle: p('Einheiten umrechnen','Unit Converter'),
         convSub: p('Europa ⇄ USA · beide Felder sind live verbunden','Europe ⇄ USA · both fields are linked live'),
@@ -3651,6 +3686,7 @@ class Component extends DCLogic {
       // Einkaufsliste
       shoppingListView, hasShoppingItems, shoppingEmpty: !hasShoppingItems,
       onCopyList: () => this._copyList(), listCopyLabel: listCopied ? L.copyDone : L.copyList,
+      onPrintList: () => this._printList(), onMailList: () => this._mailList(),
       onClearList: () => { localStorage.setItem('wsm_shopping', '[]'); this.setState({ shoppingList: [] }); },
       // Timer
       timerActive, timerDisplay: this._fmt(timerRemaining), timerLabel, timerRunning,
