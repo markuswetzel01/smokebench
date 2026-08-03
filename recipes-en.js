@@ -10,7 +10,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the traditional Black Forest cold-smoking over fir and juniper. Adapted only in salt (curing salt) and a home-friendly timeline.",
     time:"5–7 weeks", pit:"15–22 °C / 59–72 °F", core:"", wood:"Beech + fir/juniper", yield:"approx. 2.5 kg",
-    ingredients:[{a:"2.5 kg",i:"Pork ham (top round/knuckle, trimmed)"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"5 g/kg",i:"brown sugar"},{a:"1 tsp each",i:"juniper berries, garlic, coriander, pepper, bay"}],
+    ingredients:[{a:"2.5 kg",i:"Pork ham (top round/knuckle, trimmed)"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"5 g/kg",i:"brown sugar"},{a:"2.5 g",i:"juniper berries, crushed"},{a:"3 g",i:"garlicpowder"},{a:"2 g",i:"coriander, ground"},{a:"2.5 g",i:"pepper, ground"},{a:"1 leaf",i:"bay"}],
     phases:[
       {label:"Dry curing",dur:"1 day per cm + 2–3 days",temp:"2–7 °C / 36–45 °F",text:"Rub the meat all over with the cure mix and vacuum-seal or pack tightly.",bullets:["Weigh curing salt precisely (40 g/kg) — never estimate","Cure in the fridge, turn daily","Released brine stays on the meat (vacuum) or is poured off when curing open"]},
       {label:"Equalizing",dur:"10–14 days",temp:"2–7 °C / 36–45 °F",text:"Take out of the brine, rinse briefly, pat dry. Rest cold without salt so the salt distributes evenly.",bullets:["Develops color and curing","Rule of thumb: half the curing time","Meat firms up and flavor evens out"]},
@@ -22,7 +22,7 @@ _en({
     learn:["Dry-curing (precise NPS)","Equalizing","Form a pellicle","Cold-smoking in runs","Maturing (weight loss)"] },
   "lachsschinken": { name:"Cured Pork Loin (Lachsschinken)", cat:"Ham", blurb:"Lean, fine and quick: cured pork loin, a delight sliced paper-thin.",
     time:"2–3 weeks", pit:"15–22 °C / 59–72 °F", core:"", wood:"Beech", yield:"approx. 800 g",
-    ingredients:[{a:"1 kg",i:"Pork loin (trimmed)"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"4 g/kg",i:"sugar"},{a:"1 tsp each",i:"pepper, juniper, garlic"}],
+    ingredients:[{a:"1 kg",i:"Pork loin (trimmed)"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"4 g/kg",i:"sugar"},{a:"2.5 g",i:"pepper, ground"},{a:"2.5 g",i:"juniper, crushed"},{a:"3 g",i:"garlicpowder"}],
     phases:[
       {label:"Dry curing",dur:"7–10 days",temp:"2–7 °C / 36–45 °F",text:"Rub the loin, vacuum-seal, cure cold and turn daily.",bullets:["Lean meat cures through quickly","Vacuum bag saves space and brine"]},
       {label:"Equalizing",dur:"3–4 days",temp:"2–7 °C / 36–45 °F",text:"Rinse, dry, rest without salt.",bullets:["Salt distribution evens out"]},
@@ -34,7 +34,7 @@ _en({
     learn:["Dry-curing (NPS)","Equalizing","Form a pellicle","Cold-smoking (few runs)","Maturing"] },
   "nussschinken": { name:"Top Round Ham (Nussschinken)", cat:"Ham", blurb:"Cut from the top round — tender, lean and uncomplicated.",
     time:"3–4 weeks", pit:"15–22 °C / 59–72 °F", core:"", wood:"Beech", yield:"approx. 1 kg",
-    ingredients:[{a:"1.2 kg",i:"Pork top round"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"5 g/kg",i:"sugar"},{a:"1 tsp each",i:"pepper, garlic, mustard seed"}],
+    ingredients:[{a:"1.2 kg",i:"Pork top round"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"5 g/kg",i:"sugar"},{a:"2.5 g",i:"pepper, ground"},{a:"3 g",i:"garlicpowder"},{a:"3.5 g",i:"mustard seed"}],
     phases:[
       {label:"Dry curing",dur:"10–12 days",temp:"2–7 °C / 36–45 °F",text:"Rub, vacuum-seal, turn.",bullets:["1 day per cm + reserve"]},
       {label:"Equalizing",dur:"5–6 days",temp:"2–7 °C / 36–45 °F",text:"Rinse, dry, rest.",bullets:[]},
@@ -49,7 +49,7 @@ _en({
     authenticity:9,
     authenticityNote:"Closely follows the Italian salumi tradition. Adapted in salt (curing salt) and a gentle smoking step that improves reproducibility.",
     time:"6–8 weeks", pit:"15–20 °C / 59–68 °F", core:"", wood:"Beech", yield:"approx. 1.5 kg",
-    ingredients:[{a:"1.8 kg",i:"Pork collar in one piece, boneless"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"black pepper, fennel seed, garlic, wine"},{a:"1",i:"Beef bung or synthetic casing (90+ caliber)"}],
+    ingredients:[{a:"1.8 kg",i:"Pork collar in one piece, boneless"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"2.5 g",i:"black pepper, ground"},{a:"2 g",i:"fennel seed, crushed"},{a:"3 g",i:"garlicpowder"},{a:"5 g",i:"wine"},{a:"1",i:"Beef bung or synthetic casing (90+ caliber)"}],
     phases:[
       {label:"Curing",dur:"12–16 days",temp:"2–7 °C / 36–45 °F",text:"Massage in the spice mix, vacuum-seal, turn daily.",bullets:["Marbling keeps coppa juicy"]},
       {label:"Equalizing",dur:"6–8 days",temp:"2–7 °C / 36–45 °F",text:"Rinse, season, rest.",bullets:[]},
@@ -128,7 +128,7 @@ _en({
     cutWeight:"2000–3500 g",
     equipment:[["kettle",5,{de:"indirekt, für rundum knusprige Schwarte",en:"indirect, for all-round crackling"}],["gas",5],["oven",4,{de:"Finish bei 220 °C für die Kruste",en:"finish at 220 °C for the crackling"}],["wsm",4,{de:"optional dezenter Rauch",en:"optional light smoke"}],["dehydrator",0]],
     time:"1 day + 3–4 h", pit:"130–150 °C, finish 220 °C", core:"75 °C", wood:"Optional light", yield:"approx. 2.5 kg",
-    ingredients:[{a:"1.5 kg",i:"Pork belly with rind, flat"},{a:"600 g",i:"Pork tenderloin or loin (as the core)"},{a:"20 g",i:"Salt"},{a:"6 g",i:"Fennel seeds, roasted & crushed"},{a:"4 g",i:"Black pepper"},{a:"3 cloves",i:"Garlic"},{a:"2 sprigs",i:"Rosemary + sage, chopped"},{a:"1 tsp",i:"Chili flakes (optional)"}],
+    ingredients:[{a:"1.5 kg",i:"Pork belly with rind, flat"},{a:"600 g",i:"Pork tenderloin or loin (as the core)"},{a:"20 g",i:"Salt"},{a:"6 g",i:"Fennel seeds, roasted & crushed"},{a:"4 g",i:"Black pepper"},{a:"3 cloves",i:"Garlic"},{a:"2 sprigs",i:"Rosemary + sage, chopped"},{a:"1 tsp (2 g)",i:"Chili flakes (optional)"}],
     phases:[
       {label:"Season & roll",dur:"45 min",temp:"cold",text:"Score the belly inside, season with the herb mix, lay in the loin, roll tightly and tie at intervals. Keep the rind dry and unseasoned.",bullets:["Score the rind in a diamond pattern","Herbs inside only — just salt outside for the crackling"]},
       {label:"Dry",dur:"12–24 h",temp:"fridge, uncovered",text:"Rest uncovered in the fridge so the rind dries out for crackling.",bullets:["Dry rind = crisp crackling"]},
@@ -160,7 +160,7 @@ _en({
     cutWeight:"2000–3000 g",
     equipment:[["chamber",5],["dehydrator",1,{de:"zu groß für die meisten Geräte",en:"too large for most units"}],["wsm",3,{de:"nur für optionalen Kaltrauch",en:"only for optional cold smoke"}]],
     time:"3 weeks curing + 2–3 months", pit:"6–12 °C", core:"", wood:"Optional cold smoke", yield:"approx. 2 kg",
-    ingredients:[{a:"1",i:"Bone-in lamb leg (~2.5 kg)"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"pepper, juniper, garlic"},{a:"1 tsp",i:"Sugar"}],
+    ingredients:[{a:"1",i:"Bone-in lamb leg (~2.5 kg)"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"2.5 g",i:"pepper, ground"},{a:"2.5 g",i:"juniper, crushed"},{a:"3 g",i:"garlicpowder"},{a:"4 g",i:"Sugar"}],
     phases:[
       {label:"Curing",dur:"2–3 weeks",temp:"2–5 °C / 36–41 °F",text:"Dry-cure, turning regularly. A large leg needs time for the salt to reach the bone.",bullets:["Rub especially carefully around the bone"]},
       {label:"Start drying",dur:"1 week",temp:"6–12 °C / 43–54 °F",text:"Rinse, dry, then hang cool and airy.",bullets:[]},
@@ -176,7 +176,7 @@ _en({
     cutWeight:"1000–2000 g",
     equipment:[["wsm",4,{de:"für den Eichen-Kaltrauch",en:"for the oak cold smoke"}],["chamber",5],["kettle",3,{de:"nur mit Kaltrauch-Adapter",en:"only with a cold-smoke adapter"}],["dehydrator",1]],
     time:"3 weeks + 4–6 weeks", pit:"12–15 °C", core:"", wood:"Oak (cold smoke)", yield:"approx. 1.2 kg",
-    ingredients:[{a:"1.5 kg",i:"Beef round (topside), leanly trimmed"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"pepper, garlic, paprika (optional)"}],
+    ingredients:[{a:"1.5 kg",i:"Beef round (topside), leanly trimmed"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"2.5 g",i:"pepper, ground"},{a:"3 g",i:"garlicpowder"},{a:"2.5 g",i:"paprika (optional)"}],
     phases:[
       {label:"Curing",dur:"2–3 weeks",temp:"2–7 °C / 36–45 °F",text:"Dry-cure, turning regularly.",bullets:[]},
       {label:"Equalize & dry",dur:"5–7 days",temp:"2–7 °C / 36–45 °F",text:"Rinse, dry, let the surface dry off.",bullets:[]},
@@ -192,7 +192,7 @@ _en({
     cutWeight:"1000–1500 g",
     equipment:[["chamber",5],["dehydrator",2,{de:"nur kleine Stücke, Farbe leidet",en:"only small cuts, color suffers"}],["wsm",0,{de:"Original ist nie geräuchert",en:"the original is never smoked"}]],
     time:"3 weeks + 5–7 weeks", pit:"12–15 °C", core:"", wood:"Do not smoke", yield:"approx. 1 kg",
-    ingredients:[{a:"1.3 kg",i:"Beef topside/round, leanly trimmed"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"juniper, bay, garlic, pepper, red wine"}],
+    ingredients:[{a:"1.3 kg",i:"Beef topside/round, leanly trimmed"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"2.5 g",i:"juniper, crushed"},{a:"1 leaf",i:"bay"},{a:"3 g",i:"garlicpowder"},{a:"2.5 g",i:"pepper, ground"},{a:"5 g",i:"red wine"}],
     phases:[
       {label:"Curing",dur:"2–3 weeks",temp:"2–7 °C / 36–45 °F",text:"Dry-cure with seasoning, turning regularly.",bullets:[]},
       {label:"Equalizing",dur:"5–7 days",temp:"2–7 °C / 36–45 °F",text:"Rest, letting the salt distribute evenly.",bullets:[]},
@@ -221,7 +221,7 @@ _en({
     authenticity:8,
     authenticityNote:"Authentic Bündnerfleisch is unsmoked. This version is deliberately a lightly smoked variant — excellent, but a departure from the pure original.",
     time:"6–8 weeks", pit:"15–20 °C / 59–68 °F", core:"", wood:"Beech (very subtle)", yield:"approx. 1 kg",
-    ingredients:[{a:"1.3 kg",i:"Beef topside/round, leanly trimmed"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"juniper, bay, garlic, pepper, red wine"}],
+    ingredients:[{a:"1.3 kg",i:"Beef topside/round, leanly trimmed"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"2.5 g",i:"juniper, crushed"},{a:"1 leaf",i:"bay"},{a:"3 g",i:"garlicpowder"},{a:"2.5 g",i:"pepper, ground"},{a:"5 g",i:"red wine"}],
     phases:[
       {label:"Curing",dur:"14–18 days",temp:"2–7 °C / 36–45 °F",text:"Cure with spices, turn regularly.",bullets:[]},
       {label:"Equalizing",dur:"7 days",temp:"2–7 °C / 36–45 °F",text:"Let it rest.",bullets:[]},
@@ -234,7 +234,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the Scandinavian smoked-salmon tradition.",
     time:"2–3 days", pit:"below 25 °C / 77 °F", core:"", wood:"Beech / alder", yield:"1 side",
-    ingredients:[{a:"1",i:"Salmon side with skin, deboned (sushi/sashimi grade)"},{a:"200 g : 100 g",i:"sea salt : sugar (dry cure)"},{a:"1 tsp each",i:"dill, pepper, lemon zest, juniper"}],
+    ingredients:[{a:"1",i:"Salmon side with skin, deboned (sushi/sashimi grade)"},{a:"200 g : 100 g",i:"sea salt : sugar (dry cure)"},{a:"1 g",i:"dill"},{a:"2.5 g",i:"pepper, ground"},{a:"2 g",i:"lemon zest"},{a:"2.5 g",i:"juniper, crushed"}],
     phases:[
       {label:"Curing",dur:"12–24 h",temp:"0–4 °C / 32–39 °F",text:"Cover with the salt-sugar mix, weigh down, chill.",bullets:["Thicker side = cure longer","Pour off released liquid"]},
       {label:"Rinse & dry",dur:"4–12 h",temp:"cool, airy",text:"Rinse briefly, pat dry, dry uncovered in the fridge until a pellicle forms.",bullets:["A glossy, tacky surface develops"]},
@@ -243,7 +243,7 @@ _en({
     tips:["Use only very fresh sashimi-grade fish.","Tricky in summer — keeping below 25 °C is a must."] },
   "bacon": { name:"Bacon / Breakfast Bacon", cat:"Bacon", blurb:"Homemade bacon from pork belly — unbeatable fried crisp.",
     time:"2–3 weeks", pit:"15–22 °C / 59–72 °F", core:"", wood:"Hickory / beech", yield:"approx. 1.5 kg",
-    ingredients:[{a:"1.8 kg",i:"Pork belly, boneless, rind off"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"8 g/kg",i:"brown sugar / maple syrup"},{a:"1 tsp each",i:"pepper, paprika, garlic"}],
+    ingredients:[{a:"1.8 kg",i:"Pork belly, boneless, rind off"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"8 g/kg",i:"brown sugar / maple syrup"},{a:"2.5 g",i:"pepper, ground"},{a:"2.5 g",i:"paprika"},{a:"3 g",i:"garlicpowder"}],
     phases:[
       {label:"Dry curing",dur:"7–10 days",temp:"2–7 °C / 36–45 °F",text:"Rub, vacuum-seal, turn daily.",bullets:[]},
       {label:"Equalizing",dur:"2–3 days",temp:"2–7 °C / 36–45 °F",text:"Rinse, dry, rest.",bullets:[]},
@@ -255,7 +255,7 @@ _en({
     learn:["Dry-curing (NPS)","Equalizing","Form a pellicle","Cold-smoke strongly","Freeze briefly before slicing"] },
   "raeucherspeck": { name:"Streaky Smoked Bacon", cat:"Bacon", blurb:"Hearty smoked belly bacon — farmhouse-style, for the charcuterie board.",
     time:"3–4 weeks", pit:"15–20 °C / 59–68 °F", core:"", wood:"Beech + juniper", yield:"approx. 1.5 kg",
-    ingredients:[{a:"1.8 kg",i:"Pork belly with rind"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"juniper, bay, garlic, pepper"}],
+    ingredients:[{a:"1.8 kg",i:"Pork belly with rind"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"2.5 g",i:"juniper, crushed"},{a:"1 leaf",i:"bay"},{a:"3 g",i:"garlicpowder"},{a:"2.5 g",i:"pepper, ground"}],
     phases:[
       {label:"Dry curing",dur:"10–14 days",temp:"2–7 °C / 36–45 °F",text:"Cure with spices, turn.",bullets:[]},
       {label:"Equalizing",dur:"5 days",temp:"2–7 °C / 36–45 °F",text:"Let it rest.",bullets:[]},
@@ -267,7 +267,7 @@ _en({
     learn:["Dry-curing (NPS)","Equalizing","Form a pellicle","Cold-smoke strongly","Maturing"] },
   "mettenden": { name:"Mettenden (Smoked Raw Sausage)", cat:"Sausage", blurb:"Firm, sliceable smoked raw sausage — spicy and hearty.",
     time:"2–3 weeks", pit:"15–20 °C / 59–68 °F", core:"", wood:"Beech", yield:"approx. 1.5 kg",
-    ingredients:[{a:"1.2 kg",i:"Pork (lean)"},{a:"0.6 kg",i:"back fat"},{a:"28 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"pepper, garlic, mustard seed, a little sugar, starter culture"},{a:"1",i:"Hog casing (32+ caliber)"}],
+    ingredients:[{a:"1.2 kg",i:"Pork (lean)"},{a:"0.6 kg",i:"back fat"},{a:"28 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"2.5 g",i:"pepper, ground"},{a:"3 g",i:"garlicpowder"},{a:"3.5 g",i:"mustard seed"},{a:"4 g",i:"a little sugar"},{a:"0.3 g",i:"starter culture — per manufacturer's instructions"},{a:"1",i:"Hog casing (32+ caliber)"}],
     phases:[
       {label:"Grinding & seasoning",dur:"1 h",temp:"below 2 °C / 36 °F",text:"Grind meat and fat ice-cold, knead with curing salt, spices and starter culture.",bullets:["Keep everything ice-cold — or it smears","GDL/starter culture for safe acidification"]},
       {label:"Stuff & tie",dur:"30 min",temp:"cool",text:"Stuff firmly, tie off, prick.",bullets:["No air pockets"]},
@@ -279,7 +279,7 @@ _en({
     learn:["Cold grinding & mixing","Fermenting (starter culture)","Color set (curing)","Cold-smoking in runs","Drying to slicing firmness"] },
   "salami": { name:"Salami (Air-Dried)", cat:"Sausage", blurb:"Noble-mold salami: fermented, cold-smoked, air-dried.",
     time:"4–6 weeks", pit:"15–18 °C / 59–64 °F", core:"", wood:"Beech (subtle)", yield:"approx. 2 kg",
-    ingredients:[{a:"1.4 kg",i:"Pork (lean)"},{a:"0.6 kg",i:"back fat"},{a:"28 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"pepper, garlic, red wine, sugar, starter culture"},{a:"1",i:"Noble-mold culture + synthetic/natural casing 50+"}],
+    ingredients:[{a:"1.4 kg",i:"Pork (lean)"},{a:"0.6 kg",i:"back fat"},{a:"28 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"2.5 g",i:"pepper, ground"},{a:"3 g",i:"garlicpowder"},{a:"5 g",i:"red wine"},{a:"4 g",i:"sugar"},{a:"0.3 g",i:"starter culture — per manufacturer's instructions"},{a:"1",i:"Noble-mold culture + synthetic/natural casing 50+"}],
     phases:[
       {label:"Grinding & seasoning",dur:"1 h",temp:"below 2 °C / 36 °F",text:"Grind ice-cold, mix with culture and spices.",bullets:["Defined fat cubes = clean slice pattern"]},
       {label:"Stuffing",dur:"30 min",temp:"cool",text:"Stuff firmly, tie off, inoculate with noble mold.",bullets:[]},
@@ -299,7 +299,7 @@ _en({
     tips:["The ideal entry into cold smoking — short, simple, tasty.","Not above 25 °C, or the cheese sweats out fat."] },
   "raeuchertofu": { name:"Smoked Tofu", cat:"Vegetarian", blurb:"Vegetarian and quick: marinated, pressed tofu with real smoke aroma.",
     time:"1 day", pit:"below 25 °C / 77 °F", core:"", wood:"Beech / alder", yield:"any",
-    ingredients:[{a:"400 g",i:"firm plain tofu"},{a:"3 tbsp + 1 tsp each",i:"soy sauce, garlic, pepper (marinade)"}],
+    ingredients:[{a:"400 g",i:"firm plain tofu"},{a:"48 g",i:"soy sauce"},{a:"3 g",i:"garlicpowder"},{a:"2.5 g",i:"pepper (marinade), ground"}],
     phases:[
       {label:"Press & marinate",dur:"2–12 h",temp:"cool",text:"Press the tofu, marinate, then pat dry.",bullets:["Pressing removes water — takes smoke better"]},
       {label:"Surface-dry",dur:"1–2 h",temp:"cool, airy",text:"Let the surface dry.",bullets:[]},
@@ -321,7 +321,7 @@ _en({
     tips:["Store dry and cool afterward.","Can also be processed into garlic powder."] },
   "wildschinken-reh": { name:"Venison Ham (Roe Deer)", cat:"Ham", blurb:"Tender venison as a refined ham — milder and more aromatic than pork.",
     time:"4–5 weeks", pit:"8–15 °C / 46–59 °F", core:"", wood:"Beech + juniper + fir", yield:"approx. 1.5 kg",
-    ingredients:[{a:"1 roe leg",i:"approx. 2 kg, boned or on the bone"},{a:"40 g/kg",i:"40 g/kg of meat"},{a:"5 g/kg",i:"sugar"},{a:"1 tsp each",i:"juniper (crushed), pepper, bay, thyme, rosemary"}],
+    ingredients:[{a:"1 roe leg",i:"approx. 2 kg, boned or on the bone"},{a:"40 g/kg",i:"40 g/kg of meat"},{a:"5 g/kg",i:"sugar"},{a:"2.5 g",i:"juniper (crushed)"},{a:"2.5 g",i:"pepper, ground"},{a:"1 leaf",i:"bay"},{a:"1 g",i:"thyme, dried"},{a:"1 g",i:"rosemary, dried"}],
     phases:[
       {label:"Trimming",dur:"30 min",temp:"cold",text:"Remove all sinew and silverskin completely. Trim fat — game fat turns rancid.",bullets:["Sinew harms texture and shelf life","Flawless trimming is a must with game"]},
       {label:"Dry curing",dur:"12–14 days",temp:"4–7 °C / 39–45 °F",text:"Rub in curing salt + spices, vacuum-seal or cover tightly in the fridge.",bullets:["Turn daily and massage in the released juices","Vacuum speeds it to 10–12 days"]},
@@ -337,7 +337,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the South Tyrolean speck tradition.",
     time:"4–5 weeks", pit:"below 22 °C / 72 °F", core:"", wood:"Beech + spruce/fir", yield:"approx. 1.2 kg",
-    ingredients:[{a:"1.5 kg",i:"Pork belly, rind on, ribs removed"},{a:"38 g/kg",i:"38 g/kg"},{a:"8 g/kg",i:"coarse sea salt"},{a:"1 tsp each",i:"juniper, coriander, bay, marjoram, pepper, garlic (paste)"}],
+    ingredients:[{a:"1.5 kg",i:"Pork belly, rind on, ribs removed"},{a:"38 g/kg",i:"38 g/kg"},{a:"8 g/kg",i:"coarse sea salt"},{a:"2.5 g",i:"juniper, crushed"},{a:"2 g",i:"coriander, ground"},{a:"1 leaf",i:"bay"},{a:"1 g",i:"marjoram, dried"},{a:"2.5 g",i:"pepper, ground"},{a:"3 g",i:"garlic (paste)powder"}],
     phases:[
       {label:"Curing",dur:"10–12 days",temp:"4–6 °C / 39–43 °F",text:"Rub in the spice mix, cure cold. Turn daily.",bullets:[]},
       {label:"Rinse & dry",dur:"1 day",temp:"cool and airy",text:"Rinse with lukewarm water, pat dry, hang.",bullets:[]},
@@ -354,13 +354,13 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the Scandinavian gravad tradition, with added cold smoke.",
     time:"2–3 days", pit:"below 22 °C / 72 °F", core:"Juicy, translucent orange-red", wood:"WSM · alder or beech",
-    ingredients:[{a:"1 kg",i:"Salmon fillet, sushi grade, skin on, deboned"},{a:"60 g",i:"coarse sea salt"},{a:"40 g",i:"sugar (cane sugar)"},{a:"1 tsp each",i:"white pepper, dill (fresh or dried)"},{a:"1 tsp",i:"lemon zest (optional)"}],
+    ingredients:[{a:"1 kg",i:"Salmon fillet, sushi grade, skin on, deboned"},{a:"60 g",i:"coarse sea salt"},{a:"40 g",i:"sugar (cane sugar)"},{a:"2.5 g",i:"white pepper, ground"},{a:"1 g",i:"dill (fresh or dried)"},{a:"2 g",i:"lemon zest (optional)"}],
     phases:[
-      {label:"Curing",dur:"24–36 h",temp:"0–4 °C / 32–39 °F",text:"Mix salt, sugar, pepper, dill and rub on both sides. Wrap in cling film, set on a rack in a tray, weigh down.",bullets:["Turn after 12 h","The longer the cure, the firmer and saltier"]},
-      {label:"Rinse & dry",dur:"4–8 h",temp:"cool, airy",text:"Rinse the cure off with cold water. Pat dry, dry on a rack uncovered in the fridge or a cool room until a pellicle forms.",bullets:["Pellicle = dry, tacky-glossy outer layer — smoke clings to it","No pellicle = smoke drips off, worse result"]},
-      {label:"Cold-smoking",dur:"4–6 h (1–2 runs)",temp:"below 22 °C / 72 °F",text:"In a cold-smoke generator or WSM with a minimal fire and plenty of ice in the water pan. Alder or beech.",bullets:["Only 1–2 runs — salmon takes smoke very intensely","Smoke at night in high outdoor temperatures"]},
-      {label:"Resting",dur:"12–24 h",temp:"fridge",text:"After smoking, rest 12–24 h in the fridge — the smoke distributes.",bullets:[]}],
-    tips:["Slice paper-thin with a sharp gravlax knife or on a slicer.","Keeps 1 week vacuum-sealed in the fridge, 3 months frozen."] },
+      {label:"Curing",dur:"24–36 h",temp:"0–4 °C / 32–39 °F",text:"Mix salt, sugar, pepper and dill and rub the salmon evenly on all sides. Cure in cling film or vacuum-sealed in the fridge.",bullets:["Turn after about 12 h","The longer the cure, the firmer and saltier the salmon"]},
+      {label:"Rinse & dry",dur:"4–8 h",temp:"cool, airy",text:"Rinse the cure off thoroughly, pat dry, and dry on a rack uncovered in the fridge or a cool room until a pellicle forms.",bullets:["Pellicle = dry, slightly tacky surface that smoke clings to best","Without a pellicle the smoke flavor is noticeably weaker"]},
+      {label:"Cold-smoking",dur:"4–6 h (1–2 runs)",temp:"below 22 °C / 72 °F",text:"Smoke with a cold-smoke generator in the WSM or kettle. Alder gives the classic flavor; beech also works.",bullets:["1–2 runs are plenty — salmon takes smoke very intensely","Smoke at night in summer temperatures"]},
+      {label:"Resting (flavor equalization)",dur:"12–24 h",temp:"0–4 °C / 32–39 °F",text:"After smoking, rest the salmon uncovered or loosely covered in the fridge. The smoke flavor distributes evenly and the texture becomes more harmonious.",bullets:[]}],
+    tips:["Slice paper-thin with a gravlax knife or on a slicer.","Perfect with dark rye bread, dill-mustard sauce, horseradish, or on bagels.","Keeps about 7 days vacuum-sealed in the fridge, up to 3 months frozen.","Optional extra drying for a firmer, easier-slicing salmon: 12–24 h at 10–14 °C and 75–80% RH, hanging or on a rack — purely for texture, not maturing like ham."] },
   "hering-kalt": { name:"Cold-Smoked Herring (Pre-Bückling)", cat:"Fish", blurb:"Cold-smoked whole herring — heavily salted, lightly smoked. North German tradition.",
     origin:"🇩🇪 The cold-smoked herring is the precursor to the Bückling and part of the North German fish-smoking tradition.",
     authenticity:8.5,
@@ -372,21 +372,37 @@ _en({
       {label:"Rinse & dry",dur:"4–8 h",temp:"cool, airy",text:"Rinse, hang by the tails until a pellicle forms.",bullets:[]},
       {label:"Cold-smoking",dur:"2 × 8–10 h",temp:"below 20 °C / 68 °F",text:"2 smoking runs with an overnight rest. Beech + a little alder.",bullets:["Herring turn golden to dark golden-brown","Not too hot — they'd cook"]}],
     tips:["They become Bückling (hot-smoked) when the temperature is raised to 50–70 °C."] },
-  "milano-salami": { name:"Milano Salami", cat:"Sausage", blurb:"The classic Milano salami — coarsely ground, subtly spiced, long-matured.",
-    origin:"🇮🇹 Milano salami (salame Milano) is finely ground and subtly spiced — one of Italy's best-known salamis. Its fine, even cut and white noble mold are its hallmark.",
+  "duenne-mettenden": { name:"Thin Mettenden (Dry-Cured Sausage)", cat:"Sausage", blurb:"Air-dried raw sausage in the Mettwurst style, in sheep casing — intense smoke flavour, firm and sliceable.",
+    origin:"🇩🇪 Mettenden are a North German dry-sausage tradition. The thin version in sheep casing (22/24 mm) dries far faster than thick Mettwurst, which makes it especially smoky — classically eaten on buttered bread or as a snack.",
     authenticity:9,
-    authenticityNote:"Closely follows the salame Milano tradition: finely ground, subtly spiced, air-matured. Adapted with a starter culture and curing salt for safe fermentation.",
-    time:"6–8 weeks", pit:"10–14 °C, 75–85 % RH", core:"Firm, matured, white noble mold", wood:"WSM cold-smoke (1 run) · beech",
-    ingredients:[{a:"750 g",i:"pork shoulder (lean)"},{a:"250 g",i:"back fat (firm, chilled)"},{a:"28 g",i:"curing salt (NPS)"},{a:"3 g",i:"black pepper (coarse)"},{a:"2 g",i:"garlic powder"},{a:"2 g",i:"sugar"},{a:"approx. 1.5 m",i:"hog casing 50 mm (or synthetic)"},{a:"1 sachet",i:"starter culture (T-SPX or similar)"}],
+    authenticityNote:"A classic North German dry-sausage method — extended with a starter culture and exact curing-salt dosing, today's standard for safe raw sausage.",
+    time:"10–14 days", pit:"15–18 °C / 59–64 °F", core:"Target: 30–35% weight loss", wood:"Beech", yield:"approx. 2.5 kg",
+    ingredients:[{a:"2000 g",i:"pork shoulder (approx. 30% fat)"},{a:"500 g",i:"pork belly or back fat"},{a:"60 g",i:"curing salt / NPS (2.4% of total weight)"},{a:"3 g",i:"white pepper, ground"},{a:"2 g",i:"garlic powder"},{a:"1 g",i:"coriander, ground"},{a:"0.5 g",i:"allspice, ground"},{a:"30 g",i:"dextrose (grape sugar)"},{a:"0.3 g",i:"starter culture (T-SPX or F-LC) — per manufacturer's instructions"},{a:"approx. 3 m",i:"sheep casing, 22/24 mm"}],
     phases:[
-      {label:"Prep",dur:"30 min",temp:"below 5 °C / 41 °F",text:"Cut meat and fat into cubes, partially freeze. Grind everything through the coarse plate (10–12 mm).",bullets:["Work very cold — the fat must not melt","Grind fat and meat separately"]},
-      {label:"Mix & stuff",dur:"20 min",temp:"below 5 °C / 41 °F",text:"Mix meat, fat, spices and rehydrated starter culture until tacky. Stuff firmly into casing.",bullets:["No air pockets","Stuff very firmly for even maturing"]},
-      {label:"Fermentation",dur:"48–72 h",temp:"22–24 °C, 90–95 % RH",text:"Hang warm and humid to activate the starter culture. pH drops to 5.0–5.2.",bullets:["A pH meter or test strips are recommended","The surface turns slightly red-glossy"]},
-      {label:"Smoking (optional)",dur:"1 × 4–6 h",temp:"below 20 °C / 68 °F",text:"One cold-smoke run with beech. Depends on style — classic Milano is unsmoked.",bullets:[]},
-      {label:"Drying & maturing",dur:"5–7 weeks",temp:"10–14 °C, 75–85 % RH",text:"Hang cool and airy. Check daily. A white mold film (Penicillium) is desirable and protects the sausage.",bullets:["White mold = good, rub gently with a damp cloth","Green/black mold = remove with a vinegar cloth"]}],
-    tips:["A starter culture is essential for salami — controlled fermentation prevents spoilage.","Maturing cellar: a cool basement, pantry or wine fridge are ideal.","Salami maturing takes patience — taste after 3 weeks to check salt and ripeness."],
-    proTip:"A coarse cut needs coarse fat — back fat (not belly fat) holds its shape through the long Milano maturing and won't smear.",
-    learn:["Coarse grinding","Fermenting (starter culture)","One cold-smoke run","Noble mold","6–8 weeks air-maturing"] },
+      {label:"Prep",dur:"2 h",temp:"2–4 °C / 36–39 °F",text:"Cut meat and fat into approx. 2×2 cm cubes, spread on a tray and partially freeze for 30 min. Meanwhile soak the casings in lukewarm water.",bullets:["Keep the meat below 4 °C throughout","Chill grinder, knives and bowls in the freezer beforehand","Rinse the casings thoroughly"]},
+      {label:"Grind & mix",dur:"30 min",temp:"2–4 °C / 36–39 °F",text:"Grind the semi-frozen meat through the 3–4 mm plate. Add spices, curing salt, dextrose and the starter culture (dissolved in a little cold, chlorine-free water) and knead vigorously for 5–8 minutes until the mass binds.",bullets:["The mix must stay below 8 °C while working","It's ready when it's tacky and pulls strands","Weigh the curing salt exactly — safety-critical"]},
+      {label:"Stuffing",dur:"45 min",temp:"4–8 °C / 39–46 °F",text:"Load the mix into the stuffer and fill the casings tightly. Twist into roughly 30 cm lengths and tie the ends with twine.",bullets:["Stuff very firmly — the sausage shrinks as it dries","Prick air pockets with a needle","Hang the sausages and pat the surface dry"]},
+      {label:"Reddening / start phase",dur:"24 h",temp:"20–24 °C, 90–95 % RH",text:"Hang the sausages warm and humid. The starter cultures get to work and the pH drops.",bullets:["High humidity prevents case hardening","Good air circulation matters","The sausages must not touch"]},
+      {label:"Cold smoking",dur:"3 × 6–8 h over 3 days",temp:"15–18 °C / 59–64 °F",text:"Cold-smoke with beech: 6–8 hours daily, with 12–16 hours of smoke-free rest in between.",bullets:["Never let the smoke temperature exceed 22 °C","Thin, light smoke — not too intense","Air out well between runs"]},
+      {label:"Maturing / drying",dur:"7–10 days",temp:"12–15 °C, 75–80 % RH",text:"Let it mature until approx. 30–35% weight loss is reached. The sausages become firm and sliceable.",bullets:["Weigh and log daily","Lower the humidity slowly from 80% to 75%","White noble mold is normal — wipe green/black mold off with vinegar water","Done at even firmness and the typical aroma"]}],
+    tips:["A starter culture is essential for raw sausage — it drops the pH fast enough.","Log the weight loss: start at 100%, done at 65–70% (= 30–35% loss).","Drying too fast causes case hardening, too slow risks spoilage.","A climate/maturing cabinet makes the result reproducible.","⚠ Weigh curing salt exactly — too little: botulism risk, too much: harmful.","⚠ Hold the temperatures: above 25 °C in the start phase risks spoilage, below 10 °C the cultures won't work.","⚠ Spotting spoiled sausage: slimy film, ammonia smell, grey-green discolouration inside — discard.","⚠ Pregnant women, small children and immunocompromised people should avoid raw sausage."],
+    proTip:"Thin sheep casings dry much faster than thick Mettwurst — check daily from day 7, or the sausage turns hard instead of sliceable.",
+    learn:["Working cold (below 4 °C)","Fine grinding (3–4 mm)","Fermenting with a starter culture","3 cold-smoke runs","Weight loss as a maturing gauge"] },
+  "milano-salami": { name:"Milano Salami (Salame Milano)", cat:"Sausage", blurb:"The classic Milano salami — finely ground, subtly spiced and slowly air-matured.",
+    origin:"🇮🇹 Milano salami (salame Milano) is finely ground and subtly spiced — one of Italy's best-known salamis. Its fine, even cut (a fine mosaic) and white noble mold are its hallmark.",
+    authenticity:9.5,
+    authenticityNote:"Closely follows the salame Milano tradition: finely ground, subtly spiced, air-matured, unsmoked. Starter culture and curing salt added for safe fermentation — the optional cold-smoke run is a Smokebench variation, not part of the original.",
+    time:"6–8 weeks", pit:"10–14 °C, 75–85 % RH", core:"Firm, matured, white noble mold · target: 35–40% weight loss", wood:"Unsmoked — optional 1 cold-smoke run, beech",
+    ingredients:[{a:"750 g",i:"pork shoulder (lean)"},{a:"250 g",i:"back fat (firm, chilled)"},{a:"28 g",i:"curing salt (NPS)"},{a:"3 g",i:"black pepper (coarse)"},{a:"2 g",i:"garlic powder"},{a:"2–3 g",i:"dextrose (grape sugar)"},{a:"approx. 1.5 m",i:"hog casing 50 mm (or synthetic)"},{a:"2–3 g",i:"starter culture (T-SPX or similar), per manufacturer's instructions"}],
+    phases:[
+      {label:"Prep",dur:"30 min",temp:"below 5 °C / 41 °F",text:"Cut meat and fat into cubes, partially freeze. Grind finely: meat 4.5 mm, fat 6 mm (or everything 3–5 mm).",bullets:["Work very cold — the fat must not melt","Grind fat and meat separately","Fine grinding gives the typical Milano cut (a fine mosaic)"]},
+      {label:"Mix & stuff",dur:"20 min",temp:"below 5 °C / 41 °F",text:"Mix meat, fat, spices and activated starter culture until tacky. Stuff firmly into casing.",bullets:["Activate the starter culture per the manufacturer's instructions in cold, chlorine-free water","No air pockets","Stuff very firmly for even maturing"]},
+      {label:"Fermentation",dur:"48–72 h",temp:"22–24 °C, 90–95 % RH",text:"Hang warm and humid to activate the starter culture. Target pH 5.0–5.3.",bullets:["A pH meter or test strips are recommended","The surface turns slightly red-glossy"]},
+      {label:"Cold smoking (optional)",dur:"1 × 4–6 h",temp:"below 20 °C / 68 °F",text:"The original salame Milano is not smoked. If you prefer a subtle smoky note, do one short cold-smoke run with beech after fermentation.",bullets:[]},
+      {label:"Drying & maturing",dur:"5–7 weeks",temp:"10–14 °C, 75–85 % RH",text:"Hang cool and airy. Check daily. Target weight loss 35–40% — more important than the sheer number of weeks.",bullets:["White noble mold (Penicillium nalgiovense) protects the sausage, displaces foreign mold and supports the flavor","Green/black mold = remove with a vinegar cloth","Weigh weekly and log the weight loss"]}],
+    tips:["A starter culture is essential for salami — controlled fermentation prevents spoilage.","Dextrose instead of household sugar — starter cultures metabolize grape sugar far better.","Maturing cellar: a cool basement, pantry or wine fridge are ideal.","Salami maturing takes patience — taste after 3 weeks to check salt and ripeness."],
+    proTip:"Work very cold and quickly — that keeps the fine mosaic clean. Back fat (not belly fat) stays stable through maturing and gives the Milano's typically clean cut.",
+    learn:["Fine grinding (4.5/6 mm)","Fermenting (starter culture, target pH)","Managing noble mold","Weight loss as a maturing gauge","6–8 weeks air-maturing"] },
   "chorizo": { name:"Chorizo (Spanish-Style)", cat:"Sausage", blurb:"Homemade chorizo — spicy, paprika-red, intensely garlicky. Spanish traditional culture.",
     origin:"🇪🇸 Chorizo is the quintessential Spanish paprika sausage. Its character comes from Pimentón de la Vera — smoked paprika — which gives it color, smoke and depth. Matured as a dry sausage or fried fresh.",
     authenticity:9,
@@ -422,7 +438,7 @@ _en({
     authenticity:9,
     authenticityNote:"Closely follows the Valtellina tradition: lean beef, seasoned, air-dried without smoke. Adapted only in salt (curing salt).",
     time:"5–6 weeks", pit:"12–16 °C, 75–80 % RH", core:"", wood:"Beech (subtle, 1–2 runs)", yield:"approx. 700 g",
-    ingredients:[{a:"1 kg",i:"Beef tenderloin or topside, fully trimmed"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"4 g/kg",i:"sugar"},{a:"100 ml",i:"red wine (dry)"},{a:"1 tsp each",i:"garlic, rosemary, black pepper, juniper"}],
+    ingredients:[{a:"1 kg",i:"Beef tenderloin or topside, fully trimmed"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"4 g/kg",i:"sugar"},{a:"100 ml",i:"red wine (dry)"},{a:"3 g",i:"garlicpowder"},{a:"1 g",i:"rosemary, dried"},{a:"2.5 g",i:"black pepper, ground"},{a:"2.5 g",i:"juniper, crushed"}],
     phases:[
       {label:"Curing in wine marinade",dur:"10–14 days",temp:"4–6 °C / 39–43 °F",text:"Work curing salt, spices and red wine into a paste. Rub the beef all over, vacuum-seal. Turn daily.",bullets:["Red wine adds tannins and aroma","Vacuum speeds the cure evenly"]},
       {label:"Equalizing",dur:"4–5 days",temp:"10–14 °C / 50–57 °F",text:"Out of the vacuum, rinse, dry, hang without adding salt.",bullets:[]},
@@ -434,7 +450,7 @@ _en({
     authenticity:9.5,
     authenticityNote:"Closely follows the Italian tradition: seasoned, rolled belly, air-dried without smoke. Adapted only in salt (curing salt).",
     time:"4–6 weeks", pit:"12–16 °C, 75–80 % RH", core:"", wood:"Beech (optional, 1–2 runs)", yield:"approx. 1.2 kg",
-    ingredients:[{a:"1.5 kg",i:"Pork belly, boneless and rind off, trimmed rectangular"},{a:"38 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"4 g/kg",i:"sugar"},{a:"1 tsp each",i:"black pepper (coarse), juniper, rosemary, bay, nutmeg, chili flakes"}],
+    ingredients:[{a:"1.5 kg",i:"Pork belly, boneless and rind off, trimmed rectangular"},{a:"38 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"4 g/kg",i:"sugar"},{a:"2.5 g",i:"black pepper (coarse)"},{a:"2.5 g",i:"juniper, crushed"},{a:"1 g",i:"rosemary, dried"},{a:"1 leaf",i:"bay"},{a:"2 g",i:"nutmeg, grated"},{a:"2 g",i:"chili flakes"}],
     phases:[
       {label:"Spice paste & cure",dur:"8–10 days",temp:"4–6 °C / 39–43 °F",text:"Mix all spices with curing salt. Rub the belly hard on the inside, vacuum-seal, turn daily.",bullets:["Season the inside more — it becomes the spiral when rolled","Even seasoning via daily massaging"]},
       {label:"Roll & tie",dur:"20 min",temp:"cold",text:"Sprinkle the inside with pepper, roll up tightly and tie spirally with butcher's twine.",bullets:["The tighter the roll, the more even the maturing","Optionally place in a netting or synthetic casing (80+ mm)"]},
@@ -446,7 +462,7 @@ _en({
     learn:["Seasoning & curing","Rolling & tying","Equalizing & drying","Optional cold-smoking","Maturing (~30 % loss)"] },
   "raeucherbutter": { name:"Smoked Butter & Herb Butter", cat:"Seasonings & Extras", blurb:"Butter refined in cold smoke — unbeatable as a finishing butter on steaks or fresh bread.",
     time:"2–3 h", pit:"below 20 °C / 68 °F", core:"", wood:"Cherry / apple / beech", yield:"any",
-    ingredients:[{a:"250 g",i:"good butter (room temperature, unsalted)"},{a:"1 tsp each",i:"herbs, garlic, salt (for the herb-butter version)"}],
+    ingredients:[{a:"250 g",i:"good butter (room temperature, unsalted)"},{a:"1 g",i:"herbs, dried"},{a:"3 g",i:"garlicpowder"},{a:"5.5 g",i:"salt (for the herb-butter version)"}],
     phases:[
       {label:"Prepare the butter",dur:"15 min",temp:"room temperature",text:"Bring butter to room temperature. For herb butter: mix with herbs, garlic and salt.",bullets:["Shape butter into a brick in a shallow dish or on parchment","For finishing butter: leave plain, season after smoking"]},
       {label:"Cold-smoke",dur:"1.5–2.5 h",temp:"below 20 °C / 68 °F",text:"Leave the butter open in cold smoke. Stir occasionally or leave as a dish.",bullets:["Cherry or apple: fruity-mild","Beech: classic","Not too long — butter takes smoke very quickly"]},
@@ -454,7 +470,7 @@ _en({
     tips:["An ice tray in the smoker is essential — the butter must not melt.","Smoked butter keeps 2 weeks in the fridge, 6 weeks vacuum-sealed.","Combination: smoked butter + miso = exceptional umami depth."] },
   "schwarzpfeffer-schinken": { name:"Black Pepper Ham", cat:"Ham", blurb:"Raw ham with a bold black-pepper crust — intense and aromatic.",
     time:"4–5 weeks", pit:"15–20 °C / 59–68 °F", core:"", wood:"WSM · beech",
-    ingredients:[{a:"1 kg",i:"Pork collar or leg, boned"},{a:"40 g/kg",i:"curing salt (NPS)"},{a:"5 g/kg",i:"sugar"},{a:"15 g/kg",i:"black pepper (coarse, part as a crust)"},{a:"1 tsp each",i:"juniper, bay"}],
+    ingredients:[{a:"1 kg",i:"Pork collar or leg, boned"},{a:"40 g/kg",i:"curing salt (NPS)"},{a:"5 g/kg",i:"sugar"},{a:"15 g/kg",i:"black pepper (coarse, part as a crust)"},{a:"2.5 g",i:"juniper, crushed"},{a:"1 leaf",i:"bay"}],
     phases:[
       {label:"Curing",dur:"10–12 days",temp:"4–6 °C / 39–43 °F",text:"Rub in curing salt, sugar, 5 g/kg pepper and juniper, vacuum-seal.",bullets:[]},
       {label:"Equalizing",dur:"3–4 days",temp:"10–15 °C / 50–59 °F",text:"Hung without salt.",bullets:[]},
@@ -466,7 +482,7 @@ _en({
     learn:["Curing","Equalizing","Applying the pepper crust","Cold-smoking","Maturing"] },
   "knochen-rohschinken": { name:"Boneless Leg Raw Ham (Herb)", cat:"Ham", blurb:"Boneless pork leg with an herb crust, cold-smoked — typically homemade.",
     time:"5–6 weeks", pit:"12–18 °C / 54–64 °F", core:"", wood:"WSM · beech + cherry",
-    ingredients:[{a:"1.5 kg",i:"Boneless pork leg"},{a:"40 g/kg",i:"curing salt (NPS)"},{a:"1 tsp each",i:"garlic, rosemary, thyme, marjoram, pepper"},{a:"5 g/kg",i:"sugar"}],
+    ingredients:[{a:"1.5 kg",i:"Boneless pork leg"},{a:"40 g/kg",i:"curing salt (NPS)"},{a:"3 g",i:"garlicpowder"},{a:"1 g",i:"rosemary, dried"},{a:"1 g",i:"thyme, dried"},{a:"1 g",i:"marjoram, dried"},{a:"2.5 g",i:"pepper, ground"},{a:"5 g/kg",i:"sugar"}],
     phases:[
       {label:"Curing",dur:"12–14 days",temp:"4–6 °C / 39–43 °F",text:"Rub in curing salt and spices, vacuum-seal or cover tightly in a dish.",bullets:[]},
       {label:"Equalizing",dur:"3–4 days",temp:"10–14 °C / 50–57 °F",text:"Equalize hung.",bullets:[]},
@@ -478,7 +494,7 @@ _en({
     learn:["Curing","Equalizing","Herb crust","Cold-smoking","Maturing"] },
   "fruehstuecksspeck": { name:"Breakfast Bacon", cat:"Ham", blurb:"Homemade bacon from pork belly — cured and cold-smoked, sliced thin and fried crisp.",
     time:"1 week + smoking", pit:"15–22 °C / 59–72 °F", core:"", wood:"Beech / hickory", yield:"approx. 1.2 kg",
-    ingredients:[{a:"1.5 kg",i:"Pork belly, boneless, rind off"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"15 g/kg",i:"brown sugar"},{a:"1 tsp each",i:"pepper, garlic, bay, paprika"}],
+    ingredients:[{a:"1.5 kg",i:"Pork belly, boneless, rind off"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"15 g/kg",i:"brown sugar"},{a:"2.5 g",i:"pepper, ground"},{a:"3 g",i:"garlicpowder"},{a:"1 leaf",i:"bay"},{a:"2.5 g",i:"paprika"}],
     phases:[
       {label:"Dry curing",dur:"7 days",temp:"2–7 °C / 36–45 °F",text:"Rub the belly, vacuum-seal, turn daily.",bullets:["Sugar makes the bacon typically sweet"]},
       {label:"Equalize & dry",dur:"2–3 days",temp:"2–7 °C / airy",text:"Rinse, dry, until a pellicle forms.",bullets:[]},
@@ -491,7 +507,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the North German Katenschinken tradition with strong beech/juniper smoking. Adapted in salt (curing salt) and timeline.",
     time:"4–6 weeks", pit:"15–20 °C / 59–68 °F", core:"", wood:"Beech + juniper", yield:"approx. 1.5 kg",
-    ingredients:[{a:"2 kg",i:"Boneless pork leg or shoulder"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"5 g/kg",i:"brown sugar"},{a:"1 tsp each",i:"juniper, pepper, garlic, bay"}],
+    ingredients:[{a:"2 kg",i:"Boneless pork leg or shoulder"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"5 g/kg",i:"brown sugar"},{a:"2.5 g",i:"juniper, crushed"},{a:"2.5 g",i:"pepper, ground"},{a:"3 g",i:"garlicpowder"},{a:"1 leaf",i:"bay"}],
     phases:[
       {label:"Dry curing",dur:"12–16 days",temp:"2–7 °C / 36–45 °F",text:"Rub the meat, vacuum-seal, turn daily.",bullets:["1 day per cm + reserve"]},
       {label:"Equalizing",dur:"5–7 days",temp:"2–7 °C / 36–45 °F",text:"Rinse, dry, rest without salt.",bullets:[]},
@@ -506,7 +522,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the Polish kabanos tradition (thin, spicy, dried). Adapted with a starter culture and curing salt for safe fermentation.",
     time:"2–3 weeks", pit:"15–20 °C / 59–68 °F", core:"", wood:"Beech", yield:"approx. 1.5 kg",
-    ingredients:[{a:"1 kg",i:"Pork (lean)"},{a:"0.5 kg",i:"back fat"},{a:"28 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"pepper, garlic, paprika, mustard seed, starter culture"},{a:"1",i:"Sheep casing caliber 22/24"}],
+    ingredients:[{a:"1 kg",i:"Pork (lean)"},{a:"0.5 kg",i:"back fat"},{a:"28 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"2.5 g",i:"pepper, ground"},{a:"3 g",i:"garlicpowder"},{a:"2.5 g",i:"paprika"},{a:"3.5 g",i:"mustard seed"},{a:"0.3 g",i:"starter culture — per manufacturer's instructions"},{a:"1",i:"Sheep casing caliber 22/24"}],
     phases:[
       {label:"Grind & season",dur:"1 h",temp:"below 2 °C / 36 °F",text:"Grind ice-cold, season, knead.",bullets:[]},
       {label:"Stuffing",dur:"30 min",temp:"cool",text:"Stuff firmly into thin casings, twist off.",bullets:[]},
@@ -518,7 +534,7 @@ _en({
     learn:["Grinding & seasoning","Stuffing thin casing","Fermenting","Cold-smoking","Drying to slicing firmness"] },
   "geraeucherter-tofu-kalt": { name:"Cold-Smoked Tofu", cat:"Cheese", blurb:"Firm tofu marinated and cold-smoked — hearty, versatile, vegan.",
     time:"1 day + smoking", pit:"below 25 °C / 77 °F", core:"", wood:"Beech / cherry", yield:"any",
-    ingredients:[{a:"400 g",i:"firm tofu (well pressed)"},{a:"4 tbsp + 1 tsp each",i:"soy sauce, smoked salt, garlic, paprika (marinade)"}],
+    ingredients:[{a:"400 g",i:"firm tofu (well pressed)"},{a:"64 g",i:"soy sauce"},{a:"5.5 g",i:"smoked salt"},{a:"3 g",i:"garlicpowder"},{a:"2.5 g",i:"paprika (marinade)"}],
     phases:[
       {label:"Press & marinate",dur:"4–12 h",temp:"fridge",text:"Press the tofu well, let it soak in the marinade.",bullets:["The drier the tofu, the better it takes smoke"]},
       {label:"Drying",dur:"1–2 h",temp:"airy",text:"Surface-dry.",bullets:[]},
@@ -537,7 +553,7 @@ _en({
 _en({
   "warm-forelle": { name:"Warm-Smoked Trout", cat:"Fish", blurb:"Extra juicy: long and warm first, then briefly hotter to finish cooking.",
     time:"1 day + 3 h", pit:"30–45 °C → briefly 60 °C", core:"63 °C / 145 °F", wood:"Beech / alder", yield:"4 trout",
-    ingredients:[{a:"4",i:"trout, gutted"},{a:"60 g/L",i:"salt (wet brine)"},{a:"1 tsp + 1 ea",i:"bay, juniper, pepper, onion"}],
+    ingredients:[{a:"4",i:"trout, gutted"},{a:"60 g/L",i:"salt (wet brine)"},{a:"1 tsp + 1 ea",i:"bay (1 leaf), juniper (2.5 g), pepper (2.5 g), onion"}],
     phases:[
       {label:"Brine / salting",dur:"8–12 h",temp:"0–7 °C / 32–45 °F",text:"Submerge the trout in 6% brine.",bullets:["Brine-covered inside and out"]},
       {label:"Drying",dur:"1–2 h",temp:"airy",text:"Rinse, hang, dry the skin until matte and tacky.",bullets:["Dry skin = golden color"]},
@@ -548,7 +564,7 @@ _en({
     learn:["Set up the brine","Form a pellicle","Warm-smoking","Finish to core temperature"] },
   "warm-kassler": { name:"Warm-Smoked Kassler (Smoked Pork Loin)", cat:"Pork", blurb:"Cured chop/rack, warm-smoked — the original for sauerkraut & co.",
     time:"1 week + 3 h", pit:"40–55 °C / 104–131 °F", core:"65 °C / 149 °F", wood:"Beech", yield:"approx. 1.5 kg",
-    ingredients:[{a:"1.8 kg",i:"Pork rack/chop"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"pepper, juniper, garlic"}],
+    ingredients:[{a:"1.8 kg",i:"Pork rack/chop"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"pepper (2.5 g), juniper (2.5 g), garlic (3 g)"}],
     phases:[
       {label:"Curing",dur:"5–7 days",temp:"2–7 °C / 36–45 °F",text:"Dry- or wet-cure.",bullets:[]},
       {label:"Equalizing",dur:"2 days",temp:"2–7 °C / 36–45 °F",text:"Let it rest.",bullets:[]},
@@ -594,7 +610,7 @@ _en({
     learn:["Brining","Rolling & pellicle","Warm-smoking","Cook golden-brown"] },
   "lachs-warm": { name:"Warm-Smoked Salmon Trout", cat:"Fish", blurb:"Salmon trout develops exceptional juiciness and a mild smoke aroma when warm-smoked.",
     time:"1 day + 3–4 h", pit:"40–65 °C", core:"Juicy, pale orange, firm", wood:"WSM · alder + apple",
-    ingredients:[{a:"1",i:"Salmon trout (1–1.5 kg), gutted"},{a:"1–2 L",i:"brine 7%: 70 g salt/liter + 1 tsp sugar"},{a:"1 tsp each",i:"dill, lemon slices (in the belly cavity)"}],
+    ingredients:[{a:"1",i:"Salmon trout (1–1.5 kg), gutted"},{a:"1–2 L",i:"brine 7%: 70 g salt/liter + 1 tsp sugar"},{a:"1 tsp each",i:"dill (1 g), lemon slices (in the belly cavity)"}],
     phases:[
       {label:"Brining",dur:"8–12 h",temp:"0–4 °C / 32–39 °F",text:"Fully submerge the salmon trout in brine, weigh down.",bullets:[]},
       {label:"Drying",dur:"2–3 h",temp:"cool, airy",text:"Rinse, put dill and lemon slices in the cavity, hang.",bullets:[]},
@@ -604,7 +620,7 @@ _en({
     learn:["Brining","Form a pellicle","Warm-smoking (stepwise)","Hit core temperature"] },
   "warm-haehnchenbrust": { name:"Warm-Smoked Chicken Breast", cat:"Poultry", blurb:"Tender, juicy chicken breast in warm smoke — perfect as a cold cut, on salads, or chilled.",
     time:"1 day + 3–4 h", pit:"45–60 °C", core:"74 °C / 165 °F", wood:"WSM · apple + cherry",
-    ingredients:[{a:"4",i:"chicken breasts (200–250 g each)"},{a:"1–2 L",i:"brine: 60 g salt + 20 g sugar per liter of water"},{a:"1 tsp each",i:"garlic, bay, peppercorns, thyme (in the brine)"}],
+    ingredients:[{a:"4",i:"chicken breasts (200–250 g each)"},{a:"1–2 L",i:"brine: 60 g salt + 20 g sugar per liter of water"},{a:"1 tsp each",i:"garlic (3 g), bay (1 leaf), peppercorns (3 g), thyme (in the brine) (1 g)"}],
     phases:[
       {label:"Brine & soak",dur:"8–12 h",temp:"0–4 °C / 32–39 °F",text:"Soak the chicken breasts in seasoned brine. Fully covered.",bullets:["Brine seasons through and keeps the meat juicy while smoking","Keep fully submerged — weigh down"]},
       {label:"Drying",dur:"2 h",temp:"cool, airy",text:"Rinse, surface-dry on a rack in the fridge or a cool room.",bullets:[]},
@@ -624,7 +640,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the Japanese ramen tradition, with an added smoking step.",
     time:"1 week + 4 h", pit:"40–55 °C smoking + 75 °C cooking", core:"72 °C / 162 °F", wood:"WSM · apple + cherry",
-    ingredients:[{a:"1 kg",i:"Pork belly, boneless, rind off"},{a:"40 g/kg",i:"curing salt (NPS)"},{a:"5 g/kg",i:"sugar"},{a:"1 tsp each",i:"ginger (fresh), star anise (cure spices)"},{a:"2 tbsp each",i:"soy sauce, mirin, sake, sugar, garlic, ginger (cooking broth)"}],
+    ingredients:[{a:"1 kg",i:"Pork belly, boneless, rind off"},{a:"40 g/kg",i:"curing salt (NPS)"},{a:"5 g/kg",i:"sugar"},{a:"1 tsp + 1 ea",i:"ginger, freshly grated (2 g), star anise (cure spices)"},{a:"2 tbsp each",i:"soy sauce (32 g), mirin (30 g), sake (30 g), sugar (24 g), garlic (18 g), ginger (cooking broth) (11 g)"}],
     phases:[
       {label:"Cure & roll",dur:"5–7 days",temp:"4–6 °C / 39–43 °F",text:"Rub in the curing mix, roll up tightly and tie with twine. Vacuum-seal.",bullets:["Roll tight for even chashu slices","Ginger and star anise on the inside for Asian seasoning"]},
       {label:"Warm-smoke",dur:"2–3 h",temp:"40–55 °C / 104–131 °F",text:"WSM at 45 °C. Apple and cherry for fruity smoke. Until core ~55 °C.",bullets:["Smoking gives chashu a depth the original lacks"]},
@@ -633,7 +649,7 @@ _en({
     tips:["The leftover soy broth (tare) is gold — for ramen, marinades or seasoning.","Searing chashu slices briefly in a pan with honey gives a caramel crust.","Vacuum-sealed, chashu keeps 1 week in the fridge, 3 months frozen."] },
   "honigschinken": { name:"Honey-Mustard Ham (Cooked)", cat:"Ham", blurb:"Tender, mild cooked ham with a honey-mustard glaze and a light smoke aroma.",
     time:"2–3 days", pit:"60–75 °C cooking + 35–45 °C smoking", core:"72 °C / 162 °F", wood:"WSM · apple + cherry",
-    ingredients:[{a:"1 kg",i:"Pork collar or leg, boned"},{a:"40 g/kg",i:"40 g/kg"},{a:"5 g/kg",i:"sugar"},{a:"1 tsp each",i:"coriander, juniper, nutmeg (cure spices)"},{a:"2 tbsp each",i:"honey, mustard (glaze)"}],
+    ingredients:[{a:"1 kg",i:"Pork collar or leg, boned"},{a:"40 g/kg",i:"40 g/kg"},{a:"5 g/kg",i:"sugar"},{a:"1 tsp each",i:"coriander (2 g), juniper (2.5 g), nutmeg (cure spices) (2 g)"},{a:"2 tbsp each",i:"honey (42 g), mustard (glaze) (30 g)"}],
     phases:[
       {label:"Curing (wet cure)",dur:"5–7 days",temp:"4–6 °C / 39–43 °F",text:"Soak in 6% curing brine (60 g NPS/liter). Fully covered, weighed down.",bullets:["A wet cure gives a milder, more tender ham than dry curing"]},
       {label:"Rinse & dry",dur:"3–4 h",temp:"cool, airy",text:"Rinse, hang until the surface is dry.",bullets:[]},
@@ -643,7 +659,7 @@ _en({
     tips:["Wet cure + poaching = the juiciest ham of all.","Use the leftover brine for soups or sauces."] },
   "warm-bauchspeck": { name:"Warm-Smoked Belly Bacon", cat:"Pork", blurb:"Cured pork belly, warm-smoked — the original for farmhouse bacon, frying bacon and hearty cubes.",
     time:"1 week + 4 h", pit:"40–55 °C / 104–131 °F", core:"", wood:"Beech / hickory", yield:"approx. 1.2 kg",
-    ingredients:[{a:"1.5 kg",i:"Pork belly, rind off, in one piece"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"5 g/kg",i:"brown sugar"},{a:"1 tsp each",i:"pepper, juniper, garlic, bay"}],
+    ingredients:[{a:"1.5 kg",i:"Pork belly, rind off, in one piece"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"5 g/kg",i:"brown sugar"},{a:"1 tsp each",i:"pepper (2.5 g), juniper (2.5 g), garlic (3 g), bay (1 leaf)"}],
     phases:[
       {label:"Dry curing",dur:"7–10 days",temp:"2–7 °C / 36–45 °F",text:"Rub the belly all over with the cure mix, vacuum-seal and turn daily.",bullets:["Weigh curing salt precisely (40 g/kg)","1 day per cm of thickness plus 2–3 days reserve"]},
       {label:"Equalizing",dur:"2–3 days",temp:"2–7 °C / 36–45 °F",text:"Rinse, pat dry, rest without salt.",bullets:["Salt distributes evenly"]},
@@ -655,7 +671,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Franconian tradition, interpreted as a smoked variant.",
     time:"1 week + 4 h", pit:"45–55 °C → 75 °C cooking", core:"70 °C / 158 °F", wood:"Beech", yield:"approx. 1.5 kg",
-    ingredients:[{a:"1.8 kg",i:"Pork collar in one piece, boneless"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"pepper, garlic, caraway, marjoram"}],
+    ingredients:[{a:"1.8 kg",i:"Pork collar in one piece, boneless"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"pepper (2.5 g), garlic (3 g), caraway (2 g), marjoram (1 g)"}],
     phases:[
       {label:"Curing",dur:"5–7 days",temp:"2–7 °C / 36–45 °F",text:"Rub the collar, vacuum-seal, turn daily.",bullets:["Marbling keeps the cut juicy"]},
       {label:"Equalizing",dur:"2 days",temp:"2–7 °C / 36–45 °F",text:"Rinse, dry, let it rest.",bullets:[]},
@@ -665,7 +681,7 @@ _en({
     tips:["Sliced warm with sauerkraut and dumplings, cold as a hearty cold cut.","Marjoram and caraway give the typically Franconian note."] },
   "warm-roastbeef": { name:"Warm-Smoked Roast Beef", cat:"Beef", blurb:"Beef loin gently warm-smoked, then seared hard — a pink core with a fine smoke mantle.",
     time:"1 day + 3 h", pit:"50–60 °C → sear", core:"54 °C (medium-rare)", wood:"Beech / cherry", yield:"approx. 1.2 kg",
-    ingredients:[{a:"1.4 kg",i:"Roast beef / beef loin in one piece, trimmed"},{a:"12 g/kg",i:"coarse sea salt (dry brine)"},{a:"1 tsp each",i:"coarse pepper, garlic, mustard, rosemary"}],
+    ingredients:[{a:"1.4 kg",i:"Roast beef / beef loin in one piece, trimmed"},{a:"12 g/kg",i:"coarse sea salt (dry brine)"},{a:"1 tsp each",i:"coarse pepper (2.5 g), garlic (3 g), mustard (5 g), rosemary (1 g)"}],
     phases:[
       {label:"Dry brine",dur:"12–24 h",temp:"fridge, uncovered",text:"Salt and chill uncovered — seasons through and dries the surface.",bullets:["Uncovered storage = better smoke adhesion and crust"]},
       {label:"Seasoning",dur:"15 min",temp:"—",text:"Spread with mustard, apply the pepper-garlic rub.",bullets:[]},
@@ -674,7 +690,7 @@ _en({
     tips:["Sliced paper-thin, cold with remoulade, warm with fried potatoes.","From 58 °C roast beef turns gray — medium-rare is the sweet spot."] },
   "warm-rinderzunge": { name:"Warm-Smoked Beef Tongue", cat:"Beef", blurb:"Cured, tenderly cooked and warm-smoked — an underrated delicacy, fine and savory.",
     time:"1 week + 4 h", pit:"45–55 °C / 113–131 °F", core:"cooked", wood:"Beech", yield:"approx. 900 g",
-    ingredients:[{a:"1",i:"Beef tongue (approx. 1.2 kg)"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"juniper, pepper, bay, allspice"}],
+    ingredients:[{a:"1",i:"Beef tongue (approx. 1.2 kg)"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"juniper (2.5 g), pepper (2.5 g), bay (1 leaf), allspice (2.5 g)"}],
     phases:[
       {label:"Curing",dur:"6–8 days",temp:"2–7 °C / 36–45 °F",text:"Place the tongue in the cure mix or brine, turn daily.",bullets:["Cured through, it stays nicely pink"]},
       {label:"Cook & peel",dur:"2.5–3 h",temp:"85–90 °C simmer",text:"Simmer the tongue until tender, peel off the rough outer skin while hot.",bullets:["The skin comes off most easily while hot"]},
@@ -683,7 +699,7 @@ _en({
     tips:["Sliced paper-thin as a cold cut or warm with horseradish sauce.","Add soup vegetables and bay while cooking for aroma."] },
   "warm-knoblauch-gemuese": { name:"Warm-Smoked Garlic & Vegetables", cat:"Vegetables", blurb:"Garlic bulbs, onions, peppers and tomatoes warm-smoked — deep aroma as a seasoning base for sauces, butter and dips.",
     time:"2–4 h", pit:"40–55 °C / 104–131 °F", core:"", wood:"Beech / cherry / apple", yield:"any",
-    ingredients:[{a:"4–6",i:"whole garlic bulbs (tops cut off)"},{a:"2–3",i:"red onions, halved"},{a:"3–4",i:"peppers and/or firm tomatoes"},{a:"2 tbsp",i:"olive oil, a little sea salt"}],
+    ingredients:[{a:"4–6",i:"whole garlic bulbs (tops cut off)"},{a:"2–3",i:"red onions, halved"},{a:"3–4",i:"peppers and/or firm tomatoes"},{a:"2 tbsp (26 g)",i:"olive oil, a little sea salt"}],
     phases:[
       {label:"Prep",dur:"10 min",temp:"—",text:"Top the garlic bulbs, halve the vegetables, rub lightly with oil and salt.",bullets:["Oil the cut faces so they don't dry out"]},
       {label:"Warm-smoke",dur:"2–4 h",temp:"40–55 °C / 104–131 °F",text:"Place on the rack and warm-smoke until soft and aromatic.",bullets:["Garlic turns soft and sweet","Keep cool enough that the vegetables take smoke rather than cooking through"]},
@@ -694,7 +710,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"German sausage tradition, as a smoked variant.",
     time:"making + 2–3 h", pit:"45–60 °C / 113–140 °F", core:"68–72 °C", wood:"Beech", yield:"approx. 1.5 kg",
-    ingredients:[{a:"1.2 kg",i:"Pork shoulder"},{a:"300 g",i:"back fat"},{a:"26 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"marjoram, nutmeg, pepper, garlic"},{a:"1",i:"Hog casing caliber 28/30"}],
+    ingredients:[{a:"1.2 kg",i:"Pork shoulder"},{a:"300 g",i:"back fat"},{a:"26 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"marjoram (1 g), nutmeg (2 g), pepper (2.5 g), garlic (3 g)"},{a:"1",i:"Hog casing caliber 28/30"}],
     phases:[
       {label:"Grind & farce",dur:"45 min",temp:"below 4 °C / 39 °F",text:"Grind cold, season, knead with a little ice water into a bound farce.",bullets:["Keep everything cold for a clean bind"]},
       {label:"Stuffing",dur:"30 min",temp:"cool",text:"Stuff into casings, twist off.",bullets:[]},
@@ -706,7 +722,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the scalded-sausage tradition.",
     time:"making + 2 h", pit:"45–55 °C → 75 °C poach", core:"72 °C / 162 °F", wood:"Beech", yield:"approx. 1.5 kg",
-    ingredients:[{a:"1 kg",i:"Pork (lean)"},{a:"0.5 kg",i:"back fat / fatty pork"},{a:"0.3 L",i:"ice water / crushed ice"},{a:"26 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"nutmeg, coriander, white pepper, garlic"},{a:"1",i:"Ring casing caliber 40+"}],
+    ingredients:[{a:"1 kg",i:"Pork (lean)"},{a:"0.5 kg",i:"back fat / fatty pork"},{a:"0.3 L",i:"ice water / crushed ice"},{a:"26 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"nutmeg (2 g), coriander (2 g), white pepper (2.5 g), garlic (3 g)"},{a:"1",i:"Ring casing caliber 40+"}],
     phases:[
       {label:"Fine farce",dur:"30 min",temp:"below 8 °C (bowl chopper)",text:"In a bowl chopper, work with ice into a fine, bound farce.",bullets:["Keep below 12 °C — or the emulsion breaks"]},
       {label:"Stuffing",dur:"20 min",temp:"cool",text:"Stuff firmly into ring casings.",bullets:[]},
@@ -718,7 +734,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Bavarian tradition, with added smoke.",
     time:"making + baking", pit:"smoking 50 °C + baking 160 °C", core:"75 °C / 167 °F", wood:"Beech", yield:"1 loaf (approx. 1 kg)",
-    ingredients:[{a:"600 g",i:"Pork (lean)"},{a:"300 g",i:"back fat"},{a:"100 g + ice",i:"onion, crushed ice"},{a:"26 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"marjoram, nutmeg, pepper, garlic"}],
+    ingredients:[{a:"600 g",i:"Pork (lean)"},{a:"300 g",i:"back fat"},{a:"100 g + ice",i:"onion, crushed ice"},{a:"26 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"marjoram (1 g), nutmeg (2 g), pepper (2.5 g), garlic (3 g)"}],
     phases:[
       {label:"Make the farce",dur:"30 min",temp:"cold",text:"Chop/grind finely, work with ice into a smooth farce.",bullets:[]},
       {label:"Light warm-smoke",dur:"30–45 min",temp:"approx. 50 °C / 122 °F",text:"Briefly warm-smoke the mass in the pan for a smoke note.",bullets:["Optional: smoke the farce first, then bake"]},
@@ -726,7 +742,7 @@ _en({
     tips:["Hot in a roll with sweet mustard — the classic.","Leftovers pan-fried cold as a 'Leberkäse steak'."] },
   "warm-raeuchertofu": { name:"Warm-Smoked Tofu", cat:"Cheese", blurb:"Tofu marinated and warm-smoked — a firmer, heartier texture than the cold version.",
     time:"4 h + smoking", pit:"35–45 °C / 95–113 °F", core:"", wood:"Beech / alder", yield:"any",
-    ingredients:[{a:"400 g",i:"Smoked tofu or firm plain tofu (pressed)"},{a:"4 tbsp + 1 tsp each",i:"soy sauce, sesame oil, garlic, paprika, maple syrup"}],
+    ingredients:[{a:"400 g",i:"Smoked tofu or firm plain tofu (pressed)"},{a:"4 tbsp + 1 tsp each",i:"soy sauce (64 g), sesame oil (3 g), garlic (3 g), paprika (2.5 g), maple syrup (6.5 g)"}],
     phases:[
       {label:"Marinate",dur:"2–4 h",temp:"fridge",text:"Let sliced tofu soak in the marinade.",bullets:[]},
       {label:"Drying",dur:"1 h",temp:"airy",text:"Let it surface-dry.",bullets:[]},
@@ -737,7 +753,7 @@ _en({
 _en({
   "raeucherforelle": { name:"Classic Smoked Trout", cat:"Fish", blurb:"The smoking classic par excellence — golden, juicy, done in under two hours.",
     time:"1 day + 1.5 h", pit:"80–110 °C / 176–230 °F", core:"63 °C / 145 °F", wood:"Alder / beech", yield:"4 trout",
-    ingredients:[{a:"4",i:"trout, gutted"},{a:"60 g/L",i:"salt (6% wet brine)"},{a:"1 tsp + 1 ea",i:"bay, juniper, pepper, onion, lemon"}],
+    ingredients:[{a:"4",i:"trout, gutted"},{a:"60 g/L",i:"salt (6% wet brine)"},{a:"1 tsp + 1 ea",i:"bay (1 leaf), juniper (2.5 g), pepper (2.5 g), onion, lemon"}],
     phases:[
       {label:"Brine",dur:"8–12 h",temp:"0–7 °C / 32–45 °F",text:"Place in 6% brine, chill.",bullets:["60 g salt per liter of water"]},
       {label:"Drying",dur:"1–2 h",temp:"10–18 °C, airy",text:"Rinse, pat dry and hang freely until the surface is dry and slightly tacky (pellicle).",bullets:["Smoke only adheres well to a dry surface","No direct sunlight"]},
@@ -748,7 +764,7 @@ _en({
     learn:["Set up the brine","Form a pellicle","Hot-smoking","Doneness (fin test)","Resting"] },
   "raeuchermakrele": { name:"Smoked Mackerel", cat:"Fish", blurb:"Fatty and aromatic — takes smoke beautifully, almost impossible to dry out.",
     time:"1 day + 1 h", pit:"90–110 °C / 194–230 °F", core:"65 °C / 149 °F", wood:"Beech / alder", yield:"4 pieces",
-    ingredients:[{a:"4",i:"mackerel, gutted"},{a:"60 g/L",i:"salt (brine)"},{a:"1 tsp each",i:"pepper, bay, garlic"}],
+    ingredients:[{a:"4",i:"mackerel, gutted"},{a:"60 g/L",i:"salt (brine)"},{a:"1 tsp each",i:"pepper (2.5 g), bay (1 leaf), garlic (3 g)"}],
     phases:[
       {label:"Brine",dur:"6–10 h",temp:"0–7 °C / 32–45 °F",text:"Soak in brine.",bullets:[]},
       {label:"Drying",dur:"1 h",temp:"airy",text:"Surface-dry the skin.",bullets:[]},
@@ -758,7 +774,7 @@ _en({
     learn:["Set up the brine","Form a pellicle","Hot-smoking","Doneness (core temperature)"] },
   "heiss-lachs": { name:"Hot-Smoked Salmon", cat:"Fish", blurb:"Flaky-juicy, with fine smoke — wonderful warm or cold.",
     time:"1 day + 1.5 h", pit:"70–90 °C / 158–194 °F", core:"60 °C / 140 °F", wood:"Alder / cherry", yield:"1 side",
-    ingredients:[{a:"1",i:"Salmon side with skin, deboned"},{a:"200 g : 100 g",i:"salt : sugar (dry cure)"},{a:"1 tsp each",i:"dill, pepper, lemon zest"}],
+    ingredients:[{a:"1",i:"Salmon side with skin, deboned"},{a:"200 g : 100 g",i:"salt : sugar (dry cure)"},{a:"1 tsp each",i:"dill (1 g), pepper (2.5 g), lemon zest (2 g)"}],
     phases:[
       {label:"Curing",dur:"4–8 h",temp:"0–4 °C / 32–39 °F",text:"Cure with the salt-sugar mix.",bullets:["Short, since only seasoning is wanted"]},
       {label:"Drying",dur:"1–2 h",temp:"cool, airy",text:"Rinse, form a pellicle.",bullets:["A glossy surface binds the smoke"]},
@@ -768,7 +784,7 @@ _en({
     learn:["Dry-cure (salt/sugar)","Form a pellicle","Hot-smoking","Hit 60 °C core"] },
   "raeucherhaehnchen": { name:"Smoked Chicken (Whole)", cat:"Poultry", blurb:"Crisp skin, juicy meat — perfectly seasoned via a dry brine.",
     time:"1 day + 3 h", pit:"120–140 °C / 248–284 °F", core:"75 °C (breast)", wood:"Cherry / apple", yield:"1 chicken",
-    ingredients:[{a:"1",i:"Chicken (1.5–1.8 kg)"},{a:"12 g/kg",i:"salt (dry brine)"},{a:"1 tsp each",i:"paprika, garlic, pepper, sugar (rub)"}],
+    ingredients:[{a:"1",i:"Chicken (1.5–1.8 kg)"},{a:"12 g/kg",i:"salt (dry brine)"},{a:"1 tsp each",i:"paprika (2.5 g), garlic (3 g), pepper (2.5 g), sugar (rub) (4 g)"}],
     phases:[
       {label:"Dry brine",dur:"12–24 h",temp:"fridge, uncovered",text:"Salt and chill uncovered — seasons through and dries the skin.",bullets:["Store uncovered = crisp skin later"]},
       {label:"Seasoning",dur:"15 min",temp:"—",text:"Rub in the spices, spatchcock if desired.",bullets:[]},
@@ -778,7 +794,7 @@ _en({
     learn:["Dry-brining","Drying the skin","Hot-smoking","Core temperature 75 °C (safety)","Resting"] },
   "beer-can-chicken": { name:"Beer Can Chicken", cat:"Poultry", blurb:"Chicken upright on a can — steam from inside, smoke from outside.",
     time:"2.5 h", pit:"140–160 °C / 284–320 °F", core:"75 °C (breast)", wood:"Apple / beech", yield:"1 chicken",
-    ingredients:[{a:"1",i:"Chicken (1.5 kg)"},{a:"1",i:"half-full beer can (or holder with broth)"},{a:"3–4 tbsp",i:"BBQ rub"}],
+    ingredients:[{a:"1",i:"Chicken (1.5 kg)"},{a:"1",i:"half-full beer can (or holder with broth)"},{a:"3–4 tbsp (26–34 g)",i:"BBQ rub"}],
     phases:[
       {label:"Seasoning",dur:"15 min",temp:"—",text:"Rub inside and out.",bullets:["Optionally season overnight"]},
       {label:"Mount",dur:"5 min",temp:"—",text:"Set the chicken upright on the can/holder, stand it stable.",bullets:[]},
@@ -788,7 +804,7 @@ _en({
     learn:["Seasoning (rub)","Setting it upright","Hot-smoking with steam","Hitting 75 °C core"] },
   "raeucherente": { name:"Smoked Duck Breast", cat:"Poultry", blurb:"Cooked pink, bold in aroma — skin scored in a diamond pattern.",
     time:"1 day + 1.5 h", pit:"120–140 °C / 248–284 °F", core:"62 °C (pink)", wood:"Cherry / beech", yield:"2 pieces",
-    ingredients:[{a:"2",i:"duck breasts"},{a:"12 g/kg",i:"salt"},{a:"2 tbsp honey + 1 orange",i:"pepper, orange, honey"}],
+    ingredients:[{a:"2",i:"duck breasts"},{a:"12 g/kg",i:"salt"},{a:"1 tsp + 1 ea + 2 tbsp",i:"pepper (2.5 g), orange, honey (42 g)"}],
     phases:[
       {label:"Dry brine",dur:"8–12 h",temp:"fridge",text:"Salt, score the skin in a diamond pattern.",bullets:[]},
       {label:"Hot-smoke",dur:"60–90 min",temp:"120–140 °C / 248–284 °F",text:"Cook until core 62 °C for pink.",bullets:["Sear the skin hard at the end for crispness"]}],
@@ -797,14 +813,14 @@ _en({
     learn:["Scoring the skin","Dry-brining","Hot-smoking to 62 °C (pink)","Searing the skin crisp"] },
   "raeuchergarnelen": { name:"Smoked Shrimp", cat:"Fish", blurb:"Ready in minutes, perfect as a starter or salad topping.",
     time:"1 h", pit:"100–120 °C / 212–248 °F", core:"—", wood:"Cherry / alder", yield:"approx. 500 g",
-    ingredients:[{a:"500 g",i:"large shrimp, peeled, deveined"},{a:"2–3 tbsp",i:"olive oil, garlic, paprika, salt"}],
+    ingredients:[{a:"500 g",i:"large shrimp, peeled, deveined"},{a:"2–3 tbsp (26–39 g)",i:"olive oil, garlic, paprika, salt"}],
     phases:[
       {label:"Marinate",dur:"30 min",temp:"cool",text:"Toss in the oil-spice marinade.",bullets:[]},
       {label:"Hot-smoke",dur:"15–25 min",temp:"100–120 °C / 212–248 °F",text:"Smoke until they curl and turn opaque.",bullets:["Don't overcook — or they get rubbery"]}],
     tips:["The fastest smoked snack of all.","Serve with lemon and aioli."] },
   "haehnchenkeulen-heiss": { name:"Hot-Smoked Chicken Legs", cat:"Poultry", blurb:"Tender, juicy legs with deep smoke aroma — a beginner recipe for the WSM.",
     time:"4–6 h", pit:"85–110 °C / 185–230 °F", core:"82 °C / 180 °F", wood:"WSM · apple + cherry",
-    ingredients:[{a:"6",i:"chicken legs (thigh and drumstick)"},{a:"3–4 tbsp",i:"rub: paprika, garlic, salt, pepper, brown sugar, thyme"},{a:"2 tbsp",i:"oil"}],
+    ingredients:[{a:"6",i:"chicken legs (thigh and drumstick)"},{a:"3–4 tbsp (48–64 g)",i:"rub: paprika, garlic, salt, pepper, brown sugar, thyme"},{a:"2 tbsp (26 g)",i:"oil"}],
     phases:[
       {label:"Rub",dur:"30 min",temp:"—",text:"Rub the legs with oil, apply the rub generously. Rest 30 min.",bullets:[]},
       {label:"Set up the WSM",dur:"20 min",temp:"—",text:"Minion method at 95–105 °C. Fill the water pan. Apple and cherry chips on the coals.",bullets:[]},
@@ -813,7 +829,7 @@ _en({
     tips:["Apple + cherry = fruity-mild smoke, ideal for poultry.","Score the skin first and tuck rub underneath for more flavor."] },
   "garnelen-heiss": { name:"Hot-Smoked Prawns", cat:"Fish", blurb:"The fastest smoking project — prawns ready in 30–40 min, smoke makes them irresistible.",
     time:"45 min", pit:"110–130 °C / 230–266 °F", core:"opalescent pink, slightly firm", wood:"WSM · citrus wood or apple",
-    ingredients:[{a:"500 g",i:"jumbo prawns, raw, shell-on (16/20)"},{a:"2–3 tbsp",i:"olive oil, lemon, garlic, paprika, salt, pepper"}],
+    ingredients:[{a:"500 g",i:"jumbo prawns, raw, shell-on (16/20)"},{a:"2–3 tbsp (26–39 g)",i:"olive oil, lemon, garlic, paprika, salt, pepper"}],
     phases:[
       {label:"Marinade",dur:"30 min",temp:"fridge",text:"Marinate the prawns in oil, lemon juice, garlic and spices.",bullets:[]},
       {label:"WSM to 120–130 °C",dur:"15 min",temp:"120–130 °C",text:"Set up the WSM hot. Add citrus wood chips.",bullets:[]},
@@ -824,7 +840,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the South African tradition, with added smoke.",
     time:"2 h making + 2–3 h smoking", pit:"85–100 °C / 185–212 °F", core:"72 °C / 162 °F", wood:"WSM · apple or cherry",
-    ingredients:[{a:"800 g",i:"beef (shoulder), 200 g pork fat"},{a:"1 tsp each",i:"toasted coriander, salt, pepper, cloves, nutmeg, allspice, malt vinegar"},{a:"approx. 2 m",i:"hog casing 32/34 mm"}],
+    ingredients:[{a:"800 g",i:"beef (shoulder), 200 g pork fat"},{a:"1 tsp each",i:"toasted coriander (2 g), salt (5.5 g), pepper (2.5 g), cloves, nutmeg (2 g), allspice (2.5 g), malt vinegar (5 g)"},{a:"approx. 2 m",i:"hog casing 32/34 mm"}],
     phases:[
       {label:"Make the sausage (as in the main boerewors recipe)",dur:"2 h",temp:"cold",text:"Spice mix, grind (coarse, 8 mm), mix, stuff, shape into a spiral. Chill overnight.",bullets:[]},
       {label:"WSM to 90–100 °C",dur:"20 min",temp:"85–100 °C",text:"Minion method with little charcoal (2 kg). Apple or cherry chunks. Water pan filled.",bullets:["Lower temperature than direct grilling","The sausage needn't burst — in the WSM it stays sealed"]},
@@ -847,7 +863,7 @@ _en({
     learn:["Brief brining","Form a pellicle","Hot-smoking (stepwise)","Doneness"] },
   "raeucherkarpfen": { name:"Smoked Carp (Hot-Smoked)", cat:"Fish", blurb:"Whole carp hot-smoked — seasonal, hearty, a Christmas-season classic.",
     time:"1 day + 4–5 h", pit:"70–90 °C / 158–194 °F", core:"Firm, white, juicy", wood:"WSM · beech + plum",
-    ingredients:[{a:"1",i:"Carp (1.5–2 kg), gutted and scaled"},{a:"1–2 L",i:"brine 8%: 80 g salt/liter"},{a:"1 tsp each",i:"bay, pepper, juniper (in the brine)"}],
+    ingredients:[{a:"1",i:"Carp (1.5–2 kg), gutted and scaled"},{a:"1–2 L",i:"brine 8%: 80 g salt/liter"},{a:"1 tsp each",i:"bay (1 leaf), pepper (2.5 g), juniper (in the brine) (2.5 g)"}],
     phases:[
       {label:"Brining",dur:"12–24 h",temp:"0–4 °C / 32–39 °F",text:"Fully submerge the carp in seasoned brine. A large pot is needed.",bullets:[]},
       {label:"Drying",dur:"3–4 h",temp:"cool, airy",text:"Rinse, prop open with wooden skewers (keep the belly open) and hang.",bullets:["Keep the belly open = even smoking inside and out"]},
@@ -876,7 +892,7 @@ _en({
     learn:["Brief brining","Form a pellicle","Hot-smoking","Optionally preserve in oil"] },
   "raucherpute": { name:"Smoked Turkey (Whole)", cat:"Poultry", blurb:"A whole smoked turkey for special occasions — juicy from the brine, irresistible from the smoke.",
     time:"1 day + 6–8 h", pit:"130–150 °C / 266–302 °F", core:"74 °C (breast), 82 °C (thigh)", wood:"WSM · apple + hickory",
-    ingredients:[{a:"1",i:"Turkey (4–5 kg)"},{a:"1–2 L",i:"brine: 80 g salt + 60 g sugar + bay, thyme, peppercorns per liter"},{a:"3–4 tbsp",i:"rub: paprika, garlic, pepper, salt, brown sugar, thyme"},{a:"2 tbsp",i:"soft butter (for the skin)"}],
+    ingredients:[{a:"1",i:"Turkey (4–5 kg)"},{a:"1–2 L",i:"brine: 80 g salt + 60 g sugar + bay, thyme, peppercorns per liter"},{a:"3–4 tbsp (48–64 g)",i:"rub: paprika, garlic, pepper, salt, brown sugar, thyme"},{a:"2 tbsp (28 g)",i:"soft butter (for the skin)"}],
     phases:[
       {label:"Brine (night before)",dur:"12–24 h",temp:"0–4 °C / 32–39 °F",text:"Fully submerge the turkey in brine. Use a large container or cooler.",bullets:["Brining is essential for turkey — or the breast goes dry","Cool the brine first, then add the turkey"]},
       {label:"Dry & season",dur:"2–4 h",temp:"cool, airy",text:"Rinse, dry well. Push butter under the skin. Apply rub outside.",bullets:["Dry skin = crispier result"]},
@@ -897,7 +913,7 @@ _en({
     learn:["Brining (short)","Form a pellicle","Hot-smoking","Doneness (white & flaky)"] },
   "ribs-hot-fast": { name:"Quick Ribs (Hot & Fast)", cat:"Pork", blurb:"Ribs in under 4 hours — Hot & Fast instead of 3-2-1. Less time, juicy and smoky.",
     time:"3.5–4 h", pit:"150–165 °C / 302–329 °F", core:"93–95 °C (toothpick test)", wood:"WSM · apple + cherry",
-    ingredients:[{a:"2",i:"racks of baby back ribs"},{a:"3–4 tbsp",i:"rub: paprika, salt, pepper, brown sugar, garlic, onion powder"},{a:"100 ml + 100 ml",i:"apple juice (to spritz), BBQ sauce (to glaze)"}],
+    ingredients:[{a:"2",i:"racks of baby back ribs"},{a:"3–4 tbsp (48–64 g)",i:"rub: paprika, salt, pepper, brown sugar, garlic, onion powder"},{a:"100 ml + 100 ml",i:"apple juice (to spritz), BBQ sauce (to glaze)"}],
     phases:[
       {label:"Prep",dur:"20 min",temp:"—",text:"Remove the membrane, rub in the spices firmly.",bullets:["The membrane must be removed completely"]},
       {label:"WSM to 155–165 °C",dur:"20 min",temp:"155–165 °C",text:"Minion method with more open vents. Water pan half full. Apple + cherry.",bullets:[]},
@@ -907,7 +923,7 @@ _en({
     tips:["Hot & Fast gives chewier ribs than 3-2-1 — but much faster.","Ideal when there's no time for a 6 h session.","Baby backs suit Hot & Fast better than large spare ribs."] },
   "heiss-krustenbraten": { name:"Hot-Smoked Crackling Roast", cat:"Pork", blurb:"Pork shoulder with rind — first cooked smoky, then finished with crackling crust.",
     time:"1 day + 4 h", pit:"130–150 °C → 230 °C crust", core:"82–85 °C", wood:"Beech / apple", yield:"approx. 1.8 kg",
-    ingredients:[{a:"2 kg",i:"Pork shoulder with rind"},{a:"12 g/kg",i:"salt"},{a:"1 tsp each",i:"caraway, garlic, pepper, paprika"},{a:"200 ml",i:"dark beer (for mopping)"}],
+    ingredients:[{a:"2 kg",i:"Pork shoulder with rind"},{a:"12 g/kg",i:"salt"},{a:"1 tsp each",i:"caraway (2 g), garlic (3 g), pepper (2.5 g), paprika (2.5 g)"},{a:"200 ml",i:"dark beer (for mopping)"}],
     phases:[
       {label:"Score the rind & season",dur:"20 min",temp:"—",text:"Score the rind in a diamond pattern, salt and season the meat side. Dry-salt the rind.",bullets:["Cut deep, but not into the meat","Chill the rind uncovered overnight = better crust"]},
       {label:"Hot-smoke",dur:"2.5–3 h",temp:"130–150 °C / 266–302 °F",text:"Smoke meat-side up, mopping occasionally with beer, until core 80 °C.",bullets:["The rind isn't crisp yet — that comes at the end"]},
@@ -916,7 +932,7 @@ _en({
     tips:["A dry rind is the key to crackling — pat it dry thoroughly first.","Classic with dumplings, kraut and a dark beer sauce."] },
   "heiss-nackensteaks": { name:"Hot-Smoked Collar Steaks", cat:"Pork", blurb:"Thick pork collar steaks, juicily marbled — cooked smoky, fast and foolproof.",
     time:"2–3 h", pit:"120–140 °C / 248–284 °F", core:"65 °C / 149 °F", wood:"Apple / cherry", yield:"4 steaks",
-    ingredients:[{a:"4",i:"pork collar steaks (approx. 250 g each, 3 cm thick)"},{a:"3–4 tbsp",i:"BBQ rub (paprika, sugar, garlic, pepper, salt)"},{a:"a little",i:"BBQ sauce (optional, to glaze)"}],
+    ingredients:[{a:"4",i:"pork collar steaks (approx. 250 g each, 3 cm thick)"},{a:"3–4 tbsp (48–64 g)",i:"BBQ rub (paprika, sugar, garlic, pepper, salt)"},{a:"a little",i:"BBQ sauce (optional, to glaze)"}],
     phases:[
       {label:"Seasoning",dur:"30 min",temp:"cool",text:"Rub the steaks, let them sit briefly.",bullets:["Seasoning overnight deepens the flavor"]},
       {label:"Hot-smoke",dur:"1.5–2 h",temp:"120–140 °C / 248–284 °F",text:"Smoke until core 63 °C.",bullets:["The thick collar stays juicy thanks to the marbling"]},
@@ -927,7 +943,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the Californian Santa Maria tradition.",
     time:"2–3 h", pit:"120 °C → sear", core:"54 °C (medium-rare)", wood:"Oak / cherry", yield:"approx. 1 kg",
-    ingredients:[{a:"1.2 kg",i:"Tri-tip, trimmed"},{a:"1 tbsp each",i:"coarse salt, coarse pepper, granulated garlic (SPG rub)"}],
+    ingredients:[{a:"1.2 kg",i:"Tri-tip, trimmed"},{a:"1 tbsp each",i:"coarse salt (16 g), coarse pepper (7.5 g), granulated garlic (SPG rub) (9 g)"}],
     phases:[
       {label:"Dry brine & season",dur:"4–12 h",temp:"fridge",text:"Rub with salt-pepper-garlic, chill uncovered.",bullets:["SPG is the classic beef rub"]},
       {label:"Hot-smoke",dur:"1–1.5 h",temp:"120 °C / 248 °F",text:"Smoke until core 48 °C.",bullets:["Oak gives the typically bold beef aroma"]},
@@ -936,7 +952,7 @@ _en({
     tips:["Slicing against the grain is a must — otherwise tough.","Leftovers are excellent for sandwiches and tacos."] },
   "heiss-beef-ribs-fast": { name:"Hot-Smoked Beef Ribs (Hot & Fast)", cat:"Beef", blurb:"Meaty beef ribs in under 5 hours — Hot & Fast instead of Low & Slow, butter-tender and bold.",
     time:"4–5 h", pit:"150–160 °C / 302–320 °F", core:"94–96 °C", wood:"Oak / hickory", yield:"1 rack",
-    ingredients:[{a:"1",i:"Beef rib rack (short ribs, 1.5–2 kg)"},{a:"1 tbsp each",i:"coarse salt, coarse pepper, granulated garlic"},{a:"a little",i:"mustard or oil as a binder"}],
+    ingredients:[{a:"1",i:"Beef rib rack (short ribs, 1.5–2 kg)"},{a:"1 tbsp each",i:"coarse salt (16 g), coarse pepper (7.5 g), granulated garlic (9 g)"},{a:"a little",i:"mustard or oil as a binder"}],
     phases:[
       {label:"Prep",dur:"15 min",temp:"—",text:"Remove the membrane, spread thinly with mustard, apply the SPG rub.",bullets:["Pull the membrane off the bone side"]},
       {label:"Hot-smoke",dur:"3–4 h",temp:"150–160 °C / 302–320 °F",text:"Smoke until a bold crust forms and the core nears 95 °C.",bullets:["If the crust gets too dark, wrap in butcher paper"]},
@@ -952,7 +968,7 @@ _en({
     tips:["Classic for chili con carne, BBQ sauces and chipotle mayo.","Finish-dry in the DA506 at 65 °C if the smoker runs too warm.","Preserve a few pods in adobo sauce for the authentic Mexican taste."] },
   "raeucher-haehnchenschenkel": { name:"Smoked Chicken Legs", cat:"Poultry", blurb:"Juicy legs with crisp skin — forgiving, cheap and very aromatic.",
     time:"1 day + 2 h", pit:"120–140 °C / 248–284 °F", core:"82 °C / 180 °F", wood:"Cherry / apple", yield:"6 legs",
-    ingredients:[{a:"6",i:"chicken legs"},{a:"12 g/kg",i:"salt (dry brine)"},{a:"3 tbsp",i:"BBQ rub"}],
+    ingredients:[{a:"6",i:"chicken legs"},{a:"12 g/kg",i:"salt (dry brine)"},{a:"3 tbsp (26 g)",i:"BBQ rub"}],
     phases:[
       {label:"Dry brine",dur:"12–24 h",temp:"fridge, uncovered",text:"Salt and chill uncovered for crisp skin.",bullets:[]},
       {label:"Seasoning",dur:"10 min",temp:"—",text:"Rub in the spices.",bullets:[]},
@@ -960,7 +976,7 @@ _en({
     tips:["Dark poultry meat is more forgiving than breast — hard to dry out.","Glaze with BBQ sauce at the end."] },
   "raeucherzander": { name:"Smoked Pike-Perch", cat:"Fish", blurb:"A noble freshwater fish, fine in flavor — a tender treat hot-smoked.",
     time:"1 day + 1.5 h", pit:"75–95 °C / 167–203 °F", core:"62 °C / 144 °F", wood:"Alder / beech", yield:"approx. 800 g",
-    ingredients:[{a:"2",i:"Pike-perch (approx. 600 g each), kitchen-ready"},{a:"60 g/L",i:"brine 6%"},{a:"1 tsp each",i:"dill, pepper, lemon"}],
+    ingredients:[{a:"2",i:"Pike-perch (approx. 600 g each), kitchen-ready"},{a:"60 g/L",i:"brine 6%"},{a:"1 tsp each",i:"dill (1 g), pepper (2.5 g), lemon"}],
     phases:[
       {label:"Brine",dur:"6–10 h",temp:"0–4 °C / 32–39 °F",text:"Place in 6% brine.",bullets:[]},
       {label:"Drying",dur:"1–2 h",temp:"airy",text:"Rinse, form a pellicle.",bullets:[]},
@@ -970,7 +986,7 @@ _en({
     learn:["Set up the brine","Form a pellicle","Hot-smoking","Doneness (core temperature)"] },
   "raeuchersaibling": { name:"Smoked Char", cat:"Fish", blurb:"The trout relative with an especially fine, slightly nutty aroma.",
     time:"1 day + 1.5 h", pit:"80–100 °C / 176–212 °F", core:"62 °C / 144 °F", wood:"Beech / alder", yield:"4 pieces",
-    ingredients:[{a:"4",i:"char, gutted"},{a:"60 g/L",i:"brine 6%"},{a:"1 tsp + 1 ea",i:"juniper, bay, lemon"}],
+    ingredients:[{a:"4",i:"char, gutted"},{a:"60 g/L",i:"brine 6%"},{a:"1 tsp + 1 ea",i:"juniper (2.5 g), bay (1 leaf), lemon"}],
     phases:[
       {label:"Brine",dur:"8–12 h",temp:"0–4 °C / 32–39 °F",text:"Place in brine.",bullets:[]},
       {label:"Drying",dur:"1–2 h",temp:"airy",text:"Surface-dry the skin.",bullets:[]},
@@ -987,7 +1003,7 @@ _en({
     tips:["Sliced on bread, in salad or as a snack.","Marinating briefly in soy sauce first adds color and savor."] },
   "heiss-schweinefilet": { name:"Smoked Pork Tenderloin", cat:"Pork", blurb:"Lean tenderloin stays tender and pink thanks to gentle hot-smoking — quick and refined.",
     time:"1 day + 1.5 h", pit:"110–130 °C / 230–266 °F", core:"62 °C / 144 °F", wood:"Apple / cherry", yield:"approx. 800 g",
-    ingredients:[{a:"2",i:"pork tenderloins (approx. 400 g each, trimmed)"},{a:"12 g/kg",i:"salt (dry brine)"},{a:"3 tbsp",i:"mild rub (paprika, garlic, pepper, sugar)"}],
+    ingredients:[{a:"2",i:"pork tenderloins (approx. 400 g each, trimmed)"},{a:"12 g/kg",i:"salt (dry brine)"},{a:"3 tbsp (36 g)",i:"mild rub (paprika, garlic, pepper, sugar)"}],
     phases:[
       {label:"Dry brine",dur:"8–12 h",temp:"fridge",text:"Salt, chill.",bullets:[]},
       {label:"Seasoning",dur:"10 min",temp:"—",text:"Rub in the spices.",bullets:[]},
@@ -995,7 +1011,7 @@ _en({
     tips:["Optionally sear briefly at the end for a crust.","Sliced thin, warm or cold."] },
   "raeucher-bockwurst": { name:"Smoked Bockwurst", cat:"Sausage", blurb:"A fine scalded sausage with a smoke note — smoked and poached, the classic frankfurter.",
     time:"making + 1.5 h", pit:"smoking 60 °C + poaching 75 °C", core:"72 °C / 162 °F", wood:"Beech", yield:"approx. 1.5 kg",
-    ingredients:[{a:"1 kg",i:"Pork (lean)"},{a:"0.5 kg",i:"back fat"},{a:"0.25 L",i:"ice water"},{a:"26 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"nutmeg, coriander, white pepper, lemon zest"},{a:"1",i:"Hog casing caliber 26/28"}],
+    ingredients:[{a:"1 kg",i:"Pork (lean)"},{a:"0.5 kg",i:"back fat"},{a:"0.25 L",i:"ice water"},{a:"26 g/kg",i:"Curing salt (nitrite, NPS)"},{a:"1 tsp each",i:"nutmeg (2 g), coriander (2 g), white pepper (2.5 g), lemon zest (2 g)"},{a:"1",i:"Hog casing caliber 26/28"}],
     phases:[
       {label:"Fine farce",dur:"30 min",temp:"cold",text:"Chop/grind finely with ice into a bound farce.",bullets:["Keep the temperature low"]},
       {label:"Stuffing",dur:"20 min",temp:"cool",text:"Stuff into casings, twist off.",bullets:[]},
@@ -1010,7 +1026,7 @@ _en({
     authenticity:9.5,
     authenticityNote:"Follows classic US Southern BBQ. Barely adapted — the WSM produces it faithfully.",
     time:"12–16 h", pit:"110–120 °C / 230–248 °F", core:"92–94 °C", wood:"Hickory / apple", yield:"approx. 2.5 kg",
-    ingredients:[{a:"3 kg",i:"Pork collar (Boston butt), with fat cap"},{a:"2 tbsp + 4 tbsp",i:"mustard (binder) + BBQ rub (paprika, sugar, salt, pepper, garlic)"}],
+    ingredients:[{a:"3 kg",i:"Pork collar (Boston butt), with fat cap"},{a:"2 tbsp (30 g) + 4 tbsp (34 g)",i:"mustard (binder) + BBQ rub (paprika, sugar, salt, pepper, garlic)"}],
     phases:[
       {label:"Seasoning",dur:"1–12 h",temp:"fridge",text:"Spread thinly with mustard, rub generously, let it rest.",bullets:["Seasoning overnight deepens the flavor","Don't remove the fat cap — it protects the meat during the long cook"]},
       {label:"Smoking",dur:"6–8 h",temp:"110–120 °C / 230–248 °F",text:"Set up with the Minion method + water pan, smoke until a bark forms.",bullets:["Smoke only matters in the first 3–5 hours","Keep the lid closed as much as possible","Bark comes from time, smoke and dry heat — not from more rub"]},
@@ -1026,7 +1042,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows common US BBQ practice. The 2-2-1 timings are specified for the WSM.",
     time:"5–6 h", pit:"110–120 °C / 230–248 °F", core:"—", wood:"Apple / cherry", yield:"2 racks",
-    ingredients:[{a:"2",i:"racks of baby back ribs"},{a:"2 tbsp + 4 tbsp",i:"mustard + rub, butter, brown sugar, honey, BBQ sauce"}],
+    ingredients:[{a:"2",i:"racks of baby back ribs"},{a:"2 tbsp (30 g) + 4 tbsp (34 g)",i:"mustard + rub, butter, brown sugar, honey, BBQ sauce"}],
     phases:[
       {label:"Prep",dur:"20 min",temp:"—",text:"Remove the membrane, season.",bullets:["The membrane must go — otherwise tough"]},
       {label:"Open smoking",dur:"2 h",temp:"110–120 °C / 230–248 °F",text:"Take on smoke, form a bark.",bullets:[]},
@@ -1040,7 +1056,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the classic US BBQ method, timings specified for the WSM.",
     time:"6 h", pit:"110–120 °C / 230–248 °F", core:"—", wood:"Hickory / apple", yield:"2 racks",
-    ingredients:[{a:"2",i:"racks of spare ribs (St. Louis cut)"},{a:"2 tbsp + 4 tbsp",i:"mustard + rub, butter, sugar, honey, apple juice, BBQ sauce"}],
+    ingredients:[{a:"2",i:"racks of spare ribs (St. Louis cut)"},{a:"2 tbsp (30 g) + 4 tbsp (34 g)",i:"mustard + rub, butter, sugar, honey, apple juice, BBQ sauce"}],
     phases:[
       {label:"Prep",dur:"20 min",temp:"—",text:"Remove the membrane, season.",bullets:[]},
       {label:"Open smoking",dur:"3 h",temp:"110–120 °C / 230–248 °F",text:"Smoke and bark.",bullets:[]},
@@ -1054,7 +1070,7 @@ _en({
     authenticity:9.5,
     authenticityNote:"Follows Texas-style BBQ: just salt and pepper, low & slow for hours. Barely adapted — this is how it's done in Texas.",
     time:"12–18 h", pit:"110–120 °C / 230–248 °F", core:"90–96 °C", wood:"Oak / hickory", yield:"approx. 4 kg",
-    ingredients:[{a:"5 kg",i:"Brisket (packer cut, flat + point)"},{a:"3 tbsp each",i:"coarse salt + coarse pepper (Texas-style)"}],
+    ingredients:[{a:"5 kg",i:"Brisket (packer cut, flat + point)"},{a:"3 tbsp each",i:"coarse salt (48 g), coarse pepper (23 g), Texas-style"}],
     phases:[
       {label:"Trim & season",dur:"30 min",temp:"—",text:"Trim the fat cap to ~6 mm, rub generously with salt/pepper.",bullets:["An even shape cooks evenly"]},
       {label:"Smoking",dur:"6–8 h",temp:"110–120 °C / 230–248 °F",text:"With oak/hickory until a bark forms and ~68 °C core.",bullets:["Stable, long coals over the Minion"]},
@@ -1069,7 +1085,7 @@ _en({
     authenticity:9.5,
     authenticityNote:"Follows the Kansas City tradition. Here with pork belly instead of brisket point — a common variant.",
     time:"5–6 h", pit:"120 °C / 248 °F", core:"95 °C", wood:"Hickory / cherry", yield:"approx. 1.5 kg",
-    ingredients:[{a:"1.5 kg",i:"Pork belly, in 4 cm cubes"},{a:"3–4 tbsp",i:"rub, butter, brown sugar, honey, BBQ sauce"}],
+    ingredients:[{a:"1.5 kg",i:"Pork belly, in 4 cm cubes"},{a:"3–4 tbsp (26–34 g)",i:"rub, butter, brown sugar, honey, BBQ sauce"}],
     phases:[
       {label:"Cube & season",dur:"20 min",temp:"—",text:"Cut into cubes, rub.",bullets:[]},
       {label:"Smoking",dur:"2.5–3 h",temp:"120 °C / 248 °F",text:"Smoke until a bark forms and ~75 °C core.",bullets:[]},
@@ -1083,7 +1099,7 @@ _en({
     authenticity:9.5,
     authenticityNote:"Follows Texas style. Barely adapted.",
     time:"8–10 h", pit:"110–120 °C / 230–248 °F", core:"94–96 °C", wood:"Oak / hickory", yield:"approx. 2 kg",
-    ingredients:[{a:"2.5 kg",i:"Beef short ribs (plate, 3-bone)"},{a:"2 tbsp each",i:"salt + coarse pepper"}],
+    ingredients:[{a:"2.5 kg",i:"Beef short ribs (plate, 3-bone)"},{a:"2 tbsp each",i:"salt (32 g), coarse pepper (15 g)"}],
     phases:[
       {label:"Seasoning",dur:"30 min",temp:"—",text:"Rub with salt/pepper.",bullets:[]},
       {label:"Smoking",dur:"6–8 h",temp:"110–120 °C / 230–248 °F",text:"With oak until a deep-dark bark forms.",bullets:["No wrapping needed — the bark may be bold"]},
@@ -1097,7 +1113,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the Jewish New York deli tradition (curing, pepper-coriander crust, smoking, steaming). Adapted only in salt (curing salt) for safe production.",
     time:"1 week + 8 h", pit:"110–120 °C / 230–248 °F", core:"90 °C", wood:"Oak / cherry", yield:"approx. 2 kg",
-    ingredients:[{a:"2.5 kg",i:"Brisket flat"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS) for the brine"},{a:"2 tbsp each",i:"pickling spice, coarse pepper + coriander (crust)"}],
+    ingredients:[{a:"2.5 kg",i:"Brisket flat"},{a:"40 g/kg",i:"Curing salt (nitrite, NPS) for the brine"},{a:"2 tbsp each",i:"pickling spice (17 g), coarse pepper + coriander (crust) (15 g)"}],
     phases:[
       {label:"Wet-cure (corned beef)",dur:"5–7 days",temp:"2–7 °C / 36–45 °F",text:"Soak in spiced curing brine, weighed down.",bullets:["Turn daily","Yields corned beef first"]},
       {label:"Soaking out",dur:"6–12 h",temp:"cold",text:"Soak well to reduce salt, changing the water several times.",bullets:[]},
@@ -1111,7 +1127,7 @@ _en({
     time:"4–5 hours", pit:"130–140 °C / 266–284 °F", core:"95 °C / 203 °F", wood:"Hickory or oak", yield:"2–3 servings per shank",
     ingredients:[
       {a:"1–2 pieces (approx. 4–5 cm / 1.5–2 in thick each)",i:"Beef shanks (ossobuco cut)"},
-      {a:"2 tbsp",i:"olive oil"},
+      {a:"2 tbsp (26 g)",i:"olive oil"},
       {a:"salt, pepper",i:"to season"},
       {a:"2",i:"onions, roughly diced"},
       {a:"3",i:"carrots, roughly diced"},
@@ -1143,7 +1159,7 @@ _en({
   "boeuf-bourguignon": { name:"Bœuf Bourguignon (France)", cat:"International", blurb:"🇫🇷 The Burgundy classic: beef braised in red wine with bacon, pearl onions and mushrooms.",
     time:"3–3.5 h", pit:"150–160 °C / 300–320 °F", core:"Meat falls apart", wood:"Dutch oven", yield:"4–6 servings",
     origin:"🇫🇷 From Burgundy — originally peasant fare, elevated to a world classic by Auguste Escoffier and later Julia Child.", authenticity:9, authenticityNote:"Follows the classic Burgundian method almost unchanged.",
-    ingredients:[{a:"1.2 kg",i:"beef chuck, cubed"},{a:"150 g",i:"streaky bacon, diced"},{a:"250 g",i:"mushrooms"},{a:"200 g",i:"pearl onions"},{a:"3",i:"carrots"},{a:"500 ml",i:"bold red wine (Burgundy)"},{a:"300 ml",i:"beef stock"},{a:"2 tbsp",i:"tomato paste"},{a:"2 each",i:"bay, thyme, garlic"}],
+    ingredients:[{a:"1.2 kg",i:"beef chuck, cubed"},{a:"150 g",i:"streaky bacon, diced"},{a:"250 g",i:"mushrooms"},{a:"200 g",i:"pearl onions"},{a:"3",i:"carrots"},{a:"500 ml",i:"bold red wine (Burgundy)"},{a:"300 ml",i:"beef stock"},{a:"2 tbsp (32 g)",i:"tomato paste"},{a:"2 each",i:"bay, thyme, garlic"}],
     phases:[{label:"Searing",kind:"prep",dur:"25 min",temp:"strong heat",text:"Render the bacon, sear the beef in it hard in batches.",bullets:["Roasted flavor is the base","Bacon fat gives depth"]},{label:"Deglaze",kind:"cook",dur:"10 min",temp:"medium",text:"Toast the tomato paste, deglaze with red wine, add stock.",bullets:["Reduce the wine briefly"]},{label:"Braising",kind:"cook",dur:"2.5–3 h",temp:"150–160 °C",text:"Lid on and braise slowly in the Dutch oven until the meat falls apart.",bullets:["Add pearl onions & mushrooms in the last hour"]},{label:"Serving",kind:"finish",dur:"10 min",temp:"—",text:"Season, serve with mashed potato or baguette.",bullets:[]}],
     tips:["Even better cooked the day before.","Use a good drinkable red — it defines the dish.","Safety: braise hot throughout, cool leftovers quickly."],
     proTip:"The wine is key: bold Burgundy, briefly reduced, then long gentle braising — that makes the sauce deep and velvety.",
@@ -1151,7 +1167,7 @@ _en({
   "gulasch": { name:"Hungarian Goulash", cat:"International", blurb:"🇭🇺 Hearty beef goulash with plenty of onion and sweet paprika — the Dutch-oven classic.",
     time:"2.5–3 h", pit:"150 °C / 300 °F", core:"Meat falls apart", wood:"Dutch oven", yield:"4–6 servings",
     origin:"🇭🇺 Originally the dish of Hungarian cattle herders (gulyás) — cooked in a kettle over open fire.", authenticity:8, authenticityNote:"Classic gulyás principle: lots of onion, sweet paprika, slow braising.",
-    ingredients:[{a:"1.2 kg",i:"beef stew meat (shin/shoulder)"},{a:"1 kg",i:"onions (equal to the meat!)"},{a:"3 tbsp",i:"sweet paprika"},{a:"1 tsp",i:"hot paprika (optional)"},{a:"2 tbsp",i:"tomato paste"},{a:"500 ml",i:"beef stock"},{a:"1",i:"red pepper"},{a:"1 tsp",i:"caraway, marjoram"}],
+    ingredients:[{a:"1.2 kg",i:"beef stew meat (shin/shoulder)"},{a:"1 kg",i:"onions (equal to the meat!)"},{a:"3 tbsp (21 g)",i:"sweet paprika"},{a:"1 tsp (2.5 g)",i:"hot paprika (optional)"},{a:"2 tbsp (32 g)",i:"tomato paste"},{a:"500 ml",i:"beef stock"},{a:"1",i:"red pepper"},{a:"1 tsp (2 g)",i:"caraway, marjoram"}],
     phases:[{label:"Onions",kind:"prep",dur:"20 min",temp:"medium",text:"Slowly braise the large amount of onion golden — that is the base.",bullets:["Don't rush — onions give the binding"]},{label:"Paprika & meat",kind:"cook",dur:"15 min",temp:"medium",text:"Briefly toast the paprika (don't burn!), add the meat and sear.",bullets:["Paprika burns fast and turns bitter"]},{label:"Braising",kind:"cook",dur:"2–2.5 h",temp:"150 °C",text:"Add tomato paste, stock and spices, lid on and braise.",bullets:["The sauce binds through the onions on its own"]},{label:"Serving",kind:"finish",dur:"10 min",temp:"—",text:"Serve with noodles, dumplings or bread.",bullets:[]}],
     tips:["Equal amount of onion to meat — that's the secret.","Never burn the paprika in hot fat.","Safety: braise hot throughout, cool leftovers quickly."],
     proTip:"Onions and paprika are everything: onions give body and binding, sweet paprika the color — never sear it hard or it turns bitter.",
@@ -1159,7 +1175,7 @@ _en({
   "poerkoelt": { name:"Pörkölt (Hungary)", cat:"International", blurb:"🇭🇺 Goulash's heartier brother: a thicker braise of meat, onions and paprika, without the soupy character.",
     time:"2–2.5 h", pit:"150 °C / 300 °F", core:"Meat tender", wood:"Dutch oven", yield:"4 servings",
     origin:"🇭🇺 In Hungary, pörkölt is the everyday braise — denser and meatier than the more liquid gulyás.", authenticity:9, authenticityNote:"Authentic pörkölt: less liquid than goulash, a dense sauce.",
-    ingredients:[{a:"1 kg",i:"beef or pork, cubed"},{a:"500 g",i:"onions"},{a:"3 tbsp",i:"sweet paprika"},{a:"2",i:"tomatoes + 1 pointed pepper"},{a:"2 cloves",i:"garlic"},{a:"250 ml",i:"stock (little!)"},{a:"1 tsp",i:"caraway"}],
+    ingredients:[{a:"1 kg",i:"beef or pork, cubed"},{a:"500 g",i:"onions"},{a:"3 tbsp (21 g)",i:"sweet paprika"},{a:"2",i:"tomatoes + 1 pointed pepper"},{a:"2 cloves",i:"garlic"},{a:"250 ml",i:"stock (little!)"},{a:"1 tsp (2 g)",i:"caraway"}],
     phases:[{label:"Onions",kind:"prep",dur:"15 min",temp:"medium",text:"Sweat the onions golden.",bullets:["Base for the dense sauce"]},{label:"Paprika & meat",kind:"cook",dur:"15 min",temp:"medium",text:"Briefly toast the paprika, sear the meat.",bullets:["Don't burn the paprika"]},{label:"Braising",kind:"cook",dur:"1.5–2 h",temp:"150 °C",text:"Add only a little stock, lid on — pörkölt braises almost in its own juices.",bullets:["Deliberately little liquid","Dense, dark sauce"]},{label:"Serving",kind:"finish",dur:"10 min",temp:"—",text:"Serve with nokedli (galuska) or bread.",bullets:[]}],
     tips:["The difference from goulash: much less liquid.","Classically served with nokedli.","Safety: braise hot throughout, cool leftovers quickly."],
     proTip:"Pörkölt lives off reduction: barely any liquid, but lots of onion and paprika — that creates the dense, intense sauce.",
@@ -1167,7 +1183,7 @@ _en({
   "coq-au-vin": { name:"Coq au Vin (France)", cat:"International", blurb:"🇫🇷 Chicken braised in red wine with bacon, onions and mushrooms — the French Dutch-oven classic.",
     time:"1.5–2 h", pit:"150 °C / 300 °F", core:"Chicken 75 °C / 167 °F", wood:"Dutch oven", yield:"4 servings",
     origin:"🇫🇷 Traditionally from Burgundy, to tenderize tougher roosters by long braising in wine.", authenticity:9, authenticityNote:"Classic French preparation with red wine and bacon.",
-    ingredients:[{a:"1",i:"chicken, jointed (or 8 thighs)"},{a:"150 g",i:"diced bacon"},{a:"250 g",i:"mushrooms"},{a:"200 g",i:"pearl onions"},{a:"500 ml",i:"red wine"},{a:"300 ml",i:"chicken stock"},{a:"2 tbsp",i:"tomato paste"},{a:"2 each",i:"bay, thyme, garlic"}],
+    ingredients:[{a:"1",i:"chicken, jointed (or 8 thighs)"},{a:"150 g",i:"diced bacon"},{a:"250 g",i:"mushrooms"},{a:"200 g",i:"pearl onions"},{a:"500 ml",i:"red wine"},{a:"300 ml",i:"chicken stock"},{a:"2 tbsp (32 g)",i:"tomato paste"},{a:"2 each",i:"bay, thyme, garlic"}],
     phases:[{label:"Searing",kind:"prep",dur:"20 min",temp:"strong heat",text:"Render the bacon, sear the chicken golden in it.",bullets:["Brown the skin well"]},{label:"Deglaze",kind:"cook",dur:"10 min",temp:"medium",text:"Toast the tomato paste, deglaze with red wine and stock.",bullets:["Reduce the wine briefly"]},{label:"Braising",kind:"cook",dur:"1–1.5 h",temp:"150 °C",text:"Lid on and braise until the chicken is tender (75 °C).",bullets:["Pearl onions & mushrooms in the last half hour"]},{label:"Serving",kind:"finish",dur:"10 min",temp:"—",text:"Serve with potatoes or baguette.",bullets:[]}],
     tips:["Thighs stay juicier than breast.","Even better the next day.","Safety: cook poultry safely to 75 °C; handle raw poultry separately."],
     proTip:"Like the bœuf: good red wine, briefly reduced — but chicken needs less time, or it falls apart too much.",
@@ -1175,7 +1191,7 @@ _en({
   "brasato-al-barolo": { name:"Brasato al Barolo (Italy)", cat:"International", blurb:"🇮🇹 Piedmont pot roast: a whole piece of beef, marinated for days in Barolo and then braised butter-soft.",
     time:"3.5–4 h", pit:"150 °C / 300 °F", core:"Meat falls apart", wood:"Dutch oven", yield:"4–6 servings",
     origin:"🇮🇹 From Piedmont, the home of Barolo — a festive braise of northern Italian cuisine.", authenticity:9, authenticityNote:"Classic Piedmont preparation: Barolo marinade, long braising of the whole piece.",
-    ingredients:[{a:"1.5 kg",i:"beef chuck or pot roast (whole)"},{a:"1 bottle",i:"Barolo (or bold Nebbiolo)"},{a:"2",i:"onions, carrots, celery"},{a:"2 tbsp",i:"tomato paste"},{a:"2 each",i:"bay, cloves, rosemary, cinnamon stick"}],
+    ingredients:[{a:"1.5 kg",i:"beef chuck or pot roast (whole)"},{a:"1 bottle",i:"Barolo (or bold Nebbiolo)"},{a:"2",i:"onions, carrots, celery"},{a:"2 tbsp (32 g)",i:"tomato paste"},{a:"2 each",i:"bay, cloves, rosemary, cinnamon stick"}],
     phases:[{label:"Marinating",kind:"marinate",dur:"12–24 h",temp:"2–4 °C / 36–39 °F",text:"Marinate the meat with vegetables and spices in Barolo overnight.",bullets:["The longer, the more intense","Keep cold"]},{label:"Searing",kind:"prep",dur:"20 min",temp:"strong heat",text:"Pat the meat dry and sear hard all over. Keep the marinade.",bullets:["Pat dry for a good crust"]},{label:"Braising",kind:"cook",dur:"3–3.5 h",temp:"150 °C",text:"Add marinade and vegetables, lid on and braise until the meat is butter-soft.",bullets:["Braise whole, then slice"]},{label:"Sauce",kind:"finish",dur:"15 min",temp:"—",text:"Strain and reduce the sauce. Serve the meat sliced with polenta.",bullets:[]}],
     tips:["Barolo is pricey — a good Nebbiolo works too.","Classically with polenta.","Safety: keep the meat below 4 °C during the marinade; braise hot throughout."],
     proTip:"Braise it whole, only slice afterward — that keeps the meat juicy and the slices don't fall apart.",
@@ -1183,7 +1199,7 @@ _en({
   "cowboy-chili": { name:"Cowboy Chili (USA)", cat:"International", blurb:"🇺🇸 Hearty chili con carne, campfire-style — smoky, bold and optionally properly hot, from the Dutch oven.",
     time:"2.5–3 h", pit:"150 °C / 300 °F", core:"Meat tender", wood:"Dutch oven", yield:"6 servings",
     origin:"🇺🇸 American cowboys' chili was traditionally cooked in a cast-iron Dutch oven over the campfire.", authenticity:8, authenticityNote:"Campfire chili in Dutch-oven style; heat to taste.",
-    ingredients:[{a:"1 kg",i:"ground beef or cubed beef"},{a:"150 g",i:"bacon"},{a:"2",i:"onions + 4 garlic cloves"},{a:"2 tbsp",i:"chili powder + 1 tsp cumin"},{a:"1–3",i:"fresh chilies (heat to taste)"},{a:"800 g",i:"tomatoes (canned)"},{a:"400 g",i:"kidney beans"},{a:"330 ml",i:"dark beer or stock"},{a:"1 piece",i:"dark chocolate (secret ingredient)"}],
+    ingredients:[{a:"1 kg",i:"ground beef or cubed beef"},{a:"150 g",i:"bacon"},{a:"2",i:"onions + 4 garlic cloves"},{a:"2 tbsp (13 g) + 1 tsp (2 g)",i:"chili powder + cumin"},{a:"1–3",i:"fresh chilies (heat to taste)"},{a:"800 g",i:"tomatoes (canned)"},{a:"400 g",i:"kidney beans"},{a:"330 ml",i:"dark beer or stock"},{a:"1 piece",i:"dark chocolate (secret ingredient)"}],
     phases:[{label:"Searing",kind:"prep",dur:"20 min",temp:"strong heat",text:"Render the bacon, sear onions, garlic and meat hard in it.",bullets:["Good browning = deep flavor"]},{label:"Season",kind:"cook",dur:"10 min",temp:"medium",text:"Toast the chili powder and cumin, deglaze with beer.",bullets:["Toast the spices briefly"]},{label:"Braising",kind:"cook",dur:"2–2.5 h",temp:"150 °C",text:"Add tomatoes and chilies, lid on, braise slowly. Beans and chocolate in the last half hour.",bullets:["Chocolate rounds it off","Add beans late"]},{label:"Serving",kind:"finish",dur:"10 min",temp:"—",text:"Serve with sour cream, cheese and bread.",bullets:[]}],
     tips:["A piece of dark chocolate rounds off the heat.","Dose the heat via fresh chilies.","Safety: cook the mince through; cool leftovers quickly."],
     proTip:"Chocolate and dark beer give the chili depth — the heat comes at the end via fresh chilies, so it stays controllable.",
@@ -1191,7 +1207,7 @@ _en({
   "tajine": { name:"Tagine (Morocco, in a Dutch oven)", cat:"International", blurb:"🇲🇦 Moroccan braise with lamb, apricots and almonds — sweet-spiced, in a Dutch oven instead of the clay pot.",
     time:"2–2.5 h", pit:"150 °C / 300 °F", core:"Meat tender", wood:"Dutch oven", yield:"4 servings",
     origin:"🇲🇦 The tagine is named after its cone-shaped clay pot. The Dutch oven mimics the sealed steaming perfectly.", authenticity:7, authenticityNote:"An adaptation of the tagine for the Dutch oven — flavors and technique stay true.",
-    ingredients:[{a:"1 kg",i:"lamb shoulder, cubed"},{a:"2",i:"onions + 3 garlic cloves"},{a:"1 tsp each",i:"ras el hanout, cumin, ginger, cinnamon, turmeric"},{a:"100 g",i:"dried apricots"},{a:"50 g",i:"almonds"},{a:"400 ml",i:"stock"},{a:"1 bunch",i:"cilantro"}],
+    ingredients:[{a:"1 kg",i:"lamb shoulder, cubed"},{a:"2",i:"onions + 3 garlic cloves"},{a:"1 tsp each",i:"ras el hanout, cumin (2 g), ginger (2 g), cinnamon (2.5 g), turmeric (3 g)"},{a:"100 g",i:"dried apricots"},{a:"50 g",i:"almonds"},{a:"400 ml",i:"stock"},{a:"1 bunch",i:"cilantro"}],
     phases:[{label:"Sear & season",kind:"prep",dur:"20 min",temp:"medium",text:"Sweat onions and spices, add the lamb and sear.",bullets:["Toast the spices briefly — releases aromas"]},{label:"Braising",kind:"cook",dur:"1.5–2 h",temp:"150 °C",text:"Add stock, lid on and braise until the lamb is tender.",bullets:["Closed lid = steaming like the clay pot"]},{label:"Apricots",kind:"finish",dur:"20 min",temp:"150 °C",text:"Add apricots and almonds in the last half hour.",bullets:["Not too early, or the apricots fall apart"]},{label:"Serving",kind:"finish",dur:"5 min",temp:"—",text:"Sprinkle with cilantro, serve with couscous.",bullets:[]}],
     tips:["Ras el hanout is the key spice blend.","Sweetness from apricots is typical.","Safety: cook the lamb through; cool leftovers quickly."],
     proTip:"The closed Dutch oven replaces the clay pot perfectly: the steaming keeps everything juicy — add apricots late.",
@@ -1199,7 +1215,7 @@ _en({
   "campfire-beans": { name:"Campfire Beans (USA)", cat:"International", blurb:"🇺🇸 Smoky BBQ beans with bacon and molasses — the classic Dutch-oven side to everything off the grill.",
     time:"2–3 h", pit:"150 °C / 300 °F", core:"Beans soft", wood:"Dutch oven", yield:"6 servings (side)",
     origin:"🇺🇸 Baked beans belong to American BBQ and trail cooking — slowly braised in the Dutch oven.", authenticity:8, authenticityNote:"Classic BBQ beans; ideal as a side to pulled pork & ribs.",
-    ingredients:[{a:"500 g",i:"white beans (pre-cooked) or 2 cans"},{a:"200 g",i:"bacon"},{a:"1",i:"onion"},{a:"4 tbsp",i:"BBQ sauce"},{a:"2 tbsp",i:"molasses or brown sugar"},{a:"2 tbsp",i:"tomato paste"},{a:"1 tbsp",i:"mustard"},{a:"250 ml",i:"stock or beer"}],
+    ingredients:[{a:"500 g",i:"white beans (pre-cooked) or 2 cans"},{a:"200 g",i:"bacon"},{a:"1",i:"onion"},{a:"4 tbsp (68 g)",i:"BBQ sauce"},{a:"2 tbsp (24 g)",i:"molasses or brown sugar"},{a:"2 tbsp (32 g)",i:"tomato paste"},{a:"1 tbsp (15 g)",i:"mustard"},{a:"250 ml",i:"stock or beer"}],
     phases:[{label:"Searing",kind:"prep",dur:"15 min",temp:"medium",text:"Render the bacon and onions in the Dutch oven.",bullets:["Bacon fat gives flavor"]},{label:"Mix",kind:"cook",dur:"5 min",temp:"medium",text:"Stir in BBQ sauce, molasses, tomato paste, mustard and liquid, add the beans.",bullets:["Sweet-smoky balance"]},{label:"Braising",kind:"cook",dur:"1.5–2.5 h",temp:"150 °C",text:"Lid on and braise slowly until the sauce is thick and the beans soft.",bullets:["Check the liquid occasionally"]},{label:"Serving",kind:"finish",dur:"5 min",temp:"—",text:"As a side to pulled pork, ribs or brisket.",bullets:[]}],
     tips:["Great use for smoked-meat leftovers: chop and stir in.","Molasses gives the typical depth.","Safety: be sure to pre-cook the beans."],
     proTip:"Sweet meets smoky: BBQ sauce and molasses form the base — best finished with leftovers from your smoke.",
@@ -1215,7 +1231,7 @@ _en({
   "pot-bread": { name:"Pot Bread / Potbrood (South Africa)", cat:"International", blurb:"🇿🇦 Rustic bread baked straight in the Dutch oven — crisp crust, moist crumb, no oven needed.",
     time:"2 h + 45 min", pit:"200 °C / 390 °F", core:"Crust golden", wood:"Dutch oven", yield:"1 loaf",
     origin:"🇿🇦 Potbrood is a South African campfire bread, traditionally baked in the cast-iron pot over embers.", authenticity:9, authenticityNote:"Traditional potbrood: baked in the closed cast pot over embers.",
-    ingredients:[{a:"500 g",i:"wheat flour"},{a:"1 packet",i:"dry yeast"},{a:"1 tsp",i:"salt + 1 tsp sugar"},{a:"300 ml",i:"lukewarm water"},{a:"2 tbsp",i:"oil"}],
+    ingredients:[{a:"500 g",i:"wheat flour"},{a:"1 packet",i:"dry yeast"},{a:"1 tsp each",i:"salt (5.5 g) + sugar (4 g)"},{a:"300 ml",i:"lukewarm water"},{a:"2 tbsp (26 g)",i:"oil"}],
     phases:[{label:"Dough",kind:"prep",dur:"15 min",temp:"—",text:"Knead all ingredients into a smooth dough.",bullets:["Knead well for the crumb"]},{label:"Proving",kind:"rest",dur:"1–1.5 h",temp:"warm",text:"Cover and let rise until doubled.",bullets:["Keep warm and draft-free"]},{label:"Baking",kind:"cook",dur:"40–50 min",temp:"200 °C",text:"Dough into the buttered Dutch oven, lid on, coals top and bottom, until the bread sounds hollow.",bullets:["Top and bottom heat","Tap test: sounds hollow = done"]},{label:"Cooling",kind:"finish",dur:"20 min",temp:"—",text:"Turn out of the pot and cool on a rack.",bullets:[]}],
     tips:["Tap test: if the base sounds hollow, the bread is done.","Best fresh with butter.","Safety: bake through completely."],
     proTip:"The closed Dutch oven acts like an oven: coals top and bottom give all-around heat for crust and crumb.",
@@ -1246,7 +1262,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the US BBQ brisket technique, applied to the more forgiving chuck.",
     time:"6–8 h", pit:"110–125 °C / 230–257 °F", core:"92–95 °C", wood:"WSM · oak + hickory",
-    ingredients:[{a:"2 kg",i:"Beef chuck roast, in one piece"},{a:"3 tbsp each",i:"coarse sea salt + black pepper (Texas-style rub)"},{a:"200 ml",i:"beef broth (to spritz after 3 h)"}],
+    ingredients:[{a:"2 kg",i:"Beef chuck roast, in one piece"},{a:"3 tbsp each",i:"coarse sea salt (48 g), black pepper (23 g), Texas-style rub"},{a:"200 ml",i:"beef broth (to spritz after 3 h)"}],
     phases:[
       {label:"Seasoning",dur:"30 min",temp:"—",text:"Rub the chuck generously with salt and coarse pepper. Let stand 30 min at room temperature.",bullets:[]},
       {label:"Smoking",dur:"3–4 h",temp:"110–125 °C / 230–257 °F",text:"WSM at 115–120 °C. Minion method. Oak + hickory. Spritz with beef broth every 2 h. Until a bark forms (~65 °C core).",bullets:[]},
@@ -1258,7 +1274,7 @@ _en({
     learn:["Rubbing","Understanding the stall","Wrapping","Cooking to 92+ °C","Pulling or slicing"] },
   "lammschulter-bbq": { name:"Lamb Shoulder Low & Slow", cat:"Game & Lamb", blurb:"Lamb shoulder low & slow until it falls apart — Mediterranean spice meets BBQ patience.",
     time:"8–10 h", pit:"110–120 °C / 230–248 °F", core:"90–94 °C", wood:"WSM · oak + a rosemary sprig on the coals",
-    ingredients:[{a:"1.5–2 kg",i:"Lamb shoulder, bone-in"},{a:"4 tbsp + 1 tsp each",i:"spice paste: olive oil, garlic (6 cloves), rosemary, thyme, lemon zest, pepper, salt"}],
+    ingredients:[{a:"1.5–2 kg",i:"Lamb shoulder, bone-in"},{a:"4 tbsp + 1 tsp each",i:"spice paste: olive oil (52 g), garlic (6 cloves), rosemary (1 g), thyme (1 g), lemon zest (2 g), pepper (2.5 g), salt (5.5 g)"}],
     phases:[
       {label:"Spice paste & marinate",dur:"12–24 h",temp:"fridge",text:"Pound all ingredients into a paste. Cut deep slits in the lamb shoulder and rub in firmly. Vacuum-seal.",bullets:["The longer the marinade, the more intense the aroma"]},
       {label:"Smoking phase 1",dur:"3–4 h",temp:"110–120 °C / 230–248 °F",text:"WSM at 115 °C. Oak and a fresh rosemary sprig on the coals. To about 65 °C core.",bullets:["Rosemary on the coals: a Mediterranean smoke aroma"]},
@@ -1273,7 +1289,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the US BBQ interpretation of meatloaf.",
     time:"3–4 h", pit:"120–135 °C / 248–275 °F", core:"72 °C / 162 °F", wood:"WSM · cherry + apple",
-    ingredients:[{a:"1 kg",i:"Ground beef or mixed mince (beef + pork)"},{a:"1",i:"egg"},{a:"100 g",i:"breadcrumbs (soaked in a little milk)"},{a:"1",i:"onion (finely diced, sweated)"},{a:"1 tsp each",i:"garlic, Worcestershire, mustard, salt, pepper, paprika"},{a:"approx. 100 ml",i:"BBQ sauce (to glaze)"}],
+    ingredients:[{a:"1 kg",i:"Ground beef or mixed mince (beef + pork)"},{a:"1",i:"egg"},{a:"100 g",i:"breadcrumbs (soaked in a little milk)"},{a:"1",i:"onion (finely diced, sweated)"},{a:"1 tsp each",i:"garlic (3 g), Worcestershire (5 g), mustard (5 g), salt (5.5 g), pepper (2.5 g), paprika (2.5 g)"},{a:"approx. 100 ml",i:"BBQ sauce (to glaze)"}],
     phases:[
       {label:"Prepare the mix",dur:"20 min",temp:"—",text:"Combine all ingredients well. Shape into a loaf and set on a smoking rack.",bullets:["Don't knead too firmly — or the meatloaf turns dense"]},
       {label:"Smoking",dur:"2 h",temp:"120–135 °C / 248–275 °F",text:"WSM at 125–130 °C. Cherry and apple. Loaf on the rack.",bullets:[]},
@@ -1284,7 +1300,7 @@ _en({
     learn:["Binding the mince","Shaping the loaf","Smoking","Cooking to 72 °C (safety)","Glazing"] },
   "beef-cheeks": { name:"Smoked Beef Cheeks", cat:"Beef", blurb:"Heavily marbled beef cheeks turn butter-tender — the best 'unknown' BBQ cut.",
     time:"6–8 h", pit:"120 °C / 248 °F", core:"92–95 °C", wood:"Oak / cherry", yield:"approx. 1.2 kg",
-    ingredients:[{a:"1.5 kg",i:"Beef cheeks, trimmed"},{a:"1 tbsp each",i:"salt, pepper, granulated garlic (SPG)"},{a:"a little",i:"mustard as a binder"}],
+    ingredients:[{a:"1.5 kg",i:"Beef cheeks, trimmed"},{a:"1 tbsp each",i:"salt (16 g), pepper (7.5 g), granulated garlic (SPG) (9 g)"},{a:"a little",i:"mustard as a binder"}],
     phases:[
       {label:"Seasoning",dur:"15 min",temp:"—",text:"Spread with mustard, apply the SPG rub.",bullets:["Remove the silverskin"]},
       {label:"Smoking",dur:"4–5 h",temp:"120 °C / 248 °F",text:"Smoke until a crust forms and core ~75 °C.",bullets:[]},
@@ -1311,7 +1327,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows US BBQ practice.",
     time:"3–4 h", pit:"120–135 °C / 248–275 °F", core:"85 °C", wood:"Apple / cherry", yield:"approx. 1.5 kg",
-    ingredients:[{a:"4–6",i:"chicken legs or 1 whole chicken"},{a:"3 tbsp",i:"BBQ rub"},{a:"a little",i:"BBQ sauce + chicken broth"}],
+    ingredients:[{a:"4–6",i:"chicken legs or 1 whole chicken"},{a:"3 tbsp (26 g)",i:"BBQ rub"},{a:"a little",i:"BBQ sauce + chicken broth"}],
     phases:[
       {label:"Seasoning",dur:"15 min",temp:"—",text:"Rub in the spices.",bullets:[]},
       {label:"Smoking",dur:"2.5–3.5 h",temp:"120–135 °C / 248–275 °F",text:"Cook until core 85 °C (dark meat pulls better).",bullets:[]},
@@ -1324,7 +1340,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the US Buffalo tradition, with added smoke.",
     time:"2 h", pit:"120 °C → 180 °C", core:"85 °C", wood:"Cherry / hickory", yield:"approx. 1.5 kg",
-    ingredients:[{a:"1.5 kg",i:"chicken wings"},{a:"1 tsp",i:"baking powder (for crisp skin)"},{a:"3 tbsp + sauce",i:"BBQ rub, buffalo or BBQ sauce"}],
+    ingredients:[{a:"1.5 kg",i:"chicken wings"},{a:"1 tsp (4 g)",i:"baking powder (for crisp skin)"},{a:"3 tbsp + sauce",i:"BBQ rub (26 g), buffalo or BBQ sauce"}],
     phases:[
       {label:"Seasoning",dur:"10 min",temp:"—",text:"Toss the wings with rub and a touch of baking powder.",bullets:["Baking powder = extra-crisp skin"]},
       {label:"Smoking",dur:"1–1.5 h",temp:"120 °C / 248 °F",text:"Cook smoky until core ~75 °C.",bullets:[]},
@@ -1337,7 +1353,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the US BBQ fatty tradition.",
     time:"2.5–3 h", pit:"120–135 °C / 248–275 °F", core:"72 °C / 162 °F", wood:"Hickory / cherry", yield:"approx. 1.2 kg",
-    ingredients:[{a:"800 g",i:"Ground meat (mixed or pork)"},{a:"400 g",i:"bacon (for the weave)"},{a:"to taste",i:"filling: cheese, fried onions, mushrooms, peppers"},{a:"3 tbsp",i:"BBQ rub"}],
+    ingredients:[{a:"800 g",i:"Ground meat (mixed or pork)"},{a:"400 g",i:"bacon (for the weave)"},{a:"to taste",i:"filling: cheese, fried onions, mushrooms, peppers"},{a:"3 tbsp (26 g)",i:"BBQ rub"}],
     phases:[
       {label:"Bacon weave & fill",dur:"20 min",temp:"—",text:"Weave the bacon into a mat, press the mince flat on it, fill and roll up.",bullets:["Roll tightly, seam down"]},
       {label:"Smoking",dur:"2–2.5 h",temp:"120–135 °C / 248–275 °F",text:"Cook until core 72 °C.",bullets:["The bacon crisps on the outside"]},
@@ -1547,7 +1563,7 @@ _en({
     authenticity:9.5,
     authenticityNote:"Closely follows the South African tradition: vinegar, salt and coriander, air-dried without smoke. Very close to the original.",
     time:"4–7 days", pit:"20–30 °C (room temp) or DA506 35–40 °C", core:"Dry outside, slightly pink inside", wood:"Graef DA506 or drying chamber", yield:"approx. 400 g/kg",
-    ingredients:[{a:"1 kg",i:"Beef (topside or silverside, lean, trimmed)"},{a:"60 ml",i:"brown malt vinegar or cider vinegar"},{a:"25 g",i:"coarse sea salt"},{a:"15 g",i:"brown sugar"},{a:"20 g",i:"coriander seeds (toasted, coarsely crushed)"},{a:"5 g",i:"black pepper (coarsely ground)"},{a:"3 g",i:"baking soda (traditional — tenderizes the meat)"},{a:"2 tbsp",i:"Worcestershire sauce (optional, classic)"}],
+    ingredients:[{a:"1 kg",i:"Beef (topside or silverside, lean, trimmed)"},{a:"60 ml",i:"brown malt vinegar or cider vinegar"},{a:"25 g",i:"coarse sea salt"},{a:"15 g",i:"brown sugar"},{a:"20 g",i:"coriander seeds (toasted, coarsely crushed)"},{a:"5 g",i:"black pepper (coarsely ground)"},{a:"3 g",i:"baking soda (traditional — tenderizes the meat)"},{a:"2 tbsp (30 g)",i:"Worcestershire sauce (optional, classic)"}],
     phases:[
       {label:"Cutting",dur:"20 min",temp:"slightly frozen",text:"Cut the meat into 20–25 mm thick strips along the grain. Thicker than jerky — important for the traditional texture.",bullets:["With the grain = chewy-firm (classic biltong)","Against the grain = more tender, for beginners"]},
       {label:"Vinegar bath",dur:"15–30 min",temp:"room temperature",text:"Toss the strips in vinegar and let it work briefly. Vinegar kills surface bacteria and acts as a natural preservative.",bullets:["Not too long — the meat shouldn't 'cook'","Drain, don't rinse off"]},
@@ -1575,7 +1591,7 @@ _en({
     tips:["Brushing with honey before drying gives a caramel aroma.","The leathery version is ideal as a baking ingredient."] , proTip:"Slice ripe but firm bananas thin — too ripe and they go mushy, too thin and they fall apart.", learn:["Slicing thin","Drying at 55–65 °C","Crisp vs. leathery"]},
   "mangoscheiben": { name:"Mango Slices", cat:"Fruit", blurb:"Tropical, intense sweetness, concentrated by slow drying.",
     time:"8–12 h", pit:"55–65 °C / 131–149 °F", core:"Leathery, not sticky", wood:"Graef DA506", yield:"approx. 120 g/kg",
-    ingredients:[{a:"2",i:"ripe mangoes"},{a:"2 tbsp + 1 tsp",i:"lime juice, chili flakes (optional)"}],
+    ingredients:[{a:"2",i:"ripe mangoes"},{a:"2 tbsp + 1 tsp",i:"lime juice (30 g), chili flakes (optional) (2 g)"}],
     phases:[
       {label:"Prep",dur:"15 min",temp:"—",text:"Peel the mango, cut the flesh into 5–8 mm slices.",bullets:["Cut around the pit and slice off the flesh"]},
       {label:"Drying",dur:"8–12 h",temp:"55–65 °C / 131–149 °F",text:"Dry in a single layer, turning occasionally.",bullets:["Leathery-chewy is perfect as a snack","Dry longer for chips"]},
@@ -1599,7 +1615,7 @@ _en({
     tips:["Blanching (1 min boiling water, then shock) speeds the drying.","For muesli, as a compote base or simply plain."] , proTip:"Blanch plums briefly or nick the skin so moisture can escape — otherwise they dry outside and stay moist inside.", learn:["Blanching/nicking","Drying slowly","No moist core"]},
   "fruchtleder": { name:"Fruit Leather (Apple-Raspberry)", cat:"Fruit", blurb:"Puréed fruit spread thin on a sheet — the healthy fruit roll-up.",
     time:"8–12 h", pit:"55–65 °C / 131–149 °F", core:"Non-sticky, pliable", wood:"Graef DA506", yield:"approx. 6–8 strips",
-    ingredients:[{a:"500 g",i:"Apples, peeled and cored"},{a:"250 g",i:"raspberries (fresh or frozen)"},{a:"2 tbsp",i:"honey or agave syrup"}],
+    ingredients:[{a:"500 g",i:"Apples, peeled and cored"},{a:"250 g",i:"raspberries (fresh or frozen)"},{a:"2 tbsp (42 g)",i:"honey or agave syrup"}],
     phases:[
       {label:"Purée",dur:"15 min",temp:"—",text:"Soften the apples briefly, purée, mix in the raspberries, strain.",bullets:["The purée must be smooth and even","Too runny: reduce a little"]},
       {label:"Spread",dur:"10 min",temp:"—",text:"Place a drying sheet on the tray, spread the purée about 3–4 mm thin.",bullets:["Not too thin — it tears when peeling off"]},
@@ -1608,7 +1624,7 @@ _en({
     tips:["A drying sheet (silicone mat) is essential — a normal tray won't hold the purée.","Vary with berries, mango, apricot or mixtures."] , proTip:"Spread the purée evenly thin on foil — thick spots stay sticky, thin ones turn brittle.", learn:["Puréeing","Spreading thin","Drying until pliable","Rolling up"]},
   "tomatenchips": { name:"Tomato Chips / Dried Tomatoes", cat:"Fruit", blurb:"Marinated in olive oil and herbs or plain — the most intense tomato seasoning.",
     time:"6–10 h", pit:"55–65 °C / 131–149 °F", core:"Leathery to crisp", wood:"Graef DA506", yield:"approx. 80 g/kg",
-    ingredients:[{a:"1 kg",i:"vine tomatoes or cherry tomatoes"},{a:"2 tbsp + 1 tsp each",i:"olive oil, sea salt, oregano, garlic"}],
+    ingredients:[{a:"1 kg",i:"vine tomatoes or cherry tomatoes"},{a:"2 tbsp + 1 tsp each",i:"olive oil (26 g), sea salt (5.5 g), oregano (1 g), garlic (3 g)"}],
     phases:[
       {label:"Cutting",dur:"15 min",temp:"—",text:"Vine tomatoes in 5–8 mm slices, cherry tomatoes halved.",bullets:["Scraping out the watery seeds shortens drying time"]},
       {label:"Seasoning",dur:"5 min",temp:"—",text:"Season with salt (draws out water), sprinkle with herbs.",bullets:[]},
@@ -1625,7 +1641,7 @@ _en({
     tips:["Check wild mushrooms for pests before drying.","Ground as mushroom powder: an intense umami seasoning for sauces."] , proTip:"Never wash mushrooms, just brush them — they soak up water and drying takes forever. Drying low preserves the aroma.", learn:["Brushing (not washing)","Drying low (40–50 °C)","Storing bone-dry"]},
   "karottenchips": { name:"Carrot Chips", cat:"Vegetables", blurb:"Slightly sweet, crisp — far better than ready-made veggie chips.",
     time:"6–10 h", pit:"55–65 °C / 131–149 °F", core:"Crisp", wood:"Graef DA506", yield:"approx. 100 g/kg",
-    ingredients:[{a:"1 kg",i:"Carrots"},{a:"1 tsp each",i:"salt, paprika, cumin (optional)"}],
+    ingredients:[{a:"1 kg",i:"Carrots"},{a:"1 tsp each",i:"salt (5.5 g), paprika (2.5 g), cumin (optional) (2 g)"}],
     phases:[
       {label:"Blanching",dur:"3 min",temp:"boiling water",text:"Briefly blanch peeled carrots cut into 3 mm slices, then shock.",bullets:["Blanching deactivates enzymes, preserves color and nutrients"]},
       {label:"Season & lay out",dur:"10 min",temp:"—",text:"Pat dry, season, lay in a single layer on the trays.",bullets:[]},
@@ -1633,7 +1649,7 @@ _en({
     tips:["Also possible without blanching, but color and bite are then worse.","Season with curry salt for an exciting variant."] , proTip:"Blanching carrots briefly keeps color and sweetness — dried raw they turn pale and strawy.", learn:["Blanching","Slicing thin","Drying at 55–65 °C"]},
   "paprikachips": { name:"Pepper Chips", cat:"Vegetables", blurb:"Sweet peppers as chips or leathery for goulash spice mixes.",
     time:"6–10 h", pit:"55–65 °C / 131–149 °F", core:"Crisp or leathery", wood:"Graef DA506", yield:"approx. 80 g/kg",
-    ingredients:[{a:"1 kg",i:"red, yellow or orange peppers"},{a:"1 tsp + 1 tbsp",i:"salt, olive oil (optional)"}],
+    ingredients:[{a:"1 kg",i:"red, yellow or orange peppers"},{a:"1 tsp + 1 tbsp",i:"salt (5.5 g), olive oil (optional) (13 g)"}],
     phases:[
       {label:"Prep",dur:"15 min",temp:"—",text:"Peel the peppers (optional), seed, cut into rings or strips.",bullets:["Peeled peppers take seasoning better"]},
       {label:"Drying",dur:"6–10 h",temp:"55–65 °C / 131–149 °F",text:"Dry in a single layer.",bullets:["Leathery (8 h): grind for paprika powder or preserve","Crisp (10+ h): eat as a chip"]},
@@ -1641,14 +1657,14 @@ _en({
     tips:["Homemade paprika powder is far more aromatic than the supermarket kind.","Red peppers make a sweet powder, yellow a milder one."] , proTip:"Dry peppers skin-side down — the waxy skin dries slower, the flesh faster.", learn:["Cutting strips","Drying","Crisp/leathery choice"]},
   "gruenkohl-chips": { name:"Kale Chips", cat:"Vegetables", blurb:"Light, crisp, healthy — hard to beat with olive oil and sea salt.",
     time:"3–6 h", pit:"50–55 °C / 122–131 °F", core:"Crisp", wood:"Graef DA506", yield:"approx. 30 g/100 g kale",
-    ingredients:[{a:"500 g",i:"kale, stems removed"},{a:"2 tbsp",i:"olive oil"},{a:"2 tbsp + 1 tsp each",i:"sea salt, nutritional yeast, paprika, garlic"}],
+    ingredients:[{a:"500 g",i:"kale, stems removed"},{a:"2 tbsp (26 g)",i:"olive oil"},{a:"1 tsp each",i:"sea salt (5.5 g), nutritional yeast (1.5 g), paprika (2.5 g), garlic (3 g)"}],
     phases:[
       {label:"Seasoning",dur:"10 min",temp:"—",text:"Tear the leaves coarsely, massage with oil and spices.",bullets:["Oil helps them crisp up"]},
       {label:"Drying",dur:"3–5 h",temp:"50–55 °C / 122–131 °F",text:"Lay in a single layer on the trays, dry until crisp.",bullets:["Kale loses a lot of volume — plan for several loads"]}],
     tips:["Nutritional yeast + garlic gives a 'cheese'-like flavor.","Eat right away — it quickly absorbs moisture from the air."] , proTip:"Dry the leaves thoroughly — every drop of water steams instead of drying; with a little oil and salt they turn wafer-crisp.", learn:["Spin-drying","Massaging with oil","Drying low & crisp"]},
   "zucchini-chips": { name:"Zucchini Chips", cat:"Vegetables", blurb:"When the garden produces a zucchini surplus — the best way to use it up.",
     time:"5–8 h", pit:"55–65 °C / 131–149 °F", core:"Crisp", wood:"Graef DA506", yield:"approx. 60 g/kg",
-    ingredients:[{a:"1 kg",i:"Zucchini"},{a:"1 tsp each",i:"sea salt, herbes de Provence, parmesan (optional)"}],
+    ingredients:[{a:"1 kg",i:"Zucchini"},{a:"1 tsp each",i:"sea salt (5.5 g), herbes de Provence, parmesan (optional) (2 g)"}],
     phases:[
       {label:"Cut & salt",dur:"30 min",temp:"—",text:"Cut into 3–4 mm slices, salt, let sit 20 min, pat dry well.",bullets:["Salting draws out water and speeds the drying"]},
       {label:"Drying",dur:"5–8 h",temp:"55–65 °C / 131–149 °F",text:"Dry in a single layer until crisp.",bullets:[]}],
@@ -1674,7 +1690,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows classic US jerky production, at 70 °C for safety.",
     time:"1 day + 4–8 h", pit:"70 °C / 158 °F", core:"Leathery, no moist core", wood:"Graef DA506", yield:"approx. 400 g/kg",
-    ingredients:[{a:"1 kg",i:"Beef (topside, sirloin, lean, trimmed)"},{a:"80 ml",i:"soy sauce"},{a:"30 ml",i:"Worcestershire sauce"},{a:"1 tsp each",i:"garlic, pepper, paprika, sugar, chili flakes"}],
+    ingredients:[{a:"1 kg",i:"Beef (topside, sirloin, lean, trimmed)"},{a:"80 ml",i:"soy sauce"},{a:"30 ml",i:"Worcestershire sauce"},{a:"1 tsp each",i:"garlic (3 g), pepper (2.5 g), paprika (2.5 g), sugar (4 g), chili flakes (2 g)"}],
     phases:[
       {label:"Cutting",dur:"20 min",temp:"frozen",text:"Slightly freeze the meat (1 h in the freezer), cut into 5–8 mm strips.",bullets:["Against the grain: more tender","With the grain: more bite and chew"]},
       {label:"Marinating",dur:"12–24 h",temp:"0–4 °C / 32–39 °F",text:"Soak in marinade, vacuum-seal or chill covered.",bullets:["Longer = more intense flavor","At least 12 h for full seasoning"]},
@@ -1684,7 +1700,7 @@ _en({
     tips:["70 °C is the DA506's maximum — use it for safe jerky making.","Alternative: pre-heat the meat 10 min at 160 °C in the oven before drying.","Always use lean meat — fat turns rancid."] , proTip:"Dry at 70 °C so the meat cooks safely — against the grain for bite, with the grain for more chew.", learn:["Marinating","Cutting with/against grain","Drying safely at 70 °C","Dryness test"]},
   "chicken-jerky": { name:"Chicken Strip Jerky", cat:"Fish", blurb:"Asian-marinated chicken strips — lighter than beef jerky, very flavorful.",
     time:"1 day + 4–6 h", pit:"70 °C / 158 °F", core:"Leathery-dry, no pink core", wood:"Graef DA506", yield:"approx. 350 g/kg",
-    ingredients:[{a:"1 kg",i:"Chicken breast, trimmed"},{a:"80 ml",i:"soy sauce"},{a:"1 tsp each",i:"ginger, garlic, honey, sesame oil, chili flakes"}],
+    ingredients:[{a:"1 kg",i:"Chicken breast, trimmed"},{a:"80 ml",i:"soy sauce"},{a:"1 tsp each",i:"ginger (2 g), garlic (3 g), honey (7 g), sesame oil (3 g), chili flakes (2 g)"}],
     phases:[
       {label:"Cut & marinate",dur:"12–24 h",temp:"0–4 °C / 32–39 °F",text:"Cut the chicken into 8–10 mm strips, marinate.",bullets:["Chicken must not be eaten raw — cooking through at 70 °C is a must"]},
       {label:"Drying",dur:"4–6 h",temp:"70 °C / 158 °F",text:"Dry and cook fully at 70 °C.",bullets:["Always dry poultry at the maximum drying temperature","Test: bend and break a strip = cooked and dry"]},
@@ -1692,7 +1708,7 @@ _en({
     tips:["NEVER dry chicken below 70 °C — salmonella risk.","A teriyaki marinade with soy, mirin and sugar is a classic variant."] , proTip:"Always dry poultry jerky at 70 °C+ (salmonella) — thin, even strips dry through safely.", learn:["Marinating","Slicing thin","Drying safely at 70 °C","No pink core"]},
   "lachs-jerky": { name:"Salmon Jerky", cat:"Fish", blurb:"Intense smoke-teriyaki aroma, compact format — an Asian snack classic.",
     time:"1 day + 4–6 h", pit:"60–65 °C / 140–149 °F", core:"Leathery, dry", wood:"Graef DA506", yield:"approx. 300 g/kg",
-    ingredients:[{a:"1 kg",i:"Salmon fillet, sushi grade, deboned, skinless"},{a:"80 ml",i:"soy sauce"},{a:"2 tbsp + 1 tsp each",i:"brown sugar, ginger, garlic, sesame oil"}],
+    ingredients:[{a:"1 kg",i:"Salmon fillet, sushi grade, deboned, skinless"},{a:"80 ml",i:"soy sauce"},{a:"2 tbsp + 1 tsp each",i:"brown sugar (24 g), ginger (2 g), garlic (3 g), sesame oil (3 g)"}],
     phases:[
       {label:"Cut & cure",dur:"8–12 h",temp:"0–4 °C / 32–39 °F",text:"Cut into 8–10 mm strips, soak in marinade.",bullets:["Use only fresh salmon"]},
       {label:"Pat dry",dur:"10 min",temp:"—",text:"Pat dry well, lay on the trays.",bullets:[]},
@@ -1701,7 +1717,7 @@ _en({
     tips:["Use high-quality, fresh salmon (sashimi grade).","Sprinkle sesame seeds on before drying."] , proTip:"Curing salmon in teriyaki first draws water and seasons it — then dry at moderate heat into firm, aromatic jerky.", learn:["Curing (teriyaki)","Drying at 60–65 °C","Drying leathery"]},
   "wild-jerky": { name:"Game Jerky (Venison/Wild Boar)", cat:"Fish", blurb:"Bold game aroma, finely spiced — an especially premium jerky variant.",
     time:"1 day + 6–8 h", pit:"70 °C / 158 °F", core:"Leathery, no red core", wood:"Graef DA506", yield:"approx. 350 g/kg",
-    ingredients:[{a:"1 kg",i:"Game meat (venison leg, wild boar loin, lean)"},{a:"1 tsp + 50 ml each",i:"juniper, red wine, garlic, pepper, soy sauce, bay"}],
+    ingredients:[{a:"1 kg",i:"Game meat (venison leg, wild boar loin, lean)"},{a:"1 tsp each + 50 ml",i:"juniper (2.5 g), red wine, garlic (3 g), pepper (2.5 g), soy sauce, bay (1 leaf)"}],
     phases:[
       {label:"Trim & cut",dur:"30 min",temp:"slightly frozen",text:"Carefully remove fat and sinew, cut into strips.",bullets:["Game fat turns rancid fast — remove it completely"]},
       {label:"Marinating",dur:"12–24 h",temp:"0–4 °C / 32–39 °F",text:"Soak in a spiced game marinade.",bullets:["Juniper and red wine suit the game flavor"]},
@@ -1717,7 +1733,7 @@ _en({
       {a:"1 kg",i:"lean ground meat (beef, pork, lamb, poultry or fish — blends too)"},
       {a:"1 packet",i:"jerky cure/seasoning OR 2.5 g/kg curing salt (recommended for long drying)"},
       {a:"60 ml",i:"soy sauce or Worcestershire"},
-      {a:"1–2 tsp each",i:"garlic, pepper, paprika, sugar, chili (to taste)"}],
+      {a:"1–2 tsp each",i:"garlic (3–6 g), pepper (2.5–5 g), paprika (2.5–4.5 g), sugar (4–8 g), chili (to taste) (2–4.5 g)"}],
     phases:[
       {label:"Season & knead",kind:"cure",dur:"12–24 h",temp:"0–4 °C / 32–39 °F",text:"Knead the ground meat thoroughly with the spices, cure/seasoning and liquid until the mix is sticky and binds. Let it rest covered in the fridge.",bullets:["Knead well = better binding, the strips won't fall apart","Choose lean ground meat — fat turns rancid in storage","With poultry/fish, work meticulously cold"]},
       {label:"Form with the jerky gun",kind:"prep",dur:"20–30 min",temp:"cold",text:"Fill the mix into the jerky gun and extrude even strips/sticks straight onto the drying trays or onto parchment.",bullets:["Extrude evenly thick (approx. 5 mm) — dries uniformly","Flat nozzle for strips, round nozzle for sticks","Work the mix cold — it extrudes more cleanly"]},
@@ -1737,10 +1753,10 @@ _en({
     ingredients:[
       {a:"1 kg",i:"ground poultry (turkey or chicken, as lean as possible)"},
       {a:"10 g",i:"curing salt (nitrite, 0.5% of meat weight)"},
-      {a:"2 tbsp",i:"soy sauce"},
-      {a:"1 tbsp",i:"Worcestershire sauce"},
-      {a:"1 tsp each",i:"garlic powder, onion powder, black pepper"},
-      {a:"½ tsp",i:"sweet paprika (+ chili/cayenne to taste)"}],
+      {a:"2 tbsp (32 g)",i:"soy sauce"},
+      {a:"1 tbsp (15 g)",i:"Worcestershire sauce"},
+      {a:"1 tsp each",i:"garlic powder (3 g), onion powder, black pepper (2.5 g)"},
+      {a:"½ tsp (1 g)",i:"sweet paprika (+ chili/cayenne to taste)"}],
     phases:[
       {label:"Prepare the mix",kind:"prep",dur:"20 min",temp:"4 °C / 39 °F",text:"Knead the well-chilled ground poultry thoroughly with all the spices and the curing salt until the mix is sticky and homogeneous.",bullets:["Work the meat cold (straight from the fridge)","Weigh the curing salt exactly: 10 g per 1 kg meat","Mix very thoroughly by hand or machine","Wrap the mix in foil"]},
       {label:"Cure & rest",kind:"cure",dur:"12–24 h",temp:"2–4 °C / 36–39 °F",text:"Let the seasoned mix rest airtight in the fridge — the flavors bind and the curing salt takes effect.",bullets:["At least 12 h, better 24 h","Keep constantly at 2–4 °C","Knead occasionally for even distribution"]},
@@ -1795,7 +1811,7 @@ _en({
     learn:["Biltong spice with coriander & vinegar","Combining three meats","Two-stage drying","Storing & maturing safely"]},
   "aktivierte-nuesse": { name:"Activated Nuts & Almonds", cat:"Other", blurb:"Soaked, then slowly dried nuts — more digestible and crunchier.",
     time:"12 h soak + 12–24 h", pit:"40–45 °C / 104–113 °F", core:"Crunchy", wood:"Graef DA506", yield:"approx. 350 g",
-    ingredients:[{a:"500 g",i:"almonds, walnuts or cashews"},{a:"1 tsp",i:"sea salt per 500 g"},{a:"1 L",i:"water (for soaking)"}],
+    ingredients:[{a:"500 g",i:"almonds, walnuts or cashews"},{a:"1 tsp (5.5 g)",i:"sea salt per 500 g"},{a:"1 L",i:"water (for soaking)"}],
     phases:[
       {label:"Soaking",dur:"12 h",temp:"room temperature",text:"Soak the nuts in salt water.",bullets:["Reduces phytic acid and makes them more digestible"]},
       {label:"Draining",dur:"15 min",temp:"—",text:"Drain well and pat dry.",bullets:[]},
@@ -1804,7 +1820,7 @@ _en({
     tips:["Soak cashews 6–8 h at most — otherwise they get slimy.","With tamari + chili flakes for a savory variant."] , proTip:"Soak first, then dry slowly at low temperature — that makes the nuts more digestible and crisp again.", learn:["Soaking","Drying low (40–45 °C)","Storing crisp"]},
   "brotchips": { name:"Bread Chips / Crispbread", cat:"Other", blurb:"Make good use of stale bread — crisp chips or homemade crispbread.",
     time:"3–5 h", pit:"50–60 °C / 122–140 °F", core:"Crisp, snaps cleanly", wood:"Graef DA506", yield:"approx. 300 g",
-    ingredients:[{a:"400 g",i:"stale bread or sourdough bread"},{a:"2 tbsp + 1 tsp each",i:"olive oil, sea salt, rosemary, paprika"}],
+    ingredients:[{a:"400 g",i:"stale bread or sourdough bread"},{a:"2 tbsp + 1 tsp each",i:"olive oil (26 g), sea salt (5.5 g), rosemary (1 g), paprika (2.5 g)"}],
     phases:[
       {label:"Cutting",dur:"10 min",temp:"—",text:"Cut into thin slices or cubes, toss with oil and spices.",bullets:[]},
       {label:"Drying",dur:"3–5 h",temp:"50–60 °C / 122–140 °F",text:"Dry until crisp.",bullets:[]},
@@ -1812,7 +1828,7 @@ _en({
     tips:["Perfect for leftovers — don't waste bread.","As croutons for salads or soups."] , proTip:"Slice stale bread thin and dry it low — that way it snaps cleanly and won't mold.", learn:["Slicing thin","Drying low","Storing crisp"]},
   "granola-doerren": { name:"Homemade Granola", cat:"Other", blurb:"Oats, nuts, honey — gently in the dehydrator instead of aggressively in the oven.",
     time:"4–6 h", pit:"50–55 °C / 122–131 °F", core:"Golden-brown, crunchy", wood:"Graef DA506", yield:"approx. 500 g",
-    ingredients:[{a:"300 g",i:"rolled oats (coarse)"},{a:"100 g",i:"nuts and seeds (almonds, pumpkin seeds, cashews)"},{a:"80 g",i:"honey or maple syrup"},{a:"50 ml",i:"coconut oil or vegetable oil"},{a:"1 tsp each",i:"cinnamon, vanilla, salt"}],
+    ingredients:[{a:"300 g",i:"rolled oats (coarse)"},{a:"100 g",i:"nuts and seeds (almonds, pumpkin seeds, cashews)"},{a:"80 g",i:"honey or maple syrup"},{a:"50 ml",i:"coconut oil or vegetable oil"},{a:"1 tsp each",i:"cinnamon (2.5 g), vanilla (2 g), a pinch of salt"}],
     phases:[
       {label:"Mixing",dur:"10 min",temp:"—",text:"Combine all ingredients, spread on a drying sheet.",bullets:["Distribute well, not too thick"]},
       {label:"Drying",dur:"4–6 h",temp:"50–55 °C / 122–131 °F",text:"Dry and stir occasionally.",bullets:["Turn more often = even toasting","Dehydrator instead of oven: more chew, less burning"]},
@@ -1839,7 +1855,7 @@ _en({
     tips:["Smoky chili flakes: hot-smoke briefly in the WSM first (30 min), then finish-dry in the dehydrator.","Mixed varieties = complex aroma."] , proTip:"Dry chilies bone-dry, then crush them — residual moisture makes the flakes clump and mold.", learn:["Drying bone-dry","Crushing/grinding","Dosing the heat"]},
   "rote-bete-chips": { name:"Beetroot Chips", cat:"Vegetables", blurb:"Vivid red, crisp chips — earthy-sweet flavor, visually striking.",
     time:"6–8 h", pit:"55–65 °C / 131–149 °F", core:"Crisp", wood:"Graef DA506", yield:"approx. 80 g/kg",
-    ingredients:[{a:"500 g",i:"raw beetroot, peeled"},{a:"2 tbsp",i:"olive oil, sea salt, optional balsamic"}],
+    ingredients:[{a:"500 g",i:"raw beetroot, peeled"},{a:"2 tbsp (26 g)",i:"olive oil, sea salt, optional balsamic"}],
     phases:[
       {label:"Slice thin",dur:"15 min",temp:"—",text:"Cut the beetroot into 2–3 mm slices with a mandoline or sharp knife.",bullets:["Gloves! Beetroot stains extremely","Thin = crisp; thicker = leathery"]},
       {label:"Seasoning",dur:"5 min",temp:"—",text:"Rub lightly with oil, salt.",bullets:[]},
@@ -1874,7 +1890,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the classic Cape method: layer, don't stir, braise slowly over embers.",
     ingredients:[
-      {a:"1.2 kg",i:"lamb shoulder or leg, in large cubes"},{a:"2 tbsp",i:"oil for searing"},{a:"2",i:"onions, roughly diced"},{a:"4 cloves",i:"garlic"},{a:"500 g",i:"root vegetables (carrot, sweet potato, parsnip)"},{a:"250 ml",i:"red wine"},{a:"250 ml",i:"lamb or vegetable stock"},{a:"2 tbsp",i:"tomato paste"},{a:"1 tsp each",i:"coriander, clove, allspice, bay, thyme"}],
+      {a:"1.2 kg",i:"lamb shoulder or leg, in large cubes"},{a:"2 tbsp (26 g)",i:"oil for searing"},{a:"2",i:"onions, roughly diced"},{a:"4 cloves",i:"garlic"},{a:"500 g",i:"root vegetables (carrot, sweet potato, parsnip)"},{a:"250 ml",i:"red wine"},{a:"250 ml",i:"lamb or vegetable stock"},{a:"2 tbsp (32 g)",i:"tomato paste"},{a:"1 tsp each",i:"coriander (2 g), clove, allspice (2.5 g), bay (1 leaf), thyme (1 g)"}],
     phases:[
       {label:"Searing",kind:"prep",dur:"20 min",temp:"strong embers",text:"Sear the lamb cubes hard all over in the hot potjie in batches, remove. Sweat onions and garlic.",bullets:["Don't crowd — otherwise the meat steams","Roasted flavor is the base"]},
       {label:"Layering",kind:"prep",dur:"10 min",temp:"—",text:"Meat back in, layer the vegetables on top. From now on do NOT stir.",bullets:["Meat on the bottom, firm veg on top","Layers stay separate — everything cooks evenly"]},
@@ -1890,7 +1906,7 @@ _en({
     authenticity:9,
     authenticityNote:"Classic Cape preparation: layer, don't stir, braise very long over gentle embers.",
     ingredients:[
-      {a:"1.5 kg",i:"oxtail, in segments"},{a:"2 tbsp",i:"flour for dredging"},{a:"2 tbsp",i:"oil"},{a:"2",i:"onions, diced"},{a:"3",i:"carrots, in chunks"},{a:"2 stalks",i:"celery"},{a:"300 ml",i:"bold red wine"},{a:"400 g",i:"tomatoes (canned)"},{a:"500 ml",i:"beef stock"},{a:"2 each",i:"bay, cloves, allspice berries + thyme"}],
+      {a:"1.5 kg",i:"oxtail, in segments"},{a:"2 tbsp (16 g)",i:"flour for dredging"},{a:"2 tbsp (26 g)",i:"oil"},{a:"2",i:"onions, diced"},{a:"3",i:"carrots, in chunks"},{a:"2 stalks",i:"celery"},{a:"300 ml",i:"bold red wine"},{a:"400 g",i:"tomatoes (canned)"},{a:"500 ml",i:"beef stock"},{a:"2 each",i:"bay, cloves, allspice berries + thyme"}],
     phases:[
       {label:"Searing",kind:"prep",dur:"25 min",temp:"strong embers",text:"Dredge the oxtail in flour and sear very hard in the potjie in batches. Remove, sweat the onions.",bullets:["Strong browning = deep sauce","Sear in batches"]},
       {label:"Layer & deglaze",kind:"prep",dur:"10 min",temp:"—",text:"Meat back in, layer vegetables on top. Add red wine, tomatoes and stock until just covered. Don't stir.",bullets:["Oxtail on the bottom, veg on top","Add spices, close the lid"]},
@@ -1905,7 +1921,7 @@ _en({
     authenticity:8,
     authenticityNote:"Everyday Cape-style potjie; the curry note reflects the region's Cape Malay influence.",
     ingredients:[
-      {a:"8",i:"chicken thighs or drumsticks"},{a:"2 tbsp",i:"oil"},{a:"2",i:"onions"},{a:"1 tbsp",i:"curry powder (mild)"},{a:"2",i:"peppers, in strips"},{a:"250 g",i:"mushrooms"},{a:"2",i:"corn cobs, in slices"},{a:"500 g",i:"potatoes, in chunks"},{a:"400 ml",i:"chicken stock"},{a:"200 ml",i:"cream or coconut milk"},{a:"1 tsp",i:"salt, pepper"}],
+      {a:"8",i:"chicken thighs or drumsticks"},{a:"2 tbsp (26 g)",i:"oil"},{a:"2",i:"onions"},{a:"1 tbsp (8.5 g)",i:"curry powder (mild)"},{a:"2",i:"peppers, in strips"},{a:"250 g",i:"mushrooms"},{a:"2",i:"corn cobs, in slices"},{a:"500 g",i:"potatoes, in chunks"},{a:"400 ml",i:"chicken stock"},{a:"200 ml",i:"cream or coconut milk"},{a:"1 tsp (5.5 g)",i:"salt, pepper"}],
     phases:[
       {label:"Searing",kind:"prep",dur:"15 min",temp:"strong embers",text:"Sear the chicken golden in the potjie, remove. Sweat onions and curry.",bullets:["Brown the skin well for flavor","Toast the curry briefly — releases aromas"]},
       {label:"Layering",kind:"prep",dur:"5 min",temp:"—",text:"Return the chicken, layer potatoes, corn, peppers and mushrooms on top. Don't stir.",bullets:["Firm ingredients on the bottom, corn and peppers on top","Mushrooms last"]},
@@ -1921,7 +1937,7 @@ _en({
     authenticity:10,
     authenticityNote:"The classic base recipe: layer, do not stir, braise slowly over embers.",
     ingredients:[
-      {a:"1.2 kg",i:"beef stew meat or shin, cubed"},{a:"2 tbsp",i:"oil for searing"},{a:"2",i:"onions, diced"},{a:"600 g",i:"waxy potatoes, in chunks"},{a:"400 g",i:"pumpkin (Hokkaido), in chunks"},{a:"3",i:"carrots"},{a:"250 g",i:"mushrooms"},{a:"250 ml",i:"red wine"},{a:"300 ml",i:"beef stock"},{a:"2 each",i:"bay, thyme sprigs"}],
+      {a:"1.2 kg",i:"beef stew meat or shin, cubed"},{a:"2 tbsp (26 g)",i:"oil for searing"},{a:"2",i:"onions, diced"},{a:"600 g",i:"waxy potatoes, in chunks"},{a:"400 g",i:"pumpkin (Hokkaido), in chunks"},{a:"3",i:"carrots"},{a:"250 g",i:"mushrooms"},{a:"250 ml",i:"red wine"},{a:"300 ml",i:"beef stock"},{a:"2 each",i:"bay, thyme sprigs"}],
     phases:[
       {label:"Searing",kind:"prep",dur:"20 min",temp:"strong embers",text:"Sear the beef hard in the hot potjie in batches, remove. Sweat the onions.",bullets:["Do not crowd — otherwise the meat steams","Roasted flavor is the base"]},
       {label:"Layering",kind:"prep",dur:"10 min",temp:"—",text:"Meat back in, then potatoes, carrots, pumpkin and mushrooms layered on top. From now on do NOT stir.",bullets:["Meat on the bottom, firm veg on top","Mushrooms last"]},
@@ -1953,7 +1969,7 @@ _en({
     authenticity:8,
     authenticityNote:"A creative but authentically spiced potjie interpretation of the classic bobotie — the flavors stay true to the original.",
     ingredients:[
-      {a:"1 kg",i:"ground beef (or lamb)"},{a:"2",i:"onions, diced"},{a:"2 tbsp",i:"curry powder (mild) + 1 tsp turmeric"},{a:"80 g",i:"dried apricots, chopped"},{a:"50 g",i:"raisins"},{a:"40 g",i:"flaked almonds"},{a:"2 slices",i:"white bread, soaked in milk"},{a:"1 tbsp",i:"fruit chutney + 1 tbsp lemon juice"},{a:"3",i:"eggs + 250 ml milk (for the topping)"},{a:"3",i:"bay leaves"}],
+      {a:"1 kg",i:"ground beef (or lamb)"},{a:"2",i:"onions, diced"},{a:"2 tbsp (17 g)",i:"curry powder (mild) + 1 tsp turmeric"},{a:"80 g",i:"dried apricots, chopped"},{a:"50 g",i:"raisins"},{a:"40 g",i:"flaked almonds"},{a:"2 slices",i:"white bread, soaked in milk"},{a:"1 tbsp each",i:"fruit chutney (20 g) + lemon juice (15 g)"},{a:"3",i:"eggs + 250 ml milk (for the topping)"},{a:"3",i:"bay leaves"}],
     phases:[
       {label:"Sear the mince",kind:"prep",dur:"20 min",temp:"strong embers",text:"Sweat onions and curry, add the mince and brown crumbly.",bullets:["Toast the curry briefly — releases aromas"]},
       {label:"Season",kind:"cook",dur:"15 min",temp:"gentle embers",text:"Mix in apricots, raisins, soaked bread, chutney and lemon juice, braise briefly. Smooth the top.",bullets:["The sweet-savory balance is typical of bobotie"]},
@@ -1969,7 +1985,7 @@ _en({
     authenticity:9,
     authenticityNote:"Classic game preparation in the potjie: layer, do not stir, braise the lean meat gently.",
     ingredients:[
-      {a:"1.2 kg",i:"game stew meat (kudu, springbok, red deer or venison)"},{a:"2 tbsp",i:"oil"},{a:"2",i:"onions"},{a:"300 g",i:"mushrooms"},{a:"3",i:"carrots"},{a:"250 ml",i:"bold red wine"},{a:"300 ml",i:"game or beef stock"},{a:"3 tbsp",i:"lingonberries (compote)"},{a:"1 tsp each",i:"juniper berries (crushed), thyme, bay"}],
+      {a:"1.2 kg",i:"game stew meat (kudu, springbok, red deer or venison)"},{a:"2 tbsp (26 g)",i:"oil"},{a:"2",i:"onions"},{a:"300 g",i:"mushrooms"},{a:"3",i:"carrots"},{a:"250 ml",i:"bold red wine"},{a:"300 ml",i:"game or beef stock"},{a:"3 tbsp (60 g)",i:"lingonberries (compote)"},{a:"1 tsp each",i:"juniper berries (crushed) (2.5 g), thyme (1 g), bay (1 leaf)"}],
     phases:[
       {label:"Searing",kind:"prep",dur:"20 min",temp:"strong embers",text:"Sear the game hard in batches, remove. Sweat onions and juniper.",bullets:["Sear lean game only briefly","Juniper gives the typical note"]},
       {label:"Layering",kind:"prep",dur:"10 min",temp:"—",text:"Meat back in, layer mushrooms and carrots on top. Do not stir.",bullets:["Meat on the bottom, veg on top"]},
@@ -2004,7 +2020,7 @@ _en({
     tips:["Season with vanilla and cardamom before drying for a Christmas aroma.","Dried pears on cheese boards are a highlight."] , proTip:"Slice firm pears thin and dip briefly in lemon water — that keeps them pale; overripe ones go mushy.", learn:["Slicing","Lemon bath","Drying"]},
   "aprikosen-dorr": { name:"Dried Apricot Halves", cat:"Fruit", blurb:"Homemade apricots — sweet-tart and concentrated, without sulfur dioxide.",
     time:"10–16 h", pit:"55–65 °C / 131–149 °F", core:"Leathery-soft, no moist core", wood:"Graef DA506", yield:"approx. 200 g/kg",
-    ingredients:[{a:"1 kg",i:"ripe apricots"},{a:"1 tsp",i:"lemon juice (prevents browning)"}],
+    ingredients:[{a:"1 kg",i:"ripe apricots"},{a:"1 tsp (5 g)",i:"lemon juice (prevents browning)"}],
     phases:[
       {label:"Halve & pit",dur:"15 min",temp:"—",text:"Halve the apricots, remove the pit, lay cut-side up on the trays.",bullets:["Skin-side down protects the flesh"]},
       {label:"Drying",dur:"10–16 h",temp:"55–65 °C / 131–149 °F",text:"Long drying. Test: press a half — no liquid core, soft-leathery.",bullets:["Sulfite-free apricots turn brown-orange — normal and healthier"]},
@@ -2012,7 +2028,7 @@ _en({
     tips:["Perfect for muesli, jam or as a snack with cheese.","Fully dried, keeps for months in the fridge."] , proTip:"Halve apricots and dry cut-side up — that way no juice runs out and they stay soft-leathery.", learn:["Halving","Cut-side up","Drying leathery"]},
   "susskartoffel-chips": { name:"Sweet Potato Chips", cat:"Vegetables", blurb:"Naturally sweet, crisp — far better than anything from a bag.",
     time:"6–10 h", pit:"55–65 °C / 131–149 °F", core:"Crisp", wood:"Graef DA506", yield:"approx. 100 g/kg",
-    ingredients:[{a:"1 kg",i:"Sweet potatoes"},{a:"2 tbsp + 1 tsp each",i:"olive oil, sea salt, paprika or cinnamon (savory or sweet)"}],
+    ingredients:[{a:"1 kg",i:"Sweet potatoes"},{a:"2 tbsp + 1 tsp each",i:"olive oil (26 g), sea salt (5.5 g), paprika or cinnamon (savory or sweet) (2.5 g)"}],
     phases:[
       {label:"Cutting",dur:"15 min",temp:"—",text:"Peel the sweet potatoes, cut into 3–4 mm slices (mandoline recommended).",bullets:["Even thickness is decisive"]},
       {label:"Seasoning",dur:"10 min",temp:"—",text:"Rub lightly with oil, season. Savory: salt + paprika. Sweet: cinnamon + sugar + a pinch of salt.",bullets:[]},
@@ -2020,7 +2036,7 @@ _en({
     tips:["The sweet cinnamon version is an excellent dessert topping.","In the dehydrator without frying oil — much lower in calories than baked chips."] , proTip:"Slice sweet potato very thin (mandoline) — thick and they turn chewy instead of crisp.", learn:["Slicing thin","Drying at 55–65 °C","Crisp"]},
   "kurbis-chips": { name:"Pumpkin Chips (Hokkaido)", cat:"Vegetables", blurb:"Autumn in a jar: dried Hokkaido squash — nutty, sweetish, crisp.",
     time:"5–8 h", pit:"55–65 °C / 131–149 °F", core:"Crisp", wood:"Graef DA506", yield:"approx. 80 g/kg",
-    ingredients:[{a:"1 kg",i:"Hokkaido squash (skin stays on)"},{a:"2 tbsp + 1 tsp each",i:"olive oil, sea salt, pepper, paprika, cumin or nutmeg"}],
+    ingredients:[{a:"1 kg",i:"Hokkaido squash (skin stays on)"},{a:"2 tbsp + 1 tsp each",i:"olive oil (26 g), sea salt (5.5 g), pepper (2.5 g), paprika (2.5 g), cumin or nutmeg (2 g)"}],
     phases:[
       {label:"Cutting",dur:"20 min",temp:"—",text:"Wash the Hokkaido, halve, remove seeds, cut into 3–4 mm slices.",bullets:["Hokkaido: the skin is edible and crisp","Other squash varieties must be peeled"]},
       {label:"Season & dry",dur:"5–8 h",temp:"55–65 °C / 131–149 °F",text:"Toss with oil and spices, single layer on the trays. Dry until crisp.",bullets:["Squash has lots of water — plan for patience"]}],
@@ -2035,7 +2051,7 @@ _en({
     tips:["Red grapes = darker, more intense raisins; white grapes = golden sultanas.","For cakes, muesli or plain as a snack."] , proTip:"Nick or blanch seedless grapes briefly — otherwise the waxy skin slows drying enormously.", learn:["Nicking/blanching the skin","Long drying","Soft-leathery"]},
   "pork-jerky": { name:"Pork Jerky", cat:"Fish", blurb:"Spicy pork strips — with curing salt and safe temperature control for foolproof jerky.",
     time:"1 day + 5–8 h", pit:"70 °C / 158 °F (maximum)", core:"Leathery, no moist core", wood:"Graef DA506", yield:"approx. 350 g/kg",
-    ingredients:[{a:"1 kg",i:"Pork loin / tenderloin (very lean, trimmed)"},{a:"3 g/kg",i:"curing salt (NPS, for safety)"},{a:"60 ml",i:"soy sauce"},{a:"2 tbsp + 1 tsp each",i:"Worcestershire, garlic, pepper, brown sugar, paprika"}],
+    ingredients:[{a:"1 kg",i:"Pork loin / tenderloin (very lean, trimmed)"},{a:"3 g/kg",i:"curing salt (NPS, for safety)"},{a:"60 ml",i:"soy sauce"},{a:"2 tbsp + 1 tsp each",i:"Worcestershire (30 g), garlic (3 g), pepper (2.5 g), brown sugar (4 g), paprika (2.5 g)"}],
     phases:[
       {label:"Cutting",dur:"20 min",temp:"slightly frozen",text:"Slightly freeze the meat, cut into 4–5 mm thin strips. Remove all visible fat.",bullets:["Fat turns rancid while drying — remove completely","Frozen, it slices evenly"]},
       {label:"Marinating",dur:"12–24 h",temp:"0–5 °C / 32–41 °F",text:"Toss the strips in the marinade with curing salt and let cure cold.",bullets:["Curing salt gives safety against pathogens with pork","Mix through once a day"]},
@@ -2044,7 +2060,7 @@ _en({
     tips:["Dry pork only with curing salt and at 70 °C — or pre-heat 10 min at 160 °C in the oven first.","Use only high-quality, lean meat from a safe source.","Vary excitingly with a little chili or maple syrup."] , proTip:"Dry pork jerky at 70 °C+ (safety) and use only lean meat — fat turns rancid in storage.", learn:["Cutting lean","Marinating","Drying safely at 70 °C"]},
   "ground-beef-jerky": { name:"Ground Beef Jerky (Beef Sticks)", cat:"Fish", blurb:"Formed from lean ground beef — even, tender and without pricey premium cuts. The budget jerky variant.",
     time:"1 day + 5–7 h", pit:"70 °C / 158 °F", core:"Leathery-firm", wood:"Graef DA506", yield:"approx. 400 g/kg",
-    ingredients:[{a:"1 kg",i:"lean ground beef (max. 5% fat)"},{a:"3 g/kg",i:"curing salt (NPS)"},{a:"2 tbsp + 1 tsp each",i:"soy sauce, garlic, pepper, paprika, Worcestershire, brown sugar"}],
+    ingredients:[{a:"1 kg",i:"lean ground beef (max. 5% fat)"},{a:"3 g/kg",i:"curing salt (NPS)"},{a:"2 tbsp + 1 tsp each",i:"soy sauce (32 g), garlic (3 g), pepper (2.5 g), paprika (2.5 g), Worcestershire (5 g), brown sugar (4 g)"}],
     phases:[
       {label:"Mix the mass",dur:"15 min",temp:"cool",text:"Knead the mince thoroughly with curing salt and spices until it binds.",bullets:["Lean mince is a must — fat ruins the jerky","Work cold"]},
       {label:"Ripening",dur:"12–24 h",temp:"0–5 °C / 32–41 °F",text:"Let it cure covered in the fridge.",bullets:["Curing salt and seasoning distribute evenly"]},
@@ -2053,7 +2069,7 @@ _en({
     tips:["Ground-beef jerky is more even and tender to chew than strip jerky.","A jerky gun or piping bag gives clean sticks.","Use only fresh, very lean mince from the butcher."] , proTip:"Press the mince through a jerky gun into even strips — uniform thickness dries through safely and evenly.", learn:["Seasoning & pressing","Shaping evenly","Drying at 70 °C"]},
   "pastinaken-chips": { name:"Parsnip & Root Vegetable Chips", cat:"Vegetables", blurb:"Parsnip, parsley root and salsify as colorful root chips — nutty-sweet and crisp.",
     time:"6–10 h", pit:"55–65 °C / 131–149 °F", core:"Crisp", wood:"Graef DA506", yield:"approx. 90 g/kg",
-    ingredients:[{a:"1 kg",i:"Parsnips (or mixed: parsley root, Jerusalem artichoke)"},{a:"2 tbsp + 1 tsp each",i:"olive oil, sea salt, cumin or rosemary"}],
+    ingredients:[{a:"1 kg",i:"Parsnips (or mixed: parsley root, Jerusalem artichoke)"},{a:"2 tbsp + 1 tsp each",i:"olive oil (26 g), sea salt (5.5 g), cumin or rosemary (2 g)"}],
     phases:[
       {label:"Cutting",dur:"20 min",temp:"—",text:"Peel the root vegetables, shave into 2–3 mm slices with a mandoline.",bullets:["Thin and even = evenly crisp","Soaking in lemon water prevents browning"]},
       {label:"Season & dry",dur:"6–10 h",temp:"55–65 °C / 131–149 °F",text:"Pat dry, oil lightly and season, single layer on the trays, dry until crisp.",bullets:["Only after cooling do they get truly crisp"]},
@@ -2061,7 +2077,7 @@ _en({
     tips:["A mix of different roots makes a colorful, aromatic chip selection.","Without frying oil, much lower in calories than baked chips."] , proTip:"Blanching root vegetables briefly keeps color and sweetness — thin and even for crisp chips.", learn:["Blanching","Slicing thin","Drying"]},
   "auberginen-chips": { name:"Eggplant Chips", cat:"Vegetables", blurb:"Savory and surprisingly crisp — marinated, a full snack or vegan bacon.",
     time:"6–10 h", pit:"55–65 °C / 131–149 °F", core:"Crisp", wood:"Graef DA506", yield:"approx. 60 g/kg",
-    ingredients:[{a:"1 kg",i:"Eggplant"},{a:"3 tbsp + 1 tsp each",i:"olive oil, soy sauce, garlic, paprika, sea salt"}],
+    ingredients:[{a:"1 kg",i:"Eggplant"},{a:"3 tbsp + 1 tsp each",i:"olive oil (39 g), soy sauce (5.5 g), garlic (3 g), paprika (2.5 g), sea salt (5.5 g)"}],
     phases:[
       {label:"Cut & salt",dur:"30 min",temp:"—",text:"Cut into 3–4 mm slices, salt and let draw water for 20 min, then pat dry.",bullets:["Salting removes bitterness and water"]},
       {label:"Marinate",dur:"15 min",temp:"—",text:"Toss in the oil-soy marinade.",bullets:["For vegan bacon: add smoked salt and maple syrup"]},
@@ -2077,7 +2093,7 @@ _en({
     tips:["Onion powder is the base of many BBQ rubs — unbeatable freshly ground.","Toasted onions (sear briefly first) give a deeper aroma."] , proTip:"Dry onions bone-dry, then grind — best done outside, the smell gets everywhere otherwise.", learn:["Slicing thin","Drying bone-dry","Grinding to powder"]},
   "sellerie-getrocknet": { name:"Celery Chips & Soup Vegetables", cat:"Vegetables", blurb:"Celeriac and celery dried — as chips, ground as celery salt, or as a stock of soup vegetables.",
     time:"5–9 h", pit:"50–60 °C / 122–140 °F", core:"Crisp-dry", wood:"Graef DA506", yield:"approx. 80 g/kg",
-    ingredients:[{a:"1 kg",i:"celeriac or celery"},{a:"1 tsp each",i:"sea salt, pepper (for chips, optional)"}],
+    ingredients:[{a:"1 kg",i:"celeriac or celery"},{a:"1 tsp each",i:"sea salt (5.5 g), pepper (for chips, optional) (2.5 g)"}],
     phases:[
       {label:"Prep",dur:"20 min",temp:"—",text:"Peel celeriac and shave into 2–3 mm slices; cut celery into thin pieces.",bullets:["Slice thin for crisp chips"]},
       {label:"Drying",dur:"5–9 h",temp:"50–60 °C / 122–140 °F",text:"Single layer on the trays, dry until completely dry.",bullets:["Low temperature preserves the aroma for soup vegetables"]},
@@ -2117,7 +2133,7 @@ _en({
     tips:["Freshly ground garlic powder is the base of nearly every BBQ rub.","Same method for onion, celery or chili powder."] , proTip:"Dry garlic bone-dry, then grind fine — any residual moisture clumps the granules. Best dried outside.", learn:["Slicing thin","Drying bone-dry","Grinding to powder"]},
   "granola-dorr": { name:"Granola / Crunchy Muesli", cat:"Other", blurb:"Gently dried crunchy muesli — without oven heat, which makes it especially aromatic.",
     time:"6–10 h", pit:"50–60 °C / 122–140 °F", core:"Crunchy", wood:"Graef DA506", yield:"approx. 600 g",
-    ingredients:[{a:"300 g",i:"rolled oats (coarse)"},{a:"150 g",i:"nuts & seeds (almonds, walnuts, sunflower seeds)"},{a:"4 tbsp + 3 tbsp",i:"honey/maple syrup, coconut oil (melted)"},{a:"1 tsp each",i:"cinnamon, vanilla, a pinch of salt"}],
+    ingredients:[{a:"300 g",i:"rolled oats (coarse)"},{a:"150 g",i:"nuts & seeds (almonds, walnuts, sunflower seeds)"},{a:"4 tbsp + 3 tbsp",i:"honey/maple syrup (84 g), coconut oil (melted) (39 g)"},{a:"1 tsp each",i:"cinnamon (2.5 g), vanilla (2 g), a pinch of salt"}],
     phases:[
       {label:"Mixing",dur:"10 min",temp:"—",text:"Combine all ingredients until everything is slightly sticky.",bullets:["Mix well for even sweetness"]},
       {label:"Drying",dur:"6–10 h",temp:"50–60 °C / 122–140 °F",text:"Spread on a drying sheet, dry until crunchy. Loosen in between.",bullets:["Truly crunchy only after cooling"]},
@@ -2165,7 +2181,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the classic rotisserie technique. Barely adapted.",
     time:"1.5–2 h", pit:"indirect 180–200 °C", core:"82 °C (thigh)", wood:"Weber kettle + rotisserie set or gas grill",
-    ingredients:[{a:"1",i:"whole chicken (1.5–1.8 kg)"},{a:"1 tsp each",i:"coarse sea salt, pepper, paprika"},{a:"2 tbsp",i:"olive oil or butter (soft)"},{a:"1 tsp each",i:"garlic, lemon, thyme, rosemary (for the cavity)"}],
+    ingredients:[{a:"1",i:"whole chicken (1.5–1.8 kg)"},{a:"1 tsp each",i:"coarse sea salt (5.5 g), pepper (2.5 g), paprika (2.5 g)"},{a:"2 tbsp (26 g)",i:"olive oil or butter (soft)"},{a:"1 tsp each",i:"garlic (3 g), lemon, thyme (1 g), rosemary (for the cavity) (1 g)"}],
     phases:[
       {label:"Prep",dur:"20 min",temp:"room temperature",text:"Pat the chicken dry inside and out. Put lemon wedges, crushed garlic and herbs in the cavity. Rub the outside generously with oil and season.",bullets:["Dry skin = crispier skin","Tie the wings with kitchen twine so they don't burn"]},
       {label:"Spit it",dur:"10 min",temp:"—",text:"Run the spit through the chicken's long axis (tail → neck). Fix with the spit forks. Check balance: the chicken should turn evenly.",bullets:["An unbalanced spit = the motor struggles = uneven cooking","Twine keeps the wings and legs tight to the body"]},
@@ -2178,7 +2194,7 @@ _en({
     authenticity:8,
     authenticityNote:"Designed as a reproducible home version of the Turkish rotisserie. Flavor close to the original, build and technique simplified for home equipment.",
     time:"1 day marinating + 2–3 h spit", pit:"indirect 160–180 °C", core:"70–75 °C", wood:"Gas grill (ideal) or Weber kettle",
-    ingredients:[{a:"800 g",i:"beef sirloin or lamb leg, thinly sliced (3–5 mm)"},{a:"200 g",i:"ground lamb (connecting layers)"},{a:"100 ml",i:"yogurt (3.5%)"},{a:"4 tbsp",i:"olive oil"},{a:"3 cloves + 1",i:"garlic (3 cloves), onion (1 large, grated)"},{a:"1 tsp each",i:"cumin, paprika, oregano, pepper, salt, sumac"},{a:"1 tbsp",i:"tomato paste (1 tbsp)"}],
+    ingredients:[{a:"800 g",i:"beef sirloin or lamb leg, thinly sliced (3–5 mm)"},{a:"200 g",i:"ground lamb (connecting layers)"},{a:"100 ml",i:"yogurt (3.5%)"},{a:"4 tbsp (52 g)",i:"olive oil"},{a:"3 cloves + 1",i:"garlic (3 cloves), onion (1 large, grated)"},{a:"1 tsp each",i:"cumin (2 g), paprika (2.5 g), oregano (1 g), pepper (2.5 g), salt (5.5 g), sumac (2.5 g)"},{a:"1 tbsp (16 g)",i:"tomato paste (1 tbsp)"}],
     phases:[
       {label:"Marinade",dur:"12–24 h",temp:"fridge 0–4 °C",text:"Mix yogurt, oil, grated onion, pressed garlic, tomato paste and all spices. Add the meat slices.",bullets:["Grated onion (not chopped!) tenderizes the meat","At least 12 h — better 24 h"]},
       {label:"Build the spit",dur:"20 min",temp:"cold",text:"Stack meat slices and thin ground-lamb connecting layers alternately on a sturdy spit. Press very firmly. Cap the ends with flatbread or extra mince.",bullets:["Firm pressure = the spit holds together while turning","Onion halves at the ends = traditional, protects from drying"]},
@@ -2190,7 +2206,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the Mediterranean/Middle Eastern rotisserie tradition.",
     time:"1 day + 2.5–3.5 h", pit:"indirect 160–175 °C", core:"70–75 °C (medium)", wood:"Weber kettle + rotisserie or gas grill",
-    ingredients:[{a:"1.5–2 kg",i:"lamb leg, boned and rolled (by the butcher)"},{a:"4 cloves + 1 tsp each",i:"garlic (4 cloves), rosemary, thyme, oregano"},{a:"4 tbsp",i:"olive oil"},{a:"1 tsp each",i:"lemon juice, coarse sea salt, black pepper"}],
+    ingredients:[{a:"1.5–2 kg",i:"lamb leg, boned and rolled (by the butcher)"},{a:"4 cloves + 1 tsp each",i:"garlic (4 cloves), rosemary (1 g), thyme (1 g), oregano (1 g)"},{a:"4 tbsp (52 g)",i:"olive oil"},{a:"1 tsp each",i:"lemon juice (5 g), coarse sea salt (5.5 g), black pepper (2.5 g)"}],
     phases:[
       {label:"Marinade",dur:"12–24 h",temp:"fridge",text:"Pound herbs, garlic, oil, lemon into a paste. Rub the lamb leg, vacuum-seal or wrap in foil.",bullets:[]},
       {label:"Spit it",dur:"10 min",temp:"—",text:"Put the lamb leg on the rotisserie spit and fix with the forks. Check balance.",bullets:["Tie string around the rolled meat to keep it compact"]},
@@ -2202,7 +2218,7 @@ _en({
     authenticity:8,
     authenticityNote:"Follows US BBQ practice. Barely adapted.",
     time:"1.5–2 h", pit:"indirect 190–210 °C", core:"82 °C", wood:"Weber kettle 57 cm",
-    ingredients:[{a:"1",i:"chicken (1.5–1.8 kg)"},{a:"1",i:"half-full beer can (or tomato can with broth)"},{a:"3–4 tbsp",i:"rub: paprika, garlic, salt, pepper, brown sugar, cayenne"},{a:"2 tbsp",i:"oil"}],
+    ingredients:[{a:"1",i:"chicken (1.5–1.8 kg)"},{a:"1",i:"half-full beer can (or tomato can with broth)"},{a:"3–4 tbsp (48–64 g)",i:"rub: paprika, garlic, salt, pepper, brown sugar, cayenne"},{a:"2 tbsp (26 g)",i:"oil"}],
     phases:[
       {label:"Apply the rub",dur:"15 min",temp:"—",text:"Rub the chicken outside and under the skin with oil, then apply the rub generously.",bullets:["Sprinkle rub into the cavity too"]},
       {label:"Mount",dur:"5 min",temp:"—",text:"Stand the half-full beer can up, slip the chicken over the can from below.",bullets:["The can must only be half full — the beer foams when hot","Alternatively: use a stainless-steel chicken stand"]},
@@ -2214,7 +2230,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the US BBQ method, adapted to the kettle (Snake).",
     time:"6 h", pit:"110–120 °C indirect", core:"93–95 °C (toothpick test)", wood:"Weber kettle – snake method · cherry/apple",
-    ingredients:[{a:"2",i:"racks of baby back ribs"},{a:"3–4 tbsp",i:"rub: paprika, sugar, salt, pepper, garlic, onion powder"},{a:"100 ml",i:"apple juice (to spritz)"},{a:"approx. 100 ml",i:"BBQ sauce (to glaze)"}],
+    ingredients:[{a:"2",i:"racks of baby back ribs"},{a:"3–4 tbsp (48–64 g)",i:"rub: paprika, sugar, salt, pepper, garlic, onion powder"},{a:"100 ml",i:"apple juice (to spritz)"},{a:"approx. 100 ml",i:"BBQ sauce (to glaze)"}],
     phases:[
       {label:"Set up the snake method",dur:"15 min",temp:"—",text:"Lay briquettes in a C-curve (snake) along the grill edge — 2 briquettes wide, 2 high. Distribute wood chips over the first 30 cm of the snake.",bullets:["The snake burns 5–6 h without refueling","Heat a chimney of 10–12 briquettes, place at the head of the snake"]},
       {label:"Rub & membrane",dur:"30 min",temp:"—",text:"Remove the membrane on the bone side (knife under the skin, pull off with a paper towel). Rub in the spices.",bullets:["The membrane must go — otherwise no smoke and no bite"]},
@@ -2227,7 +2243,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows US Southern BBQ, adapted to the kettle (Snake).",
     time:"12–16 h", pit:"110–120 °C", core:"92–96 °C", wood:"Weber kettle – snake method · hickory/beech",
-    ingredients:[{a:"2–3 kg",i:"Pork collar"},{a:"3–4 tbsp",i:"rub: paprika, salt, pepper, sugar, garlic, mustard (Dijon as a binder)"}],
+    ingredients:[{a:"2–3 kg",i:"Pork collar"},{a:"3–4 tbsp (48–64 g)",i:"rub: paprika, salt, pepper, sugar, garlic, mustard (Dijon as a binder)"}],
     phases:[
       {label:"Snake (double)",dur:"20 min",temp:"—",text:"For a 12–16 h snake: lay 3 briquettes wide, 2 high, along the entire grill edge.",bullets:["A full loop = 12–14 h burn without refilling","Water pan under the food for moisture"]},
       {label:"Rub & overnight in the fridge",dur:"12 h",temp:"fridge",text:"Apply mustard as a binder, then rub in the spices generously. Chill overnight.",bullets:[]},
@@ -2240,7 +2256,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the classic rib-steak preparation, here as reverse sear.",
     time:"2–3 h", pit:"indirect 100–110 °C → direct heat 250–300 °C", core:"52–54 °C (medium-rare)", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"1",i:"Côte de bœuf (600–900 g, at least 4 cm thick)"},{a:"1–2 tsp each",i:"coarse sea salt, black pepper"},{a:"2 tbsp",i:"butter + garlic + thyme (to baste)"}],
+    ingredients:[{a:"1",i:"Côte de bœuf (600–900 g, at least 4 cm thick)"},{a:"1–2 tsp each",i:"coarse sea salt (5.5–11 g), black pepper (2.5–5 g)"},{a:"2 tbsp (28 g)",i:"butter + garlic + thyme (to baste)"}],
     phases:[
       {label:"Dry brine",dur:"1–24 h",temp:"fridge, uncovered",text:"Salt the steak generously, store uncovered on a rack in the fridge.",bullets:["The longer, the better the crust","Out 30 min before grilling — bring to room temperature"]},
       {label:"Indirect phase (reverse)",dur:"45–90 min",temp:"100–110 °C",text:"Bring the steak up slowly on the indirect side at very low temperature to 48–50 °C core.",bullets:["Patient — no turning needed","Wood chips optional for light smoke"]},
@@ -2253,7 +2269,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the French duck-breast tradition, here off the grill.",
     time:"1.5–2 h", pit:"indirect 150–160 °C → direct 220 °C", core:"68 °C (breast)", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"2",i:"duck breasts (200–250 g, skin on)"},{a:"1 tsp each",i:"salt, pepper, five-spice"},{a:"2 tbsp each",i:"orange marmalade + soy sauce + ginger (glaze)"}],
+    ingredients:[{a:"2",i:"duck breasts (200–250 g, skin on)"},{a:"1 tsp each",i:"salt (5.5 g), pepper (2.5 g), five-spice"},{a:"2 tbsp each",i:"orange marmalade, soy sauce (32 g), ginger (glaze) (11 g)"}],
     phases:[
       {label:"Score the skin & season",dur:"10 min",temp:"—",text:"Score the skin in a diamond pattern (not into the meat). Rub in salt, pepper, five-spice.",bullets:["Scoring lets the fat render and crisps the skin"]},
       {label:"Indirect phase",dur:"1 h",temp:"150–160 °C",text:"Skin-side up, cook indirect until core 62 °C. The fat renders out.",bullets:["Be sure to use a drip pan — duck fat is highly flammable!"]},
@@ -2265,7 +2281,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the Greek gyros tradition (marinated pork, rotisserie). Slightly simplified for home equipment.",
     time:"1 day marinating + 2–2.5 h", pit:"indirect 170–185 °C", core:"75 °C", wood:"Gas grill (rotisserie) or Weber kettle",
-    ingredients:[{a:"1 kg",i:"pork belly, thinly sliced (5–8 mm)"},{a:"150 ml",i:"olive oil"},{a:"5 cloves + 1 tsp each",i:"garlic (5 cloves), oregano, thyme, rosemary"},{a:"1 tsp each",i:"sweet + hot paprika, cumin, pepper, salt"},{a:"1",i:"of one lemon"}],
+    ingredients:[{a:"1 kg",i:"pork belly, thinly sliced (5–8 mm)"},{a:"150 ml",i:"olive oil"},{a:"5 cloves + 1 tsp each",i:"garlic (5 cloves), oregano (1 g), thyme (1 g), rosemary (1 g)"},{a:"1 tsp each",i:"sweet + hot paprika (2.5 g), cumin (2 g), pepper (2.5 g), salt (5.5 g)"},{a:"1",i:"of one lemon"}],
     phases:[
       {label:"Marinade & soak",dur:"12–24 h",temp:"fridge",text:"Mix all ingredients into a marinade. Add the meat slices.",bullets:[]},
       {label:"Build the spit",dur:"15 min",temp:"cold",text:"Layer the slices onto the spit, pressing firmly. Onion halves at the ends.",bullets:["Stack as tightly as possible — the spit should stay compact"]},
@@ -2285,7 +2301,7 @@ _en({
     authenticity:8,
     authenticityNote:"Follows US BBQ practice for indirect grilling.",
     time:"1–1.5 h", pit:"indirect 180–200 °C", core:"82 °C", wood:"Gas grill",
-    ingredients:[{a:"1",i:"chicken, halved (backbone removed)"},{a:"2–3 tbsp",i:"olive oil, lemon, garlic, paprika, salt, pepper"}],
+    ingredients:[{a:"1",i:"chicken, halved (backbone removed)"},{a:"2–3 tbsp (26–39 g)",i:"olive oil, lemon, garlic, paprika, salt, pepper"}],
     phases:[
       {label:"Marinade",dur:"2–12 h",temp:"fridge",text:"Rub and marinate the halves.",bullets:[]},
       {label:"Grill indirect",dur:"1–1.5 h",temp:"180–200 °C",text:"Outer burners on, middle off. Chicken on the indirect zone, skin up.",bullets:["Turn after 45 min — skin down for final crispness","Core 82 °C at the thigh"]},
@@ -2296,7 +2312,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the well-known US BBQ original.",
     time:"2–2.5 h", pit:"indirect 120–135 °C", core:"72 °C", wood:"Weber kettle or gas grill · hickory",
-    ingredients:[{a:"500 g",i:"mixed ground meat"},{a:"500 g",i:"bacon strips (approx. 20)"},{a:"3 tbsp + 100 ml + 100 g",i:"BBQ rub, BBQ sauce, grated cheese (cheddar)"}],
+    ingredients:[{a:"500 g",i:"mixed ground meat"},{a:"500 g",i:"bacon strips (approx. 20)"},{a:"3 tbsp + 100 ml + 100 g",i:"BBQ rub (26 g), BBQ sauce, grated cheese (cheddar)"}],
     phases:[
       {label:"Weave the bacon",dur:"15 min",temp:"—",text:"Lay 10 bacon strips horizontally, weave 10 more through vertically.",bullets:[]},
       {label:"Build the filling",dur:"15 min",temp:"—",text:"Mix the mince with rub, spread on the bacon weave. Cheese and fried bacon crumble on top, then roll up.",bullets:[]},
@@ -2304,7 +2320,7 @@ _en({
     tips:["Roll a strip of cheese inside for a molten core.","The classic of the BBQ internet — visually impressive, intensely flavorful."] , proTip:"The woven bacon weave holds the roll together, bastes the mince as it cooks and turns crisp — the signature move of BBQ.", learn:["Weaving the bacon","Filling & rolling","Indirect smoking","72 °C core"]},
   "mais-grill": { name:"Grilled Corn (Mexican Style)", cat:"Vegetables", blurb:"Corn in the husk directly in the embers or over the flame — caramelized and smoky.",
     time:"20–25 min", pit:"direct 200–220 °C", core:"—", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"4",i:"corn cobs (with husks)"},{a:"1–2 tbsp each",i:"butter, lime, chili, mayonnaise, parmesan, salt (Mexican style)"}],
+    ingredients:[{a:"4",i:"corn cobs (with husks)"},{a:"1–2 tbsp each",i:"butter (14–28 g), lime, chili (6.5–13 g), mayonnaise (14–28 g), parmesan (6–12 g), salt (Mexican style) (16–32 g)"}],
     phases:[
       {label:"Prep",dur:"30 min soak",temp:"water",text:"Soak the corn cobs in water for 30 min (with husks) so the husks don't burn immediately while grilling.",bullets:[]},
       {label:"Grill (in husk)",dur:"15–20 min",temp:"200–220 °C direct",text:"Directly on the grate, turn every 5 min. The husk protects the corn.",bullets:[]},
@@ -2316,7 +2332,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows US steakhouse preparation, here as reverse sear.",
     time:"2.5–3 h", pit:"95–105 °C → 280–320 °C sear", core:"52–54 °C (medium-rare)", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"1",i:"Tomahawk steak (900 g–1.3 kg, at least 5 cm thick)"},{a:"1–2 tsp each",i:"coarse sea salt (1–2 h ahead), black pepper only after the sear"}],
+    ingredients:[{a:"1",i:"Tomahawk steak (900 g–1.3 kg, at least 5 cm thick)"},{a:"1–2 tsp each",i:"coarse sea salt (1–2 h ahead) (5.5–11 g), black pepper only after the sear (2.5–5 g)"}],
     phases:[
       {label:"Dry brine",dur:"1–2 h (min. 30 min)",temp:"room temperature",text:"Salt generously, rest on a rack.",bullets:[]},
       {label:"Indirect phase",dur:"1.5–2 h",temp:"95–105 °C",text:"At very low temperature, bring up to 46–48 °C core.",bullets:["Wood chips for light smoke recommended","Don't turn — just let it sit"]},
@@ -2329,7 +2345,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the European preparation of rack of lamb.",
     time:"45 min", pit:"indirect 150 °C → direct 230 °C", core:"58–62 °C (pink)", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"1",i:"lamb rack (8 bones), frenched (bones cleaned)"},{a:"1–2 tbsp each",i:"Dijon mustard, rosemary, thyme, garlic, breadcrumbs, olive oil"},{a:"1 tsp each",i:"salt, pepper"}],
+    ingredients:[{a:"1",i:"lamb rack (8 bones), frenched (bones cleaned)"},{a:"1–2 tbsp each",i:"Dijon mustard (15–30 g), rosemary (3–6 g), thyme (3–6 g), garlic (9–18 g), breadcrumbs (8–16 g), olive oil (13–26 g)"},{a:"1 tsp each",i:"salt (5.5 g), pepper (2.5 g)"}],
     phases:[
       {label:"Herb crust",dur:"15 min",temp:"—",text:"Rub mustard on the outside, mix herb-breadcrumb-garlic-oil and apply.",bullets:[]},
       {label:"Indirect phase",dur:"20–25 min",temp:"150–160 °C",text:"Indirect until core 52–54 °C.",bullets:[]},
@@ -2338,7 +2354,7 @@ _en({
     tips:["Wrap the bones in foil so they don't blacken.","Pink is the ideal doneness for lamb — 58–62 °C."] , proTip:"Brief and hot with an herb crust — lamb rack pink at 58–62 °C, no longer, or the delicate meat loses juice.", learn:["Trimming (frenched)","Cooking indirect","Herb crust & searing","58–62 °C core"]},
   "garnelen-spieß-grill": { name:"Grilled Prawn Skewers", cat:"Fish", blurb:"Done in 8 minutes — marinated prawns directly over the coals, perfect as a starter.",
     time:"1 h marinating + 8 min grilling", pit:"direct 220–250 °C", core:"opalescent pink, firm", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"500 g",i:"jumbo prawns raw, shell-on (16/20)"},{a:"4 tbsp",i:"olive oil"},{a:"3 cloves + 1 tsp each",i:"garlic (3 cloves), lemon juice, paprika, parsley, salt"}],
+    ingredients:[{a:"500 g",i:"jumbo prawns raw, shell-on (16/20)"},{a:"4 tbsp (52 g)",i:"olive oil"},{a:"3 cloves + 1 tsp each",i:"garlic (3 cloves), lemon juice (5 g), paprika (2.5 g), parsley (1 g), salt (5.5 g)"}],
     phases:[
       {label:"Marinating",dur:"30–60 min",temp:"fridge",text:"Soak the prawns in marinade.",bullets:["Use soaked wooden skewers — or they burn"]},
       {label:"Grilling",dur:"2–4 min/side",temp:"220–250 °C direct",text:"Directly over coals/burner. 2–3 min per side until opalescent pink.",bullets:["Off the grill the moment they're pink — prawns turn rubbery fast","Grilling shell-on = more flavor and protection"]}],
@@ -2348,7 +2364,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the classic preparation, sliced against the grain.",
     time:"30–60 min", pit:"direct 250–280 °C", core:"52–54 °C (medium-rare)", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"600–800 g",i:"flank steak / bavette, trimmed"},{a:"1–2 tsp each",i:"coarse sea salt (1 h ahead), black pepper only after grilling"},{a:"2 tbsp + 1 tsp each",i:"butter + garlic + rosemary (to baste)"}],
+    ingredients:[{a:"600–800 g",i:"flank steak / bavette, trimmed"},{a:"1–2 tsp each",i:"coarse sea salt (1 h ahead) (5.5–11 g), black pepper only after grilling (2.5–5 g)"},{a:"2 tbsp + 1 tsp each",i:"butter (28 g), garlic (3 g), rosemary (to baste) (1 g)"}],
     phases:[
       {label:"Dry brine",dur:"1–8 h",temp:"fridge, uncovered",text:"Salt generously, chill uncovered on a rack.",bullets:[]},
       {label:"Grill prep",dur:"15 min",temp:"—",text:"Weber: all coals on one side (2-zone fire). Gas grill: preheat all burners to maximum.",bullets:[]},
@@ -2377,7 +2393,7 @@ _en({
     authenticityNote:"Follows the Adana tradition (lamb mince, paprika/chili, flat skewer, charcoal). Adapted on the fat content to available ingredients.",
     equipment:[["kettle",5,{de:"mit Holzkohle und Flachspießen",en:"with charcoal and flat skewers"}],["gas",4],["wsm",2]],
     time:"1 h + 10 min grilling", pit:"direct over embers, 230–260 °C", core:"cooked through, juicy", wood:"Charcoal · Weber kettle",
-    ingredients:[{a:"800 g",i:"lamb mince (not too lean, ~20 % fat)"},{a:"200 g",i:"lamb tail fat or fatty bacon (optional)"},{a:"2 tbsp",i:"Turkish pepper paste (biber salçası)"},{a:"1–2 tsp",i:"pul biber (chili flakes)"},{a:"1 tsp each",i:"salt, cumin, garlic"},{a:"alongside",i:"flatbread, sumac onions, grilled peppers/tomatoes"}],
+    ingredients:[{a:"800 g",i:"lamb mince (not too lean, ~20 % fat)"},{a:"200 g",i:"lamb tail fat or fatty bacon (optional)"},{a:"2 tbsp (15 g)",i:"Turkish pepper paste (biber salçası)"},{a:"1–2 tsp (2–4 g)",i:"pul biber (chili flakes)"},{a:"1 tsp each",i:"salt (5.5 g), cumin (2 g), garlic (3 g)"},{a:"alongside",i:"flatbread, sumac onions, grilled peppers/tomatoes"}],
     phases:[
       {label:"Mix & rest",dur:"1 h",temp:"cold",text:"Knead the mince with fat and spices thoroughly until it binds, then rest cold.",bullets:["Knead well — that's what holds it on the skewer","Traditionally the meat is hand-chopped with a zırh knife"]},
       {label:"Skewer",dur:"15 min",temp:"—",text:"With wet hands, press the mince firmly onto wide flat skewers, evenly long.",bullets:["Flat skewers hold the mince better than round","Press firmly, no air"]},
@@ -2392,7 +2408,7 @@ _en({
     authenticityNote:"Follows the Korean galbi tradition (soy-pear-sesame marinade, thin ribs, hot grilling). Barely adapted.",
     equipment:[["kettle",5],["gas",5],["wsm",2,{de:"zu niedrig – Galbi braucht direkte Hitze",en:"too low – galbi needs direct heat"}]],
     time:"4–12 h marinating + 8 min grilling", pit:"direct 240–270 °C", core:"cooked through, caramelized", wood:"Charcoal/gas · Weber kettle or tabletop grill",
-    ingredients:[{a:"1 kg",i:"beef ribs, thinly cut LA-style (5–8 mm)"},{a:"120 ml",i:"soy sauce"},{a:"1/2",i:"Asian pear (or apple), grated"},{a:"3 tbsp",i:"brown sugar"},{a:"2 tbsp",i:"sesame oil"},{a:"4 cloves",i:"garlic + 1 tbsp ginger, grated"},{a:"2",i:"spring onions + 1 tbsp sesame"}],
+    ingredients:[{a:"1 kg",i:"beef ribs, thinly cut LA-style (5–8 mm)"},{a:"120 ml",i:"soy sauce"},{a:"1/2",i:"Asian pear (or apple), grated"},{a:"3 tbsp (36 g)",i:"brown sugar"},{a:"2 tbsp (26 g)",i:"sesame oil"},{a:"4 cloves",i:"garlic + 1 tbsp ginger, grated"},{a:"2",i:"spring onions + 1 tbsp sesame"}],
     phases:[
       {label:"Marinade & marinate",dur:"4–12 h",temp:"cold",text:"Mix all marinade ingredients, add the ribs and let steep overnight.",bullets:["The pear contains enzymes that tenderize the meat","No longer than 24 h — turns mealy otherwise"]},
       {label:"Grill very hot",dur:"2–3 min/side",temp:"240–270 °C",text:"Grill briefly over direct strong heat until the sugar caramelizes.",bullets:["Cut thin — cooks in minutes","Watch for burning sugar"]},
@@ -2406,7 +2422,7 @@ _en({
     authenticityNote:"Follows the Jamaican jerk tradition (Scotch bonnet, allspice, slow grilling over smoke). Adapted on the wood where pimento wood isn't available.",
     equipment:[["kettle",5,{de:"indirekt, mit etwas Holz für Rauch",en:"indirect, with some wood for smoke"}],["wsm",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     time:"12–24 h + 40–60 min grilling", pit:"indirect 150–180 °C", core:"pork 75 °C / chicken 80 °C", wood:"Pimento wood/charcoal · Weber kettle",
-    ingredients:[{a:"1.5 kg",i:"pork shoulder or chicken pieces"},{a:"2–4",i:"Scotch bonnet chilies (to taste)"},{a:"2 tsp",i:"allspice, ground"},{a:"4",i:"spring onions"},{a:"4 cloves",i:"garlic + 2 tbsp ginger"},{a:"2 tbsp",i:"thyme"},{a:"3 tbsp",i:"soy sauce + 2 tbsp lime juice + 1 tbsp brown sugar"}],
+    ingredients:[{a:"1.5 kg",i:"pork shoulder or chicken pieces"},{a:"2–4",i:"Scotch bonnet chilies (to taste)"},{a:"2 tsp (4.5 g)",i:"allspice, ground"},{a:"4",i:"spring onions"},{a:"4 cloves",i:"garlic + 2 tbsp ginger"},{a:"2 tbsp (6 g)",i:"thyme"},{a:"3 tbsp (48 g)",i:"soy sauce + 2 tbsp lime juice + 1 tbsp brown sugar"}],
     phases:[
       {label:"Marinade & marinate",dur:"12–24 h",temp:"cold",text:"Blend all ingredients into a paste, rub the meat all over and marinate overnight.",bullets:["Wear gloves — Scotch bonnet is very hot","The longer, the deeper the flavor"]},
       {label:"Grill slowly",dur:"40–60 min",temp:"150–180 °C",text:"Cook indirect over low heat, adding a chunk of wood for smoke.",bullets:["Pimento wood is original — otherwise hickory/oak","To pork 75 °C / chicken 80 °C"]},
@@ -2420,7 +2436,7 @@ _en({
     authenticityNote:"Follows the Cape Malay sosatie tradition (curry-apricot marinade, lamb, apricots on the skewer). Barely adapted.",
     equipment:[["kettle",5,{de:"mit Holzkohle, für den Braai",en:"with charcoal, for the braai"}],["gas",4],["wsm",3]],
     time:"12–24 h + 15 min grilling", pit:"direct/indirect 200–230 °C", core:"cooked through, juicy", wood:"Charcoal · Weber kettle",
-    ingredients:[{a:"1 kg",i:"lamb shoulder, cubed (or lamb/pork mixed)"},{a:"2 tbsp",i:"curry powder (mild)"},{a:"3 tbsp",i:"apricot jam"},{a:"2",i:"onions (1 for marinade, 1 for skewers)"},{a:"2 tbsp",i:"wine vinegar"},{a:"1 tsp each",i:"salt, garlic, ginger, turmeric"},{a:"12",i:"dried apricots (briefly soaked)"}],
+    ingredients:[{a:"1 kg",i:"lamb shoulder, cubed (or lamb/pork mixed)"},{a:"2 tbsp (17 g)",i:"curry powder (mild)"},{a:"3 tbsp (60 g)",i:"apricot jam"},{a:"2",i:"onions (1 for marinade, 1 for skewers)"},{a:"2 tbsp (30 g)",i:"wine vinegar"},{a:"1 tsp each",i:"salt (5.5 g), garlic (3 g), ginger (2 g), turmeric (3 g)"},{a:"12",i:"dried apricots (briefly soaked)"}],
     phases:[
       {label:"Marinade & marinate",dur:"12–24 h",temp:"cold",text:"Sweat the onion, cook into a marinade with curry, apricot jam, vinegar and spices, cool. Add the lamb and marinate overnight.",bullets:["The cooked marinade penetrates deeper","Marinate overnight"]},
       {label:"Skewer",dur:"15 min",temp:"—",text:"Skewer the lamb cubes alternating with onion pieces and dried apricots.",bullets:["Soak the apricots briefly so they don't burn"]},
@@ -2434,7 +2450,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the Pacific cedar-plank tradition. Barely adapted.",
     time:"30 min soak + 25–35 min grilling", pit:"indirect 180–200 °C", core:"55–60 °C", wood:"Cedar plank + Weber kettle or gas grill",
-    ingredients:[{a:"1",i:"Salmon side (600–800 g) with skin, deboned"},{a:"1",i:"cedar grilling plank (food grade, soaked 30 min)"},{a:"2 tbsp each",i:"glaze: maple syrup, Dijon mustard, soy sauce, ginger, garlic"}],
+    ingredients:[{a:"1",i:"Salmon side (600–800 g) with skin, deboned"},{a:"1",i:"cedar grilling plank (food grade, soaked 30 min)"},{a:"2 tbsp each",i:"glaze: maple syrup (40 g), Dijon mustard (30 g), soy sauce (32 g), ginger (11 g), garlic (18 g)"}],
     phases:[
       {label:"Soak the plank",dur:"30–60 min",temp:"water or white wine",text:"Soak the cedar plank completely.",bullets:["Wine gives a fine aroma and protects the plank better"]},
       {label:"Season the salmon",dur:"15 min",temp:"—",text:"Salmon on the plank (skin down). Apply the glaze.",bullets:[]},
@@ -2446,7 +2462,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the Cypriot tradition.",
     time:"20–30 min", pit:"direct 200–230 °C", core:"—", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"2",i:"packs of halloumi (250 g each)"},{a:"1 each",i:"zucchini, eggplant, peppers, red onions"},{a:"2 tbsp + 1 tsp each",i:"olive oil, lemon, oregano, sea salt, pepper"}],
+    ingredients:[{a:"2",i:"packs of halloumi (250 g each)"},{a:"1 each",i:"zucchini, eggplant, peppers, red onions"},{a:"2 tbsp + 1 tsp each",i:"olive oil (26 g), lemon, oregano (1 g), sea salt (5.5 g), pepper (2.5 g)"}],
     phases:[
       {label:"Prep",dur:"10 min",temp:"—",text:"Cut the vegetables into coarse pieces, marinate with oil and spices. Cut the halloumi into 1 cm slices.",bullets:["Eggplant in lengthwise strips, peppers in quarters","Halloumi just needs a little oil"]},
       {label:"Grill the vegetables",dur:"8–12 min",temp:"200–230 °C",text:"Vegetables directly on the grate. Nice grill marks and soft.",bullets:["Put the eggplant on first — it takes longer"]},
@@ -2458,7 +2474,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the Mediterranean preparation.",
     time:"1 h pre-cooking + 10–15 min grilling", pit:"direct 220–260 °C", core:"—", wood:"Gas grill or Weber kettle",
-    ingredients:[{a:"1",i:"Octopus (1.5–2 kg), thawed from frozen"},{a:"1 tsp each",i:"pre-cook water: bay, peppercorns, white wine, salt"},{a:"2 tbsp + 1 tsp each",i:"olive oil, garlic, lemon, parsley, paprika"}],
+    ingredients:[{a:"1",i:"Octopus (1.5–2 kg), thawed from frozen"},{a:"1 tsp each",i:"pre-cook water: bay (1 leaf), peppercorns (3 g), white wine, salt (5.5 g)"},{a:"2 tbsp + 1 tsp each",i:"olive oil (26 g), garlic (3 g), lemon, parsley (1 g), paprika (2.5 g)"}],
     phases:[
       {label:"Pre-cook (essential)",dur:"45–60 min",temp:"simmer, 85–90 °C",text:"Simmer the octopus in the spiced water at 85–90 °C until a knife tip slides in easily.",bullets:["Octopus thawed from frozen is more tender — ice crystals break the muscle fibers","Do NOT boil hard — it makes it rubbery"]},
       {label:"Cool & marinate",dur:"15–30 min",temp:"room temperature",text:"Take out of the water, cool briefly. Marinate with oil, garlic, lemon and paprika.",bullets:[]},
@@ -2470,7 +2486,7 @@ _en({
 _en({
   "forelle-grill": { name:"Whole Trout off the Grill (Fish Basket)", cat:"Fish", blurb:"Crisp skin, juicy flesh — turned in a fish basket, nothing sticks to the grate.",
     time:"30 min + 15–20 min grilling", pit:"direct 200–230 °C", core:"60 °C, fin pulls out", wood:"Weber kettle or gas grill · fish basket",
-    ingredients:[{a:"4",i:"trout, gutted, scaled"},{a:"1 each",i:"lemon, bunch of parsley/dill (in the cavity)"},{a:"2 tbsp + 1 tsp each",i:"olive oil, sea salt, pepper, garlic"}],
+    ingredients:[{a:"4",i:"trout, gutted, scaled"},{a:"1 each",i:"lemon, bunch of parsley/dill (in the cavity)"},{a:"2 tbsp + 1 tsp each",i:"olive oil (26 g), sea salt (5.5 g), pepper (2.5 g), garlic (3 g)"}],
     phases:[
       {label:"Prep",dur:"20 min",temp:"—",text:"Wash the trout, pat dry, salt inside and out. Fill the cavity with lemon slices and herbs, oil the skin lightly.",bullets:["Dry skin crisps better and sticks less","Oil the fish basket well"]},
       {label:"Grill direct",dur:"6–8 min/side",temp:"200–230 °C",text:"Grill in the oiled fish basket over direct heat, turn once.",bullets:["Don't turn too early — the skin must release from the basket","Done when the dorsal fin pulls out easily (core ~60 °C)"]},
@@ -2496,7 +2512,7 @@ _en({
     authenticityNote:"Follows the Japanese shioyaki technique almost unchanged — salt, brief rest, hot grilling.",
     equipment:[["kettle",5],["gas",5],["wsm",3]],
     time:"40 min salting + 10 min grilling", pit:"direct/indirect 220–240 °C", core:"skin crisp, flesh juicy", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"2",i:"mackerel, filleted (or whole saba)"},{a:"generous",i:"fine sea salt"},{a:"1 tbsp",i:"sake (optional, to wipe)"},{a:"to serve",i:"grated daikon, soy sauce, lemon (sudachi)"}],
+    ingredients:[{a:"2",i:"mackerel, filleted (or whole saba)"},{a:"generous",i:"fine sea salt"},{a:"1 tbsp (15 g)",i:"sake (optional, to wipe)"},{a:"to serve",i:"grated daikon, soy sauce, lemon (sudachi)"}],
     phases:[
       {label:"Salt",dur:"30–40 min",temp:"cold",text:"Salt the fish and let it rest 30–40 minutes. Pat off released liquid (optionally wipe with a little sake).",bullets:["Salt draws water and firms the flesh","A dry surface = crisper skin"]},
       {label:"Grill hot",dur:"4–5 min/side",temp:"220–240 °C",text:"Skin side first until crisp, then turn. Cook fillets only briefly.",bullets:["Don't overcook — mackerel turns dry otherwise","The skin should crisp"]},
@@ -2510,7 +2526,7 @@ _en({
     authenticityNote:"Follows the Nayarit tradition (butterflied fish, chili-achiote marinade, wood smoke). Adapted on the chili types to more readily available alternatives.",
     equipment:[["kettle",5,{de:"mit Holzkohle, für den Rauch",en:"with charcoal, for the smoke"}],["gas",4],["wsm",3]],
     time:"1–2 h marinating + 20 min grilling", pit:"indirect/direct 200–230 °C", core:"flesh flaky", wood:"Wood/charcoal · Weber kettle or gas grill",
-    ingredients:[{a:"1",i:"whole fish (sea bass, sea bream, red snapper), butterflied"},{a:"3",i:"dried chilies (guajillo/ancho), soaked"},{a:"2 tbsp",i:"achiote/annatto paste"},{a:"3 cloves",i:"garlic"},{a:"2",i:"limes (juice)"},{a:"2 tbsp",i:"soy or Worcestershire sauce"},{a:"1 tsp each",i:"salt, oregano, cumin"}],
+    ingredients:[{a:"1",i:"whole fish (sea bass, sea bream, red snapper), butterflied"},{a:"3",i:"dried chilies (guajillo/ancho), soaked"},{a:"2 tbsp (30 g)",i:"achiote/annatto paste"},{a:"3 cloves",i:"garlic"},{a:"2",i:"limes (juice)"},{a:"2 tbsp (30 g)",i:"soy or Worcestershire sauce"},{a:"1 tsp each",i:"salt (5.5 g), oregano (1 g), cumin (2 g)"}],
     phases:[
       {label:"Marinade & marinate",dur:"1–2 h",temp:"cold",text:"Blend chilies, achiote, garlic, lime and spices into a paste. Coat the butterflied fish all over and let it sit.",bullets:["Butterfly the fish flat","Marinate the flesh side generously"]},
       {label:"Grill (flesh side first)",dur:"8–10 min",temp:"200–230 °C",text:"Grill the flesh side first, then turn onto the skin side to finish.",bullets:["A grill basket makes turning easier","A chunk of wood gives the characteristic smoke"]},
@@ -2524,7 +2540,7 @@ _en({
     authenticityNote:"Follows the South African braai tradition (butterflied, apricot basting, wood smoke). Other fatty fish are named as alternatives to snoek.",
     equipment:[["kettle",5,{de:"mit Holzkohle, für den Braai-Rauch",en:"with charcoal, for the braai smoke"}],["gas",4],["wsm",3]],
     time:"30 min + 20–25 min grilling", pit:"indirect/direct 200–220 °C", core:"flesh flaky", wood:"Wood/charcoal · Weber kettle or gas grill",
-    ingredients:[{a:"1",i:"snoek (or mackerel/salmon trout), butterflied"},{a:"3 tbsp",i:"apricot jam"},{a:"50 g",i:"butter, melted"},{a:"3 cloves",i:"garlic, grated"},{a:"1",i:"lemon (juice)"},{a:"1 tsp each",i:"salt, pepper"}],
+    ingredients:[{a:"1",i:"snoek (or mackerel/salmon trout), butterflied"},{a:"3 tbsp (60 g)",i:"apricot jam"},{a:"50 g",i:"butter, melted"},{a:"3 cloves",i:"garlic, grated"},{a:"1",i:"lemon (juice)"},{a:"1 tsp each",i:"salt (5.5 g), pepper (2.5 g)"}],
     phases:[
       {label:"Mix the basting",dur:"10 min",temp:"—",text:"Stir together apricot jam, melted butter, garlic, lemon, salt and pepper.",bullets:["Butterfly the fish, leave the bones in"]},
       {label:"Grill (skin side first)",dur:"15–20 min",temp:"200–220 °C",text:"Place the fish skin-side down and baste repeatedly with the apricot butter. Turn only briefly near the end.",bullets:["Mostly cook on the skin — it holds the fish together","Glaze several times for the sticky-sweet crust"]},
@@ -2534,7 +2550,7 @@ _en({
     learn:["Butterflying the fish","Apricot basting","Grilling on the skin","Layered glazing"]},
   "lachsfilet-grill": { name:"Salmon Fillet with Skin off the Grill", cat:"Fish", blurb:"Crisp skin side, glassy-juicy core — the easiest route to perfect grilled salmon.",
     time:"20 min", pit:"direct 200–220 °C, skin first", core:"50–55 °C", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"4",i:"salmon fillets with skin (180 g each), deboned"},{a:"2 tbsp + 1 tsp each",i:"olive oil, sea salt, pepper, lemon zest"},{a:"1",i:"lemon (to serve)"}],
+    ingredients:[{a:"4",i:"salmon fillets with skin (180 g each), deboned"},{a:"2 tbsp + 1 tsp each",i:"olive oil (26 g), sea salt (5.5 g), pepper (2.5 g), lemon zest (2 g)"},{a:"1",i:"lemon (to serve)"}],
     phases:[
       {label:"Seasoning",dur:"10 min",temp:"—",text:"Pat the salmon dry, season with oil, salt, pepper and lemon zest.",bullets:["Dry surface = better crust"]},
       {label:"Grill skin-side",dur:"5–7 min",temp:"200–220 °C",text:"Place skin-side down on the oiled grate and cook most of the time this way.",bullets:["Leave skin down until it's crisp — don't fidget","The skin protects the flesh from drying out"]},
@@ -2542,7 +2558,7 @@ _en({
     tips:["Glassy at 50 °C, cooked through at 60 °C — a matter of taste.","A maple-soy glaze in the last 2 minutes gives a great lacquer."] , proTip:"Grill salmon on the skin side and turn only once — the skin protects the fillet and releases from the grate once it's crisp.", learn:["Grilling on the skin side","Turning once","Doneness (glassy-pink)"]},
   "thunfisch-steak-grill": { name:"Tuna Steak with Sesame Crust", cat:"Fish", blurb:"Crisp outside, raw-pink inside — tuna goes very hot and only very briefly on the grill.",
     time:"30 min marinating + 5 min grilling", pit:"direct 260–300 °C (very hot)", core:"pink inside (briefly seared)", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"4",i:"tuna steaks, sashimi grade (200 g each, 3 cm thick)"},{a:"3 tbsp + 1 tbsp each",i:"soy sauce, sesame oil, lime, ginger (marinade)"},{a:"4 tbsp",i:"sesame (white + black, to coat)"}],
+    ingredients:[{a:"4",i:"tuna steaks, sashimi grade (200 g each, 3 cm thick)"},{a:"3 tbsp + 1 tbsp each",i:"soy sauce (48 g), sesame oil (13 g), lime, ginger (marinade) (5.5 g)"},{a:"4 tbsp (36 g)",i:"sesame (white + black, to coat)"}],
     phases:[
       {label:"Marinate",dur:"20–30 min",temp:"cool",text:"Toss the tuna briefly in the soy-sesame marinade, then roll all over in sesame.",bullets:["Don't marinate too long — soy 'cooks' the fish otherwise","Press the sesame on firmly"]},
       {label:"Very hot sear",dur:"45–60 sec/side",temp:"260–300 °C",text:"On maximum heat, sear only briefly on all sides — crust outside, raw-pink inside.",bullets:["Sashimi grade is a must, since it's raw inside","Work to the second — cooked through, tuna turns dry"]},
@@ -2553,7 +2569,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the Mediterranean preparation of whole fish. Barely adapted.",
     time:"30 min + 20 min grilling", pit:"direct → indirect 200–220 °C", core:"backbone releases easily", wood:"Weber kettle or gas grill · fish basket",
-    ingredients:[{a:"2",i:"sea bream or sea bass (approx. 400 g each), kitchen-ready"},{a:"1 each",i:"lemon, garlic cloves, bunch of rosemary/thyme"},{a:"3 tbsp + 1 tsp each",i:"olive oil, coarse sea salt, pepper"}],
+    ingredients:[{a:"2",i:"sea bream or sea bass (approx. 400 g each), kitchen-ready"},{a:"1 each",i:"lemon, garlic cloves, bunch of rosemary/thyme"},{a:"3 tbsp + 1 tsp each",i:"olive oil (39 g), coarse sea salt (5.5 g), pepper (2.5 g)"}],
     phases:[
       {label:"Prep",dur:"15 min",temp:"—",text:"Wash and dry the fish, score the skin 2–3 times. Salt inside, fill with lemon, garlic and herbs. Oil and salt the outside.",bullets:["The cuts cook the thick back flesh more evenly","Dry the skin well for crispness"]},
       {label:"Crisp direct",dur:"3–4 min/side",temp:"220 °C",text:"Crisp the skin over direct heat in the fish basket.",bullets:["Turn only when the skin releases"]},
@@ -2561,7 +2577,7 @@ _en({
     tips:["Baked in a salt crust (1.5 kg coarse salt + egg white) it's even juicier.","Sea bass, gilthead and trout work identically."] , proTip:"A whole sea bream grills forgivingly — score the skin, fill the belly with lemon and herbs, turn in a basket.", learn:["Scoring the skin","Filling the belly","Turning in a basket","Doneness"]},
   "jakobsmuscheln-grill": { name:"Grilled Scallops", cat:"Fish", blurb:"Done in two minutes: caramel crust outside, tender-glassy inside. An elegant starter.",
     time:"15 min", pit:"direct 240–280 °C (very hot)", core:"just opaque", wood:"Weber kettle or gas grill · plancha/cast-iron pan",
-    ingredients:[{a:"12",i:"large scallops (shucked, patted dry)"},{a:"2 tbsp + 1 tsp each",i:"olive oil/butter, sea salt, garlic, lemon"}],
+    ingredients:[{a:"12",i:"large scallops (shucked, patted dry)"},{a:"2 tbsp + 1 tsp each",i:"olive oil/butter (26 g), sea salt (5.5 g), garlic (3 g), lemon"}],
     phases:[
       {label:"Prep",dur:"10 min",temp:"—",text:"Pat the scallops very thoroughly dry, oil lightly and salt.",bullets:["Dry scallops caramelize — wet ones just steam","Remove the side muscle"]},
       {label:"Very hot sear",dur:"1.5–2 min/side",temp:"240–280 °C",text:"Sear golden-brown on both sides on a hot plancha/cast-iron pan.",bullets:["Don't move until a crust forms","Just opaque inside — don't overcook, or rubbery"]},
@@ -2572,7 +2588,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the Portuguese espetada tradition, here with swordfish.",
     time:"30 min marinating + 10 min grilling", pit:"direct 220–250 °C", core:"juicy, just cooked", wood:"Weber kettle or gas grill · skewers",
-    ingredients:[{a:"800 g",i:"Swordfish (or tuna/monkfish), in 3 cm cubes"},{a:"1",i:"lemon, 1 zucchini, 1 red onion, cherry tomatoes"},{a:"4 tbsp + 1 tsp each",i:"olive oil, garlic, oregano, paprika, sea salt (marinade)"}],
+    ingredients:[{a:"800 g",i:"Swordfish (or tuna/monkfish), in 3 cm cubes"},{a:"1",i:"lemon, 1 zucchini, 1 red onion, cherry tomatoes"},{a:"4 tbsp + 1 tsp each",i:"olive oil (52 g), garlic (3 g), oregano (1 g), paprika (2.5 g), sea salt (marinade) (5.5 g)"}],
     phases:[
       {label:"Marinate",dur:"30 min",temp:"cool",text:"Toss the fish cubes in the herb marinade.",bullets:["Firm fish like swordfish or monkfish won't fall apart","Not too long in lemon — or the fish turns mushy"]},
       {label:"Skewer",dur:"10 min",temp:"—",text:"Thread the fish alternately with zucchini, onion and tomatoes onto skewers.",bullets:["Use metal skewers or soaked wooden ones"]},
@@ -2583,7 +2599,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the Galician tradition.",
     time:"10 min", pit:"side burner – cast-iron pan, full heat", core:"—", wood:"Gas grill · side burner + cast-iron pan",
-    ingredients:[{a:"300 g",i:"Padrón or Pimientos de Padrón peppers (whole)"},{a:"2 tbsp",i:"olive oil"},{a:"to taste",i:"coarse sea salt (fleur de sel)"}],
+    ingredients:[{a:"300 g",i:"Padrón or Pimientos de Padrón peppers (whole)"},{a:"2 tbsp (26 g)",i:"olive oil"},{a:"to taste",i:"coarse sea salt (fleur de sel)"}],
     phases:[
       {label:"Heat the pan",dur:"3 min",temp:"side burner full",text:"Get the cast-iron pan properly hot on the side burner, then add oil.",bullets:["The side burner delivers concentrated heat — ideal for the pan","Keeps the main grill free for other things"]},
       {label:"Fry",dur:"4–6 min",temp:"full heat",text:"Add the peppers whole and fry, tossing, until they blister and get dark spots.",bullets:["The skin should blister and partly char","Toss so nothing burns"]},
@@ -2591,7 +2607,7 @@ _en({
     tips:["The side burner is perfect for such pan dishes — strong, adjustable heat without reconfiguring the main grill.","Just as good: shishito peppers, green asparagus or mushrooms.","A squeeze of lemon and some garlic lift it further."] , proTip:"Blister Padrón in a very hot, dry pan until the skin bubbles — just coarse salt, that's the whole secret.", learn:["Letting the pan get hot","Blistering","Serving with sea salt"]},
   "sideburner-zwiebeln": { name:"Balsamic Braised Onions (Side Burner)", cat:"Vegetables", blurb:"Slowly braised soft onions with balsamic — the perfect side for steak and burgers, without blocking the grill.",
     time:"35–45 min", pit:"side burner – low to medium flame", core:"soft, syrupy", wood:"Gas grill · side burner + cast-iron pot",
-    ingredients:[{a:"1 kg",i:"onions (red and yellow), sliced into thin rings"},{a:"3 tbsp",i:"butter or olive oil"},{a:"3 tbsp + 1 tsp",i:"balsamic, brown sugar, thyme, salt"}],
+    ingredients:[{a:"1 kg",i:"onions (red and yellow), sliced into thin rings"},{a:"3 tbsp (39 g)",i:"butter or olive oil"},{a:"3 tbsp (45 g) + 1 tsp each",i:"balsamic, brown sugar (4 g), thyme (1 g), salt (5.5 g)"}],
     phases:[
       {label:"Sweat",dur:"10 min",temp:"medium flame",text:"Sweat the onions in the cast-iron pot on the side burner with butter and a pinch of salt.",bullets:["Generous volume — onions reduce a lot"]},
       {label:"Braise",dur:"20–30 min",temp:"low flame",text:"Braise slowly over low heat, stirring occasionally, until golden-brown and sweet.",bullets:["Patience — slow braising makes the sweetness","The side burner holds a constant temperature while the main grill does the meat"]},
@@ -2599,7 +2615,7 @@ _en({
     tips:["Keeps 1–2 weeks in a jar in the fridge — a great onion chutney.","On burgers, with cheese, bratwurst or steak.","Just as good on the side burner: mushroom pan, chili con carne, or reducing a BBQ sauce."] , proTip:"Braise onions slowly in balsamic until soft and darkly caramelized — patience, not heat.", learn:["Braising slowly","Reducing balsamic","Caramelizing"]},
   "sideburner-pilze": { name:"Garlic-Herb Mushroom Pan (Side Burner)", cat:"Vegetables", blurb:"Golden-brown mushrooms with garlic, butter and parsley — the ideal steak side, ready in 15 minutes.",
     time:"15 min", pit:"side burner – cast-iron pan, high heat", core:"—", wood:"Gas grill · side burner + cast-iron pan",
-    ingredients:[{a:"500 g",i:"mixed mushrooms (button, king oyster, shiitake)"},{a:"3 tbsp + 1 tbsp",i:"butter, olive oil"},{a:"2 each + to taste",i:"garlic cloves, parsley, thyme, salt, pepper"}],
+    ingredients:[{a:"500 g",i:"mixed mushrooms (button, king oyster, shiitake)"},{a:"3 tbsp + 1 tbsp",i:"butter (42 g), olive oil (13 g)"},{a:"2 each + to taste",i:"garlic cloves, parsley, thyme, salt, pepper"}],
     phases:[
       {label:"Prep",dur:"5 min",temp:"—",text:"Clean the mushrooms (don't wash), halve larger ones or slice.",bullets:["Dry mushrooms brown — washed ones just steam in their own juice"]},
       {label:"Sear hard",dur:"6–8 min",temp:"high heat",text:"Heat the pan on the side burner, add oil, sear the mushrooms in one layer without stirring until they take color.",bullets:["Don't overcrowd the pan — or the mushrooms steam","Only turn once they're browned"]},
@@ -2607,7 +2623,7 @@ _en({
     tips:["The side burner delivers the strong heat mushrooms need to brown — without tying up the grill.","A splash of cream turns it into a creamy mushroom sauce.","Also brilliant: over steak, in burgers or on toasted bread."] , proTip:"Add mushrooms to an already hot pan and salt only once browned — salted too early they draw water and boil instead of frying.", learn:["Searing hot","Salting late","Garlic & herbs at the end"]},
   "sideburner-spargel": { name:"Pan-Fried Green Asparagus with Parmesan (Side Burner)", cat:"Vegetables", blurb:"Green asparagus with roasted notes, lemon and parmesan — fast, fresh and uncomplicated.",
     time:"12 min", pit:"side burner – cast-iron pan, medium to high heat", core:"al dente", wood:"Gas grill · side burner + cast-iron pan",
-    ingredients:[{a:"500 g",i:"green asparagus (woody ends removed)"},{a:"2 tbsp + 1 tsp each",i:"olive oil, sea salt, pepper, lemon zest"},{a:"30 g + ½",i:"parmesan (shaved), lemon (juice)"}],
+    ingredients:[{a:"500 g",i:"green asparagus (woody ends removed)"},{a:"2 tbsp + 1 tsp each",i:"olive oil (26 g), sea salt (5.5 g), pepper (2.5 g), lemon zest (2 g)"},{a:"30 g + ½",i:"parmesan (shaved), lemon (juice)"}],
     phases:[
       {label:"Prep",dur:"3 min",temp:"—",text:"Snap off the woody ends, wash and dry the asparagus.",bullets:["Lightly peel the lower part of thick spears"]},
       {label:"Fry",dur:"6–8 min",temp:"medium to high heat",text:"In the hot pan with oil, brown all over, turning occasionally, until al dente with roasted spots.",bullets:["Don't overcook — green asparagus should keep its bite"]},
@@ -2615,7 +2631,7 @@ _en({
     tips:["The side burner is perfect when the main grill is already loaded with meat.","Wrapped in bacon before frying it gets heartier.","Broccoli, pak choi and beans work the same way."] , proTip:"Toss green asparagus only briefly in hot fat — crisp-tender with parmesan, not boiled soft.", learn:["Brief frying","Keeping crisp-tender","With parmesan"]},
   "sideburner-bohnen": { name:"Braised Bacon Beans (Side Burner)", cat:"Vegetables", blurb:"Green beans slowly braised with bacon and onions — a hearty side that finishes on the side.",
     time:"30 min", pit:"side burner – cast-iron pot, low to medium flame", core:"soft", wood:"Gas grill · side burner + cast-iron pot",
-    ingredients:[{a:"750 g",i:"green beans, trimmed"},{a:"150 g",i:"diced bacon"},{a:"1 + 2",i:"onion, garlic cloves"},{a:"200 ml + 1 tsp each",i:"broth, savory, salt, pepper"}],
+    ingredients:[{a:"750 g",i:"green beans, trimmed"},{a:"150 g",i:"diced bacon"},{a:"1 + 2",i:"onion, garlic cloves"},{a:"200 ml + 1 tsp each",i:"broth, savory (1 g), salt (5.5 g), pepper (2.5 g)"}],
     phases:[
       {label:"Render the bacon",dur:"5 min",temp:"medium flame",text:"Render the bacon crisp in the cast-iron pot on the side burner, add onion and garlic.",bullets:[]},
       {label:"Braise",dur:"20–25 min",temp:"low flame",text:"Add the beans and savory, deglaze with broth, braise covered until soft.",bullets:["The side burner holds the low braising temperature constant","Top up with a little broth if needed"]},
@@ -2637,7 +2653,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the Levantine-North African tradition.",
     time:"30 min", pit:"side burner – cast-iron pan, medium flame", core:"whites set, yolks soft", wood:"Gas grill · side burner + cast-iron pan",
-    ingredients:[{a:"4–5",i:"eggs"},{a:"2 + 1 + 2",i:"peppers, onion, garlic cloves"},{a:"800 g",i:"chopped tomatoes (can)"},{a:"1 tsp each",i:"cumin, sweet paprika, chili, salt, sugar"}],
+    ingredients:[{a:"4–5",i:"eggs"},{a:"2 + 1 + 2",i:"peppers, onion, garlic cloves"},{a:"800 g",i:"chopped tomatoes (can)"},{a:"1 tsp each",i:"cumin (2 g), sweet paprika (2.5 g), chili (2 g), salt (5.5 g), sugar (4 g)"}],
     phases:[
       {label:"Start the sugo",dur:"10 min",temp:"medium flame",text:"Sweat onion, peppers and garlic in the pan, add the spices, top up with tomatoes.",bullets:["Toast the spices briefly = more aroma"]},
       {label:"Reduce",dur:"12–15 min",temp:"low flame",text:"Reduce the sugo to a silky consistency, season.",bullets:["The side burner holds the gentle simmer"]},
@@ -2645,7 +2661,7 @@ _en({
     tips:["Serve with feta, fresh parsley and flatbread.","The side burner makes shakshuka the perfect grill breakfast.","With merguez or chorizo it gets heartier."] , proTip:"Reduce a bold sauce first, then slide the eggs into wells and set them covered — whites firm, yolks still soft.", learn:["Reducing the sauce","Poaching the eggs","Setting covered"]},
   "sideburner-bratkartoffeln": { name:"Cast-Iron Fried Potatoes (Side Burner)", cat:"Vegetables", blurb:"Crisp fried potatoes with onions and bacon — the side that completes any grill plate.",
     time:"30 min", pit:"side burner – cast-iron pan, medium to high heat", core:"crisp outside, soft inside", wood:"Gas grill · side burner + cast-iron pan",
-    ingredients:[{a:"1 kg",i:"waxy potatoes (pre-cooked, cooled)"},{a:"100 g + 1",i:"diced bacon, onion"},{a:"3 tbsp + 1 tsp each",i:"clarified butter, salt, pepper, caraway, parsley"}],
+    ingredients:[{a:"1 kg",i:"waxy potatoes (pre-cooked, cooled)"},{a:"100 g + 1",i:"diced bacon, onion"},{a:"3 tbsp + 1 tsp each",i:"clarified butter (39 g), salt (5.5 g), pepper (2.5 g), caraway (2 g), parsley (1 g)"}],
     phases:[
       {label:"Prep",dur:"5 min",temp:"—",text:"Slice the pre-cooked, cooled potatoes.",bullets:["Cooked the day before = best crust","Cold potatoes don't fall apart"]},
       {label:"Fry crisp",dur:"15–18 min",temp:"medium to high heat",text:"Fry in plenty of hot clarified butter in one layer, only turning once the underside is golden-brown.",bullets:["Patience — turning too early prevents the crust","Don't overcrowd the pan"]},
@@ -2653,7 +2669,7 @@ _en({
     tips:["The cast-iron pan on the side burner holds steady heat for even browning.","A fried egg on top makes it a meal.","The best way to use up leftovers from the day before."] , proTip:"Move pre-boiled potatoes little in hot cast iron — that's the only way the crisp crust forms.", learn:["Pre-boiling","Frying in cast iron","Building a crust"]},
   "sideburner-bbq-sauce": { name:"Reduce Homemade BBQ Sauce (Side Burner)", cat:"Other", blurb:"Reduce a bold, smoky-sweet BBQ sauce slowly — while the meat sits on the grill.",
     time:"40 min", pit:"side burner – pot, low flame", core:"syrupy", wood:"Gas grill · side burner + pot",
-    ingredients:[{a:"400 g",i:"passata (or ketchup as a base)"},{a:"3 tbsp each",i:"brown sugar, cider vinegar, Worcestershire"},{a:"1–2 tsp each",i:"smoked paprika, mustard, garlic, onion powder, chili, salt"},{a:"2 tbsp",i:"molasses or maple syrup (optional)"}],
+    ingredients:[{a:"400 g",i:"passata (or ketchup as a base)"},{a:"3 tbsp each",i:"brown sugar (36 g), cider vinegar (45 g), Worcestershire (45 g)"},{a:"1–2 tsp each",i:"smoked paprika (2.5–4.5 g), mustard (5–10 g), garlic (3–6 g), onion powder, chili (2–4.5 g), salt (5.5–11 g)"},{a:"2 tbsp (40 g)",i:"molasses or maple syrup (optional)"}],
     phases:[
       {label:"Combine",dur:"5 min",temp:"—",text:"Stir all ingredients together in the pot.",bullets:["Smoked paprika gives the smoky note without a smoker"]},
       {label:"Reduce",dur:"25–35 min",temp:"low flame",text:"Simmer on the side burner over low heat, stirring occasionally, until silky-syrupy.",bullets:["Low, steady heat prevents scorching","It spatters — fill the pot only halfway, set the lid ajar"]},
@@ -2672,7 +2688,7 @@ _en({
     tips:["Sweet version: apple, cinnamon and Calvados.","Vegetarian with goat cheese, pear and walnut."] , proTip:"Tarte flambée needs very high heat and thin dough — crisp in minutes on the preheated stone.", learn:["Preheating the stone","Topping thinly","Baking briefly"]},
   "gegrillte-pfirsiche": { name:"Grilled Peaches with Honey", cat:"Other", blurb:"Caramelized peach halves with honey and yogurt — a lightning-fast grill dessert.",
     time:"15 min", pit:"direct 200 °C", core:"—", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"4",i:"ripe, firm peaches (halved, pitted)"},{a:"2 tbsp + 1 tsp",i:"honey, a little butter, cinnamon"},{a:"to choice",i:"yogurt, mascarpone or vanilla ice cream"}],
+    ingredients:[{a:"4",i:"ripe, firm peaches (halved, pitted)"},{a:"2 tbsp (42 g) + 1 tsp each",i:"honey, a little butter (5 g), cinnamon (2.5 g)"},{a:"to choice",i:"yogurt, mascarpone or vanilla ice cream"}],
     phases:[
       {label:"Prep",dur:"5 min",temp:"—",text:"Brush the cut faces lightly with butter.",bullets:["Firm peaches don't fall apart"]},
       {label:"Grill",dur:"4–6 min",temp:"200 °C",text:"Grill cut-side down until grill marks and caramel form.",bullets:["Not too long — or they fall apart"]},
@@ -2680,7 +2696,7 @@ _en({
     tips:["Also with apricots, pineapple or figs.","A hint of rosemary or thyme is a pleasant surprise."] , proTip:"Peaches cut-side down on the hot grate — the sugar caramelizes into roasted notes, honey only afterwards.", learn:["Halving","Grilling cut-side","Caramelizing","Adding honey"]},
   "camembert-grill": { name:"Grilled Camembert", cat:"Vegetables", blurb:"Creamy melted camembert with honey, nuts and herbs — the perfect little starter.",
     time:"15 min", pit:"indirect 180–200 °C", core:"runny inside", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"1–2",i:"camembert or brie (in a wood-chip box or ramekin)"},{a:"2 tbsp + a handful",i:"honey, walnuts, rosemary, garlic"}],
+    ingredients:[{a:"1–2",i:"camembert or brie (in a wood-chip box or ramekin)"},{a:"2 tbsp (42 g) + a handful",i:"honey, walnuts, rosemary, garlic"}],
     phases:[
       {label:"Prep",dur:"5 min",temp:"—",text:"Score the cheese crosswise on top, stud with garlic and rosemary.",bullets:["In a wooden box or fireproof dish so it doesn't run out"]},
       {label:"Grill indirect",dur:"8–12 min",temp:"180–200 °C, lid closed",text:"Until the cheese is runny inside.",bullets:["Not over direct heat — it runs out otherwise"]},
@@ -2688,7 +2704,7 @@ _en({
     tips:["Vary with cranberries or fig mustard instead of honey.","Keep baguette or toasted bread ready for dipping."] , proTip:"Warm camembert in a wooden box or on foil indirect until it's molten inside but the rind stays intact.", learn:["Scoring the rind","Warming indirect","Hitting the molten core"]},
   "blumenkohl-steak": { name:"Cauliflower Steak off the Grill", cat:"Vegetables", blurb:"Thick cauliflower slices with roasted notes — a filling vegetarian main.",
     time:"30 min", pit:"direct + indirect 200 °C", core:"soft, with bite", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"1",i:"large cauliflower (in 2–3 cm thick slices)"},{a:"4 tbsp + 1 tsp each",i:"olive oil, turmeric, paprika, garlic, salt, pepper"},{a:"to choice",i:"tahini sauce or parmesan to serve"}],
+    ingredients:[{a:"1",i:"large cauliflower (in 2–3 cm thick slices)"},{a:"4 tbsp + 1 tsp each",i:"olive oil (52 g), turmeric (3 g), paprika (2.5 g), garlic (3 g), salt (5.5 g), pepper (2.5 g)"},{a:"to choice",i:"tahini sauce or parmesan to serve"}],
     phases:[
       {label:"Seasoning",dur:"10 min",temp:"—",text:"Brush the slices with spiced oil.",bullets:["Cut from the center — then the slices hold together"]},
       {label:"Roast direct",dur:"4–5 min/side",temp:"200 °C",text:"Give grill marks over direct heat.",bullets:[]},
@@ -2696,14 +2712,14 @@ _en({
     tips:["With tahini-lemon sauce it's Middle-Eastern, with parmesan Mediterranean.","Don't waste the fallen florets — grill them as a side."] , proTip:"Thick center slices hold together — cook indirect first, then direct for roasted flavor.", learn:["Cutting thick","Cooking indirect","Roasted flavor","Seasoning"]},
   "gefuellte-champignons": { name:"Grilled Stuffed Mushrooms", cat:"Vegetables", blurb:"Mushrooms filled with cream cheese, herbs and bacon — a popular snack and side.",
     time:"25 min", pit:"indirect 180–200 °C", core:"—", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"16",i:"large mushrooms (stems removed)"},{a:"200 g + 100 g",i:"cream cheese, grated cheese"},{a:"100 g + 2",i:"diced bacon, spring onions"},{a:"1 tsp each",i:"garlic, parsley, pepper"}],
+    ingredients:[{a:"16",i:"large mushrooms (stems removed)"},{a:"200 g + 100 g",i:"cream cheese, grated cheese"},{a:"100 g + 2",i:"diced bacon, spring onions"},{a:"1 tsp each",i:"garlic (3 g), parsley (1 g), pepper (2.5 g)"}],
     phases:[
       {label:"Filling",dur:"15 min",temp:"—",text:"Mix cream cheese with cheese, bacon, onions and herbs, fill the mushroom caps.",bullets:["Finely chop the stems and mix in"]},
       {label:"Grill",dur:"12–18 min",temp:"180–200 °C, lid closed",text:"Grill indirect until the filling is golden-brown and bubbling.",bullets:["Indirect so they don't burn"]}],
     tips:["Vegetarian: replace the bacon with sun-dried tomatoes.","On a grill tray in case the mushrooms release liquid."] , proTip:"Cook large mushrooms indirect so the filling sets through without releasing water and going soggy.", learn:["Filling","Cooking indirect","Gratinating cheese"]},
   "susskartoffel-grill": { name:"Grilled Sweet Potato Wedges", cat:"Vegetables", blurb:"Spiced sweet potato wedges with paprika and cumin — the better fries alternative.",
     time:"30 min", pit:"indirect → direct 200–220 °C", core:"soft, crisp outside", wood:"Weber kettle or gas grill",
-    ingredients:[{a:"1 kg",i:"sweet potatoes (in wedges)"},{a:"4 tbsp + 1 tsp each",i:"olive oil, paprika, cumin, garlic, salt, chili"}],
+    ingredients:[{a:"1 kg",i:"sweet potatoes (in wedges)"},{a:"4 tbsp + 1 tsp each",i:"olive oil (52 g), paprika (2.5 g), cumin (2 g), garlic (3 g), salt (5.5 g), chili (2 g)"}],
     phases:[
       {label:"Seasoning",dur:"10 min",temp:"—",text:"Toss the wedges with spiced oil.",bullets:["Evenly thick wedges cook evenly"]},
       {label:"Pre-cook indirect",dur:"15–18 min",temp:"200 °C, lid closed",text:"Until they soften inside.",bullets:[]},
@@ -2714,7 +2730,7 @@ _en({
 _en({
   "marinade-bbq-klassik": { name:"BBQ Marinade (Classic)", cat:"Other", blurb:"Sweet-smoky-savory: the all-round marinade for spare ribs, chicken, collar steaks and pulled pork.",
     time:"Soak 4-12 h", pit:"approx. 1-1.5 kg", core:"", wood:"Ketchup \u00b7 Oil \u00b7 Vinegar", yield:"approx. 250 ml",
-    ingredients:[{a:"6 tbsp",i:"ketchup or passata"},{a:"3 tbsp",i:"brown sugar or honey"},{a:"3 tbsp",i:"cider vinegar"},{a:"2 tbsp",i:"oil"},{a:"2 tbsp",i:"Worcestershire sauce"},{a:"1 tsp each",i:"smoked paprika, mustard, garlic, onion powder, salt, pepper"}],
+    ingredients:[{a:"6 tbsp (102 g)",i:"ketchup or passata"},{a:"3 tbsp (36 g)",i:"brown sugar or honey"},{a:"3 tbsp (45 g)",i:"cider vinegar"},{a:"2 tbsp (26 g)",i:"oil"},{a:"2 tbsp (30 g)",i:"Worcestershire sauce"},{a:"1 tsp each",i:"smoked paprika (2.5 g), mustard (5 g), garlic (3 g), onion powder, salt (5.5 g), pepper (2.5 g)"}],
     phases:[
       {label:"Combine",dur:"5 min",temp:"-",text:"Stir all ingredients smooth.",bullets:["Smoked paprika gives the BBQ note"]},
       {label:"Marinate",dur:"4-12 h",temp:"fridge",text:"Coat the meat all over, let it soak covered.",bullets:["Overnight = the most intense flavor"]},
@@ -2725,7 +2741,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the Japanese teriyaki tradition.",
     time:"Soak 1-8 h", pit:"approx. 1 kg", core:"", wood:"Soy sauce \u00b7 Mirin", yield:"approx. 200 ml",
-    ingredients:[{a:"6 tbsp",i:"soy sauce"},{a:"3 tbsp",i:"mirin (or honey + a splash of rice vinegar)"},{a:"2 tbsp",i:"brown sugar"},{a:"1 tbsp",i:"sesame oil"},{a:"1 tsp each",i:"fresh ginger, garlic (grated)"},{a:"optional",i:"sesame, spring onion"}],
+    ingredients:[{a:"6 tbsp (96 g)",i:"soy sauce"},{a:"3 tbsp (63 g)",i:"mirin (or honey + a splash of rice vinegar)"},{a:"2 tbsp (24 g)",i:"brown sugar"},{a:"1 tbsp (13 g)",i:"sesame oil"},{a:"1 tsp each",i:"fresh ginger (2 g), garlic (grated) (3 g)"},{a:"optional",i:"sesame, spring onion"}],
     phases:[
       {label:"Combine",dur:"5 min",temp:"-",text:"Stir until the sugar dissolves.",bullets:[]},
       {label:"Marinate",dur:"1-8 h",temp:"fridge",text:"Soak meat/tofu. Fish only briefly (max. 1 h).",bullets:["Soy cooks fish - don't marinate too long"]},
@@ -2733,7 +2749,7 @@ _en({
     tips:["Reduced with a little cornstarch, it becomes a thick glaze.","Brilliant for salmon, chicken legs and vegetable skewers."] },
   "marinade-mediterran": { name:"Mediterranean Herb-Garlic Marinade", cat:"Game & Lamb", blurb:"Olive oil, lemon and plenty of herbs - for lamb, chicken, halloumi and grilled vegetables.",
     time:"Soak 2-12 h", pit:"approx. 1 kg", core:"", wood:"Olive oil \u00b7 Lemon", yield:"approx. 200 ml",
-    ingredients:[{a:"8 tbsp",i:"olive oil"},{a:"3 tbsp",i:"lemon juice"},{a:"3",i:"garlic cloves (pressed)"},{a:"1 tbsp each",i:"rosemary, thyme, oregano (freshly chopped)"},{a:"1 tsp each",i:"sea salt, pepper, lemon zest"}],
+    ingredients:[{a:"8 tbsp (104 g)",i:"olive oil"},{a:"3 tbsp (45 g)",i:"lemon juice"},{a:"3",i:"garlic cloves (pressed)"},{a:"1 tbsp each",i:"rosemary (3 g), thyme (3 g), oregano (freshly chopped) (3 g)"},{a:"1 tsp each",i:"sea salt (5.5 g), pepper (2.5 g), lemon zest (2 g)"}],
     phases:[
       {label:"Combine",dur:"5 min",temp:"-",text:"Whisk oil with lemon, garlic and herbs.",bullets:[]},
       {label:"Marinate",dur:"2-12 h",temp:"fridge",text:"Rub all over the meat or vegetables.",bullets:["Lamb tolerates long marinating times"]},
@@ -2744,7 +2760,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the Indian tandoori tradition.",
     time:"Soak 4-24 h", pit:"approx. 1 kg", core:"", wood:"Yogurt", yield:"approx. 300 ml",
-    ingredients:[{a:"250 g",i:"plain yogurt (full-fat)"},{a:"2 tbsp",i:"lemon juice"},{a:"2 tbsp",i:"oil"},{a:"1 tsp each",i:"garam masala, cumin, paprika, turmeric, ginger, garlic, chili, salt"}],
+    ingredients:[{a:"250 g",i:"plain yogurt (full-fat)"},{a:"2 tbsp (30 g)",i:"lemon juice"},{a:"2 tbsp (26 g)",i:"oil"},{a:"1 tsp each",i:"garam masala (3 g), cumin (2 g), paprika (2.5 g), turmeric (3 g), ginger (2 g), garlic (3 g), chili (2 g), salt (5.5 g)"}],
     phases:[
       {label:"Combine",dur:"5 min",temp:"-",text:"Stir the yogurt with all the spices.",bullets:["Toast the spices in oil briefly = more aroma (optional)"]},
       {label:"Marinate",dur:"4-24 h",temp:"fridge",text:"Score the poultry several times and turn in the marinade.",bullets:["The cuts let the marinade soak in deeper","Lactic acid tenderizes the meat"]},
@@ -2752,7 +2768,7 @@ _en({
     tips:["Yogurt marinades are the best tenderizer for chicken.","Classic for tandoori chicken and chicken skewers (tikka)."] },
   "marinade-bier-senf": { name:"Beer-Mustard Marinade", cat:"Pork", blurb:"Hearty-malty with mustard and honey - the robust marinade for pork collar, hock and bratwurst.",
     time:"Soak 3-12 h", pit:"approx. 1-1.5 kg", core:"", wood:"Beer \u00b7 Mustard", yield:"approx. 250 ml",
-    ingredients:[{a:"150 ml",i:"dark beer (malt beer for sweeter)"},{a:"3 tbsp",i:"medium-hot mustard"},{a:"2 tbsp",i:"honey"},{a:"2 tbsp",i:"oil"},{a:"1 tsp each",i:"garlic, caraway, paprika, salt, pepper"}],
+    ingredients:[{a:"150 ml",i:"dark beer (malt beer for sweeter)"},{a:"3 tbsp (45 g)",i:"medium-hot mustard"},{a:"2 tbsp (42 g)",i:"honey"},{a:"2 tbsp (26 g)",i:"oil"},{a:"1 tsp each",i:"garlic (3 g), caraway (2 g), paprika (2.5 g), salt (5.5 g), pepper (2.5 g)"}],
     phases:[
       {label:"Combine",dur:"5 min",temp:"-",text:"Stir all ingredients smooth.",bullets:[]},
       {label:"Marinate",dur:"3-12 h",temp:"fridge",text:"Soak the meat, turning occasionally.",bullets:[]},
@@ -2760,7 +2776,7 @@ _en({
     tips:["Boil the leftover marinade and serve as a sauce.","Pairs excellently with anything hearty from the pig."] },
   "marinade-zitrus": { name:"Citrus-Herb Marinade (Fish)", cat:"Fish", blurb:"Fresh and light with lemon, lime and dill - for fish fillets, prawns and calamari. Marinate only briefly!",
     time:"Soak 15-60 min", pit:"approx. 800 g", core:"", wood:"Lemon \u00b7 Olive oil", yield:"approx. 150 ml",
-    ingredients:[{a:"5 tbsp",i:"olive oil"},{a:"2 tbsp each",i:"lemon and lime juice"},{a:"1",i:"garlic clove (fine)"},{a:"1 tbsp each",i:"dill, parsley (chopped)"},{a:"1 tsp each",i:"lemon zest, sea salt, pepper"}],
+    ingredients:[{a:"5 tbsp (65 g)",i:"olive oil"},{a:"2 tbsp each (30 g)",i:"lemon and lime juice"},{a:"1",i:"garlic clove (fine)"},{a:"1 tbsp each",i:"dill (3 g), parsley (chopped) (3 g)"},{a:"1 tsp each",i:"lemon zest (2 g), sea salt (5.5 g), pepper (2.5 g)"}],
     phases:[
       {label:"Combine",dur:"5 min",temp:"-",text:"Whisk oil, juices, herbs and spices.",bullets:[]},
       {label:"Marinate briefly",dur:"15-60 min",temp:"fridge",text:"Soak the fish only briefly.",bullets:["Acid cooks the fish - never longer than 1 h","30 min is enough for prawns"]},
@@ -2771,7 +2787,7 @@ _en({
     authenticity:9,
     authenticityNote:"Follows the Argentine tradition.",
     time:"Soak 30 min - 4 h", pit:"approx. 1 kg", core:"", wood:"Parsley \u00b7 Oil \u00b7 Vinegar", yield:"approx. 200 ml",
-    ingredients:[{a:"1 bunch",i:"flat-leaf parsley (finely chopped)"},{a:"8 tbsp",i:"olive oil"},{a:"3 tbsp",i:"red wine vinegar"},{a:"3",i:"garlic cloves (fine)"},{a:"1 tsp each",i:"oregano, chili flakes, sea salt, pepper"}],
+    ingredients:[{a:"1 bunch",i:"flat-leaf parsley (finely chopped)"},{a:"8 tbsp (104 g)",i:"olive oil"},{a:"3 tbsp (45 g)",i:"red wine vinegar"},{a:"3",i:"garlic cloves (fine)"},{a:"1 tsp each",i:"oregano (1 g), chili flakes (2 g), sea salt (5.5 g), pepper (2.5 g)"}],
     phases:[
       {label:"Mix",dur:"10 min",temp:"-",text:"Combine everything, let it sit 30 min so the flavors marry.",bullets:["Don't puree - coarsely chopped is authentic"]},
       {label:"Marinate",dur:"30 min - 4 h",temp:"fridge",text:"Turn the steak in half the chimichurri, save the rest.",bullets:[]},
@@ -2779,7 +2795,7 @@ _en({
     tips:["The double use - marinade and dip - makes chimichurri unbeatable.","Keeps over a week in a jar covered with oil."] },
   "marinade-honig-senf": { name:"Honey-Mustard Marinade", cat:"Poultry & Pork", blurb:"Sweet-savory and simply irresistible - for chicken legs, spare ribs and pork tenderloin.",
     time:"Soak 2-12 h", pit:"approx. 1 kg", core:"", wood:"Honey \u00b7 Mustard", yield:"approx. 200 ml",
-    ingredients:[{a:"4 tbsp",i:"honey"},{a:"3 tbsp",i:"medium-hot mustard"},{a:"1 tbsp",i:"grainy mustard (Dijon)"},{a:"3 tbsp",i:"oil"},{a:"1 tbsp",i:"cider vinegar"},{a:"1 tsp each",i:"garlic, paprika, salt, pepper"}],
+    ingredients:[{a:"4 tbsp (84 g)",i:"honey"},{a:"3 tbsp (45 g)",i:"medium-hot mustard"},{a:"1 tbsp (15 g)",i:"grainy mustard (Dijon)"},{a:"3 tbsp (39 g)",i:"oil"},{a:"1 tbsp (15 g)",i:"cider vinegar"},{a:"1 tsp each",i:"garlic (3 g), paprika (2.5 g), salt (5.5 g), pepper (2.5 g)"}],
     phases:[
       {label:"Combine",dur:"5 min",temp:"-",text:"Stir honey, mustard, oil and vinegar smooth.",bullets:[]},
       {label:"Marinate",dur:"2-12 h",temp:"fridge",text:"Coat the meat, let it soak.",bullets:[]},
@@ -2790,14 +2806,14 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the Texan BBQ tradition.",
     time:"Mop during cooking", pit:"approx. 2-4 kg", core:"", wood:"Whiskey \u00b7 Broth", yield:"approx. 400 ml",
-    ingredients:[{a:"150 ml",i:"beef broth"},{a:"4 tbsp",i:"bourbon whiskey"},{a:"4 tbsp",i:"cider vinegar"},{a:"2 tbsp",i:"Worcestershire sauce"},{a:"2 tbsp",i:"oil"},{a:"1 tsp each",i:"smoked paprika, garlic, pepper, salt"}],
+    ingredients:[{a:"150 ml",i:"beef broth"},{a:"4 tbsp (60 g)",i:"bourbon whiskey"},{a:"4 tbsp (60 g)",i:"cider vinegar"},{a:"2 tbsp (30 g)",i:"Worcestershire sauce"},{a:"2 tbsp (26 g)",i:"oil"},{a:"1 tsp each",i:"smoked paprika (2.5 g), garlic (3 g), pepper (2.5 g), salt (5.5 g)"}],
     phases:[
       {label:"Combine",dur:"5 min",temp:"-",text:"Stir all ingredients (keep warm).",bullets:["Thin - no sugar, so it doesn't burn"]},
       {label:"Mop",dur:"hourly",temp:"during smoking",text:"From the 3rd hour, brush large cuts with the mop every hour.",bullets:["Moisture helps the smoke cling","Clean mop brush or swab"]}],
     tips:["A mop is not a marinade - it's applied DURING cooking.","Classic for brisket, beef ribs and spare ribs on the WSM."] },
   "marinade-buttermilch": { name:"Buttermilk Marinade (Tender Poultry)", cat:"Poultry", blurb:"The secret to tender roast chicken and fried chicken - buttermilk makes the meat incredibly juicy.",
     time:"Soak 4-24 h", pit:"approx. 1-1.5 kg", core:"", wood:"Buttermilk", yield:"approx. 500 ml",
-    ingredients:[{a:"500 ml",i:"buttermilk"},{a:"1 tbsp",i:"salt"},{a:"1 tsp each",i:"garlic, paprika, pepper, cayenne, sugar"},{a:"optional",i:"a little Tabasco"}],
+    ingredients:[{a:"500 ml",i:"buttermilk"},{a:"1 tbsp (16 g)",i:"salt"},{a:"1 tsp each",i:"garlic (3 g), paprika (2.5 g), pepper (2.5 g), cayenne (2 g), sugar (4 g)"},{a:"optional",i:"a little Tabasco"}],
     phases:[
       {label:"Combine",dur:"5 min",temp:"-",text:"Stir the buttermilk with salt and spices.",bullets:["The salt here doubles as a brine"]},
       {label:"Marinate",dur:"4-24 h",temp:"fridge",text:"Fully submerge the poultry in the buttermilk.",bullets:["Overnight is ideal","Acid and salt tenderize and season through"]},
@@ -2808,7 +2824,7 @@ _en({
     authenticity:8.5,
     authenticityNote:"Follows the Korean bulgogi tradition.",
     time:"Soak 2-12 h", pit:"approx. 1 kg", core:"", wood:"Soy sauce \u00b7 Pear", yield:"approx. 250 ml",
-    ingredients:[{a:"6 tbsp",i:"soy sauce"},{a:"\u00bd",i:"pear or apple (grated - tenderizes)"},{a:"3 tbsp",i:"brown sugar or honey"},{a:"2 tbsp",i:"sesame oil"},{a:"1 tbsp each",i:"garlic, ginger, toasted sesame"},{a:"2",i:"spring onions"}],
+    ingredients:[{a:"6 tbsp (96 g)",i:"soy sauce"},{a:"\u00bd",i:"pear or apple (grated - tenderizes)"},{a:"3 tbsp (36 g)",i:"brown sugar or honey"},{a:"2 tbsp (26 g)",i:"sesame oil"},{a:"1 tbsp each",i:"garlic (9 g), ginger (5.5 g), toasted sesame (9 g)"},{a:"2",i:"spring onions"}],
     phases:[
       {label:"Combine",dur:"10 min",temp:"-",text:"Grate the pear, stir with all ingredients.",bullets:["The pear's enzymes make the meat especially tender"]},
       {label:"Marinate",dur:"2-12 h",temp:"fridge",text:"Soak thinly sliced beef (or pork).",bullets:["Slice very thin (cut while partly frozen)"]},
@@ -2816,7 +2832,7 @@ _en({
     tips:["Classic with rice, lettuce leaves for wrapping and kimchi.","Also excellent with pork collar (dwaeji bulgogi)."] },
   "marinade-rotwein-wild": { name:"Red Wine-Juniper Marinade (Game)", cat:"Game & Lamb", blurb:"Bold and aromatic - the classic marinade for roe deer, red deer and wild boar, mellowing the gamey taste.",
     time:"Soak 12-48 h", pit:"approx. 1.5 kg", core:"", wood:"Red wine \u00b7 Juniper", yield:"approx. 500 ml",
-    ingredients:[{a:"400 ml",i:"bold red wine"},{a:"4 tbsp",i:"oil"},{a:"2 tbsp",i:"red wine vinegar"},{a:"1",i:"onion, 2 garlic cloves, 1 carrot (coarse)"},{a:"1 tsp each",i:"juniper berries, peppercorns, bay, thyme, allspice"}],
+    ingredients:[{a:"400 ml",i:"bold red wine"},{a:"4 tbsp (52 g)",i:"oil"},{a:"2 tbsp (30 g)",i:"red wine vinegar"},{a:"1",i:"onion, 2 garlic cloves, 1 carrot (coarse)"},{a:"1 tsp each",i:"juniper berries (2.5 g), peppercorns (3 g), bay (1 leaf), thyme (1 g), allspice (2.5 g)"}],
     phases:[
       {label:"Make the marinade",dur:"10 min",temp:"-",text:"Stir wine, oil, vinegar, vegetables and spices.",bullets:["Lightly crush the spices for more aroma"]},
       {label:"Marinate",dur:"12-48 h",temp:"fridge",text:"Fully submerge the game in the marinade, turn daily.",bullets:["A long marinade mellows a strong gamey taste","Keep fully covered"]},
@@ -2827,7 +2843,7 @@ _en({
 _en({
   "kochschinken": { name:"Classic Cooked Ham (Kochschinken)", cat:"Ham", blurb:"Juicy, tender cooked ham from the pork leg, wet-cured and gently cooked — perfect for cold cuts and sandwiches.",
     time:"10–12 days (8 days curing, 3–4 h cooking, 1 day chilling)", pit:"75–80 °C / 167–176 °F", core:"68–70 °C / 154–158 °F", wood:"—", yield:"approx. 2.5 kg finished ham",
-    ingredients:[{a:"3 kg",i:"Boneless pork leg (top round or knuckle)"},{a:"3 L",i:"Water (cold)"},{a:"270 g",i:"Sea salt"},{a:"75 g",i:"Curing salt (nitrite, 0.4–0.5% NPS)"},{a:"50 g",i:"Sugar"},{a:"3",i:"Bay leaves"},{a:"10",i:"Juniper berries"},{a:"5",i:"Allspice berries"},{a:"2 tsp",i:"Black peppercorns"},{a:"4",i:"Garlic cloves (crushed)"}],
+    ingredients:[{a:"3 kg",i:"Boneless pork leg (top round or knuckle)"},{a:"3 L",i:"Water (cold)"},{a:"270 g",i:"Sea salt"},{a:"75 g",i:"Curing salt (nitrite, 0.4–0.5% NPS)"},{a:"50 g",i:"Sugar"},{a:"3",i:"Bay leaves"},{a:"10",i:"Juniper berries"},{a:"5",i:"Allspice berries"},{a:"6 g",i:"Black peppercorns"},{a:"4",i:"Garlic cloves (crushed)"}],
     phases:[
       {label:"Prepare the meat",dur:"30 min",temp:"4 °C / 39 °F",text:"Trim the pork leg: remove excess fat and silver skin. The meat should be compact and even.",bullets:["Wash and pat the meat thoroughly dry","Tie large pieces if needed to keep their shape","Note the weight for the curing-salt calculation"]},
       {label:"Make the brine",dur:"20 min",temp:"room temperature",text:"Prepare the curing brine: dissolve all ingredients fully in cold water and chill below 4 °C.",bullets:["Dissolve salt, curing salt and sugar in the water","Add the spices","Let the brine cool completely (fridge)"]},
@@ -2839,7 +2855,7 @@ _en({
     tips:["For more aroma: add 1 tsp coriander seeds or mustard seeds to the brine","Don't exceed the core temperature — the ham would turn dry and stringy","Vacuum-sealed the ham keeps about 2–3 weeks in the fridge","Once cut, use within 5–7 days","For a finer texture: inject the meat evenly with a brine syringe before curing","SAFETY:","- Dose curing salt precisely (0.4–0.5% of the meat weight) — too much is harmful, too little won't protect against botulism","- Keep the curing temperature constant at 2–4 °C — higher risks spoilage and bacterial growth","- A core temperature of at least 68 °C is mandatory to kill parasites and pathogens","- Absolute kitchen hygiene: clean containers, tools and hands thoroughly — avoid cross-contamination","- Cool the meat quickly after cooking (don't leave it at room temperature) and store cold"] },
   "hinterschinken-gekocht": { name:"Cooked Leg Ham (Hinterschinken)", cat:"Ham", blurb:"Classic, tender-pink cooked ham from the pork leg, wet-cured and then cooked in a water bath.",
     time:"7–10 days", pit:"75–80 °C / 167–176 °F", core:"68–70 °C / 154–158 °F", wood:"beech", yield:"approx. 3–4 kg finished ham",
-    ingredients:[{a:"4 kg",i:"Pork leg (top round or knuckle), boned and trimmed"},{a:"4 L",i:"Water (boiled and cooled)"},{a:"400 g",i:"Sea salt"},{a:"100 g",i:"Curing salt (nitrite, 0.4–0.5% of the meat weight)"},{a:"80 g",i:"Sugar"},{a:"15 g",i:"Curing aid (ascorbic acid/erythorbate)"},{a:"4",i:"Bay leaves"},{a:"10",i:"Juniper berries"},{a:"1 tsp",i:"Allspice berries"},{a:"5",i:"Cloves"},{a:"2",i:"Garlic cloves, crushed"}],
+    ingredients:[{a:"4 kg",i:"Pork leg (top round or knuckle), boned and trimmed"},{a:"4 L",i:"Water (boiled and cooled)"},{a:"400 g",i:"Sea salt"},{a:"100 g",i:"Curing salt (nitrite, 0.4–0.5% of the meat weight)"},{a:"80 g",i:"Sugar"},{a:"15 g",i:"Curing aid (ascorbic acid/erythorbate)"},{a:"4",i:"Bay leaves"},{a:"10",i:"Juniper berries"},{a:"2.5 g",i:"Allspice berries, ground"},{a:"5",i:"Cloves"},{a:"2",i:"Garlic cloves, crushed"}],
     phases:[
       {label:"Preparation",dur:"30 min",temp:"4 °C / 39 °F",text:"Trim the meat and portion into manageable pieces of max. 2 kg.",bullets:["Remove excess fat and sinew","Cut into even pieces for even curing","Wash and pat the meat thoroughly dry","Chill all ingredients and containers"]},
       {label:"Make the brine",dur:"20 min",temp:"room temperature",text:"Prepare the curing brine and let it cool completely.",bullets:["Boil the water with salt, curing salt, sugar and spices","Stir in the curing aid until fully dissolved","Cool the brine completely below 4 °C","Check the salt level: a raw egg should float"]},
@@ -2852,4 +2868,6 @@ _en({
     tips:["Keep meat pieces no thicker than 15 cm for even curing","Use accurate scales for the curing salt — precise dosing is critical","The brine can be reused 2–3× after boiling (store cold)","Vacuum-sealed the ham keeps 2–3 weeks in the fridge","For a firmer texture: dry for 12 h before cooking","A core-temperature probe is mandatory for a perfect result","Slice only after fully chilling for clean slices","SAFETY:","- Dose curing salt exactly per recipe (0.4–0.5% of the meat weight): overdosing is harmful, underdosing risks botulism","- Keep the curing temperature constant at 2–4 °C — never above 4 °C to prevent bacterial growth","- Reaching a core temperature of at least 68 °C is mandatory to kill pathogens","- Use clean, sanitized containers and tools — avoid cross-contamination","- After cooking, cool quickly below 4 °C (no longer than 2 h at room temperature)","- Never eat this cured meat raw — it is a scalded product and must be cooked through"] },
 });
 
-_en({"zupfbrot-kraeuterbutter":{"name":"Pull-Apart Bread with Herb Garlic Butter","cat":"Side","blurb":"Moist yeast bread layered with aromatic herb butter, perfect for sharing at the grill.","time":"3 hours (incl. proofing)","pit":"180–200 °C indirect","core":"","wood":"Optional: hickory or beech for a light smoky note","yield":"1 loaf for 6–8 people","ingredients":[{"a":"500 g","i":"wheat flour (type 550 / all-purpose)"},{"a":"1 sachet","i":"dry yeast (7 g)"},{"a":"1 tsp","i":"sugar"},{"a":"1 tsp","i":"salt"},{"a":"300 ml","i":"lukewarm water"},{"a":"3 tbsp","i":"olive oil"},{"a":"150 g","i":"soft butter"},{"a":"4 cloves","i":"garlic, finely chopped"},{"a":"3 tbsp","i":"fresh parsley, chopped"},{"a":"2 tbsp","i":"chives, chopped"},{"a":"1 tsp","i":"rosemary, finely chopped"},{"a":"0.5 tsp","i":"salt"},{"a":"0.5 tsp","i":"black pepper"},{"a":"100 g","i":"Emmental or Gouda, grated"}],"phases":[{"label":"Prepare dough","kind":"prep","dur":"15 min","temp":"room temp","text":"Make a yeast dough and let it rise.","bullets":["Mix flour, yeast, sugar and salt in a bowl","Add water and olive oil, knead into a smooth dough (8–10 min)","Cover and let rise in a warm spot for 60 min until doubled"]},{"label":"Make herb butter","kind":"prep","dur":"10 min","temp":"room temp","text":"Prepare the aromatic filling.","bullets":["Mix soft butter with garlic, all herbs, salt and pepper","Chill until needed"]},{"label":"Shape the loaf","kind":"prep","dur":"20 min","temp":"room temp","text":"Portion the dough and layer with the filling.","bullets":["Roll out the dough (approx. 30×40 cm)","Cut into 5×5 cm squares","Spread each square with herb butter and sprinkle with cheese","Stack the squares upright in a greased loaf tin (25 cm)","Proof for another 30 min"]},{"label":"Indirect grilling","kind":"indirect","dur":"35–40 min","temp":"180–200 °C","text":"Bake the bread on the grill until golden.","bullets":["Set up the kettle for indirect heat (coals on one side)","Optional: a handful of soaked smoking wood for a subtle smoky note","Place the tin on the indirect zone","Close the lid, vents half open","Bake 35–40 min until golden and cooked through","Tap test: the loaf sounds hollow when done"]},{"label":"Rest and serve","kind":"rest","dur":"10 min","temp":"room temp","text":"Let the bread cool briefly.","bullets":["Turn out of the tin","Cool for 10 min","Serve warm for pulling apart"]}],"tips":["For extra flavor, brush with melted herb butter after 20 min","Vary the cheese: Parmesan, mozzarella or cheddar all work","On a gas grill: burners on one side at medium, tin on the other side","Make ahead: let the dough rise overnight in the fridge for deeper flavor","Wrap in foil if the top browns too fast","SAFETY:","- The bread must be fully baked — do the tap test and check for raw dough","- Herb butter with raw garlic should be used within 2–3 days (botulism risk at room temperature)","- Keeps max. 2 days at room temperature, then refrigerate or freeze","- Keep hands and surfaces clean when kneading to avoid cross-contamination"]},"beilage-pap-sous":{"name":"Pap met Sous","cat":"Side","blurb":"Creamy maize porridge with a spiced tomato-onion sauce — the classic partner to a South African braai.","time":"30 minutes","pit":"Stove / side burner","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"250 g","i":"maize meal (mieliemeel)"},{"a":"750 ml","i":"water"},{"a":"1 tsp","i":"salt"},{"a":"2","i":"onions, diced"},{"a":"400 g","i":"tomatoes, chopped"},{"a":"1 tsp","i":"sugar"},{"a":"","i":"chili to taste"},{"a":"2 tbsp","i":"oil"}],"phases":[{"label":"Cook the pap","kind":"cook","dur":"25 min","temp":"stove, medium heat","text":"Stir the maize meal into boiling salted water and let it swell.","bullets":["Bring salted water to a boil","Rain in the maize meal while stirring","Cover and let swell 20 min on low heat","Stir regularly or the porridge will stick"]},{"label":"Make the sous","kind":"cook","dur":"15 min","temp":"stove, medium heat","text":"Simmer the spiced tomato-onion sauce alongside.","bullets":["Sauté the onions in oil until translucent","Add tomatoes, sugar and chili","Simmer uncovered 10 min, season with salt"]},{"label":"Serve","kind":"finish","dur":"5 min","temp":"","text":"Plate the pap and spoon the sauce generously over it.","bullets":["The pap should be creamy but hold its shape","Serve the sous hot on top"]}],"tips":["Slice leftover pap the next day and crisp it on the grill","Use less water for krummelpap (crumbly style)"]},"beilage-coleslaw":{"name":"Coleslaw","cat":"Side","blurb":"Crisp cabbage slaw in a creamy dressing — the classic BBQ companion.","time":"20 min + 1 h resting","pit":"No-cook","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"½","i":"white cabbage, finely shredded"},{"a":"2","i":"carrots, grated"},{"a":"150 g","i":"mayonnaise"},{"a":"1 tbsp","i":"apple cider vinegar"},{"a":"1 tsp","i":"sugar"},{"a":"","i":"salt, pepper"}],"phases":[{"label":"Prepare","kind":"prep","dur":"20 min","temp":"","text":"Shred the vegetables and mix the dressing.","bullets":["Shred cabbage finely, grate the carrots","Whisk mayonnaise, vinegar, sugar, salt and pepper","Fold the dressing into the vegetables"]},{"label":"Rest","kind":"marinate","dur":"1 h","temp":"4 °C","text":"Chill so the dressing soaks in and the cabbage softens slightly.","bullets":["Cover and refrigerate","Season again before serving"]}],"tips":["For extra crunch, salt the cabbage only just before serving","A grated apple adds fresh sweetness","Keeps 2 days covered in the fridge"]},"beilage-kartoffelsalat":{"name":"Warm German Potato Salad","cat":"Side","blurb":"Smoky, tangy potato salad with a bacon vinegar-oil dressing, served warm.","time":"40 minutes","pit":"Stove","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"1 kg","i":"waxy potatoes"},{"a":"150 g","i":"diced bacon"},{"a":"1","i":"onion, finely diced"},{"a":"400 ml","i":"stock"},{"a":"3 tbsp","i":"white wine vinegar"},{"a":"1 tsp","i":"mustard"},{"a":"","i":"salt, pepper"}],"phases":[{"label":"Cook potatoes","kind":"cook","dur":"25 min","temp":"stove","text":"Boil the potatoes in their skins, peel while warm and slice.","bullets":["Use a waxy variety","Peel warm — easier, and the slices absorb the dressing better"]},{"label":"Dressing","kind":"cook","dur":"10 min","temp":"stove","text":"Render the bacon, sweat the onion, bring to a boil with stock, vinegar and mustard.","bullets":["Render the bacon until crisp","Sauté the onion in the bacon fat","Add stock, vinegar and mustard and bring to a boil"]},{"label":"Combine & rest","kind":"finish","dur":"10 min","temp":"keep warm","text":"Pour the hot dressing over the potatoes and let it soak in warm.","bullets":["Toss gently, don't break the slices","Serve warm"]}],"tips":["Potatoes absorb the dressing best while still warm","Serve with chives","Best lukewarm — not piping hot"]},"beilage-chakalaka":{"name":"Chakalaka","cat":"Side","blurb":"A spicy South African vegetable relish with beans — the classic braai side.","time":"25 minutes","pit":"Stove / side burner","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"1","i":"onion, diced"},{"a":"2","i":"bell peppers, diced"},{"a":"2","i":"carrots, grated"},{"a":"400 g","i":"tomatoes, chopped"},{"a":"400 g","i":"beans (canned, drained)"},{"a":"1 tsp","i":"curry powder"},{"a":"","i":"chili and ginger to taste"},{"a":"2 tbsp","i":"oil"}],"phases":[{"label":"Sauté","kind":"cook","dur":"10 min","temp":"stove, medium heat","text":"Sauté the vegetables and toast the spices.","bullets":["Sauté onion, peppers and carrots in oil","Add curry, chili and ginger and toast briefly — it opens up the flavors"]},{"label":"Simmer","kind":"cook","dur":"15 min","temp":"stove, low heat","text":"Add tomatoes and beans and simmer uncovered.","bullets":["Simmer uncovered until the sauce thickens","Season with salt"]}],"tips":["Tastes even better the next day once the spices settle","Serve cold with a braai or warm with pap","Control the heat via the amount of chili"]},"beilage-baked-beans":{"name":"Baked Beans","cat":"Side","blurb":"Sweet, smoky beans in a thick tomato-bacon sauce — the classic Southern BBQ side.","time":"15 min + 1.5 h","pit":"150 °C indirect","core":"","wood":"Optional: a little beech or hickory","yield":"Serves 4","ingredients":[{"a":"800 g","i":"white beans (canned, drained)"},{"a":"100 g","i":"diced bacon"},{"a":"1","i":"onion, diced"},{"a":"200 g","i":"tomato sauce"},{"a":"2 tbsp","i":"brown sugar"},{"a":"1 tbsp","i":"Worcestershire sauce"},{"a":"1 tsp","i":"smoked paprika"}],"phases":[{"label":"Base","kind":"prep","dur":"15 min","temp":"stove","text":"Render the bacon, sweat the onion, stir everything together.","bullets":["Render the bacon until crisp","Sweat the onion in the bacon fat","Stir in beans, tomato sauce, sugar, Worcestershire and smoked paprika"]},{"label":"Reduce","kind":"indirect","dur":"1.5 h","temp":"150 °C","text":"Reduce uncovered in the oven or smoker until thick.","bullets":["Use a baking dish or cast-iron pan","Cook alongside the meat in the smoker — picks up extra smoke","Done when the sauce is thick and glossy"]}],"tips":["Place under the meat in the smoker — dripping juices season them (a classic!)","Freeze leftovers — they keep beautifully","A splash of BBQ sauce rounds them off"]},"beilage-cornbread":{"name":"Cornbread","cat":"Side","blurb":"Slightly sweet corn bread, moist and crisp-edged from a cast-iron skillet.","time":"15 min + 25 min baking","pit":"200 °C indirect","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"200 g","i":"cornmeal"},{"a":"100 g","i":"flour"},{"a":"2 tbsp","i":"sugar"},{"a":"2 tsp","i":"baking powder"},{"a":"250 ml","i":"buttermilk"},{"a":"1","i":"egg"},{"a":"60 g","i":"butter, melted"},{"a":"1 pinch","i":"salt"}],"phases":[{"label":"Batter","kind":"prep","dur":"15 min","temp":"","text":"Mix dry and wet ingredients separately, then combine briefly.","bullets":["Don't overmix — the bread turns tough","Preheat the cast-iron skillet in the grill/oven meanwhile"]},{"label":"Bake","kind":"indirect","dur":"25 min","temp":"200 °C","text":"Pour the batter into the hot, greased skillet and bake until golden.","bullets":["The hot skillet gives the crisp bottom crust","Skewer test: comes out clean when done"]}],"tips":["Preheat the skillet — it gives a crisp bottom crust","Serve with honey butter","Jalapeños or corn kernels in the batter are classic variations"]},"beilage-kartoffelgratin":{"name":"Gratin Dauphinois","cat":"Side","blurb":"Thinly sliced potatoes layered in cream and garlic, baked until golden.","time":"20 min + 1 h baking","pit":"160 °C indirect","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"1 kg","i":"potatoes, thinly sliced"},{"a":"400 ml","i":"cream"},{"a":"150 ml","i":"milk"},{"a":"2","i":"garlic cloves"},{"a":"","i":"salt, pepper, nutmeg"},{"a":"","i":"butter for the dish"}],"phases":[{"label":"Layer","kind":"prep","dur":"20 min","temp":"","text":"Slice the potatoes paper-thin and layer in the buttered dish.","bullets":["Paper-thin slices (use a mandoline!) cook evenly","Mix cream, milk, crushed garlic and seasoning and pour over"]},{"label":"Bake","kind":"indirect","dur":"1 h","temp":"160 °C","text":"Bake until the potatoes are tender and the top is golden.","bullets":["Knife test: slides in without resistance","Cover with foil if the top browns too fast","Rest 10 min — it slices cleanly then"]}],"tips":["Don't rinse the potatoes — the starch binds the cream","Waxy varieties hold their structure","The original has no cheese; with Gruyère it becomes a gratin savoyard"]},"beilage-yorkshire-pudding":{"name":"Yorkshire Pudding","cat":"Side","blurb":"Light, crisp savory batter puffs — the English classic alongside a Sunday roast.","time":"10 min + 20 min baking + 30 min batter rest","pit":"220 °C","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"140 g","i":"flour"},{"a":"4","i":"eggs"},{"a":"200 ml","i":"milk"},{"a":"1 pinch","i":"salt"},{"a":"","i":"vegetable oil or beef fat for the tin"}],"phases":[{"label":"Batter","kind":"prep","dur":"10 min + 30 min rest","temp":"room temp","text":"Whisk a thin batter and let it rest.","bullets":["Whisk flour, eggs, milk and salt until smooth","Rest 30 min — the gluten relaxes"]},{"label":"Bake","kind":"cook","dur":"20 min","temp":"220 °C","text":"Pour the batter into smoking-hot fat and bake without opening the door.","bullets":["Heat the oiled muffin tin until the fat almost smokes","Pour in the batter quickly","Do NOT open the door for 20 min — or the puddings collapse"]}],"tips":["Fat and tin must be searing hot — that is what makes the pudding rise","Serve classically with gravy","Re-crisp leftovers briefly the next day"]},"beilage-krautsalat":{"name":"Austrian Cabbage Salad","cat":"Side","blurb":"Fine, tangy white cabbage salad with caraway — light and refreshing.","time":"20 min + 30 min resting","pit":"No-cook","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"½","i":"white cabbage, thinly shaved"},{"a":"3 tbsp","i":"vinegar"},{"a":"2 tbsp","i":"oil"},{"a":"1 tsp","i":"caraway seeds"},{"a":"","i":"salt, sugar"}],"phases":[{"label":"Knead","kind":"prep","dur":"10 min","temp":"","text":"Salt the cabbage and knead firmly until it softens and releases juice.","bullets":["Kneading replaces long resting","Shaved paper-thin it turns out finest"]},{"label":"Marinate","kind":"marinate","dur":"30 min","temp":"room temp","text":"Mix in vinegar, oil, caraway and sugar and let it rest.","bullets":["Taste: balance acidity and sweetness","Toss again before serving"]}],"tips":["Completely mayo-free — pairs especially well with fatty smoked meats","Keeps 3 days in the fridge and keeps improving","Add bacon bits for Styrian-style cabbage salad"]},"beilage-gurkensalat":{"name":"German Cucumber Salad","cat":"Side","blurb":"A refreshing sour-cream cucumber salad with dill — light and tangy alongside rich smoked meats.","time":"15 min + 20 min resting","pit":"No-cook","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"1","i":"cucumber, thinly sliced"},{"a":"150 g","i":"sour cream"},{"a":"1 tbsp","i":"white wine vinegar"},{"a":"1 bunch","i":"dill, chopped"},{"a":"","i":"salt, pepper, a pinch of sugar"}],"phases":[{"label":"Drain","kind":"prep","dur":"15 min","temp":"","text":"Salt the cucumber, let it sit, then squeeze out the liquid.","bullets":["This keeps the salad from turning watery","Squeeze well — use your hands"]},{"label":"Dress","kind":"marinate","dur":"20 min","temp":"4 °C","text":"Mix the sour-cream dressing, fold in the cucumber and chill.","bullets":["Whisk sour cream, vinegar, dill, pepper and sugar","Serve cold"]}],"tips":["Squeezing the cucumber prevents a watery salad","Fresh dill is a must — dried tastes flat","Dress shortly before serving"]},"beilage-mac-cheese":{"name":"Mac & Cheese","cat":"Side","blurb":"Creamy cheddar sauce over tender pasta, finished with a crisp crust.","time":"30 minutes","pit":"Stove / 200 °C to brown","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"400 g","i":"macaroni"},{"a":"50 g","i":"butter"},{"a":"50 g","i":"flour"},{"a":"500 ml","i":"milk"},{"a":"300 g","i":"cheddar, grated"},{"a":"","i":"salt, pepper, nutmeg"}],"phases":[{"label":"Sauce","kind":"cook","dur":"15 min","temp":"stove","text":"Make a roux, whisk in the milk, melt in the cheese.","bullets":["Melt butter, stir in flour, cook 2 min","Whisk in the milk gradually — no lumps","Melt in the cheese off the heat, season"]},{"label":"Combine & brown","kind":"finish","dur":"15 min","temp":"200 °C","text":"Toss the pasta with the sauce and optionally brown the top.","bullets":["Cook the pasta al dente","Optionally bake 10 min at 200 °C for the crust","Hold back some cheese for the top"]}],"tips":["A little smoked cheddar ties the flavors together","Leave the sauce slightly loose — it thickens while baking","Panko crumbs on top add extra crunch"]},"beilage-patatas-bravas":{"name":"Patatas Bravas","cat":"Side","blurb":"Crisply fried potato cubes with a spicy tomato sauce and aioli.","time":"40 minutes","pit":"Stove / pan","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"800 g","i":"potatoes, diced"},{"a":"","i":"oil for frying"},{"a":"200 g","i":"passata"},{"a":"1 tsp","i":"paprika"},{"a":"","i":"chili to taste"},{"a":"","i":"aioli or garlic mayonnaise"}],"phases":[{"label":"Par-boil","kind":"prep","dur":"10 min","temp":"stove","text":"Par-boil the potato cubes briefly and let them steam dry.","bullets":["Blanch 5 min in salted water","Steam dry well — a dry surface means crispness"]},{"label":"Fry","kind":"cook","dur":"20 min","temp":"pan, high heat","text":"Fry in plenty of oil until crisp all over.","bullets":["Don't crowd the pan — or they steam","Salt only at the end"]},{"label":"Sauce & serve","kind":"finish","dur":"10 min","temp":"","text":"Simmer the bravas sauce and serve with aioli.","bullets":["Simmer passata briefly with paprika and chili","Plate the potatoes with sauce and a dollop of aioli"]}],"tips":["Par-boil before frying — fluffy inside, crisp outside","Smoked paprika (pimentón) makes the sauce more authentic","Serve as a tapa or BBQ side"]},"beilage-elote":{"name":"Elote (Mexican Street Corn)","cat":"Side","blurb":"Grilled corn on the cob with crema, cheese, chili and lime.","time":"20 minutes","pit":"Direct coals","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"4","i":"corn cobs"},{"a":"80 g","i":"crema or sour cream + mayonnaise"},{"a":"60 g","i":"cotija or feta cheese, crumbled"},{"a":"","i":"chili powder, lime, cilantro"}],"phases":[{"label":"Grill","kind":"direct","dur":"12–15 min","temp":"direct coals","text":"Grill the cobs directly over the coals, turning, until charred in spots.","bullets":["Turn regularly","Dark charred spots are the goal — that's the flavor"]},{"label":"Finish","kind":"finish","dur":"5 min","temp":"","text":"Brush and sprinkle while hot.","bullets":["Brush all over with the crema mixture","Top with cheese, chili powder and lime juice","Serve with cilantro"]}],"tips":["Let the corn really char in spots — that brings out the roasted flavor","Feta works perfectly instead of cotija","As esquites: cut off the kernels and serve in a cup"]}});
+_en({"zupfbrot-kraeuterbutter":{"name":"Pull-Apart Bread with Herb Garlic Butter","cat":"Side","blurb":"Moist yeast bread layered with aromatic herb butter, perfect for sharing at the grill.","time":"3 hours (incl. proofing)","pit":"180–200 °C indirect","core":"","wood":"Optional: hickory or beech for a light smoky note","yield":"1 loaf for 6–8 people","ingredients":[{"a":"500 g","i":"wheat flour (type 550 / all-purpose)"},{"a":"1 sachet","i":"dry yeast (7 g)"},{"a":"1 tsp (4 g)","i":"sugar"},{"a":"1 tsp (5.5 g)","i":"salt"},{"a":"300 ml","i":"lukewarm water"},{"a":"3 tbsp (39 g)","i":"olive oil"},{"a":"150 g","i":"soft butter"},{"a":"4 cloves","i":"garlic, finely chopped"},{"a":"3 tbsp (9 g)","i":"fresh parsley, chopped"},{"a":"2 tbsp (6 g)","i":"chives, chopped"},{"a":"1 tsp (1 g)","i":"rosemary, finely chopped"},{"a":"0.5 tsp (3 g)","i":"salt"},{"a":"0.5 tsp (1.5 g)","i":"black pepper"},{"a":"100 g","i":"Emmental or Gouda, grated"}],"phases":[{"label":"Prepare dough","kind":"prep","dur":"15 min","temp":"room temp","text":"Make a yeast dough and let it rise.","bullets":["Mix flour, yeast, sugar and salt in a bowl","Add water and olive oil, knead into a smooth dough (8–10 min)","Cover and let rise in a warm spot for 60 min until doubled"]},{"label":"Make herb butter","kind":"prep","dur":"10 min","temp":"room temp","text":"Prepare the aromatic filling.","bullets":["Mix soft butter with garlic, all herbs, salt and pepper","Chill until needed"]},{"label":"Shape the loaf","kind":"prep","dur":"20 min","temp":"room temp","text":"Portion the dough and layer with the filling.","bullets":["Roll out the dough (approx. 30×40 cm)","Cut into 5×5 cm squares","Spread each square with herb butter and sprinkle with cheese","Stack the squares upright in a greased loaf tin (25 cm)","Proof for another 30 min"]},{"label":"Indirect grilling","kind":"indirect","dur":"35–40 min","temp":"180–200 °C","text":"Bake the bread on the grill until golden.","bullets":["Set up the kettle for indirect heat (coals on one side)","Optional: a handful of soaked smoking wood for a subtle smoky note","Place the tin on the indirect zone","Close the lid, vents half open","Bake 35–40 min until golden and cooked through","Tap test: the loaf sounds hollow when done"]},{"label":"Rest and serve","kind":"rest","dur":"10 min","temp":"room temp","text":"Let the bread cool briefly.","bullets":["Turn out of the tin","Cool for 10 min","Serve warm for pulling apart"]}],"tips":["For extra flavor, brush with melted herb butter after 20 min","Vary the cheese: Parmesan, mozzarella or cheddar all work","On a gas grill: burners on one side at medium, tin on the other side","Make ahead: let the dough rise overnight in the fridge for deeper flavor","Wrap in foil if the top browns too fast","SAFETY:","- The bread must be fully baked — do the tap test and check for raw dough","- Herb butter with raw garlic should be used within 2–3 days (botulism risk at room temperature)","- Keeps max. 2 days at room temperature, then refrigerate or freeze","- Keep hands and surfaces clean when kneading to avoid cross-contamination"]},"beilage-pap-sous":{"name":"Pap met Sous","cat":"Side","blurb":"Creamy maize porridge with a spiced tomato-onion sauce — the classic partner to a South African braai.","time":"30 minutes","pit":"Stove / side burner","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"250 g","i":"maize meal (mieliemeel)"},{"a":"750 ml","i":"water"},{"a":"1 tsp (5.5 g)","i":"salt"},{"a":"2","i":"onions, diced"},{"a":"400 g","i":"tomatoes, chopped"},{"a":"1 tsp (4 g)","i":"sugar"},{"a":"","i":"chili to taste"},{"a":"2 tbsp (26 g)","i":"oil"}],"phases":[{"label":"Cook the pap","kind":"cook","dur":"25 min","temp":"stove, medium heat","text":"Stir the maize meal into boiling salted water and let it swell.","bullets":["Bring salted water to a boil","Rain in the maize meal while stirring","Cover and let swell 20 min on low heat","Stir regularly or the porridge will stick"]},{"label":"Make the sous","kind":"cook","dur":"15 min","temp":"stove, medium heat","text":"Simmer the spiced tomato-onion sauce alongside.","bullets":["Sauté the onions in oil until translucent","Add tomatoes, sugar and chili","Simmer uncovered 10 min, season with salt"]},{"label":"Serve","kind":"finish","dur":"5 min","temp":"","text":"Plate the pap and spoon the sauce generously over it.","bullets":["The pap should be creamy but hold its shape","Serve the sous hot on top"]}],"tips":["Slice leftover pap the next day and crisp it on the grill","Use less water for krummelpap (crumbly style)"]},"beilage-coleslaw":{"name":"Coleslaw","cat":"Side","blurb":"Crisp cabbage slaw in a creamy dressing — the classic BBQ companion.","time":"20 min + 1 h resting","pit":"No-cook","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"½","i":"white cabbage, finely shredded"},{"a":"2","i":"carrots, grated"},{"a":"150 g","i":"mayonnaise"},{"a":"1 tbsp (15 g)","i":"apple cider vinegar"},{"a":"1 tsp (4 g)","i":"sugar"},{"a":"","i":"salt, pepper"}],"phases":[{"label":"Prepare","kind":"prep","dur":"20 min","temp":"","text":"Shred the vegetables and mix the dressing.","bullets":["Shred cabbage finely, grate the carrots","Whisk mayonnaise, vinegar, sugar, salt and pepper","Fold the dressing into the vegetables"]},{"label":"Rest","kind":"marinate","dur":"1 h","temp":"4 °C","text":"Chill so the dressing soaks in and the cabbage softens slightly.","bullets":["Cover and refrigerate","Season again before serving"]}],"tips":["For extra crunch, salt the cabbage only just before serving","A grated apple adds fresh sweetness","Keeps 2 days covered in the fridge"]},"beilage-kartoffelsalat":{"name":"Warm German Potato Salad","cat":"Side","blurb":"Smoky, tangy potato salad with a bacon vinegar-oil dressing, served warm.","time":"40 minutes","pit":"Stove","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"1 kg","i":"waxy potatoes"},{"a":"150 g","i":"diced bacon"},{"a":"1","i":"onion, finely diced"},{"a":"400 ml","i":"stock"},{"a":"3 tbsp (45 g)","i":"white wine vinegar"},{"a":"1 tsp (5 g)","i":"mustard"},{"a":"","i":"salt, pepper"}],"phases":[{"label":"Cook potatoes","kind":"cook","dur":"25 min","temp":"stove","text":"Boil the potatoes in their skins, peel while warm and slice.","bullets":["Use a waxy variety","Peel warm — easier, and the slices absorb the dressing better"]},{"label":"Dressing","kind":"cook","dur":"10 min","temp":"stove","text":"Render the bacon, sweat the onion, bring to a boil with stock, vinegar and mustard.","bullets":["Render the bacon until crisp","Sauté the onion in the bacon fat","Add stock, vinegar and mustard and bring to a boil"]},{"label":"Combine & rest","kind":"finish","dur":"10 min","temp":"keep warm","text":"Pour the hot dressing over the potatoes and let it soak in warm.","bullets":["Toss gently, don't break the slices","Serve warm"]}],"tips":["Potatoes absorb the dressing best while still warm","Serve with chives","Best lukewarm — not piping hot"]},"beilage-chakalaka":{"name":"Chakalaka","cat":"Side","blurb":"A spicy South African vegetable relish with beans — the classic braai side.","time":"25 minutes","pit":"Stove / side burner","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"1","i":"onion, diced"},{"a":"2","i":"bell peppers, diced"},{"a":"2","i":"carrots, grated"},{"a":"400 g","i":"tomatoes, chopped"},{"a":"400 g","i":"beans (canned, drained)"},{"a":"1 tsp (3 g)","i":"curry powder"},{"a":"","i":"chili and ginger to taste"},{"a":"2 tbsp (26 g)","i":"oil"}],"phases":[{"label":"Sauté","kind":"cook","dur":"10 min","temp":"stove, medium heat","text":"Sauté the vegetables and toast the spices.","bullets":["Sauté onion, peppers and carrots in oil","Add curry, chili and ginger and toast briefly — it opens up the flavors"]},{"label":"Simmer","kind":"cook","dur":"15 min","temp":"stove, low heat","text":"Add tomatoes and beans and simmer uncovered.","bullets":["Simmer uncovered until the sauce thickens","Season with salt"]}],"tips":["Tastes even better the next day once the spices settle","Serve cold with a braai or warm with pap","Control the heat via the amount of chili"]},"beilage-baked-beans":{"name":"Baked Beans","cat":"Side","blurb":"Sweet, smoky beans in a thick tomato-bacon sauce — the classic Southern BBQ side.","time":"15 min + 1.5 h","pit":"150 °C indirect","core":"","wood":"Optional: a little beech or hickory","yield":"Serves 4","ingredients":[{"a":"800 g","i":"white beans (canned, drained)"},{"a":"100 g","i":"diced bacon"},{"a":"1","i":"onion, diced"},{"a":"200 g","i":"tomato sauce"},{"a":"2 tbsp (24 g)","i":"brown sugar"},{"a":"1 tbsp (15 g)","i":"Worcestershire sauce"},{"a":"1 tsp (2.5 g)","i":"smoked paprika"}],"phases":[{"label":"Base","kind":"prep","dur":"15 min","temp":"stove","text":"Render the bacon, sweat the onion, stir everything together.","bullets":["Render the bacon until crisp","Sweat the onion in the bacon fat","Stir in beans, tomato sauce, sugar, Worcestershire and smoked paprika"]},{"label":"Reduce","kind":"indirect","dur":"1.5 h","temp":"150 °C","text":"Reduce uncovered in the oven or smoker until thick.","bullets":["Use a baking dish or cast-iron pan","Cook alongside the meat in the smoker — picks up extra smoke","Done when the sauce is thick and glossy"]}],"tips":["Place under the meat in the smoker — dripping juices season them (a classic!)","Freeze leftovers — they keep beautifully","A splash of BBQ sauce rounds them off"]},"beilage-cornbread":{"name":"Cornbread","cat":"Side","blurb":"Slightly sweet corn bread, moist and crisp-edged from a cast-iron skillet.","time":"15 min + 25 min baking","pit":"200 °C indirect","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"200 g","i":"cornmeal"},{"a":"100 g","i":"flour"},{"a":"2 tbsp (24 g)","i":"sugar"},{"a":"2 tsp (8 g)","i":"baking powder"},{"a":"250 ml","i":"buttermilk"},{"a":"1","i":"egg"},{"a":"60 g","i":"butter, melted"},{"a":"1 pinch","i":"salt"}],"phases":[{"label":"Batter","kind":"prep","dur":"15 min","temp":"","text":"Mix dry and wet ingredients separately, then combine briefly.","bullets":["Don't overmix — the bread turns tough","Preheat the cast-iron skillet in the grill/oven meanwhile"]},{"label":"Bake","kind":"indirect","dur":"25 min","temp":"200 °C","text":"Pour the batter into the hot, greased skillet and bake until golden.","bullets":["The hot skillet gives the crisp bottom crust","Skewer test: comes out clean when done"]}],"tips":["Preheat the skillet — it gives a crisp bottom crust","Serve with honey butter","Jalapeños or corn kernels in the batter are classic variations"]},"beilage-kartoffelgratin":{"name":"Gratin Dauphinois","cat":"Side","blurb":"Thinly sliced potatoes layered in cream and garlic, baked until golden.","time":"20 min + 1 h baking","pit":"160 °C indirect","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"1 kg","i":"potatoes, thinly sliced"},{"a":"400 ml","i":"cream"},{"a":"150 ml","i":"milk"},{"a":"2","i":"garlic cloves"},{"a":"","i":"salt, pepper, nutmeg"},{"a":"","i":"butter for the dish"}],"phases":[{"label":"Layer","kind":"prep","dur":"20 min","temp":"","text":"Slice the potatoes paper-thin and layer in the buttered dish.","bullets":["Paper-thin slices (use a mandoline!) cook evenly","Mix cream, milk, crushed garlic and seasoning and pour over"]},{"label":"Bake","kind":"indirect","dur":"1 h","temp":"160 °C","text":"Bake until the potatoes are tender and the top is golden.","bullets":["Knife test: slides in without resistance","Cover with foil if the top browns too fast","Rest 10 min — it slices cleanly then"]}],"tips":["Don't rinse the potatoes — the starch binds the cream","Waxy varieties hold their structure","The original has no cheese; with Gruyère it becomes a gratin savoyard"]},"beilage-yorkshire-pudding":{"name":"Yorkshire Pudding","cat":"Side","blurb":"Light, crisp savory batter puffs — the English classic alongside a Sunday roast.","time":"10 min + 20 min baking + 30 min batter rest","pit":"220 °C","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"140 g","i":"flour"},{"a":"4","i":"eggs"},{"a":"200 ml","i":"milk"},{"a":"1 pinch","i":"salt"},{"a":"","i":"vegetable oil or beef fat for the tin"}],"phases":[{"label":"Batter","kind":"prep","dur":"10 min + 30 min rest","temp":"room temp","text":"Whisk a thin batter and let it rest.","bullets":["Whisk flour, eggs, milk and salt until smooth","Rest 30 min — the gluten relaxes"]},{"label":"Bake","kind":"cook","dur":"20 min","temp":"220 °C","text":"Pour the batter into smoking-hot fat and bake without opening the door.","bullets":["Heat the oiled muffin tin until the fat almost smokes","Pour in the batter quickly","Do NOT open the door for 20 min — or the puddings collapse"]}],"tips":["Fat and tin must be searing hot — that is what makes the pudding rise","Serve classically with gravy","Re-crisp leftovers briefly the next day"]},"beilage-krautsalat":{"name":"Austrian Cabbage Salad","cat":"Side","blurb":"Fine, tangy white cabbage salad with caraway — light and refreshing.","time":"20 min + 30 min resting","pit":"No-cook","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"½","i":"white cabbage, thinly shaved"},{"a":"3 tbsp (45 g)","i":"vinegar"},{"a":"2 tbsp (26 g)","i":"oil"},{"a":"1 tsp (2 g)","i":"caraway seeds"},{"a":"","i":"salt, sugar"}],"phases":[{"label":"Knead","kind":"prep","dur":"10 min","temp":"","text":"Salt the cabbage and knead firmly until it softens and releases juice.","bullets":["Kneading replaces long resting","Shaved paper-thin it turns out finest"]},{"label":"Marinate","kind":"marinate","dur":"30 min","temp":"room temp","text":"Mix in vinegar, oil, caraway and sugar and let it rest.","bullets":["Taste: balance acidity and sweetness","Toss again before serving"]}],"tips":["Completely mayo-free — pairs especially well with fatty smoked meats","Keeps 3 days in the fridge and keeps improving","Add bacon bits for Styrian-style cabbage salad"]},"beilage-gurkensalat":{"name":"German Cucumber Salad","cat":"Side","blurb":"A refreshing sour-cream cucumber salad with dill — light and tangy alongside rich smoked meats.","time":"15 min + 20 min resting","pit":"No-cook","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"1","i":"cucumber, thinly sliced"},{"a":"150 g","i":"sour cream"},{"a":"1 tbsp (15 g)","i":"white wine vinegar"},{"a":"1 bunch","i":"dill, chopped"},{"a":"","i":"salt, pepper, a pinch of sugar"}],"phases":[{"label":"Drain","kind":"prep","dur":"15 min","temp":"","text":"Salt the cucumber, let it sit, then squeeze out the liquid.","bullets":["This keeps the salad from turning watery","Squeeze well — use your hands"]},{"label":"Dress","kind":"marinate","dur":"20 min","temp":"4 °C","text":"Mix the sour-cream dressing, fold in the cucumber and chill.","bullets":["Whisk sour cream, vinegar, dill, pepper and sugar","Serve cold"]}],"tips":["Squeezing the cucumber prevents a watery salad","Fresh dill is a must — dried tastes flat","Dress shortly before serving"]},"beilage-mac-cheese":{"name":"Mac & Cheese","cat":"Side","blurb":"Creamy cheddar sauce over tender pasta, finished with a crisp crust.","time":"30 minutes","pit":"Stove / 200 °C to brown","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"400 g","i":"macaroni"},{"a":"50 g","i":"butter"},{"a":"50 g","i":"flour"},{"a":"500 ml","i":"milk"},{"a":"300 g","i":"cheddar, grated"},{"a":"","i":"salt, pepper, nutmeg"}],"phases":[{"label":"Sauce","kind":"cook","dur":"15 min","temp":"stove","text":"Make a roux, whisk in the milk, melt in the cheese.","bullets":["Melt butter, stir in flour, cook 2 min","Whisk in the milk gradually — no lumps","Melt in the cheese off the heat, season"]},{"label":"Combine & brown","kind":"finish","dur":"15 min","temp":"200 °C","text":"Toss the pasta with the sauce and optionally brown the top.","bullets":["Cook the pasta al dente","Optionally bake 10 min at 200 °C for the crust","Hold back some cheese for the top"]}],"tips":["A little smoked cheddar ties the flavors together","Leave the sauce slightly loose — it thickens while baking","Panko crumbs on top add extra crunch"]},"beilage-patatas-bravas":{"name":"Patatas Bravas","cat":"Side","blurb":"Crisply fried potato cubes with a spicy tomato sauce and aioli.","time":"40 minutes","pit":"Stove / pan","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"800 g","i":"potatoes, diced"},{"a":"","i":"oil for frying"},{"a":"200 g","i":"passata"},{"a":"1 tsp (2.5 g)","i":"paprika"},{"a":"","i":"chili to taste"},{"a":"","i":"aioli or garlic mayonnaise"}],"phases":[{"label":"Par-boil","kind":"prep","dur":"10 min","temp":"stove","text":"Par-boil the potato cubes briefly and let them steam dry.","bullets":["Blanch 5 min in salted water","Steam dry well — a dry surface means crispness"]},{"label":"Fry","kind":"cook","dur":"20 min","temp":"pan, high heat","text":"Fry in plenty of oil until crisp all over.","bullets":["Don't crowd the pan — or they steam","Salt only at the end"]},{"label":"Sauce & serve","kind":"finish","dur":"10 min","temp":"","text":"Simmer the bravas sauce and serve with aioli.","bullets":["Simmer passata briefly with paprika and chili","Plate the potatoes with sauce and a dollop of aioli"]}],"tips":["Par-boil before frying — fluffy inside, crisp outside","Smoked paprika (pimentón) makes the sauce more authentic","Serve as a tapa or BBQ side"]},"beilage-elote":{"name":"Elote (Mexican Street Corn)","cat":"Side","blurb":"Grilled corn on the cob with crema, cheese, chili and lime.","time":"20 minutes","pit":"Direct coals","core":"","wood":"","yield":"Serves 4","ingredients":[{"a":"4","i":"corn cobs"},{"a":"80 g","i":"crema or sour cream + mayonnaise"},{"a":"60 g","i":"cotija or feta cheese, crumbled"},{"a":"","i":"chili powder, lime, cilantro"}],"phases":[{"label":"Grill","kind":"direct","dur":"12–15 min","temp":"direct coals","text":"Grill the cobs directly over the coals, turning, until charred in spots.","bullets":["Turn regularly","Dark charred spots are the goal — that's the flavor"]},{"label":"Finish","kind":"finish","dur":"5 min","temp":"","text":"Brush and sprinkle while hot.","bullets":["Brush all over with the crema mixture","Top with cheese, chili powder and lime juice","Serve with cilantro"]}],"tips":["Let the corn really char in spots — that brings out the roasted flavor","Feta works perfectly instead of cotija","As esquites: cut off the kernels and serve in a cup"]}});
+
+_en({"wildschinken-rehkeule":{"name":"Venison Ham (Leg of Roe Deer)","cat":"Game & Lamb","blurb":"Tender roe deer as a fine dry-cured game ham — milder and more aromatic than pork, with juniper, rosemary and pepper.","time":"approx. 35 days","pit":"10–15 °C drying, 12–14 °C maturing","core":"","wood":"Air-dried — no smoke (optional cold smoke)","yield":"Depends on leg size, approx. 30–35% weight loss","ingredients":[{"a":"1","i":"leg of roe deer, trimmed and deboned"},{"a":"28 g/kg","i":"curing salt (with nitrite)"},{"a":"3 g/kg","i":"pepper, coarsely crushed"},{"a":"2 g/kg","i":"juniper berries, crushed"},{"a":"1 sprig/kg","i":"rosemary"},{"a":"","i":"wild herbs to taste"}],"phases":[{"label":"Preparation","kind":"prep","dur":"Day 1","temp":"","text":"Trim the leg, remove sinews, rub with curing salt and spices.","bullets":["Carefully remove all sinews and silverskin","Weigh curing salt and spices exactly by weight","Massage in firmly all over"]},{"label":"Curing","kind":"cure","dur":"Days 2–7","temp":"2–4 °C","text":"Vacuum-seal or cover and cure in the fridge. Turn daily.","bullets":["A vacuum bag is the safest method (equilibrium curing)","Turn daily so the brine distributes"]},{"label":"Rinse & dry","kind":"prep","dur":"Day 8","temp":"","text":"Rinse off the curing salt, soak briefly and dry thoroughly.","bullets":["Rinse briefly in cold water, soak 30 min","Pat thoroughly dry with kitchen paper"]},{"label":"Season & tie","kind":"prep","dur":"Days 8–9","temp":"","text":"Season with juniper, pepper, rosemary and herbs and tie lightly into shape.","bullets":["Press the spices on all over","Tie into an even shape with kitchen twine"]},{"label":"Initial drying","kind":"dry","dur":"Days 10–14","temp":"10–15 °C, 75–80% RH","text":"Let dry in a cool, airy place.","bullets":["The surface should become dry but not hard","Good air circulation, no draft"]},{"label":"Maturing","kind":"dry","dur":"Days 15–34","temp":"12–14 °C, 70–75% RH","text":"Let mature and check regularly.","bullets":["Weigh weekly — target approx. 30–35% weight loss","Check for bad mold","Maturing time varies with leg size"]},{"label":"Enjoy","kind":"finish","dur":"from day 35","temp":"","text":"Fully matured — aromatic, tender and full of game flavor.","bullets":["Slice paper-thin","Pairs with red wine, alpine cheese, wild herbs and nuts"]}],"tips":["Maturing time varies with leg size and air conditions — patience brings the best flavor","Venison is lean: work quickly and cleanly","Optional: 2–3 cold-smoke sessions before maturing for a subtle smoky note"]},"tiroler-speck":{"name":"Tyrolean Speck (Cold-Smoked Belly Bacon)","cat":"Pork","blurb":"Classic South Tyrolean speck — dry-cured, cold-smoked and air-matured.","time":"approx. 14–20 weeks","pit":"18–25 °C cold smoke, 10–15 °C maturing","core":"","wood":"Beech","yield":"Depends on belly size, approx. 30% weight loss","ingredients":[{"a":"1","i":"pork belly with rind"},{"a":"28 g/kg","i":"curing salt (with nitrite)"},{"a":"2 g/kg","i":"black pepper, coarse"},{"a":"1 g/kg","i":"garlic powder"},{"a":"1 g/kg","i":"juniper, crushed"},{"a":"1 g/kg","i":"bay leaf, ground"},{"a":"1 g/kg","i":"caraway, ground"}],"phases":[{"label":"Trimming","kind":"prep","dur":"0.5–1 day","temp":"","text":"Cut and trim the belly with the rind on. Do not remove the rind.","bullets":["Cut even pieces","The rind protects the meat and gives the typical flavor"]},{"label":"Curing","kind":"cure","dur":"10–14 days","temp":"2–4 °C","text":"Rub dry and place in a container. Keep cold and turn daily.","bullets":["Weigh curing salt and spices by weight and massage in","Turn daily","Leave the brine that forms in the container"]},{"label":"Rinsing","kind":"prep","dur":"1 day","temp":"","text":"Rinse off the curing salt thoroughly and pat dry.","bullets":["Rinse in cold water","Dry thoroughly — a damp surface takes smoke poorly"]},{"label":"Drying","kind":"dry","dur":"3–5 days","temp":"cool & airy","text":"Let dry in a cool, airy place.","bullets":["Let a pellicle form","No draft, no sun"]},{"label":"Cold smoking","kind":"smoke","dur":"2–5 days","temp":"18–25 °C","text":"Cold-smoke at 18–25 °C (beech wood) over several days.","bullets":["Several smoke sessions of 8–12 h with breaks","Use a smoke generator","Let it rest hanging between sessions"]},{"label":"Maturing","kind":"dry","dur":"min. 12 weeks","temp":"10–15 °C, 70–80% RH","text":"Let mature in a cool, well-ventilated place.","bullets":["Ideally 4–6 months — the longer, the more intense","Check and weigh regularly"]},{"label":"Enjoy","kind":"finish","dur":"from week 12","temp":"","text":"Slice thinly and enjoy!","bullets":["Best with fresh bread and South Tyrolean alpine cheese","Plain, with bread, cheese, wine, or in the kitchen"]}],"tips":["Ideal maturing temperature: 10–15 °C, humidity 70–80%","The longer the maturing, the more intense the flavor","The rind protects the meat and gives the typical flavor"]}});

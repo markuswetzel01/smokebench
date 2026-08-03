@@ -2884,6 +2884,7 @@ class Component extends DCLogic {
       const a = String(ing.a).replace(',', '.');
       if (/\/\s*kg|\/\s*l/i.test(a)) continue; // per-Einheit überspringen
       const n = this._num(a); if (n == null) continue;
+      if (/\(/.test(String(a))) continue; // "2 EL (26 g)" ist keine Basismenge
       if (/kg/i.test(a)) { const g = n * 1000; if (g >= 100) return g; }
       else if (/\bg\b/i.test(a)) { if (n >= 100) return n; }
     }
@@ -2898,7 +2899,20 @@ class Component extends DCLogic {
   }
   _fmtNum(n) { const r = Math.round(n * 100) / 100; return (Math.round(r) === r ? String(r) : r.toFixed(1)).replace('.', ','); }
   _scaleAmount(a, factor, targetG) {
-    const s = String(a).replace(',', '.');
+    const orig = String(a);
+    // Löffel-Angaben mit Gramm-Zusatz: "2 EL (26 g)", "3–4 EL (48–64 g)", auch mehrteilig
+    if (/\((?:[\d.,]+(?:\s*[–\-]\s*[\d.,]+)?)\s*g\)/.test(orig)) {
+      if (factor === 1) return null;
+      const scaleRange = (txt, fmtG) => txt.split(/\s*[–\-]\s*/).map(p => {
+        const v = parseFloat(p.replace(',', '.')); if (!isFinite(v)) return p;
+        return fmtG ? this._fmtG(v * factor).replace(/\s*(g|kg)$/, '') : this._fmtNum(v * factor);
+      }).join('–');
+      let ok = true;
+      const out = orig.replace(/(-?[\d.,]+(?:\s*[–\-]\s*[\d.,]+)?)(\s*)(TL|EL|tsp|tbsp)(\s*)\(([\d.,]+(?:\s*[–\-]\s*[\d.,]+)?)\s*g\)/gi,
+        (m, cnt, s1, unit, s2, gr) => { ok = true; return scaleRange(cnt, false) + ' ' + unit + ' (' + scaleRange(gr, true) + ' g)'; });
+      return (out !== orig && ok) ? out : null;
+    }
+    const s = orig.replace(',', '.');
     if (!/^\s*-?\d/.test(s)) return null; // nur Mengen, die mit einer Zahl beginnen (nicht "je 1 TL", "etwas")
     const n = this._num(s);
     if (n == null) return null;
@@ -3754,10 +3768,10 @@ class Component extends DCLogic {
       woodGuide:         woodGuide_ || {},
       selGuide:          selGuide_ || {},
       selShowStandard:   !selIsGuide_,
-      selShowMaturing:   !!(sel && sel.method === 'kalt' && !selIsGuide_ && ['Käse','Vegetarisch','Würzen & Extras','Grundlagen'].indexOf(sel.cat) < 0),
+      selShowMaturing:   !!(sel && sel.method === 'kalt' && !selIsGuide_ && ['Käse','Vegetarisch','Würzen & Extras','Grundlagen','Fisch','Fish','Wurst','Sausage'].indexOf(sel.cat) < 0),
       selShowSidesLink:  !!(sel && !selIsGuide_ && ['bbq','grill','schmoren','heiss'].indexOf(sel.method) >= 0),
-      selShowChamberLink: !!(sel && sel.method === 'kalt' && !selIsGuide_ && ['Käse','Vegetarisch','Würzen & Extras','Grundlagen'].indexOf(sel.cat) < 0),
-      selShowCross:      !!(sel && !selIsGuide_ && (['bbq','grill','schmoren','heiss'].indexOf(sel.method) >= 0 || (sel.method === 'kalt' && ['Käse','Vegetarisch','Würzen & Extras','Grundlagen'].indexOf(sel.cat) < 0))),
+      selShowChamberLink: !!(sel && sel.method === 'kalt' && !selIsGuide_ && ['Käse','Vegetarisch','Würzen & Extras','Grundlagen','Fisch','Fish'].indexOf(sel.cat) < 0),
+      selShowCross:      !!(sel && !selIsGuide_ && (['bbq','grill','schmoren','heiss'].indexOf(sel.method) >= 0 || (sel.method === 'kalt' && ['Käse','Vegetarisch','Würzen & Extras','Grundlagen','Fisch','Fish'].indexOf(sel.cat) < 0))),
       selAcademyArticle: sel ? this._academyArticleForRecipe(sel.id) : null,
       onOpenAcademyFromRecipe: () => {
         const art = sel ? this._academyArticleForRecipe(sel.id) : null;

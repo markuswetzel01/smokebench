@@ -63,7 +63,11 @@ const RECIPES = [
       { a: "2,5 kg", i: "Schweineschinken (Oberschale/Nuss, küchenfertig)" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
       { a: "5 g/kg", i: "brauner Zucker" },
-      { a: "je 1 TL", i: "Wacholderbeeren, Knoblauch, Koriander, Pfeffer, Lorbeer" },
+      { a: "2,5 g", i: "Wacholderbeeren, gemörsert" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "2 g", i: "Koriander, gemahlen" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "1 Blatt", i: "Lorbeer" },
     ],
     phases: [
       { label: "Trockenpökeln", kind: "cure", dur: "1 Tag je cm Dicke + 2–3 Tage", temp: "2–7 °C", text: "Fleisch rundum mit der Pökelmischung einreiben und vakuumieren oder dicht schichten.", bullets: ["NPS exakt abwiegen (40 g/kg) – nicht schätzen", "Im Kühlschrank pökeln, täglich wenden", "Austretende Lake bleibt am Fleisch (Vakuum) bzw. wird beim offenen Pökeln abgegossen"] },
@@ -85,7 +89,9 @@ const RECIPES = [
       { a: "1 kg", i: "Schweinelachs (Rückenfilet, pariert)" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
       { a: "4 g/kg", i: "Zucker" },
-      { a: "je 1 TL", i: "Pfeffer, Wacholder, Knoblauch" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "2,5 g", i: "Wacholder, gemörsert" },
+      { a: "3 g", i: "Knoblauchpulver" },
     ],
     phases: [
       { label: "Trockenpökeln", kind: "cure", dur: "7–10 Tage", temp: "2–7 °C", text: "Filet einreiben, vakuumieren, kühl pökeln und täglich wenden.", bullets: ["Mageres Fleisch pökelt zügig durch", "Vakuumbeutel spart Platz und Lake"] },
@@ -107,7 +113,9 @@ const RECIPES = [
       { a: "1,2 kg", i: "Schweinenuss (Oberschale)" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
       { a: "5 g/kg", i: "Zucker" },
-      { a: "je 1 TL", i: "Pfeffer, Knoblauch, Senfkörner" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "3,5 g", i: "Senfkörner" },
     ],
     phases: [
       { label: "Trockenpökeln", kind: "cure", dur: "10–12 Tage", temp: "2–7 °C", text: "Einreiben, vakuumieren, wenden.", bullets: ["1 Tag je cm + Reserve"] },
@@ -131,7 +139,10 @@ const RECIPES = [
     ingredients: [
       { a: "1,8 kg", i: "Schweinenacken am Stück, ohne Knochen" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "schwarzer Pfeffer, Fenchelsaat, Knoblauch, Wein" },
+      { a: "2,5 g", i: "schwarzer Pfeffer, gemahlen" },
+      { a: "2 g", i: "Fenchelsaat, gemörsert" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "5 g", i: "Wein" },
       { a: "1", i: "Schweine-Saumagen oder Kunstdarm (Kaliber 90+)" },
     ],
     phases: [
@@ -276,7 +287,7 @@ const RECIPES = [
       { a: "4 g", i: "schwarzer Pfeffer" },
       { a: "3 Zehen", i: "Knoblauch" },
       { a: "2 Zweige", i: "Rosmarin + Salbei, gehackt" },
-      { a: "1 TL", i: "Chiliflocken (optional)" },
+      { a: "1 TL (2 g)", i: "Chiliflocken (optional)" },
     ],
     phases: [
       { label: "Würzen & Rollen", kind: "prep", dur: "45 min", temp: "kalt", text: "Bauch innen einschneiden, mit Kräutermischung würzen, Filet einlegen, fest aufrollen und im Abstand binden. Schwarte trocken und ungewürzt lassen.", bullets: ["Schwarte rautenförmig einschneiden", "Kräuter nur innen – außen nur Salz für die Kruste"] },
@@ -327,8 +338,10 @@ const RECIPES = [
     ingredients: [
       { a: "1", i: "Lammkeule am Knochen (~2,5 kg)" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Pfeffer, Wacholder, Knoblauch" },
-      { a: "1 TL", i: "Zucker" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "2,5 g", i: "Wacholder, gemörsert" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "4 g", i: "Zucker" },
     ],
     phases: [
       { label: "Pökeln", kind: "cure", dur: "2–3 Wochen", temp: "2–5 °C", text: "Trocken pökeln, regelmäßig wenden. Große Keule braucht Zeit, bis das Salz den Knochen erreicht.", bullets: ["Um den Knochen besonders sorgfältig einreiben"] },
@@ -352,7 +365,9 @@ const RECIPES = [
     ingredients: [
       { a: "1,5 kg", i: "Rinderkeule (Oberschale), mager pariert" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Pfeffer, Knoblauch, Paprika (optional)" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "2,5 g", i: "Paprika (optional)" },
     ],
     phases: [
       { label: "Pökeln", kind: "cure", dur: "2–3 Wochen", temp: "2–7 °C", text: "Trocken pökeln, regelmäßig wenden.", bullets: [] },
@@ -376,7 +391,11 @@ const RECIPES = [
     ingredients: [
       { a: "1,3 kg", i: "Rinderhüfte/Oberschale, mager pariert" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Wacholder, Lorbeer, Knoblauch, Pfeffer, Rotwein" },
+      { a: "2,5 g", i: "Wacholder, gemörsert" },
+      { a: "1 Blatt", i: "Lorbeer" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "5 g", i: "Rotwein" },
     ],
     phases: [
       { label: "Pökeln", kind: "cure", dur: "2–3 Wochen", temp: "2–7 °C", text: "Würzig trocken pökeln, regelmäßig wenden.", bullets: [] },
@@ -427,7 +446,11 @@ const RECIPES = [
     ingredients: [
       { a: "1,3 kg", i: "Rinderhüfte/Oberschale, mager pariert" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Wacholder, Lorbeer, Knoblauch, Pfeffer, Rotwein" },
+      { a: "2,5 g", i: "Wacholder, gemörsert" },
+      { a: "1 Blatt", i: "Lorbeer" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "5 g", i: "Rotwein" },
     ],
     phases: [
       { label: "Pökeln", kind: "cure", dur: "14–18 Tage", temp: "2–7 °C", text: "Würzig pökeln, regelmäßig wenden.", bullets: [] },
@@ -449,7 +472,10 @@ const RECIPES = [
     ingredients: [
       { a: "1", i: "Lachsseite mit Haut, entgrätet (Sushi-/Sashimi-Qualität)" },
       { a: "200 g : 100 g", i: "Meersalz : Zucker (Trockenbeize)" },
-      { a: "je 1 TL", i: "Dill, Pfeffer, Zitronenschale, Wacholder" },
+      { a: "1 g", i: "Dill" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "2 g", i: "Zitronenschale" },
+      { a: "2,5 g", i: "Wacholder, gemörsert" },
     ],
     phases: [
       { label: "Beizen", kind: "cure", dur: "12–24 h", temp: "0–4 °C", text: "Mit Salz-Zucker-Mischung bedecken, beschweren, kühlen.", bullets: ["Dickere Seite = länger beizen", "Austretende Flüssigkeit abgießen"] },
@@ -468,7 +494,9 @@ const RECIPES = [
       { a: "1,8 kg", i: "Schweinebauch ohne Knochen, ohne Schwarte" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
       { a: "8 g/kg", i: "brauner Zucker / Ahornsirup" },
-      { a: "je 1 TL", i: "Pfeffer, Paprika, Knoblauch" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "2,5 g", i: "Paprika" },
+      { a: "3 g", i: "Knoblauchpulver" },
     ],
     phases: [
       { label: "Trockenpökeln", kind: "cure", dur: "7–10 Tage", temp: "2–7 °C", text: "Einreiben, vakuumieren, täglich wenden.", bullets: [] },
@@ -489,7 +517,10 @@ const RECIPES = [
     ingredients: [
       { a: "1,8 kg", i: "Schweinebauch mit Schwarte" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Wacholder, Lorbeer, Knoblauch, Pfeffer" },
+      { a: "2,5 g", i: "Wacholder, gemörsert" },
+      { a: "1 Blatt", i: "Lorbeer" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
     ],
     phases: [
       { label: "Trockenpökeln", kind: "cure", dur: "10–14 Tage", temp: "2–7 °C", text: "Würzig pökeln, wenden.", bullets: [] },
@@ -511,7 +542,11 @@ const RECIPES = [
       { a: "1,2 kg", i: "Schweinefleisch (mager)" },
       { a: "0,6 kg", i: "Rückenspeck" },
       { a: "28 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Pfeffer, Knoblauch, Senfkörner, etwas Zucker, Reifekultur" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "3,5 g", i: "Senfkörner" },
+      { a: "4 g", i: "etwas Zucker" },
+      { a: "0,3 g", i: "Reifekultur – nach Herstellerangabe" },
       { a: "1", i: "Schweinedarm (Kaliber 32+)" },
     ],
     phases: [
@@ -534,7 +569,11 @@ const RECIPES = [
       { a: "1,4 kg", i: "Schweinefleisch (mager)" },
       { a: "0,6 kg", i: "Rückenspeck" },
       { a: "28 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Pfeffer, Knoblauch, Rotwein, Zucker, Starterkultur" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "5 g", i: "Rotwein" },
+      { a: "4 g", i: "Zucker" },
+      { a: "0,3 g", i: "Starterkultur – nach Herstellerangabe" },
       { a: "1", i: "Edelschimmelkultur + Kunst-/Naturdarm Kaliber 50+" },
     ],
     phases: [
@@ -570,7 +609,9 @@ const RECIPES = [
     equipment: [["smokegen",5],["wsm",4],["kettle",4,{de:"mit Sparbrand",en:"with a maze"}]],
     ingredients: [
       { a: "400 g", i: "fester Naturtofu" },
-      { a: "3 EL + je 1 TL", i: "Sojasauce, Knoblauch, Pfeffer (Marinade)" },
+      { a: "48 g", i: "Sojasauce" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "2,5 g", i: "Pfeffer (Marinade), gemahlen" },
     ],
     phases: [
       { label: "Pressen & Marinieren", kind: "prep", dur: "2–12 h", temp: "kühl", text: "Tofu pressen, marinieren, anschließend trocken tupfen.", bullets: ["Pressen entzieht Wasser – nimmt Rauch besser an"] },
@@ -613,7 +654,7 @@ const RECIPES = [
     ingredients: [
       { a: "4", i: "Forellen, ausgenommen" },
       { a: "60 g/l", i: "Salz (Nasslake)" },
-      { a: "je 1 TL + 1 Stk", i: "Lorbeer, Wacholder, Pfeffer, Zwiebel" },
+      { a: "je 1 TL + 1 Stk", i: "Lorbeer (1 Blatt), Wacholder (2,5 g), Pfeffer (2,5 g), Zwiebel" },
     ],
     phases: [
       { label: "Lake / Salzen", kind: "cure", dur: "8–12 h", temp: "0–7 °C", text: "Forellen in Salzlake (6 %) einlegen.", bullets: ["Innen und außen lake-bedeckt"] },
@@ -633,7 +674,7 @@ const RECIPES = [
     ingredients: [
       { a: "1,8 kg", i: "Schweinekarree/Kotelett" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Pfeffer, Wacholder, Knoblauch" },
+      { a: "je 1 TL", i: "Pfeffer (2,5 g), Wacholder (2,5 g), Knoblauch (3 g)" },
     ],
     phases: [
       { label: "Pökeln", kind: "cure", dur: "5–7 Tage", temp: "2–7 °C", text: "Trocken oder nass pökeln.", bullets: [] },
@@ -669,7 +710,7 @@ const RECIPES = [
     ingredients: [
       { a: "4", i: "Forellen, ausgenommen" },
       { a: "60 g/l", i: "Salz (Nasslake 6 %)" },
-      { a: "je 1 TL + 1 Stk", i: "Lorbeer, Wacholder, Pfeffer, Zwiebel, Zitrone" },
+      { a: "je 1 TL + 1 Stk", i: "Lorbeer (1 Blatt), Wacholder (2,5 g), Pfeffer (2,5 g), Zwiebel, Zitrone" },
     ],
     phases: [
       { label: "Salzlake", kind: "cure", dur: "8–12 h", temp: "0–7 °C", text: "In 6 %-Lake legen, kühlen.", bullets: ["Pro Liter Wasser 60 g Salz"] },
@@ -689,7 +730,7 @@ const RECIPES = [
     ingredients: [
       { a: "4", i: "Makrelen, ausgenommen" },
       { a: "60 g/l", i: "Salz (Lake)" },
-      { a: "je 1 TL", i: "Pfeffer, Lorbeer, Knoblauch" },
+      { a: "je 1 TL", i: "Pfeffer (2,5 g), Lorbeer (1 Blatt), Knoblauch (3 g)" },
     ],
     phases: [
       { label: "Lake", kind: "cure", dur: "6–10 h", temp: "0–7 °C", text: "In Salzlake einlegen.", bullets: [] },
@@ -708,7 +749,7 @@ const RECIPES = [
     ingredients: [
       { a: "1", i: "Lachsseite mit Haut, entgrätet" },
       { a: "200 g : 100 g", i: "Salz : Zucker (Trockenbeize)" },
-      { a: "je 1 TL", i: "Dill, Pfeffer, Zitronenschale" },
+      { a: "je 1 TL", i: "Dill (1 g), Pfeffer (2,5 g), Zitronenschale (2 g)" },
     ],
     phases: [
       { label: "Beizen", kind: "cure", dur: "4–8 h", temp: "0–4 °C", text: "Mit Salz-Zucker-Mischung beizen.", bullets: ["Kurz, da nur Würze gewünscht"] },
@@ -727,7 +768,7 @@ const RECIPES = [
     ingredients: [
       { a: "1", i: "Hähnchen (1,5–1,8 kg)" },
       { a: "12 g/kg", i: "Salz (Dry Brine)" },
-      { a: "je 1 TL", i: "Paprika, Knoblauch, Pfeffer, Zucker (Rub)" },
+      { a: "je 1 TL", i: "Paprika (2,5 g), Knoblauch (3 g), Pfeffer (2,5 g), Zucker (Rub) (4 g)" },
     ],
     phases: [
       { label: "Dry Brine", kind: "cure", dur: "12–24 h", temp: "Kühlschrank, offen", text: "Salzen und offen kühlen – würzt durch und trocknet die Haut.", bullets: ["Offen lagern = knusprige Haut später"] },
@@ -746,7 +787,7 @@ const RECIPES = [
     ingredients: [
       { a: "1", i: "Hähnchen (1,5 kg)" },
       { a: "1", i: "halbvolle Bierdose (oder Halter mit Brühe)" },
-      { a: "3–4 EL", i: "BBQ-Rub" },
+      { a: "3–4 EL (26–34 g)", i: "BBQ-Rub" },
     ],
     phases: [
       { label: "Würzen", kind: "prep", dur: "15 min", temp: "—", text: "Innen und außen mit Rub einreiben.", bullets: ["Optional über Nacht würzen"] },
@@ -765,7 +806,7 @@ const RECIPES = [
     ingredients: [
       { a: "2", i: "Entenbrüste" },
       { a: "12 g/kg", i: "Salz" },
-      { a: "2 EL Honig + 1 Orange", i: "Pfeffer, Orange, Honig" },
+      { a: "1 TL + 1 Stk + 2 EL", i: "Pfeffer (2,5 g), Orange, Honig (42 g)" },
     ],
     phases: [
       { label: "Dry Brine", kind: "cure", dur: "8–12 h", temp: "Kühlschrank", text: "Salzen, Haut rautenförmig einschneiden.", bullets: [] },
@@ -782,7 +823,7 @@ const RECIPES = [
     equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "500 g", i: "große Garnelen, geschält, entdarmt" },
-      { a: "2–3 EL", i: "Olivenöl, Knoblauch, Paprika, Salz" },
+      { a: "2–3 EL (26–39 g)", i: "Olivenöl, Knoblauch, Paprika, Salz" },
     ],
     phases: [
       { label: "Marinieren", kind: "prep", dur: "30 min", temp: "kühl", text: "In Öl-Gewürzmarinade wenden.", bullets: [] },
@@ -802,7 +843,7 @@ const RECIPES = [
     equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode für stabile Low-&-Slow-Hitze",en:"Snake method for stable low & slow heat"}],["gas",3,{de:"nur mit Räucherbox",en:"only with a smoker box"}],["dutch",0],["dehydrator",0]],
     ingredients: [
       { a: "3 kg", i: "Schweinenacken (Boston Butt), mit Fettdeckel" },
-      { a: "2 EL + 4 EL", i: "Senf (Binder) + BBQ-Rub (Paprika, Zucker, Salz, Pfeffer, Knoblauch)" },
+      { a: "2 EL (30 g) + 4 EL (34 g)", i: "Senf (Binder) + BBQ-Rub (Paprika, Zucker, Salz, Pfeffer, Knoblauch)" },
     ],
     phases: [
       { label: "Würzen", kind: "prep", dur: "1–12 h", temp: "Kühlschrank", text: "Dünn mit Senf einstreichen, kräftig rubben, ruhen lassen.", bullets: ["Über Nacht würzen vertieft den Geschmack", "Fettdeckel nicht entfernen – er schützt das Fleisch während der langen Garzeit"] },
@@ -826,7 +867,7 @@ const RECIPES = [
     authenticityNote: "Folgt der gängigen US-BBQ-Praxis. Die 2-2-1-Zeiten sind für den WSM präzisiert.",
     ingredients: [
       { a: "2", i: "Leitern Baby Back Ribs" },
-      { a: "2 EL + 4 EL", i: "Senf + Rub, Butter, brauner Zucker, Honig, BBQ-Sauce" },
+      { a: "2 EL (30 g) + 4 EL (34 g)", i: "Senf + Rub, Butter, brauner Zucker, Honig, BBQ-Sauce" },
     ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "20 min", temp: "—", text: "Silberhaut abziehen, würzen.", bullets: ["Silberhaut muss weg – sonst zäh"] },
@@ -848,7 +889,7 @@ const RECIPES = [
     authenticityNote: "Folgt der klassischen US-BBQ-Methode, Zeiten für den WSM präzisiert.",
     ingredients: [
       { a: "2", i: "Leitern Spareribs (St. Louis Cut)" },
-      { a: "2 EL + 4 EL", i: "Senf + Rub, Butter, Zucker, Honig, Apfelsaft, BBQ-Sauce" },
+      { a: "2 EL (30 g) + 4 EL (34 g)", i: "Senf + Rub, Butter, Zucker, Honig, Apfelsaft, BBQ-Sauce" },
     ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "20 min", temp: "—", text: "Silberhaut abziehen, würzen.", bullets: [] },
@@ -870,7 +911,7 @@ const RECIPES = [
     authenticityNote: "Folgt dem Texas-Style BBQ: nur Salz und Pfeffer, low & slow über Stunden. Kaum angepasst – so wird es auch in Texas gemacht.",
     ingredients: [
       { a: "5 kg", i: "Brisket (Packer Cut, Flat + Point)" },
-      { a: "je 3 EL", i: "grobes Salz + grober Pfeffer (Texas-Style)" },
+      { a: "je 3 EL", i: "grobes Salz (48 g) + grober Pfeffer (22 g), Texas-Style" },
     ],
     phases: [
       { label: "Trimmen & Würzen", kind: "prep", dur: "30 min", temp: "—", text: "Fettkappe auf ~6 mm trimmen, großzügig mit Salz/Pfeffer rubben.", bullets: ["Gleichmäßige Form gart gleichmäßig"] },
@@ -893,7 +934,7 @@ const RECIPES = [
     authenticityNote: "Folgt der Kansas-City-Tradition. Hier mit Schweinebauch statt Brisket-Point – eine gängige Variante.",
     ingredients: [
       { a: "1,5 kg", i: "Schweinebauch, in 4 cm Würfel" },
-      { a: "3–4 EL", i: "Rub, Butter, brauner Zucker, Honig, BBQ-Sauce" },
+      { a: "3–4 EL (26–34 g)", i: "Rub, Butter, brauner Zucker, Honig, BBQ-Sauce" },
     ],
     phases: [
       { label: "Würfeln & Würzen", kind: "prep", dur: "20 min", temp: "—", text: "In Würfel schneiden, rubben.", bullets: [] },
@@ -915,7 +956,7 @@ const RECIPES = [
     authenticityNote: "Folgt dem Texas-Style. Kaum angepasst.",
     ingredients: [
       { a: "2,5 kg", i: "Beef Short Ribs (Plate, 3-Knochen)" },
-      { a: "je 2 EL", i: "Salz + grober Pfeffer" },
+      { a: "je 2 EL", i: "Salz (32 g) + grober Pfeffer (15 g)" },
     ],
     phases: [
       { label: "Würzen", kind: "prep", dur: "30 min", temp: "—", text: "Mit Salz/Pfeffer rubben.", bullets: [] },
@@ -938,7 +979,7 @@ const RECIPES = [
     ingredients: [
       { a: "2,5 kg", i: "Brisket Flat" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS) für die Pökellake" },
-      { a: "je 2 EL", i: "Pickling Spice, grober Pfeffer + Koriander (Kruste)" },
+      { a: "je 2 EL", i: "Pickling Spice (17 g), grober Pfeffer (15 g) + Koriander (11 g), als Kruste" },
     ],
     phases: [
       { label: "Nasspökeln (Corned Beef)", kind: "cure", dur: "5–7 Tage", temp: "2–7 °C", text: "In Pökellake mit Gewürzen einlegen, beschwert.", bullets: ["Täglich wenden", "Ergibt zunächst Corned Beef"] },
@@ -959,7 +1000,7 @@ const RECIPES = [
     equipment: [["wsm",5],["kettle",3,{de:"indirekt mit Dutch Oven",en:"indirect with a Dutch oven"}],["gas",3,{de:"indirekte Zone",en:"indirect zone"}],["dutch",5,{de:"ideal – klassisch im Dutch Oven geschmort",en:"ideal — classic Dutch-oven braise"}]],
     ingredients: [
       { a: "1–2 Stück (je ca. 4–5 cm dick)", i: "Rinderbeinscheiben (Ossobuco-Schnitt)" },
-      { a: "2 EL", i: "Olivenöl" },
+      { a: "2 EL (26 g)", i: "Olivenöl" },
       { a: "Salz, Pfeffer", i: "zum Würzen" },
       { a: "2", i: "Zwiebeln, grob gewürfelt" },
       { a: "3", i: "Karotten, grob gewürfelt" },
@@ -1006,7 +1047,7 @@ const RECIPES = [
       { a: "3", i: "Karotten" },
       { a: "500 ml", i: "kräftiger Rotwein (Burgunder)" },
       { a: "300 ml", i: "Rinderfond" },
-      { a: "2 EL", i: "Tomatenmark" },
+      { a: "2 EL (32 g)", i: "Tomatenmark" },
       { a: "je 2", i: "Lorbeer, Thymian, Knoblauch" },
     ],
     phases: [
@@ -1030,12 +1071,12 @@ const RECIPES = [
     ingredients: [
       { a: "1,2 kg", i: "Rindergulasch (Wade/Schulter)" },
       { a: "1 kg", i: "Zwiebeln (gleiche Menge wie Fleisch!)" },
-      { a: "3 EL", i: "Paprikapulver edelsüß" },
-      { a: "1 TL", i: "Paprikapulver scharf (optional)" },
-      { a: "2 EL", i: "Tomatenmark" },
+      { a: "3 EL (21 g)", i: "Paprikapulver edelsüß" },
+      { a: "1 TL (2,5 g)", i: "Paprikapulver scharf (optional)" },
+      { a: "2 EL (32 g)", i: "Tomatenmark" },
       { a: "500 ml", i: "Rinderfond" },
       { a: "1", i: "rote Paprika" },
-      { a: "1 TL", i: "Kümmel, Majoran" },
+      { a: "1 TL (2 g)", i: "Kümmel, Majoran" },
     ],
     phases: [
       { label: "Zwiebeln", kind: "prep", dur: "20 min", temp: "mittel", text: "Die große Zwiebelmenge langsam goldbraun schmoren – das ist die Basis.", bullets: ["Nicht hetzen – Zwiebeln geben die Bindung"] },
@@ -1058,11 +1099,11 @@ const RECIPES = [
     ingredients: [
       { a: "1 kg", i: "Rind oder Schwein, gewürfelt" },
       { a: "500 g", i: "Zwiebeln" },
-      { a: "3 EL", i: "Paprikapulver edelsüß" },
+      { a: "3 EL (21 g)", i: "Paprikapulver edelsüß" },
       { a: "2", i: "Tomaten + 1 Spitzpaprika" },
       { a: "2 Zehen", i: "Knoblauch" },
       { a: "250 ml", i: "Fond (wenig!)" },
-      { a: "1 TL", i: "Kümmel" },
+      { a: "1 TL (2 g)", i: "Kümmel" },
     ],
     phases: [
       { label: "Zwiebeln", kind: "prep", dur: "15 min", temp: "mittel", text: "Zwiebeln goldbraun anschwitzen.", bullets: ["Basis für die dichte Sauce"] },
@@ -1089,7 +1130,7 @@ const RECIPES = [
       { a: "200 g", i: "Perlzwiebeln" },
       { a: "500 ml", i: "Rotwein" },
       { a: "300 ml", i: "Hühnerfond" },
-      { a: "2 EL", i: "Tomatenmark" },
+      { a: "2 EL (32 g)", i: "Tomatenmark" },
       { a: "je 2", i: "Lorbeer, Thymian, Knoblauch" },
     ],
     phases: [
@@ -1114,7 +1155,7 @@ const RECIPES = [
       { a: "1,5 kg", i: "Rinderschulter oder -schmorbraten (am Stück)" },
       { a: "1 Flasche", i: "Barolo (oder kräftiger Nebbiolo)" },
       { a: "2", i: "Zwiebeln, Karotten, Sellerie" },
-      { a: "2 EL", i: "Tomatenmark" },
+      { a: "2 EL (32 g)", i: "Tomatenmark" },
       { a: "je 2", i: "Lorbeer, Nelken, Rosmarin, Zimtstange" },
     ],
     phases: [
@@ -1139,7 +1180,7 @@ const RECIPES = [
       { a: "1 kg", i: "Rinderhack oder gewürfeltes Rind" },
       { a: "150 g", i: "Speck" },
       { a: "2", i: "Zwiebeln + 4 Knoblauchzehen" },
-      { a: "2 EL", i: "Chilipulver + 1 TL Kreuzkümmel" },
+      { a: "2 EL (13 g) + 1 TL (2 g)", i: "Chilipulver + Kreuzkümmel" },
       { a: "1–3", i: "frische Chilis (Schärfe nach Wunsch)" },
       { a: "800 g", i: "Tomaten (Dose)" },
       { a: "400 g", i: "Kidneybohnen" },
@@ -1167,7 +1208,7 @@ const RECIPES = [
     ingredients: [
       { a: "1 kg", i: "Lammschulter, gewürfelt" },
       { a: "2", i: "Zwiebeln + 3 Knoblauchzehen" },
-      { a: "1 TL je", i: "Ras el-Hanout, Kreuzkümmel, Ingwer, Zimt, Kurkuma" },
+      { a: "1 TL je", i: "Ras el-Hanout (3 g), Kreuzkümmel (2 g), Ingwer (2 g), Zimt (2,5 g), Kurkuma (3 g)" },
       { a: "100 g", i: "getrocknete Aprikosen" },
       { a: "50 g", i: "Mandeln" },
       { a: "400 ml", i: "Fond" },
@@ -1195,10 +1236,10 @@ const RECIPES = [
       { a: "500 g", i: "weiße Bohnen (vorgekocht) oder 2 Dosen" },
       { a: "200 g", i: "Speck oder Bacon" },
       { a: "1", i: "Zwiebel" },
-      { a: "4 EL", i: "BBQ-Sauce" },
-      { a: "2 EL", i: "Melasse oder brauner Zucker" },
-      { a: "2 EL", i: "Tomatenmark" },
-      { a: "1 EL", i: "Senf" },
+      { a: "4 EL (68 g)", i: "BBQ-Sauce" },
+      { a: "2 EL (24 g)", i: "Melasse oder brauner Zucker" },
+      { a: "2 EL (32 g)", i: "Tomatenmark" },
+      { a: "1 EL (15 g)", i: "Senf" },
       { a: "250 ml", i: "Fond oder Bier" },
     ],
     phases: [
@@ -1249,9 +1290,9 @@ const RECIPES = [
     ingredients: [
       { a: "500 g", i: "Weizenmehl" },
       { a: "1 Pck", i: "Trockenhefe" },
-      { a: "1 TL", i: "Salz + 1 TL Zucker" },
+      { a: "je 1 TL", i: "Salz (5,5 g) + Zucker (4 g)" },
       { a: "300 ml", i: "lauwarmes Wasser" },
-      { a: "2 EL", i: "Öl" },
+      { a: "2 EL (26 g)", i: "Öl" },
     ],
     phases: [
       { label: "Teig", kind: "prep", dur: "15 min", temp: "—", text: "Alle Zutaten zu einem glatten Teig kneten.", bullets: ["Gut auskneten für die Krume"] },
@@ -1448,7 +1489,7 @@ const RECIPES = [
       { a: "20 g", i: "Koriandersamen (geröstet, grob gemörsert)" },
       { a: "5 g", i: "schwarzer Pfeffer (grob gemahlen)" },
       { a: "3 g", i: "Backpulver (traditionell – macht Fleisch zarter)" },
-      { a: "2 EL", i: "Worcestershire-Sauce (optional, klassisch)" },
+      { a: "2 EL (30 g)", i: "Worcestershire-Sauce (optional, klassisch)" },
     ],
     phases: [
       { label: "Schneiden", kind: "prep", dur: "20 min", temp: "leicht angefroren", text: "Fleisch in 20–25 mm dicke Streifen entlang der Faser schneiden. Dicker als Jerky – das ist wichtig für die traditionelle Textur.", bullets: ["Mit der Faser = zäh-bissfest (klassisch Biltong)", "Quer zur Faser = zarter, für Anfänger"] },
@@ -1533,9 +1574,9 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "ganzes Hähnchen (1,5–1,8 kg)" },
-      { a: "je 1 TL", i: "grobes Meersalz, Pfeffer, Paprika" },
-      { a: "2 EL", i: "Olivenöl oder Butter (weich)" },
-      { a: "je 1 TL", i: "Knoblauch, Zitrone, Thymian, Rosmarin (für die Füllung)" },
+      { a: "je 1 TL", i: "grobes Meersalz (5,5 g), Pfeffer (2,5 g), Paprika (2,5 g)" },
+      { a: "2 EL (26 g)", i: "Olivenöl oder Butter, weich" },
+      { a: "je 1 TL", i: "Knoblauch (3 g), Zitrone, Thymian (1 g), Rosmarin (für die Füllung) (1 g)" },
     ],
     phases: [
       { label: "Vorbereitung", kind: "prep", dur: "20 min", temp: "Raumtemperatur", text: "Hähnchen innen und außen trocken tupfen. Zitronenviertel, angedrückten Knoblauch und Kräuter in die Höhle stecken. Außen großzügig mit Öl einreiben und würzen.", bullets: ["Trockene Haut = knusprigere Haut", "Flügel mit Küchengarn anwickeln damit sie nicht verbrannt"] },
@@ -1561,10 +1602,10 @@ const RECIPES = [
       { a: "800 g", i: "Rinderhüfte oder Lammkeule, dünn aufgeschnitten (3–5 mm)" },
       { a: "200 g", i: "Lammhackfleisch (Verbindungsschichten)" },
       { a: "100 ml", i: "Joghurt (3,5 %)" },
-      { a: "4 EL", i: "Olivenöl" },
+      { a: "4 EL (52 g)", i: "Olivenöl" },
       { a: "3 Zehen + 1 Stk", i: "Knoblauch (3 Zehen), Zwiebel (1 groß, gerieben)" },
-      { a: "je 1 TL", i: "Kreuzkümmel, Paprika, Oregano, Pfeffer, Salz, Sumach" },
-      { a: "1 EL", i: "Tomatenmark (1 EL)" },
+      { a: "je 1 TL", i: "Kreuzkümmel (2 g), Paprika (2,5 g), Oregano (1 g), Pfeffer (2,5 g), Salz (5,5 g), Sumach (2,5 g)" },
+      { a: "1 EL (16 g)", i: "Tomatenmark (1 EL)" },
     ],
     phases: [
       { label: "Marinade", kind: "marinate", dur: "12–24 h", temp: "Kühlschrank 0–4 °C", text: "Joghurt, Öl, geriebene Zwiebel, gepressten Knoblauch, Tomatenmark und alle Gewürze verrühren. Fleischscheiben einlegen.", bullets: ["Geriebene Zwiebel (nicht gehackt!) macht das Fleisch zart", "Mindestens 12 h – besser 24 h"] },
@@ -1587,9 +1628,9 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1,5–2 kg", i: "Lammkeule, entbeint und aufgerollt (beim Metzger)" },
-      { a: "4 Zehen + je 1 TL", i: "Knoblauch (4 Zehen), Rosmarin, Thymian, Oregano" },
-      { a: "4 EL", i: "Olivenöl" },
-      { a: "je 1 TL", i: "Zitronensaft, grobes Meersalz, schwarzer Pfeffer" },
+      { a: "4 Zehen + je 1 TL", i: "Knoblauch (4 Zehen), Rosmarin (1 g), Thymian (1 g), Oregano (1 g)" },
+      { a: "4 EL (52 g)", i: "Olivenöl" },
+      { a: "je 1 TL", i: "Zitronensaft (5 g), grobes Meersalz (5,5 g), schwarzer Pfeffer (2,5 g)" },
     ],
     phases: [
       { label: "Marinade", kind: "marinate", dur: "12–24 h", temp: "Kühlschrank", text: "Kräuter, Knoblauch, Öl, Zitrone zu einer Paste mörsern. Lammkeule einreiben, vakuumieren oder in Folie einwickeln.", bullets: [] },
@@ -1613,8 +1654,8 @@ const RECIPES = [
     ingredients: [
       { a: "1", i: "Hähnchen (1,5–1,8 kg)" },
       { a: "1", i: "halb gefüllte Bierdose (oder Tomatendose mit Brühe)" },
-      { a: "3–4 EL", i: "Rub: Paprika, Knoblauch, Salz, Pfeffer, brauner Zucker, Cayenne" },
-      { a: "2 EL", i: "Öl" },
+      { a: "3–4 EL (48–64 g)", i: "Rub: Paprika, Knoblauch, Salz, Pfeffer, brauner Zucker, Cayenne" },
+      { a: "2 EL (26 g)", i: "Öl" },
     ],
     phases: [
       { label: "Rub auftragen", kind: "prep", dur: "15 min", temp: "—", text: "Hähnchen außen und unter der Haut mit Öl einreiben, dann Rub großzügig auftragen.", bullets: ["Rub auch in die Höhle streuen"] },
@@ -1637,7 +1678,7 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "2", i: "Leitern Baby Back Ribs (Schweinerückenrippchen)" },
-      { a: "3–4 EL", i: "Rub: Paprika, Zucker, Salz, Pfeffer, Knoblauch, Zwiebelpulver" },
+      { a: "3–4 EL (48–64 g)", i: "Rub: Paprika, Zucker, Salz, Pfeffer, Knoblauch, Zwiebelpulver" },
       { a: "100 ml", i: "Apfelsaft (zum Sprühen)" },
       { a: "ca. 100 ml", i: "BBQ-Sauce (zum Glasieren)" },
     ],
@@ -1663,7 +1704,7 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "2–3 kg", i: "Schweinenacken" },
-      { a: "3–4 EL", i: "Rub: Paprika, Salz, Pfeffer, Zucker, Knoblauch, Senf (Dijon als Binder)" },
+      { a: "3–4 EL (48–64 g)", i: "Rub: Paprika, Salz, Pfeffer, Zucker, Knoblauch, Senf (Dijon als Binder)" },
     ],
     phases: [
       { label: "Snake (doppelt)", kind: "prep", dur: "20 min", temp: "—", text: "Für 12–16 h Snake: 3 Briketts breit, 2 hoch, entlang des gesamten Grillrands legen.", bullets: ["Volle Runde = 12–14 h Brennzeit ohne Nachfüllen", "Wasserschale unter dem Grillgut für Feuchtigkeit"] },
@@ -1687,8 +1728,8 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "Côte de Bœuf (600–900 g, mind. 4 cm dick)" },
-      { a: "je 1–2 TL", i: "grobes Meersalz, schwarzer Pfeffer" },
-      { a: "2 EL", i: "Butter + Knoblauch + Thymian (zum Bestreichen)" },
+      { a: "je 1–2 TL", i: "grobes Meersalz (5,5–11 g), schwarzer Pfeffer (2,5–5 g)" },
+      { a: "2 EL (6 g)", i: "Butter (28 g) + Knoblauch (18 g) + Thymian, zum Bestreichen" },
     ],
     phases: [
       { label: "Dry Brine", kind: "prep", dur: "1–24 h", temp: "Kühlschrank, offen", text: "Steak großzügig salzen, offen auf Gitter im Kühlschrank lagern.", bullets: ["Je länger, desto besser die Kruste", "30 min vor Grillen raus – auf Raumtemperatur kommen"] },
@@ -1712,8 +1753,8 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "2", i: "Entenbrüste (200–250 g, mit Haut)" },
-      { a: "je 1 TL", i: "Salz, Pfeffer, 5-Spice-Gewürz" },
-      { a: "je 2 EL", i: "Orangenmarmelade + Sojasoße + Ingwer (Glasur)" },
+      { a: "je 1 TL", i: "Salz (5,5 g), Pfeffer (2,5 g), 5-Spice-Gewürz (3 g)" },
+      { a: "je 2 EL", i: "Orangenmarmelade (40 g) + Sojasoße (32 g) + Ingwer (11 g), Glasur" },
     ],
     phases: [
       { label: "Haut einritzen & würzen", kind: "prep", dur: "10 min", temp: "—", text: "Haut rautenförmig einschneiden (nicht bis ins Fleisch). Salz, Pfeffer, 5-Spice einreiben.", bullets: ["Einritzen lässt Fett ausrennen und macht die Haut knusprig"] },
@@ -1737,8 +1778,8 @@ const RECIPES = [
     ingredients: [
       { a: "1 kg", i: "Schweinebauch, dünn aufgeschnitten (5–8 mm)" },
       { a: "150 ml", i: "Olivenöl" },
-      { a: "5 Zehen + je 1 TL", i: "Knoblauch (5 Zehen), Oregano, Thymian, Rosmarin" },
-      { a: "je 1 TL", i: "Paprika süß + scharf, Kreuzkümmel, Pfeffer, Salz" },
+      { a: "5 Zehen + je 1 TL", i: "Knoblauch (5 Zehen), Oregano (1 g), Thymian (1 g), Rosmarin (1 g)" },
+      { a: "je 1 TL", i: "Paprika süß + scharf (2,5 g), Kreuzkümmel (2 g), Pfeffer (2,5 g), Salz (5,5 g)" },
       { a: "1 Stk", i: "einer Zitrone" },
     ],
     phases: [
@@ -1781,7 +1822,7 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "Hähnchen, halbiert (Rückgrat entfernt)" },
-      { a: "2–3 EL", i: "Olivenöl, Zitrone, Knoblauch, Paprika, Salz, Pfeffer" },
+      { a: "2–3 EL (26–39 g)", i: "Olivenöl, Zitrone, Knoblauch, Paprika, Salz, Pfeffer" },
     ],
     phases: [
       { label: "Marinade", kind: "marinate", dur: "2–12 h", temp: "Kühlschrank", text: "Hälften einreiben und marinieren.", bullets: [] },
@@ -1804,7 +1845,7 @@ const RECIPES = [
     ingredients: [
       { a: "500 g", i: "gemischtes Hackfleisch" },
       { a: "500 g", i: "Baconstreifen (ca. 20 Stück)" },
-      { a: "3 EL + 100 ml + 100 g", i: "BBQ-Rub, BBQ-Sauce, geriebener Käse (Cheddar)" },
+      { a: "3 EL + 100 ml + 100 g", i: "BBQ-Rub (26 g), BBQ-Sauce, geriebener Käse (Cheddar)" },
     ],
     phases: [
       { label: "Bacon-Netz weben", kind: "prep", dur: "15 min", temp: "—", text: "10 Baconstreifen horizontal legen, weitere 10 senkrecht durchflechten.", bullets: [] },
@@ -1823,7 +1864,7 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "4", i: "Maiskolben (mit Blättern)" },
-      { a: "je 1–2 EL", i: "Butter, Limette, Chili, Mayonnaise, Parmesan, Salz (Mexican Style)" },
+      { a: "je 1–2 EL", i: "Butter (14–28 g), Limette, Chili (6,5–13 g), Mayonnaise (14–28 g), Parmesan (6–12 g), Salz (Mexican Style) (16–32 g)" },
     ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "30 min einweichen", temp: "Wasser", text: "Maiskolben 30 min in Wasser einweichen (mit Schale), damit die Blätter beim Grillen nicht sofort verbrennen.", bullets: [] },
@@ -1915,7 +1956,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "2", i: "reife Mangos" },
-      { a: "2 EL + 1 TL", i: "Limettensaft, Chiliflocken (optional)" },
+      { a: "2 EL + 1 TL", i: "Limettensaft (30 g), Chiliflocken (optional) (2 g)" },
     ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "15 min", temp: "—", text: "Mango schälen, Fleisch in 5–8 mm Scheiben schneiden.", bullets: ["Kern umrunden und Scheiben vom Kern schneiden"] },
@@ -1968,7 +2009,7 @@ const RECIPES = [
     ingredients: [
       { a: "500 g", i: "Äpfel, geschält und entkernt" },
       { a: "250 g", i: "Himbeeren (frisch oder TK)" },
-      { a: "2 EL", i: "Honig oder Agavendicksaft" },
+      { a: "2 EL (42 g)", i: "Honig oder Agavendicksaft" },
     ],
     phases: [
       { label: "Pürieren", kind: "prep", dur: "15 min", temp: "—", text: "Äpfel kurz weichkochen, pürieren, Himbeeren untermischen, passieren.", bullets: ["Püree muss glatt und gleichmäßig sein", "Zu flüssig: etwas einkochen"] },
@@ -1987,7 +2028,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Strauchtomaten oder Kirschtomaten" },
-      { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Oregano, Knoblauch" },
+      { a: "2 EL + je 1 TL", i: "Olivenöl (26 g), Meersalz (5,5 g), Oregano (1 g), Knoblauch (3 g)" },
     ],
     phases: [
       { label: "Schneiden", kind: "prep", dur: "15 min", temp: "—", text: "Strauchtomaten in 5–8 mm Scheiben, Kirschtomaten halbieren.", bullets: ["Wässrige Kerne herausschaben verkürzt die Dörrzeit"] },
@@ -2025,7 +2066,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Karotten" },
-      { a: "je 1 TL", i: "Salz, Paprika, Kreuzkümmel (optional)" },
+      { a: "je 1 TL", i: "Salz (5,5 g), Paprika (2,5 g), Kreuzkümmel (optional) (2 g)" },
     ],
     phases: [
       { label: "Blanchieren", kind: "cook", dur: "3 min", temp: "kochendes Wasser", text: "Geschälte, in 3 mm Scheiben geschnittene Karotten kurz blanchieren, abschrecken.", bullets: ["Blanchieren deaktiviert Enzyme, erhält Farbe und Nährstoffe"] },
@@ -2043,7 +2084,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "rote, gelbe oder orangefarbene Paprika" },
-      { a: "1 TL + 1 EL", i: "Salz, Olivenöl (optional)" },
+      { a: "1 TL + 1 EL", i: "Salz (5,5 g), Olivenöl (optional) (13 g)" },
     ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "15 min", temp: "—", text: "Paprika schälen (optional), entkernen, in Ringe oder Streifen schneiden.", bullets: ["Geschälte Paprika nehmen Würze besser auf"] },
@@ -2061,8 +2102,8 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "500 g", i: "Grünkohl, Stiele entfernt" },
-      { a: "2 EL", i: "Olivenöl" },
-      { a: "2 EL + je 1 TL", i: "Meersalz, Hefeflocken, Paprika, Knoblauch" },
+      { a: "2 EL (26 g)", i: "Olivenöl" },
+      { a: "je 1 TL", i: "Meersalz (5,5 g), Hefeflocken (1,5 g), Paprika (2,5 g), Knoblauch (3 g)" },
     ],
     phases: [
       { label: "Würzen", kind: "prep", dur: "10 min", temp: "—", text: "Blätter grob zupfen, mit Öl und Gewürzen massieren.", bullets: ["Öl hilft beim Knusprig-werden"] },
@@ -2079,7 +2120,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Zucchini" },
-      { a: "je 1 TL", i: "Meersalz, Kräuter der Provence, Parmesan (optional)" },
+      { a: "je 1 TL", i: "Meersalz (5,5 g), Kräuter der Provence (1 g), Parmesan (optional) (2 g)" },
     ],
     phases: [
       { label: "Schneiden & Salzen", kind: "prep", dur: "30 min", temp: "—", text: "In 3–4 mm Scheiben schneiden, salzen, 20 min ziehen lassen, gut abtupfen.", bullets: ["Salzen entzieht Wasser und beschleunigt das Dörren"] },
@@ -2137,7 +2178,7 @@ const RECIPES = [
       { a: "1 kg", i: "Rindfleisch (Oberschale, Hüfte, mager, pariert)" },
       { a: "80 ml", i: "Sojasoße" },
       { a: "30 ml", i: "Worcestershire-Sauce" },
-      { a: "je 1 TL", i: "Knoblauch, Pfeffer, Paprika, Zucker, Chiliflocken" },
+      { a: "je 1 TL", i: "Knoblauch (3 g), Pfeffer (2,5 g), Paprika (2,5 g), Zucker (4 g), Chiliflocken (2 g)" },
     ],
     phases: [
       { label: "Schneiden", kind: "prep", dur: "20 min", temp: "angefroren", text: "Fleisch leicht anfrieren (1 h Tiefkühlschrank), in 5–8 mm Streifen schneiden.", bullets: ["Quer zur Faser: zarter", "Mit der Faser: mehr Biss und Zähigkeit"] },
@@ -2158,7 +2199,7 @@ const RECIPES = [
     ingredients: [
       { a: "1 kg", i: "Hähnchenbrust, pariert" },
       { a: "80 ml", i: "Sojasoße" },
-      { a: "je 1 TL", i: "Ingwer, Knoblauch, Honig, Sesamöl, Chiliflocken" },
+      { a: "je 1 TL", i: "Ingwer (2 g), Knoblauch (3 g), Honig (7 g), Sesamöl (4,5 g), Chiliflocken (2 g)" },
     ],
     phases: [
       { label: "Schneiden & Marinieren", kind: "cure", dur: "12–24 h", temp: "0–4 °C", text: "Hähnchen in 8–10 mm Streifen schneiden, marinieren.", bullets: ["Hähnchen darf nicht roh verzehrt werden – Garzeule 70 °C ist Pflicht"] },
@@ -2177,7 +2218,7 @@ const RECIPES = [
     ingredients: [
       { a: "1 kg", i: "Lachsfilet, Sushi-Qualität, entgrätet, ohne Haut" },
       { a: "80 ml", i: "Sojasoße" },
-      { a: "2 EL + je 1 TL", i: "brauner Zucker, Ingwer, Knoblauch, Sesamöl" },
+      { a: "2 EL + je 1 TL", i: "brauner Zucker (24 g), Ingwer (2 g), Knoblauch (3 g), Sesamöl (4,5 g)" },
     ],
     phases: [
       { label: "Schneiden & Beizen", kind: "cure", dur: "8–12 h", temp: "0–4 °C", text: "In 8–10 mm Streifen schneiden, in Marinade einlegen.", bullets: ["Nur frischen Lachs verwenden"] },
@@ -2196,7 +2237,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Wildfleisch (Rehkeule, Wildschweinrücken, mager)" },
-      { a: "je 1 TL + 50 ml", i: "Wacholder, Rotwein, Knoblauch, Pfeffer, Sojasoße, Lorbeer" },
+      { a: "je 1 TL + 50 ml", i: "Wacholder (2,5 g), Rotwein, Knoblauch (3 g), Pfeffer (2,5 g), Sojasoße, Lorbeer (1 Blatt)" },
     ],
     phases: [
       { label: "Parieren & Schneiden", kind: "prep", dur: "30 min", temp: "leicht angefroren", text: "Fett und Sehnen sorgfältig entfernen, in Streifen schneiden.", bullets: ["Wildtypisches Fett wird rasch ranzig – komplett entfernen"] },
@@ -2221,7 +2262,7 @@ const RECIPES = [
       { a: "1 kg", i: "mageres Hack (Rind, Schwein, Lamm, Geflügel oder Fisch – auch gemischt)" },
       { a: "1 Beutel", i: "Jerky-Cure/Pökelmischung ODER 2,5 g/kg NPS (empfohlen bei langer Trocknung)" },
       { a: "60 ml", i: "Sojasoße oder Worcestershire" },
-      { a: "je 1–2 TL", i: "Knoblauch, Pfeffer, Paprika, Zucker, Chili (frei nach Geschmack)" },
+      { a: "je 1–2 TL", i: "Knoblauch (3–6 g), Pfeffer (2,5–5 g), Paprika (2,5–4,5 g), Zucker (4–8 g), Chili (frei nach Geschmack) (2–4,5 g)" },
     ],
     phases: [
       { label: "Würzen & Kneten", kind: "cure", dur: "12–24 h", temp: "0–4 °C", text: "Hack mit Gewürzen, Pökel-/Cure-Mischung und Flüssigkeit gründlich verkneten, bis die Masse klebrig-bindig ist. Abgedeckt im Kühlschrank durchziehen lassen.", bullets: ["Gut kneten = bessere Bindung, die Streifen fallen nicht auseinander", "Mageres Hack wählen – Fett wird beim Lagern ranzig", "Bei Geflügel/Fisch penibel kühl arbeiten"] },
@@ -2248,10 +2289,10 @@ const RECIPES = [
     ingredients: [
       { a: "1 kg", i: "Geflügelhackfleisch (Pute oder Hähnchen, möglichst mager)" },
       { a: "10 g", i: "Nitritpökelsalz (0,5 % vom Fleischgewicht)" },
-      { a: "2 EL", i: "Sojasauce" },
-      { a: "1 EL", i: "Worcestersauce" },
-      { a: "je 1 TL", i: "Knoblauchpulver, Zwiebelpulver, schwarzer Pfeffer" },
-      { a: "½ TL", i: "Paprikapulver edelsüß (+ Chili/Cayenne nach Geschmack)" },
+      { a: "2 EL (32 g)", i: "Sojasauce" },
+      { a: "1 EL (15 g)", i: "Worcestersauce" },
+      { a: "je 1 TL", i: "Knoblauchpulver (3 g), Zwiebelpulver (3 g), schwarzer Pfeffer (2,5 g)" },
+      { a: "½ TL (1 g)", i: "Paprikapulver edelsüß (+ Chili/Cayenne nach Geschmack)" },
     ],
     phases: [
       { label: "Vorbereitung der Masse", kind: "prep", dur: "20 min", temp: "4 °C", text: "Gut gekühltes Geflügelhack mit allen Gewürzen und dem Nitritpökelsalz gründlich verkneten, bis die Masse klebrig und homogen ist.", bullets: ["Hackfleisch kalt verarbeiten (direkt aus dem Kühlschrank)", "Nitritpökelsalz exakt abwiegen: 10 g auf 1 kg Fleisch", "Sehr gründlich mit Händen oder Küchenmaschine vermengen", "Masse in Folie wickeln"] },
@@ -2323,7 +2364,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "500 g", i: "Mandeln, Walnüsse oder Cashews" },
-      { a: "1 TL", i: "Meersalz pro 500 g" },
+      { a: "1 TL (5,5 g)", i: "Meersalz pro 500 g" },
       { a: "1 l", i: "Wasser (zum Einweichen)" },
     ],
     phases: [
@@ -2343,7 +2384,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "400 g", i: "altbackenes Brot oder Sauerteigbrot" },
-      { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Rosmarin, Paprika" },
+      { a: "2 EL + je 1 TL", i: "Olivenöl (26 g), Meersalz (5,5 g), Rosmarin (1 g), Paprika (2,5 g)" },
     ],
     phases: [
       { label: "Schneiden", kind: "prep", dur: "10 min", temp: "—", text: "In dünne Scheiben oder Würfel schneiden, mit Öl und Gewürzen vermengen.", bullets: [] },
@@ -2364,7 +2405,7 @@ const RECIPES = [
       { a: "100 g", i: "Nüsse und Kerne (Mandeln, Kürbiskerne, Cashews)" },
       { a: "80 g", i: "Honig oder Ahornsirup" },
       { a: "50 ml", i: "Kokosöl oder Pflanzenöl" },
-      { a: "je 1 TL", i: "Zimt, Vanille, Salz" },
+      { a: "je 1 TL", i: "Zimt (2,5 g), Vanille (2 g), Salz (5,5 g)" },
     ],
     phases: [
       { label: "Mischen", kind: "prep", dur: "10 min", temp: "—", text: "Alle Zutaten vermengen, auf Dörrfolie ausstreichen.", bullets: ["Gut verteilen, nicht zu dick"] },
@@ -2404,7 +2445,11 @@ const RECIPES = [
       { a: "1 Rehkeule", i: "ca. 2 kg, ausgelöst oder am Knochen" },
       { a: "40 g/kg", i: "40 g/kg Fleisch" },
       { a: "5 g/kg", i: "Zucker" },
-      { a: "je 1 TL", i: "Wacholder (gemörsert), Pfeffer, Lorbeer, Thymian, Rosmarin" },
+      { a: "2,5 g", i: "Wacholder (gemörsert)" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "1 Blatt", i: "Lorbeer" },
+      { a: "1 g", i: "Thymian, getrocknet" },
+      { a: "1 g", i: "Rosmarin, getrocknet" },
     ],
     phases: [
       { label: "Parieren", kind: "prep", dur: "30 min", temp: "kalt", text: "Sehnen und Silberhaut komplett entfernen. Fett parieren – Wildfett wird ranzig.", bullets: ["Sehnen beeinträchtigen Textur und Haltbarkeit", "Völlig makellos parieren ist bei Wild Pflicht"] },
@@ -2431,7 +2476,12 @@ const RECIPES = [
       { a: "1,5 kg", i: "Schweinebauch, Schwarte dran, ohne Rippen" },
       { a: "38 g/kg", i: "38 g/kg" },
       { a: "8 g/kg", i: "grobes Meersalz" },
-      { a: "je 1 TL", i: "Wacholder, Koriander, Lorbeer, Majoran, Pfeffer, Knoblauch (Paste)" },
+      { a: "2,5 g", i: "Wacholder, gemörsert" },
+      { a: "2 g", i: "Koriander, gemahlen" },
+      { a: "1 Blatt", i: "Lorbeer" },
+      { a: "1 g", i: "Majoran, getrocknet" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "3 g", i: "Knoblauch (Paste)pulver" },
     ],
     phases: [
       { label: "Pökeln", kind: "cure", dur: "10–12 Tage", temp: "4–6 °C", text: "Gewürzmischung einreiben, kühl pökeln. Täglich wenden.", bullets: [] },
@@ -2451,8 +2501,8 @@ const RECIPES = [
     equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "6", i: "Hähnchenkeulen (Ober- und Unterschenkel)" },
-      { a: "3–4 EL", i: "Rub: Paprika, Knoblauch, Salz, Pfeffer, brauner Zucker, Thymian" },
-      { a: "2 EL", i: "Öl" },
+      { a: "3–4 EL (48–64 g)", i: "Rub: Paprika, Knoblauch, Salz, Pfeffer, brauner Zucker, Thymian" },
+      { a: "2 EL (26 g)", i: "Öl" },
     ],
     phases: [
       { label: "Rub", kind: "prep", dur: "30 min", temp: "—", text: "Keulen mit Öl einreiben, Rub großzügig auftragen. 30 min ruhen.", bullets: [] },
@@ -2470,7 +2520,7 @@ const RECIPES = [
     equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "500 g", i: "Riesengarnelen, roh, mit Schale (16/20er)" },
-      { a: "2–3 EL", i: "Olivenöl, Zitrone, Knoblauch, Paprika, Salz, Pfeffer" },
+      { a: "2–3 EL (26–39 g)", i: "Olivenöl, Zitrone, Knoblauch, Paprika, Salz, Pfeffer" },
     ],
     phases: [
       { label: "Marinade", kind: "marinate", dur: "30 min", temp: "Kühlschrank", text: "Garnelen in Öl, Zitronensaft, Knoblauch und Gewürzen marinieren.", bullets: [] },
@@ -2525,7 +2575,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "500 g", i: "rohe Rote Bete, geschält" },
-      { a: "2 EL", i: "Olivenöl, Meersalz, optional Balsamico" },
+      { a: "2 EL (26 g)", i: "Olivenöl, Meersalz, optional Balsamico" },
     ],
     phases: [
       { label: "Dünn schneiden", kind: "prep", dur: "15 min", temp: "—", text: "Rote Bete mit Mandoline oder scharfem Messer in 2–3 mm Scheiben schneiden.", bullets: ["Handschuhe! Rote Bete färbt extrem stark", "Dünn = knusprig; dicker = lederig"] },
@@ -2549,7 +2599,7 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "Tomahawk Steak (900 g–1,3 kg, mind. 5 cm dick)" },
-      { a: "je 1–2 TL", i: "grobes Meersalz (1–2 h vorher), schwarzer Pfeffer erst nach dem Sear" },
+      { a: "je 1–2 TL", i: "grobes Meersalz (1–2 h vorher) (5,5–11 g), schwarzer Pfeffer erst nach dem Sear (2,5–5 g)" },
     ],
     phases: [
       { label: "Dry Brine", kind: "prep", dur: "1–2 h (mind. 30 min)", temp: "Raumtemperatur", text: "Großzügig salzen, auf Gitter ruhen lassen.", bullets: [] },
@@ -2573,8 +2623,8 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "Lammrack (8 Knochen), frenched (Knochen gesäubert)" },
-      { a: "je 1–2 EL", i: "Dijonsenf, Rosmarin, Thymian, Knoblauch, Paniermehl, Olivenöl" },
-      { a: "je 1 TL", i: "Salz, Pfeffer" },
+      { a: "je 1–2 EL", i: "Dijonsenf (15–30 g), Rosmarin (3–6 g), Thymian (3–6 g), Knoblauch (9–18 g), Paniermehl (8–16 g), Olivenöl (13–26 g)" },
+      { a: "je 1 TL", i: "Salz (5,5 g), Pfeffer (2,5 g)" },
     ],
     phases: [
       { label: "Kräuterkruste", kind: "prep", dur: "15 min", temp: "—", text: "Senf außen einreiben, Kräuter-Paniermehl-Knoblauch-Öl mischen und auftragen.", bullets: [] },
@@ -2594,8 +2644,8 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "500 g", i: "Riesengarnelen roh, mit Schale (16/20er)" },
-      { a: "4 EL", i: "Olivenöl" },
-      { a: "3 Zehen + je 1 TL", i: "Knoblauch (3 Zehen), Zitronensaft, Paprika, Petersilie, Salz" },
+      { a: "4 EL (52 g)", i: "Olivenöl" },
+      { a: "3 Zehen + je 1 TL", i: "Knoblauch (3 Zehen), Zitronensaft, Paprika (2,5 g), Petersilie (1 g), Salz (5,5 g)" },
     ],
     phases: [
       { label: "Marinieren", kind: "marinate", dur: "30–60 min", temp: "Kühlschrank", text: "Garnelen in Marinade einlegen.", bullets: ["Eingeweichte Holzspieße verwenden – sonst verbrennen sie"] },
@@ -2911,7 +2961,7 @@ const RECIPES = [
     authenticityNote: "Folgt der südafrikanischen Tradition, um Rauch ergänzt.",
     ingredients: [
       { a: "800 g", i: "Rindfleisch (Schulter), 200 g Schweinespeck" },
-      { a: "je 1 TL", i: "Koriander geröstet, Salz, Pfeffer, Nelken, Muskat, Piment, Malzessig" },
+      { a: "je 1 TL", i: "Koriander geröstet (2 g), Salz (5,5 g), Pfeffer (2,5 g), Nelken (2 g), Muskat (2 g), Piment (2,5 g), Malzessig (5 g)" },
       { a: "ca. 2 m", i: "Schweinedarm 32/34 mm" },
     ],
     phases: [
@@ -2965,14 +3015,14 @@ const RECIPES = [
     authenticityNote: "Folgt der klassischen Kap-Methode: schichten, nicht rühren, langsam über Glut schmoren.",
     ingredients: [
       { a: "1,2 kg", i: "Lammschulter oder -keule, in großen Würfeln" },
-      { a: "2 EL", i: "Öl zum Anbraten" },
+      { a: "2 EL (26 g)", i: "Öl zum Anbraten" },
       { a: "2", i: "Zwiebeln, grob gewürfelt" },
       { a: "4 Zehen", i: "Knoblauch" },
       { a: "500 g", i: "Wurzelgemüse (Karotten, Süßkartoffel, Pastinake)" },
       { a: "250 ml", i: "Rotwein" },
       { a: "250 ml", i: "Lamm- oder Gemüsefond" },
-      { a: "2 EL", i: "Tomatenmark" },
-      { a: "je 1 TL", i: "Koriander, Nelke, Piment, Lorbeer, Thymian" },
+      { a: "2 EL (32 g)", i: "Tomatenmark" },
+      { a: "je 1 TL", i: "Koriander (2 g), Nelke (2 g), Piment (2,5 g), Lorbeer (1 Blatt), Thymian (1 g)" },
     ],
     phases: [
       { label: "Anbraten", kind: "prep", dur: "20 min", temp: "kräftige Glut", text: "Lammwürfel im heißen Potjie portionsweise rundum scharf anbraten, herausnehmen. Zwiebeln und Knoblauch andünsten.", bullets: ["Nicht zu viel auf einmal – sonst kocht das Fleisch", "Röstaromen sind die Geschmacksbasis"] },
@@ -3001,8 +3051,8 @@ const RECIPES = [
     authenticityNote: "Klassische Kap-Zubereitung: schichten, nicht rühren, sehr lange über sanfter Glut schmoren.",
     ingredients: [
       { a: "1,5 kg", i: "Ochsenschwanz, in Segmenten" },
-      { a: "2 EL", i: "Mehl zum Wenden" },
-      { a: "2 EL", i: "Öl" },
+      { a: "2 EL (16 g)", i: "Mehl zum Wenden" },
+      { a: "2 EL (26 g)", i: "Öl" },
       { a: "2", i: "Zwiebeln, gewürfelt" },
       { a: "3", i: "Karotten, in Stücken" },
       { a: "2 Stangen", i: "Sellerie" },
@@ -3037,16 +3087,16 @@ const RECIPES = [
     authenticityNote: "Alltags-Potjie nach Kap-Art; Currynote spiegelt den kap-malaiischen Einfluss der Region.",
     ingredients: [
       { a: "8", i: "Hähnchenschenkel oder -oberkeulen" },
-      { a: "2 EL", i: "Öl" },
+      { a: "2 EL (26 g)", i: "Öl" },
       { a: "2", i: "Zwiebeln" },
-      { a: "1 EL", i: "Currypulver (mild)" },
+      { a: "1 EL (8,5 g)", i: "Currypulver (mild)" },
       { a: "2", i: "Paprika, in Streifen" },
       { a: "250 g", i: "Champignons" },
       { a: "2", i: "Maiskolben, in Scheiben" },
       { a: "500 g", i: "Kartoffeln, in Stücken" },
       { a: "400 ml", i: "Hühnerfond" },
       { a: "200 ml", i: "Sahne oder Kokosmilch" },
-      { a: "1 TL", i: "Salz, Pfeffer" },
+      { a: "1 TL (5,5 g)", i: "Salz, Pfeffer" },
     ],
     phases: [
       { label: "Anbraten", kind: "prep", dur: "15 min", temp: "kräftige Glut", text: "Hähnchen im Potjie goldbraun anbraten, herausnehmen. Zwiebeln und Curry andünsten.", bullets: ["Haut kräftig bräunen für Aroma", "Curry kurz mitrösten – setzt Aromen frei"] },
@@ -3073,7 +3123,7 @@ const RECIPES = [
     authenticityNote: "Das klassische Grundrezept: schichten, nicht rühren, langsam über Glut schmoren.",
     ingredients: [
       { a: "1,2 kg", i: "Rindergulasch oder Wade, gewürfelt" },
-      { a: "2 EL", i: "Öl zum Anbraten" },
+      { a: "2 EL (26 g)", i: "Öl zum Anbraten" },
       { a: "2", i: "Zwiebeln, gewürfelt" },
       { a: "600 g", i: "festkochende Kartoffeln, in Stücken" },
       { a: "400 g", i: "Kürbis (Hokkaido), in Stücken" },
@@ -3135,12 +3185,12 @@ const RECIPES = [
     ingredients: [
       { a: "1 kg", i: "Rinderhack (oder Lamm)" },
       { a: "2", i: "Zwiebeln, gewürfelt" },
-      { a: "2 EL", i: "Currypulver (mild) + 1 TL Kurkuma" },
+      { a: "2 EL (17 g) + 1 TL (3 g)", i: "Currypulver (mild) + Kurkuma" },
       { a: "80 g", i: "getrocknete Aprikosen, gehackt" },
       { a: "50 g", i: "Rosinen" },
       { a: "40 g", i: "Mandelblättchen" },
       { a: "2 Scheiben", i: "Weißbrot, in Milch eingeweicht" },
-      { a: "1 EL", i: "Fruchtchutney + 1 EL Zitronensaft" },
+      { a: "je 1 EL", i: "Fruchtchutney (20 g) + Zitronensaft (15 g)" },
       { a: "3", i: "Eier + 250 ml Milch (für den Guss)" },
       { a: "3", i: "Lorbeerblätter" },
     ],
@@ -3165,14 +3215,14 @@ const RECIPES = [
     authenticityNote: "Klassische Wild-Zubereitung im Potjie: schichten, nicht rühren, mageres Fleisch schonend schmoren.",
     ingredients: [
       { a: "1,2 kg", i: "Wildgulasch (Kudu, Springbock, Hirsch oder Reh)" },
-      { a: "2 EL", i: "Öl" },
+      { a: "2 EL (26 g)", i: "Öl" },
       { a: "2", i: "Zwiebeln" },
       { a: "300 g", i: "Champignons" },
       { a: "3", i: "Karotten" },
       { a: "250 ml", i: "kräftiger Rotwein" },
       { a: "300 ml", i: "Wild- oder Rinderfond" },
-      { a: "3 EL", i: "Preiselbeeren (Kompott)" },
-      { a: "je 1 TL", i: "Wacholderbeeren (zerdrückt), Thymian, Lorbeer" },
+      { a: "3 EL (60 g)", i: "Preiselbeeren (Kompott)" },
+      { a: "je 1 TL", i: "Wacholderbeeren (zerdrückt) (2,5 g), Thymian (1 g), Lorbeer (1 Blatt)" },
     ],
     phases: [
       { label: "Anbraten", kind: "prep", dur: "20 min", temp: "kräftige Glut", text: "Wild portionsweise scharf anbraten, herausnehmen. Zwiebeln und Wacholder andünsten.", bullets: ["Mageres Wild nur kurz anbraten", "Wacholder gibt die typische Note"] },
@@ -3220,7 +3270,7 @@ const RECIPES = [
     id: "lachs-kalt", name: "Kaltgeräucherter Lachs (Graved-Smoked)", method: "kalt", cat: "Fisch", diff: 2,
     time: "2–3 Tage", pit: "unter 22 °C", core: "Saftig, transparent-orangerot", wood: "WSM · Erle oder Buche",
     blurb: "Der Klassiker – Lachs erst gebeizt (Gravad Lax), dann kaltgeräuchert. Hauchdünn aufgeschnitten servieren.",
-    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",3,{de:"optional zum Nachtrocknen",en:"optional for further drying"}]],
+    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",2,{de:"optional zum Antrocknen (Pellicle), nicht erforderlich",en:"optional for drying (pellicle), not required"}]],
     origin: "🇳🇴 Graved-Smoked Lachs verbindet das skandinavische Gravad-Beizen mit anschließendem Kalträuchern – seidig und aromatisch.",
     authenticity: 9,
     authenticityNote: "Folgt der skandinavischen Gravad-Tradition, um Kaltrauch ergänzt.",
@@ -3228,16 +3278,17 @@ const RECIPES = [
       { a: "1 kg", i: "Lachsfilet, Sushi-Qualität, mit Haut, entgrätet" },
       { a: "60 g", i: "grobes Meersalz" },
       { a: "40 g", i: "Zucker (Rohrzucker)" },
-      { a: "je 1 TL", i: "weißer Pfeffer, Dill (frisch oder getrocknet)" },
-      { a: "1 TL", i: "Zitronenabrieb (optional)" },
+      { a: "2,5 g", i: "weißer Pfeffer, gemahlen" },
+      { a: "1 g", i: "Dill (frisch oder getrocknet)" },
+      { a: "2 g", i: "Zitronenabrieb (optional)" },
     ],
     phases: [
-      { label: "Beizen", kind: "cure", dur: "24–36 h", temp: "0–4 °C", text: "Salz, Zucker, Pfeffer, Dill mischen und auf beiden Seiten einreiben. In Frischhaltefolie wickeln, auf Gitter in Schale legen, beschweren.", bullets: ["Nach 12 h wenden", "Je länger die Beize, desto fester und salziger"] },
-      { label: "Abwaschen & Trocknen", kind: "prep", dur: "4–8 h", temp: "kühl, luftig", text: "Beize mit kaltem Wasser abspülen. Trocken tupfen, auf Gitter offen im Kühlschrank oder kühlem Raum trocknen lassen bis Pellicle entsteht.", bullets: ["Pellicle = trockene, klebrig-glänzende Außenschicht – Rauch haftet daran", "Kein Pellicle = Rauch tropft ab, schlechteres Ergebnis"] },
-      { label: "Kalträuchern", kind: "smoke", dur: "4–6 h (1–2 Gänge)", temp: "unter 22 °C", text: "Im Kaltraucherzeuger oder WSM mit minimalem Feuer und viel Eis in der Wasserschale. Erle oder Buche.", bullets: ["Nur 1–2 Räuchergänge – Lachs nimmt Rauch sehr intensiv auf", "Bei hohen Außentemperaturen nachts räuchern"] },
-      { label: "Ruhen", kind: "mature", dur: "12–24 h", temp: "Kühlschrank", text: "Nach dem Räuchern 12–24 h im Kühlschrank ruhen lassen – Rauch verteilt sich.", bullets: [] },
+      { label: "Beizen", kind: "cure", dur: "24–36 h", temp: "0–4 °C", text: "Salz, Zucker, Pfeffer und Dill vermischen und den Lachs von allen Seiten gleichmäßig einreiben. In Frischhaltefolie oder vakuumiert im Kühlschrank beizen.", bullets: ["Nach etwa 12 h wenden", "Je länger die Beizzeit, desto fester und salziger wird der Lachs"] },
+      { label: "Abwaschen & Antrocknen", kind: "prep", dur: "4–8 h", temp: "kühl, luftig", text: "Beize gründlich abspülen, trocken tupfen und auf einem Gitter offen im Kühlschrank oder einem kühlen Raum trocknen lassen, bis sich eine Pellicle bildet.", bullets: ["Pellicle = trockene, leicht klebrige Oberfläche, an der der Rauch optimal haftet", "Ohne Pellicle wird das Raucharoma deutlich schwächer"] },
+      { label: "Kalträuchern", kind: "smoke", dur: "4–6 h (1–2 Gänge)", temp: "unter 22 °C", text: "Mit Kaltraucherzeuger im WSM oder Kugelgrill räuchern. Erle liefert das klassische Aroma, Buche ist ebenfalls geeignet.", bullets: ["1–2 Räuchergänge reichen vollkommen aus – Lachs nimmt Rauch sehr intensiv auf", "Bei sommerlichen Temperaturen möglichst nachts räuchern"] },
+      { label: "Ruhen (Aromaausgleich)", kind: "finish", dur: "12–24 h", temp: "0–4 °C", text: "Nach dem Räuchern den Lachs offen oder locker abgedeckt im Kühlschrank ruhen lassen. Dadurch verteilt sich das Raucharoma gleichmäßig und die Konsistenz wird harmonischer.", bullets: [] },
     ],
-    tips: ["Hauchdünn aufschneiden mit scharfem Graved-Lax-Messer oder auf der Aufschnittmaschine.", "Hält vakuumiert im Kühlschrank 1 Woche, eingefroren 3 Monate."],
+    tips: ["Hauchdünn mit einem Graved-Lachs-Messer oder der Aufschnittmaschine schneiden.", "Perfekt zu Schwarzbrot, Dill-Senf-Sauce, Meerrettich oder auf Bagels.", "Vakuumiert im Kühlschrank etwa 7 Tage, tiefgekühlt bis zu 3 Monate haltbar.", "Optionales Nachtrocknen für festeren, schnittfesteren Lachs: 12–24 h bei 10–14 °C und 75–80 % rF frei hängend oder auf dem Gitter – dient nur der Konsistenz, nicht der Reifung wie bei Schinken."],
   }),
 
   r({
@@ -3333,9 +3384,9 @@ const RECIPES = [
     blurb: "Ganzer Karpfen heißgeräuchert – saisonal, kräftig, für Weihnachtszeit klassisch.",
     equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
-      { a: "1", i: "Karpfen (1,5–2 kg), ausgenommen und geschuppt" },
+      { a: "1 (1,5–2 kg)", i: "Karpfen (1,5–2 kg), ausgenommen und geschuppt" },
       { a: "1–2 l", i: "Salzlake 8 %: 80 g Salz/Liter" },
-      { a: "je 1 TL", i: "Lorbeer, Pfeffer, Wacholder (in die Lake)" },
+      { a: "je 1 TL", i: "Lorbeer (1 Blatt), Pfeffer (2,5 g), Wacholder (in die Lake) (2,5 g)" },
     ],
     phases: [
       { label: "Einlaken", kind: "cure", dur: "12–24 h", temp: "0–4 °C", text: "Karpfen komplett in Gewürzlake einlegen. Großer Topf nötig.", bullets: [] },
@@ -3371,9 +3422,9 @@ const RECIPES = [
     blurb: "Lachsforelle beim Warmräuchern entwickelt außergewöhnliche Saftigkeit und mildes Raucharoma.",
     equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [
-      { a: "1", i: "Lachsforelle (1–1,5 kg), ausgenommen" },
+      { a: "1 (1–1,5 kg)", i: "Lachsforelle (1–1,5 kg), ausgenommen" },
       { a: "1–2 l", i: "Salzlake 7 %: 70 g Salz/Liter + 1 TL Zucker" },
-      { a: "je 1 TL", i: "Dill, Zitronenscheiben (in die Bauchhöhle)" },
+      { a: "je 1 TL", i: "Dill (1 g), Zitronenscheiben (in die Bauchhöhle)" },
     ],
     phases: [
       { label: "Einlaken", kind: "cure", dur: "8–12 h", temp: "0–4 °C", text: "Lachsforelle komplett in Lake einlegen, beschweren.", bullets: [] },
@@ -3404,36 +3455,69 @@ const RECIPES = [
     learn: ["Kurz einlaken", "Pellicle bilden", "Heißräuchern", "Optional in Öl einlegen"],
   }),
 
+  r({
+    id: "duenne-mettenden", name: "Dünne Mettenden (Rohwurst)", method: "kalt", cat: "Wurst", diff: 3,
+    time: "10–14 Tage", pit: "15–18 °C", core: "Ziel: 30–35 % Gewichtsverlust", wood: "Buche", yield: "ca. 2,5 kg",
+    blurb: "Luftgetrocknete Rohwurst nach Mettwurst-Art im Saitling – intensives Räucheraroma, feste, schnittfeste Konsistenz.",
+    equipment: [["chamber",5,{de:"für Umrötung & Reifung",en:"for reddening & maturing"}],["wsm",5,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["kettle",4,{de:"mit Sparbrand",en:"with a maze"}]],
+    origin: "🇩🇪 Mettenden sind eine norddeutsche Rohwurst-Tradition. Die dünne Variante im Saitling (Kaliber 22/24) trocknet deutlich schneller als die dicke Mettwurst und wird dadurch besonders rauchintensiv – klassisch aufs Butterbrot oder als Brotzeit.",
+    authenticity: 9,
+    authenticityNote: "Klassisches norddeutsches Rohwurst-Verfahren – ergänzt um Starterkultur und exakte NPS-Dosierung, wie es heute für sichere Rohwurst Standard ist.",
+    ingredients: [
+      { a: "2000 g", i: "Schweineschulter (ca. 30 % Fettanteil)" },
+      { a: "500 g", i: "Schweinebauch oder Rückenspeck" },
+      { a: "60 g", i: "Nitritpökelsalz (2,4 % vom Gesamtgewicht)" },
+      { a: "3 g", i: "weißer Pfeffer, gemahlen" },
+      { a: "2 g", i: "Knoblauchpulver" },
+      { a: "1 g", i: "Koriander, gemahlen" },
+      { a: "0,5 g", i: "Piment, gemahlen" },
+      { a: "30 g", i: "Traubenzucker (Dextrose)" },
+      { a: "0,3 g", i: "Starterkultur (T-SPX oder F-LC) – nach Herstellerangabe" },
+      { a: "ca. 3 m", i: "Saitlinge Kaliber 22/24 (Schafsdarm)" },
+    ],
+    phases: [
+      { label: "Vorbereitung", kind: "prep", dur: "2 h", temp: "2–4 °C", text: "Fleisch und Speck in ca. 2×2 cm Würfel schneiden, auf einem Blech verteilen und 30 Min. anfrieren. Währenddessen die Saitlinge in lauwarmem Wasser einweichen.", bullets: ["Fleisch durchgehend unter 4 °C halten", "Wolf, Messer und Schüsseln vorher im Gefrierfach kühlen", "Saitlinge gründlich spülen"] },
+      { label: "Wolfen & Kuttern", kind: "prep", dur: "30 min", temp: "2–4 °C", text: "Angefrorenes Fleisch durch die 3–4 mm Scheibe wolfen. Gewürze, NPS, Traubenzucker und die in wenig kaltem, chlorfreiem Wasser aufgelöste Starterkultur zugeben und 5–8 Minuten kräftig kneten, bis die Masse bindet.", bullets: ["Brät muss während der Verarbeitung unter 8 °C bleiben", "Masse ist fertig, wenn sie klebt und Fäden zieht", "NPS exakt abwiegen – sicherheitskritisch"] },
+      { label: "Füllen", kind: "prep", dur: "45 min", temp: "4–8 °C", text: "Brät in den Wurstfüller geben und stramm in die Saitlinge füllen. In ca. 30 cm lange Würste abdrehen und die Enden mit Garn abbinden.", bullets: ["Sehr straff füllen – die Wurst schrumpft beim Trocknen", "Lufteinschlüsse mit einer Nadel ausstechen", "Würste aufhängen und die Oberfläche trocken tupfen"] },
+      { label: "Umrötung / Startphase", kind: "rest", dur: "24 h", temp: "20–24 °C, 90–95 % LF", text: "Würste warm und feucht aufhängen. Die Starterkulturen beginnen zu arbeiten, der pH-Wert sinkt ab.", bullets: ["Hohe Feuchtigkeit verhindert Hautbildung (Trockenrand)", "Gute Luftzirkulation ist wichtig", "Würste dürfen sich nicht berühren"] },
+      { label: "Kalträuchern", kind: "smoke", dur: "3 × 6–8 h über 3 Tage", temp: "15–18 °C", text: "Mit Buchenrauch kalträuchern: täglich 6–8 Stunden, dazwischen jeweils 12–16 Stunden Rauchpause.", bullets: ["Rauchtemperatur nie über 22 °C", "Dünner, heller Rauch – nicht zu intensiv", "Zwischen den Räuchergängen gut lüften"] },
+      { label: "Nachreifung / Trocknung", kind: "mature", dur: "7–10 Tage", temp: "12–15 °C, 75–80 % LF", text: "Nachreifen lassen, bis ca. 30–35 % Gewichtsverlust erreicht sind. Die Würste werden fest und schnittfähig.", bullets: ["Täglich wiegen und dokumentieren", "Luftfeuchte langsam von 80 % auf 75 % senken", "Weißer Edelschimmel ist normal – grüner/schwarzer Schimmel mit Essigwasser abwischen", "Fertig bei gleichmäßiger Festigkeit und typischem Geruch"] },
+    ],
+    tips: ["Starterkultur ist bei Rohwurst Pflicht – sie senkt den pH-Wert schnell genug ab.", "Gewichtsverlust dokumentieren: Start 100 %, fertig bei 65–70 % (= 30–35 % Verlust).", "Zu schnelle Trocknung erzeugt einen Trockenrand, zu langsame führt zu Verderb.", "Ein Klima-/Reifeschrank macht das Ergebnis reproduzierbar.", "⚠ Nitritpökelsalz exakt abwiegen – zu wenig: Botulismus-Risiko, zu viel: gesundheitsschädlich.", "⚠ Temperaturen einhalten: über 25 °C in der Startphase = Verderbgefahr, unter 10 °C arbeiten die Kulturen nicht.", "⚠ Verdorbene Wurst erkennen: schmieriger Film, Ammoniakgeruch, grau-grüne Verfärbung innen – entsorgen.", "⚠ Schwangere, Kleinkinder und immungeschwächte Personen sollten Rohwurst meiden."],
+    proTip: "Dünne Saitlinge trocknen deutlich schneller als dicke Mettwurst – ab Tag 7 täglich prüfen, sonst wird die Wurst hart statt schnittfest.",
+    learn: ["Kalt arbeiten (unter 4 °C)", "Fein wolfen (3–4 mm)", "Fermentieren mit Starterkultur", "3 Kalträuchergänge", "Gewichtsverlust als Reifemaß"],
+  }),
+
   /* ============================ SALAMI VARIANTEN ============================ */
 
   r({
-    id: "milano-salami", name: "Mailänder Salami (Milano)", method: "kalt", cat: "Wurst", diff: 3,
-    time: "6–8 Wochen", pit: "10–14 °C, 75–85 % LF", core: "Fest, gereift, weißer Edelschimmel", wood: "WSM Kalträuchern (1 Gang) · Buche",
-    blurb: "Die klassische Mailänder Salami – grob gemahlen, dezent gewürzt, lang gereift.",
-    equipment: [["wsm",5],["kettle",4,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}],["chamber",5,{de:"für die Reifung",en:"for maturing"}]],
-    origin: "🇮🇹 Die Mailänder Salami (Salame Milano) ist fein gewolft und dezent gewürzt – eine der bekanntesten Salami Italiens. Ihr feiner, gleichmäßiger Anschnitt und der weiße Edelschimmel sind ihr Markenzeichen.",
-    authenticity: 9,
-    authenticityNote: "Orientiert sich eng an der Salame-Milano-Tradition: fein gewolft, dezent gewürzt, luftgereift. Angepasst um Starterkultur und NPS für sichere Fermentation.",
+    id: "milano-salami", name: "Mailänder Salami (Salame Milano)", method: "kalt", cat: "Wurst", diff: 3,
+    time: "6–8 Wochen", pit: "10–14 °C, 75–85 % LF", core: "Fest, gereift, weißer Edelschimmel · Ziel: 35–40 % Gewichtsverlust", wood: "Ungeräuchert – optional 1 Kaltrauchgang Buche",
+    blurb: "Die klassische Mailänder Salami – fein gewolft, dezent gewürzt und langsam luftgereift.",
+    equipment: [["chamber",5,{de:"für Fermentation & Reifung",en:"for fermentation & maturing"}],["wsm",3,{de:"nur für den optionalen Kaltrauch",en:"only for the optional cold smoke"}],["kettle",3,{de:"mit Kaltrauch-Adapter",en:"with a cold-smoke adapter"}]],
+    origin: "🇮🇹 Die Mailänder Salami (Salame Milano) ist fein gewolft und dezent gewürzt – eine der bekanntesten Salami Italiens. Ihr feiner, gleichmäßiger Anschnitt (feines Mosaik) und der weiße Edelschimmel sind ihr Markenzeichen.",
+    authenticity: 9.5,
+    authenticityNote: "Orientiert sich eng an der Salame-Milano-Tradition: fein gewolft, dezent gewürzt, luftgereift, ungeräuchert. Starterkultur und NPS für sichere Fermentation ergänzt – der optionale Kaltrauchgang ist eine Smokebench-Variante, kein Original.",
     ingredients: [
       { a: "750 g", i: "Schweineschulter (mager)" },
       { a: "250 g", i: "Rückenspeck (fest, gekühlt)" },
       { a: "28 g", i: "NPS" },
       { a: "3 g", i: "schwarzer Pfeffer (grob)" },
       { a: "2 g", i: "Knoblauchpulver" },
-      { a: "2 g", i: "Zucker" },
+      { a: "2–3 g", i: "Traubenzucker (Dextrose)" },
       { a: "ca. 1,5 m", i: "Schweinedarm 50 mm (oder Kunstdarm)" },
-      { a: "1 Tüte", i: "Starterkultur (T-SPX oder ähnlich)" },
+      { a: "2–3 g", i: "Starterkultur (T-SPX o. ä.) nach Herstellerangabe" },
     ],
     phases: [
-      { label: "Vorbereitung", kind: "prep", dur: "30 min", temp: "unter 5 °C", text: "Fleisch und Speck in Würfel schneiden, anfrieren. Alles durch die grobe Scheibe (10–12 mm) wolfen.", bullets: ["Sehr kalt arbeiten – Fett darf nicht schmelzen", "Speck und Fleisch getrennt wolfen"] },
-      { label: "Mischen & Füllen", kind: "prep", dur: "20 min", temp: "unter 5 °C", text: "Fleisch, Speck, Gewürze und angerührte Starterkultur vermischen bis klebrig. Fest in Darm füllen.", bullets: ["Keine Luftblasen", "Sehr fest stopfen für gleichmäßige Reifung"] },
-      { label: "Fermentation", kind: "rest", dur: "48–72 h", temp: "22–24 °C, 90–95 % LF", text: "Warm und feucht hängen für Starterkultur-Aktivierung. pH sinkt auf 5.0–5.2.", bullets: ["pH-Meter oder Teststreifen empfehlenswert", "Oberfläche wird leicht rot-glänzend"] },
-      { label: "Räuchern (optional)", kind: "smoke", dur: "1 × 4–6 h", temp: "unter 20 °C", text: "Einen Kaltrachergang mit Buche. Hängt vom Stil ab – klassische Milano ist ungeräuchert.", bullets: [] },
-      { label: "Trocknen & Reifen", kind: "mature", dur: "5–7 Wochen", temp: "10–14 °C, 75–85 % LF", text: "Kühl und luftig hängen. Tägliche Kontrolle. Weißer Schimmelfilm (Penicillium) ist erwünscht und schützt die Wurst.", bullets: ["Weißer Schimmel = gut, mit feuchtem Tuch leicht einreiben", "Grüner/schwarzer Schimmel = entfernen mit Essig-Tuch"] },
+      { label: "Vorbereitung", kind: "prep", dur: "30 min", temp: "unter 5 °C", text: "Fleisch und Speck in Würfel schneiden, anfrieren. Fein wolfen: Fleisch 4,5 mm, Speck 6 mm (oder alles 3–5 mm).", bullets: ["Sehr kalt arbeiten – Fett darf nicht schmelzen", "Speck und Fleisch getrennt wolfen", "Feines Wolfen ergibt den typischen Milano-Anschnitt (feines Mosaik)"] },
+      { label: "Mischen & Füllen", kind: "prep", dur: "20 min", temp: "unter 5 °C", text: "Fleisch, Speck, Gewürze und aktivierte Starterkultur vermischen bis klebrig. Fest in Darm füllen.", bullets: ["Starterkultur nach Herstellerangabe in kaltem, chlorfreiem Wasser aktivieren", "Keine Luftblasen", "Sehr fest stopfen für gleichmäßige Reifung"] },
+      { label: "Fermentation", kind: "rest", dur: "48–72 h", temp: "22–24 °C, 90–95 % LF", text: "Warm und feucht hängen für Starterkultur-Aktivierung. Ziel-pH 5,0–5,3.", bullets: ["pH-Meter oder Teststreifen empfehlenswert", "Oberfläche wird leicht rot-glänzend"] },
+      { label: "Kalträuchern (optional)", kind: "smoke", dur: "1 × 4–6 h", temp: "unter 20 °C", text: "Die originale Salame Milano wird nicht geräuchert. Wer eine dezente Rauchnote bevorzugt, kann nach der Fermentation einen kurzen Kalträuchergang mit Buchenrauch durchführen.", bullets: [] },
+      { label: "Trocknen & Reifen", kind: "mature", dur: "5–7 Wochen", temp: "10–14 °C, 75–85 % LF", text: "Kühl und luftig hängen. Tägliche Kontrolle. Zielgewichtsverlust 35–40 % – wichtiger als die reine Wochenzahl.", bullets: ["Weißer Edelschimmel (Penicillium nalgiovense) schützt die Wurst, verdrängt Fremdschimmel und unterstützt das Aroma", "Grüner/schwarzer Schimmel = entfernen mit Essig-Tuch", "Wöchentlich wiegen und Gewichtsverlust dokumentieren"] },
     ],
-    tips: ["Starterkultur ist bei Salami Pflicht – kontrollierte Fermentation verhindert Fehlgärung.", "Reifekeller: kühler Keller, Vorratskammer oder Weinkühlschrank sind ideal.", "Salamireifung braucht Geduld – nach 3 Wochen probieren, ob Salz und Reife stimmen."],
-    proTip: "Grober Anschnitt braucht grobes Fett – Rückenspeck (nicht Bauchfett) hält bei der langen Milano-Reifung seine Form und schmiert nicht.",
-    learn: ["Grob wolfen", "Fermentieren (Starterkultur)", "1 Gang kalträuchern", "Edelschimmel", "6–8 Wochen luftreifen"],
+    tips: ["Starterkultur ist bei Salami Pflicht – kontrollierte Fermentation verhindert Fehlgärung.", "Dextrose statt Haushaltszucker – Starterkulturen verstoffwechseln Traubenzucker deutlich besser.", "Reifekeller: kühler Keller, Vorratskammer oder Weinkühlschrank sind ideal.", "Salamireifung braucht Geduld – nach 3 Wochen probieren, ob Salz und Reife stimmen."],
+    proTip: "Sehr kalt und zügig arbeiten – nur so bleibt das feine Mosaik sauber. Rückenspeck (nicht Bauchfett) bleibt beim Reifen stabil und ergibt den typisch klaren Anschnitt der Milano.",
+    learn: ["Fein wolfen (4,5/6 mm)", "Fermentieren (Starterkultur, Ziel-pH)", "Edelschimmel führen", "Gewichtsverlust als Reifemaß", "6–8 Wochen luftreifen"],
   }),
 
   r({
@@ -3511,7 +3595,10 @@ const RECIPES = [
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
       { a: "4 g/kg", i: "Zucker" },
       { a: "100 ml", i: "Rotwein (trocken)" },
-      { a: "je 1 TL", i: "Knoblauch, Rosmarin, schwarzer Pfeffer, Wacholder" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "1 g", i: "Rosmarin, getrocknet" },
+      { a: "2,5 g", i: "schwarzer Pfeffer, gemahlen" },
+      { a: "2,5 g", i: "Wacholder, gemörsert" },
     ],
     phases: [
       { label: "Pökeln in Wein-Marinade", kind: "cure", dur: "10–14 Tage", temp: "4–6 °C", text: "NPS, Gewürze und Rotwein zur Paste verarbeiten. Rindfleisch komplett einreiben, vakuumieren. Täglich wenden.", bullets: ["Rotwein gibt Tannine und Aroma", "Vakuum beschleunigt die Pökelung gleichmäßig"] },
@@ -3534,7 +3621,12 @@ const RECIPES = [
       { a: "1,5 kg", i: "Schweinebauch, ohne Knochen und Schwarte, rechteckig pariert" },
       { a: "38 g/kg", i: "Nitritpökelsalz (NPS)" },
       { a: "4 g/kg", i: "Zucker" },
-      { a: "je 1 TL", i: "schwarzer Pfeffer (grob), Wacholder, Rosmarin, Lorbeer, Muskatnuss, Chiliflocken" },
+      { a: "2,5 g", i: "schwarzer Pfeffer (grob)" },
+      { a: "2,5 g", i: "Wacholder, gemörsert" },
+      { a: "1 g", i: "Rosmarin, getrocknet" },
+      { a: "1 Blatt", i: "Lorbeer" },
+      { a: "2 g", i: "Muskatnuss, gerieben" },
+      { a: "2 g", i: "Chiliflocken" },
     ],
     phases: [
       { label: "Würzpaste & Pökeln", kind: "cure", dur: "8–10 Tage", temp: "4–6 °C", text: "Alle Gewürze mit NPS vermischen. Bauch auf der Innenseite kräftig einreiben, vakuumieren, täglich wenden.", bullets: ["Innenseite stärker würzen – wird beim Aufrollen zur Spirale", "Gleichmäßige Würzung durch tägliches Massieren"] },
@@ -3555,7 +3647,9 @@ const RECIPES = [
     equipment: [["smokegen",5,{de:"kühl halten, sonst schmilzt sie",en:"keep cold or it melts"}],["kettle",4,{de:"mit Sparbrand statt Kohle",en:"with a maze instead of coals"}],["wsm",3,{de:"nur mit Sparbrand",en:"only with a maze"}],["gas",0,{de:"zu heiß",en:"too hot"}]],
     ingredients: [
       { a: "250 g", i: "gute Butter (Zimmertemperatur, ungesalzen)" },
-      { a: "je 1 TL", i: "Kräuter, Knoblauch, Salz (für Kräuterbutter-Variante)" },
+      { a: "1 g", i: "Kräuter, getrocknet" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "5,5 g", i: "Salz (für Kräuterbutter-Variante)" },
     ],
     phases: [
       { label: "Butter vorbereiten", kind: "prep", dur: "15 min", temp: "Raumtemperatur", text: "Butter auf Zimmertemperatur bringen. Für Kräuterbutter: mit Kräutern, Knoblauch und Salz vermengen.", bullets: ["Butter in flache Schale oder auf Backpapier als Ziegel formen", "Für Finish-Butter: pur lassen, würzen nach dem Räuchern"] },
@@ -3577,7 +3671,7 @@ const RECIPES = [
     ingredients: [
       { a: "4", i: "Hähnchenbrüste (je 200–250 g)" },
       { a: "1–2 l", i: "Salzlake: 60 g Salz + 20 g Zucker pro Liter Wasser" },
-      { a: "je 1 TL", i: "Knoblauch, Lorbeer, Pfefferkörner, Thymian (in die Lake)" },
+      { a: "je 1 TL", i: "Knoblauch (3 g), Lorbeer (1 Blatt), Pfefferkörner (3 g), Thymian (in die Lake) (1 g)" },
     ],
     phases: [
       { label: "Lake & Einlegen", kind: "cure", dur: "8–12 h", temp: "0–4 °C", text: "Hähnchenbrüste in Gewürzlake einlegen. Komplett bedeckt.", bullets: ["Lake würzt durch und hält Fleisch saftig beim Räuchern", "Vollständig bedeckt halten – beschweren"] },
@@ -3616,8 +3710,8 @@ const RECIPES = [
       { a: "1 kg", i: "Schweinebauch, ohne Knochen, ohne Schwarte" },
       { a: "40 g/kg", i: "NPS" },
       { a: "5 g/kg", i: "Zucker" },
-      { a: "je 1 TL", i: "Ingwer (frisch), Sternananis (Pökelgewürze)" },
-      { a: "je 2 EL", i: "Sojasoße, Mirin, Sake, Zucker, Knoblauch, Ingwer (Garlake)" },
+      { a: "1 TL + 1 Stk", i: "Ingwer, frisch gerieben (2 g), Sternanis (Pökelgewürze)" },
+      { a: "je 2 EL", i: "Sojasoße (32 g), Mirin (30 g), Sake (30 g), Zucker (24 g), Knoblauch (18 g), Ingwer (Garlake) (11 g)" },
     ],
     phases: [
       { label: "Pökeln & Rollen", kind: "cure", dur: "5–7 Tage", temp: "4–6 °C", text: "NPS-Mischung einreiben, eng aufrollen und mit Garn abbinden. Vakuumieren.", bullets: ["Fest aufrollen für gleichmäßige Chashu-Scheiben", "Ingwer und Sternananis in die Innenseite für asiatische Würze"] },
@@ -3638,7 +3732,8 @@ const RECIPES = [
       { a: "40 g/kg", i: "NPS" },
       { a: "5 g/kg", i: "Zucker" },
       { a: "15 g/kg", i: "schwarzer Pfeffer (grob gemahlen, ein Teil als Kruste)" },
-      { a: "je 1 TL", i: "Wacholder, Lorbeer" },
+      { a: "2,5 g", i: "Wacholder, gemörsert" },
+      { a: "1 Blatt", i: "Lorbeer" },
     ],
     phases: [
       { label: "Pökeln", kind: "cure", dur: "10–12 Tage", temp: "4–6 °C", text: "NPS, Zucker, 5 g/kg Pfeffer und Wacholder einreiben, vakuumieren.", bullets: [] },
@@ -3661,8 +3756,11 @@ const RECIPES = [
       { a: "1 kg", i: "Schweinekamm oder -keule, ausgelöst" },
       { a: "40 g/kg", i: "40 g/kg" },
       { a: "5 g/kg", i: "Zucker" },
-      { a: "je 1 TL", i: "Koriander, Wacholder, Muskat (Pökelgewürze)" },
-      { a: "je 2 EL", i: "Honig, Senf (Glasur)" },
+      { a: "2 g", i: "Koriander, gemahlen" },
+      { a: "2,5 g", i: "Wacholder, gemörsert" },
+      { a: "2 g", i: "Muskat (Pökelgewürze), gerieben" },
+      { a: "42 g", i: "Honig" },
+      { a: "30 g", i: "Senf (Glasur)" },
     ],
     phases: [
       { label: "Pökeln (Nasspökelung)", kind: "cure", dur: "5–7 Tage", temp: "4–6 °C", text: "In 6%iger NPS-Lake einlegen (60 g NPS/Liter). Vollständig bedeckt, beschweren.", bullets: ["Nasspökelung ergibt milderen, zarteren Schinken als Trockenbeize"] },
@@ -3674,9 +3772,9 @@ const RECIPES = [
     tips: ["Nasspökelung + Brühen = saftigster Schinken überhaupt.", "Restliche Lake für Suppen oder Saucen verwenden."],
   }),
 
-  r({"id":"kochschinken","name":"Klassischer gekochter Schinken (Kochschinken)","method":"warm","cat":"Schinken","diff":2,"time":"10-12 Tage (8 Tage pökeln, 3-4 Std. kochen, 1 Tag kühlen)","pit":"75-80°C","core":"68-70°C","wood":"—","yield":"ca. 2,5 kg fertiger Schinken","blurb":"Saftiger, zarter Kochschinken aus der Schweinekeule, nasspökelt und schonend gegart – perfekt für Aufschnitt und Sandwiches.","equipment":[["stove",5,{"de":"großer Topf mit Thermometer","en":"large pot with a thermometer"}],["wsm",4,{"de":"alternativ ohne Rauch bei 75–80 °C","en":"alternatively without smoke at 75–80 °C"}],["dutch",4,{"de":"gut zum Garen im Wasserbad","en":"good for the water bath"}]],"ingredients":[{"a":"3 kg","i":"Schweinekeule ohne Knochen (Oberschale oder Nuss)"},{"a":"3 L","i":"Wasser (kalt)"},{"a":"270 g","i":"Meersalz"},{"a":"75 g","i":"Nitritpökelsalz (0,4-0,5% NPS)"},{"a":"50 g","i":"Zucker"},{"a":"3","i":"Lorbeerblätter"},{"a":"10","i":"Wacholderbeeren"},{"a":"5","i":"Pimentkörner"},{"a":"2 TL","i":"Pfefferkörner (schwarz)"},{"a":"4","i":"Knoblauchzehen (angedrückt)"}],"phases":[{"label":"Fleisch vorbereiten","kind":"prep","dur":"30 Min.","temp":"4°C","text":"Schweinekeule parieren: überschüssiges Fett und Silberhaut entfernen. Fleisch sollte kompakt und gleichmäßig sein.","bullets":["Fleisch gründlich waschen und trocken tupfen","Bei Bedarf große Stücke binden, damit Form erhalten bleibt","Gewicht notieren für Pökelsalz-Berechnung"]},{"label":"Lake ansetzen","kind":"prep","dur":"20 Min.","temp":"Raumtemperatur","text":"Pökellake herstellen: alle Zutaten in kaltem Wasser vollständig auflösen und auf unter 4°C abkühlen lassen.","bullets":["Salz, Nitritpökelsalz und Zucker im Wasser auflösen","Gewürze hinzufügen","Lake komplett abkühlen lassen (Kühlschrank)"]},{"label":"Nasspökeln","kind":"cure","dur":"8 Tage","temp":"2-4°C","text":"Fleisch vollständig in der Lake einlegen und im Kühlschrank pökeln. Täglich wenden für gleichmäßige Durchdringung.","bullets":["Fleisch in geeigneten Behälter mit Lake übergießen","Fleisch muss komplett bedeckt sein (beschweren falls nötig)","Täglich wenden","Temperatur konstant 2-4°C halten"]},{"label":"Wässern","kind":"rest","dur":"2-3 Std.","temp":"10-15°C","text":"Gepökeltes Fleisch aus der Lake nehmen und in frischem kaltem Wasser wässern, um überschüssiges Salz zu entfernen.","bullets":["Fleisch abspülen","In frisches kaltes Wasser legen","Wasser 1-2× wechseln"]},{"label":"Trocknen","kind":"dry","dur":"1 Std.","temp":"Raumtemperatur","text":"Fleisch gründlich trocknen und bei Bedarf in Bratschlauch oder Netz einpacken.","bullets":["Mit Küchenpapier trocken tupfen","Optional: in Kochschlauch oder Bratennetz wickeln","Kurz bei Raumtemperatur antrocknen lassen"]},{"label":"Schonend kochen/garen","kind":"cook","dur":"3-4 Std.","temp":"75-80°C","text":"Schinken im Wasserbad oder Smokey Mountain bei 75-80°C ohne Rauch schonend bis zur Kerntemperatur von 68-70°C garen.","bullets":["Großen Topf mit Wasser auf 75-80°C bringen (nicht kochen!)","Alternativ: Weber Smokey Mountain auf 75-80°C ohne Holz/Rauch","Schinken einlegen, Kernthermometer nutzen","Temperatur konstant halten bis Kern 68-70°C erreicht","Nicht über 80°C gehen (wird sonst trocken)"]},{"label":"Abkühlen und reifen","kind":"rest","dur":"24 Std.","temp":"4°C","text":"Schinken aus dem Garbad nehmen, abkühlen lassen und über Nacht im Kühlschrank durchziehen lassen.","bullets":["Schinken aus Wasser/Smoker nehmen","Bei Raumtemperatur 1 Std. abkühlen","In Kühlschrank über Nacht durchziehen lassen","Nach 24 Std. ist er schnittfest und aromatisch"]}],"tips":["Für mehr Aroma: 1 TL Koriandersamen oder Senfkörner zur Lake hinzufügen","Kerntemperatur nicht überschreiten – sonst wird der Schinken trocken und fasrig","Im Kühlschrank hält sich der Schinken vakuumiert ca. 2-3 Wochen","Angeschnitten innerhalb 5-7 Tagen verbrauchen","Für feinere Struktur: Fleisch vor dem Pökeln mit Pökelspritze gleichmäßig injizieren","SICHERHEIT:","- Nitritpökelsalz exakt dosieren (0,4-0,5% vom Fleischgewicht) – zu viel ist gesundheitsschädlich, zu wenig schützt nicht vor Botulismus","- Temperatur während des Pökelns konstant bei 2-4°C halten – bei höheren Temperaturen besteht Verderbnis- und Bakterienwachstum-Gefahr","- Kerntemperatur von mindestens 68°C ist Pflicht, um Parasiten und pathogene Keime abzutöten","- Absolute Küchenhygiene: Behälter, Werkzeug und Hände gründlich reinigen – Kreuzkontamination vermeiden","- Fleisch nach dem Garen zügig abkühlen (nicht bei Raumtemperatur stehen lassen) und kühl lagern"]}),
+  r({"id":"kochschinken","name":"Klassischer gekochter Schinken (Kochschinken)","method":"warm","cat":"Schinken","diff":2,"time":"10-12 Tage (8 Tage pökeln, 3-4 Std. kochen, 1 Tag kühlen)","pit":"75-80°C","core":"68-70°C","wood":"—","yield":"ca. 2,5 kg fertiger Schinken","blurb":"Saftiger, zarter Kochschinken aus der Schweinekeule, nasspökelt und schonend gegart – perfekt für Aufschnitt und Sandwiches.","equipment":[["stove",5,{"de":"großer Topf mit Thermometer","en":"large pot with a thermometer"}],["wsm",4,{"de":"alternativ ohne Rauch bei 75–80 °C","en":"alternatively without smoke at 75–80 °C"}],["dutch",4,{"de":"gut zum Garen im Wasserbad","en":"good for the water bath"}]],"ingredients":[{"a":"3 kg","i":"Schweinekeule ohne Knochen (Oberschale oder Nuss)"},{"a":"3 L","i":"Wasser (kalt)"},{"a":"270 g","i":"Meersalz"},{"a":"75 g","i":"Nitritpökelsalz (0,4-0,5% NPS)"},{"a":"50 g","i":"Zucker"},{"a":"3","i":"Lorbeerblätter"},{"a":"10","i":"Wacholderbeeren"},{"a":"5","i":"Pimentkörner"},{"a":"2 TL (6 g)","i":"Pfefferkörner (schwarz)"},{"a":"4","i":"Knoblauchzehen (angedrückt)"}],"phases":[{"label":"Fleisch vorbereiten","kind":"prep","dur":"30 Min.","temp":"4°C","text":"Schweinekeule parieren: überschüssiges Fett und Silberhaut entfernen. Fleisch sollte kompakt und gleichmäßig sein.","bullets":["Fleisch gründlich waschen und trocken tupfen","Bei Bedarf große Stücke binden, damit Form erhalten bleibt","Gewicht notieren für Pökelsalz-Berechnung"]},{"label":"Lake ansetzen","kind":"prep","dur":"20 Min.","temp":"Raumtemperatur","text":"Pökellake herstellen: alle Zutaten in kaltem Wasser vollständig auflösen und auf unter 4°C abkühlen lassen.","bullets":["Salz, Nitritpökelsalz und Zucker im Wasser auflösen","Gewürze hinzufügen","Lake komplett abkühlen lassen (Kühlschrank)"]},{"label":"Nasspökeln","kind":"cure","dur":"8 Tage","temp":"2-4°C","text":"Fleisch vollständig in der Lake einlegen und im Kühlschrank pökeln. Täglich wenden für gleichmäßige Durchdringung.","bullets":["Fleisch in geeigneten Behälter mit Lake übergießen","Fleisch muss komplett bedeckt sein (beschweren falls nötig)","Täglich wenden","Temperatur konstant 2-4°C halten"]},{"label":"Wässern","kind":"rest","dur":"2-3 Std.","temp":"10-15°C","text":"Gepökeltes Fleisch aus der Lake nehmen und in frischem kaltem Wasser wässern, um überschüssiges Salz zu entfernen.","bullets":["Fleisch abspülen","In frisches kaltes Wasser legen","Wasser 1-2× wechseln"]},{"label":"Trocknen","kind":"dry","dur":"1 Std.","temp":"Raumtemperatur","text":"Fleisch gründlich trocknen und bei Bedarf in Bratschlauch oder Netz einpacken.","bullets":["Mit Küchenpapier trocken tupfen","Optional: in Kochschlauch oder Bratennetz wickeln","Kurz bei Raumtemperatur antrocknen lassen"]},{"label":"Schonend kochen/garen","kind":"cook","dur":"3-4 Std.","temp":"75-80°C","text":"Schinken im Wasserbad oder Smokey Mountain bei 75-80°C ohne Rauch schonend bis zur Kerntemperatur von 68-70°C garen.","bullets":["Großen Topf mit Wasser auf 75-80°C bringen (nicht kochen!)","Alternativ: Weber Smokey Mountain auf 75-80°C ohne Holz/Rauch","Schinken einlegen, Kernthermometer nutzen","Temperatur konstant halten bis Kern 68-70°C erreicht","Nicht über 80°C gehen (wird sonst trocken)"]},{"label":"Abkühlen und reifen","kind":"rest","dur":"24 Std.","temp":"4°C","text":"Schinken aus dem Garbad nehmen, abkühlen lassen und über Nacht im Kühlschrank durchziehen lassen.","bullets":["Schinken aus Wasser/Smoker nehmen","Bei Raumtemperatur 1 Std. abkühlen","In Kühlschrank über Nacht durchziehen lassen","Nach 24 Std. ist er schnittfest und aromatisch"]}],"tips":["Für mehr Aroma: 1 TL Koriandersamen oder Senfkörner zur Lake hinzufügen","Kerntemperatur nicht überschreiten – sonst wird der Schinken trocken und fasrig","Im Kühlschrank hält sich der Schinken vakuumiert ca. 2-3 Wochen","Angeschnitten innerhalb 5-7 Tagen verbrauchen","Für feinere Struktur: Fleisch vor dem Pökeln mit Pökelspritze gleichmäßig injizieren","SICHERHEIT:","- Nitritpökelsalz exakt dosieren (0,4-0,5% vom Fleischgewicht) – zu viel ist gesundheitsschädlich, zu wenig schützt nicht vor Botulismus","- Temperatur während des Pökelns konstant bei 2-4°C halten – bei höheren Temperaturen besteht Verderbnis- und Bakterienwachstum-Gefahr","- Kerntemperatur von mindestens 68°C ist Pflicht, um Parasiten und pathogene Keime abzutöten","- Absolute Küchenhygiene: Behälter, Werkzeug und Hände gründlich reinigen – Kreuzkontamination vermeiden","- Fleisch nach dem Garen zügig abkühlen (nicht bei Raumtemperatur stehen lassen) und kühl lagern"]}),
 
-  r({"id":"hinterschinken-gekocht","name":"Gekochter Hinterschinken","method":"heiss","cat":"Schinken","diff":2,"time":"7-10 Tage","pit":"75-80°C","core":"68-70°C","wood":"Buche","yield":"ca. 3-4 kg fertiger Schinken","blurb":"Klassischer, zart-rosa Kochschinken aus der Schweinekeule, nasspökelt und anschließend im Wasserbad gegart.","equipment":[["stove",5,{"de":"großer Topf zum Garen","en":"large pot for cooking"}],["wsm",5,{"de":"für optionalen Rauch","en":"for optional smoke"}],["kettle",4,{"de":"mit Kaltrauch-Adapter","en":"with a cold-smoke adapter"}],["vac",4,{"de":"Kochbeutel / Vakuumieren","en":"cooking bag / vacuum"}]],"ingredients":[{"a":"4 kg","i":"Schweinekeule (Oberschale oder Nuss), entbeint und pariert"},{"a":"4 Liter","i":"Wasser (abgekocht und abgekühlt)"},{"a":"400 g","i":"Meersalz"},{"a":"100 g","i":"Nitritpökelsalz (0,4-0,5% vom Fleischgewicht)"},{"a":"80 g","i":"Zucker"},{"a":"15 g","i":"Pökelhilfsmittel (Ascorbinsäure/Erythorbat)"},{"a":"4","i":"Lorbeerblätter"},{"a":"10","i":"Wacholderbeeren"},{"a":"1 TL","i":"Pimentkörner"},{"a":"5","i":"Nelken"},{"a":"2","i":"Knoblauchzehen, angedrückt"}],"phases":[{"label":"Vorbereitung","kind":"prep","dur":"30 Min","temp":"4°C","text":"Fleisch parieren und in handliche Stücke von max. 2 kg portionieren","bullets":["Überschüssiges Fett und Sehnen entfernen","Fleisch in gleichmäßige Stücke schneiden für gleichmäßige Pökelung","Fleisch gründlich waschen und trocken tupfen","Alle Zutaten und Behälter kühl stellen"]},{"label":"Lake herstellen","kind":"prep","dur":"20 Min","temp":"Raumtemperatur","text":"Pökellake ansetzen und vollständig abkühlen lassen","bullets":["Wasser aufkochen mit Salz, Nitritpökelsalz, Zucker und Gewürzen","Pökelhilfsmittel einrühren bis vollständig gelöst","Lake vollständig auf unter 4°C abkühlen lassen","Salzgehalt prüfen: rohes Ei sollte schwimmen"]},{"label":"Nasspökeln","kind":"cure","dur":"7-10 Tage","temp":"2-4°C","text":"Fleisch vollständig in Lake einlegen und regelmäßig wenden","bullets":["Fleisch in lebensmittelechten Behälter legen","Lake komplett über Fleisch gießen, muss vollständig bedeckt sein","Mit Teller oder Gewicht beschweren","Täglich wenden für gleichmäßige Pökelung","Nach 3 Tagen Lake umspritzen: Lake mit Spritze durch Fleisch ziehen","Im Kühlschrank bei konstant 2-4°C lagern"]},{"label":"Wässern","kind":"rest","dur":"2-4 Std","temp":"kaltes Wasser","text":"Überschüssiges Salz auswässern","bullets":["Schinken aus Lake nehmen und abspülen","In kaltem Wasser 2-4 Stunden wässern","Wasser alle 30 Minuten wechseln","Trocken tupfen"]},{"label":"Kochen im Wasserbad","kind":"cook","dur":"2,5-3 Std","temp":"75-80°C","text":"Schinken schonend im Wasserbad garen bis Kerntemperatur erreicht","bullets":["Schinken in Kochbeutel oder Bratschlauch einschweißen","In großen Topf mit Wasser legen","Wassertemperatur konstant bei 75-80°C halten","Kerntemperatur-Fühler einstechen","Garen bis Kerntemperatur 68-70°C erreicht","Nicht über 80°C erhitzen, sonst wird Schinken trocken"]},{"label":"Abkühlen","kind":"rest","dur":"4-6 Std","temp":"Raumtemperatur dann Kühlschrank","text":"Schinken langsam abkühlen lassen für optimale Schnittfestigkeit","bullets":["Schinken im Beutel belassen","Zunächst 1 Stunde bei Raumtemperatur","Dann im Kühlschrank vollständig durchkühlen","Beschweren für gleichmäßige Form (optional)"]},{"label":"Optional: Kalträuchern","kind":"smoke","dur":"2-3 Std","temp":"15-25°C","text":"Für zusätzliches Raucharoma leicht kalträuchern (optional)","bullets":["Schinken aus Beutel nehmen und trocknen lassen","Im Weber Smokey Mountain mit Kaltrauchgenerator räuchern","Buchenholz verwenden","Nur leichte Rauchfärbung erwünscht","Nach Räuchern nochmals kühlen"]},{"label":"Reifen","kind":"mature","dur":"1-2 Tage","temp":"4°C","text":"Schinken durchziehen lassen für optimalen Geschmack","bullets":["Vakuumiert oder in Frischhaltefolie im Kühlschrank lagern","Mindestens 24 Stunden reifen lassen","Aromen entwickeln sich voll"]}],"tips":["Fleischstücke nicht dicker als 15 cm für gleichmäßige Pökelung","Genaue Waage für Nitritpökelsalz verwenden - exakte Dosierung ist kritisch","Lake kann nach dem Kochen 2-3x wiederverwendet werden (kühl lagern)","Schinken hält sich vakuumiert im Kühlschrank 2-3 Wochen","Für festere Konsistenz: vor dem Kochen 12 Std trocknen lassen","Kerntemperatur-Fühler ist Pflicht für perfektes Ergebnis","Anschnitt erst nach vollständigem Durchkühlen für saubere Scheiben","SICHERHEIT:","- Nitritpökelsalz exakt nach Rezept dosieren (0,4-0,5% vom Fleischgewicht): Überdosierung ist gesundheitsschädlich, Unterdosierung birgt Botulismus-Risiko","- Pökeltemperatur konstant bei 2-4°C halten - niemals über 4°C, um Bakterienwachstum zu verhindern","- Kerntemperatur von mindestens 68°C zwingend erreichen zur Abtötung von Krankheitserregern","- Saubere, desinfizierte Behälter und Werkzeuge verwenden - Kreuzkontamination vermeiden","- Nach dem Garen zügig unter 4°C abkühlen (nicht länger als 2 Std bei Raumtemperatur)","- Gepökeltes Fleisch niemals roh verzehren - dieser Schinken ist ein Brühwurst-Erzeugnis und muss durchgegart werden"]}),
+  r({"id":"hinterschinken-gekocht","name":"Gekochter Hinterschinken","method":"heiss","cat":"Schinken","diff":2,"time":"7-10 Tage","pit":"75-80°C","core":"68-70°C","wood":"Buche","yield":"ca. 3-4 kg fertiger Schinken","blurb":"Klassischer, zart-rosa Kochschinken aus der Schweinekeule, nasspökelt und anschließend im Wasserbad gegart.","equipment":[["stove",5,{"de":"großer Topf zum Garen","en":"large pot for cooking"}],["wsm",5,{"de":"für optionalen Rauch","en":"for optional smoke"}],["kettle",4,{"de":"mit Kaltrauch-Adapter","en":"with a cold-smoke adapter"}],["vac",4,{"de":"Kochbeutel / Vakuumieren","en":"cooking bag / vacuum"}]],"ingredients":[{"a":"4 kg","i":"Schweinekeule (Oberschale oder Nuss), entbeint und pariert"},{"a":"4 Liter","i":"Wasser (abgekocht und abgekühlt)"},{"a":"400 g","i":"Meersalz"},{"a":"100 g","i":"Nitritpökelsalz (0,4-0,5% vom Fleischgewicht)"},{"a":"80 g","i":"Zucker"},{"a":"15 g","i":"Pökelhilfsmittel (Ascorbinsäure/Erythorbat)"},{"a":"4","i":"Lorbeerblätter"},{"a":"10","i":"Wacholderbeeren"},{"a":"1 TL (2,5 g)","i":"Pimentkörner"},{"a":"5","i":"Nelken"},{"a":"2","i":"Knoblauchzehen, angedrückt"}],"phases":[{"label":"Vorbereitung","kind":"prep","dur":"30 Min","temp":"4°C","text":"Fleisch parieren und in handliche Stücke von max. 2 kg portionieren","bullets":["Überschüssiges Fett und Sehnen entfernen","Fleisch in gleichmäßige Stücke schneiden für gleichmäßige Pökelung","Fleisch gründlich waschen und trocken tupfen","Alle Zutaten und Behälter kühl stellen"]},{"label":"Lake herstellen","kind":"prep","dur":"20 Min","temp":"Raumtemperatur","text":"Pökellake ansetzen und vollständig abkühlen lassen","bullets":["Wasser aufkochen mit Salz, Nitritpökelsalz, Zucker und Gewürzen","Pökelhilfsmittel einrühren bis vollständig gelöst","Lake vollständig auf unter 4°C abkühlen lassen","Salzgehalt prüfen: rohes Ei sollte schwimmen"]},{"label":"Nasspökeln","kind":"cure","dur":"7-10 Tage","temp":"2-4°C","text":"Fleisch vollständig in Lake einlegen und regelmäßig wenden","bullets":["Fleisch in lebensmittelechten Behälter legen","Lake komplett über Fleisch gießen, muss vollständig bedeckt sein","Mit Teller oder Gewicht beschweren","Täglich wenden für gleichmäßige Pökelung","Nach 3 Tagen Lake umspritzen: Lake mit Spritze durch Fleisch ziehen","Im Kühlschrank bei konstant 2-4°C lagern"]},{"label":"Wässern","kind":"rest","dur":"2-4 Std","temp":"kaltes Wasser","text":"Überschüssiges Salz auswässern","bullets":["Schinken aus Lake nehmen und abspülen","In kaltem Wasser 2-4 Stunden wässern","Wasser alle 30 Minuten wechseln","Trocken tupfen"]},{"label":"Kochen im Wasserbad","kind":"cook","dur":"2,5-3 Std","temp":"75-80°C","text":"Schinken schonend im Wasserbad garen bis Kerntemperatur erreicht","bullets":["Schinken in Kochbeutel oder Bratschlauch einschweißen","In großen Topf mit Wasser legen","Wassertemperatur konstant bei 75-80°C halten","Kerntemperatur-Fühler einstechen","Garen bis Kerntemperatur 68-70°C erreicht","Nicht über 80°C erhitzen, sonst wird Schinken trocken"]},{"label":"Abkühlen","kind":"rest","dur":"4-6 Std","temp":"Raumtemperatur dann Kühlschrank","text":"Schinken langsam abkühlen lassen für optimale Schnittfestigkeit","bullets":["Schinken im Beutel belassen","Zunächst 1 Stunde bei Raumtemperatur","Dann im Kühlschrank vollständig durchkühlen","Beschweren für gleichmäßige Form (optional)"]},{"label":"Optional: Kalträuchern","kind":"smoke","dur":"2-3 Std","temp":"15-25°C","text":"Für zusätzliches Raucharoma leicht kalträuchern (optional)","bullets":["Schinken aus Beutel nehmen und trocknen lassen","Im Weber Smokey Mountain mit Kaltrauchgenerator räuchern","Buchenholz verwenden","Nur leichte Rauchfärbung erwünscht","Nach Räuchern nochmals kühlen"]},{"label":"Reifen","kind":"mature","dur":"1-2 Tage","temp":"4°C","text":"Schinken durchziehen lassen für optimalen Geschmack","bullets":["Vakuumiert oder in Frischhaltefolie im Kühlschrank lagern","Mindestens 24 Stunden reifen lassen","Aromen entwickeln sich voll"]}],"tips":["Fleischstücke nicht dicker als 15 cm für gleichmäßige Pökelung","Genaue Waage für Nitritpökelsalz verwenden - exakte Dosierung ist kritisch","Lake kann nach dem Kochen 2-3x wiederverwendet werden (kühl lagern)","Schinken hält sich vakuumiert im Kühlschrank 2-3 Wochen","Für festere Konsistenz: vor dem Kochen 12 Std trocknen lassen","Kerntemperatur-Fühler ist Pflicht für perfektes Ergebnis","Anschnitt erst nach vollständigem Durchkühlen für saubere Scheiben","SICHERHEIT:","- Nitritpökelsalz exakt nach Rezept dosieren (0,4-0,5% vom Fleischgewicht): Überdosierung ist gesundheitsschädlich, Unterdosierung birgt Botulismus-Risiko","- Pökeltemperatur konstant bei 2-4°C halten - niemals über 4°C, um Bakterienwachstum zu verhindern","- Kerntemperatur von mindestens 68°C zwingend erreichen zur Abtötung von Krankheitserregern","- Saubere, desinfizierte Behälter und Werkzeuge verwenden - Kreuzkontamination vermeiden","- Nach dem Garen zügig unter 4°C abkühlen (nicht länger als 2 Std bei Raumtemperatur)","- Gepökeltes Fleisch niemals roh verzehren - dieser Schinken ist ein Brühwurst-Erzeugnis und muss durchgegart werden"]}),
 
   r({
     id: "knochen-rohschinken", name: "Nussknochen-Rohschinken (Kräuter)", method: "kalt", cat: "Schinken", diff: 2,
@@ -3686,7 +3784,11 @@ const RECIPES = [
     ingredients: [
       { a: "1,5 kg", i: "Nussknochen (Schweinekeule, ausgelöst)" },
       { a: "40 g/kg", i: "NPS" },
-      { a: "je 1 TL", i: "Knoblauch, Rosmarin, Thymian, Majoran, Pfeffer" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "1 g", i: "Rosmarin, getrocknet" },
+      { a: "1 g", i: "Thymian, getrocknet" },
+      { a: "1 g", i: "Majoran, getrocknet" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
       { a: "5 g/kg", i: "Zucker" },
     ],
     phases: [
@@ -3711,8 +3813,8 @@ const RECIPES = [
     ingredients: [
       { a: "1", i: "Pute (4–5 kg)" },
       { a: "1–2 l", i: "Brine: 80 g Salz + 60 g Zucker + Lorbeer, Thymian, Pfefferkörner pro Liter" },
-      { a: "3–4 EL", i: "Rub: Paprika, Knoblauch, Pfeffer, Salz, brauner Zucker, Thymian" },
-      { a: "2 EL", i: "weiche Butter (für die Haut)" },
+      { a: "3–4 EL (48–64 g)", i: "Rub: Paprika, Knoblauch, Pfeffer, Salz, brauner Zucker, Thymian" },
+      { a: "2 EL (28 g)", i: "weiche Butter (für die Haut)" },
     ],
     phases: [
       { label: "Brine (Nacht vorher)", kind: "cure", dur: "12–24 h", temp: "0–4 °C", text: "Pute komplett in Brine einlegen. Großes Behältnis oder Kühlbox nutzen.", bullets: ["Brining ist Pflicht bei Pute – sonst wird die Brust trocken", "Brine erst abkühlen lassen, dann Pute hinein"] },
@@ -3751,7 +3853,7 @@ const RECIPES = [
     equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "2", i: "Leitern Baby Back Ribs" },
-      { a: "3–4 EL", i: "Rub: Paprika, Salz, Pfeffer, brauner Zucker, Knoblauch, Zwiebelpulver" },
+      { a: "3–4 EL (48–64 g)", i: "Rub: Paprika, Salz, Pfeffer, brauner Zucker, Knoblauch, Zwiebelpulver" },
       { a: "100 ml + 100 ml", i: "Apfelsaft (zum Sprühen), BBQ-Sauce (zum Glasieren)" },
     ],
     phases: [
@@ -3776,7 +3878,7 @@ const RECIPES = [
     authenticityNote: "Folgt der US-BBQ-Technik des Brisket, auf das nachsichtigere Chuck übertragen.",
     ingredients: [
       { a: "2 kg", i: "Rinderschulter (Chuck Roast), am Stück" },
-      { a: "je 3 EL", i: "grobes Meersalz + schwarzer Pfeffer (Texas-Style Rub)" },
+      { a: "je 3 EL", i: "grobes Meersalz (48 g) + schwarzer Pfeffer (22 g), Texas-Style Rub" },
       { a: "200 ml", i: "Rinderbrühe (zum Sprühen nach 3 h)" },
     ],
     phases: [
@@ -3798,7 +3900,7 @@ const RECIPES = [
     equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "1,5–2 kg", i: "Lammschulter, mit Knochen" },
-      { a: "4 EL + je 1 TL", i: "Würzpaste: Olivenöl, Knoblauch (6 Zehen), Rosmarin, Thymian, Zitronenschale, Pfeffer, Salz" },
+      { a: "4 EL + je 1 TL", i: "Würzpaste: Olivenöl (52 g), Knoblauch (6 Zehen) (3 g), Rosmarin (1 g), Thymian (1 g), Zitronenschale (2 g), Pfeffer (2,5 g), Salz (5,5 g)" },
     ],
     phases: [
       { label: "Würzpaste & Marinieren", kind: "cure", dur: "12–24 h", temp: "Kühlschrank", text: "Alle Zutaten zu einer Paste mörsern. Lammschulter tief einschneiden und kräftig einreiben. Vakuumieren.", bullets: ["Je länger die Marinade, desto intensiveres Aroma"] },
@@ -3825,7 +3927,7 @@ const RECIPES = [
       { a: "1", i: "Ei" },
       { a: "100 g", i: "Semmelbrösel (in etwas Milch eingeweicht)" },
       { a: "1", i: "Zwiebel (fein gewürfelt, angedünstet)" },
-      { a: "je 1 TL", i: "Knoblauch, Worcestershire, Senf, Salz, Pfeffer, Paprika" },
+      { a: "je 1 TL", i: "Knoblauch (3 g), Worcestershire (5 g), Senf (5 g), Salz (5,5 g), Pfeffer (2,5 g), Paprika (2,5 g)" },
       { a: "ca. 100 ml", i: "BBQ-Sauce (zum Glasieren)" },
     ],
     phases: [
@@ -3867,7 +3969,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "reife Aprikosen" },
-      { a: "1 TL", i: "Zitronensaft (verhindert Bräunung)" },
+      { a: "1 TL (5 g)", i: "Zitronensaft (verhindert Bräunung)" },
     ],
     phases: [
       { label: "Halbieren & Entkernen", kind: "prep", dur: "15 min", temp: "—", text: "Aprikosen halbieren, Stein entfernen, mit Schnittfläche nach oben auf Gitter legen.", bullets: ["Hautseite nach unten schützt das Fruchtfleisch"] },
@@ -3886,7 +3988,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Süßkartoffeln" },
-      { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Paprika oder Zimt (herzhaft oder süß)" },
+      { a: "2 EL + je 1 TL", i: "Olivenöl (26 g), Meersalz (5,5 g), Paprika oder Zimt (herzhaft oder süß) (2,5 g)" },
     ],
     phases: [
       { label: "Schneiden", kind: "prep", dur: "15 min", temp: "—", text: "Süßkartoffeln schälen, in 3–4 mm Scheiben schneiden (Mandoline empfohlen).", bullets: ["Gleichmäßige Dicke ist entscheidend"] },
@@ -3905,7 +4007,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Hokkaido-Kürbis (Schale bleibt dran)" },
-      { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Pfeffer, Paprika, Kreuzkümmel oder Muskatnuss" },
+      { a: "2 EL + je 1 TL", i: "Olivenöl (26 g), Meersalz (5,5 g), Pfeffer (2,5 g), Paprika (2,5 g), Kreuzkümmel oder Muskatnuss (2 g)" },
     ],
     phases: [
       { label: "Schneiden", kind: "prep", dur: "20 min", temp: "—", text: "Hokkaido waschen, halbieren, Kerne entfernen, in 3–4 mm Scheiben schneiden.", bullets: ["Hokkaido: Schale ist essbar und knusprig", "Andere Kürbissorten müssen geschält werden"] },
@@ -3946,8 +4048,8 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "600–800 g", i: "Flank Steak / Bavette, pariert" },
-      { a: "je 1–2 TL", i: "grobes Meersalz (1 h vorher), schwarzer Pfeffer erst nach dem Grillen" },
-      { a: "2 EL + je 1 TL", i: "Butter + Knoblauch + Rosmarin (zum Basting)" },
+      { a: "je 1–2 TL", i: "grobes Meersalz (1 h vorher) (5,5–11 g), schwarzer Pfeffer erst nach dem Grillen (2,5–5 g)" },
+      { a: "2 EL + je 1 TL", i: "Butter (28 g), Knoblauch (3 g), Rosmarin (zum Basting) (1 g)" },
     ],
     phases: [
       { label: "Dry Brine", kind: "prep", dur: "1–8 h", temp: "Kühlschrank, offen", text: "Großzügig salzen, offen auf Gitter kühlen.", bullets: [] },
@@ -3996,9 +4098,9 @@ const RECIPES = [
     ingredients: [
       { a: "800 g", i: "Lammhack (nicht zu mager, ~20 % Fett)" },
       { a: "200 g", i: "Lammschwanzfett oder fetter Speck (optional)" },
-      { a: "2 EL", i: "türkisches Paprikamark (Biber salçası)" },
-      { a: "1–2 TL", i: "Pul Biber (Chiliflocken)" },
-      { a: "je 1 TL", i: "Salz, Kreuzkümmel, Knoblauch" },
+      { a: "2 EL (14 g)", i: "türkisches Paprikamark (Biber salçası)" },
+      { a: "1–2 TL (2–4 g)", i: "Pul Biber (Chiliflocken)" },
+      { a: "je 1 TL", i: "Salz (5,5 g), Kreuzkümmel (2 g), Knoblauch (3 g)" },
       { a: "dazu", i: "Fladenbrot, Sumak-Zwiebeln, gegrillte Paprika/Tomaten" },
     ],
     phases: [
@@ -4024,8 +4126,8 @@ const RECIPES = [
       { a: "1 kg", i: "Rinderrippen, dünn LA-Style geschnitten (5–8 mm)" },
       { a: "120 ml", i: "Sojasauce" },
       { a: "1/2", i: "asiatische Birne (oder Apfel), gerieben" },
-      { a: "3 EL", i: "brauner Zucker" },
-      { a: "2 EL", i: "Sesamöl" },
+      { a: "3 EL (36 g)", i: "brauner Zucker" },
+      { a: "2 EL (26 g)", i: "Sesamöl" },
       { a: "4 Zehen", i: "Knoblauch + 1 EL Ingwer, gerieben" },
       { a: "2", i: "Frühlingszwiebeln + 1 EL Sesam" },
     ],
@@ -4050,11 +4152,11 @@ const RECIPES = [
     ingredients: [
       { a: "1,5 kg", i: "Schweineschulter oder Hähnchenteile" },
       { a: "2–4", i: "Scotch-Bonnet-Chilis (nach Schärfe)" },
-      { a: "2 TL", i: "Piment (Allspice), gemahlen" },
+      { a: "2 TL (4,5 g)", i: "Piment (Allspice), gemahlen" },
       { a: "4", i: "Frühlingszwiebeln" },
       { a: "4 Zehen", i: "Knoblauch + 2 EL Ingwer" },
-      { a: "2 EL", i: "Thymian" },
-      { a: "3 EL", i: "Sojasauce + 2 EL Limettensaft + 1 EL brauner Zucker" },
+      { a: "2 EL (6 g)", i: "Thymian" },
+      { a: "3 EL + 2 EL + 1 EL", i: "Sojasauce (48 g) + Limettensaft (30 g) + brauner Zucker (12 g)" },
     ],
     phases: [
       { label: "Marinade & Marinieren", kind: "prep", dur: "12–24 h", temp: "kalt", text: "Alle Zutaten zu einer Paste mixen, Fleisch rundum einreiben und über Nacht marinieren.", bullets: ["Handschuhe tragen – Scotch Bonnet ist sehr scharf", "Je länger, desto tiefer das Aroma"] },
@@ -4076,11 +4178,11 @@ const RECIPES = [
     equipment: [["kettle",5,{de:"mit Holzkohle, für den Braai",en:"with charcoal, for the braai"}],["gas",4],["wsm",3]],
     ingredients: [
       { a: "1 kg", i: "Lammschulter, gewürfelt (oder Lamm/Schwein gemischt)" },
-      { a: "2 EL", i: "Currypulver (mild)" },
-      { a: "3 EL", i: "Aprikosenkonfitüre" },
+      { a: "2 EL (17 g)", i: "Currypulver (mild)" },
+      { a: "3 EL (60 g)", i: "Aprikosenkonfitüre" },
       { a: "2", i: "Zwiebeln (1 für Marinade, 1 für Spieße)" },
-      { a: "2 EL", i: "Weinessig" },
-      { a: "je 1 TL", i: "Salz, Knoblauch, Ingwer, Kurkuma" },
+      { a: "2 EL (30 g)", i: "Weinessig" },
+      { a: "je 1 TL", i: "Salz (5,5 g), Knoblauch (3 g), Ingwer (2 g), Kurkuma (3 g)" },
       { a: "12", i: "getrocknete Aprikosen (kurz eingeweicht)" },
     ],
     phases: [
@@ -4105,7 +4207,7 @@ const RECIPES = [
     ingredients: [
       { a: "1", i: "Lachsseite (600–800 g) mit Haut, entgrätet" },
       { a: "1", i: "Zedernholz-Grillbrett (Food Grade, 30 min eingewässert)" },
-      { a: "je 2 EL", i: "Glasur: Ahornsirup, Dijonsenf, Sojasoße, Ingwer, Knoblauch" },
+      { a: "je 2 EL", i: "Glasur: Ahornsirup (40 g), Dijonsenf (30 g), Sojasoße (32 g), Ingwer (11 g), Knoblauch (18 g)" },
     ],
     phases: [
       { label: "Brett einweichen", kind: "prep", dur: "30–60 min", temp: "Wasser oder Weißwein", text: "Zedernholzbrett vollständig einweichen.", bullets: ["Wein gibt feines Aroma und schützt das Brett besser"] },
@@ -4129,7 +4231,7 @@ const RECIPES = [
     ingredients: [
       { a: "2", i: "Packungen Halloumi (je 250 g)" },
       { a: "je 1 Stk", i: "Zucchini, Auberginen, Paprika, rote Zwiebeln" },
-      { a: "2 EL + je 1 TL", i: "Olivenöl, Zitrone, Oregano, Meersalz, Pfeffer" },
+      { a: "2 EL + je 1 TL", i: "Olivenöl (26 g), Zitrone, Oregano (1 g), Meersalz (5,5 g), Pfeffer (2,5 g)" },
     ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "10 min", temp: "—", text: "Gemüse in grobe Stücke schneiden, mit Öl und Gewürzen marinieren. Halloumi in 1 cm Scheiben schneiden.", bullets: ["Auberginen in Längsstreifen, Paprika in Viertel", "Halloumi braucht nur etwas Öl"] },
@@ -4151,9 +4253,9 @@ const RECIPES = [
     authenticity: 8.5,
     authenticityNote: "Folgt der mediterranen Zubereitung.",
     ingredients: [
-      { a: "1", i: "Oktopus (1,5–2 kg), tiefgekühlt aufgetaut" },
-      { a: "je 1 TL", i: "Vorkoch-Wasser: Lorbeer, Pfefferkörner, Weißwein, Salz" },
-      { a: "2 EL + je 1 TL", i: "Olivenöl, Knoblauch, Zitrone, Petersilie, Paprika" },
+      { a: "1 (1,5–2 kg)", i: "Oktopus (1,5–2 kg), tiefgekühlt aufgetaut" },
+      { a: "je 1 TL", i: "Vorkoch-Wasser: Lorbeer (1 Blatt), Pfefferkörner (3 g), Weißwein (5 g), Salz (5,5 g)" },
+      { a: "2 EL + je 1 TL", i: "Olivenöl (26 g), Knoblauch (3 g), Zitrone, Petersilie (1 g), Paprika (2,5 g)" },
     ],
     phases: [
       { label: "Vorgaren (unverzichtbar)", kind: "cook", dur: "45–60 min", temp: "Simmern, 85–90 °C", text: "Oktopus im Gewürzwasser bei 85–90 °C simmern bis eine Messerspitze leicht einsticht.", bullets: ["Tiefgekühlt aufgetauter Oktopus ist zarter – Eiskristalle zerteilen die Muskelfasern", "NICHT sprudelnd kochen – macht ihn gummiartig"] },
@@ -4177,7 +4279,7 @@ const RECIPES = [
       { a: "1,5 kg", i: "Schweinebauch ohne Schwarte, am Stück" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
       { a: "5 g/kg", i: "brauner Zucker" },
-      { a: "je 1 TL", i: "Pfeffer, Wacholder, Knoblauch, Lorbeer" },
+      { a: "je 1 TL", i: "Pfeffer (2,5 g), Wacholder (2,5 g), Knoblauch (3 g), Lorbeer (1 Blatt)" },
     ],
     phases: [
       { label: "Trockenpökeln", kind: "cure", dur: "7–10 Tage", temp: "2–7 °C", text: "Bauch rundum mit der Pökelmischung einreiben, vakuumieren und täglich wenden.", bullets: ["NPS exakt abwiegen (40 g/kg)", "1 Tag je cm Dicke plus 2–3 Tage Reserve"] },
@@ -4199,7 +4301,7 @@ const RECIPES = [
     ingredients: [
       { a: "1,8 kg", i: "Schweinenacken am Stück, ohne Knochen" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Pfeffer, Knoblauch, Kümmel, Majoran" },
+      { a: "je 1 TL", i: "Pfeffer (2,5 g), Knoblauch (3 g), Kümmel (2 g), Majoran (1 g)" },
     ],
     phases: [
       { label: "Pökeln", kind: "cure", dur: "5–7 Tage", temp: "2–7 °C", text: "Nacken einreiben, vakuumieren, täglich wenden.", bullets: ["Marmorierung macht das Stück saftig"] },
@@ -4219,7 +4321,7 @@ const RECIPES = [
     ingredients: [
       { a: "1,4 kg", i: "Roastbeef / Rinderrücken am Stück, pariert" },
       { a: "12 g/kg", i: "grobes Meersalz (Dry Brine)" },
-      { a: "je 1 TL", i: "grober Pfeffer, Knoblauch, Senf, Rosmarin" },
+      { a: "je 1 TL", i: "grober Pfeffer (2,5 g), Knoblauch (3 g), Senf (5 g), Rosmarin (1 g)" },
     ],
     phases: [
       { label: "Dry Brine", kind: "cure", dur: "12–24 h", temp: "Kühlschrank, offen", text: "Salzen und offen kühlen – würzt durch und trocknet die Oberfläche.", bullets: ["Offene Lagerung = bessere Rauchhaftung und Kruste"] },
@@ -4238,7 +4340,7 @@ const RECIPES = [
     ingredients: [
       { a: "1", i: "Rinderzunge (ca. 1,2 kg)" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Wacholder, Pfeffer, Lorbeer, Piment" },
+      { a: "je 1 TL", i: "Wacholder (2,5 g), Pfeffer (2,5 g), Lorbeer (1 Blatt), Piment (2,5 g)" },
     ],
     phases: [
       { label: "Pökeln", kind: "cure", dur: "6–8 Tage", temp: "2–7 °C", text: "Zunge in Pökelmischung oder Lake einlegen, täglich wenden.", bullets: ["Durchgepökelt bleibt sie schön rosa"] },
@@ -4258,7 +4360,7 @@ const RECIPES = [
       { a: "4–6", i: "ganze Knoblauchknollen (Deckel abgeschnitten)" },
       { a: "2–3", i: "rote Zwiebeln, halbiert" },
       { a: "3–4", i: "Paprika und/oder feste Tomaten" },
-      { a: "2 EL", i: "Olivenöl, etwas Meersalz" },
+      { a: "2 EL (26 g)", i: "Olivenöl, etwas Meersalz" },
     ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "10 min", temp: "—", text: "Knoblauchknollen kappen, Gemüse halbieren, leicht mit Öl und Salz einreiben.", bullets: ["Schnittflächen ölen, damit sie nicht austrocknen"] },
@@ -4278,7 +4380,7 @@ const RECIPES = [
     ingredients: [
       { a: "2 kg", i: "Schweineschulter mit Schwarte" },
       { a: "12 g/kg", i: "Salz" },
-      { a: "je 1 TL", i: "Kümmel, Knoblauch, Pfeffer, Paprika" },
+      { a: "je 1 TL", i: "Kümmel (2 g), Knoblauch (3 g), Pfeffer (2,5 g), Paprika (2,5 g)" },
       { a: "200 ml", i: "dunkles Bier (zum Mopfen)" },
     ],
     phases: [
@@ -4297,7 +4399,7 @@ const RECIPES = [
     equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "4", i: "Schweinenackensteaks (je ca. 250 g, 3 cm dick)" },
-      { a: "3–4 EL", i: "BBQ-Rub (Paprika, Zucker, Knoblauch, Pfeffer, Salz)" },
+      { a: "3–4 EL (48–64 g)", i: "BBQ-Rub (Paprika, Zucker, Knoblauch, Pfeffer, Salz)" },
       { a: "etwas", i: "BBQ-Sauce (optional zum Glasieren)" },
     ],
     phases: [
@@ -4318,7 +4420,7 @@ const RECIPES = [
     authenticityNote: "Folgt der kalifornischen Santa-Maria-Tradition.",
     ingredients: [
       { a: "1,2 kg", i: "Tri-Tip / Bürgermeisterstück, pariert" },
-      { a: "je 1 EL", i: "grobes Salz, grober Pfeffer, Knoblauchgranulat (SPG-Rub)" },
+      { a: "je 1 EL", i: "grobes Salz (16 g), grober Pfeffer (7,5 g), Knoblauchgranulat (SPG-Rub) (9 g)" },
     ],
     phases: [
       { label: "Dry Brine & Würzen", kind: "cure", dur: "4–12 h", temp: "Kühlschrank", text: "Mit Salz-Pfeffer-Knoblauch-Rub einreiben, offen kühlen.", bullets: ["SPG ist der klassische Beef-Rub"] },
@@ -4336,7 +4438,7 @@ const RECIPES = [
     equipment: [["wsm",5],["kettle",4],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "1", i: "Beef-Rib-Leiter (Short Ribs, 1,5–2 kg)" },
-      { a: "je 1 EL", i: "grobes Salz, grober Pfeffer, Knoblauchgranulat" },
+      { a: "je 1 EL", i: "grobes Salz (16 g), grober Pfeffer (7,5 g), Knoblauchgranulat (9 g)" },
       { a: "etwas", i: "Senf oder Öl als Haftgrund" },
     ],
     phases: [
@@ -4374,7 +4476,7 @@ const RECIPES = [
       { a: "1 kg", i: "Schweinelachs / Rückenfilet (sehr mager, pariert)" },
       { a: "3 g/kg", i: "Nitritpökelsalz (NPS, für Sicherheit)" },
       { a: "60 ml", i: "Sojasoße" },
-      { a: "2 EL + je 1 TL", i: "Worcestershire, Knoblauch, Pfeffer, brauner Zucker, Paprika" },
+      { a: "2 EL + je 1 TL", i: "Worcestershire (30 g), Knoblauch (3 g), Pfeffer (2,5 g), brauner Zucker (4 g), Paprika (2,5 g)" },
     ],
     phases: [
       { label: "Schneiden", kind: "prep", dur: "20 min", temp: "leicht angefroren", text: "Fleisch leicht anfrieren, in 4–5 mm dünne Streifen schneiden. Alles sichtbare Fett entfernen.", bullets: ["Fett wird beim Dörren ranzig – komplett entfernen", "Angefroren lässt es sich gleichmäßig schneiden"] },
@@ -4395,7 +4497,7 @@ const RECIPES = [
     ingredients: [
       { a: "1 kg", i: "mageres Rinderhack (max. 5 % Fett)" },
       { a: "3 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "2 EL + je 1 TL", i: "Sojasoße, Knoblauch, Pfeffer, Paprika, Worcestershire, brauner Zucker" },
+      { a: "2 EL + je 1 TL", i: "Sojasoße (32 g), Knoblauch (3 g), Pfeffer (2,5 g), Paprika (2,5 g), Worcestershire (5 g), brauner Zucker (4 g)" },
     ],
     phases: [
       { label: "Masse anrühren", kind: "prep", dur: "15 min", temp: "kühl", text: "Hack mit NPS und Gewürzen gründlich verkneten, bis die Masse bindet.", bullets: ["Mageres Hack ist Pflicht – Fett verdirbt das Jerky", "Kalt arbeiten"] },
@@ -4415,7 +4517,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Pastinaken (oder gemischt: Petersilienwurzel, Topinambur)" },
-      { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Kreuzkümmel oder Rosmarin" },
+      { a: "2 EL + je 1 TL", i: "Olivenöl (26 g), Meersalz (5,5 g), Kreuzkümmel oder Rosmarin (2 g)" },
     ],
     phases: [
       { label: "Schneiden", kind: "prep", dur: "20 min", temp: "—", text: "Wurzelgemüse schälen, mit Mandoline in 2–3 mm Scheiben hobeln.", bullets: ["Dünn und gleichmäßig = gleichmäßig knusprig", "In Zitronenwasser legen verhindert Bräunung"] },
@@ -4434,7 +4536,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Auberginen" },
-      { a: "3 EL + je 1 TL", i: "Olivenöl, Sojasoße, Knoblauch, Paprika, Meersalz" },
+      { a: "3 EL + je 1 TL", i: "Olivenöl (39 g), Sojasoße (5,5 g), Knoblauch (3 g), Paprika (2,5 g), Meersalz (5,5 g)" },
     ],
     phases: [
       { label: "Schneiden & Salzen", kind: "prep", dur: "30 min", temp: "—", text: "In 3–4 mm Scheiben schneiden, salzen und 20 min Wasser ziehen lassen, dann abtupfen.", bullets: ["Salzen entzieht Bitterstoffe und Wasser"] },
@@ -4471,7 +4573,7 @@ const RECIPES = [
     equipment: [["dehydrator",5],["oven",2,{de:"nur mit Umluft & Türspalt",en:"only with fan & door ajar"}]],
     ingredients: [
       { a: "1 kg", i: "Knollensellerie oder Staudensellerie" },
-      { a: "je 1 TL", i: "Meersalz, Pfeffer (für Chips, optional)" },
+      { a: "je 1 TL", i: "Meersalz (5,5 g), Pfeffer (für Chips, optional) (2,5 g)" },
     ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "20 min", temp: "—", text: "Knollensellerie schälen und in 2–3 mm Scheiben hobeln; Stangensellerie in dünne Stücke schneiden.", bullets: ["Dünn schneiden für knusprige Chips"] },
@@ -4493,7 +4595,7 @@ const RECIPES = [
     ingredients: [
       { a: "4", i: "Forellen, ausgenommen, geschuppt" },
       { a: "je 1", i: "Zitrone, Bund Petersilie/Dill (in die Bauchhöhle)" },
-      { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Pfeffer, Knoblauch" },
+      { a: "2 EL + je 1 TL", i: "Olivenöl (26 g), Meersalz (5,5 g), Pfeffer (2,5 g), Knoblauch (3 g)" },
     ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "20 min", temp: "—", text: "Forellen waschen, trocken tupfen, innen und außen salzen. Bauchhöhle mit Zitronenscheiben und Kräutern füllen, Haut dünn ölen.", bullets: ["Trockene Haut wird knuspriger und klebt weniger", "Fischkorb gut einölen"] },
@@ -4539,7 +4641,7 @@ const RECIPES = [
     ingredients: [
       { a: "2", i: "Makrelen, filetiert (oder ganze Saba)" },
       { a: "reichlich", i: "feines Meersalz" },
-      { a: "1 EL", i: "Sake (optional, zum Abtupfen)" },
+      { a: "1 EL (15 g)", i: "Sake (optional, zum Abtupfen)" },
       { a: "zum Servieren", i: "geriebener Daikon, Sojasauce, Zitrone (Sudachi)" },
     ],
     phases: [
@@ -4563,11 +4665,11 @@ const RECIPES = [
     ingredients: [
       { a: "1", i: "ganzer Fisch (Wolfsbarsch, Dorade, Red Snapper), schmetterlingsartig aufgeklappt" },
       { a: "3", i: "getrocknete Chilis (Guajillo/Ancho), eingeweicht" },
-      { a: "2 EL", i: "Achiote-/Annatto-Paste" },
+      { a: "2 EL (30 g)", i: "Achiote-/Annatto-Paste" },
       { a: "3 Zehen", i: "Knoblauch" },
       { a: "2", i: "Limetten (Saft)" },
-      { a: "2 EL", i: "Sojasauce oder Worcestershire" },
-      { a: "je 1 TL", i: "Salz, Oregano, Kreuzkümmel" },
+      { a: "2 EL (32 g)", i: "Sojasauce oder Worcestershire" },
+      { a: "je 1 TL", i: "Salz (5,5 g), Oregano (1 g), Kreuzkümmel (2 g)" },
     ],
     phases: [
       { label: "Marinade & Marinieren", kind: "prep", dur: "1–2 h", temp: "kalt", text: "Chilis, Achiote, Knoblauch, Limette und Gewürze zu einer Paste mixen. Den aufgeklappten Fisch rundum einstreichen und ziehen lassen.", bullets: ["Fisch schmetterlingsartig flach aufklappen (Butterfly)", "Fleischseite großzügig marinieren"] },
@@ -4589,11 +4691,11 @@ const RECIPES = [
     equipment: [["kettle",5,{de:"mit Holzkohle, für den Braai-Rauch",en:"with charcoal, for the braai smoke"}],["gas",4],["wsm",3]],
     ingredients: [
       { a: "1", i: "Snoek (oder Makrele/Lachsforelle), aufgeklappt" },
-      { a: "3 EL", i: "Aprikosenkonfitüre" },
+      { a: "3 EL (60 g)", i: "Aprikosenkonfitüre" },
       { a: "50 g", i: "Butter, geschmolzen" },
       { a: "3 Zehen", i: "Knoblauch, gerieben" },
       { a: "1", i: "Zitrone (Saft)" },
-      { a: "je 1 TL", i: "Salz, Pfeffer" },
+      { a: "je 1 TL", i: "Salz (5,5 g), Pfeffer (2,5 g)" },
     ],
     phases: [
       { label: "Basting anrühren", kind: "prep", dur: "10 min", temp: "—", text: "Aprikosenkonfitüre, geschmolzene Butter, Knoblauch, Zitrone, Salz und Pfeffer verrühren.", bullets: ["Fisch aufklappen (Butterfly), Gräten belassen"] },
@@ -4612,7 +4714,7 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "4", i: "Lachsfilets mit Haut (je 180 g), entgrätet" },
-      { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Pfeffer, Zitronenschale" },
+      { a: "2 EL + je 1 TL", i: "Olivenöl (26 g), Meersalz (5,5 g), Pfeffer (2,5 g), Zitronenschale (2 g)" },
       { a: "1", i: "Zitrone (zum Servieren)" },
     ],
     phases: [
@@ -4632,8 +4734,8 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "4", i: "Thunfischsteaks in Sashimi-Qualität (je 200 g, 3 cm dick)" },
-      { a: "3 EL + je 1 EL", i: "Sojasoße, Sesamöl, Limette, Ingwer (Marinade)" },
-      { a: "4 EL", i: "Sesam (hell + schwarz, zum Wälzen)" },
+      { a: "3 EL + je 1 EL", i: "Sojasoße (48 g), Sesamöl (13 g), Limette, Ingwer (Marinade) (5,5 g)" },
+      { a: "4 EL (36 g)", i: "Sesam (hell + schwarz, zum Wälzen)" },
     ],
     phases: [
       { label: "Marinieren", kind: "marinate", dur: "20–30 min", temp: "kühl", text: "Thunfisch kurz in der Soja-Sesam-Marinade wenden, dann rundum in Sesam wälzen.", bullets: ["Nicht zu lange marinieren – Soja gart den Fisch sonst an", "Sesam gut andrücken"] },
@@ -4656,7 +4758,7 @@ const RECIPES = [
     ingredients: [
       { a: "2", i: "Doraden oder Wolfsbarsche (je ca. 400 g), küchenfertig" },
       { a: "je 1", i: "Zitrone, Knoblauchzehen, Bund Rosmarin/Thymian" },
-      { a: "3 EL + je 1 TL", i: "Olivenöl, grobes Meersalz, Pfeffer" },
+      { a: "3 EL + je 1 TL", i: "Olivenöl (39 g), grobes Meersalz (5,5 g), Pfeffer (2,5 g)" },
     ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "15 min", temp: "—", text: "Fisch waschen, trocknen, Haut 2–3 mal einschneiden. Innen salzen, mit Zitrone, Knoblauch und Kräutern füllen. Außen ölen und salzen.", bullets: ["Einschnitte garen das dicke Rückenfleisch gleichmäßiger", "Haut gut trocknen für Knusprigkeit"] },
@@ -4675,7 +4777,7 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "12", i: "große Jakobsmuscheln (ohne Schale, trocken getupft)" },
-      { a: "2 EL + je 1 TL", i: "Olivenöl/Butter, Meersalz, Knoblauch, Zitrone" },
+      { a: "2 EL + je 1 TL", i: "Olivenöl/Butter (26 g), Meersalz (5,5 g), Knoblauch (3 g), Zitrone" },
     ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "10 min", temp: "—", text: "Muscheln sehr gründlich trocken tupfen, leicht ölen und salzen.", bullets: ["Trockene Muscheln karamellisieren – feuchte kochen nur", "Seitlichen Muskelstrang entfernen"] },
@@ -4698,7 +4800,7 @@ const RECIPES = [
     ingredients: [
       { a: "800 g", i: "Schwertfisch (oder Thunfisch/Seeteufel), in 3-cm-Würfeln" },
       { a: "1", i: "Zitrone, 1 Zucchini, 1 rote Zwiebel, Cherrytomaten" },
-      { a: "4 EL + je 1 TL", i: "Olivenöl, Knoblauch, Oregano, Paprika, Meersalz (Marinade)" },
+      { a: "4 EL + je 1 TL", i: "Olivenöl (52 g), Knoblauch (3 g), Oregano (1 g), Paprika (2,5 g), Meersalz (Marinade) (5,5 g)" },
     ],
     phases: [
       { label: "Marinieren", kind: "marinate", dur: "30 min", temp: "kühl", text: "Fischwürfel in der Kräutermarinade wenden.", bullets: ["Fester Fisch wie Schwertfisch oder Seeteufel fällt nicht auseinander", "Nicht zu lange in Zitrone – sonst wird der Fisch mürbe"] },
@@ -4722,7 +4824,7 @@ const RECIPES = [
     authenticityNote: "Folgt der galicischen Tradition.",
     ingredients: [
       { a: "300 g", i: "Padrón- oder Pimientos-de-Padrón-Paprika (ganz)" },
-      { a: "2 EL", i: "Olivenöl" },
+      { a: "2 EL (26 g)", i: "Olivenöl" },
       { a: "nach Geschmack", i: "grobes Meersalz (Fleur de Sel)" },
     ],
     phases: [
@@ -4742,8 +4844,8 @@ const RECIPES = [
     equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2],["dutch",4,{de:"gut zum Schmoren",en:"good for braising"}]],
     ingredients: [
       { a: "1 kg", i: "Zwiebeln (rot und gelb), in dünne Ringe geschnitten" },
-      { a: "3 EL", i: "Butter oder Olivenöl" },
-      { a: "3 EL + 1 TL", i: "Balsamico, brauner Zucker, Thymian, Salz" },
+      { a: "3 EL (39 g)", i: "Butter oder Olivenöl" },
+      { a: "3 EL (45 g) + je 1 TL", i: "Balsamico, brauner Zucker (4 g), Thymian (1 g), Salz (5,5 g)" },
     ],
     phases: [
       { label: "Anschwitzen", kind: "prep", dur: "10 min", temp: "mittlere Flamme", text: "Zwiebeln im Gusstopf auf dem Seitenkocher mit Butter und einer Prise Salz anschwitzen.", bullets: ["Großzügig Volumen – Zwiebeln fallen stark zusammen"] },
@@ -4764,7 +4866,7 @@ const RECIPES = [
     equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2],["dutch",3,{de:"geht, flache Pfanne besser",en:"works, a flat pan is better"}]],
     ingredients: [
       { a: "500 g", i: "gemischte Pilze (Champignons, Kräuterseitlinge, Shiitake)" },
-      { a: "3 EL + 1 EL", i: "Butter, Olivenöl" },
+      { a: "3 EL + 1 EL", i: "Butter (42 g), Olivenöl (13 g)" },
       { a: "je 2 + nach Geschmack", i: "Knoblauchzehen, Petersilie, Thymian, Salz, Pfeffer" },
     ],
     phases: [
@@ -4784,7 +4886,7 @@ const RECIPES = [
     equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2],["dutch",2,{de:"geht, flache Pfanne besser",en:"works, a flat pan is better"}]],
     ingredients: [
       { a: "500 g", i: "grüner Spargel (holzige Enden entfernt)" },
-      { a: "2 EL + je 1 TL", i: "Olivenöl, Meersalz, Pfeffer, Zitronenschale" },
+      { a: "2 EL + je 1 TL", i: "Olivenöl (26 g), Meersalz (5,5 g), Pfeffer (2,5 g), Zitronenschale (2 g)" },
       { a: "30 g + ½", i: "Parmesan (gehobelt), Zitrone (Saft)" },
     ],
     phases: [
@@ -4806,7 +4908,7 @@ const RECIPES = [
       { a: "750 g", i: "grüne Bohnen, geputzt" },
       { a: "150 g", i: "Speckwürfel" },
       { a: "1 + 2", i: "Zwiebel, Knoblauchzehen" },
-      { a: "200 ml + je 1 TL", i: "Brühe, Bohnenkraut, Salz, Pfeffer" },
+      { a: "200 ml + je 1 TL", i: "Brühe, Bohnenkraut (1 g), Salz (5,5 g), Pfeffer (2,5 g)" },
     ],
     phases: [
       { label: "Speck auslassen", kind: "prep", dur: "5 min", temp: "mittlere Flamme", text: "Speck im Gusstopf auf dem Seitenkocher knusprig auslassen, Zwiebel und Knoblauch zugeben.", bullets: [] },
@@ -4854,7 +4956,7 @@ const RECIPES = [
       { a: "4–5", i: "Eier" },
       { a: "2 + 1 + 2", i: "Paprika, Zwiebel, Knoblauchzehen" },
       { a: "800 g", i: "stückige Tomaten (Dose)" },
-      { a: "je 1 TL", i: "Kreuzkümmel, Paprika edelsüß, Chili, Salz, Zucker" },
+      { a: "je 1 TL", i: "Kreuzkümmel (2 g), Paprika edelsüß (2,5 g), Chili (2 g), Salz (5,5 g), Zucker (4 g)" },
     ],
     phases: [
       { label: "Sugo ansetzen", kind: "prep", dur: "10 min", temp: "mittlere Flamme", text: "Zwiebel, Paprika und Knoblauch in der Pfanne anschwitzen, Gewürze zugeben, mit Tomaten auffüllen.", bullets: ["Gewürze kurz mitrösten = mehr Aroma"] },
@@ -4874,7 +4976,7 @@ const RECIPES = [
     ingredients: [
       { a: "1 kg", i: "festkochende Kartoffeln (vorgekocht, ausgekühlt)" },
       { a: "100 g + 1", i: "Speckwürfel, Zwiebel" },
-      { a: "3 EL + je 1 TL", i: "Butterschmalz, Salz, Pfeffer, Kümmel, Petersilie" },
+      { a: "3 EL + je 1 TL", i: "Butterschmalz (39 g), Salz (5,5 g), Pfeffer (2,5 g), Kümmel (2 g), Petersilie (1 g)" },
     ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "5 min", temp: "—", text: "Vorgekochte, ausgekühlte Kartoffeln in Scheiben schneiden.", bullets: ["Am Vortag gekocht = beste Kruste", "Kalte Kartoffeln zerfallen nicht"] },
@@ -4893,9 +4995,9 @@ const RECIPES = [
     equipment: [["stove",5],["gas",5,{de:"Seitenkocher",en:"side burner"}],["kettle",2],["dutch",4,{de:"Sauce einkochen",en:"reduce the sauce"}]],
     ingredients: [
       { a: "400 g", i: "passierte Tomaten (oder Ketchup als Basis)" },
-      { a: "je 3 EL", i: "brauner Zucker, Apfelessig, Worcestershire" },
-      { a: "je 1–2 TL", i: "geräuchertes Paprikapulver, Senf, Knoblauch, Zwiebelpulver, Chili, Salz" },
-      { a: "2 EL", i: "Melasse oder Ahornsirup (optional)" },
+      { a: "je 3 EL", i: "brauner Zucker (36 g), Apfelessig (45 g), Worcestershire (45 g)" },
+      { a: "je 1–2 TL", i: "geräuchertes Paprikapulver (2,5–4,5 g), Senf (5–10 g), Knoblauch (3–6 g), Zwiebelpulver, Chili (2–4,5 g), Salz (5,5–11 g)" },
+      { a: "2 EL (40 g)", i: "Melasse oder Ahornsirup (optional)" },
     ],
     phases: [
       { label: "Verrühren", kind: "prep", dur: "5 min", temp: "—", text: "Alle Zutaten im Topf verrühren.", bullets: ["Geräuchertes Paprikapulver gibt den Rauchton ohne Smoker"] },
@@ -4919,7 +5021,10 @@ const RECIPES = [
       { a: "1,5 kg", i: "Schweinebauch ohne Knochen, ohne Schwarte" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
       { a: "15 g/kg", i: "brauner Zucker" },
-      { a: "je 1 TL", i: "Pfeffer, Knoblauch, Lorbeer, Paprika" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "1 Blatt", i: "Lorbeer" },
+      { a: "2,5 g", i: "Paprika" },
     ],
     phases: [
       { label: "Trockenpökeln", kind: "cure", dur: "7 Tage", temp: "2–7 °C", text: "Bauch einreiben, vakuumieren, täglich wenden.", bullets: ["Zucker macht den Bacon typisch süßlich"] },
@@ -4942,7 +5047,10 @@ const RECIPES = [
       { a: "2 kg", i: "Schweinekeule oder -schulter, ausgelöst" },
       { a: "40 g/kg", i: "Nitritpökelsalz (NPS)" },
       { a: "5 g/kg", i: "brauner Zucker" },
-      { a: "je 1 TL", i: "Wacholder, Pfeffer, Knoblauch, Lorbeer" },
+      { a: "2,5 g", i: "Wacholder, gemörsert" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "1 Blatt", i: "Lorbeer" },
     ],
     phases: [
       { label: "Trockenpökeln", kind: "cure", dur: "12–16 Tage", temp: "2–7 °C", text: "Fleisch einreiben, vakuumieren, täglich wenden.", bullets: ["1 Tag je cm + Reserve"] },
@@ -4967,7 +5075,11 @@ const RECIPES = [
       { a: "1 kg", i: "Schweinefleisch (mager)" },
       { a: "0,5 kg", i: "Rückenspeck" },
       { a: "28 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Pfeffer, Knoblauch, Paprika, Senfkörner, Starterkultur" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "2,5 g", i: "Paprika" },
+      { a: "3,5 g", i: "Senfkörner" },
+      { a: "0,3 g", i: "Starterkultur – nach Herstellerangabe" },
       { a: "1", i: "Schafsaitling Kaliber 22/24" },
     ],
     phases: [
@@ -4988,7 +5100,10 @@ const RECIPES = [
     equipment: [["smokegen",5],["wsm",4],["kettle",4,{de:"mit Sparbrand",en:"with a maze"}]],
     ingredients: [
       { a: "400 g", i: "fester Tofu (gut gepresst)" },
-      { a: "4 EL + je 1 TL", i: "Sojasoße, Rauchsalz, Knoblauch, Paprika (Marinade)" },
+      { a: "64 g", i: "Sojasoße" },
+      { a: "5,5 g", i: "Rauchsalz" },
+      { a: "3 g", i: "Knoblauchpulver" },
+      { a: "2,5 g", i: "Paprika (Marinade)" },
     ],
     phases: [
       { label: "Pressen & Marinieren", kind: "marinate", dur: "4–12 h", temp: "Kühlschrank", text: "Tofu gut pressen, in der Marinade ziehen lassen.", bullets: ["Je trockener der Tofu, desto besser nimmt er Rauch an"] },
@@ -5026,7 +5141,10 @@ const RECIPES = [
       { a: "1,2 kg", i: "Schweineschulter" },
       { a: "300 g", i: "Rückenspeck" },
       { a: "26 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Majoran, Muskat, Pfeffer, Knoblauch" },
+      { a: "1 g", i: "Majoran, getrocknet" },
+      { a: "2 g", i: "Muskat, gerieben" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "3 g", i: "Knoblauchpulver" },
       { a: "1", i: "Schweinedarm Kaliber 28/30" },
     ],
     phases: [
@@ -5050,7 +5168,10 @@ const RECIPES = [
       { a: "0,5 kg", i: "Rückenspeck / fettes Schweinefleisch" },
       { a: "0,3 l", i: "Eiswasser / Crushed Ice" },
       { a: "26 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Muskat, Koriander, Pfeffer (weiß), Knoblauch" },
+      { a: "2 g", i: "Muskat, gerieben" },
+      { a: "2 g", i: "Koriander, gemahlen" },
+      { a: "2,5 g", i: "Pfeffer (weiß), gemahlen" },
+      { a: "3 g", i: "Knoblauchpulver" },
       { a: "1", i: "Kranzdarm Kaliber 40+" },
     ],
     phases: [
@@ -5074,7 +5195,10 @@ const RECIPES = [
       { a: "300 g", i: "Rückenspeck" },
       { a: "100 g + Eis", i: "Zwiebel, Crushed Ice" },
       { a: "26 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Majoran, Muskat, Pfeffer, Knoblauch" },
+      { a: "1 g", i: "Majoran, getrocknet" },
+      { a: "2 g", i: "Muskat, gerieben" },
+      { a: "2,5 g", i: "Pfeffer, gemahlen" },
+      { a: "3 g", i: "Knoblauchpulver" },
     ],
     phases: [
       { label: "Brät herstellen", kind: "prep", dur: "30 min", temp: "kalt", text: "Fein kuttern/wolfen, mit Eis zu glattem Brät verarbeiten.", bullets: [] },
@@ -5090,7 +5214,7 @@ const RECIPES = [
     equipment: [["wsm",5],["kettle",4],["gas",4]],
     ingredients: [
       { a: "400 g", i: "Räuchertofu oder fester Naturtofu (gepresst)" },
-      { a: "4 EL + je 1 TL", i: "Sojasoße, Sesamöl, Knoblauch, Paprika, Ahornsirup" },
+      { a: "4 EL + je 1 TL", i: "Sojasoße (64 g), Sesamöl (4,5 g), Knoblauch (3 g), Paprika (2,5 g), Ahornsirup (6,5 g)" },
     ],
     phases: [
       { label: "Marinieren", kind: "marinate", dur: "2–4 h", temp: "Kühlschrank", text: "Tofu in Scheiben in der Marinade ziehen lassen.", bullets: [] },
@@ -5109,7 +5233,7 @@ const RECIPES = [
     ingredients: [
       { a: "6", i: "Hähnchenschenkel" },
       { a: "12 g/kg", i: "Salz (Dry Brine)" },
-      { a: "3 EL", i: "BBQ-Rub" },
+      { a: "3 EL (26 g)", i: "BBQ-Rub" },
     ],
     phases: [
       { label: "Dry Brine", kind: "cure", dur: "12–24 h", temp: "Kühlschrank, offen", text: "Salzen und offen kühlen für knusprige Haut.", bullets: [] },
@@ -5126,7 +5250,7 @@ const RECIPES = [
     ingredients: [
       { a: "2", i: "Zander (je ca. 600 g), küchenfertig" },
       { a: "60 g/l", i: "Salzlake 6 %" },
-      { a: "je 1 TL", i: "Dill, Pfeffer, Zitrone" },
+      { a: "je 1 TL", i: "Dill (1 g), Pfeffer (2,5 g), Zitrone" },
     ],
     phases: [
       { label: "Lake", kind: "cure", dur: "6–10 h", temp: "0–4 °C", text: "In 6%-Lake einlegen.", bullets: [] },
@@ -5145,7 +5269,7 @@ const RECIPES = [
     ingredients: [
       { a: "4", i: "Saiblinge, ausgenommen" },
       { a: "60 g/l", i: "Salzlake 6 %" },
-      { a: "je 1 TL + 1 Stk", i: "Wacholder, Lorbeer, Zitrone" },
+      { a: "je 1 TL + 1 Stk", i: "Wacholder (2,5 g), Lorbeer (1 Blatt), Zitrone" },
     ],
     phases: [
       { label: "Lake", kind: "cure", dur: "8–12 h", temp: "0–4 °C", text: "In Salzlake einlegen.", bullets: [] },
@@ -5179,7 +5303,7 @@ const RECIPES = [
     ingredients: [
       { a: "2", i: "Schweinefilets (je ca. 400 g, pariert)" },
       { a: "12 g/kg", i: "Salz (Dry Brine)" },
-      { a: "3 EL", i: "milder Rub (Paprika, Knoblauch, Pfeffer, Zucker)" },
+      { a: "3 EL (36 g)", i: "milder Rub (Paprika, Knoblauch, Pfeffer, Zucker)" },
     ],
     phases: [
       { label: "Dry Brine", kind: "cure", dur: "8–12 h", temp: "Kühlschrank", text: "Salzen, kühlen.", bullets: [] },
@@ -5198,7 +5322,10 @@ const RECIPES = [
       { a: "0,5 kg", i: "Rückenspeck" },
       { a: "0,25 l", i: "Eiswasser" },
       { a: "26 g/kg", i: "Nitritpökelsalz (NPS)" },
-      { a: "je 1 TL", i: "Muskat, Koriander, Pfeffer (weiß), Zitronenschale" },
+      { a: "2 g", i: "Muskat, gerieben" },
+      { a: "2 g", i: "Koriander, gemahlen" },
+      { a: "2,5 g", i: "Pfeffer (weiß), gemahlen" },
+      { a: "2 g", i: "Zitronenschale" },
       { a: "1", i: "Schweinedarm Kaliber 26/28" },
     ],
     phases: [
@@ -5218,7 +5345,7 @@ const RECIPES = [
     equipment: [["wsm",5],["kettle",4,{de:"Snake-Methode",en:"Snake method"}],["gas",3,{de:"mit Räucherbox",en:"with a smoker box"}]],
     ingredients: [
       { a: "1,5 kg", i: "Rinderbäckchen, pariert" },
-      { a: "je 1 EL", i: "Salz, Pfeffer, Knoblauchgranulat (SPG)" },
+      { a: "je 1 EL", i: "Salz (16 g), Pfeffer (7,5 g), Knoblauchgranulat (SPG) (9 g)" },
       { a: "etwas", i: "Senf als Haftgrund" },
     ],
     phases: [
@@ -5262,7 +5389,7 @@ const RECIPES = [
     authenticityNote: "Folgt der US-BBQ-Praxis.",
     ingredients: [
       { a: "4–6", i: "Hähnchenschenkel oder 1 ganzes Hähnchen" },
-      { a: "3 EL", i: "BBQ-Rub" },
+      { a: "3 EL (26 g)", i: "BBQ-Rub" },
       { a: "etwas", i: "BBQ-Sauce + Hühnerbrühe" },
     ],
     phases: [
@@ -5284,8 +5411,8 @@ const RECIPES = [
     authenticityNote: "Folgt der US-Buffalo-Tradition, um Rauch ergänzt.",
     ingredients: [
       { a: "1,5 kg", i: "Chicken Wings" },
-      { a: "1 TL", i: "Backpulver (für knusprige Haut)" },
-      { a: "3 EL + Sauce", i: "BBQ-Rub, Buffalo- oder BBQ-Sauce" },
+      { a: "1 TL (4 g)", i: "Backpulver (für knusprige Haut)" },
+      { a: "3 EL + Sauce", i: "BBQ-Rub (26 g), Buffalo- oder BBQ-Sauce" },
     ],
     phases: [
       { label: "Würzen", kind: "prep", dur: "10 min", temp: "—", text: "Wings mit Rub und einem Hauch Backpulver mischen.", bullets: ["Backpulver = extra knusprige Haut"] },
@@ -5308,7 +5435,7 @@ const RECIPES = [
       { a: "800 g", i: "Hackfleisch (gemischt oder Schwein)" },
       { a: "400 g", i: "Bacon (für das Geflecht)" },
       { a: "nach Wahl", i: "Füllung: Käse, gebratene Zwiebeln, Pilze, Paprika" },
-      { a: "3 EL", i: "BBQ-Rub" },
+      { a: "3 EL (26 g)", i: "BBQ-Rub" },
     ],
     phases: [
       { label: "Bacon-Geflecht & Füllen", kind: "prep", dur: "20 min", temp: "—", text: "Bacon zu einer Matte flechten, Hack darauf flach drücken, füllen und aufrollen.", bullets: ["Eng aufrollen, Naht unten"] },
@@ -5397,8 +5524,8 @@ const RECIPES = [
     ingredients: [
       { a: "300 g", i: "Haferflocken (kernig)" },
       { a: "150 g", i: "Nüsse & Kerne (Mandeln, Walnüsse, Sonnenblumenkerne)" },
-      { a: "4 EL + 3 EL", i: "Honig/Ahornsirup, Kokosöl (geschmolzen)" },
-      { a: "je 1 TL", i: "Zimt, Vanille, Prise Salz" },
+      { a: "4 EL + 3 EL", i: "Honig/Ahornsirup (84 g), Kokosöl (geschmolzen) (39 g)" },
+      { a: "je 1 TL", i: "Zimt (2,5 g), Vanille (2 g), Prise Salz" },
     ],
     phases: [
       { label: "Mischen", kind: "prep", dur: "10 min", temp: "—", text: "Alle Zutaten vermengen, bis alles leicht klebt.", bullets: ["Gut durchmischen für gleichmäßige Süße"] },
@@ -5460,7 +5587,7 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "4", i: "reife, feste Pfirsiche (halbiert, entsteint)" },
-      { a: "2 EL + 1 TL", i: "Honig, etwas Butter, Zimt" },
+      { a: "2 EL (42 g) + je 1 TL", i: "Honig, etwas Butter (5 g), Zimt (2,5 g)" },
       { a: "nach Wahl", i: "Joghurt, Mascarpone oder Vanilleeis" },
     ],
     phases: [
@@ -5479,7 +5606,7 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1–2", i: "Camembert oder Brie (im Holzspankörbchen oder Auflaufförmchen)" },
-      { a: "2 EL + Handvoll", i: "Honig, Walnüsse, Rosmarin, Knoblauch" },
+      { a: "2 EL (42 g) + 1 Handvoll", i: "Honig, Walnüsse, Rosmarin, Knoblauch" },
     ],
     phases: [
       { label: "Vorbereiten", kind: "prep", dur: "5 min", temp: "—", text: "Käse oben kreuzweise einschneiden, mit Knoblauch und Rosmarin spicken.", bullets: ["Im Holzkörbchen oder feuerfestem Förmchen, damit er nicht ausläuft"] },
@@ -5497,7 +5624,7 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1", i: "großer Blumenkopf (in 2–3 cm dicke Scheiben)" },
-      { a: "4 EL + je 1 TL", i: "Olivenöl, Kurkuma, Paprika, Knoblauch, Salz, Pfeffer" },
+      { a: "4 EL + je 1 TL", i: "Olivenöl (52 g), Kurkuma (3 g), Paprika (2,5 g), Knoblauch (3 g), Salz (5,5 g), Pfeffer (2,5 g)" },
       { a: "nach Wahl", i: "Tahini-Sauce oder Parmesan zum Servieren" },
     ],
     phases: [
@@ -5518,7 +5645,7 @@ const RECIPES = [
       { a: "16", i: "große Champignons (Stiele entfernt)" },
       { a: "200 g + 100 g", i: "Frischkäse, geriebener Käse" },
       { a: "100 g + 2", i: "Speckwürfel, Frühlingszwiebeln" },
-      { a: "je 1 TL", i: "Knoblauch, Petersilie, Pfeffer" },
+      { a: "je 1 TL", i: "Knoblauch (3 g), Petersilie (1 g), Pfeffer (2,5 g)" },
     ],
     phases: [
       { label: "Füllung", kind: "prep", dur: "15 min", temp: "—", text: "Frischkäse mit Käse, Speck, Zwiebeln und Kräutern verrühren, in die Pilzköpfe füllen.", bullets: ["Stiele klein hacken und mit untermischen"] },
@@ -5535,7 +5662,7 @@ const RECIPES = [
     equipment: [["kettle",5],["gas",5],["wsm",3]],
     ingredients: [
       { a: "1 kg", i: "Süßkartoffeln (in Spalten)" },
-      { a: "4 EL + je 1 TL", i: "Olivenöl, Paprika, Kreuzkümmel, Knoblauch, Salz, Chili" },
+      { a: "4 EL + je 1 TL", i: "Olivenöl (52 g), Paprika (2,5 g), Kreuzkümmel (2 g), Knoblauch (3 g), Salz (5,5 g), Chili (2 g)" },
     ],
     phases: [
       { label: "Würzen", kind: "prep", dur: "10 min", temp: "—", text: "Spalten mit Gewürzöl mischen.", bullets: ["Gleich dicke Spalten garen gleichmäßig"] },
@@ -5600,12 +5727,12 @@ const RECIPES = [
     time: "Ziehzeit 4–12 h", pit: "ca. 1–1,5 kg", core: "", wood: "Ketchup · Öl · Essig", yield: "ca. 250 ml",
     blurb: "Süß-rauchig-würzig: die Allround-Marinade für Spareribs, Hähnchen, Nackensteaks und Pulled Pork.",
     ingredients: [
-      { a: "6 EL", i: "Ketchup oder passierte Tomaten" },
-      { a: "3 EL", i: "brauner Zucker oder Honig" },
-      { a: "3 EL", i: "Apfelessig" },
-      { a: "2 EL", i: "Öl" },
-      { a: "2 EL", i: "Worcestershiresauce" },
-      { a: "je 1 TL", i: "geräuchertes Paprikapulver, Senf, Knoblauch, Zwiebelpulver, Salz, Pfeffer" },
+      { a: "6 EL (102 g)", i: "Ketchup oder passierte Tomaten" },
+      { a: "3 EL (36 g)", i: "brauner Zucker oder Honig" },
+      { a: "3 EL (45 g)", i: "Apfelessig" },
+      { a: "2 EL (26 g)", i: "Öl" },
+      { a: "2 EL (30 g)", i: "Worcestershiresauce" },
+      { a: "je 1 TL", i: "geräuchertes Paprikapulver (2,5 g), Senf (5 g), Knoblauch (3 g), Zwiebelpulver (3 g), Salz (5,5 g), Pfeffer (2,5 g)" },
     ],
     phases: [
       { label: "Verrühren", kind: "prep", dur: "5 min", temp: "—", text: "Alle Zutaten glatt verrühren.", bullets: ["Geräuchertes Paprikapulver gibt den BBQ-Ton"] },
@@ -5622,11 +5749,11 @@ const RECIPES = [
     authenticity: 8.5,
     authenticityNote: "Folgt der japanischen Teriyaki-Tradition.",
     ingredients: [
-      { a: "6 EL", i: "Sojasoße" },
-      { a: "3 EL", i: "Mirin (oder Honig + Schuss Reisessig)" },
-      { a: "2 EL", i: "brauner Zucker" },
-      { a: "1 EL", i: "Sesamöl" },
-      { a: "je 1 TL", i: "frischer Ingwer, Knoblauch (gerieben)" },
+      { a: "6 EL (96 g)", i: "Sojasoße" },
+      { a: "3 EL (63 g)", i: "Mirin (oder Honig + Schuss Reisessig)" },
+      { a: "2 EL (24 g)", i: "brauner Zucker" },
+      { a: "1 EL (13 g)", i: "Sesamöl" },
+      { a: "je 1 TL", i: "frischer Ingwer (2 g), Knoblauch (gerieben) (3 g)" },
       { a: "optional", i: "Sesam, Frühlingszwiebel" },
     ],
     phases: [
@@ -5641,11 +5768,11 @@ const RECIPES = [
     time: "Ziehzeit 2–12 h", pit: "ca. 1 kg", core: "", wood: "Olivenöl · Zitrone", yield: "ca. 200 ml",
     blurb: "Olivenöl, Zitrone und reichlich Kräuter – für Lamm, Hähnchen, Halloumi und Grillgemüse.",
     ingredients: [
-      { a: "8 EL", i: "Olivenöl" },
-      { a: "3 EL", i: "Zitronensaft" },
+      { a: "8 EL (104 g)", i: "Olivenöl" },
+      { a: "3 EL (45 g)", i: "Zitronensaft" },
       { a: "3", i: "Knoblauchzehen (gepresst)" },
-      { a: "je 1 EL", i: "Rosmarin, Thymian, Oregano (frisch gehackt)" },
-      { a: "je 1 TL", i: "Meersalz, Pfeffer, Zitronenschale" },
+      { a: "je 1 EL", i: "Rosmarin (3 g), Thymian (3 g), Oregano (frisch gehackt) (3 g)" },
+      { a: "je 1 TL", i: "Meersalz (5,5 g), Pfeffer (2,5 g), Zitronenschale (2 g)" },
     ],
     phases: [
       { label: "Verrühren", kind: "prep", dur: "5 min", temp: "—", text: "Öl mit Zitrone, Knoblauch und Kräutern verquirlen.", bullets: [] },
@@ -5663,9 +5790,9 @@ const RECIPES = [
     authenticityNote: "Folgt der indischen Tandoori-Tradition.",
     ingredients: [
       { a: "250 g", i: "Naturjoghurt (vollfett)" },
-      { a: "2 EL", i: "Zitronensaft" },
-      { a: "2 EL", i: "Öl" },
-      { a: "je 1 TL", i: "Garam Masala, Kreuzkümmel, Paprika, Kurkuma, Ingwer, Knoblauch, Chili, Salz" },
+      { a: "2 EL (30 g)", i: "Zitronensaft" },
+      { a: "2 EL (26 g)", i: "Öl" },
+      { a: "je 1 TL", i: "Garam Masala (3 g), Kreuzkümmel (2 g), Paprika (2,5 g), Kurkuma (3 g), Ingwer (2 g), Knoblauch (3 g), Chili (2 g), Salz (5,5 g)" },
     ],
     phases: [
       { label: "Verrühren", kind: "prep", dur: "5 min", temp: "—", text: "Joghurt mit allen Gewürzen verrühren.", bullets: ["Gewürze kurz in Öl anrösten = mehr Aroma (optional)"] },
@@ -5680,10 +5807,10 @@ const RECIPES = [
     blurb: "Herzhaft-malzig mit Senf und Honig – die deftige Marinade für Schweinenacken, Haxe und Bratwurst.",
     ingredients: [
       { a: "150 ml", i: "dunkles Bier (Malzbier für süßer)" },
-      { a: "3 EL", i: "mittelscharfer Senf" },
-      { a: "2 EL", i: "Honig" },
-      { a: "2 EL", i: "Öl" },
-      { a: "je 1 TL", i: "Knoblauch, Kümmel, Paprika, Salz, Pfeffer" },
+      { a: "3 EL (45 g)", i: "mittelscharfer Senf" },
+      { a: "2 EL (42 g)", i: "Honig" },
+      { a: "2 EL (26 g)", i: "Öl" },
+      { a: "je 1 TL", i: "Knoblauch (3 g), Kümmel (2 g), Paprika (2,5 g), Salz (5,5 g), Pfeffer (2,5 g)" },
     ],
     phases: [
       { label: "Verrühren", kind: "prep", dur: "5 min", temp: "—", text: "Alle Zutaten glatt verrühren.", bullets: [] },
@@ -5697,11 +5824,11 @@ const RECIPES = [
     time: "Ziehzeit 15–60 min", pit: "ca. 800 g", core: "", wood: "Zitrone · Olivenöl", yield: "ca. 150 ml",
     blurb: "Frisch und leicht mit Zitrone, Limette und Dill – für Fischfilets, Garnelen und Calamari. Nur kurz marinieren!",
     ingredients: [
-      { a: "5 EL", i: "Olivenöl" },
-      { a: "je 2 EL", i: "Zitronen- und Limettensaft" },
+      { a: "5 EL (65 g)", i: "Olivenöl" },
+      { a: "je 2 EL (30 g)", i: "Zitronen- und Limettensaft" },
       { a: "1", i: "Knoblauchzehe (fein)" },
-      { a: "je 1 EL", i: "Dill, Petersilie (gehackt)" },
-      { a: "je 1 TL", i: "Zitronenschale, Meersalz, Pfeffer" },
+      { a: "je 1 EL", i: "Dill (3 g), Petersilie (gehackt) (3 g)" },
+      { a: "je 1 TL", i: "Zitronenschale (2 g), Meersalz (5,5 g), Pfeffer (2,5 g)" },
     ],
     phases: [
       { label: "Verrühren", kind: "prep", dur: "5 min", temp: "—", text: "Öl, Säfte, Kräuter und Gewürze verquirlen.", bullets: [] },
@@ -5719,10 +5846,10 @@ const RECIPES = [
     authenticityNote: "Folgt der argentinischen Tradition.",
     ingredients: [
       { a: "1 Bund", i: "glatte Petersilie (fein gehackt)" },
-      { a: "8 EL", i: "Olivenöl" },
-      { a: "3 EL", i: "Rotweinessig" },
+      { a: "8 EL (104 g)", i: "Olivenöl" },
+      { a: "3 EL (45 g)", i: "Rotweinessig" },
       { a: "3", i: "Knoblauchzehen (fein)" },
-      { a: "je 1 TL", i: "Oregano, Chiliflocken, Meersalz, Pfeffer" },
+      { a: "je 1 TL", i: "Oregano (1 g), Chiliflocken (2 g), Meersalz (5,5 g), Pfeffer (2,5 g)" },
     ],
     phases: [
       { label: "Anrühren", kind: "prep", dur: "10 min", temp: "—", text: "Alles vermengen, 30 min ziehen lassen, damit sich die Aromen verbinden.", bullets: ["Nicht pürieren – grob gehackt ist authentisch"] },
@@ -5736,12 +5863,12 @@ const RECIPES = [
     time: "Ziehzeit 2–12 h", pit: "ca. 1 kg", core: "", wood: "Honig · Senf", yield: "ca. 200 ml",
     blurb: "Süß-würzig und einfach unwiderstehlich – für Hähnchenschenkel, Spareribs und Schweinefilet.",
     ingredients: [
-      { a: "4 EL", i: "Honig" },
-      { a: "3 EL", i: "mittelscharfer Senf" },
-      { a: "1 EL", i: "körniger Senf (Dijon)" },
-      { a: "3 EL", i: "Öl" },
-      { a: "1 EL", i: "Apfelessig" },
-      { a: "je 1 TL", i: "Knoblauch, Paprika, Salz, Pfeffer" },
+      { a: "4 EL (84 g)", i: "Honig" },
+      { a: "3 EL (45 g)", i: "mittelscharfer Senf" },
+      { a: "1 EL (15 g)", i: "körniger Senf (Dijon)" },
+      { a: "3 EL (39 g)", i: "Öl" },
+      { a: "1 EL (15 g)", i: "Apfelessig" },
+      { a: "je 1 TL", i: "Knoblauch (3 g), Paprika (2,5 g), Salz (5,5 g), Pfeffer (2,5 g)" },
     ],
     phases: [
       { label: "Verrühren", kind: "prep", dur: "5 min", temp: "—", text: "Honig, Senf, Öl und Essig glatt verrühren.", bullets: [] },
@@ -5759,11 +5886,11 @@ const RECIPES = [
     authenticityNote: "Folgt der texanischen BBQ-Tradition.",
     ingredients: [
       { a: "150 ml", i: "Rinderbrühe" },
-      { a: "4 EL", i: "Bourbon Whiskey" },
-      { a: "4 EL", i: "Apfelessig" },
-      { a: "2 EL", i: "Worcestershiresauce" },
-      { a: "2 EL", i: "Öl" },
-      { a: "je 1 TL", i: "geräuchertes Paprikapulver, Knoblauch, Pfeffer, Salz" },
+      { a: "4 EL (60 g)", i: "Bourbon Whiskey" },
+      { a: "4 EL (60 g)", i: "Apfelessig" },
+      { a: "2 EL (30 g)", i: "Worcestershiresauce" },
+      { a: "2 EL (26 g)", i: "Öl" },
+      { a: "je 1 TL", i: "geräuchertes Paprikapulver (2,5 g), Knoblauch (3 g), Pfeffer (2,5 g), Salz (5,5 g)" },
     ],
     phases: [
       { label: "Verrühren", kind: "prep", dur: "5 min", temp: "—", text: "Alle Zutaten verrühren (warm halten).", bullets: ["Dünnflüssig – kein Zucker, damit es nicht verbrennt"] },
@@ -5777,8 +5904,8 @@ const RECIPES = [
     blurb: "Das Geheimnis von zartem Brathähnchen und Fried Chicken – Buttermilch macht das Fleisch unglaublich saftig.",
     ingredients: [
       { a: "500 ml", i: "Buttermilch" },
-      { a: "1 EL", i: "Salz" },
-      { a: "je 1 TL", i: "Knoblauch, Paprika, Pfeffer, Cayenne, Zucker" },
+      { a: "1 EL (16 g)", i: "Salz" },
+      { a: "je 1 TL", i: "Knoblauch (3 g), Paprika (2,5 g), Pfeffer (2,5 g), Cayenne (2 g), Zucker (4 g)" },
       { a: "optional", i: "etwas Tabasco" },
     ],
     phases: [
@@ -5796,11 +5923,11 @@ const RECIPES = [
     authenticity: 8.5,
     authenticityNote: "Folgt der koreanischen Bulgogi-Tradition.",
     ingredients: [
-      { a: "6 EL", i: "Sojasoße" },
+      { a: "6 EL (96 g)", i: "Sojasoße" },
       { a: "½", i: "Birne oder Apfel (gerieben – macht zart)" },
-      { a: "3 EL", i: "brauner Zucker oder Honig" },
-      { a: "2 EL", i: "Sesamöl" },
-      { a: "je 1 EL", i: "Knoblauch, Ingwer, gerösteter Sesam" },
+      { a: "3 EL (36 g)", i: "brauner Zucker oder Honig" },
+      { a: "2 EL (26 g)", i: "Sesamöl" },
+      { a: "je 1 EL", i: "Knoblauch (9 g), Ingwer (5,5 g), gerösteter Sesam (9 g)" },
       { a: "2", i: "Frühlingszwiebeln" },
     ],
     phases: [
@@ -5816,10 +5943,10 @@ const RECIPES = [
     blurb: "Kräftig und aromatisch – die klassische Beize für Reh, Hirsch und Wildschwein, mildert den Wildgeschmack.",
     ingredients: [
       { a: "400 ml", i: "kräftiger Rotwein" },
-      { a: "4 EL", i: "Öl" },
-      { a: "2 EL", i: "Rotweinessig" },
+      { a: "4 EL (52 g)", i: "Öl" },
+      { a: "2 EL (30 g)", i: "Rotweinessig" },
       { a: "1", i: "Zwiebel, 2 Knoblauchzehen, 1 Karotte (grob)" },
-      { a: "je 1 TL", i: "Wacholderbeeren, Pfefferkörner, Lorbeer, Thymian, Piment" },
+      { a: "je 1 TL", i: "Wacholderbeeren (2,5 g), Pfefferkörner (3 g), Lorbeer (1 Blatt), Thymian (1 g), Piment (2,5 g)" },
     ],
     phases: [
       { label: "Beize ansetzen", kind: "prep", dur: "10 min", temp: "—", text: "Wein, Öl, Essig, Gemüse und Gewürze verrühren.", bullets: ["Gewürze leicht anquetschen für mehr Aroma"] },
@@ -5829,7 +5956,7 @@ const RECIPES = [
     tips: ["Wildschwein immer komplett durchgaren (mind. 75 °C).", "Die abgeseihte Beize ergibt eine herrliche Wildsoße."],
   }),
 
-  r({"id":"haehnchen-marinade","name":"Würzige Hähnchen-Marinade","method":"marinaden","cat":"Geflügel","diff":1,"time":"3-24 Stunden (inkl. Marinierzeit)","pit":"—","core":"","wood":"—","yield":"ca. 300 ml (für 1-1,5 kg Hähnchen)","blurb":"Aromatische Allzweck-Marinade mit Paprika, Knoblauch und mediterranen Kräutern für saftiges Hähnchen vom Grill.","ingredients":[{"a":"100 ml","i":"Olivenöl"},{"a":"50 ml","i":"Zitronensaft (frisch gepresst)"},{"a":"3 EL","i":"Sojasauce"},{"a":"2 EL","i":"Honig oder Ahornsirup"},{"a":"4 Zehen","i":"Knoblauch (fein gehackt)"},{"a":"2 TL","i":"Paprikapulver (edelsüß)"},{"a":"1 TL","i":"Paprikapulver (geräuchert)"},{"a":"1 TL","i":"Chilipulver oder Cayennepfeffer"},{"a":"1 TL","i":"Kreuzkümmel (gemahlen)"},{"a":"1 TL","i":"getrockneter Thymian"},{"a":"1 TL","i":"getrockneter Oregano"},{"a":"1 TL","i":"schwarzer Pfeffer (frisch gemahlen)"},{"a":"1 TL","i":"Salz"}],"phases":[{"label":"Marinade zubereiten","kind":"prep","dur":"5 Minuten","temp":"Raumtemperatur","text":"Alle Zutaten in einer Schüssel gründlich verquirlen, bis eine homogene Marinade entsteht.","bullets":["Knoblauch sehr fein hacken oder pressen","Honig vorher leicht erwärmen, falls zu fest","Marinade kräftig vermischen, damit sich Öl und Säure verbinden"]},{"label":"Hähnchen marinieren","kind":"marinate","dur":"3-24 Stunden","temp":"4-7°C (Kühlschrank)","text":"Hähnchen in einem verschließbaren Beutel oder einer Schüssel mit der Marinade vollständig bedecken und im Kühlschrank ziehen lassen.","bullets":["Hähnchen vor dem Marinieren trocken tupfen","Bei ganzen Stücken ggf. die Haut einritzen für bessere Penetration","Beutel mehrmals wenden oder massieren für gleichmäßige Verteilung","Mindestens 3 Stunden, optimal über Nacht marinieren","Marinade vor dem Grillen leicht abtropfen lassen"]},{"label":"Grillen","kind":"indirect","dur":"30-45 Minuten (je nach Teilstück)","temp":"180-200°C indirekt","text":"Hähnchen indirekt bei mittlerer Hitze grillen, bis die Kerntemperatur erreicht ist. Zum Schluss kurz direkt über der Glut für Röstaromen.","bullets":["Grill auf 180-200°C vorheizen (indirekte Zone)","Hähnchen mit Hautseite nach oben starten","Kerntemperatur mit Thermometer überwachen","Letzten 3-5 Minuten über direkter Hitze für Karamellisierung","Nach dem Grillen 5 Minuten ruhen lassen"]}],"tips":["Die Marinade funktioniert für alle Hähnchenteile: Schenkel, Brust, Flügel oder ganzes Huhn","Für mehr Schärfe: zusätzlich frische Chili oder Harissa-Paste einrühren","Rest-Marinade NICHT als Sauce verwenden (Kontakt mit rohem Geflügel)","Alternativ im Backofen bei 190°C (Umluft 170°C) etwa 35-40 Minuten garen","Variante: Joghurt-Basis statt Öl macht die Marinade noch zarter (100 ml Joghurt + 50 ml Öl)","SICHERHEIT:","- Hähnchen muss IMMER eine Kerntemperatur von mindestens 75°C erreichen (besser 80°C), um Salmonellen und Campylobacter abzutöten","- Marinade ausschließlich im Kühlschrank (4-7°C) ansetzen, niemals bei Raumtemperatur – Geflügel ist besonders anfällig für bakterielles Wachstum","- Alle Utensilien, Schneidebretter und Hände nach Kontakt mit rohem Hähnchen gründlich mit heißem Wasser und Spülmittel reinigen","- Verwendete Marinade niemals für Saucen weiterverwenden – bei Bedarf vorher separate Portion abfüllen, bevor das rohe Fleisch damit in Kontakt kommt"],"userCreated":true,"equipment":[["kettle",5,{"de":"direkt & indirekt grillen","en":"direct & indirect grilling"}],["gas",5,{"de":"schnell & kontrollierbar","en":"fast & controllable"}],["wsm",4,{"de":"für rauchige Keulen & Flügel","en":"for smoky legs & wings"}],["stove",3,{"de":"Grillpfanne funktioniert","en":"a grill pan works"}]],"origin":"🌍 Öl-Säure-Gewürz-Marinaden sind die universelle Basis der Grillküche – diese Version kombiniert mediterrane Kräuter mit Paprika und Knoblauch zur Allzweck-Marinade für Geflügel.","authenticity":8,"authenticityNote":"Klassischer Öl-Säure-Aufbau (3:1) mit bewährter Gewürzbasis – kein regionales Original, aber handwerklich sauber aufgebaut.","proTip":"Öl trägt das Aroma, Säure macht zart, Zucker sorgt für Röstfarbe – nie länger als 24 h marinieren, sonst wird die Oberfläche mürbe statt saftig.","learn":["Öl-Säure-Verhältnis verstehen","Richtig marinieren (Zeit & Kühlung)","Zucker & Röstung steuern","Marinade vor dem Grillen abtropfen"]}),
+  r({"id":"haehnchen-marinade","name":"Würzige Hähnchen-Marinade","method":"marinaden","cat":"Geflügel","diff":1,"time":"3-24 Stunden (inkl. Marinierzeit)","pit":"—","core":"","wood":"—","yield":"ca. 300 ml (für 1-1,5 kg Hähnchen)","blurb":"Aromatische Allzweck-Marinade mit Paprika, Knoblauch und mediterranen Kräutern für saftiges Hähnchen vom Grill.","ingredients":[{"a":"100 ml","i":"Olivenöl"},{"a":"50 ml","i":"Zitronensaft (frisch gepresst)"},{"a":"3 EL (48 g)","i":"Sojasauce"},{"a":"2 EL (42 g)","i":"Honig oder Ahornsirup"},{"a":"4 Zehen","i":"Knoblauch (fein gehackt)"},{"a":"2 TL (4,5 g)","i":"Paprikapulver (edelsüß)"},{"a":"1 TL (2,5 g)","i":"Paprikapulver (geräuchert)"},{"a":"1 TL (2,5 g)","i":"Chilipulver oder Cayennepfeffer"},{"a":"1 TL (2 g)","i":"Kreuzkümmel (gemahlen)"},{"a":"1 TL (1 g)","i":"getrockneter Thymian"},{"a":"1 TL (1 g)","i":"getrockneter Oregano"},{"a":"1 TL (2,5 g)","i":"schwarzer Pfeffer (frisch gemahlen)"},{"a":"1 TL (5,5 g)","i":"Salz"}],"phases":[{"label":"Marinade zubereiten","kind":"prep","dur":"5 Minuten","temp":"Raumtemperatur","text":"Alle Zutaten in einer Schüssel gründlich verquirlen, bis eine homogene Marinade entsteht.","bullets":["Knoblauch sehr fein hacken oder pressen","Honig vorher leicht erwärmen, falls zu fest","Marinade kräftig vermischen, damit sich Öl und Säure verbinden"]},{"label":"Hähnchen marinieren","kind":"marinate","dur":"3-24 Stunden","temp":"4-7°C (Kühlschrank)","text":"Hähnchen in einem verschließbaren Beutel oder einer Schüssel mit der Marinade vollständig bedecken und im Kühlschrank ziehen lassen.","bullets":["Hähnchen vor dem Marinieren trocken tupfen","Bei ganzen Stücken ggf. die Haut einritzen für bessere Penetration","Beutel mehrmals wenden oder massieren für gleichmäßige Verteilung","Mindestens 3 Stunden, optimal über Nacht marinieren","Marinade vor dem Grillen leicht abtropfen lassen"]},{"label":"Grillen","kind":"indirect","dur":"30-45 Minuten (je nach Teilstück)","temp":"180-200°C indirekt","text":"Hähnchen indirekt bei mittlerer Hitze grillen, bis die Kerntemperatur erreicht ist. Zum Schluss kurz direkt über der Glut für Röstaromen.","bullets":["Grill auf 180-200°C vorheizen (indirekte Zone)","Hähnchen mit Hautseite nach oben starten","Kerntemperatur mit Thermometer überwachen","Letzten 3-5 Minuten über direkter Hitze für Karamellisierung","Nach dem Grillen 5 Minuten ruhen lassen"]}],"tips":["Die Marinade funktioniert für alle Hähnchenteile: Schenkel, Brust, Flügel oder ganzes Huhn","Für mehr Schärfe: zusätzlich frische Chili oder Harissa-Paste einrühren","Rest-Marinade NICHT als Sauce verwenden (Kontakt mit rohem Geflügel)","Alternativ im Backofen bei 190°C (Umluft 170°C) etwa 35-40 Minuten garen","Variante: Joghurt-Basis statt Öl macht die Marinade noch zarter (100 ml Joghurt + 50 ml Öl)","SICHERHEIT:","- Hähnchen muss IMMER eine Kerntemperatur von mindestens 75°C erreichen (besser 80°C), um Salmonellen und Campylobacter abzutöten","- Marinade ausschließlich im Kühlschrank (4-7°C) ansetzen, niemals bei Raumtemperatur – Geflügel ist besonders anfällig für bakterielles Wachstum","- Alle Utensilien, Schneidebretter und Hände nach Kontakt mit rohem Hähnchen gründlich mit heißem Wasser und Spülmittel reinigen","- Verwendete Marinade niemals für Saucen weiterverwenden – bei Bedarf vorher separate Portion abfüllen, bevor das rohe Fleisch damit in Kontakt kommt"],"userCreated":true,"equipment":[["kettle",5,{"de":"direkt & indirekt grillen","en":"direct & indirect grilling"}],["gas",5,{"de":"schnell & kontrollierbar","en":"fast & controllable"}],["wsm",4,{"de":"für rauchige Keulen & Flügel","en":"for smoky legs & wings"}],["stove",3,{"de":"Grillpfanne funktioniert","en":"a grill pan works"}]],"origin":"🌍 Öl-Säure-Gewürz-Marinaden sind die universelle Basis der Grillküche – diese Version kombiniert mediterrane Kräuter mit Paprika und Knoblauch zur Allzweck-Marinade für Geflügel.","authenticity":8,"authenticityNote":"Klassischer Öl-Säure-Aufbau (3:1) mit bewährter Gewürzbasis – kein regionales Original, aber handwerklich sauber aufgebaut.","proTip":"Öl trägt das Aroma, Säure macht zart, Zucker sorgt für Röstfarbe – nie länger als 24 h marinieren, sonst wird die Oberfläche mürbe statt saftig.","learn":["Öl-Säure-Verhältnis verstehen","Richtig marinieren (Zeit & Kühlung)","Zucker & Röstung steuern","Marinade vor dem Grillen abtropfen"]}),
 
   r({"id":"franzoesische-ringsalami","name":"Französische Ringsalami","method":"kalt","cat":"Wurst","diff":3,"time":"6-8 Wochen","pit":"12-15°C","core":"","wood":"Buchenholz","yield":"ca. 2,5 kg Salami","blurb":"Klassische luftgetrocknete Ringsalami mit feiner Körnung, mildem Knoblauch und langer Reifung.","ingredients":[{"a":"2 kg","i":"Schweinefleisch (Schulter), grob entfettet"},{"a":"500 g","i":"Rückenspeck"},{"a":"55 g","i":"Nitritpökelsalz (0,5% vom Fleischanteil = 2,2% vom Gesamtgewicht)"},{"a":"3 g","i":"Zucker"},{"a":"8 g","i":"weißer Pfeffer, gemahlen"},{"a":"2 g","i":"Piment, gemahlen"},{"a":"3 g","i":"Knoblauchpulver"},{"a":"1 g","i":"Macis (Muskatblüte)"},{"a":"2,5 g","i":"Starterkulturen (z.B. T-SPX oder F-RM-52)"},{"a":"100 ml","i":"eiskaltes Wasser für Starterkulturen"},{"a":"3-4 m","i":"Rinderkranzdarm (60-80 mm Ø)"}],"phases":[{"label":"Vorbereitung","kind":"prep","dur":"2 Stunden","temp":"2-4°C","text":"Fleisch und Speck in 2-3 cm Würfel schneiden und tiefkühlen bis -2°C (anfrieren, nicht durchfrieren). Starterkulturen nach Herstellerangabe in eiskaltem Wasser ansetzen.","bullets":["Alle Geräte und Schüsseln vorkühlen","Sehnen und Silberhaut weitgehend entfernen","Speck in separate Schüssel geben"]},{"label":"Wolfen und Mischen","kind":"prep","dur":"30 Minuten","temp":"0-2°C","text":"Fleisch durch 4,5 mm Scheibe wolfen, Speck durch 3 mm Scheibe. Alle Zutaten inkl. Starterkulturen gründlich mischen bis eine homogene, leicht klebrige Masse entsteht.","bullets":["Temperatur während des Mischens nicht über 2°C steigen lassen","Brät intensiv kneten für gute Bindung (3-5 Minuten)","Starterkulturen gleichmäßig einarbeiten"]},{"label":"Füllen","kind":"prep","dur":"45 Minuten","temp":"2-4°C","text":"Rinderkranzdarm wässern und auf Tülle ziehen. Brät straff ohne Luftblasen füllen. Zu Ringen mit ca. 40 cm Umfang abdrehen und Enden verknoten.","bullets":["Darm vor dem Füllen gründlich spülen","Mit Füllhorn oder Wurstfüller arbeiten","Oberfläche mit sauberem Tuch abtupfen"]},{"label":"Reifung Phase 1 (Fermentation)","kind":"cure","dur":"2-3 Tage","temp":"22-24°C","text":"Würste in klimatisiertem Raum bei 90-95% Luftfeuchtigkeit hängen. Starterkulturen senken pH-Wert auf ca. 5,0-5,3 für Haltbarkeit und Aroma.","bullets":["Würste dürfen sich nicht berühren","Tägliche Sichtkontrolle auf Schimmel","Nach 48h sollte Oberfläche antrocknen"]},{"label":"Kalträuchern","kind":"smoke","dur":"3-4 Tage","temp":"12-15°C","text":"In mehreren Durchgängen insgesamt 12-16 Stunden kalträuchern: 3-4x täglich je 3-4 Stunden räuchern mit jeweils 8-12 Stunden Ruhezeit dazwischen.","bullets":["Nur kalter Rauch, Temperatur nie über 18°C","Buchenholz für mildes Aroma","Zwischen Räucherphasen gut lüften"]},{"label":"Trocknung und Reifung","kind":"mature","dur":"5-7 Wochen","temp":"12-15°C","text":"Im Reifeschrank bei 75-80% Luftfeuchtigkeit nachreifen bis 30-35% Gewichtsverlust erreicht sind. Regelmäßig kontrollieren und ggf. leicht mit Essigwasser abwischen.","bullets":["Guter Edelschimmel (weiß) ist erwünscht","Bei schwarzem/grünem Schimmel sofort entfernen","Würste wöchentlich wiegen zur Kontrolle","Idealgewicht: ca. 1,6-1,7 kg pro 2,5 kg Ausgangsmasse"]}],"tips":["Starterkulturen sind Pflicht bei Rohwurst - ohne sie besteht Botulismus-Gefahr","pH-Messgerät verwenden: pH sollte nach 48h unter 5,3 liegen","Gewichtsverlauf dokumentieren: bei unter 25% Verlust ist Wurst noch zu feucht","Weiße Salzausblühungen an Oberfläche sind normal und erwünscht","Salami ist fertig wenn sie fest ist und beim Anschneiden saubere Scheiben ergibt","Bei zu schneller Trocknung bildet sich Trockenrand - dann Luftfeuchtigkeit erhöhen","SICHERHEIT:","- Nitritpökelsalz EXAKT abwiegen (hier 55g für 2,5kg) - Überdosierung ist giftig, Unterdosierung begünstigt Botulismus","- Starterkulturen zwingend verwenden - sie senken pH-Wert und verhindern Clostridium botulinum","- Temperaturbereich 4-60°C so kurz wie möglich halten - in diesem Bereich vermehren sich gefährliche Bakterien","- Perfekte Küchenhygiene: Messer, Fleischwolf, Schüsseln mit kochendem Wasser sterilisieren","- Bei schlechtem Geruch, Schleimbildung oder untypischen Farben SOFORT entsorgen","- Reifung unter 12°C kann zu langsam sein, über 18°C ist gefährlich - Klimakontrolle ist essentiell","- Schwangere, Kleinkinder und Immungeschwächte sollten keine rohe Rohwurst verzehren"],"userCreated":true,"equipment":[["chamber",5,{"de":"ideal für Fermentation & Reifung","en":"ideal for fermentation & maturing"}],["wsm",4,{"de":"für den Kaltrauch (Sparbrand)","en":"for the cold smoke (smoke generator)"}],["kettle",3,{"de":"nur mit Kaltrauch-Adapter","en":"only with a cold-smoke adapter"}],["dehydrator",0,{"de":"zu warm, zu trocken – Trockenrand","en":"too warm, too dry — case hardening"}]],"origin":"🇫🇷 Die Saucisson-Tradition Frankreichs: luftgetrocknete Rohwurst im Ring, mild gewürzt mit Knoblauch und Pfeffer, oft mit Edelschimmel – das Pendant zur italienischen Salami.","authenticity":8,"authenticityNote":"Folgt der französischen Saucisson-Methode (Fermentation, Kaltrauch optional, Lufttrocknung). Starterkulturen für die sichere Heimproduktion ergänzt.","proTip":"Die Fermentation entscheidet: Starterkulturen aktivieren, 24–48 h bei 20–24 °C anfermentieren lassen – der pH-Abfall schützt vor Fehlgärung und gibt die typische Säure-Note.","learn":["Starterkulturen einsetzen","Fermentation führen (pH-Abfall)","Wursten & Abbinden im Ring","Langsam trocknen ohne Trockenrand","Biegtest & Gewichtsverlust prüfen"]}),
 
@@ -5839,21 +5966,23 @@ const RECIPES = [
 
   r({"id":"serrano-style","name":"Serrano-Style Schinken","method":"kalt","cat":"Schinken","diff":3,"time":"12-18 Monate","pit":"12-15°C","core":"","wood":"Eiche oder Buche","yield":"1 Schinken ca. 6-8 kg","blurb":"Luftgetrockneter Rohschinken nach spanischer Art mit intensivem Aroma durch lange Reifung.","ingredients":[{"a":"1 Stück (8-10 kg)","i":"Schweinekeule mit Knochen und Schwarte"},{"a":"800-1000 g pro kg Fleisch","i":"grobes Meersalz"},{"a":"nach Bedarf","i":"Nitritpökelsalz (0,5% vom Fleischgewicht, max. 150 ppm Nitrit)"}],"phases":[{"label":"Vorbereitung","kind":"prep","dur":"2 Stunden","temp":"4°C","text":"Keule parieren und für Salzbad vorbereiten","bullets":["Überflüssiges Fett entfernen, Schwarte belassen","V-förmigen Schnitt an der Kniekehle setzen für bessere Salzpenetration","Keule waschen und gründlich trocken tupfen","Alle Arbeitsflächen und Werkzeuge desinfizieren"]},{"label":"Pökeln Phase 1","kind":"cure","dur":"1-1,5 Tage pro kg (8-15 Tage)","temp":"2-4°C","text":"Trockenpökelung mit Salz","bullets":["Nitritpökelsalz exakt 0,5% vom Fleischgewicht abwiegen (z.B. 40g bei 8kg)","Restliches grobes Meersalz hinzufügen","Keule vollständig mit Salzmischung einreiben, besonders dick am Knochenkopf","In Pökelbehälter legen, mit restlichem Salz bedecken","Bei 2-4°C lagern, täglich wenden","Austretende Flüssigkeit abgießen"]},{"label":"Entsalzen","kind":"rest","dur":"24-48 Stunden","temp":"4°C","text":"Salz auswaschen und äquilibrieren","bullets":["Schinken gründlich unter fließendem Wasser abspülen","In kaltem Wasser 24-48h einlegen, Wasser mehrmals wechseln","Mit Küchenpapier gründlich abtrocknen","Schnur zum Aufhängen durch Kniekehle ziehen"]},{"label":"Antrocknen","kind":"dry","dur":"3-5 Tage","temp":"10-12°C","text":"Oberfläche stabilisieren","bullets":["Bei 10-12°C und 70-75% Luftfeuchtigkeit aufhängen","Gute Luftzirkulation sicherstellen","Oberfläche soll matt und fest werden","Täglich kontrollieren auf Schimmelbildung"]},{"label":"Kalträuchern","kind":"smoke","dur":"2-4 Wochen, täglich 6-8h","temp":"12-18°C","text":"Leichte Kalträucherung für Aromaentwicklung","bullets":["WSM auf niedrigste Temperatur einstellen, nur mit Glut und Räucherholz","Eiche oder Buche für milden Rauch verwenden","Temperatur niemals über 20°C steigen lassen","Täglich 6-8h räuchern, dann auslüften lassen","Nach 2-4 Wochen gewünschte Rauchnote erreicht"]},{"label":"Reifung Phase 1","kind":"mature","dur":"3-4 Monate","temp":"12-15°C","text":"Erste Reifephase mit Gewichtsverlust","bullets":["Bei 12-15°C und 70-75% Luftfeuchtigkeit aufhängen","Wöchentlich kontrollieren","Weißer Edelschimmel ist erwünscht, grünen/schwarzen Schimmel entfernen","Gewichtsverlust ca. 30% anstreben"]},{"label":"Reifung Phase 2","kind":"mature","dur":"6-12 Monate","temp":"15-20°C im Sommer, 10-15°C im Winter","text":"Lange Aromaentwicklung","bullets":["Natürliche Temperaturschwankungen sind ideal","Im Sommer wärmer (15-20°C), im Winter kühler","Luftfeuchtigkeit 65-75% halten","Gesamtgewichtsverlust 35-40% bis zur Fertigstellung","Regelmäßig auf Qualität prüfen","Schinken ist fertig, wenn er fest ist und nussig-süßlich duftet"]}],"tips":["Frische Keule vom Metzger mit intakter Schwarte und Knochen besorgen","Reiferaum mit kontrollierbarer Temperatur und Luftfeuchtigkeit ist essentiell","Luftzirkulation durch Ventilator verbessert Ergebnis deutlich","Nach 6 Monaten Probe mit dünner Nadel nehmen (Geruchstest)","Weißer Schimmel mit Essigwasser abreiben, ist aber unbedenklich","Professionelles Refraktometer zur Kontrolle der aw-Werte empfohlen","Bei zu schneller Trocknung Oberfläche mit Olivenöl oder Schweineschmalz einreiben","Dokumentiere Gewichtsverlust wöchentlich","Mindestens 12 Monate Gesamtreifung für authentischen Serrano-Charakter","SICHERHEIT:","- Nitritpökelsalz EXAKT dosieren: maximal 150 ppm Nitrit (0,5% NPS vom Fleischgewicht) - Überdosierung ist gesundheitsschädlich, Unterdosierung erhöht Botulismus-Risiko bei Rohprodukten","- Rohschinken ist ein unkontrolliertes Fermentationsprodukt mit HOHEM Botulismus-Risiko wenn falsch hergestellt - Temperatur, Salz und Luftfeuchtigkeit müssen präzise eingehalten werden","- Wasseraktivität (aw-Wert) muss unter 0,91 fallen für mikrobiologische Sicherheit - professionelle Kontrolle durch Labormessung nach 3 Monaten empfohlen","- Schwarzer oder grüner Schimmel sofort großzügig wegschneiden - nur weißer Edelschimmel ist unbedenklich","- Bei Unsicherheit, untypischem Geruch oder Schleimbildung NICHT verzehren - Lebensgefahr durch Botulinumtoxin","- Erstherstellung nur mit Erfahrung in Rohpökelung oder unter Anleitung durchführen","- Kühlkette bei der frischen Keule nicht unterbrechen","- Alle Werkzeuge und Arbeitsflächen sterilisieren"],"userCreated":true,"equipment":[["chamber",5,{"de":"konstante Reifebedingungen","en":"steady maturing conditions"}],["wsm",4,{"de":"für die Kalträucher-Phase","en":"for the cold-smoke phase"}],["kettle",3,{"de":"mit Kaltrauch-Adapter","en":"with a cold-smoke adapter"}],["dehydrator",0,{"de":"ungeeignet für ganze Keulen","en":"unsuitable for whole legs"}]],"origin":"🇪🇸 Jamón Serrano („Gebirgsschinken\") reift traditionell in der kühlen, trockenen Bergluft Spaniens – schlichter als Ibérico, aber mit intensivem, gereiftem Aroma.","authenticity":8,"authenticityNote":"Folgt der Serrano-Methode (Salz, Entsalzen, lange Luftreifung). Die Kalträucher-Phase ist eine Heimanpassung – original reift Serrano ungeräuchert.","proTip":"Nach dem Entsalzen gründlich antrocknen lassen, bevor Rauch oder Reifung starten – eine feuchte Oberfläche ist die häufigste Ursache für Fehlreifung.","learn":["Pökeln nach Gewicht","Entsalzen & Antrocknen","Lange Reifung in zwei Phasen","Gewichtsverlust als Reifemaß","Klimaführung über Monate"]}),
 
-  r({"id":"schweinebauch-heiss","name":"Heißgeräucherter Schweinebauch","method":"heiss","cat":"Schwein","diff":2,"time":"ca. 6-8 Stunden (inkl. 24h Pökeln)","pit":"110-120°C","core":"68-72°C","wood":"Buche oder Apfelholz","yield":"ca. 1,2 kg fertiges Produkt","blurb":"Saftiger, würziger Schweinebauch mit knuspriger Kruste und intensivem Raucharoma aus dem Weber Smokey Mountain.","ingredients":[{"a":"1,5 kg","i":"Schweinebauch mit Schwarte"},{"a":"30 g","i":"Nitritpökelsalz (0,5% vom Fleischgewicht)"},{"a":"15 g","i":"brauner Zucker"},{"a":"2 TL","i":"schwarzer Pfeffer, gemahlen"},{"a":"1 TL","i":"Knoblauchpulver"},{"a":"1 TL","i":"Paprikapulver edelsüß"},{"a":"1/2 TL","i":"Senfkörner, zerdrückt"},{"a":"2","i":"Lorbeerblätter"},{"a":"3-4 Stück","i":"Wacholderbeeren, zerdrückt"}],"phases":[{"label":"Vorbereitung","kind":"prep","dur":"20 Minuten","temp":"Raumtemperatur","text":"Schweinebauch waschen, trocken tupfen und auf beiden Seiten gleichmäßig mit der Gewürzmischung einreiben.","bullets":["Nitritpökelsalz EXAKT abwiegen (30g für 1,5kg)","Mit Zucker und allen Gewürzen mischen","Fleisch gründlich, aber gleichmäßig einreiben","Schwarte mit Messer mehrfach einritzen (Karo-Muster)"]},{"label":"Pökeln","kind":"cure","dur":"24 Stunden","temp":"4-6°C","text":"Fleisch in Vakuumbeutel oder verschließbarer Dose im Kühlschrank pökeln lassen.","bullets":["In luftdichtem Behälter verschließen","Im Kühlschrank lagern (niemals über 7°C)","Nach 12h einmal wenden","Lake die sich bildet, ist normal"]},{"label":"Trocknen","kind":"dry","dur":"2-3 Stunden","temp":"Kühlschrank 4°C","text":"Fleisch aus der Lake nehmen, abspülen, trocken tupfen und unabgedeckt im Kühlschrank trocknen lassen.","bullets":["Gründlich unter kaltem Wasser abspülen","Mit Küchenpapier komplett trocknen","Auf Rost legen, damit Luft zirkulieren kann","Pellicle (leicht klebrige Oberfläche) sollte sich bilden"]},{"label":"Smoker vorbereiten","kind":"prep","dur":"30 Minuten","temp":"Zieltemperatur 110-120°C","text":"Weber Smokey Mountain auf Betriebstemperatur bringen und stabilisieren.","bullets":["Wasserschale zu 3/4 füllen","3-4 Holzchunks Buche oder Apfel auf die Kohle","Untere Lüftungsklappen auf 1/3 offen","Temperatur bei 110-120°C stabilisieren"]},{"label":"Heißräuchern","kind":"smoke","dur":"4-5 Stunden","temp":"110-120°C","text":"Schweinebauch mit der Schwarte nach oben auf den Rost legen und bis zur Kerntemperatur räuchern.","bullets":["Fleisch auf oberen Rost, Schwarte nach oben","Temperatur konstant bei 110-120°C halten","Kerntemperaturmesser in dickster Stelle platzieren","Nicht zu oft öffnen (alle 90 Min. Wasserschale kontrollieren)","Bei 68-72°C Kerntemperatur fertig"]},{"label":"Schwarte kross machen","kind":"finish","dur":"10-15 Minuten","temp":"250°C","text":"Optional: Schwarte im Backofen oder direkt über heißer Glut knusprig rösten.","bullets":["Bauch aus Smoker nehmen","Schwarte mit Salz einreiben","Unter Grill-Oberhitze oder direkt über Glut","Bis Schwarte aufbläht und knusprig wird","Vorsicht: Nicht verbrennen lassen!"]},{"label":"Ruhen und Anrichten","kind":"rest","dur":"15 Minuten","temp":"Raumtemperatur","text":"Schweinebauch kurz ruhen lassen, dann in Scheiben schneiden.","bullets":["In Alufolie locker einwickeln","10-15 Minuten ruhen lassen","In ca. 1 cm dicke Scheiben schneiden","Warm servieren"]}],"tips":["Nitritpökelsalz exakt abwiegen – zu wenig ist unsicher, zu viel ungenießbar","Die Pellicle-Bildung sorgt für bessere Rauchaufnahme","Wasserschale verhindert Austrocknen und stabilisiert Temperatur","Für noch mehr Rauch: 1-2 Chunks nachhaltig nach 2 Stunden","Schweinebauch kann auch kalt gegessen werden (wie Bacon)","Hält sich vakuumiert im Kühlschrank ca. 10-14 Tage","Schwarte wird knuspriger, wenn sie vorher komplett trocken ist","Alternative Gewürze: Koriander, Thymian, Rosmarin","SICHERHEIT:","- Nitritpökelsalz EXAKT dosieren (0,4-0,5% vom Fleischgewicht) – Überdosierung ist gesundheitsschädlich, Unterdosierung birgt Botulismus-Risiko","- Fleisch während des gesamten Pökelvorgangs durchgehend bei 4-6°C lagern, niemals über 7°C","- Kerntemperatur von mindestens 68°C ist bei Schweinefleisch Pflicht zur Abtötung von Parasiten und Bakterien","- Nach dem Räuchern zügig abkühlen oder warm halten (nicht im kritischen Bereich 7-60°C belassen)","- Alle Arbeitsflächen, Messer und Hände vor und nach Kontakt mit rohem Fleisch gründlich reinigen","- Gepökeltes Fleisch sollte innerhalb von 2 Wochen verbraucht oder eingefroren werden"],"userCreated":true,"equipment":[["wsm",5,{"de":"ideal – konstante 100–120 °C mit Rauch","en":"ideal — steady 100–120 °C with smoke"}],["kettle",4,{"de":"indirekt mit Räucherholz","en":"indirect with smoking wood"}],["gas",3,{"de":"mit Räucherbox","en":"with a smoker box"}],["stove",0,{"de":"kein Rauch möglich","en":"no smoke possible"}]],"origin":"🇩🇪 Heißgeräucherter Bauch ist ein Klassiker der deutschen Räuchertradition – gepökelt und über Buche heiß geräuchert wird er sofort essfertig, saftig und kräftig im Aroma.","authenticity":9,"authenticityNote":"Traditionelle Kombination aus Pökeln und Heißrauch über Buche – wie vom Landmetzger.","proTip":"Den Bauch mit der Schwarte nach oben räuchern – das Fett bastet das Fleisch von oben und hält es saftig, während der Rauch von unten einzieht.","learn":["Pökeln & Durchbrennen","Pellicle bilden","Heißräuchern (100–120 °C)","Kerntemperatur treffen","Schwarte richtig behandeln"]}),
-  r({"id":"zupfbrot-kraeuterbutter","name":"Zupfbrot mit Kräuter-Knoblauchbutter","method":"grill","cat":"Beilage","diff":1,"time":"3 Stunden (inkl. Gehzeit)","pit":"180-200°C indirekt","core":"","wood":"Optional: Hickory oder Buche für leichte Rauchnote","yield":"1 Brot für 6-8 Personen","blurb":"Saftiges Hefebrot mit aromatischer Kräuterbutter gefüllt, perfekt zum Teilen beim Grillen.","ingredients":[{"a":"500 g","i":"Weizenmehl Type 550"},{"a":"1 Päckchen","i":"Trockenhefe (7 g)"},{"a":"1 TL","i":"Zucker"},{"a":"1 TL","i":"Salz"},{"a":"300 ml","i":"lauwarmes Wasser"},{"a":"3 EL","i":"Olivenöl"},{"a":"150 g","i":"weiche Butter"},{"a":"4 Zehen","i":"Knoblauch, fein gehackt"},{"a":"3 EL","i":"frische Petersilie, gehackt"},{"a":"2 EL","i":"Schnittlauch, gehackt"},{"a":"1 TL","i":"Rosmarin, fein gehackt"},{"a":"0.5 TL","i":"Salz"},{"a":"0.5 TL","i":"schwarzer Pfeffer"},{"a":"100 g","i":"Emmentaler oder Gouda, gerieben"}],"phases":[{"label":"Teig vorbereiten","kind":"prep","dur":"15 Minuten","temp":"Raumtemperatur","text":"Hefeteig herstellen und zur ersten Gare bringen.","bullets":["Mehl, Hefe, Zucker und Salz in Schüssel mischen","Wasser und Olivenöl zugeben, zu glattem Teig kneten (8-10 Minuten)","Teig abgedeckt an warmem Ort 60 Minuten gehen lassen bis Volumen verdoppelt"]},{"label":"Kräuterbutter zubereiten","kind":"prep","dur":"10 Minuten","temp":"Raumtemperatur","text":"Aromatische Füllung herstellen.","bullets":["Weiche Butter mit Knoblauch, allen Kräutern, Salz und Pfeffer verrühren","Bis zur Verwendung kühl stellen"]},{"label":"Brot formen","kind":"prep","dur":"20 Minuten","temp":"Raumtemperatur","text":"Teig portionieren und mit Füllung schichten.","bullets":["Teig auf bemehlter Fläche ausrollen (ca. 30x40 cm)","Teig in etwa 5x5 cm große Quadrate schneiden","Jedes Quadrat mit Kräuterbutter bestreichen und mit Käse bestreuen","Quadrate hochkant in gefettete Kastenform (25 cm) schichten","Erneut 30 Minuten gehen lassen"]},{"label":"Indirektes Grillen","kind":"indirect","dur":"35-40 Minuten","temp":"180-200°C","text":"Brot auf dem Grill goldbraun backen.","bullets":["Weber Kugelgrill für indirekte Hitze vorbereiten (Kohle auf einer Seite)","Optional: 1 Handvoll eingeweichtes Räucherholz auf Kohle für dezente Rauchnote","Kastenform auf indirekter Zone platzieren","Deckel schließen, Lüftung halb offen","Brot 35-40 Minuten backen bis goldbraun und durchgebacken","Klopfprobe: Brot klingt hohl wenn fertig"]},{"label":"Ruhen und servieren","kind":"rest","dur":"10 Minuten","temp":"Raumtemperatur","text":"Brot kurz abkühlen lassen.","bullets":["Brot aus Form stürzen","10 Minuten abkühlen lassen","Warm servieren zum Zupfen"]}],"tips":["Für extra Aroma: Brot nach 20 Minuten nochmals mit geschmolzener Kräuterbutter bestreichen","Käsesorten variieren: Parmesan, Mozzarella oder Cheddarkäse möglich","Auf dem Gasgrill: Alle Brenner einer Seite auf mittlere Hitze, Form auf andere Seite","Am Vortag: Teig nach erstem Gehen über Nacht im Kühlschrank gehen lassen für intensiveren Geschmack","Brot in Alufolie wickeln falls Oberfläche zu dunkel wird","SICHERHEIT:","- Brot muss vollständig durchgebacken sein - Klopfprobe durchführen und sicherstellen dass keine rohen Teigstellen verbleiben","- Kräuterbutter mit rohem Knoblauch sollte innerhalb von 2-3 Tagen verbraucht werden, danach Botulismus-Risiko bei Raumtemperatur","- Brot bei Raumtemperatur max. 2 Tage haltbar, danach kühlen oder einfrieren","- Hände und Arbeitsflächen beim Teigkneten sauber halten um Kreuzkontamination zu vermeiden"],"equipment":[["kettle",5,{"de":"indirekte Zone – wie ein Ofen mit Rauchnote","en":"indirect zone — like an oven with a hint of smoke"}],["gas",4,{"de":"eine Seite aus, Form auf die kalte Seite","en":"one side off, tin on the cool side"}],["wsm",3,{"de":"funktioniert, braucht aber 180 °C+","en":"works, but needs 180 °C+"}],["stove",4,{"de":"klassisch im Backofen bei 180 °C","en":"classic oven bake at 180 °C"}]],"origin":"🇩🇪 Zupfbrot (Pull-Apart Bread) ist der gesellige Klassiker vom Grillbuffet: geschichtete Hefeteig-Quadrate mit Kräuter-Knoblauchbutter und Käse, warm zum Zupfen serviert.","authenticity":8,"authenticityNote":"Klassischer Hefeteig-Aufbau mit Kräuterbutter-Schichtung – auf dem Kugelgrill indirekt gebacken statt im Ofen.","proTip":"Die Kastenform vor dem Backen auf ein Rost oder zwei Leisten stellen – so bekommt der Boden keine Stauhitze und das Brot bäckt gleichmäßig ohne dunklen Boden.","learn":["Hefeteig führen (zwei Gehzeiten)","Indirektes Backen auf dem Grill","Klopfprobe für den Garpunkt","Rauchnote dosiert einsetzen"]}),
-  r({"id":"beilage-pap-sous","name":"Pap met Sous","method":"grill","cat":"Beilage","diff":1,"time":"30 Minuten","pit":"Herd / Seitenkocher","core":"","wood":"","yield":"Für 4 Personen","blurb":"Cremiger Maisbrei mit würziger Tomaten-Zwiebel-Sauce — der Klassiker zum südafrikanischen Braai.","ingredients":[{"a":"250 g","i":"Maisgrieß (Mieliemeel)"},{"a":"750 ml","i":"Wasser"},{"a":"1 TL","i":"Salz"},{"a":"2","i":"Zwiebeln, gewürfelt"},{"a":"400 g","i":"Tomaten, gewürfelt"},{"a":"1 TL","i":"Zucker"},{"a":"","i":"Chili nach Geschmack"},{"a":"2 EL","i":"Öl"}],"phases":[{"label":"Pap kochen","kind":"cook","dur":"25 Min","temp":"Herd, mittlere Hitze","text":"Maisgrieß in kochendes Salzwasser einrühren und quellen lassen.","bullets":["Wasser mit Salz zum Kochen bringen","Maisgrieß unter Rühren einrieseln lassen","Deckel auflegen, 20 Min. bei kleiner Hitze quellen lassen","Regelmäßig umrühren, sonst setzt der Brei an"]},{"label":"Sous zubereiten","kind":"cook","dur":"15 Min","temp":"Herd, mittlere Hitze","text":"Würzige Tomaten-Zwiebel-Sauce parallel einköcheln.","bullets":["Zwiebeln in Öl glasig braten","Tomaten, Zucker und Chili zugeben","10 Min. offen einköcheln, mit Salz abschmecken"]},{"label":"Servieren","kind":"finish","dur":"5 Min","temp":"","text":"Pap anrichten und großzügig mit der Sauce übergießen.","bullets":["Pap sollte cremig, aber standfest sein","Sous heiß darüber geben"]}],"tips":["Reste vom Pap am nächsten Tag in Scheiben schneiden und auf dem Grill anrösten","Für Krummelpap (krümelige Variante) weniger Wasser verwenden"],"equipment":[["stove",5,{"de":"klassisch im Topf","en":"classic pot on the stove"}],["kettle",3,{"de":"im Dutch Oven auf dem Rost","en":"in a Dutch oven on the grate"}],["gas",4,{"de":"Seitenkocher ideal","en":"side burner is ideal"}]],"origin":"🇿🇦 Pap met Sous ist DIE Beilage zum südafrikanischen Braai: Maisbrei (Pap) mit Tomaten-Zwiebel-Relish (Sous) — auf keinem Braai-Tisch fehlt sie.","authenticity":9,"authenticityNote":"Traditionelle Zubereitung mit Mieliemeel und klassischem Tomaten-Sous — wie am Kap.","proTip":"Den Pap nicht hetzen: langsames Quellen bei kleiner Hitze macht ihn cremig statt klumpig — und ständiges Rühren verhindert das Ansetzen.","learn":["Maisbrei richtig quellen lassen","Relish einköcheln","Konsistenz steuern (Slap Pap vs. Krummelpap)"]}),
-  r({"id":"beilage-coleslaw","name":"Coleslaw","method":"grill","cat":"Beilage","diff":1,"time":"20 Min. + 1 Std. ziehen","pit":"Kalt zubereitet","core":"","wood":"","yield":"Für 4 Personen","blurb":"Knackiger Krautsalat mit cremigem Dressing — der klassische BBQ-Begleiter.","ingredients":[{"a":"½","i":"Weißkohl, fein gehobelt"},{"a":"2","i":"Karotten, geraspelt"},{"a":"150 g","i":"Mayonnaise"},{"a":"1 EL","i":"Apfelessig"},{"a":"1 TL","i":"Zucker"},{"a":"","i":"Salz, Pfeffer"}],"phases":[{"label":"Vorbereiten","kind":"prep","dur":"20 Min","temp":"","text":"Gemüse hobeln und Dressing anrühren.","bullets":["Kohl fein hobeln, Karotten raspeln","Mayonnaise, Essig, Zucker, Salz und Pfeffer verrühren","Dressing unter das Gemüse mischen"]},{"label":"Durchziehen","kind":"marinate","dur":"1 Std","temp":"4°C","text":"Kalt ziehen lassen, damit das Dressing einzieht und der Kohl leicht mürbe wird.","bullets":["Abgedeckt in den Kühlschrank","Vor dem Servieren nochmals abschmecken"]}],"tips":["Für mehr Biss den Kohl erst kurz vor dem Servieren salzen","Ein Apfel, geraspelt, bringt frische Süße","Hält abgedeckt 2 Tage im Kühlschrank"],"equipment":[["stove",5,{"de":"keine Hitze nötig — nur Kühlschrank","en":"no heat needed — just a fridge"}]],"origin":"🇺🇸 Coleslaw ist der unverzichtbare Begleiter des amerikanischen BBQ — die kühle, knackige Säure balanciert fettes, rauchiges Fleisch perfekt aus.","authenticity":9,"authenticityNote":"Klassisches amerikanisches Mayo-Dressing-Rezept, wie es zu Pulled Pork und Ribs gehört.","proTip":"Coleslaw gehört ON das Pulled-Pork-Sandwich, nicht nur daneben — die Kombination aus kaltem, knackigem Salat und heißem Fleisch ist der Punkt.","learn":["Krautsalat-Dressing anrühren","Ziehen lassen richtig timen","Balance zu fettem BBQ verstehen"]}),
-  r({"id":"beilage-kartoffelsalat","name":"Warmer Kartoffelsalat","method":"grill","cat":"Beilage","diff":1,"time":"40 Minuten","pit":"Herd","core":"","wood":"","yield":"Für 4 Personen","blurb":"Speckig-würziger Kartoffelsalat mit Essig-Öl-Dressing, warm serviert.","ingredients":[{"a":"1 kg","i":"festkochende Kartoffeln"},{"a":"150 g","i":"Speckwürfel"},{"a":"1","i":"Zwiebel, fein gewürfelt"},{"a":"400 ml","i":"Brühe"},{"a":"3 EL","i":"Weißweinessig"},{"a":"1 TL","i":"Senf"},{"a":"","i":"Salz, Pfeffer"}],"phases":[{"label":"Kartoffeln kochen","kind":"cook","dur":"25 Min","temp":"Herd","text":"Kartoffeln als Pellkartoffeln kochen, noch warm pellen und in Scheiben schneiden.","bullets":["Festkochende Sorte verwenden","Warm pellen — geht leichter und die Scheiben nehmen das Dressing besser auf"]},{"label":"Dressing","kind":"cook","dur":"10 Min","temp":"Herd","text":"Speck auslassen, Zwiebeln anschwitzen, mit Brühe, Essig und Senf aufkochen.","bullets":["Speck knusprig auslassen","Zwiebeln im Speckfett glasig braten","Brühe, Essig und Senf zugeben und aufkochen"]},{"label":"Vermengen & ziehen","kind":"finish","dur":"10 Min","temp":"warm halten","text":"Heißes Dressing über die Kartoffeln geben und warm durchziehen lassen.","bullets":["Vorsichtig vermengen, Scheiben nicht zerbrechen","Warm servieren"]}],"tips":["Kartoffeln nehmen die Flüssigkeit am besten auf, solange sie noch warm sind","Mit Schnittlauch servieren","Schmeckt lauwarm am besten — nicht kochend heiß"],"equipment":[["stove",5,{"de":"klassisch auf dem Herd","en":"classic stovetop"}],["kettle",3,{"de":"Topf auf dem Rost möglich","en":"pot on the grate works"}]],"origin":"🇩🇪 Der warme, mayonnaisefreie Kartoffelsalat mit Speck und Essig-Öl-Dressing ist die süddeutsche Antwort auf schwere Salate — traditionell zu Gegrilltem und Geräuchertem.","authenticity":9,"authenticityNote":"Schwäbische Machart mit warmer Brühe und Essig — ohne Mayonnaise, wie es sich gehört.","proTip":"Das Dressing muss heiß auf die warmen Kartoffeln — nur so „schlotzt“ der Salat richtig, statt trocken zu bleiben.","learn":["Pellkartoffeln richtig verarbeiten","Warmes Brühe-Dressing ansetzen","Schlotzige Konsistenz erreichen"]}),
-  r({"id":"beilage-chakalaka","name":"Chakalaka","method":"grill","cat":"Beilage","diff":1,"time":"25 Minuten","pit":"Herd / Seitenkocher","core":"","wood":"","yield":"Für 4 Personen","blurb":"Würzig-scharfer südafrikanischer Gemüse-Relish mit Bohnen — der klassische Braai-Begleiter.","ingredients":[{"a":"1","i":"Zwiebel, gewürfelt"},{"a":"2","i":"Paprika, gewürfelt"},{"a":"2","i":"Karotten, geraspelt"},{"a":"400 g","i":"Tomaten, gewürfelt"},{"a":"400 g","i":"Bohnen (Dose, abgetropft)"},{"a":"1 TL","i":"Currypulver"},{"a":"","i":"Chili und Ingwer nach Geschmack"},{"a":"2 EL","i":"Öl"}],"phases":[{"label":"Anbraten","kind":"cook","dur":"10 Min","temp":"Herd, mittlere Hitze","text":"Gemüse anbraten und Gewürze rösten.","bullets":["Zwiebel, Paprika und Karotten in Öl anbraten","Curry, Chili und Ingwer zugeben, kurz mitrösten — das öffnet die Aromen"]},{"label":"Einköcheln","kind":"cook","dur":"15 Min","temp":"Herd, kleine Hitze","text":"Tomaten und Bohnen zugeben und offen einköcheln lassen.","bullets":["Offen köcheln, bis die Sauce dick wird","Mit Salz abschmecken"]}],"tips":["Schmeckt am nächsten Tag noch besser — die Gewürze ziehen durch","Kalt zum Braai oder warm zu Pap servieren","Schärfe über die Chilimenge steuern"],"equipment":[["stove",5,{"de":"Topf oder Pfanne","en":"pot or pan"}],["kettle",4,{"de":"in der Gusspfanne auf dem Rost","en":"in a cast-iron pan on the grate"}],["gas",4,{"de":"Seitenkocher","en":"side burner"}]],"origin":"🇿🇦 Chakalaka entstand in den Townships von Johannesburg und ist heute vom Braai nicht wegzudenken — jede Familie hat ihre eigene Version.","authenticity":9,"authenticityNote":"Klassische Township-Rezeptur mit Curry, Bohnen und Gemüse — authentisch südafrikanisch.","proTip":"Die Gewürze immer kurz in Öl mitrösten, bevor die Tomaten dazukommen — rohes Currypulver schmeckt stumpf und mehlig.","learn":["Gewürze richtig anrösten","Relish-Konsistenz einkochen","Braai-Beilagen verstehen"]}),
-  r({"id":"beilage-baked-beans","name":"Baked Beans","method":"grill","cat":"Beilage","diff":1,"time":"15 Min. + 1,5 Std.","pit":"150°C indirekt","core":"","wood":"Optional: etwas Buche oder Hickory","yield":"Für 4 Personen","blurb":"Süß-rauchige Bohnen in dicker Tomate-Speck-Sauce — der Southern-BBQ-Klassiker.","ingredients":[{"a":"800 g","i":"weiße Bohnen (Dose, abgetropft)"},{"a":"100 g","i":"Speckwürfel"},{"a":"1","i":"Zwiebel, gewürfelt"},{"a":"200 g","i":"Tomatensauce"},{"a":"2 EL","i":"brauner Zucker"},{"a":"1 EL","i":"Worcestersauce"},{"a":"1 TL","i":"Rauchpaprika"}],"phases":[{"label":"Ansatz","kind":"prep","dur":"15 Min","temp":"Herd","text":"Speck auslassen, Zwiebel andünsten, alle Zutaten verrühren.","bullets":["Speck knusprig auslassen","Zwiebel im Speckfett glasig dünsten","Bohnen, Tomatensauce, Zucker, Worcestersauce und Rauchpaprika unterrühren"]},{"label":"Einkochen","kind":"indirect","dur":"1,5 Std","temp":"150°C","text":"Offen im Ofen oder Smoker dick einkochen lassen.","bullets":["Auflaufform oder Gusspfanne verwenden","Im Smoker neben dem Fleisch garen — nimmt zusätzlichen Rauch auf","Fertig, wenn die Sauce dick und glänzend ist"]}],"tips":["Im Smoker unter dem Fleisch platzieren — abtropfender Fleischsaft würzt mit (Klassiker!)","Reste lassen sich hervorragend einfrieren","Mit etwas BBQ-Sauce noch runder"],"equipment":[["wsm",5,{"de":"nimmt neben dem Fleisch Rauch auf","en":"picks up smoke next to the meat"}],["kettle",4,{"de":"indirekt mit Deckel","en":"indirect with the lid on"}],["stove",4,{"de":"Backofen 150 °C","en":"oven at 150 °C"}],["gas",3,{"de":"indirekte Zone","en":"indirect zone"}]],"origin":"🇺🇸 Baked Beans gehören seit den Anfängen des Southern BBQ auf jeden Teller — traditionell köcheln sie stundenlang im Smoker unter dem Fleisch.","authenticity":8,"authenticityNote":"Southern-Style mit Speck, braunem Zucker und Rauchpaprika — verkürzte, aber methodisch klassische Version mit Dosenbohnen.","proTip":"Die Bohnen im Smoker UNTER das Fleisch stellen: abtropfender Bratensaft und Rauch machen aus der Beilage das heimliche Highlight.","learn":["Bohnen offen einkochen","Rauch als Würze nutzen","Smoker-Platz doppelt nutzen"]}),
-  r({"id":"beilage-cornbread","name":"Cornbread","method":"grill","cat":"Beilage","diff":1,"time":"15 Min. + 25 Min. backen","pit":"200°C indirekt","core":"","wood":"","yield":"Für 4 Personen","blurb":"Leicht süßliches Maisbrot, saftig und knusprig aus der Gusseisenpfanne.","ingredients":[{"a":"200 g","i":"Maismehl"},{"a":"100 g","i":"Mehl"},{"a":"2 EL","i":"Zucker"},{"a":"2 TL","i":"Backpulver"},{"a":"250 ml","i":"Buttermilch"},{"a":"1","i":"Ei"},{"a":"60 g","i":"Butter, geschmolzen"},{"a":"1 Prise","i":"Salz"}],"phases":[{"label":"Teig","kind":"prep","dur":"15 Min","temp":"","text":"Trockene und feuchte Zutaten getrennt mischen, dann kurz verrühren.","bullets":["Nicht überrühren — sonst wird das Brot zäh","Gusseisenpfanne parallel im Grill/Ofen vorheizen"]},{"label":"Backen","kind":"indirect","dur":"25 Min","temp":"200°C","text":"Teig in die heiße, gefettete Pfanne geben und goldbraun backen.","bullets":["Die heiße Pfanne gibt die knusprige Kruste am Boden","Stäbchenprobe: kommt sauber heraus, ist das Brot fertig"]}],"tips":["Die Pfanne vorheizen — das gibt eine knusprige Kruste am Boden","Mit Honigbutter servieren","Jalapeños oder Mais im Teig sind klassische Varianten"],"equipment":[["kettle",5,{"de":"Gusspfanne, indirekt","en":"cast-iron pan, indirect"}],["stove",5,{"de":"Backofen 200 °C","en":"oven at 200 °C"}],["wsm",3,{"de":"braucht 200 °C — heiß fahren","en":"needs 200 °C — run it hot"}],["gas",4,{"de":"indirekte Zone","en":"indirect zone"}]],"origin":"🇺🇸 Cornbread stammt aus der Küche der Südstaaten und wird traditionell in der Gusseisenpfanne gebacken — der süßlich-krümelige Kontrast zu würzigem BBQ.","authenticity":8,"authenticityNote":"Klassische Southern-Rezeptur mit Buttermilch und Gusseisenpfanne.","proTip":"Die Pfanne muss beim Einfüllen des Teigs hörbar zischen — nur dann entsteht die typische dunkle, knusprige Unterseite.","learn":["Rührteig nicht überarbeiten","In Gusseisen backen","Backen auf dem Grill"]}),
+  r({"id":"schweinebauch-heiss","name":"Heißgeräucherter Schweinebauch","method":"heiss","cat":"Schwein","diff":2,"time":"ca. 6-8 Stunden (inkl. 24h Pökeln)","pit":"110-120°C","core":"68-72°C","wood":"Buche oder Apfelholz","yield":"ca. 1,2 kg fertiges Produkt","blurb":"Saftiger, würziger Schweinebauch mit knuspriger Kruste und intensivem Raucharoma aus dem Weber Smokey Mountain.","ingredients":[{"a":"1,5 kg","i":"Schweinebauch mit Schwarte"},{"a":"30 g","i":"Nitritpökelsalz (0,5% vom Fleischgewicht)"},{"a":"15 g","i":"brauner Zucker"},{"a":"2 TL (5 g)","i":"schwarzer Pfeffer, gemahlen"},{"a":"1 TL (3 g)","i":"Knoblauchpulver"},{"a":"1 TL (2,5 g)","i":"Paprikapulver edelsüß"},{"a":"1/2 TL (1,5 g)","i":"Senfkörner, zerdrückt"},{"a":"2","i":"Lorbeerblätter"},{"a":"3-4 Stück","i":"Wacholderbeeren, zerdrückt"}],"phases":[{"label":"Vorbereitung","kind":"prep","dur":"20 Minuten","temp":"Raumtemperatur","text":"Schweinebauch waschen, trocken tupfen und auf beiden Seiten gleichmäßig mit der Gewürzmischung einreiben.","bullets":["Nitritpökelsalz EXAKT abwiegen (30g für 1,5kg)","Mit Zucker und allen Gewürzen mischen","Fleisch gründlich, aber gleichmäßig einreiben","Schwarte mit Messer mehrfach einritzen (Karo-Muster)"]},{"label":"Pökeln","kind":"cure","dur":"24 Stunden","temp":"4-6°C","text":"Fleisch in Vakuumbeutel oder verschließbarer Dose im Kühlschrank pökeln lassen.","bullets":["In luftdichtem Behälter verschließen","Im Kühlschrank lagern (niemals über 7°C)","Nach 12h einmal wenden","Lake die sich bildet, ist normal"]},{"label":"Trocknen","kind":"dry","dur":"2-3 Stunden","temp":"Kühlschrank 4°C","text":"Fleisch aus der Lake nehmen, abspülen, trocken tupfen und unabgedeckt im Kühlschrank trocknen lassen.","bullets":["Gründlich unter kaltem Wasser abspülen","Mit Küchenpapier komplett trocknen","Auf Rost legen, damit Luft zirkulieren kann","Pellicle (leicht klebrige Oberfläche) sollte sich bilden"]},{"label":"Smoker vorbereiten","kind":"prep","dur":"30 Minuten","temp":"Zieltemperatur 110-120°C","text":"Weber Smokey Mountain auf Betriebstemperatur bringen und stabilisieren.","bullets":["Wasserschale zu 3/4 füllen","3-4 Holzchunks Buche oder Apfel auf die Kohle","Untere Lüftungsklappen auf 1/3 offen","Temperatur bei 110-120°C stabilisieren"]},{"label":"Heißräuchern","kind":"smoke","dur":"4-5 Stunden","temp":"110-120°C","text":"Schweinebauch mit der Schwarte nach oben auf den Rost legen und bis zur Kerntemperatur räuchern.","bullets":["Fleisch auf oberen Rost, Schwarte nach oben","Temperatur konstant bei 110-120°C halten","Kerntemperaturmesser in dickster Stelle platzieren","Nicht zu oft öffnen (alle 90 Min. Wasserschale kontrollieren)","Bei 68-72°C Kerntemperatur fertig"]},{"label":"Schwarte kross machen","kind":"finish","dur":"10-15 Minuten","temp":"250°C","text":"Optional: Schwarte im Backofen oder direkt über heißer Glut knusprig rösten.","bullets":["Bauch aus Smoker nehmen","Schwarte mit Salz einreiben","Unter Grill-Oberhitze oder direkt über Glut","Bis Schwarte aufbläht und knusprig wird","Vorsicht: Nicht verbrennen lassen!"]},{"label":"Ruhen und Anrichten","kind":"rest","dur":"15 Minuten","temp":"Raumtemperatur","text":"Schweinebauch kurz ruhen lassen, dann in Scheiben schneiden.","bullets":["In Alufolie locker einwickeln","10-15 Minuten ruhen lassen","In ca. 1 cm dicke Scheiben schneiden","Warm servieren"]}],"tips":["Nitritpökelsalz exakt abwiegen – zu wenig ist unsicher, zu viel ungenießbar","Die Pellicle-Bildung sorgt für bessere Rauchaufnahme","Wasserschale verhindert Austrocknen und stabilisiert Temperatur","Für noch mehr Rauch: 1-2 Chunks nachhaltig nach 2 Stunden","Schweinebauch kann auch kalt gegessen werden (wie Bacon)","Hält sich vakuumiert im Kühlschrank ca. 10-14 Tage","Schwarte wird knuspriger, wenn sie vorher komplett trocken ist","Alternative Gewürze: Koriander, Thymian, Rosmarin","SICHERHEIT:","- Nitritpökelsalz EXAKT dosieren (0,4-0,5% vom Fleischgewicht) – Überdosierung ist gesundheitsschädlich, Unterdosierung birgt Botulismus-Risiko","- Fleisch während des gesamten Pökelvorgangs durchgehend bei 4-6°C lagern, niemals über 7°C","- Kerntemperatur von mindestens 68°C ist bei Schweinefleisch Pflicht zur Abtötung von Parasiten und Bakterien","- Nach dem Räuchern zügig abkühlen oder warm halten (nicht im kritischen Bereich 7-60°C belassen)","- Alle Arbeitsflächen, Messer und Hände vor und nach Kontakt mit rohem Fleisch gründlich reinigen","- Gepökeltes Fleisch sollte innerhalb von 2 Wochen verbraucht oder eingefroren werden"],"userCreated":true,"equipment":[["wsm",5,{"de":"ideal – konstante 100–120 °C mit Rauch","en":"ideal — steady 100–120 °C with smoke"}],["kettle",4,{"de":"indirekt mit Räucherholz","en":"indirect with smoking wood"}],["gas",3,{"de":"mit Räucherbox","en":"with a smoker box"}],["stove",0,{"de":"kein Rauch möglich","en":"no smoke possible"}]],"origin":"🇩🇪 Heißgeräucherter Bauch ist ein Klassiker der deutschen Räuchertradition – gepökelt und über Buche heiß geräuchert wird er sofort essfertig, saftig und kräftig im Aroma.","authenticity":9,"authenticityNote":"Traditionelle Kombination aus Pökeln und Heißrauch über Buche – wie vom Landmetzger.","proTip":"Den Bauch mit der Schwarte nach oben räuchern – das Fett bastet das Fleisch von oben und hält es saftig, während der Rauch von unten einzieht.","learn":["Pökeln & Durchbrennen","Pellicle bilden","Heißräuchern (100–120 °C)","Kerntemperatur treffen","Schwarte richtig behandeln"]}),
+  r({"id":"zupfbrot-kraeuterbutter","name":"Zupfbrot mit Kräuter-Knoblauchbutter","method":"grill","cat":"Beilage","diff":1,"time":"3 Stunden (inkl. Gehzeit)","pit":"180-200°C indirekt","core":"","wood":"Optional: Hickory oder Buche für leichte Rauchnote","yield":"1 Brot für 6-8 Personen","blurb":"Saftiges Hefebrot mit aromatischer Kräuterbutter gefüllt, perfekt zum Teilen beim Grillen.","ingredients":[{"a":"500 g","i":"Weizenmehl Type 550"},{"a":"1 Päckchen","i":"Trockenhefe (7 g)"},{"a":"1 TL (4 g)","i":"Zucker"},{"a":"1 TL (5,5 g)","i":"Salz"},{"a":"300 ml","i":"lauwarmes Wasser"},{"a":"3 EL (39 g)","i":"Olivenöl"},{"a":"150 g","i":"weiche Butter"},{"a":"4 Zehen","i":"Knoblauch, fein gehackt"},{"a":"3 EL (9 g)","i":"frische Petersilie, gehackt"},{"a":"2 EL (6 g)","i":"Schnittlauch, gehackt"},{"a":"1 TL (1 g)","i":"Rosmarin, fein gehackt"},{"a":"0.5 TL (3 g)","i":"Salz"},{"a":"0.5 TL (1,5 g)","i":"schwarzer Pfeffer"},{"a":"100 g","i":"Emmentaler oder Gouda, gerieben"}],"phases":[{"label":"Teig vorbereiten","kind":"prep","dur":"15 Minuten","temp":"Raumtemperatur","text":"Hefeteig herstellen und zur ersten Gare bringen.","bullets":["Mehl, Hefe, Zucker und Salz in Schüssel mischen","Wasser und Olivenöl zugeben, zu glattem Teig kneten (8-10 Minuten)","Teig abgedeckt an warmem Ort 60 Minuten gehen lassen bis Volumen verdoppelt"]},{"label":"Kräuterbutter zubereiten","kind":"prep","dur":"10 Minuten","temp":"Raumtemperatur","text":"Aromatische Füllung herstellen.","bullets":["Weiche Butter mit Knoblauch, allen Kräutern, Salz und Pfeffer verrühren","Bis zur Verwendung kühl stellen"]},{"label":"Brot formen","kind":"prep","dur":"20 Minuten","temp":"Raumtemperatur","text":"Teig portionieren und mit Füllung schichten.","bullets":["Teig auf bemehlter Fläche ausrollen (ca. 30x40 cm)","Teig in etwa 5x5 cm große Quadrate schneiden","Jedes Quadrat mit Kräuterbutter bestreichen und mit Käse bestreuen","Quadrate hochkant in gefettete Kastenform (25 cm) schichten","Erneut 30 Minuten gehen lassen"]},{"label":"Indirektes Grillen","kind":"indirect","dur":"35-40 Minuten","temp":"180-200°C","text":"Brot auf dem Grill goldbraun backen.","bullets":["Weber Kugelgrill für indirekte Hitze vorbereiten (Kohle auf einer Seite)","Optional: 1 Handvoll eingeweichtes Räucherholz auf Kohle für dezente Rauchnote","Kastenform auf indirekter Zone platzieren","Deckel schließen, Lüftung halb offen","Brot 35-40 Minuten backen bis goldbraun und durchgebacken","Klopfprobe: Brot klingt hohl wenn fertig"]},{"label":"Ruhen und servieren","kind":"rest","dur":"10 Minuten","temp":"Raumtemperatur","text":"Brot kurz abkühlen lassen.","bullets":["Brot aus Form stürzen","10 Minuten abkühlen lassen","Warm servieren zum Zupfen"]}],"tips":["Für extra Aroma: Brot nach 20 Minuten nochmals mit geschmolzener Kräuterbutter bestreichen","Käsesorten variieren: Parmesan, Mozzarella oder Cheddarkäse möglich","Auf dem Gasgrill: Alle Brenner einer Seite auf mittlere Hitze, Form auf andere Seite","Am Vortag: Teig nach erstem Gehen über Nacht im Kühlschrank gehen lassen für intensiveren Geschmack","Brot in Alufolie wickeln falls Oberfläche zu dunkel wird","SICHERHEIT:","- Brot muss vollständig durchgebacken sein - Klopfprobe durchführen und sicherstellen dass keine rohen Teigstellen verbleiben","- Kräuterbutter mit rohem Knoblauch sollte innerhalb von 2-3 Tagen verbraucht werden, danach Botulismus-Risiko bei Raumtemperatur","- Brot bei Raumtemperatur max. 2 Tage haltbar, danach kühlen oder einfrieren","- Hände und Arbeitsflächen beim Teigkneten sauber halten um Kreuzkontamination zu vermeiden"],"equipment":[["kettle",5,{"de":"indirekte Zone – wie ein Ofen mit Rauchnote","en":"indirect zone — like an oven with a hint of smoke"}],["gas",4,{"de":"eine Seite aus, Form auf die kalte Seite","en":"one side off, tin on the cool side"}],["wsm",3,{"de":"funktioniert, braucht aber 180 °C+","en":"works, but needs 180 °C+"}],["stove",4,{"de":"klassisch im Backofen bei 180 °C","en":"classic oven bake at 180 °C"}]],"origin":"🇩🇪 Zupfbrot (Pull-Apart Bread) ist der gesellige Klassiker vom Grillbuffet: geschichtete Hefeteig-Quadrate mit Kräuter-Knoblauchbutter und Käse, warm zum Zupfen serviert.","authenticity":8,"authenticityNote":"Klassischer Hefeteig-Aufbau mit Kräuterbutter-Schichtung – auf dem Kugelgrill indirekt gebacken statt im Ofen.","proTip":"Die Kastenform vor dem Backen auf ein Rost oder zwei Leisten stellen – so bekommt der Boden keine Stauhitze und das Brot bäckt gleichmäßig ohne dunklen Boden.","learn":["Hefeteig führen (zwei Gehzeiten)","Indirektes Backen auf dem Grill","Klopfprobe für den Garpunkt","Rauchnote dosiert einsetzen"]}),
+  r({"id":"beilage-pap-sous","name":"Pap met Sous","method":"grill","cat":"Beilage","diff":1,"time":"30 Minuten","pit":"Herd / Seitenkocher","core":"","wood":"","yield":"Für 4 Personen","blurb":"Cremiger Maisbrei mit würziger Tomaten-Zwiebel-Sauce — der Klassiker zum südafrikanischen Braai.","ingredients":[{"a":"250 g","i":"Maisgrieß (Mieliemeel)"},{"a":"750 ml","i":"Wasser"},{"a":"1 TL (5,5 g)","i":"Salz"},{"a":"2","i":"Zwiebeln, gewürfelt"},{"a":"400 g","i":"Tomaten, gewürfelt"},{"a":"1 TL (4 g)","i":"Zucker"},{"a":"","i":"Chili nach Geschmack"},{"a":"2 EL (26 g)","i":"Öl"}],"phases":[{"label":"Pap kochen","kind":"cook","dur":"25 Min","temp":"Herd, mittlere Hitze","text":"Maisgrieß in kochendes Salzwasser einrühren und quellen lassen.","bullets":["Wasser mit Salz zum Kochen bringen","Maisgrieß unter Rühren einrieseln lassen","Deckel auflegen, 20 Min. bei kleiner Hitze quellen lassen","Regelmäßig umrühren, sonst setzt der Brei an"]},{"label":"Sous zubereiten","kind":"cook","dur":"15 Min","temp":"Herd, mittlere Hitze","text":"Würzige Tomaten-Zwiebel-Sauce parallel einköcheln.","bullets":["Zwiebeln in Öl glasig braten","Tomaten, Zucker und Chili zugeben","10 Min. offen einköcheln, mit Salz abschmecken"]},{"label":"Servieren","kind":"finish","dur":"5 Min","temp":"","text":"Pap anrichten und großzügig mit der Sauce übergießen.","bullets":["Pap sollte cremig, aber standfest sein","Sous heiß darüber geben"]}],"tips":["Reste vom Pap am nächsten Tag in Scheiben schneiden und auf dem Grill anrösten","Für Krummelpap (krümelige Variante) weniger Wasser verwenden"],"equipment":[["stove",5,{"de":"klassisch im Topf","en":"classic pot on the stove"}],["kettle",3,{"de":"im Dutch Oven auf dem Rost","en":"in a Dutch oven on the grate"}],["gas",4,{"de":"Seitenkocher ideal","en":"side burner is ideal"}]],"origin":"🇿🇦 Pap met Sous ist DIE Beilage zum südafrikanischen Braai: Maisbrei (Pap) mit Tomaten-Zwiebel-Relish (Sous) — auf keinem Braai-Tisch fehlt sie.","authenticity":9,"authenticityNote":"Traditionelle Zubereitung mit Mieliemeel und klassischem Tomaten-Sous — wie am Kap.","proTip":"Den Pap nicht hetzen: langsames Quellen bei kleiner Hitze macht ihn cremig statt klumpig — und ständiges Rühren verhindert das Ansetzen.","learn":["Maisbrei richtig quellen lassen","Relish einköcheln","Konsistenz steuern (Slap Pap vs. Krummelpap)"]}),
+  r({"id":"beilage-coleslaw","name":"Coleslaw","method":"grill","cat":"Beilage","diff":1,"time":"20 Min. + 1 Std. ziehen","pit":"Kalt zubereitet","core":"","wood":"","yield":"Für 4 Personen","blurb":"Knackiger Krautsalat mit cremigem Dressing — der klassische BBQ-Begleiter.","ingredients":[{"a":"½","i":"Weißkohl, fein gehobelt"},{"a":"2","i":"Karotten, geraspelt"},{"a":"150 g","i":"Mayonnaise"},{"a":"1 EL (15 g)","i":"Apfelessig"},{"a":"1 TL (4 g)","i":"Zucker"},{"a":"","i":"Salz, Pfeffer"}],"phases":[{"label":"Vorbereiten","kind":"prep","dur":"20 Min","temp":"","text":"Gemüse hobeln und Dressing anrühren.","bullets":["Kohl fein hobeln, Karotten raspeln","Mayonnaise, Essig, Zucker, Salz und Pfeffer verrühren","Dressing unter das Gemüse mischen"]},{"label":"Durchziehen","kind":"marinate","dur":"1 Std","temp":"4°C","text":"Kalt ziehen lassen, damit das Dressing einzieht und der Kohl leicht mürbe wird.","bullets":["Abgedeckt in den Kühlschrank","Vor dem Servieren nochmals abschmecken"]}],"tips":["Für mehr Biss den Kohl erst kurz vor dem Servieren salzen","Ein Apfel, geraspelt, bringt frische Süße","Hält abgedeckt 2 Tage im Kühlschrank"],"equipment":[["stove",5,{"de":"keine Hitze nötig — nur Kühlschrank","en":"no heat needed — just a fridge"}]],"origin":"🇺🇸 Coleslaw ist der unverzichtbare Begleiter des amerikanischen BBQ — die kühle, knackige Säure balanciert fettes, rauchiges Fleisch perfekt aus.","authenticity":9,"authenticityNote":"Klassisches amerikanisches Mayo-Dressing-Rezept, wie es zu Pulled Pork und Ribs gehört.","proTip":"Coleslaw gehört ON das Pulled-Pork-Sandwich, nicht nur daneben — die Kombination aus kaltem, knackigem Salat und heißem Fleisch ist der Punkt.","learn":["Krautsalat-Dressing anrühren","Ziehen lassen richtig timen","Balance zu fettem BBQ verstehen"]}),
+  r({"id":"beilage-kartoffelsalat","name":"Warmer Kartoffelsalat","method":"grill","cat":"Beilage","diff":1,"time":"40 Minuten","pit":"Herd","core":"","wood":"","yield":"Für 4 Personen","blurb":"Speckig-würziger Kartoffelsalat mit Essig-Öl-Dressing, warm serviert.","ingredients":[{"a":"1 kg","i":"festkochende Kartoffeln"},{"a":"150 g","i":"Speckwürfel"},{"a":"1","i":"Zwiebel, fein gewürfelt"},{"a":"400 ml","i":"Brühe"},{"a":"3 EL (45 g)","i":"Weißweinessig"},{"a":"1 TL (5 g)","i":"Senf"},{"a":"","i":"Salz, Pfeffer"}],"phases":[{"label":"Kartoffeln kochen","kind":"cook","dur":"25 Min","temp":"Herd","text":"Kartoffeln als Pellkartoffeln kochen, noch warm pellen und in Scheiben schneiden.","bullets":["Festkochende Sorte verwenden","Warm pellen — geht leichter und die Scheiben nehmen das Dressing besser auf"]},{"label":"Dressing","kind":"cook","dur":"10 Min","temp":"Herd","text":"Speck auslassen, Zwiebeln anschwitzen, mit Brühe, Essig und Senf aufkochen.","bullets":["Speck knusprig auslassen","Zwiebeln im Speckfett glasig braten","Brühe, Essig und Senf zugeben und aufkochen"]},{"label":"Vermengen & ziehen","kind":"finish","dur":"10 Min","temp":"warm halten","text":"Heißes Dressing über die Kartoffeln geben und warm durchziehen lassen.","bullets":["Vorsichtig vermengen, Scheiben nicht zerbrechen","Warm servieren"]}],"tips":["Kartoffeln nehmen die Flüssigkeit am besten auf, solange sie noch warm sind","Mit Schnittlauch servieren","Schmeckt lauwarm am besten — nicht kochend heiß"],"equipment":[["stove",5,{"de":"klassisch auf dem Herd","en":"classic stovetop"}],["kettle",3,{"de":"Topf auf dem Rost möglich","en":"pot on the grate works"}]],"origin":"🇩🇪 Der warme, mayonnaisefreie Kartoffelsalat mit Speck und Essig-Öl-Dressing ist die süddeutsche Antwort auf schwere Salate — traditionell zu Gegrilltem und Geräuchertem.","authenticity":9,"authenticityNote":"Schwäbische Machart mit warmer Brühe und Essig — ohne Mayonnaise, wie es sich gehört.","proTip":"Das Dressing muss heiß auf die warmen Kartoffeln — nur so „schlotzt“ der Salat richtig, statt trocken zu bleiben.","learn":["Pellkartoffeln richtig verarbeiten","Warmes Brühe-Dressing ansetzen","Schlotzige Konsistenz erreichen"]}),
+  r({"id":"beilage-chakalaka","name":"Chakalaka","method":"grill","cat":"Beilage","diff":1,"time":"25 Minuten","pit":"Herd / Seitenkocher","core":"","wood":"","yield":"Für 4 Personen","blurb":"Würzig-scharfer südafrikanischer Gemüse-Relish mit Bohnen — der klassische Braai-Begleiter.","ingredients":[{"a":"1","i":"Zwiebel, gewürfelt"},{"a":"2","i":"Paprika, gewürfelt"},{"a":"2","i":"Karotten, geraspelt"},{"a":"400 g","i":"Tomaten, gewürfelt"},{"a":"400 g","i":"Bohnen (Dose, abgetropft)"},{"a":"1 TL (3 g)","i":"Currypulver"},{"a":"","i":"Chili und Ingwer nach Geschmack"},{"a":"2 EL (26 g)","i":"Öl"}],"phases":[{"label":"Anbraten","kind":"cook","dur":"10 Min","temp":"Herd, mittlere Hitze","text":"Gemüse anbraten und Gewürze rösten.","bullets":["Zwiebel, Paprika und Karotten in Öl anbraten","Curry, Chili und Ingwer zugeben, kurz mitrösten — das öffnet die Aromen"]},{"label":"Einköcheln","kind":"cook","dur":"15 Min","temp":"Herd, kleine Hitze","text":"Tomaten und Bohnen zugeben und offen einköcheln lassen.","bullets":["Offen köcheln, bis die Sauce dick wird","Mit Salz abschmecken"]}],"tips":["Schmeckt am nächsten Tag noch besser — die Gewürze ziehen durch","Kalt zum Braai oder warm zu Pap servieren","Schärfe über die Chilimenge steuern"],"equipment":[["stove",5,{"de":"Topf oder Pfanne","en":"pot or pan"}],["kettle",4,{"de":"in der Gusspfanne auf dem Rost","en":"in a cast-iron pan on the grate"}],["gas",4,{"de":"Seitenkocher","en":"side burner"}]],"origin":"🇿🇦 Chakalaka entstand in den Townships von Johannesburg und ist heute vom Braai nicht wegzudenken — jede Familie hat ihre eigene Version.","authenticity":9,"authenticityNote":"Klassische Township-Rezeptur mit Curry, Bohnen und Gemüse — authentisch südafrikanisch.","proTip":"Die Gewürze immer kurz in Öl mitrösten, bevor die Tomaten dazukommen — rohes Currypulver schmeckt stumpf und mehlig.","learn":["Gewürze richtig anrösten","Relish-Konsistenz einkochen","Braai-Beilagen verstehen"]}),
+  r({"id":"beilage-baked-beans","name":"Baked Beans","method":"grill","cat":"Beilage","diff":1,"time":"15 Min. + 1,5 Std.","pit":"150°C indirekt","core":"","wood":"Optional: etwas Buche oder Hickory","yield":"Für 4 Personen","blurb":"Süß-rauchige Bohnen in dicker Tomate-Speck-Sauce — der Southern-BBQ-Klassiker.","ingredients":[{"a":"800 g","i":"weiße Bohnen (Dose, abgetropft)"},{"a":"100 g","i":"Speckwürfel"},{"a":"1","i":"Zwiebel, gewürfelt"},{"a":"200 g","i":"Tomatensauce"},{"a":"2 EL (24 g)","i":"brauner Zucker"},{"a":"1 EL (15 g)","i":"Worcestersauce"},{"a":"1 TL (2,5 g)","i":"Rauchpaprika"}],"phases":[{"label":"Ansatz","kind":"prep","dur":"15 Min","temp":"Herd","text":"Speck auslassen, Zwiebel andünsten, alle Zutaten verrühren.","bullets":["Speck knusprig auslassen","Zwiebel im Speckfett glasig dünsten","Bohnen, Tomatensauce, Zucker, Worcestersauce und Rauchpaprika unterrühren"]},{"label":"Einkochen","kind":"indirect","dur":"1,5 Std","temp":"150°C","text":"Offen im Ofen oder Smoker dick einkochen lassen.","bullets":["Auflaufform oder Gusspfanne verwenden","Im Smoker neben dem Fleisch garen — nimmt zusätzlichen Rauch auf","Fertig, wenn die Sauce dick und glänzend ist"]}],"tips":["Im Smoker unter dem Fleisch platzieren — abtropfender Fleischsaft würzt mit (Klassiker!)","Reste lassen sich hervorragend einfrieren","Mit etwas BBQ-Sauce noch runder"],"equipment":[["wsm",5,{"de":"nimmt neben dem Fleisch Rauch auf","en":"picks up smoke next to the meat"}],["kettle",4,{"de":"indirekt mit Deckel","en":"indirect with the lid on"}],["stove",4,{"de":"Backofen 150 °C","en":"oven at 150 °C"}],["gas",3,{"de":"indirekte Zone","en":"indirect zone"}]],"origin":"🇺🇸 Baked Beans gehören seit den Anfängen des Southern BBQ auf jeden Teller — traditionell köcheln sie stundenlang im Smoker unter dem Fleisch.","authenticity":8,"authenticityNote":"Southern-Style mit Speck, braunem Zucker und Rauchpaprika — verkürzte, aber methodisch klassische Version mit Dosenbohnen.","proTip":"Die Bohnen im Smoker UNTER das Fleisch stellen: abtropfender Bratensaft und Rauch machen aus der Beilage das heimliche Highlight.","learn":["Bohnen offen einkochen","Rauch als Würze nutzen","Smoker-Platz doppelt nutzen"]}),
+  r({"id":"beilage-cornbread","name":"Cornbread","method":"grill","cat":"Beilage","diff":1,"time":"15 Min. + 25 Min. backen","pit":"200°C indirekt","core":"","wood":"","yield":"Für 4 Personen","blurb":"Leicht süßliches Maisbrot, saftig und knusprig aus der Gusseisenpfanne.","ingredients":[{"a":"200 g","i":"Maismehl"},{"a":"100 g","i":"Mehl"},{"a":"2 EL (24 g)","i":"Zucker"},{"a":"2 TL (8 g)","i":"Backpulver"},{"a":"250 ml","i":"Buttermilch"},{"a":"1","i":"Ei"},{"a":"60 g","i":"Butter, geschmolzen"},{"a":"1 Prise","i":"Salz"}],"phases":[{"label":"Teig","kind":"prep","dur":"15 Min","temp":"","text":"Trockene und feuchte Zutaten getrennt mischen, dann kurz verrühren.","bullets":["Nicht überrühren — sonst wird das Brot zäh","Gusseisenpfanne parallel im Grill/Ofen vorheizen"]},{"label":"Backen","kind":"indirect","dur":"25 Min","temp":"200°C","text":"Teig in die heiße, gefettete Pfanne geben und goldbraun backen.","bullets":["Die heiße Pfanne gibt die knusprige Kruste am Boden","Stäbchenprobe: kommt sauber heraus, ist das Brot fertig"]}],"tips":["Die Pfanne vorheizen — das gibt eine knusprige Kruste am Boden","Mit Honigbutter servieren","Jalapeños oder Mais im Teig sind klassische Varianten"],"equipment":[["kettle",5,{"de":"Gusspfanne, indirekt","en":"cast-iron pan, indirect"}],["stove",5,{"de":"Backofen 200 °C","en":"oven at 200 °C"}],["wsm",3,{"de":"braucht 200 °C — heiß fahren","en":"needs 200 °C — run it hot"}],["gas",4,{"de":"indirekte Zone","en":"indirect zone"}]],"origin":"🇺🇸 Cornbread stammt aus der Küche der Südstaaten und wird traditionell in der Gusseisenpfanne gebacken — der süßlich-krümelige Kontrast zu würzigem BBQ.","authenticity":8,"authenticityNote":"Klassische Southern-Rezeptur mit Buttermilch und Gusseisenpfanne.","proTip":"Die Pfanne muss beim Einfüllen des Teigs hörbar zischen — nur dann entsteht die typische dunkle, knusprige Unterseite.","learn":["Rührteig nicht überarbeiten","In Gusseisen backen","Backen auf dem Grill"]}),
   r({"id":"beilage-kartoffelgratin","name":"Kartoffelgratin (Gratin Dauphinois)","method":"grill","cat":"Beilage","diff":1,"time":"20 Min. + 1 Std. backen","pit":"160°C indirekt","core":"","wood":"","yield":"Für 4 Personen","blurb":"Zart geschichtete Kartoffelscheiben in Sahne und Knoblauch, goldbraun überbacken.","ingredients":[{"a":"1 kg","i":"Kartoffeln, in dünne Scheiben"},{"a":"400 ml","i":"Sahne"},{"a":"150 ml","i":"Milch"},{"a":"2","i":"Knoblauchzehen"},{"a":"","i":"Salz, Pfeffer, Muskat"},{"a":"","i":"Butter für die Form"}],"phases":[{"label":"Schichten","kind":"prep","dur":"20 Min","temp":"","text":"Kartoffeln hauchdünn hobeln und in der gebutterten Form schichten.","bullets":["Hauchdünn schneiden (Hobel!) — so garen sie gleichmäßig","Sahne, Milch, zerdrückten Knoblauch und Gewürze vermengen und übergießen"]},{"label":"Backen","kind":"indirect","dur":"1 Std","temp":"160°C","text":"Backen, bis die Kartoffeln weich sind und die Oberfläche goldbraun ist.","bullets":["Messerprobe: gleitet ohne Widerstand hinein","Bei zu dunkler Oberfläche mit Folie abdecken","10 Min. ruhen lassen — dann schneidet es sich sauber"]}],"tips":["Kartoffeln nicht wässern — die Stärke bindet die Sahne","Festkochende Sorten behalten die Struktur","Original ohne Käse; mit Gruyère wird es ein Gratin Savoyard"],"equipment":[["stove",5,{"de":"Backofen 160 °C","en":"oven at 160 °C"}],["kettle",4,{"de":"indirekt mit Deckel","en":"indirect with the lid"}],["gas",4,{"de":"indirekte Zone","en":"indirect zone"}]],"origin":"🇫🇷 Das Gratin Dauphinois aus der Dauphiné ist Frankreichs berühmteste Kartoffelbeilage — nur Kartoffeln, Sahne, Knoblauch, keine Experimente.","authenticity":9,"authenticityNote":"Klassisch ohne Käse, mit Knoblauch und Sahne — wie im Original der Dauphiné.","proTip":"Die Knoblauchzehe halbieren und die Form damit ausreiben, bevor gebuttert wird — würzt subtil, ohne zu dominieren.","learn":["Gleichmäßig dünn hobeln","Stärke als Bindung nutzen","Gratinieren auf dem Grill"]}),
   r({"id":"beilage-yorkshire-pudding","name":"Yorkshire Pudding","method":"grill","cat":"Beilage","diff":2,"time":"10 Min. + 20 Min. backen + 30 Min. Teigruhe","pit":"220°C","core":"","wood":"","yield":"Für 4 Personen","blurb":"Luftig-knuspriges Schmalzgebäck aus Eierteig — der englische Klassiker zum Sonntagsbraten.","ingredients":[{"a":"140 g","i":"Mehl"},{"a":"4","i":"Eier"},{"a":"200 ml","i":"Milch"},{"a":"1 Prise","i":"Salz"},{"a":"","i":"Rapsöl oder Bratenfett für die Form"}],"phases":[{"label":"Teig","kind":"prep","dur":"10 Min + 30 Min Ruhe","temp":"Raumtemperatur","text":"Dünnflüssigen Eierteig anrühren und ruhen lassen.","bullets":["Mehl, Eier, Milch und Salz glatt verrühren","30 Min. ruhen lassen — das Gluten entspannt sich"]},{"label":"Backen","kind":"cook","dur":"20 Min","temp":"220°C","text":"Teig in rauchend heißes Fett gießen und ohne Öffnen der Tür backen.","bullets":["Muffinform mit Öl im Ofen stark vorheizen — das Fett muss fast rauchen","Teig zügig einfüllen","Tür 20 Min. NICHT öffnen — sonst fällt der Pudding zusammen"]}],"tips":["Fett und Form müssen richtig heiß sein — nur so geht der Pudding hoch","Klassisch mit Bratensaft (Gravy) servieren","Reste am nächsten Tag kurz aufbacken"],"equipment":[["stove",5,{"de":"Backofen 220 °C — volle Kontrolle","en":"oven at 220 °C — full control"}],["kettle",3,{"de":"möglich, aber Temperatur schwer zu halten","en":"possible, but temperature is hard to hold"}],["gas",4,{"de":"indirekt mit Deckel, heiß","en":"indirect with lid, hot"}]],"origin":"🇬🇧 Yorkshire Pudding gehört seit dem 18. Jahrhundert zum englischen Sunday Roast — ursprünglich unter dem Braten gebacken, um den abtropfenden Bratensaft aufzufangen.","authenticity":9,"authenticityNote":"Traditionelle Rezeptur (gleiche Teile Ei, Milch, Mehl nach Volumen) und klassische Heißfett-Methode.","proTip":"Alle Zutaten zimmerwarm und das Fett rauchend heiß — der Temperaturschock ist es, der den Pudding hochtreibt.","learn":["Brandteig-freies Aufgehen verstehen","Mit rauchend heißem Fett arbeiten","Ofendisziplin: Tür zu!"]}),
-  r({"id":"beilage-krautsalat","name":"Krautsalat","method":"grill","cat":"Beilage","diff":1,"time":"20 Min. + 30 Min. ziehen","pit":"Kalt zubereitet","core":"","wood":"","yield":"Für 4 Personen","blurb":"Feiner, säuerlicher Weißkrautsalat mit Kümmel — schlank und erfrischend.","ingredients":[{"a":"½","i":"Weißkohl, hauchdünn gehobelt"},{"a":"3 EL","i":"Essig"},{"a":"2 EL","i":"Öl"},{"a":"1 TL","i":"Kümmel"},{"a":"","i":"Salz, Zucker"}],"phases":[{"label":"Kneten","kind":"prep","dur":"10 Min","temp":"","text":"Kohl salzen und kräftig durchkneten, bis er weich wird und Saft zieht.","bullets":["Das Kneten ersetzt das lange Ziehen","Hauchdünn gehobelt wird er am feinsten"]},{"label":"Marinieren","kind":"marinate","dur":"30 Min","temp":"Raumtemperatur","text":"Essig, Öl, Kümmel und Zucker untermischen und ziehen lassen.","bullets":["Abschmecken: Balance aus Säure und Süße","Vor dem Servieren nochmals durchmischen"]}],"tips":["Ganz ohne Mayonnaise — passt besonders gut zu fettigem Räucherfleisch","Hält sich 3 Tage im Kühlschrank und wird immer besser","Mit Speckwürfeln wird daraus steirischer Krautsalat"],"equipment":[["stove",5,{"de":"keine Hitze nötig","en":"no heat needed"}]],"origin":"🇦🇹 Der feine, essigsaure Krautsalat mit Kümmel ist ein Klassiker der österreichischen Wirtshausküche — das leichte Gegenstück zum cremigen Coleslaw.","authenticity":9,"authenticityNote":"Wirtshaus-Machart: gekneteter Kohl, Essig-Öl-Marinade, Kümmel — kein Mayo.","proTip":"Das Salzen und Kneten ist der eigentliche Trick: es bricht die Zellstruktur und macht den Salat in 30 Minuten so mürbe wie sonst über Nacht.","learn":["Kohl kneten statt lange ziehen","Essig-Öl-Marinade abstimmen","Kümmel richtig einsetzen"]}),
-  r({"id":"beilage-gurkensalat","name":"Gurkensalat","method":"grill","cat":"Beilage","diff":1,"time":"15 Min. + 20 Min. ziehen","pit":"Kalt zubereitet","core":"","wood":"","yield":"Für 4 Personen","blurb":"Erfrischender Schmand-Gurkensalat mit Dill — leicht und säuerlich zu deftigem Räucherfleisch.","ingredients":[{"a":"1","i":"Salatgurke, hauchdünn gehobelt"},{"a":"150 g","i":"Schmand oder Saure Sahne"},{"a":"1 EL","i":"Weißweinessig"},{"a":"1 Bund","i":"Dill, gehackt"},{"a":"","i":"Salz, Pfeffer, 1 Prise Zucker"}],"phases":[{"label":"Entwässern","kind":"prep","dur":"15 Min","temp":"","text":"Gurke salzen, ziehen lassen und Flüssigkeit ausdrücken.","bullets":["Das verhindert einen wässrigen Salat","Gut ausdrücken — ruhig mit den Händen"]},{"label":"Anmachen","kind":"marinate","dur":"20 Min","temp":"4°C","text":"Schmand-Dressing anrühren, Gurke unterheben, kalt durchziehen lassen.","bullets":["Schmand, Essig, Dill, Pfeffer und Zucker verrühren","Kalt servieren"]}],"tips":["Das Ausdrücken der Gurke verhindert einen wässrigen Salat","Frischer Dill ist Pflicht — getrockneter schmeckt fad","Kurz vor dem Servieren anrichten"],"equipment":[["stove",5,{"de":"keine Hitze nötig","en":"no heat needed"}]],"origin":"🇩🇪 Der Schmand-Gurkensalat mit Dill ist ein norddeutscher Küchenklassiker — kühl und säuerlich der perfekte Ausgleich zu geräuchertem Fleisch und Fisch.","authenticity":9,"authenticityNote":"Klassische Machart mit gesalzener, ausgedrückter Gurke und Schmand-Dill-Dressing.","proTip":"Die Gurke mit dem Sparschäler in Streifen hobeln statt in Scheiben — mehr Oberfläche, mehr Dressing, besserer Biss.","learn":["Gemüse entwässern","Schmand-Dressing anrühren","Beilagen zu Räucherfisch wählen"]}),
+  r({"id":"beilage-krautsalat","name":"Krautsalat","method":"grill","cat":"Beilage","diff":1,"time":"20 Min. + 30 Min. ziehen","pit":"Kalt zubereitet","core":"","wood":"","yield":"Für 4 Personen","blurb":"Feiner, säuerlicher Weißkrautsalat mit Kümmel — schlank und erfrischend.","ingredients":[{"a":"½","i":"Weißkohl, hauchdünn gehobelt"},{"a":"3 EL (45 g)","i":"Essig"},{"a":"2 EL (26 g)","i":"Öl"},{"a":"1 TL (2 g)","i":"Kümmel"},{"a":"","i":"Salz, Zucker"}],"phases":[{"label":"Kneten","kind":"prep","dur":"10 Min","temp":"","text":"Kohl salzen und kräftig durchkneten, bis er weich wird und Saft zieht.","bullets":["Das Kneten ersetzt das lange Ziehen","Hauchdünn gehobelt wird er am feinsten"]},{"label":"Marinieren","kind":"marinate","dur":"30 Min","temp":"Raumtemperatur","text":"Essig, Öl, Kümmel und Zucker untermischen und ziehen lassen.","bullets":["Abschmecken: Balance aus Säure und Süße","Vor dem Servieren nochmals durchmischen"]}],"tips":["Ganz ohne Mayonnaise — passt besonders gut zu fettigem Räucherfleisch","Hält sich 3 Tage im Kühlschrank und wird immer besser","Mit Speckwürfeln wird daraus steirischer Krautsalat"],"equipment":[["stove",5,{"de":"keine Hitze nötig","en":"no heat needed"}]],"origin":"🇦🇹 Der feine, essigsaure Krautsalat mit Kümmel ist ein Klassiker der österreichischen Wirtshausküche — das leichte Gegenstück zum cremigen Coleslaw.","authenticity":9,"authenticityNote":"Wirtshaus-Machart: gekneteter Kohl, Essig-Öl-Marinade, Kümmel — kein Mayo.","proTip":"Das Salzen und Kneten ist der eigentliche Trick: es bricht die Zellstruktur und macht den Salat in 30 Minuten so mürbe wie sonst über Nacht.","learn":["Kohl kneten statt lange ziehen","Essig-Öl-Marinade abstimmen","Kümmel richtig einsetzen"]}),
+  r({"id":"beilage-gurkensalat","name":"Gurkensalat","method":"grill","cat":"Beilage","diff":1,"time":"15 Min. + 20 Min. ziehen","pit":"Kalt zubereitet","core":"","wood":"","yield":"Für 4 Personen","blurb":"Erfrischender Schmand-Gurkensalat mit Dill — leicht und säuerlich zu deftigem Räucherfleisch.","ingredients":[{"a":"1","i":"Salatgurke, hauchdünn gehobelt"},{"a":"150 g","i":"Schmand oder Saure Sahne"},{"a":"1 EL (15 g)","i":"Weißweinessig"},{"a":"1 Bund","i":"Dill, gehackt"},{"a":"","i":"Salz, Pfeffer, 1 Prise Zucker"}],"phases":[{"label":"Entwässern","kind":"prep","dur":"15 Min","temp":"","text":"Gurke salzen, ziehen lassen und Flüssigkeit ausdrücken.","bullets":["Das verhindert einen wässrigen Salat","Gut ausdrücken — ruhig mit den Händen"]},{"label":"Anmachen","kind":"marinate","dur":"20 Min","temp":"4°C","text":"Schmand-Dressing anrühren, Gurke unterheben, kalt durchziehen lassen.","bullets":["Schmand, Essig, Dill, Pfeffer und Zucker verrühren","Kalt servieren"]}],"tips":["Das Ausdrücken der Gurke verhindert einen wässrigen Salat","Frischer Dill ist Pflicht — getrockneter schmeckt fad","Kurz vor dem Servieren anrichten"],"equipment":[["stove",5,{"de":"keine Hitze nötig","en":"no heat needed"}]],"origin":"🇩🇪 Der Schmand-Gurkensalat mit Dill ist ein norddeutscher Küchenklassiker — kühl und säuerlich der perfekte Ausgleich zu geräuchertem Fleisch und Fisch.","authenticity":9,"authenticityNote":"Klassische Machart mit gesalzener, ausgedrückter Gurke und Schmand-Dill-Dressing.","proTip":"Die Gurke mit dem Sparschäler in Streifen hobeln statt in Scheiben — mehr Oberfläche, mehr Dressing, besserer Biss.","learn":["Gemüse entwässern","Schmand-Dressing anrühren","Beilagen zu Räucherfisch wählen"]}),
   r({"id":"beilage-mac-cheese","name":"Mac & Cheese","method":"grill","cat":"Beilage","diff":1,"time":"30 Minuten","pit":"Herd / 200°C zum Überbacken","core":"","wood":"","yield":"Für 4 Personen","blurb":"Cremige Cheddar-Sauce über zart gegarten Nudeln, mit knuspriger Kruste.","ingredients":[{"a":"400 g","i":"Makkaroni"},{"a":"50 g","i":"Butter"},{"a":"50 g","i":"Mehl"},{"a":"500 ml","i":"Milch"},{"a":"300 g","i":"Cheddar, gerieben"},{"a":"","i":"Salz, Pfeffer, Muskat"}],"phases":[{"label":"Sauce","kind":"cook","dur":"15 Min","temp":"Herd","text":"Mehlschwitze ansetzen, mit Milch aufgießen, Käse einschmelzen.","bullets":["Butter schmelzen, Mehl einrühren, 2 Min. anschwitzen","Milch nach und nach einrühren — klümpchenfrei","Käse abseits der Hitze einschmelzen, würzen"]},{"label":"Vermengen & überbacken","kind":"finish","dur":"15 Min","temp":"200°C","text":"Nudeln mit der Sauce mischen und optional überbacken.","bullets":["Nudeln bissfest kochen","Optional 10 Min. bei 200 °C für die Kruste","Etwas Käse für die Oberfläche zurückbehalten"]}],"tips":["Etwas geräucherter Cheddar bringt die Aromen näher zusammen","Die Sauce ruhig etwas zu flüssig lassen — sie zieht beim Überbacken an","Panko-Brösel auf der Kruste geben extra Knusper"],"equipment":[["stove",5,{"de":"Herd + Backofen","en":"stove + oven"}],["kettle",4,{"de":"Gusspfanne, indirekt überbacken","en":"cast-iron pan, browned indirectly"}],["wsm",3,{"de":"nimmt schöne Rauchnote an","en":"picks up a nice smoky note"}]],"origin":"🇺🇸 Mac & Cheese ist Amerikas liebstes Comfort Food und auf BBQ-Tellern der Südstaaten gesetzt — cremig, käsig, unwiderstehlich.","authenticity":8,"authenticityNote":"Klassische Béchamel-Cheddar-Basis; im Smoker überbacken wird daraus Smoked Mac & Cheese.","proTip":"Den Käse nie in kochende Sauce rühren — abseits der Hitze schmelzen, sonst wird er grieselig statt cremig.","learn":["Mehlschwitze & Béchamel","Käse cremig einschmelzen","Überbacken auf dem Grill"]}),
-  r({"id":"beilage-patatas-bravas","name":"Patatas Bravas","method":"grill","cat":"Beilage","diff":1,"time":"40 Minuten","pit":"Herd / Pfanne","core":"","wood":"","yield":"Für 4 Personen","blurb":"Knusprig gebratene Kartoffelwürfel mit scharfer Tomatensauce und Aioli.","ingredients":[{"a":"800 g","i":"Kartoffeln, gewürfelt"},{"a":"","i":"Öl zum Braten"},{"a":"200 g","i":"passierte Tomaten"},{"a":"1 TL","i":"Paprikapulver"},{"a":"","i":"Chili nach Geschmack"},{"a":"","i":"Aioli oder Knoblauchmayonnaise"}],"phases":[{"label":"Vorkochen","kind":"prep","dur":"10 Min","temp":"Herd","text":"Kartoffelwürfel kurz vorkochen und ausdampfen lassen.","bullets":["5 Min. in Salzwasser blanchieren","Gut ausdampfen lassen — trockene Oberfläche = knusprig"]},{"label":"Braten","kind":"cook","dur":"20 Min","temp":"Pfanne, hohe Hitze","text":"In reichlich Öl rundum knusprig braten.","bullets":["Nicht zu viele auf einmal — sonst dämpfen sie","Erst am Ende salzen"]},{"label":"Sauce & Servieren","kind":"finish","dur":"10 Min","temp":"","text":"Bravas-Sauce einköcheln und mit Aioli servieren.","bullets":["Passierte Tomaten mit Paprika und Chili kurz einköcheln","Kartoffeln mit Sauce und einem Klecks Aioli anrichten"]}],"tips":["Die Kartoffeln vor dem Braten kurz vorkochen — innen fluffig, außen knusprig","Rauchpaprika (Pimentón) macht die Sauce authentischer","Als Tapa oder BBQ-Beilage"],"equipment":[["stove",5,{"de":"Pfanne, hohe Hitze","en":"pan, high heat"}],["kettle",4,{"de":"Gusspfanne oder Plancha auf dem Rost","en":"cast-iron pan or plancha on the grate"}],["gas",4,{"de":"Plancha/Pfanne","en":"plancha/pan"}]],"origin":"🇪🇸 Patatas Bravas sind Spaniens berühmteste Tapa — „wilde Kartoffeln“ mit scharfer Sauce, in jeder Bar von Madrid bis Barcelona zu Hause.","authenticity":8,"authenticityNote":"Madrider Machart mit Tomaten-Bravas-Sauce; Aioli dazu ist die katalanische Ergänzung.","proTip":"Zweimal garen ist das Geheimnis: erst blanchieren, dann heiß braten — genau wie bei perfekten Pommes.","learn":["Doppelgar-Methode für Knusprigkeit","Bravas-Sauce ansetzen","Tapas-Kultur am Grill"]}),
+  r({"id":"beilage-patatas-bravas","name":"Patatas Bravas","method":"grill","cat":"Beilage","diff":1,"time":"40 Minuten","pit":"Herd / Pfanne","core":"","wood":"","yield":"Für 4 Personen","blurb":"Knusprig gebratene Kartoffelwürfel mit scharfer Tomatensauce und Aioli.","ingredients":[{"a":"800 g","i":"Kartoffeln, gewürfelt"},{"a":"","i":"Öl zum Braten"},{"a":"200 g","i":"passierte Tomaten"},{"a":"1 TL (2,5 g)","i":"Paprikapulver"},{"a":"","i":"Chili nach Geschmack"},{"a":"","i":"Aioli oder Knoblauchmayonnaise"}],"phases":[{"label":"Vorkochen","kind":"prep","dur":"10 Min","temp":"Herd","text":"Kartoffelwürfel kurz vorkochen und ausdampfen lassen.","bullets":["5 Min. in Salzwasser blanchieren","Gut ausdampfen lassen — trockene Oberfläche = knusprig"]},{"label":"Braten","kind":"cook","dur":"20 Min","temp":"Pfanne, hohe Hitze","text":"In reichlich Öl rundum knusprig braten.","bullets":["Nicht zu viele auf einmal — sonst dämpfen sie","Erst am Ende salzen"]},{"label":"Sauce & Servieren","kind":"finish","dur":"10 Min","temp":"","text":"Bravas-Sauce einköcheln und mit Aioli servieren.","bullets":["Passierte Tomaten mit Paprika und Chili kurz einköcheln","Kartoffeln mit Sauce und einem Klecks Aioli anrichten"]}],"tips":["Die Kartoffeln vor dem Braten kurz vorkochen — innen fluffig, außen knusprig","Rauchpaprika (Pimentón) macht die Sauce authentischer","Als Tapa oder BBQ-Beilage"],"equipment":[["stove",5,{"de":"Pfanne, hohe Hitze","en":"pan, high heat"}],["kettle",4,{"de":"Gusspfanne oder Plancha auf dem Rost","en":"cast-iron pan or plancha on the grate"}],["gas",4,{"de":"Plancha/Pfanne","en":"plancha/pan"}]],"origin":"🇪🇸 Patatas Bravas sind Spaniens berühmteste Tapa — „wilde Kartoffeln“ mit scharfer Sauce, in jeder Bar von Madrid bis Barcelona zu Hause.","authenticity":8,"authenticityNote":"Madrider Machart mit Tomaten-Bravas-Sauce; Aioli dazu ist die katalanische Ergänzung.","proTip":"Zweimal garen ist das Geheimnis: erst blanchieren, dann heiß braten — genau wie bei perfekten Pommes.","learn":["Doppelgar-Methode für Knusprigkeit","Bravas-Sauce ansetzen","Tapas-Kultur am Grill"]}),
   r({"id":"beilage-elote","name":"Elote (Mexikanischer Grillmais)","method":"grill","cat":"Beilage","diff":1,"time":"20 Minuten","pit":"Direkte Glut","core":"","wood":"","yield":"Für 4 Personen","blurb":"Gegrillter Maiskolben mit Crema, Käse, Chili und Limette.","ingredients":[{"a":"4","i":"Maiskolben"},{"a":"80 g","i":"Crema oder Saure Sahne + Mayonnaise"},{"a":"60 g","i":"Cotija- oder Feta-Käse, zerkrümelt"},{"a":"","i":"Chilipulver, Limette, Koriander"}],"phases":[{"label":"Grillen","kind":"direct","dur":"12-15 Min","temp":"Direkte Glut","text":"Maiskolben direkt über der Glut rundum grillen, bis sie Farbe nehmen.","bullets":["Regelmäßig drehen","Dunkle Röststellen sind erwünscht — das ist das Aroma"]},{"label":"Anrichten","kind":"finish","dur":"5 Min","temp":"","text":"Heiß bestreichen und bestreuen.","bullets":["Mit der Crema-Mischung rundum bestreichen","Käse, Chilipulver und Limettensaft darüber","Mit Koriander servieren"]}],"tips":["Der Mais soll wirklich Farbe und ein paar dunkle Stellen bekommen — das bringt das Röstaroma","Statt Cotija funktioniert Feta perfekt","Als Esquites: Körner abschneiden und im Becher servieren"],"equipment":[["kettle",5,{"de":"direkte Glut — ideal","en":"direct coals — ideal"}],["gas",4,{"de":"hohe direkte Hitze","en":"high direct heat"}],["wsm",2,{"de":"zu wenig direkte Hitze","en":"not enough direct heat"}],["stove",3,{"de":"Grillpfanne geht zur Not","en":"a grill pan works in a pinch"}]],"origin":"🇲🇽 Elote ist Mexikos Streetfood-Ikone: Grillmais vom Straßenstand, mit Crema, Cotija und Chili — süß, salzig, sauer und scharf in einem Bissen.","authenticity":9,"authenticityNote":"Klassische Street-Style-Machart mit Crema, Käse, Chili und Limette.","proTip":"Den Mais ohne Vorkochen direkt auf die Glut — die Körner karamellisieren und bleiben bissfest, statt wässrig zu werden.","learn":["Direktes Grillen von Gemüse","Röstaromen aufbauen","Mexikanische Aromenbalance (fett-sauer-scharf)"]}),
+  r({"id":"wildschinken-rehkeule","name":"Wildschinken (Rehkeule)","method":"kalt","cat":"Wild & Lamm","diff":2,"time":"ca. 35 Tage","pit":"10–15 °C antrocknen, 12–14 °C reifen","core":"","wood":"Luftgetrocknet – ohne Rauch (optional Kaltrauch)","yield":"Je nach Keulengröße, ca. 30–35 % Gewichtsverlust","blurb":"Zartes Rehfleisch als edler Wildschinken – milder, aromatischer als Schwein, mit Wacholder, Rosmarin und Pfeffer.","ingredients":[{"a":"1","i":"Rehkeule, pariert und entbeint"},{"a":"28 g/kg","i":"Nitritpökelsalz"},{"a":"3 g/kg","i":"Pfeffer, grob gestoßen"},{"a":"2 g/kg","i":"Wacholderbeeren, zerstoßen"},{"a":"1 Zweig/kg","i":"Rosmarin"},{"a":"","i":"Wildkräuter nach Geschmack"}],"phases":[{"label":"Vorbereitung","kind":"prep","dur":"Tag 1","temp":"","text":"Rehkeule parieren und von Sehnen befreien, mit Pökelsalz und Gewürzen einreiben.","bullets":["Alle Sehnen und Silberhäute sorgfältig entfernen","NPS und Gewürze exakt nach Gewicht abwiegen","Rundum kräftig einmassieren"]},{"label":"Pökeln","kind":"cure","dur":"Tag 2–7","temp":"2–4 °C","text":"Vakuumieren oder abdecken und im Kühlschrank pökeln. Täglich wenden.","bullets":["Vakuumbeutel ist die sicherste Methode (Gleichgewichtspökeln)","Täglich wenden, damit die Lake sich verteilt"]},{"label":"Abspülen & Trocknen","kind":"prep","dur":"Tag 8","temp":"","text":"Pökelsalz abspülen, kurz wässern und gründlich trocknen lassen.","bullets":["Kurz kalt abspülen, 30 Min. wässern","Mit Küchenpapier gründlich trocken tupfen"]},{"label":"Würzen & Binden","kind":"prep","dur":"Tag 8–9","temp":"","text":"Mit Wacholder, Pfeffer, Rosmarin und Kräutern würzen und leicht in Form binden.","bullets":["Gewürze rundum andrücken","Mit Küchengarn in gleichmäßige Form binden"]},{"label":"Antrocknen","kind":"dry","dur":"Tag 10–14","temp":"10–15 °C, 75–80 % rF","text":"An einem kühlen, luftigen Ort antrocknen lassen.","bullets":["Die Oberfläche soll trocken, aber nicht hart werden","Gute Luftzirkulation, kein Durchzug"]},{"label":"Reifen","kind":"dry","dur":"Tag 15–34","temp":"12–14 °C, 70–75 % rF","text":"Reifen lassen und regelmäßig kontrollieren.","bullets":["Wöchentlich wiegen – Ziel ca. 30–35 % Gewichtsverlust","Auf Fehlschimmel kontrollieren","Reifezeit variiert je nach Keulengröße"]},{"label":"Genießen","kind":"finish","dur":"ab Tag 35","temp":"","text":"Fertig gereift – aromatisch, zart und voller Wildgeschmack.","bullets":["Hauchdünn aufschneiden","Passt zu Rotwein, Bergkäse, Wildkräutern und Nüssen"]}],"tips":["Die Reifezeit kann je nach Keulengröße und Luftbedingungen variieren – Geduld bringt das beste Aroma","Rehfleisch ist mager: zügig verarbeiten und sauber arbeiten","Optional 2–3 Kaltrauchgänge vor der Reifung für eine feine Rauchnote"],"equipment":[["chamber",5,{"de":"konstante Reifebedingungen","en":"steady maturing conditions"}],["wsm",2,{"de":"nur für optionalen Kaltrauch","en":"only for the optional cold smoke"}],["dehydrator",0,{"de":"zu warm, zu trocken – Trockenrand","en":"too warm, too dry — case hardening"}]],"origin":"🌲 Wildschinken ist die edelste Verwertung der Rehkeule: mager, feinfaserig und aromatisch – luftgetrocknet mit Wacholder und Wildkräutern, wie es die Jägerküche seit Generationen macht.","authenticity":8,"authenticityNote":"Traditionelle Lufttrocknung mit Wacholder und Kräutern; NPS als modernes Sicherheitsnetz für die lange Reifung.","proTip":"Rehfleisch ist deutlich magerer als Schwein – die Reifung geht schneller, aber die Gefahr des Trockenrands ist größer. Luftfeuchte lieber am oberen Ende halten.","learn":["Wild parieren und vorbereiten","Gleichgewichtspökeln nach Gewicht","Antrocknen & Reifen führen","Gewichtsverlust als Reifemaß","Magere Fleischsorten reifen"]}),
+  r({"id":"tiroler-speck","name":"Tiroler Speck (Bauchspeck kaltgeräuchert)","method":"kalt","cat":"Schwein","diff":2,"time":"ca. 14–20 Wochen","pit":"18–25 °C Kaltrauch, 10–15 °C Reifung","core":"","wood":"Buche","yield":"Je nach Bauchgröße, ca. 30 % Gewichtsverlust","blurb":"Typischer Südtiroler Speck – trocken gepökelt, kaltgeräuchert und an der Luft gereift.","ingredients":[{"a":"1","i":"Schweinebauch mit Schwarte"},{"a":"28 g/kg","i":"Nitritpökelsalz"},{"a":"2 g/kg","i":"Pfeffer schwarz, grob"},{"a":"1 g/kg","i":"Knoblauchpulver"},{"a":"1 g/kg","i":"Wacholder, zerstoßen"},{"a":"1 g/kg","i":"Lorbeer, gemahlen"},{"a":"1 g/kg","i":"Kümmel, gemahlen"}],"phases":[{"label":"Zuschnitt","kind":"prep","dur":"0,5–1 Tag","temp":"","text":"Bauch mit Schwarte zuschneiden und parieren. Schwarte nicht entfernen.","bullets":["Gleichmäßige Stücke schneiden","Die Schwarte schützt das Fleisch und sorgt für den typischen Geschmack"]},{"label":"Pökeln","kind":"cure","dur":"10–14 Tage","temp":"2–4 °C","text":"Trocken einreiben und in einen Behälter legen. Kühl lagern und täglich wenden.","bullets":["NPS und Gewürze nach Gewicht abwiegen und einmassieren","Täglich wenden","Austretende Lake im Behälter lassen"]},{"label":"Abspülen","kind":"prep","dur":"1 Tag","temp":"","text":"Pökelsalz gründlich abspülen und trocken tupfen.","bullets":["Kalt abspülen","Gründlich trocknen – feuchte Oberfläche nimmt schlecht Rauch an"]},{"label":"Trocknen","kind":"dry","dur":"3–5 Tage","temp":"kühl & luftig","text":"An einem kühlen, luftigen Ort trocknen lassen.","bullets":["Pellicle bilden lassen","Kein Durchzug, keine Sonne"]},{"label":"Kalträuchern","kind":"smoke","dur":"2–5 Tage","temp":"18–25 °C","text":"Bei 18–25 °C kalt räuchern (Buchenholz) über mehrere Tage.","bullets":["Mehrere Räuchergänge à 8–12 Std. mit Pausen","Sparbrand verwenden","Zwischen den Gängen abhängen lassen"]},{"label":"Reifen","kind":"dry","dur":"mind. 12 Wochen","temp":"10–15 °C, 70–80 % rF","text":"An einem kühlen, gut belüfteten Ort reifen lassen.","bullets":["Ideal 4–6 Monate – je länger, desto intensiver","Regelmäßig kontrollieren und wiegen"]},{"label":"Genießen","kind":"finish","dur":"ab Woche 12","temp":"","text":"In dünnen Scheiben schneiden und genießen!","bullets":["Am besten mit frischem Brot und Südtiroler Bergkäse","Pur, zu Brot, Käse, Wein oder in der Küche"]}],"tips":["Ideale Reifetemperatur: 10–15 °C, Luftfeuchtigkeit 70–80 %","Je länger die Reifezeit, desto intensiver das Aroma","Schwarte schützt das Fleisch und sorgt für den typischen Geschmack"],"equipment":[["chamber",5,{"de":"ideal für die lange Reifung","en":"ideal for the long maturing"}],["wsm",4,{"de":"für den Kaltrauch (Sparbrand)","en":"for the cold smoke (smoke generator)"}],["kettle",3,{"de":"nur mit Kaltrauch-Adapter","en":"only with a cold-smoke adapter"}],["dehydrator",0,{"de":"völlig ungeeignet","en":"completely unsuitable"}]],"origin":"🇮🇹 Südtiroler Speck vereint zwei Traditionen: das mediterrane Lufttrocknen und das nordische Räuchern – „wenig Rauch, viel Luft\" ist seit Jahrhunderten die Devise der Bauern im Etschtal.","authenticity":9,"authenticityNote":"Klassische Südtiroler Methode: Trockenpökeln mit Wacholder und Lorbeer, milder Buchenrauch, lange Luftreifung.","proTip":"„Wenig Rauch, viel Luft\" – der Rauch ist beim Tiroler Speck nur Würze, nicht Hauptdarsteller. Lieber mehrere kurze, milde Räuchergänge als einen intensiven.","learn":["Trockenpökeln mit Gewürzen","Pellicle bilden","Kalträuchern in Etappen","Monatelange Luftreifung führen","Schwarte als Schutzschicht verstehen"]}),
 
 ];
 
